@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Jaringan Transform Anak</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="cloud" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UNet.html">Multiplayer dan Jaringan</a></li> 
+         <li><a href="UNetReference.html">Referensi Komponen Multiplayer</a></li> 
+         <li>Transformator Jaringan Login</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="class-NetworkTransform.html"></a></span> 
+          <div class="tip">
+            Transformator Jaringan 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="class-NetworkTransformVisualizer.html"></a></span> 
+          <div class="tip">
+            Jaringan Transform Visualizer 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Transformator Jaringan Login</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Important</strong>: UNet adalah solusi yang diuraikan, dan Solusi Multiplayer baru dan <span class="tooltip"><strong>Networking</strong><span class="tooltiptext">Sistem Unity yang memungkinkan game multiplayer di jaringan komputer. <a class="tooltipMoreInfoLink" href="UNetOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Networking">Glossary</a></span></span></span> (Netcode untuk GameObjects) sedang berkembang. Untuk informasi lebih lanjut dan langkah selanjutnya melihat informasi di .</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Komponen Network Transform Child menyinkronkan posisi dan rotasi anak <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> dari GameObject dengan komponen <a href="class-NetworkTransform.html">Transformator Jaringan</a>. Anda harus menggunakan komponen ini dalam situasi di mana Anda perlu menyinkronkan objek anak yang bergerak secara independen dari GameObject Jaringan.</p> 
+       <p>Untuk menggunakan komponen Network Transform Child, melampirkan ke GameObject induk yang sama sebagai Network Transform, dan gunakan field <strong>Target</strong> untuk menentukan GameObject anak mana untuk menerapkan pengaturan komponen untuk. Anda dapat memiliki beberapa komponen Jaringan Transform Anak pada satu orang tua GameObject.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/NetworkTransformChild.png" alt="The Network Transform Child component"> 
+        <figcaption>
+          Jaringan Transform Komponen Anak 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Network Send Rate (seconds)</strong></td> 
+          <td style="text-align:left;">Mengatur jumlah pembaruan jaringan per detik. Anda dapat mengatur slider ini ke 0 untuk GameObjects yang tidak perlu untuk memperbarui setelah dibuat, seperti efek non-interaktif yang dihasilkan oleh pemain (misalnya, awan debu yang tersisa di belakang bahwa pemain tidak dapat berinteraksi dengan).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Target</strong></td> 
+          <td style="text-align:left;">Perubahan anak untuk disinkronkan. (Remember, komponen ini berjalan pada <em>parent</em>, bukan anak - jadi Anda menentukan objek anak menggunakan bidang ini).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Movement Threshold</strong></td> 
+          <td style="text-align:left;">Mengatur jarak yang dapat bergerak GameObject tanpa mengirim pembaruan sinkronisasi gerakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Interpolate Movement Factor</strong></td> 
+          <td style="text-align:left;">Gunakan ini untuk mengaktifkan dan mengontrol interpolasi gerakan disinkronkan. Semakin besar jumlah ini, semakin cepat GameObject mengganggu <span class="tooltip"><strong>target position</strong><span class="tooltiptext">Properti bersama untuk mengatur posisi target bahwa gaya penggerak bersama harus memindahkannya. <a class="tooltipMoreInfoLink" href="class-ConfigurableJoint.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#TargetPosition">Glossary</a></span></span></span>. Jika ini diatur ke 0, snap GameObject ke posisi baru.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Interpolate Rotation Factor</strong></td> 
+          <td style="text-align:left;">Gunakan ini untuk mengaktifkan dan mengontrol interpolasi rotasi disinkronkan. Semakin besar jumlah ini, semakin cepat GameObject mengganggu rotasi target. Jika ini diatur ke 0, snap GameObject ke rotasi baru.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Rotation Axis</strong></td> 
+          <td style="text-align:left;">Define yang sumbu rotasi atau sumbu harus disinkronkan. Ini diatur ke XYZ (full 3D) secara default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Compress Rotation</strong></td> 
+          <td style="text-align:left;">Jika Anda mengompreskan data rotasi, jumlah data yang dikirim lebih rendah, dan akurasi sinkronisasi rotasi lebih rendah.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>None</em></td> 
+          <td style="text-align:left;">Pilih ini untuk menerapkan tidak ada <span class="tooltip"><strong>compression</strong><span class="tooltiptext">Metode menyimpan data yang mengurangi jumlah ruang penyimpanan yang dibutuhkan. <a href="class-TextureImporterOverride.html">Kompresi Tekstur</a>, <a href="class-AnimationClip.html#AssetProperties">Kompresi Animasi</a>, <a href="class-AudioClip.html">Kompresi Audio</a>, <a href="ReducingFilesize.html">Membangun Kompresi</a>.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#compression">Glossary</a></span></span></span> untuk sinkronisasi rotasi. Ini adalah opsi default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Low</em></td> 
+          <td style="text-align:left;">Pilih ini untuk menerapkan jumlah kompresi rendah ke sinkronisasi rotasi. Opsi ini mengurangi jumlah informasi yang dikirim untuk data rotasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>High</em></td> 
+          <td style="text-align:left;">Pilih ini untuk menerapkan jumlah kompresi tinggi ke sinkronisasi rotasi. Pilihan ini mengirimkan jumlah informasi yang paling sedikit mungkin untuk data rotasi.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Komponen ini tidak menggunakan fisika; itu menyinkronkan posisi dan rotasi anak GameObject, dan mengganggu nilai-nilai yang diperbarui. Gunakan <strong>Interpolate Movement Factor</strong> dan <strong>Interpolate Rotation Factor</strong> untuk menyesuaikan tingkat interpolasi.</p> 
+       <p>Sebuah GameObject dengan komponen Jaringan Transform Anak juga harus memiliki komponen <a href="class-NetworkIdentity.html">Identitas Jaringan</a>. Ketika Anda membuat komponen Network Transform Child pada GameObject, Unity juga menciptakan komponen Identitas Jaringan pada GameObject jika tidak memiliki satu.</p> 
+       <!-- area:cloud --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="class-NetworkTransform.html"></a></span> 
+         <div class="tip">
+           Transformator Jaringan 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="class-NetworkTransformVisualizer.html"></a></span> 
+         <div class="tip">
+           Jaringan Transform Visualizer 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Animasi tab</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="models.html">Models</a></li> 
+         <li><a href="models-importing.html">Mengimpor model ke Unity</a></li> 
+         <li><a href="class-FBXImporter.html">Model Jendela Pengaturan impor</a></li> 
+         <li>Animasi tab</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="class-HumanTemplate.html"></a></span> 
+          <div class="tip">
+            Jendela Templat Manusia 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="AnimationEulerCurveImport.html"></a></span> 
+          <div class="tip">
+            Resampling kurva Euler 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Animasi tab</h1> 
+       <!--BeginSwitchLink--> 
+       <a href="../ScriptReference/AnimationClip.html" title="Go to AnimationClip page in the Scripting Reference" class="switch-link gray-btn sbtn left">Switch to Scripting</a> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p> <strong>Animation Clips</strong> adalah blok bangunan terkecil animasi dalam Unity. Mereka mewakili sepotong gerak terisolasi, seperti RunLeft, Jump, atau Crawl, dan dapat dimanipulasi dan dikombinasikan dengan berbagai cara untuk menghasilkan hasil akhir hidup (lihat <span class="tooltip"><a class="tooltipMoreInfoLink" href="AnimationStateMachines.html">Mesin Negara Animasi</a><span class="tooltiptext">Grafik dalam Animator Controller yang mengontrol interaksi Amerika Animasi. Setiap state merujuk Pohon Animasi Blend atau Klip Animasi tunggal. <a href="AnimationStateMachines.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#AnimationStateMachine">Glossary</a></span></span></span>, <span class="tooltip"><a href="class-AnimatorController.html">Pengontrol Animator</a><span class="tooltiptext">Kontrol animasi melalui Lapisan Animasi dengan Mesin Negara Animasi dan Pohon Animasi Blend, dikendalikan oleh Parameter Animasi. Pengontrol Animator yang sama dapat direferensikan oleh beberapa model dengan komponen Animator. <a href="class-AnimatorController.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnimatorController">Glossary</a></span></span></span>, atau <a href="class-BlendTree.html">Pohon Blend</a>). Anda dapat memilih Klip Animasi dari data FBX impor.</p> 
+       <p>Ketika Anda mengklik model yang mengandung klip animasi, sifat ini muncul:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/classAnimationClip-Inspector.png" alt="The Animation Clip Inspector"> 
+        <figcaption>
+          Inspektur Klip Animasi 
+        </figcaption> 
+       </figure> 
+       <p>Ada empat area di tab <strong>Animation</strong> dari jendela <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>:</p> 
+       <p> <strong>(A)</strong> <a href="#AssetProperties">Properti spesifik aset</a>. Pengaturan ini menentukan opsi impor untuk seluruh Aset.</p> 
+       <p> <strong>(B)</strong> <a href="#ClipSelectionList">Daftar pemilihan klip</a>. Anda dapat memilih item dari daftar ini untuk menampilkan sifat dan pratinjau animasinya. Anda juga bisa <a href="Splittinganimations.html">mendefinisikan klip baru</a>.</p> 
+       <p> <strong>(C)</strong> <a href="#ClipProperties">Sifat spesifik klip</a>. Pengaturan ini menentukan opsi impor untuk <strong>Animation Clip</strong> yang dipilih.</p> 
+       <p> <strong>(D)</strong> <a href="#AnimationPreview">Pratinjau Animasi</a>. Anda dapat memutar animasi dan memilih bingkai khusus di sini.</p> 
+       <p><a name="AssetProperties"></a></p> 
+       <h2>Properti spesifik aset</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/classAnimationClip-Inspector_Asset.png" alt="Import options for the entire Asset"> 
+        <figcaption>
+          Opsi impor untuk seluruh Aset 
+        </figcaption> 
+       </figure> 
+       <p>Properti ini berlaku untuk semua klip animasi dan batasan yang didefinisikan dalam Aset ini:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Property:</strong></th> 
+          <th style="text-align:left;"><strong>Function:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Import Constraints</strong></td> 
+          <td style="text-align:left;">Impor <span class="tooltip"><a class="tooltipMoreInfoLink" href="Constraints.html">constraints</a><span class="tooltiptext">Pengaturan pada komponen bersama yang membatasi pergerakan atau rotasi. Jenis dan jumlah batasan bervariasi tergantung pada jenis Joint. <a href="Joints2D.html#constraints">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Constraints">Glossary</a></span></span></span> dari aset ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Import Animation</strong></td> 
+          <td style="text-align:left;">Impor animasi dari aset ini. <br><br><strong><em>Note:</em></strong> Jika dinonaktifkan, semua pilihan lain di halaman ini tersembunyi dan tidak ada animasi yang diimpor.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Bake Animations</strong></td> 
+          <td style="text-align:left;">Animasi bake diciptakan menggunakan IK atau Simulasi untuk meneruskan keyframe kinematik. <br><br> Hanya tersedia untuk Autodesk® Maya®, Autodesk® 3ds Max® dan Cinema 4D file.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Resample Curves</strong></td> 
+          <td style="text-align:left;">Kurva animasi yang sederhana sebagai nilai Quaternion dan menghasilkan keyframe Quaternion baru untuk setiap bingkai dalam animasi. <br><br> Opsi ini diaktifkan secara default. <br>Disable ini untuk <a href="AnimationEulerCurveImport.html">menjaga kurva animasi saat mereka awalnya diucapkan</a> ini hanya jika Anda memiliki masalah dengan interpolasi antara kunci dalam animasi asli Anda<br><br> Hanya muncul jika file impor mengandung kurva Euler.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Anim. Compression</strong></td> 
+          <td style="text-align:left;">Jenis <span class="tooltip"><strong>compression</strong><span class="tooltiptext">Metode menyimpan data yang mengurangi jumlah ruang penyimpanan yang dibutuhkan. <a href="class-TextureImporterOverride.html">Kompresi Tekstur</a>, <a href="class-AnimationClip.html#AssetProperties">Kompresi Animasi</a>, <a href="class-AudioClip.html">Kompresi Audio</a>, <a href="ReducingFilesize.html">Membangun Kompresi</a>.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#compression">Glossary</a></span></span></span> untuk digunakan ketika mengimpor animasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Off</strong></td> 
+          <td style="text-align:left;">Diaktifkan <span class="tooltip"><strong>animation compression</strong><span class="tooltiptext">Metode mengompresi data animasi untuk secara signifikan mengurangi ukuran file tanpa menyebabkan pengurangan terlihat dalam kualitas gerak. Kompresi animasi adalah perdagangan dari antara penghematan pada memori dan kualitas gambar. <a class="tooltipMoreInfoLink" href="class-AnimationClip.html#AssetProperties">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#animationcompression">Glossary</a></span></span></span>. Ini berarti bahwa Unity tidak mengurangi jumlah <span class="tooltip"><strong>keyframe</strong><span class="tooltiptext">Bingkai yang menandai titik awal atau akhir transisi dalam animasi. Bingkai di antara bingkai kunci disebut inbetweens.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#keyframe">Glossary</a></span></span></span> pada impor. Mengaktifkan kompresi animasi mengarah pada animasi presisi tertinggi, tetapi kinerja yang lebih lambat dan file yang lebih besar dan ukuran memori runtime. umumnya tidak disarankan untuk menggunakan opsi ini - jika Anda membutuhkan animasi presisi yang lebih tinggi, Anda harus mengaktifkan pengurangan keyframe dan nilai <strong>Animation Compression Error</strong> yang lebih rendah.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Keyframe Reduction</strong><span class="tooltiptext">Proses yang menghapus keyframe redundan. <a class="tooltipMoreInfoLink" href="class-AnimationClip.html#AssetProperties">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#KeyframeReduction">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Mengurangi bingkai kunci redundan pada impor. Jika diaktifkan, Inspektur menampilkan opsi <strong>Animation Compression Errors</strong>. Ini mempengaruhi ukuran file (ingatan waktu) dan bagaimana kurva dievaluasi.<br><br>Only untuk rig <strong>Generic</strong><a href="FBXImporter-Rig.html">Jenis Animasi</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Keyframe Reduction and Compression</strong></td> 
+          <td style="text-align:left;">Kurangi keyframe pada keyframe impor dan kompres ketika menyimpan animasi dalam file. Ini hanya mempengaruhi ukuran file: ukuran memori runtime sama dengan <strong>Keyframe Reduction</strong>. Jika diaktifkan, Inkubator menampilkan opsi <strong>Animation Compression Errors</strong>.<br><br>Only untuk rig <strong>Legacy</strong> <a href="FBXImporter-Rig.html">Jenis Animasi</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Optimal</strong></td> 
+          <td style="text-align:left;">Mari Unity memutuskan cara mengompres, baik dengan pengurangan keyframe atau dengan menggunakan format padat. Jika diaktifkan, Inkubator menampilkan opsi <strong>Animation Compression Errors</strong>.<br><br>Only untuk rig <strong>Generic</strong> dan <strong>Humanoid</strong>%.<a href="FBXImporter-Rig.html">Jenis Animasi</a> rigs.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Animation Compression Errors</strong></td> 
+          <td style="text-align:left;">Hanya tersedia ketika kompresi <strong>Keyframe Reduction</strong> atau <strong>Optimal</strong> diaktifkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Rotation Error</strong></td> 
+          <td style="text-align:left;">Mengatur toleransi kesalahan (sebagai sudut dalam derajat) untuk kompresi kurva rotasi. Unity menggunakan ini untuk menentukan apakah atau tidak dapat menghapus kunci pada kurva rotasi. <br><br> Ini mewakili sudut minimum antara nilai rotasi asli dan nilai yang berkurang: <br><br><code>Angle(value, reduced) &lt; RotationError</code>%</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Position Error</strong></td> 
+          <td style="text-align:left;">Mengatur toleransi kesalahan (sebagai persentase) untuk kompresi kurva posisi. Unity menggunakan ini untuk menentukan apakah atau tidak dapat menghapus kunci pada kurva posisi. Untuk informasi lebih lanjut, lihat <a href="#tolerance">Mengatur toleransi kesalahan untuk pengurangan kunci pada kurva posisi dan skala</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Scale Error</strong></td> 
+          <td style="text-align:left;">Mengatur toleransi kesalahan (sebagai persentase) untuk kompresi kurva skala. Unity menggunakan ini untuk menentukan apakah atau tidak dapat menghapus kunci pada kurva skala. Untuk informasi lebih lanjut, lihat <a href="#tolerance">Mengatur toleransi kesalahan untuk pengurangan kunci pada kurva posisi dan skala</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Animated Custom Properties</strong></td> 
+          <td style="text-align:left;">Mengimpor properti FBX yang ditunjuk sebagai sifat pengguna khusus. <br><br>Unity hanya mendukung subset kecil properti ketika mengimpor file FBX (seperti terjemahan, rotasi, skala dan visibilitas). Namun, Anda dapat memperlakukan sifat FBX standar seperti sifat pengguna dengan mencerahkan mereka di skrip impor Anda melalui anggota <a href="../ScriptReference/ModelImporter-extraUserProperties.html">Sitemap Login</a>. Selama impor, Unity kemudian melewati properti bernama ke <a href="../ScriptReference/AssetPostprocessor.OnPostprocessGameObjectWithUserProperties.html">Aset postprocessor</a> seperti sifat pengguna ‘real’.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="tolerance"> </a></p> 
+       <h3>Mengatur toleransi kesalahan untuk pengurangan kunci pada kurva posisi dan skala</h3> 
+       <p>Mengatur persentase toleransi kesalahan untuk menentukan apakah atau tidak Unity dapat menghapus kunci pada posisi atau kurva skala sebagai strategi untuk kompresi animasi.</p> 
+       <p>Ketika Anda mengatur properti <strong>Anim. Compression</strong> untuk "Keyframe Reduction" atau "Optimal", Unity membandingkan kurva asli untuk apa kurva terlihat seperti setelah menghapus keyframe tertentu dan menerapkan tes ini:</p> 
+       <pre><code>OriginalValue - ReducedValue &gt; OriginalValue * percentageOfError
+</code></pre> 
+       <p>Unity menghapus keyframe jika delta antara nilai asli dan nilai berkurang kurang dari nilai asli yang dikalikan oleh persentase toleransi kesalahan.</p> 
+       <p>Perhatikan bahwa Unity membandingkan jarak antara tiga komponen kurva (yaitu, itu membandingkan <code>distance(x,y,z)</code>), dan juga per komponen (<code>distance(x)</code>, <code>distance(y)</code>, dan kemudian <code>distance(z)</code>).</p> 
+       <p>Contoh ini menunjukkan bagaimana Unity mengevaluasi pengurangan sumbu y menggunakan toleransi kesalahan 10%:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/classAnimationClip-tolerance_Ex1.png" alt="Define a position error of 10% on a simple animation of a translation on the y-axis"> 
+        <figcaption>
+          Tentukan kesalahan posisi 10% pada animasi sederhana dari terjemahan pada sumbu y 
+        </figcaption> 
+       </figure> 
+       <p>Login A memiliki nilai 11.2:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/classAnimationClip-tolerance_Ex2.png" alt="Keyframe A has a value of 11.2"> 
+        <figcaption>
+          Login A memiliki nilai 11.2 
+        </figcaption> 
+       </figure> 
+       <p>Login B memiliki nilai 11.1:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/classAnimationClip-tolerance_Ex3.png" alt="Keyframe B has a value of 11.1"> 
+        <figcaption>
+          Login B memiliki nilai 11.1 
+        </figcaption> 
+       </figure> 
+       <p>Hasil kurva berkurang terlihat seperti ini:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/classAnimationClip-tolerance_Ex4.png" alt="The resulting reduced curve"> 
+        <figcaption>
+          Hasil kurva berkurang 
+        </figcaption> 
+       </figure> 
+       <p> <strong>Keyframe A is not reduced</strong> karena:</p> 
+       <ul> 
+        <li>Jarak antara nilai asli dan berkurang adalah <code>D = 11.2 - 10 = 1.2</code>.</li> 
+        <li>Margin kesalahan adalah <code>E = 10% * 11.2 = 1.12</code> </li> 
+        <li><strong>D &gt; E</strong></li> 
+       </ul> 
+       <p> <strong>Keyframe B is reduced</strong> karena <code>11.1 - 10 &lt; 10% * 11.1</code>:</p> 
+       <ul> 
+        <li>Jarak antara nilai asli dan berkurang adalah <code>D = 11.1 - 10 = 1.11</code> </li> 
+        <li>Margin kesalahan adalah <code>E = 10% * 11.1 = 1.11</code> </li> 
+        <li><strong>D = E</strong></li> 
+       </ul> 
+       <p>Perhatikan bahwa metode ini memiliki batasan ketika menggunakan nilai tinggi yang bervariasi hanya sedikit. Pindahkan <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> 1000 unit hasil jauh pada dasarnya animasi yang sama tetapi terletak jauh dari 0.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/classAnimationClip-tolerance_Ex5.png" alt="High values with small variance"> 
+        <figcaption>
+          Nilai tinggi dengan varian kecil 
+        </figcaption> 
+       </figure> 
+       <p>Dalam hal ini, kedua keyframe berkurang.</p> 
+       <p> <strong>Keyframe A is reduced</strong> karena:</p> 
+       <ul> 
+        <li>Jarak antara nilai asli dan berkurang adalah <code>D = 1011.2 - 1010 = 1.2</code> </li> 
+        <li>Margin kesalahan adalah <code>E = 10% * 1011.2 = 101.12</code> </li> 
+       </ul> 
+       <p> <strong>Keyframe B is reduced</strong> karena <code>11.1 - 10 &lt; 10% * 11.1</code>:</p> 
+       <ul> 
+        <li>Jarak antara nilai asli dan berkurang adalah <code>D = 11.1 - 10 = 1.11</code> </li> 
+        <li>Margin kesalahan adalah <code>E = 10% * 1011.1 = 101.11</code> </li> 
+       </ul> 
+       <p>Nilai yang lebih tinggi memerlukan perbedaan yang jauh lebih besar antara nilai asli dan berkurang untuk keyframe untuk tetap dalam kurva berkurang. Login Memiliki nilai 1100 dan dibuang; keyframe B memiliki nilai 1112 dan tetap:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/classAnimationClip-tolerance_Ex6.png" alt="Higher values require a much larger difference"> 
+        <figcaption>
+          Nilai yang lebih tinggi memerlukan perbedaan yang jauh lebih besar 
+        </figcaption> 
+       </figure> 
+       <p><a name="ClipSelectionList"> </a></p> 
+       <h2>Daftar pemilihan klip</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/classAnimationClip-Inspector_Selection.png" alt="List of clips defined in this file"> 
+        <figcaption>
+          Daftar klip yang didefinisikan dalam file ini 
+        </figcaption> 
+       </figure> 
+       <p>Anda dapat melakukan tugas-tugas ini di area tab <strong>Animation</strong>:</p> 
+       <ul> 
+        <li>Pilih klip dari daftar ke <a href="#ClipProperties">menampilkan sifat spesifik klipnya</a>.</li> 
+        <li>Bermain klip yang dipilih di <a href="#AnimationPreview">klip pratinjau pane</a>.</li> 
+        <li> <a href="Splittinganimations.html">Buat klip baru</a> untuk file ini dengan tombol add (<code>+</code>).</li> 
+        <li>Hapus definisi klip yang dipilih dengan tombol delete (<code>-</code>).</li> 
+       </ul> 
+       <p>Sitemap Jika Anda secara manual mengubah sifat klip impor, Unity tidak akan mengimpor klip animasi baru ketika perubahan aset sumber. Misalnya, jika Anda membuat klip baru atau mengubah waktu klip pada tab <strong>Warning:</strong>, daftar klip tidak akan berubah bahkan jika Anda menambahkan klip ke file FBX di luar Unity. Unity akan mengabaikan klip animasi baru.<strong>Animation</strong> tab, that clip list will not change even if you add clips to the FBX file outside of Unity. Unity will ignore the new animation clips.</p> 
+       <p><a name="ClipProperties"> </a></p> 
+       <h2>Sifat spesifik klip</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/classAnimationClip-Inspector_Clip.png" alt="Import options for the selected Animation clip"> 
+        <figcaption>
+          Pilihan impor untuk klip Animasi yang dipilih 
+        </figcaption> 
+       </figure> 
+       <p>Area tab <strong>Animation</strong> menampilkan fitur-fitur ini:</p> 
+       <p>Sitemap Nama (editable) dari klip yang dipilih<strong>(A)</strong> The (editable) name of the selected clip</p> 
+       <p>Sitemap Garis waktu klip animasi<strong>(B)</strong> The animation clip timeline</p> 
+       <p>Sitemap Sifat klip untuk mengontrol pengulangan dan pose<strong>(C)</strong> Clip properties to control looping and pose</p> 
+       <p>Sitemap Bagian yang dapat diperluas untuk: kurva pertahanan, peristiwa, masker, dan akar gerak; dan melihat pesan dari proses impor<strong>(D)</strong> Expandable sections for: defining curves, events, masks, and motion roots; and viewing messages from the import process</p> 
+       <p>Anda dapat mengatur properti ini secara terpisah untuk setiap klip animasi yang didefinisikan dalam aset ini:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Property:</strong></th> 
+          <th style="text-align:left;"><strong>Function:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong><em>Area A (editable name)</em></strong></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/classAnimationClip-Name.png" alt="The name of the source take"></td> 
+          <td style="text-align:left;">Ambil file sumber untuk digunakan sebagai sumber untuk klip animasi ini. <br><br> Ini adalah apa yang mendefinisikan satu set animasi yang dipisahkan di Motionbuilder, Autodesk® Maya® dan paket 3D lainnya. Unity dapat mengimpor ini mengambil sebagai klip individu. <a href="Splittinganimations.html">membuat mereka dari seluruh file atau dari subset bingkai</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong><em>Area B (timeline features)</em></strong></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/classAnimationClip-Timeline.png" alt="The timeline editor"></td> 
+          <td style="text-align:left;">Anda dapat menggunakan drag indikator start dan end di sekitar timeline untuk menentukan rentang bingkai untuk setiap klip.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Start</strong></td> 
+          <td style="text-align:left;">Mulai bingkai klip.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>End</strong></td> 
+          <td style="text-align:left;">Bingkai akhir klip.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong><em>Area C (looping and pose control)</em></strong></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Loop Time</strong></td> 
+          <td style="text-align:left;">Bermain klip animasi melalui dan restart ketika akhir tercapai.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Loop Pose</strong></td> 
+          <td style="text-align:left;">Loop gerakan mulus.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Cycle Offset</strong></td> 
+          <td style="text-align:left;">Offset ke siklus animasi pengulangan, jika dimulai pada waktu yang berbeda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong>Root Transform Rotation</strong></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Bake into Pose</strong></td> 
+          <td style="text-align:left;">Rotasi akar bake ke pergerakan tulang. Dapat disimpan sebagai <span class="tooltip"><strong>root motion</strong><span class="tooltiptext">Gerak simpul akar karakter, apakah itu dikendalikan oleh animasi itu sendiri atau eksternal. <a class="tooltipMoreInfoLink" href="RootMotion.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#RootMotion">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Based Upon</strong></td> 
+          <td style="text-align:left;">Dasar rotasi akar.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Original</strong></td> 
+          <td style="text-align:left;">Simpan rotasi asli dari file sumber.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Root Node Rotation</strong></td> 
+          <td style="text-align:left;">Gunakan rotasi simpul akar. <br><br> <strong>Generic</strong> <a href="FBXImporter-Rig.html">Jenis Animasi</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Body Orientation</strong></td> 
+          <td style="text-align:left;">Jauhkan tubuh atas yang menunjuk ke depan.<br><br>Only tersedia untuk <strong>Humanoid</strong> <a href="FBXImporter-Rig.html">Jenis Animasi</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Offset</strong></td> 
+          <td style="text-align:left;">Offset ke rotasi akar (dalam derajat).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong>Root Transform Position (Y)</strong></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Bake into Pose</strong></td> 
+          <td style="text-align:left;">Bake gerakan akar vertikal ke pergerakan tulang. Dapat disimpan sebagai gerakan akar.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Based Upon (at Start)</strong></td> 
+          <td style="text-align:left;">Dasar posisi akar vertikal.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Original</strong></td> 
+          <td style="text-align:left;">Simpan posisi vertikal dari file sumber.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Root Node Position</strong></td> 
+          <td style="text-align:left;">Gunakan posisi akar vertikal.<br><br>Only tersedia untuk <strong>Generic</strong> <a href="FBXImporter-Rig.html">Jenis Animasi</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Center of Mass</strong><span class="tooltiptext">Mewakili posisi rata-rata dari semua massa dalam kaku untuk tujuan perhitungan fisika. Secara default dikomputasikan dari semua sari yang dimiliki oleh orang kaku, tetapi dapat dimodifikasi melalui skrip. <a class="tooltipMoreInfoLink" href="../ScriptReference/Rigidbody-centerOfMass.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#CenterofMass">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Jaga pusat massa selaras dengan posisi transformasi akar.<br><br>Only tersedia untuk <strong>Humanoid</strong> <a href="FBXImporter-Rig.html">Jenis Animasi</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Feet</strong></td> 
+          <td style="text-align:left;">Jauhkan kaki selaras dengan posisi transformasi akar.<br><br>Only tersedia untuk <strong>Humanoid</strong> <a href="FBXImporter-Rig.html">Jenis Animasi</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Offset</strong></td> 
+          <td style="text-align:left;">Offset ke posisi akar vertikal.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong>Root Transform Position (XZ)</strong></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Bake into Pose</strong></td> 
+          <td style="text-align:left;">Bake gerakan akar horisontal ke pergerakan tulang. Dapat disimpan sebagai gerakan akar.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Based Upon</strong></td> 
+          <td style="text-align:left;">Dasar posisi akar horisontal.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Original</strong></td> 
+          <td style="text-align:left;">Simpan posisi horizontal dari file sumber.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Root Node Position</strong></td> 
+          <td style="text-align:left;">Gunakan posisi transformasi akar horisontal.<br><br>Only tersedia untuk <strong>Generic</strong> <a href="FBXImporter-Rig.html">Jenis Animasi</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Center of Mass</strong></td> 
+          <td style="text-align:left;">Tetap selaras dengan posisi transformasi akar.<br><br>Only tersedia untuk <strong>Humanoid</strong> <a href="FBXImporter-Rig.html">Jenis Animasi</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Offset</strong></td> 
+          <td style="text-align:left;">Offset ke posisi akar horisontal.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Mirror</strong></td> 
+          <td style="text-align:left;">Cermin kiri dan kanan dalam klip ini. <br><br> Hanya muncul jika <a href="FBXImporter-Rig.html">Jenis Animasi</a> diatur ke <strong>Humanoid</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Additive Reference Pose</strong></td> 
+          <td style="text-align:left;">Aktifkan untuk mengatur bingkai untuk pose referensi yang digunakan sebagai dasar untuk <a href="AnimationLayers.html">lapisan animasi tambahan</a>. Penanda biru menjadi terlihat dalam editor timeline: <br><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AnimationAdditiveReferencePoseTimelineMarker.png" alt="">%</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Pose Frame</strong></td> 
+          <td style="text-align:left;">Masukkan nomor bingkai untuk digunakan sebagai pose referensi. Anda juga dapat menyeret penanda biru di timeline untuk memperbarui nilai ini. <br><br> Hanya tersedia jika <strong>Additive Reference Pose</strong> diaktifkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong><em>Area D (expandable sections)</em></strong></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Curves</strong></td> 
+          <td style="text-align:left;">Memperluas bagian ini untuk mengelola <a href="AnimationCurvesOnImportedClips.html">kurva animasi pada klip impor</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Events</strong></td> 
+          <td style="text-align:left;">Memperluas bagian ini untuk mengelola <a href="script-AnimationWindowEvent.html">acara animasi pada klip impor</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><span class="tooltip"><strong>Mask</strong><span class="tooltiptext">Dapat merujuk pada Masker Sprite, Masker UI, atau Masker Lapisan <a class="tooltipMoreInfoLink" href="script-Mask.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mask">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Memperluas bagian ini untuk mengelola <a href="class-AvatarMask.html">masking klip impor</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Motion</strong></td> 
+          <td style="text-align:left;">Memperluas bagian ini untuk mengelola <a href="AnimationRootMotionNodeOnImportedClips.html">memilih simpul gerak akar</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Import Messages</strong></td> 
+          <td style="text-align:left;">Perluas bagian ini untuk melihat detail <a class="tooltipMoreInfoLink" href="#ImportMessages">informasi tentang bagaimana animasi Anda diimpor</a>, termasuk <em><span class="tooltip"><strong>Retargeting</strong><span class="tooltiptext">Menerapkan animasi yang dibuat untuk satu model ke yang lain. <a href="Retargeting.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Retargeting">Glossary</a></span></span></span></em> opsional.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Membuat klip pada dasarnya mendefinisikan titik awal dan akhir untuk segmen animasi. Untuk klip ini untuk loop, mereka harus dipangkas dengan cara seperti itu untuk mencocokkan bingkai pertama dan terakhir sebaik mungkin untuk <a href="LoopingAnimationClips.html">loop yang diinginkan</a>.</p> 
+       <p><a name="ImportMessages"></a></p> 
+       <h2>Peringatan impor animasi</h2> 
+       <p>Jika ada masalah terjadi selama proses impor animasi, peringatan muncul di bagian atas Animasi Impor:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AnimationWarningBox.png" alt="Animation import warning messages"> 
+        <figcaption>
+          Pesan peringatan impor animasi 
+        </figcaption> 
+       </figure> 
+       <p>Peringatan tidak selalu berarti animasi Anda tidak diimpor atau tidak bekerja. Ini mungkin hanya berarti bahwa animasi impor terlihat sedikit berbeda dari animasi sumber.</p> 
+       <p>Untuk melihat informasi lebih lanjut, memperluas bagian <strong>Import Messages</strong>:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AnimationWarningSection.png" alt="Animation import warning messages"> 
+        <figcaption>
+          Pesan peringatan impor animasi 
+        </figcaption> 
+       </figure> 
+       <p>Dalam hal ini, Unity telah memberikan opsi <strong>Generate Retargeting Quality Report</strong> yang dapat Anda aktifkan untuk melihat informasi lebih spesifik pada masalah penargetan ulang.</p> 
+       <p>Rincian peringatan lain yang mungkin Anda lihat termasuk berikut:</p> 
+       <ul> 
+        <li>Panjang tulang default ditemukan dalam file ini berbeda dari yang ditemukan di sumber <span class="tooltip"><strong>avatar</strong><span class="tooltiptext">Antarmuka untuk penargetan ulang animasi dari satu rig ke yang lain. <a class="tooltipMoreInfoLink" href="ConfiguringtheAvatar.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Avatar">Glossary</a></span></span></span>.</li> 
+        <li>Rotasi default tulang inbetween ditemukan dalam file ini berbeda dari yang ditemukan di avatar sumber.</li> 
+        <li>Sumber hirarki avatar tidak cocok satu yang ditemukan dalam model ini.</li> 
+        <li>Animasi ini memiliki animasi terjemahan yang akan dibuang.</li> 
+        <li><span class="tooltip"><strong>Humanoid animation</strong><span class="tooltiptext">Animasi menggunakan kerangka humanoid. Model humanoid umumnya memiliki struktur dasar yang sama, mewakili bagian artculate utama tubuh, kepala dan anggota badan. Ini memudahkan untuk memetakan animasi dari satu kerangka humanoid ke yang lain, memungkinkan penargetan ulang dan kinematik terbalik. <a class="tooltipMoreInfoLink" href="ConfiguringtheAvatar.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Humanoidanimation">Glossary</a></span></span></span> memiliki transformasi dan rotasi inbetween yang akan dibuang.</li> 
+        <li>Memiliki animasi skala yang akan dibuang.</li> 
+       </ul> 
+       <p>Pesan-pesan ini menunjukkan bahwa beberapa data yang ada di file asli Anda dihilangkan ketika Unity mengimpor dan dikonversikan animasi Anda ke format internalnya sendiri. Peringatan ini pada dasarnya memberi tahu Anda bahwa animasi yang ditargetkan ulang mungkin tidak persis cocok dengan animasi sumber.</p> 
+       <p>Sitemap Unity tidak mendukung mode pra- dan pasca-ekstrapolate (juga dikenal sebagai mode pra- dan pasca-infinitas) selain <strong>Note:</strong>, dan mengkonversi ini menjadi <strong>constant</strong> ketika diimpor.<strong>constant</strong> when imported.</p> 
+       <p><a name="AnimationPreview"></a></p> 
+       <h2>Pratinjau Animasi</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/classAnimationClip-Inspector_Preview.png" alt="Animation clip preview"> 
+        <figcaption>
+          Pratinjau klip animasi 
+        </figcaption> 
+       </figure> 
+       <p>Area pratinjau tab <strong>Animation</strong> menyediakan fitur ini:</p> 
+       <p>Sitemap Nama klip yang dipilih<strong>(A)</strong> The name of the selected clip</p> 
+       <p>Sitemap Tombol <strong>(B)</strong> (switches antara kamera orografi dan perspektif)<a href="Overview2D">Mode pratinjau 2D</a> button (switches between orthographic and perspective camera)</p> 
+       <p>Sitemap Tombol tampilan pusat pivot dan massa (switches antara tampilan dan menyembunyikan gizmos)<strong>(C)</strong> The pivot and mass center display button (switches between displaying and hiding the gizmos)</p> 
+       <p>Sitemap The Avatar selector (perubahan yang GameObject akan mereview aksi)<strong>(D)</strong> The Avatar selector (change which GameObject will preview the action)</p> 
+       <p>Sitemap Tombol play/pause<strong>(E)</strong> The play/pause button</p> 
+       <p>Sitemap Kepala pemutaran pada garis waktu pratinjau (mungkin menggosok kembali dan ke depan)<strong>(F)</strong> The playback head on the preview timeline (allows scrubbing back and forth)</p> 
+       <p>Sitemap Penggeser kecepatan pratinjau animasi (move kiri untuk memperlambat; kanan untuk mempercepat)<strong>(G)</strong> The animation preview speed slider (move left to slow down; right to speed up)</p> 
+       <p>Sitemap Indikator status pemutaran (tampilkan lokasi pemutaran dalam detik, persentase, dan nomor bingkai)<strong>(H)</strong> The playback status indicator (displays the location of the playback in seconds, percentage, and frame number)</p> 
+       <p>Sitemap Bar <strong>(I)</strong>, di mana Anda dapat mendefinisikan dan menerapkan <span class="tooltip"><strong>Tag</strong><span class="tooltiptext">Kata referensi yang dapat Anda berikan kepada satu atau lebih GameObjects untuk membantu Anda mengidentifikasi GameObjects untuk tujuan scripting. Misalnya, Anda mungkin mendefinisikan dan “Edible” Tag untuk setiap item pemain dapat makan dalam permainan Anda. <a class="tooltipMoreInfoLink" href="Tags.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Tag">Glossary</a></span></span></span> ke klip Anda<a href="Tags.html">Tags</a> to your clip</p> 
+       <p>Sitemap <strong>(J)</strong> bar<a href="AssetBundlesIntro.html">AssetBundles</a> bar, where you can <a href="AssetBundles-Workflow.html">mendefinisikan Aset dan Varian</a> </p> 
+       <hr> 
+       <ul> 
+        <li><span class="page-history">Bahan tab ditambahkan dalam <span class="search-words">NewIn20172</span></span></li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="class-HumanTemplate.html"></a></span> 
+         <div class="tip">
+           Jendela Templat Manusia 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="AnimationEulerCurveImport.html"></a></span> 
+         <div class="tip">
+           Resampling kurva Euler 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

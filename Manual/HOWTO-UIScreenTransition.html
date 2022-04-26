@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Membuat Transitions Layar</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UIToolkits.html">Buat antarmuka pengguna (UI)</a></li> 
+         <li><a href="com.unity.ugui.html">WordPress.org</a></li> 
+         <li><a href="UIHowTos.html">UI Cara</a></li> 
+         <li>Membuat Transisi Layar</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="HOWTO-UICreateFromScripting.html"></a></span> 
+          <div class="tip">
+            Membuat elemen UI dari scripting 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="GUIScriptingGuide.html"></a></span> 
+          <div class="tip">
+            GUI (IMGUI) 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Membuat Transisi Layar</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Kebutuhan transisi antara beberapa layar <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#UI">Glossary</a></span></span></span> cukup umum. Di halaman ini kita akan menjelajahi cara sederhana untuk membuat dan mengelola transisi tersebut menggunakan animasi dan <span class="tooltip"><strong>State Machines</strong><span class="tooltiptext">Satu set negara di Animator Controller yang karakter atau animasi GameObject dapat masuk, bersama dengan satu set transisi antara negara-negara tersebut dan variabel untuk mengingat keadaan saat ini. Negara-negara yang tersedia akan tergantung pada jenis gameplay, tetapi keadaan khas termasuk hal-hal seperti idling, berjalan, berjalan dan melompat. <a href="StateMachineBasics.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#StateMachine">Glossary</a></span></span></span> untuk mengemudi dan mengontrol setiap layar.</p> 
+       <h2>Overview</h2> 
+       <p>Ide tingkat tinggi adalah bahwa setiap layar kami akan memiliki <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-AnimatorController.html">Pengontrol Animator</a><span class="tooltiptext">Kontrol animasi melalui Lapisan Animasi dengan Mesin Negara Animasi dan Pohon Animasi Blend, dikendalikan oleh Parameter Animasi. Pengontrol Animator yang sama dapat direferensikan oleh beberapa model dengan komponen Animator. <a href="class-AnimatorController.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnimatorController">Glossary</a></span></span></span> dengan dua <a href="class-State.html">states</a> (Open and Closed) dan boolean <a href="AnimationParameters.html">Parameter</a> (Open). Untuk transisi antara layar Anda hanya perlu menutup Layar terbuka saat ini dan buka yang diinginkan. Untuk membuat proses ini lebih mudah, kami akan membuat Light ScreenManager kelas kecil yang akan melacak dan merawat penutupan setiap layar terbuka untuk kami. Tombol yang memicu transisi hanya harus meminta ScreenManager untuk membuka layar yang diinginkan.</p> 
+       <h3>Berpikir tentang Navigasi</h3> 
+       <p>Jika Anda berencana untuk mendukung navigasi controller/keyboard elemen UI, maka penting untuk memiliki beberapa hal dalam pikiran. Penting untuk menghindari memiliki elemen yang dapat dipilih di luar layar karena itu akan memungkinkan pemain untuk memilih elemen layar, kita dapat melakukan itu dengan menonaktifkan hierarki layar off. Kami juga perlu memastikan ketika layar baru ditunjukkan kami mengatur elemen dari itu seperti yang dipilih, jika pemain tidak akan dapat menavigasi ke layar baru. Kami akan mengurus semua yang berada di kelas ScreenManager di bawah ini.</p> 
+       <h2>Menyiapkan Pengontrol Animator</h2> 
+       <p>Mari kita lihat pengaturan yang paling umum dan minimal untuk Pengontrol Animasi untuk melakukan transisi Layar. Pengontrol akan membutuhkan parameter boolean (Open) dan dua negara (Open and Closed), setiap negara harus memiliki animasi hanya dengan satu <span class="tooltip"><strong>keyframe</strong><span class="tooltiptext">Bingkai yang menandai titik awal atau akhir transisi dalam animasi. Bingkai di antara bingkai kunci disebut inbetweens.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#keyframe">Glossary</a></span></span></span>, cara ini kami membiarkan Mesin Negara melakukan perpaduan transisi untuk kami.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UI_ScreenTransitionAnimatorOpen.png" alt="The Open state and animation"> 
+        <figcaption>
+          Open state dan animasi 
+        </figcaption> 
+       </figure> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UI_ScreenTransitionAnimatorClosed.png" alt="The Closed state and animation"> 
+        <figcaption>
+          Negara tertutup dan animasi 
+        </figcaption> 
+       </figure> 
+       <p>Sekarang kita perlu membuat <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-Transition.html">transition</a><span class="tooltiptext">Campuran dari satu negara ke mesin negara lain, seperti transisi karakter dari berjalan ke animasi jog. Transisi menentukan berapa lama campuran antara negara harus mengambil, dan kondisi yang mengaktifkan campuran. <a href="class-Transition.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Transition">Glossary</a></span></span></span> antara kedua negara, mari kita mulai dengan transisi dari Terbuka ke Tertutup dan mari kita mengatur kondisi dengan benar, kita ingin pergi dari Terbuka ke Tertutup ketika parameter Terbuka diatur ke palsu. Sekarang kita membuat transisi dari Tertutup ke Open dan mengatur kondisi untuk pergi dari Tertutup ke Open ketika parameter Open benar.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UI_ScreenTransitionAnimatorTransitionToOpen.png" alt="The Transition from Closed to Open"> 
+        <figcaption>
+          Transisi dari Tertutup ke Terbuka 
+        </figcaption> 
+       </figure> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UI_ScreenTransitionAnimatorTransitionToClosed.png" alt="The Transition from Open to Closed"> 
+        <figcaption>
+          Transisi dari Terbuka ke Tertutup 
+        </figcaption> 
+       </figure> 
+       <h2>Mengelola layar</h2> 
+       <p>Dengan semua set di atas, satu-satunya hal yang hilang adalah untuk kami untuk mengatur parameter Terbuka untuk benar pada layar Animator kita ingin transisi ke dan Buka palsu pada layar terbuka saat ini Animator. Untuk melakukan itu, kita akan membuat skrip kecil:</p> 
+       <pre><code>using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using System.Collections;
+using System.Collections.Generic;
+
+public class ScreenManager : MonoBehaviour {
+
+    //Screen to open automatically at the start of the Scene
+    public Animator initiallyOpen;
+
+    //Currently Open Screen
+    private Animator m_Open;
+
+    //Hash of the parameter we use to control the transitions.
+    private int m_OpenParameterId;
+
+    //The GameObject Selected before we opened the current Screen.
+    //Used when closing a Screen, so we can go back to the button that opened it.
+    private GameObject m_PreviouslySelected;
+
+    //Animator State and Transition names we need to check against.
+    const string k_OpenTransitionName = "Open";
+    const string k_ClosedStateName = "Closed";
+
+    public void OnEnable()
+    {
+        //We cache the Hash to the "Open" Parameter, so we can feed to Animator.SetBool.
+        m_OpenParameterId = Animator.StringToHash (k_OpenTransitionName);
+
+        //If set, open the initial Screen now.
+        if (initiallyOpen == null)
+            return;
+        OpenPanel(initiallyOpen);
+    }
+
+    //Closes the currently open panel and opens the provided one.
+    //It also takes care of handling the navigation, setting the new Selected element.
+    public void OpenPanel (Animator anim)
+    {
+        if (m_Open == anim)
+            return;
+
+        //Activate the new Screen hierarchy so we can animate it.
+        anim.gameObject.SetActive(true);
+        //Save the currently selected button that was used to open this Screen. (CloseCurrent will modify it)
+        var newPreviouslySelected = EventSystem.current.currentSelectedGameObject;
+        //Move the Screen to front.
+        anim.transform.SetAsLastSibling();
+
+        CloseCurrent();
+
+        m_PreviouslySelected = newPreviouslySelected;
+
+        //Set the new Screen as then open one.
+        m_Open = anim;
+        //Start the open animation
+        m_Open.SetBool(m_OpenParameterId, true);
+
+        //Set an element in the new screen as the new Selected one.
+        GameObject go = FindFirstEnabledSelectable(anim.gameObject);
+        SetSelected(go);
+    }
+
+    //Finds the first Selectable element in the providade hierarchy.
+    static GameObject FindFirstEnabledSelectable (GameObject gameObject)
+    {
+        GameObject go = null;
+        var selectables = gameObject.GetComponentsInChildren&lt;Selectable&gt; (true);
+        foreach (var selectable in selectables) {
+            if (selectable.IsActive () &amp;&amp; selectable.IsInteractable ()) {
+                go = selectable.gameObject;
+                break;
+            }
+        }
+        return go;
+    }
+
+    //Closes the currently open Screen
+    //It also takes care of navigation.
+    //Reverting selection to the Selectable used before opening the current screen.
+    public void CloseCurrent()
+    {
+        if (m_Open == null)
+            return;
+
+        //Start the close animation.
+        m_Open.SetBool(m_OpenParameterId, false);
+
+        //Reverting selection to the Selectable used before opening the current screen.
+        SetSelected(m_PreviouslySelected);
+        //Start Coroutine to disable the hierarchy when closing animation finishes.
+        StartCoroutine(DisablePanelDeleyed(m_Open));
+        //No screen open.
+        m_Open = null;
+    }
+
+    //Coroutine that will detect when the Closing animation is finished and it will deactivate the
+    //hierarchy.
+    IEnumerator DisablePanelDeleyed(Animator anim)
+    {
+        bool closedStateReached = false;
+        bool wantToClose = true;
+        while (!closedStateReached &amp;&amp; wantToClose)
+        {
+            if (!anim.IsInTransition(0))
+                closedStateReached = anim.GetCurrentAnimatorStateInfo(0).IsName(k_ClosedStateName);
+
+            wantToClose = !anim.GetBool(m_OpenParameterId);
+
+            yield return new WaitForEndOfFrame();
+        }
+
+        if (wantToClose)
+            anim.gameObject.SetActive(false);
+    }
+
+    //Make the provided GameObject selected
+    //When using the mouse/touch we actually want to set it as the previously selected and 
+    //set nothing as selected for now.
+    private void SetSelected(GameObject go)
+    {
+        //Select the GameObject.
+        EventSystem.current.SetSelectedGameObject(go);
+
+        //If we are using the keyboard right now, that's all we need to do.
+        var standaloneInputModule = EventSystem.current.currentInputModule as StandaloneInputModule;
+        if (standaloneInputModule != null)
+            return;
+
+        //Since we are using a pointer device, we don't want anything selected. 
+        //But if the user switches to the keyboard, we want to start the navigation from the provided game object.
+        //So here we set the current Selected to null, so the provided gameObject becomes the Last Selected in the EventSystem.
+        EventSystem.current.SetSelectedGameObject(null);
+    }
+}
+</code></pre> 
+       <p>Mari kita kaitkan skrip ini, kita melakukan ini dengan membuat <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#GameObject">Glossary</a></span></span></span> baru, kita dapat mengubah nama "ScreenManager" misalnya, dan menambahkan komponen di atas ke dalamnya. Anda dapat menetapkan layar awal untuk itu, layar ini akan terbuka pada awal <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> Anda.</p> 
+       <p>Sekarang untuk bagian akhir, mari kita buat pekerjaan <a href="script-Button.html">Tombol UI</a>. Pilih tombol yang harus memicu transisi layar dan tambahkan tindakan baru di bawah daftar <strong>On Click ()</strong> di Inspektur. Seret Permainan ScreenManager Objek yang kami buat ke ObjectField, pada dropdown pilih <strong>ScreenManager-&gt;OpenPanel (Animator)</strong> dan drag dan drop panel yang ingin Anda buka ketika pengguna mengklik tombol ke objek lasField.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UI_ScreenTransitionButtonInspector.png" alt="Button Inspector"> 
+        <figcaption>
+          Tombol Inspektur 
+        </figcaption> 
+       </figure> 
+       <h2>Notes</h2> 
+       <p>Teknik ini hanya membutuhkan setiap layar untuk memiliki AnimatorController dengan parameter Terbuka dan keadaan tertutup untuk bekerja - itu tidak masalah bagaimana layar atau mesin negara Anda dibangun. Teknik ini juga bekerja dengan baik dengan layar bersarang, berarti Anda hanya perlu satu ScreenManager untuk setiap tingkat bersarang.</p> 
+       <p>Mesin Negara kami mengatur di atas memiliki state default Tertutup, sehingga semua layar yang menggunakan pengontrol ini mulai ditutup. The ScreenManager menyediakan properti awalnyaOpen sehingga Anda dapat menentukan layar mana yang ditampilkan terlebih dahulu.</p> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="HOWTO-UICreateFromScripting.html"></a></span> 
+         <div class="tip">
+           Membuat elemen UI dari scripting 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="GUIScriptingGuide.html"></a></span> 
+         <div class="tip">
+           GUI (IMGUI) 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Jendela Hierarchy</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="UsingTheEditor.html">Antarmuka unity</a></li> 
+         <li>Jendela Hierarchy</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="device-simulator-plugins.html"></a></span> 
+          <div class="tip">
+            Memperpanjang simulator perangkat 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UsingTheInspector.html"></a></span> 
+          <div class="tip">
+            Jendela Inspektur 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Jendela Hierarchy</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Hierarchy_01.png" alt="The default Hierarchy window view when you open a new Unity project"> 
+        <figcaption>
+          Tampilan jendela Hierarchy default ketika Anda membuka proyek Unity baru 
+        </figcaption> 
+       </figure> 
+       <p>Jendela <strong>Hierarchy</strong> menampilkan setiap <span class="tooltip"><a class="tooltipMoreInfoLink" href="GameObjects.html">GameObject</a><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#GameObject">Glossary</a></span></span></span> dalam Adegan, seperti model, Kamera, atau <span class="no tooltip"><span class="tooltip"><a href="Prefabs.html">Prefabs</a><span class="tooltiptext">Jenis aset yang memungkinkan Anda untuk menyimpan GameObject lengkap dengan komponen dan properti. Prefab bertindak sebagai template dari mana Anda dapat membuat instance objek baru di tempat kejadian. <a href="Prefabs.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Prefab">Glossary</a></span></span></span></span>. Anda dapat menggunakan jendela Hierarchy untuk mengurutkan dan memkelompokkan GameObjects yang Anda gunakan dalam Adegan. Ketika Anda menambahkan atau menghapus GameObjects dalam pandangan Adegan, Anda juga menambahkan atau menghapusnya dari jendela Hierarchy.</p> 
+       <p>Jendela Hierarchy juga dapat mengandung Adegan lain, dengan setiap <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> yang mengandung GameObject mereka sendiri.</p> 
+       <h2>Parenting</h2> 
+       <p>Unity menggunakan konsep hierarki anak-anak, atau parenting, untuk kelompok GameObjects. Sebuah objek dapat berisi GameObjects lain yang mengherankan sifatnya. Anda dapat menghubungkan GameObjects bersama-sama untuk membantu bergerak, skala, atau mengubah koleksi GameObjects. Ketika Anda memindahkan objek tingkat atas, atau orang tua GameObject, Anda juga memindahkan semua anak GameObjects.</p> 
+       <p>Anda juga dapat membuat permainan anak laki-laki bersarang. Semua objek bersarang masih merupakan keturunan dari GameObject induk asli, atau akar GameObject.</p> 
+       <p>Permainan AnakObjects mengawari pergerakan dan rotasi GameObject induk. Untuk mempelajari lebih lanjut tentang ini, lihat dokumentasi tentang <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-Transform.html">Komponen Transform</a><span class="tooltiptext">Komponen Transform menentukan Posisi, Rotasi, dan Skala setiap objek di tempat kejadian. Setiap GameObject memiliki Transform. <a href="class-Transform.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#TransformComponent">Glossary</a></span></span></span>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/HierarchyParenting1_01.png" alt=" Child 1 and Child 2 are the child GameObjects of Parent. Child 3 is a child GameObject of Child 2, and a descendant GameObject of Parent."> 
+        <figcaption> 
+         <strong>Child 1</strong> dan 
+         <strong>Child 2</strong> adalah anak GameObjects dari 
+         <strong>Parent</strong>. 
+         <strong>Child 3</strong> adalah anak GameObject of 
+         <strong>Child 2</strong>, dan keturunan GameObject of 
+         <strong>Parent</strong>. 
+        </figcaption> 
+       </figure> 
+       <h2>Mengatur GameObjects</h2> 
+       <h3>Buat GameObjects baru</h3> 
+       <p>Untuk membuat GameObject baru di jendela Hierarchy:</p> 
+       <ol> 
+        <li>Klik kanan pada ruang kosong di Adegan yang dipilih.</li> 
+        <li>Pilih GameObject yang ingin Anda buat.</li> 
+       </ol> 
+       <p>Anda juga dapat menekan <strong>Ctrl+Shift+N</strong> (Windows) atau <strong>Command+Shift+N</strong> (macOS) untuk membuat GameObject kosong baru.</p> 
+       <p> <strong>Note</strong>: GameObjects baru dibuat dalam mode "nama" secara otomatis. Untuk menonaktifkan perilaku ini, pilih menu Lainnya (Perusahaan) di jendela Hierarchy dan deselect <strong>Rename New Objects</strong>.</p> 
+       <h3>Facebook Twitter Youtube</h3> 
+       <p>Untuk mengalihkan visibilitas anak GameObjects:</p> 
+       <ol> 
+        <li></li> 
+        <li><strong>Alt</strong> while clicking the drop-down arrow (►) to toggle visibility of all descendant GameObjects of the root GameObject.</li> 
+        <li></li> 
+       </ol> 
+       <h3>Buat GameObjects anak</h3> 
+       <p>Untuk membuat anak GameObject:</p> 
+       <ul> 
+        <li>Seret GameObject ke GameObject induk di Hierarchy.</li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/HierarchyParenting2.png" alt="Drag Object 4 (selected) onto the parent GameObject, Object 1 (highlighted in a blue) to create a child GameObject."> 
+        <figcaption>
+          Seret 
+         <strong>Object 4</strong> (dipilih) ke GameObject induk, 
+         <strong>Object 1</strong> (tertinggi dalam biru) untuk membuat anak GameObject. 
+        </figcaption> 
+       </figure> 
+       <h3>Membuat permainan orang tuaObjects</h3> 
+       <p>Anda dapat menambahkan GameObject baru ke dalam tampilan Hierarchy sebagai orang tua dari GameObject yang ada.</p> 
+       <p>Untuk membuat GameObject induk:</p> 
+       <ol> 
+        <li>Klik kanan GameObject, atau pilih beberapa GameObjects pada tingkat yang sama dan klik kanan.</li> 
+        <li>Pilih <strong>Create Empty Parent</strong>.</li> 
+       </ol> 
+       <p>Anda juga dapat menekan <strong>Ctrl+Shift+G</strong> (Windows) atau <strong>Command+Shift+G</strong> (macOS) untuk membuat GameObject induk.</p> 
+       <p> <strong>Note</strong>: Jika Anda telah menetapkan default parent GameObject, Buat Empty Parent menciptakan GameObject baru sebagai anak induk default, bukan sebagai orang tua dari GameObjects yang dipilih.</p> 
+       <h3>Menjelajahi GameObjects</h3> 
+       <p>GameObject adalah GameObject dengan hierarki yang sama sebagai anak lain GameObject. Untuk membuat GameObject sibling:</p> 
+       <ol> 
+        <li>Seret GameObject di atas atau di bawah GameObject yang ada.</li> 
+        <li>Gunakan garis biru horisontal untuk menentukan urutan GameObject.</li> 
+       </ol> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/HierarchyParenting3_01.png" alt="Drag Object 4 (selected) between Object 2 and Object 3 (indicated by the blue horizontal line), to create a sibling GameObject under the parent GameObject Object 1 (highlighted in a blue)."> 
+        <figcaption>
+          Seret 
+         <strong>Object 4</strong> (pilih) antara 
+         <strong>Object 2</strong> dan 
+         <strong>Object 3</strong> (diindikasikan oleh garis horizontal biru), untuk menciptakan GameObject di bawah GameObject keduaelemen (tertinggi dalam biru). 
+         <strong>Object 1</strong> (highlighted in a blue). 
+        </figcaption> 
+       </figure> 
+       <h3>Permainan Duplikat</h3> 
+       <p>Untuk duplikat GameObjects, klik kanan Target GameObject dan pilih <strong>Duplicate</strong>.</p> 
+       <p>Anda juga dapat menekan <strong>Ctrl+D</strong> (Windows) atau <strong>Command+D</strong> (macOS) untuk menggandakan GameObject yang dipilih.</p> 
+       <h3>Paste GameObjects sebagai anak</h3> 
+       <p>Anda dapat memotong atau menyalin GameObject yang dipilih dan kemudian menempelkannya sebagai anak GameObject lain. Anak yang ditempelkan GameObjects menjaga posisi dunia mereka.</p> 
+       <p>Untuk menempelkan GameObject sebagai anak:</p> 
+       <ol> 
+        <li>Klik kanan GameObject yang dipilih, lalu pilih <strong>Cut</strong> atau <strong>Copy</strong>.</li> 
+        <li>Klik kanan GameObject yang dimaksudkan, dan kemudian pilih <strong>Paste as Child</strong>.</li> 
+       </ol> 
+       <p>Anda juga dapat menekan <strong>Ctrl+Shift+V</strong> (Windows) atau <strong>Command+Shift+V</strong> (macOS) untuk menempelkan GameObject sebagai anak.</p> 
+       <h3>Mengatur GameObjects dengan induk default</h3> 
+       <p>Anda dapat membuat GameObject di jendela Hierarchy "orang tua default". Ketika Anda menyeret GameObject ke tampilan Adegan, Unity secara otomatis membuat GameObject ini anak GameObject Anda set sebagai orang tua default.</p> 
+       <p>Untuk membuat GameObject induk default:</p> 
+       <ol> 
+        <li>Di jendela Hierarchy, klik kanan pada GameObject.</li> 
+        <li>Pilih <strong>Set as Default Parent</strong>.</li> 
+       </ol> 
+       <p>Ketika Anda menyeret GameObject ke tampilan Adegan, di jendela Hierarchy, anak GameObject diberitahu di bawah GameObject induk default. Nama GameObject induk default tebal.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/default-parent.png" alt="In this image, the Cube GameObject is the default parent. When the user drags the Car GameObject into the Scene view, Unity automatically makes it the child of the Cube GameObject."> 
+        <figcaption>
+          Dalam gambar ini, 
+         <strong>Cube</strong> GameObject adalah induk default. Ketika pengguna menyeret 
+         <strong>Car</strong> GameObject ke tampilan Adegan, Unity secara otomatis membuatnya anak dari 
+         <strong>Cube</strong> GameObject. 
+        </figcaption> 
+       </figure> 
+       <p>Untuk menghapus status induk default dari GameObject:</p> 
+       <ol> 
+        <li>Di jendela Hierarchy, klik kanan pada GameObject.</li> 
+        <li>Pilih <strong>Clear Default Parent</strong>.</li> 
+       </ol> 
+       <p>Nama GameObject yang sebelumnya induk default tidak lagi berani. Ketika Anda menyeret GameObject ke tampilan Adegan, muncul di tingkat atas di jendela Hierarchy. Dengan kata lain, Unity tidak membuat GameObject ini anak GameObject yang sebelumnya induk default.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/no-default-parent.png" alt="In this image, no GameObjects in the Hierarchy window are set as the default parent. When the user drags the Car GameObject into the Scene view, Unity adds it at the top level of the hierarchy."> 
+        <figcaption>
+          Dalam gambar ini, tidak ada GameObjects di jendela Hierarchy ditetapkan sebagai induk default. Ketika pengguna menyeret 
+         <strong>Car</strong> GameObject ke tampilan Adegan, Unity menambahkannya di tingkat atas hirarki. 
+        </figcaption> 
+       </figure> 
+       <p>Anda hanya dapat mengatur satu induk default per Adegan. Di jendela Hierarchy, jika Anda mengatur GameObject sebagai induk default, dan kemudian Anda membuat GameObject yang berbeda di Adegan yang sama induk default, hanya GameObject kedua adalah induk default.</p> 
+       <p>Jika Anda memiliki beberapa Adegan di jendela Hierarchy, dan Anda mengatur orang tua default di setiap Adegan, ketika Anda menyeret GameObject ke tampilan Adegan, Unity membuat GameObject induk default di Adegani aktif orang tua GameObject baru.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/multi-scene-default-parent.png" alt="In this image, the Cube GameObjects in both Scene1 and Scene2 are set as default parents. Unity sets the Cube in Scene1 as the parent of the Car GameObject, because Scene1 is the active Scene."> 
+        <figcaption>
+          Dalam gambar ini, 
+         <strong>Cube</strong> GameObjects di kedua 
+         <strong>Scene1</strong> dan 
+         <strong>Scene2</strong> ditetapkan sebagai orang tua default. Unity menetapkan 
+         <strong>Cube</strong> di Adegan1 sebagai orang tua dari GameObject 
+         <strong>Car</strong>, karena 
+         <strong>Scene1</strong> adalah Adegan aktif. 
+        </figcaption> 
+       </figure> 
+       <p>Anda dapat mengatur shortcut keyboard untuk pengaturan induk default di . Pada jendela Shortcuts, menetapkan shortcut keyboard ke <strong>Hierarchy View</strong> &gt; <strong>Set as Default Parent</strong>. Jika tidak ada set induk default, dan di jendela Hierarchy Anda memilih GameObject, gunakan pintas untuk membuat GameObject orang tua default. Ketika orang tua default diatur, gunakan pintas untuk menghapus status induk default dari GameObject yang memilikinya.</p> 
+       <h2>Mengatur visibilitas adegan dan kemampuan memilih</h2> 
+       <p>Klik ikon visibilitas Adegan untuk menyembunyikan dan menunjukkan GameObjects di <span class="tooltip"><a class="tooltipMoreInfoLink" href="UsingTheSceneView.html">Tampilan adegan</a><span class="tooltiptext">Tampilan interaktif ke dunia yang Anda buat. Anda menggunakan Adegan Lihat untuk memilih dan posisi pemandangan, karakter, kamera, lampu, dan semua jenis lain dari Game Object. <a href="UsingTheSceneView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SceneView">Glossary</a></span></span></span> tanpa mengubah visibilitas aplikasi mereka.</p> 
+       <p>Pilih ikon penjemputan adegan untuk beralih kemampuan untuk memilih GameObjects dalam tampilan adegan sementara Anda mengedit.</p> 
+       <p>Kontrol ini berguna untuk bekerja dengan besar atau kompleks Adegan di mana sulit untuk melihat dan memilih GameObjects tertentu.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SceneVisIconsHierarchy_01.png" alt="Scene visibility icons/toggles"> 
+        <figcaption>
+          Ikon visibilitas adegan / beralih 
+        </figcaption> 
+       </figure> 
+       <p>Untuk informasi lebih lanjut, lihat dokumentasi pada <a href="SceneVisibility.html">Kesimpulan adegan</a> dan <a href="ScenePicking.html">Adegan picking</a>.</p> 
+       <h2>Urutkan GameObjects</h2> 
+       <p>Secara default, daftar jendela Hierarchy GameObjects dalam urutan yang mereka buat. Anda dapat menyeret GameObject yang dipilih atau turun di Adegan untuk mengubah urutan GameObjects.</p> 
+       <h3>Penyortiran alfanumerik</h3> 
+       <p>Untuk memilah GameObjects dalam urutan alfanumerik:</p> 
+       <ol> 
+        <li>Pilih <strong>Edit &gt; Preferences</strong> (Windows) atau <strong>Unity &gt; Preferences</strong> (macOS).</li> 
+        <li>Pilih <strong>Enable Alphanumeric Sorting</strong>.</li> 
+       </ol> 
+       <p>Ketika dipilih, ikon muncul di jendela Hierarchy yang memungkinkan Anda untuk beralih antara penyortiran <strong>Transform</strong> (nilai default) atau penyortiran <strong>Alphabetical</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AlphanumericToggle_01.png" alt=""> 
+       </figure> 
+       <h2>Multi-Scene pengeditan</h2> 
+       <p>Anda dapat memiliki lebih dari satu adegan terbuka di jendela Hierarchy pada saat yang sama. Untuk informasi lebih lanjut, lihat halaman <a href="MultiSceneEditing.html">Multi Adegan Editing</a>.</p> 
+       <p><a name="OverrideIndicator"></a></p> 
+       <h2>Override indikator</h2> 
+       <p>Ketika Anda mengedit instance Prefab di Adegan, Unity menampilkan indikator di sebelah orang tua GameObject di hirarki. Indikator ini menyoroti setiap Prefab yang memiliki nilai override non-standar di salah satu permainan anaknya. Untuk membuka <a class="tooltipMoreInfoLink" href="EditingPrefabViaInstance.html#OverridesDropdown">Overrides dropdown</a> langsung dari jendela Hierarchy klik pada indikator override. Indikator override muncul sebagai garis biru di sisi kiri margin dan identik dengan kasus override di jendela <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>. Untuk informasi lebih lanjut, lihat <a href="PrefabInstanceOverrides.html">Instance overrides</a>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/hierarchy-override-indicator.png" alt="This image shows the override indicator displayed next to Prefab A when its child, GameObject C, has a value in a non-default state."> 
+        <figcaption>
+          Gambar ini menunjukkan indikator override ditampilkan di sebelah Prefab A ketika anaknya, GameObject C, memiliki nilai dalam keadaan non-standar. 
+        </figcaption> 
+       </figure> 
+       <hr> 
+       <ul> 
+        <li><span class="page-history">Memperjualkan visibilitas adegan ditambahkan dalam <span class="search-words">NewIn20191</span></span></li> 
+        <li><span class="page-history">Kemungkinan adegan menaiki ditambahkan dalam <span class="search-words">NewIn20193</span></span></li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="device-simulator-plugins.html"></a></span> 
+         <div class="tip">
+           Memperpanjang simulator perangkat 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UsingTheInspector.html"></a></span> 
+         <div class="tip">
+           Jendela Inspektur 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

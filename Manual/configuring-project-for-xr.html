@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Mengkonfigurasi Proyek Unity Anda untuk XR</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="platforms" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="XR.html">XR</a></li> 
+         <li>Mengkonfigurasi Proyek Unity Anda untuk XR</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="XRPluginArchitecture.html"></a></span> 
+          <div class="tip">
+            XR Plug-in Framework 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="xr-render-pipeline-compatibility.html"></a></span> 
+          <div class="tip">
+            Render Universal Kecocokan pipa di XR 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Mengkonfigurasi Proyek Unity Anda untuk XR</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Sitemap Untuk mengkonfigurasi Proyek Unity Anda untuk XR, ikuti langkah-langkah ini:<a name="configuring-project-for-xr"></a>To configure your Unity Project for XR, follow these steps:</p> 
+       <ol> 
+        <li>Buka jendela <strong>Project Settings</strong> (menu: <strong>Edit &gt; Project Settings</strong>), dan pilih <strong>XR Plug-in Management</strong>.</li> 
+        <li>Klik <strong>Install XR <span class="notooltip">Plug-in</span> Management</strong> jika paket belum diinstal. Anda juga dapat menginstalnya dari jendela <strong>Package Manager</strong>.</li> 
+        <li>Setelah instalasi selesai, pilih <strong><span class="tooltip"><strong>Plug-in</strong><span class="tooltiptext">A set of code created outside of Unity that creates functionality in Unity. There are two kinds of plug-ins you can use in Unity: Managed plug-ins (managed .NET assemblies created with tools like Visual Studio) and Native plug-ins (platform-specific native code libraries). <a class="tooltipMoreInfoLink" href="Plugins.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Plug-in">Glossary</a></span></span></span> Provider</strong> untuk mengaktifkannya untuk target build yang sesuai. Untuk melakukan ini: 
+         <ol> 
+          <li>Pilih target build (misalnya, Android).</li> 
+          <li>Pilih kotak centang di sebelah kiri setiap plug-in yang ingin Anda gunakan untuk membangun target.</li> 
+         </ol> </li> 
+        <li>Setelah beban plug-in, ditampilkan di navigasi kiri tangan, di bawah Manajemen XR Plug-in. Klik plug-in untuk mengkonfigurasi pengaturannya untuk setiap target build.</li> 
+        <li>Untuk mengatur pelacakan, dari menu utama Unity, pergi ke GameObject &gt; XR &gt; Tambahkan XR Rig.</li> 
+       </ol> 
+       <p><strong>Notes:</strong></p> 
+       <ul> 
+        <li>Memilih penyedia plug-in XR memungkinkan penyedia untuk target build yang sesuai. Unity secara otomatis menginstal paket plug-in jika belum hadir.</li> 
+        <li>Mengaktifkan plug-ins tidak secara otomatis menghapus paket yang ada. Uninstall penyedia plug-ins dari <a href="upm-ui.html">Package Manager</a>.</li> 
+        <li>Untuk daftar plug-in pihak ketiga, lihat [VROverview](Getting Started with VR Development).</li> 
+       </ul> 
+       <h2>Menyiapkan pelacakan dalam kerangka plug-in XR</h2> 
+       <p>Pelacakan Implicit <span class="tooltip"><strong>camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span>, digunakan dalam versi Unity sebelum 2019.3, telah dihapus dalam kerangka plug-in XR baru. Pelacakan implicit bekerja untuk aplikasi sederhana, HMD-only, tetapi tidak intuitif ketika digunakan dalam korelasi dengan pengontrol dan interaksi lainnya.</p> 
+       <p>Untuk memastikan pelacakan XR dikonfigurasi dengan kerangka plug-in XR, ikuti langkah di bawah ini.</p> 
+       <h2>Mulai dari sebuah baru adegan</h2> 
+       <p>Instruksi di bawah ini berlaku jika Anda mulai dari <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> baru, atau dari Adegan yang memenuhi kondisi berikut:</p> 
+       <ul> 
+        <li>Hanya ada satu kamera di tempat kejadian, dan kamera itu ditandai sebagai kamera utama.</li> 
+        <li>Kamera di Adegan adalah di akar hirarki.</li> 
+       </ul> 
+       <p>Dari menu utama Unity, pergi ke <strong>GameObject &gt; XR &gt; Add XR Rig</strong>. Upaya ini untuk mengubah Adegan baru Anda menjadi Adegan yang mendukung XR Plug-in Framework.</p> 
+       <p>Jika Anda tidak melihat kesalahan dalam log konsol, Anda sekarang harus dapat mengklik <strong>Play</strong> di Adegan Anda, dan melihat trek Kamera terhadap perangkat yang telah Anda konfigurasikan dalam paket Manajemen Plug-in XR.</p> 
+       <p>Jika Unity tidak dapat meniru Adegan Anda dengan benar, tampilan kesalahan dalam log konsol. Ikuti petunjuk di bagian <strong>Starting from an existing Scene</strong> di bawah ini.</p> 
+       <h2>Mulai dari yang ada adegan</h2> 
+       <p>Migrasi dari Adegan yang ada memiliki langkah-langkah tambahan dibandingkan dengan meniru adegan kosong. Akibatnya, ada pilihan yang berbeda tergantung pada bagaimana adegan Anda dikonfigurasi. Tujuan keseluruhan adalah untuk memiliki jalur Adegan dengan cara yang sama seperti yang dilakukan sebelum bermigrasi ke Kerangka Plug-in XR.</p> 
+       <h3>Identifikasi Jenis adegan</h3> 
+       <p>Temukan Kamera di Adegan Anda yang ditandai sebagai Kamera Utama. Unity menggunakan Kamera ini untuk membuat HMD atau perangkat utama lainnya.</p> 
+       <p>Jika Kamera Utama <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span>:</p> 
+       <ul> 
+        <li>Adalah di akar hierarki Proyek Anda, ikuti langkah-langkah untuk Migrating adegan sederhana.</li> 
+        <li>Bukan di akar hierarki Proyek Anda, ikuti langkah-langkah untuk Migrating Adegan yang kompleks.</li> 
+       </ul> 
+       <h3>Migrating sebuah sederhana adegan</h3> 
+       <p>Untuk meniru Adegan sederhana, ikuti langkah-langkah di bawah ini.</p> 
+       <h4>Sitemap Buat contoh dari XR Rig Prefab.</h4> 
+       <p>Memungkinkan Kamera yang sebelumnya di akar hierarki Adegan memungkinkan Anda untuk menukar Kamera yang ada ke XR Rig dengan menghentikan XR Rig <span class="tooltip"><strong>Prefab</strong><span class="tooltiptext">Jenis aset yang memungkinkan Anda untuk menyimpan GameObject lengkap dengan komponen dan properti. Prefab bertindak sebagai template dari mana Anda dapat membuat instance objek baru di tempat kejadian. <a class="tooltipMoreInfoLink" href="Prefabs.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Prefab">Glossary</a></span></span></span> yang paket ini mengandung.</p> 
+       <p>Anda dapat menemukan Prefab ini di folder <code>Packages/XR Legacy Input Helpers/Prefabs</code>. Seret Prefab ke dalam hierarki Adegan Anda untuk membuat contoh baru dari itu.</p> 
+       <h4>2. di Pindahkan rig XR untuk mencocokkan lokasi Kamera.</h4> 
+       <p>Sekarang Anda memiliki contoh XR Rig Prefab, Anda perlu mengkonfigurasi XR Rig GameObject sehingga posisi Kamera yang dihasilkan akan benar ketika aplikasi Anda dimulai.</p> 
+       <p>Mengubah posisi dan rotasi XR Rig GameObject sehingga cocok dengan posisi kamera utama saat ini. Jika Anda menerapkan transformasi skala ke Kamera Utama, pastikan Anda juga menerapkan skala ini ke XR Rig GameObject. Jika Anda meningkatkan rig XR, sangat dianjurkan untuk menggunakan skala seragam di semua tiga sumbu.</p> 
+       <h4>3. Juni Replikasi perubahan posisi, jika perlu.</h4> 
+       <p>Jika Kamera Utama di Adegan yang tidak bermigrasi di atas lantai (komponen Y adalah &gt; 0,0f), Anda perlu meniru perubahan posisi ini. Anda dapat melakukan ini dalam beberapa cara yang berbeda, tergantung pada posisi asli perubahan dimaksudkan untuk meniru.</p> 
+       <p><strong>3.1 - Uplift to simulate the height of the user</strong></p> 
+       <p>Jika Kamera Utama sebelumnya dibesarkan di atas lantai untuk mensimulasikan ketinggian pengguna dan aplikasi menggunakan Asal Pelacakan Perangkat (kadang kali disebut Mode Pelacakan "Stationary", komponen melakukan uplift tambahan ini. Jika tidak, lihat bagian berikutnya.</p> 
+       <p>Untuk mengkonfigurasi Kamera untuk memiliki pengangkatan vertikal ketika aplikasi digunakan dalam mode Asal Pelacakan Perangkat, atur opsi berikut pada komponen <strong>Camera Offset</strong> pada XR GameObject:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Option</strong></th> 
+          <th style="text-align:left;"><strong>Value</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Requested Tracking Mode</strong></td> 
+          <td style="text-align:left;">Device</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Camera Y Offset</strong></td> 
+          <td style="text-align:left;">Mengatur opsi ini ke ketinggian di mana Kamera Utama yang ada dibesarkan untuk mensimulasikan ketinggian pengguna.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Setelah Anda mengkonfigurasi opsi ini, mengubah XR Rig GameObject's <strong>Y Position</strong> menjadi apa yang akan Anda pertimbangkan sebagai “floor” dalam aplikasi Anda (biasanya 0,0f). Komponen <strong>Camera Offset</strong> menambahkan uplift tambahan sesuai kebutuhan.</p> 
+       <p><strong>3.2 - Uplift indicates camera position</strong></p> 
+       <p>Jika Adegan yang tidak bermigrasi Anda menggunakan Asal Pelacakan Lantai (secara historis disebut sebagai Mode Pelacakan Ruang), dan posisi Kamera Utama mewakili titik awal pengguna tanpa termasuk tingginya (yaitu, kamera secara efektif pada "lantai") logis, ikuti langkah-langkah ini untuk meniru langkah-langkah Anda Adegan dengan benar:</p> 
+       <ul> 
+        <li>Pindahkan rig XR untuk mencocokkan posisi dan rotasi kamera utama di ruang dunia Unity.</li> 
+        <li>Jika aplikasi menggunakan Asal Pelacakan Lantai, atur komponen <strong>Requested Tracking Mode</strong> ke Lantai. Ini memastikan bahwa kamera memiliki offset vertikal yang benar.<strong>Camera Offset</strong> component to Floor. This ensures that the camera has the correct vertical offset.</li> 
+        <li>Jika aplikasi tidak menggunakan Asal Pelacakan Lantai, atur komponen <strong>Requested Tracking Mode</strong> ke Default. Ini berlaku perilaku yang benar terlepas dari mode pelacakan perangkat aplikasi dimulai dengan.<strong>Camera Offset</strong> component to Default. This applies the correct behavior regardless of the device tracking mode the application starts with.</li> 
+        <li>Jika Anda sebelumnya menggunakan komponen yang berbeda untuk memindahkan Kamera secara vertikal dan menangani perbedaan antara Perangkat dan Lantai pelacakan asal, Anda mungkin perlu menonaktifkan atau memodifikasi komponen ini sehingga komponen yang berbeda tidak benar memindahkan Kamera beberapa kali.</li> 
+       </ul> 
+       <p>Selanjutnya, hapus GameObject Kamera Utama dari instance XR Rig, dan orang tua Kamera Utama Anda yang ada GameObject ke Kamera Offset GameObject.</p> 
+       <p>Pastikan posisi dan rotasi Game Kamera Utama Anda Objek keduanya 0,0,0. Alih-alih mengubah posisi kamera, selalu mengubah posisi XR Rig GameObject. Juga, pastikan bahwa setiap tautan dari GameObjects atau komponen ke Kamera Utama Anda masih benar.</p> 
+       <h4>5. Juli Mengkonfigurasi Proyek Anda untuk XR</h4> 
+       <p>Lihat bagian <a href="configuring-project-for-xr.html">Mengkonfigurasi Proyek Unity Anda untuk XR</a> di atas.</p> 
+       <h4>6. Juni Sitemap</h4> 
+       <p>Sekarang bahwa Adegan Anda telah berhasil bermigrasi, tekan <strong>Play</strong> dan pastikan bahwa lokasi awal kamera sama seperti itu sebelum bermigrasi ke Kerangka Plugin XR. Jika tidak, lihat bagian Troubleshooting di bawah ini.</p> 
+       <h3>Migrating sebuah kompleks Adegan</h3> 
+       <p>Jika Adegan Anda saat ini menggunakan pelacakan kamera implicit dari sistem VR legacy, dan Kamera Utama adalah bagian dari hierarki GameObject, ikuti langkah-langkah ini untuk meniru sistem pelacakan VR legacy Anda ke Kerangka Plugin XR.</p> 
+       <p>Pembaruan kamera Implicit akan memperbarui transformasi lokal GameObject dua kali setiap bingkai, yang membuat Main Camera GameObject bergerak relatif ke posisi, skala dan rotasi hirarki yang ada di bawah.</p> 
+       <p>Dalam skenario ini, Anda memiliki dua pilihan untuk meniru Adegan Anda:</p> 
+       <ol> 
+        <li><a href="#leave-in-place">Tinggalkan hirarki yang ada di tempat dan tambahkan komponen untuk mengaktifkan pelacakan di hierarki saat ini</a></li> 
+        <li><a href="#migrate-to-xr-rig">Migrasi hirarki yang ada untuk menggunakan struktur rig XR.</a></li> 
+       </ol> 
+       <p>Ini umumnya dianjurkan untuk meninggalkan hirarki yang ada di tempat jika Adegan Anda memiliki fungsi yang bergantung pada struktur hirarki ini. Jika Anda memiliki konfigurasi yang relatif sederhana, Anda dapat bermigrasi langsung ke rig XR.</p> 
+       <h4><a name="leave-in-place"></a> </h4> 
+       <p>Metode ini melibatkan jumlah modifikasi paling sedikit untuk hierarki Adegan yang ada untuk mengaktifkan pelacakan dalam Unity. Ini melibatkan menambahkan Driver Pose Tracked ke Kamera Utama di Adegan Anda. Ini memastikan bahwa fungsi lain yang membutuhkan hierarki GameObject Anda saat ini terus berfungsi seperti sebelumnya.</p> 
+       <h4>Sitemap Temukan Kamera Utama Anda dan tambahkan Driver Pose Tracked ke dalamnya</h4> 
+       <p>Temukan Kamera Utama di Adegan.</p> 
+       <p>Tambahkan Driver Pose Tracked, menggunakan pengaturan yang sama yang digunakan Kamera Utama XR Rig. screenshot di bawah ini menunjukkan pengaturan ini:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/xr-rig-tpd-defaults.png" alt="Tracked Pose Driver settings"> 
+        <figcaption>
+          Pengaturan Pose Driver yang dilacak 
+        </figcaption> 
+       </figure> 
+       <p>Apakah ini untuk semua Kamera Utama di Adegan Anda. Jika Anda perlu melacak perangkat lain di dalam Adegan Anda, lihat Pengaturan Driver Pose Tracked untuk opsi yang benar untuk kasus penggunaan Anda.</p> 
+       <h4>2. di Mengkonfigurasi Proyek Anda untuk XR</h4> 
+       <p>Lihat bagian <a href="configuring-project-for-xr.html">Mengkonfigurasi Proyek Unity Anda untuk XR</a> di atas.</p> 
+       <h4>3. Juni Sitemap</h4> 
+       <p>Sekarang bahwa Adegan Anda telah berhasil bermigrasi, tekan <strong>Play</strong> dan pastikan bahwa lokasi awal Kamera sama seperti itu sebelum bermigrasi ke Kerangka Plugin XR. Jika tidak, lihat bagian <a href="#troubleshooting">Troubleshooting</a> di bawah ini.</p> 
+       <h4>Migrasi ke XR Sitemap<a name="migrate-to-xr-rig"></a> </h4> 
+       <p>Karena ada sejumlah hierarki yang tak terbatas dalam penggunaan, Unity tidak dapat memberikan langkah-langkah spesifik untuk meniru hierarki adegan saat ini untuk menggunakan XR. Lihat bagian dari dokumentasi paket Penolong Legacy untuk memahami apa rig XR dimaksudkan untuk mewakili. Ini akan memungkinkan Anda untuk memetakan hierarki yang ada untuk konsep dalam XR Rig.</p> 
+       <p>Untuk mengkonfigurasi adegan Anda untuk menggunakan Manajemen XR, lihat bagian <a href="configuring-project-for-xr.html">Mengkonfigurasi Proyek Unity Anda untuk XR</a> di atas.</p> 
+       <p>Jika masih ada masalah, lihat bagian <a href="#troubleshooting">Troubleshooting</a> di bawah ini.</p> 
+       <h3>Troubleshooting <a name="troubleshooting"></a> </h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Issue</strong></th> 
+          <th style="text-align:left;"><strong>Possible causes</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Kamera terlalu tinggi di Adegan</td> 
+          <td style="text-align:left;">Apakah Mode Pelacakan Permintaan Komponen Offset Kamera diatur dengan benar?<br><br> Apakah Kamera Y Offset mengatur terlalu tinggi?</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <!-- area:platforms --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="XRPluginArchitecture.html"></a></span> 
+         <div class="tip">
+           XR Plug-in Framework 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="xr-render-pipeline-compatibility.html"></a></span> 
+         <div class="tip">
+           Render Universal Kecocokan pipa di XR 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

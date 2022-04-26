@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Animasi Scripting (Legacy)</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="LegacyTopics.html">Legacy Topics</a></li> 
+         <li><a href="Animations.html">Sistem Animasi Legacy</a></li> 
+         <li>Scripting Animasi (Legacy)</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="class-Animation.html"></a></span> 
+          <div class="tip">
+            Animation 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UnityAnalyticsSDK.html"></a></span> 
+          <div class="tip">
+            Legacy Unity Analytics (SDK Workflow) 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Scripting Animasi (Legacy)</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Sistem Animasi Unity memungkinkan Anda untuk membuat karakter kulit animasi yang indah. Sistem Animasi mendukung campuran animasi, pencampuran, animasi tambahan, sinkronisasi waktu siklus berjalan, <span class="tooltip"><strong>animation layers</strong><span class="tooltiptext">Lapisan Animasi mengandung Mesin Negara Animasi yang mengontrol animasi model atau bagian darinya. Contoh ini adalah jika Anda memiliki lapisan tubuh penuh untuk berjalan atau melompat dan lapisan yang lebih tinggi untuk gerakan tubuh atas seperti membuang objek atau menembak. Lapisan yang lebih tinggi mengambil precedence untuk bagian tubuh yang mereka kontrol. <a class="tooltipMoreInfoLink" href="AnimationLayers.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#AnimationLayer">Glossary</a></span></span></span>, kontrol atas semua aspek pemutaran animasi (waktu, kecepatan, campuran-weight), <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Mesh">Glossary</a></span></span></span> <span class="tooltip"><strong>skinning</strong><span class="tooltiptext">Proses mengikat sendi tulang ke vertices mesh karakter atau ‘skin’. Dilakukan dengan alat eksternal, seperti Blender atau Autodesk Maya. <a href="UsingHumanoidChars.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Skinning">Glossary</a></span></span></span> dengan 1, 2 atau 4 tulang per simpul serta mendukung rag-dolls berbasis fisik dan animasi prosedural. Untuk mendapatkan hasil terbaik, disarankan agar Anda membaca praktik dan teknik terbaik untuk menciptakan karakter yang matang dengan kinerja optimal di halaman Unity pada halaman <a href="ModelingOptimizedCharacters.html">Model Karakter yang Dioptimalkan</a>.</p> 
+       <p>Membuat karakter animasi melibatkan dua hal; <em>moving</em> melalui dunia dan <em>animating</em> itu sesuai. Jika Anda ingin belajar lebih banyak tentang karakter bergerak di sekitar, lihatlah <a href="class-CharacterController.html">Halaman Pengendali Karakter</a>. Halaman ini berfokus pada animasi. Yang sebenarnya dari karakter dilakukan melalui antarmuka skrip Unity.</p> 
+       <p>Anda dapat men-download menunjukkan karakter animasi pra-setup. Setelah Anda belajar dasar-dasar di halaman ini Anda juga dapat melihat <a href="../ScriptReference/Animation.html">antarmuka skrip animasi</a>.</p> 
+       <h2>Animasi Blending</h2> 
+       <p>Dalam permainan hari ini, campuran animasi adalah fitur penting untuk memastikan bahwa karakter memiliki animasi halus. Animators membuat animasi terpisah, misalnya, siklus berjalan, siklus lari, animasi idle atau animasi menembak. Setiap titik dalam waktu selama permainan Anda perlu dapat transisi dari animasi idle ke siklus berjalan dan sebaliknya. Secara alami, Anda ingin transisi menjadi halus dan menghindari kejernihan tiba-tiba dalam gerakan.</p> 
+       <p>Ini adalah di mana campuran animasi datang. Dalam Unity Anda dapat memiliki sejumlah animasi yang bermain pada karakter yang sama. Semua animasi dicampur atau ditambahkan bersama untuk menghasilkan animasi akhir.</p> 
+       <p>Langkah pertama kami akan membuat campuran karakter dengan lancar antara animasi idle dan berjalan. Untuk membuat pekerjaan skrip lebih mudah, kami akan terlebih dahulu mengatur <strong>Wrap Mode</strong> animasi ke <strong>Loop</strong>. Kemudian kita akan mematikan <strong>Play Automatically</strong> untuk memastikan skrip kita adalah satu-satunya animasi bermain.</p> 
+       <p>Skrip pertama kami untuk memperbarui karakter cukup sederhana; kami hanya perlu beberapa cara untuk mendeteksi seberapa cepat karakter kami bergerak, dan kemudian memudar antara berjalan dan animasi idle. Untuk tes sederhana ini, kami akan menggunakan ax input standar: -</p> 
+       <pre><code>function Update () {
+   if (Input.GetAxis("Vertical") &gt; 0.2)
+       animation.CrossFade ("walk");
+   else
+      animation.CrossFade ("idle");
+}
+
+</code></pre> 
+       <p>Untuk menggunakan script ini di proyek Anda:-</p> 
+       <ol> 
+        <li>Buat file Javascript menggunakan <strong>Assets &gt; Create &gt; Javascript</strong>.</li> 
+        <li>Salin dan tempelkan kode ke dalamnya</li> 
+        <li>Seret skrip ke karakter ( perlu dilampirkan ke <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> yang memiliki animasi)</li> 
+       </ol> 
+       <p>Ketika Anda menekan tombol Play, karakter akan mulai berjalan di tempat ketika Anda memegang tombol panah dan kembali ke pose idle ketika Anda melepaskannya.</p> 
+       <h2>Lapisan Animasi</h2> 
+       <p>Lapisan adalah konsep yang sangat berguna yang memungkinkan Anda untuk animasi kelompok dan memprioritaskan bobot.</p> 
+       <p>Sistem animasi Unity dapat dicampur antara sebanyak <span class="tooltip"><strong>animation clips</strong><span class="tooltiptext">Animasi data yang dapat digunakan untuk karakter animasi atau animasi sederhana. Ini adalah bagian "unit" sederhana dari gerakan, seperti (salah satu contoh spesifik) "Idle", "Walk" atau "Run". <a class="tooltipMoreInfoLink" href="class-AnimationClip.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnimationClip">Glossary</a></span></span></span> yang Anda inginkan. Anda dapat menetapkan campuran berat secara manual atau hanya menggunakan <strong>animation.CrossFade()</strong>, yang akan menghidupkan berat secara otomatis.</p> 
+       <h3>Berat campuran selalu dinormalkan sebelum diterapkan</h3> 
+       <p>Katakanlah Anda memiliki siklus berjalan dan siklus lari, baik memiliki berat 1 (100%). Ketika Unity menghasilkan animasi akhir, itu akan menormalkan berat, yang berarti siklus berjalan akan berkontribusi 50% untuk animasi dan siklus lari juga akan berkontribusi 50%.</p> 
+       <p>Namun, Anda umumnya ingin memprioritaskan animasi mana yang menerima paling berat ketika ada dua animasi bermain. Tentu saja dimungkinkan untuk memastikan bahwa jumlah berat hingga 100% secara manual, tetapi lebih mudah hanya menggunakan lapisan untuk tujuan ini.</p> 
+       <h3>Contoh Lapisan</h3> 
+       <p>Sebagai contoh, Anda mungkin memiliki animasi menembak, idle dan siklus berjalan. Animasi berjalan dan idle akan dicampur berdasarkan kecepatan pemain tetapi ketika pemain menembak, Anda ingin menunjukkan hanya animasi menembak. Dengan demikian, animasi tuna pada dasarnya memiliki prioritas yang lebih tinggi.</p> 
+       <p>Cara termudah untuk melakukan ini adalah untuk hanya terus bermain berjalan dan idle animasi sambil menembak. Untuk melakukan ini, kita perlu memastikan bahwa animasi tuna berada dalam lapisan yang lebih tinggi daripada animasi idle dan berjalan, yang berarti animasi menembak akan menerima bobot campuran terlebih dahulu. Animasi berjalan dan idle akan menerima bobot hanya jika animasi menembak tidak menggunakan semua 100% dari berat campuran. Jadi, ketika CrossFading animasi menembak, berat akan mulai dari nol dan selama periode singkat menjadi 100%. Pada awal lapisan berjalan dan idle masih akan menerima campuran berat tetapi ketika animasi tuna benar-benar pudar, mereka akan menerima tidak ada berat sama sekali. Ini adalah apa yang kita butuhkan!</p> 
+       <pre><code>function Start () {
+   // Set all animations to loop
+   animation.wrapMode = WrapMode.Loop;
+   // except shooting
+   animation["shoot"].wrapMode = WrapMode.Once;
+
+   // Put idle and walk into lower layers (The default layer is always 0)
+   // This will do two things
+   // - Since shoot and idle/walk are in different layers they will not affect
+   // each other's playback when calling CrossFade.
+   // - Since shoot is in a higher layer, the animation will replace idle/walk
+   // animations when faded in.
+   animation["shoot"].layer = 1;
+
+   // Stop animations that are already playing
+   //(In case user forgot to disable play automatically)
+   animation.Stop();
+}
+
+function Update () {
+   // Based on the key that is pressed,
+   // play the walk animation or the idle animation
+   if (Mathf.Abs(Input.GetAxis("Vertical")) &gt; 0.1)
+      animation.CrossFade("walk");
+   else
+      animation.CrossFade("idle");
+
+   // Shoot
+   if (Input.GetButtonDown ("Fire1"))
+      animation.CrossFade("shoot");
+}
+
+</code></pre> 
+       <p>Secara default <strong>animation.Play()</strong> dan <strong>animation.CrossFade()</strong> akan berhenti atau memudar animasi yang berada di lapisan yang sama. Ini adalah apa yang kita inginkan dalam kebanyakan kasus. Meme it Dalam menembak kami, idle, menjalankan contoh, bermain idle dan lari tidak akan mempengaruhi animasi menembak dan sebaliknya (Anda dapat mengubah perilaku ini dengan parameter opsional untuk animasi. CrossFade jika Anda suka).</p> 
+       <h2>Pencampuran Animasi</h2> 
+       <p>Animasi pencampuran memungkinkan Anda untuk memotong jumlah animasi yang Anda butuhkan untuk membuat permainan Anda dengan memiliki beberapa animasi berlaku untuk bagian tubuh hanya. Ini berarti animasi tersebut dapat digunakan bersama dengan animasi lain dalam berbagai kombinasi.</p> 
+       <p>Anda menambahkan pencampuran animasi berubah menjadi animasi dengan memanggil <strong>AddMixingTransform()</strong> pada Animasi yang diberikan.</p> 
+       <h3>Contoh pencampuran</h3> 
+       <p>Contoh pencampuran mungkin sesuatu seperti animasi tangan. Anda mungkin ingin membuat gelombang tangan baik ketika karakter idle atau ketika berjalan. Tanpa pencampuran animasi Anda harus membuat animasi bergelombang tangan terpisah untuk keadaan idle dan berjalan. Namun, jika Anda menambahkan transformasi bahu sebagai transformasi pencampuran ke animasi bergelombang tangan, animasi bergelombang tangan akan memiliki kontrol penuh hanya dari <span class="tooltip"><strong>joint</strong><span class="tooltiptext">Komponen fisika yang memungkinkan koneksi dinamis antara komponen Rigidbody, biasanya memungkinkan beberapa tingkat pergerakan seperti engsel. <a class="tooltipMoreInfoLink" href="Joints.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#joint">Glossary</a></span></span></span> bahu ke tangan. Karena sisa tubuh tidak akan terkena dampak tangan, itu akan terus bermain idle atau berjalan animasi. Akibatnya, hanya satu animasi diperlukan untuk membuat gelombang tangan sementara sisa tubuh menggunakan idle atau berjalan animasi.</p> 
+       <pre><code>/// Adds a mixing transform using a Transform variable
+var shoulder : Transform;
+animation["wave_hand"].AddMixingTransform(shoulder);
+
+</code></pre> 
+       <p>Contoh lain menggunakan jalan.</p> 
+       <pre><code>function Start () {
+   // Adds a mixing transform using a path instead
+   var mixTransform : Transform = transform.Find("root/upper_body/left_shoulder");
+   animation["wave_hand"].AddMixingTransform(mixTransform);
+}
+
+</code></pre> 
+       <h2>Animasi Tambahan</h2> 
+       <p>Animasi tambahan dan pencampuran animasi memungkinkan Anda untuk memotong jumlah animasi yang harus Anda buat untuk permainan Anda, dan penting untuk membuat animasi wajah.</p> 
+       <p>Misalkan Anda ingin membuat karakter yang ramping ke sisi saat berjalan dan berjalan. Ini mengarah ke empat kombinasi (walk-lean-left, walk-lean-right, run-lean-left, run-lean-right), masing-masing yang membutuhkan animasi. Membuat animasi terpisah untuk setiap kombinasi dengan jelas mengarah ke banyak pekerjaan tambahan bahkan dalam kasus sederhana ini tetapi jumlah kombinasi meningkat secara dramatis dengan setiap tindakan tambahan. Untungnya animasi dan pencampuran aditif menghindari kebutuhan untuk menghasilkan animasi terpisah untuk kombinasi gerakan sederhana.</p> 
+       <h3>Contoh Animasi Tambahan</h3> 
+       <p>Animasi tambahan memungkinkan Anda untuk mengatasi efek satu animasi di atas orang lain yang dapat bermain. Ketika menghasilkan animasi tambahan, Unity akan menghitung perbedaan antara bingkai pertama dalam klip animasi dan bingkai saat ini. Kemudian itu akan menerapkan perbedaan ini di atas semua animasi bermain lainnya.</p> 
+       <p>Merujuk ke contoh sebelumnya, Anda bisa membuat animasi untuk ramping kanan dan kiri dan Unity akan dapat mengabadikan ini di jalan kaki, idle atau menjalankan siklus. Ini bisa dicapai dengan kode seperti berikut:-</p> 
+       <pre><code>private var leanLeft : AnimationState;
+private var leanRight : AnimationState;
+
+function Start () {
+   leanLeft = animation["leanLeft"];
+   leanRight = animation["leanRight"];
+
+   // Put the leaning animation in a separate layer
+   // So that other calls to CrossFade won't affect it.
+   leanLeft.layer = 10;
+   leanRight.layer = 10;
+
+   // Set the lean animation to be additive
+   leanLeft.blendMode = AnimationBlendMode.Additive;
+   leanRight.blendMode = AnimationBlendMode.Additive;
+
+   // Set the lean animation ClampForever
+   // With ClampForever animations will not stop
+   // automatically when reaching the end of the clip
+   leanLeft.wrapMode = WrapMode.ClampForever;
+   leanRight.wrapMode = WrapMode.ClampForever;
+
+   // Enable the animation and fade it in completely
+   // We don't use animation.Play here because we manually adjust the time
+   // in the Update function.
+   // Instead we just enable the animation and set it to full weight
+   leanRight.enabled = true;
+   leanLeft.enabled = true;
+   leanRight.weight = 1.0;
+   leanLeft.weight = 1.0;
+
+   // For testing just play "walk" animation and loop it
+   animation["walk"].wrapMode = WrapMode.Loop;
+   animation.Play("walk");
+}
+
+// Every frame just set the normalized time
+// based on how much lean we want to apply
+function Update () {
+   var lean = Input.GetAxis("Horizontal");
+   // normalizedTime is 0 at the first frame and 1 at the last frame in the clip
+   leanLeft.normalizedTime = -lean;
+   leanRight.normalizedTime = lean;
+}
+
+</code></pre> 
+       <p>Sitemap Saat menggunakan animasi aditif, sangat penting bahwa Anda juga memainkan beberapa animasi non-tuntas lainnya pada setiap transformasi yang juga digunakan dalam animasi aditif, jika animasi akan menambah hasil bingkai terakhir. Ini pasti tidak apa yang Anda inginkan. Meme it<strong>Tip:</strong> When using Additive animations, it is critical that you also play some other non-additive animation on every transform that is also used in the additive animation, otherwise the animations will add on top of the last frame’s result. This is most certainly not what you want.</p> 
+       <h2>Animating Karakter Sitemap</h2> 
+       <p>Kadang-kadang Anda ingin menghidupkan kembali tulang karakter Anda secara makmur. Misalnya, Anda mungkin ingin kepala karakter Anda untuk melihat titik tertentu di ruang 3D yang ditangani terbaik oleh skrip yang melacak titik target. Untungnya, Unity membuat ini sangat mudah, karena tulang hanya Transforms yang menggerakkan jaring berkelok-kelok. Dengan demikian, Anda dapat mengontrol tulang karakter dari skrip seperti Transforms dari GameObject.</p> 
+       <p>Satu hal penting untuk tahu adalah bahwa pembaruan sistem animasi Transforms setelah fungsi <strong>Update()</strong> dan sebelum fungsi <strong>LateUpdate()</strong>. Jadi jika Anda ingin melakukan fungsi <strong>LookAt()</strong> yang harus Anda lakukan bahwa dalam <strong>LateUpdate()</strong> untuk memastikan bahwa Anda benar-benar mengintimidasikan animasi.</p> 
+       <p>Ragdolls dibuat dengan cara yang sama. Anda hanya perlu melampirkan <span class="tooltip"><strong>Rigidbodies</strong><span class="tooltiptext">Komponen yang memungkinkan GameObject untuk dipengaruhi oleh gravitasi simulasi dan kekuatan lainnya. <a class="tooltipMoreInfoLink" href="class-Rigidbody.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Rigidbody">Glossary</a></span></span></span>, <span class="tooltip"><strong>Character Joints</strong><span class="tooltiptext">Sendi ball-socket yang diperpanjang yang memungkinkan sambungan terbatas pada setiap sumbu. Terutama digunakan untuk efek Ragdoll. <a href="class-CharacterJoint.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#CharacterJoint">Glossary</a></span></span></span> dan Kapsul <span class="tooltip"><strong>Colliders</strong><span class="tooltiptext">Bentuk tak terlihat yang digunakan untuk menangani tabrakan fisik untuk objek. Seorang sari tidak perlu menjadi bentuk yang sama dengan jala objek - perkiraan kasar sering lebih efisien dan tidak dapat dibedakan dalam gameplay. <a href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Collider">Glossary</a></span></span></span> ke tulang yang berbeda. Ini kemudian akan secara fisik menghidupkan karakter kulit Anda.</p> 
+       <h2>Animasi Playback dan Sampling</h2> 
+       <p>Bagian ini menjelaskan bagaimana animasi di Unity sampel ketika mereka dimainkan kembali oleh mesin.</p> 
+       <p>AnimasiClips biasanya diberikan pada tingkat bingkai tetap. Misalnya, Anda dapat membuat animasi Anda di Autodeskdesk 3ds Max® atau Autodeskdesk Maya® pada tingkat bingkai 60 <span class="tooltip"><strong>frames per second</strong><span class="tooltiptext">Frekuensi di mana bingkai berturut-turut ditampilkan dalam permainan berjalan. <a class="tooltipMoreInfoLink" href="RenderingStatistics.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#framespersecond">Glossary</a></span></span></span> (fps). Ketika mengimpor animasi di Unity, tingkat bingkai ini akan dibaca oleh importir, sehingga data dari animasi impor juga sampel pada 60 <span class="tooltip"><strong>fps</strong><span class="tooltiptext">Lihat penembak orang pertama, bingkai per detik.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#FPS">Glossary</a></span></span></span>.</p> 
+       <p>Namun, permainan biasanya berjalan pada tingkat bingkai variabel. Tingkat bingkai mungkin lebih tinggi pada beberapa komputer daripada pada orang lain, dan itu juga dapat bervariasi dari satu detik ke dasar berikutnya pada kompleksitas pandangan <span class="tooltip"><strong>camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span> terlihat pada saat tertentu. Pada dasarnya ini berarti bahwa kita tidak dapat membuat asumsi tentang tingkat bingkai yang tepat permainan berjalan. Bagaimana cara ini adalah bahwa bahkan jika animasi diucapkan pada 60 fps, itu dapat dimainkan kembali pada bingkai yang berbeda, seperti 56.72 fps, atau 83.14 fps, atau praktis nilai lainnya.</p> 
+       <p>Akibatnya, Unity harus sampel animasi pada variabel framerates, dan tidak dapat menjamin framerate yang awalnya dirancang. Untungnya, animasi untuk grafis komputer 3D tidak terdiri dari bingkai diskrit, tetapi lebih dari kurva terus menerus. Kurva ini dapat dipesan pada setiap titik dalam waktu, tidak hanya pada poin-poin tersebut dalam waktu yang sesuai dengan bingkai dalam animasi asli. Bahkan, jika permainan berjalan pada tingkat bingkai yang lebih tinggi daripada animasi diucapkan dengan, animasi benar-benar akan terlihat lebih halus dan lebih cairan dalam permainan daripada yang dilakukan di perangkat lunak animasi.</p> 
+       <p>Untuk tujuan yang paling praktis, Anda dapat mengabaikan fakta bahwa animasi sampel Unity pada bingkai variabel. Namun, jika Anda memiliki logika gameplay yang bergantung pada animasi yang mengubah atau sifatnya menjadi konfigurasi yang sangat spesifik, maka Anda perlu menyadari bahwa pengambilan sampel kembali terjadi di balik <span class="tooltip"><strong>scenes</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>. Misalnya, jika Anda memiliki animasi yang memutar objek dari 0 hingga 180 derajat lebih dari 30 bingkai, dan Anda ingin tahu dari kode Anda ketika mencapai setengah cara di sana, Anda tidak boleh melakukannya dengan memiliki pernyataan bersyarat dalam kode Anda yang memeriksa apakah rotasi saat ini 90 derajat. Karena sampel Unity animasi sesuai dengan tingkat bingkai variabel dari permainan, itu mungkin sampel ketika rotasi hanya di bawah 90 derajat, dan waktu berikutnya tepat setelah mencapai 90 derajat. Jika Anda perlu diberitahu ketika titik tertentu dalam animasi tercapai, Anda harus menggunakan <a href="script-AnimationWindowEvent.html">AnimationEvent</a>.</p> 
+       <p>Catatan juga bahwa sebagai konsekuensi dari sampling framerate variabel, animasi yang dimainkan kembali menggunakan <strong>WrapMode.Once</strong> mungkin tidak sampel pada waktu yang tepat dari bingkai terakhir. Dalam satu bingkai permainan animasi dapat sampel hanya sebelum akhir animasi, dan dalam bingkai berikutnya waktu dapat melebihi panjang animasi, sehingga dinonaktifkan dan tidak sampel lagi. Jika Anda benar-benar membutuhkan bingkai terakhir dari animasi untuk sampel persis, Anda harus menggunakan <strong>WrapMode.ClampForever</strong> yang akan menjaga pengambilan bingkai terakhir tak terbatas sampai Anda menghentikan animasi sendiri.</p> 
+       <!-- area:none --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="class-Animation.html"></a></span> 
+         <div class="tip">
+           Animation 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UnityAnalyticsSDK.html"></a></span> 
+         <div class="tip">
+           Legacy Unity Analytics (SDK Workflow) 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: referensi properti AS</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UIToolkits.html"></a></li> 
+         <li><a href="UIElements.html"></a></li> 
+         <li><a href="UIE-USS.html">UI gaya dengan USS</a></li> 
+         <li>Referensi properti ASS</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UIE-USS-PropertyTypes.html"></a></span> 
+          <div class="tip">
+            Jenis data properti ASS 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UIE-USS-SupportedProperties.html"></a></span> 
+          <div class="tip">
+            Properti AS sintaks 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Referensi properti ASS</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Daftar tabel berikut properti AS dalam <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span> Toolkit.</p> 
+       <p>Tabel menunjukkan sifat mana yang diwariskan dan <a href="UIE-Transitions.html#discrete">animatability</a> mereka. Untuk properti yang mewarisi, elemen mendapat nilai dari unsur induknya jika Anda tidak menentukan nilainya. Contoh berikut menggunakan properti yang mewarisi untuk mengatur font untuk semua elemen.</p> 
+       <pre><code class="lang-css">:root {
+    -unity-font: resource("Font/consola.ttf");
+}
+</code></pre> 
+       <p>Klik nama properti untuk melihat informasi rinci tentang properti itu.</p> 
+       <p> <strong>Note</strong>: Penggunaan properti AS yang sama dengan tautan properti CSS ke dokumentasi pengembang Mozilla.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Inherited</strong></th> 
+          <th style="text-align:left;"><strong>Animatability</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-content"><code>align-content</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Discrete</td> 
+          <td style="text-align:left;">Alignment dari seluruh area anak-anak pada sumbu silang jika mereka melewati beberapa garis dalam wadah ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-items"><code>align-items</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Discrete</td> 
+          <td style="text-align:left;">Pengapian anak-anak pada sumbu salib wadah ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-self"><code>align-self</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Discrete</td> 
+          <td style="text-align:left;">Mirip dengan align-items, tetapi hanya untuk elemen khusus ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/all"><code>all</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Memungkinkan mengatur ulang semua properti dengan kata kunci awal. Tidak berlaku untuk properti ASS kustom.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color"><code>background-color</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Warna latar belakang untuk melukis di kotak elemen.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-image"><code>background-image</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Discrete</td> 
+          <td style="text-align:left;">Gambar latar belakang untuk melukis di kotak elemen.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom-color"><code>border-bottom-color</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Warna perbatasan bagian bawah elemen.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-USS-SupportedProperties.html#drawing-borders"><code>border-bottom-left-radius</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Jari-jari sudut kiri bawah ketika persegi panjang bulat ditarik dalam kotak elemen.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-USS-SupportedProperties.html#drawing-borders"><code>border-bottom-right-radius</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Jari-jari sudut kanan bawah ketika persegi panjang bulat ditarik dalam kotak elemen.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom-width"><code>border-bottom-width</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Ruang yang disediakan untuk tepi bawah perbatasan selama fase tata letak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-color"><code>border-color</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Shorthand untuk warna-warna perbatasan-top, warna-warna perbatasan-bawah-warna, warna perbatasan-kiri-warna</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-left-color"><code>border-left-color</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Warna perbatasan kiri elemen.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-left-width"><code>border-left-width</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Ruang yang disediakan untuk tepi kiri perbatasan selama fase tata letak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-USS-SupportedProperties.html#drawing-borders"><code>border-radius</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Shorthand untuk perbatasan-top-left-radius, perbatasan-top-right-radius, perbatasan-bottom-right-radius, perbatasan-bottom-left-radius</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-right-color"><code>border-right-color</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Warna batas kanan elemen.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-right-width"><code>border-right-width</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Ruang yang disediakan untuk tepi kanan perbatasan selama fase tata letak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-color"><code>border-top-color</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Warna batas atas elemen.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-USS-SupportedProperties.html#drawing-borders"><code>border-top-left-radius</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Jari-jari sudut kiri atas ketika persegi panjang bulat ditarik dalam kotak elemen.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-USS-SupportedProperties.html#drawing-borders"><code>border-top-right-radius</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Jari-jari sudut kanan atas ketika persegi panjang bulat ditarik dalam kotak elemen.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-width"><code>border-top-width</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Ruang yang disediakan untuk tepi atas perbatasan selama fase tata letak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-width"><code>border-width</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Shorthand untuk batas-top-lebar, lebar perbatasan-bottom-lebar, lebar perbatasan-kiri</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/bottom"><code>bottom</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Jarak bawah dari kotak elemen selama tata letak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color"><code>color</code></a></strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Warna untuk digunakan ketika menggambar teks elemen.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-USS-SupportedProperties.html#cursor"><code>cursor</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Non-animatable</td> 
+          <td style="text-align:left;">Kursor Mouse untuk ditampilkan ketika pointer mouse berada di atas elemen.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-USS-SupportedProperties.html#display"><code>display</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Discrete</td> 
+          <td style="text-align:left;">Tentukan bagaimana elemen ditampilkan dalam tata letak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex"><code>flex</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Shorthand untuk flex-grow, flex-shrink, flex-basis</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis"><code>flex-basis</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Ukuran utama awal dari item flex, pada sumbu flex utama. Tata letak akhir mungkin lebih kecil atau lebih besar, menurut penyusutan flex dan berkembang ditentukan oleh sifat flex lainnya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction"><code>flex-direction</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Discrete</td> 
+          <td style="text-align:left;">Arah sumbu utama untuk tata letak anak-anak dalam wadah.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow"><code>flex-grow</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Tentukan bagaimana item akan menyusut kerabat ke sisa item yang fleksibel di dalam wadah yang sama.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink"><code>flex-shrink</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Tentukan bagaimana item akan menyusut kerabat ke sisa item yang fleksibel di dalam wadah yang sama.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap"><code>flex-wrap</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Discrete</td> 
+          <td style="text-align:left;">Penempatan anak-anak di beberapa garis jika tidak cukup ruang tersedia dalam wadah ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size"><code>font-size</code></a></strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Ukuran font untuk menggambar teks elemen.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/height"><code>height</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Tinggi tetap elemen untuk tata letak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content"><code>justify-content</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Discrete</td> 
+          <td style="text-align:left;">Pembenaran anak-anak pada sumbu utama wadah ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/left"><code>left</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Jarak kiri dari kotak elemen selama tata letak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing"><code>letter-spacing</code></a></strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Meningkatkan atau menurunkan ruang antara karakter.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin"><code>margin</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Shorthand for margin-top, margin-right, margin-bottom, margin-left</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin-bottom"><code>margin-bottom</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Ruang yang disediakan untuk tepi bawah margin selama fase tata letak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin-left"><code>margin-left</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Ruang yang disediakan untuk tepi kiri margin selama fase tata letak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin-right"><code>margin-right</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Ruang yang disediakan untuk tepi margin yang tepat selama fase tata letak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin-top"><code>margin-top</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Ruang yang disediakan untuk tepi atas margin selama fase tata letak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/max-height"><code>max-height</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Tinggi maksimum untuk elemen, ketika fleksibel atau mengukur ukurannya sendiri.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/max-width"><code>max-width</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Lebar maksimum untuk elemen, ketika fleksibel atau mengukur ukurannya sendiri.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/min-height"><code>min-height</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Tinggi minimum untuk elemen, ketika fleksibel atau mengukur ukurannya sendiri.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/min-width"><code>min-width</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Lebar minimum untuk elemen, ketika fleksibel atau mengukur ukurannya sendiri.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-USS-SupportedProperties.html#opacity"><code>opacity</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Tentukan transparansi elemen dan anak-anaknya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow"><code>overflow</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Discrete</td> 
+          <td style="text-align:left;">Bagaimana wadah berperilaku jika kontennya meluap kotaknya sendiri.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding"><code>padding</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Shorthand untuk padding-top, padding-right, padding-bottom, padding-left</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding-bottom"><code>padding-bottom</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Ruang yang disediakan untuk tepi bawah padding selama fase tata letak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding-left"><code>padding-left</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Ruang yang disediakan untuk tepi kiri padding selama fase tata letak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding-right"><code>padding-right</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Ruang yang disediakan untuk tepi kanan padding selama fase tata letak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding-top"><code>padding-top</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Ruang yang disediakan untuk tepi atas padding selama fase tata letak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position"><code>position</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Discrete</td> 
+          <td style="text-align:left;">Penempatan elemen dalam wadah induknya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/right"><code>right</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Jarak kanan dari kotak elemen selama tata letak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-Transform.html"><code>rotate</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Sebuah transformasi rotasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-Transform.html"><code>scale</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Sebuah transformasi scaling.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow"><code>text-overflow</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Discrete</td> 
+          <td style="text-align:left;">Mode overflow teks elemen.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow"><code>text-shadow</code></a></strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Drop bayangan teks.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/top"><code>top</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Jarak atas dari kotak elemen selama tata letak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-Transform.html"><code>transform-origin</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Asal-usul transformasi adalah titik di mana transformasi diterapkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-Transitions.html"><code>transition</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Non-animatable</td> 
+          <td style="text-align:left;">Shorthand untuk transisi-delay, transisi-durasi, transition-property, transisi-timing-function</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-Transitions.html"><code>transition-delay</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Non-animatable</td> 
+          <td style="text-align:left;">Durasi menunggu sebelum memulai efek transisi properti ketika perubahan nilainya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration"><code>transition-duration</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Non-animatable</td> 
+          <td style="text-align:left;">Waktu animasi transisi harus mengambil untuk menyelesaikan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-Transitions.html"><code>transition-property</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Non-animatable</td> 
+          <td style="text-align:left;">Properti dimana efek transisi harus diterapkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-Transitions.html"><code>transition-timing-function</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Non-animatable</td> 
+          <td style="text-align:left;">Menentukan bagaimana nilai menengah dihitung untuk properti yang dimodifikasi oleh efek transisi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-Transform.html"><code>translate</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">A menerjemahkan transformasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-USS-SupportedProperties.html#unity-background"><code>-unity-background-image-tint-color</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Tinting warna untuk latar belakang elemen.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-USS-SupportedProperties.html#unity-background"><code>-unity-background-scale-mode</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Discrete</td> 
+          <td style="text-align:left;">Penskalaan gambar latar belakang di kotak elemen.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-USS-SupportedProperties.html#unity-font"><code>-unity-font</code></a></strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Discrete</td> 
+          <td style="text-align:left;">Font untuk menggambar teks elemen, didefinisikan sebagai objek Font.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-USS-SupportedProperties.html#unity-font"><code>-unity-font-definition</code></a></strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Discrete</td> 
+          <td style="text-align:left;">Font untuk menggambar teks elemen, didefinisikan sebagai struktur FontDefinition. Ini mengambil precedence lebih dari <code>-unity-font</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-USS-SupportedProperties.html#unity-font"><code>-unity-font-style</code></a></strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Discrete</td> 
+          <td style="text-align:left;">Gaya font dan berat (normal, berani, italic) untuk menggambar teks elemen.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-USS-SupportedProperties.html#unity-overflow-clip-box"><code>-unity-overflow-clip-box</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Discrete</td> 
+          <td style="text-align:left;">Tentukan kotak yang konten elemen dipetik.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-USS-SupportedProperties.html#unity-paragraph-spacing"><code>-unity-paragraph-spacing</code></a></strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Meningkatkan atau menurunkan ruang antara paragraf.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-USS-SupportedProperties.html#unity-slice"><code>-unity-slice-bottom</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Ukuran tepi bawah 9-slice ketika melukis gambar latar belakang elemen.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-USS-SupportedProperties.html#unity-slice"><code>-unity-slice-left</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Ukuran tepi kiri 9-slice ketika melukis gambar latar belakang elemen.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-USS-SupportedProperties.html#unity-slice"><code>-unity-slice-right</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Ukuran tepi kanan 9-slice ketika melukis gambar latar belakang elemen.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-USS-SupportedProperties.html#unity-slice"><code>-unity-slice-scale</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Skala diterapkan pada irisan elemen.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-USS-SupportedProperties.html#unity-slice"><code>-unity-slice-top</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Ukuran tepi atas 9-slice ketika melukis gambar latar belakang elemen.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-USS-SupportedProperties.html#unity-text"><code>-unity-text-align</code></a></strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Discrete</td> 
+          <td style="text-align:left;">Penyelarasan teks horisontal dan vertikal di kotak elemen.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-USS-SupportedProperties.html#unity-text"><code>-unity-text-outline</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Lebar garis besar dan warna teks.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-USS-SupportedProperties.html#unity-text"><code>-unity-text-outline-color</code></a></strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Warna garis besar teks.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-USS-SupportedProperties.html#unity-text"><code>-unity-text-outline-width</code></a></strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Lebar garis besar teks.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="UIE-USS-SupportedProperties.html#unity-text"><code>-unity-text-overflow-position</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Discrete</td> 
+          <td style="text-align:left;">Posisi overflow teks elemen.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/visibility"><code>visibility</code></a></strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Discrete</td> 
+          <td style="text-align:left;">Tentukan apakah atau tidak elemen terlihat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/white-space"><code>white-space</code></a></strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Discrete</td> 
+          <td style="text-align:left;">Word membungkus lebih dari beberapa garis jika tidak cukup ruang tersedia untuk menggambar teks elemen.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/width"><code>width</code></a></strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Lebar tetap dari elemen untuk tata letak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing"><code>word-spacing</code></a></strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Fully animatable</td> 
+          <td style="text-align:left;">Meningkatkan atau menurunkan ruang antara kata-kata.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UIE-USS-PropertyTypes.html"></a></span> 
+         <div class="tip">
+           Jenis data properti ASS 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UIE-USS-SupportedProperties.html"></a></span> 
+         <div class="tip">
+           Properti AS sintaks 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy"> 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Mode batch dan kompatibilitas koroutine built-in</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="EditorFeatures.html">Fitur Editor</a></li> 
+         <li><a href="CommandLineArguments.html">argumen baris perintah</a></li> 
+         <li>Mode batch dan kompatibilitas koroutine built-in</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="PlayerCommandLineArguments.html"></a></span> 
+          <div class="tip">
+            Login Sitemap 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="TextSceneFormat.html"></a></span> 
+          <div class="tip">
+            File Adegan Berbasis Teks 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Mode batch dan kompatibilitas koroutine built-in</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Halaman ini menjelaskan fitur yang didukung saat menjalankan Editor Unity dan Pemain Standalone dalam mode batch.</p> 
+       <p>Ketika menjalankan Unity, operator built-in <a href="Coroutines.html">coroutine</a> berikut menambahkan fungsi:</p> 
+       <ul> 
+        <li><p><a href="../ScriptReference/AsyncOperation.html">AsyncOperation</a></p></li> 
+        <li><p><a href="../ScriptReference/WaitForEndOfFrame.html">WaitForEndOfFrame</a></p></li> 
+        <li><p><a href="../ScriptReference/WaitForFixedUpdate.html">WaitForFixedUpdate</a></p></li> 
+        <li><p> <a href="../ScriptReference/WaitForSeconds.html">WaitForSeconds</a> </p></li> 
+        <li><p><a href="../ScriptReference/WaitForSecondsRealtime.html">WaitForSecondsRealtime</a></p></li> 
+        <li><p><a href="../ScriptReference/WaitUntil.html">WaitUntil</a></p></li> 
+        <li><p><a href="../ScriptReference/WaitWhile.html">WaitWhile</a></p></li> 
+       </ul> 
+       <p>Tabel berikut menunjukkan mana dari operator ini Unity mendukung di dalam Editor dan Standalone Player, dan ketika menjalankan masing-masing dalam mode batch menggunakan argumen baris perintah <a href="CommandLineArguments.html#batchmode">-batchmode</a>:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"></th> 
+          <th style="text-align:left;">Editor</th> 
+          <th style="text-align:left;">WordPress.org</th> 
+          <th style="text-align:left;">Pemain Standalone Unity</th> 
+          <th style="text-align:left;">WordPress.org</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>AsyncOperation</code></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>WaitForEndOfFrame</code></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">No*</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>WaitForFixedUpdate</code></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>WaitForSeconds</code></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>WaitForSecondsRealtime</code></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>WaitUntil</code></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>WaitWhile</code></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Sitemap Anda tidak dapat menggunakan <code>WaitForEndOfFrame</code> ketika menjalankan Editor dengan <code>-batchmode</code>, karena sistem seperti animasi, fisika dan timeline mungkin tidak bekerja dengan benar di Editor. Ini karena Unity tidak saat ini memperbarui sistem ini saat menggunakan <code>WaitForEndOfFrame</code>.</p> 
+       <h2>Menjalankan koroutines</h2> 
+       <h3>Di dalam Editor</h3> 
+       <p>Di Editor, tekan tombol “Play” untuk menjalankan kode Anda dengan koroutines.</p> 
+       <h3>Editor dalam mode batch</h3> 
+       <p>Untuk menjalankan koroutines ketika meluncurkan Editor dalam mode batch dari baris perintah, masukkan:</p> 
+       <p>C:\Program Files\Unity\Editor\Unity.exe <strong>-projectPath</strong> PROJECT_PATH <strong>-batchMode</strong> </p> 
+       <h3>Di dalam Pemain Standalone</h3> 
+       <p>Luncurkan Pemain Anda untuk menjalankan kode Anda. Pemain memuat dan kemudian menunggu koroutin Anda untuk menyelesaikan.</p> 
+       <h3>Pemain Standalone dalam mode batch</h3> 
+       <p>Untuk menjalankan koroutines ketika meluncurkan Pemain dalam mode batch dari baris perintah, masukkan:</p> 
+       <p>PATH_TO_STANDALONE_BUILD <strong>-projectPath</strong> PROJECT_PATH <strong>-batchMode</strong> </p> 
+       <p>Contohnya, di Windows:</p> 
+       <p>C:\projects\myproject\builds\myproject.exe <strong>-batchMode </strong> </p> 
+       <p>Di Mac:</p> 
+       <p>Sitemap <strong>-batchMode</strong> </p> 
+       <h2>Contoh skrip koroutine</h2> 
+       <h3>AsyncOperation</h3> 
+       <pre><code>using System.Collections;
+using UnityEngine;
+
+[ExecuteInEditMode]
+public class ExampleClass : MonoBehaviour
+{
+    public void Start()
+    {
+        StartCoroutine(Example_AsyncTests());
+    }
+
+    public IEnumerator Example_AsyncTests()
+    {
+        Debug.Log("Start of AsyncLoad Example");
+        
+        var load = UnityEngine.Resources.LoadAsync("");
+        yield return load;
+        yield return null;
+        
+        Debug.Log("End of AsyncLoad Example");
+    }
+}
+</code></pre> 
+       <h3>WaitForEndOfFrame</h3> 
+       <pre><code>using System.Collections;
+using UnityEngine;
+
+[ExecuteInEditMode]
+public class ExampleClass : MonoBehaviour
+{
+    public void Start()
+    {
+        StartCoroutine(Example_WaitForEndOfFrame_Coroutine());
+    }
+
+    public IEnumerator Example_WaitForEndOfFrame_Coroutine()
+    {
+        Debug.Log("Start of WaitForEndOfFrame Example");
+        
+        yield return new WaitForEndOfFrame();
+        
+        Debug.Log("End of WaitForEndOfFrame Example");
+    }
+}
+</code></pre> 
+       <h3>WaitForFixedUpdate</h3> 
+       <pre><code>using System.Collections;
+using UnityEngine;
+
+[ExecuteInEditMode]
+public class ExampleClass : MonoBehaviour
+{
+    public void Start()
+    {
+        StartCoroutine(Example_WaitForFixedUpdate_Coroutine());
+    }
+
+    public IEnumerator Example_WaitForFixedUpdate_Coroutine()
+    {
+        Debug.Log("Start of WaitForFixedUpdate Example");
+        
+        yield return new WaitForFixedUpdate();
+        
+        Debug.Log("End of WaitForFixedUpdate Example");
+    }
+}
+</code></pre> 
+       <h3>WaitForSeconds</h3> 
+       <pre><code>using System.Collections;
+using UnityEngine;
+
+[ExecuteInEditMode]
+public class ExampleClass : MonoBehaviour
+{
+    public void Start()
+    {
+        StartCoroutine(Example_WaitForSeconds_Coroutine());
+    }
+
+    public IEnumerator Example_WaitForSeconds_Coroutine()
+    {
+        Debug.Log("Start of WaitForSeconds Example");
+        
+        yield return new WaitForSeconds(1.5f);
+        
+        Debug.Log("End of WaitForSeconds Example");
+    }
+}
+</code></pre> 
+       <h3>WaitForSecondsRealtime</h3> 
+       <pre><code>using System.Collections;
+using UnityEngine;
+
+[ExecuteInEditMode]
+public class ExampleClass : MonoBehaviour
+{
+    public void Start()
+    {
+        StartCoroutine(Example_WaitForSecondsRealtime_Coroutine());
+    }
+
+    public IEnumerator Example_WaitForSecondsRealtime_Coroutine()
+    {
+        Debug.Log("Start of WaitForSecondsRealtime Example");
+        
+        yield return new WaitForSecondsRealtime(1.5f);
+        
+        Debug.Log("End of WaitForSecondsRealtime Example");
+    }
+}
+</code></pre> 
+       <h3>WaitUntil</h3> 
+       <pre><code>using System.Collections;
+using UnityEngine;
+
+[ExecuteInEditMode]
+public class ExampleClass : MonoBehaviour
+{
+    public void Start()
+    {
+        StartCoroutine(Example_WaitUntil_Coroutine());
+    }
+
+    public IEnumerator Example_WaitUntil_Coroutine()
+    {
+        Debug.Log("Start of WaitUntil Example");
+        
+        yield return new WaitUntil(() =&gt; Time.time &gt; 5.0f);
+        
+        Debug.Log("End of WaitUntil Example");
+    }
+}
+</code></pre> 
+       <h3>WaitWhile</h3> 
+       <pre><code>using System.Collections;
+using UnityEngine;
+
+[ExecuteInEditMode]
+public class ExampleClass : MonoBehaviour
+{
+    public void Start()
+    {
+        StartCoroutine(Example_WaitWhile_Coroutine());
+    }
+
+    public IEnumerator Example_WaitWhile_Coroutine()
+    {
+        Debug.Log("Start of WaitWhile Example");
+        
+        yield return new WaitWhile(() =&gt; Time.time &lt; 5.0f);
+        
+        Debug.Log("End of WaitWhile Example");
+    }
+}
+</code></pre> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2018–06–06 Sitemap</span></p></li> 
+        <li><p><span class="page-history">Menambahkan saran tentang menggunakan batchmode dan koroutines di 2017. 4 Artikel</span></p></li> 
+       </ul> 
+       <!-- area:none --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="PlayerCommandLineArguments.html"></a></span> 
+         <div class="tip">
+           Login Sitemap 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="TextSceneFormat.html"></a></span> 
+         <div class="tip">
+           File Adegan Berbasis Teks 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

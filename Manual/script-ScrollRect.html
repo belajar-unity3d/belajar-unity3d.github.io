@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Login</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UIToolkits.html">Buat antarmuka pengguna (UI)</a></li> 
+         <li><a href="com.unity.ugui.html">WordPress.org</a></li> 
+         <li><a href="UIReference.html">Referensi UI</a></li> 
+         <li><a href="comp-UIInteraction.html">Komponen Interaksi</a></li> 
+         <li>Scroll Rect</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="script-InputField.html"></a></span> 
+          <div class="tip">
+            Bidang Masukan 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="comp-UIAutoLayout.html"></a></span> 
+          <div class="tip">
+            Tata letak otomatis 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Scroll Rect</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Login Tidak dapat digunakan ketika konten yang mengambil banyak ruang perlu ditampilkan di area kecil. Scroll Rect menyediakan fungsi untuk menggulir konten ini.</p> 
+       <p>Biasanya Gulir Rect dikombinasikan dengan <span class="tooltip"><a class="tooltipMoreInfoLink" href="script-Mask.html">Mask</a><span class="tooltiptext">Dapat merujuk pada Masker Sprite, Masker UI, atau Masker Lapisan <a href="script-Mask.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mask">Glossary</a></span></span></span> untuk membuat tampilan gulir, di mana hanya konten yang dapat digulir di dalam Rect Gulir terlihat. Hal ini juga dapat digabungkan dengan satu atau dua <a href="script-Scrollbar.html">Scrollbars</a> yang dapat diseret untuk menggulir secara horizontal atau vertikal.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UI_ScrollRectExample.png" alt="A Scroll Rect."> 
+        <figcaption>
+          A Scroll Rect. 
+        </figcaption> 
+       </figure> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UI_ScrollRectInspector.png" alt=""> 
+       </figure> 
+       <h2>Properties</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong><em>Property:</em></strong></th> 
+          <th style="text-align:left;"><strong><em>Function:</em></strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Content</strong></td> 
+          <td style="text-align:left;">Ini adalah referensi untuk mengubah elemen <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span> untuk digulir, misalnya gambar besar.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Horizontal</strong></td> 
+          <td style="text-align:left;">Aktifkan gulir horisontal</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Vertical</strong></td> 
+          <td style="text-align:left;">Aktifkan gulir vertikal</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Movement Type</strong></td> 
+          <td style="text-align:left;">Tidak terbatas, elastis atau dijepit. Gunakan elastis atau dijepit untuk memaksa konten untuk tetap dalam batas-batas dari Scroll Rect. Mode elastis memuncing konten ketika mencapai tepi Gulir Rect</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Elasticity</strong> </td> 
+          <td style="text-align:left;">Ini adalah jumlah bouncing yang digunakan dalam mode elastisitas.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Inertia</strong></td> 
+          <td style="text-align:left;">Ketika Inertia ditetapkan konten akan terus bergerak ketika pointer dirilis setelah seret. Ketika Inertia tidak mengatur konten hanya akan bergerak ketika seret.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Deceleration Rate</strong> </td> 
+          <td style="text-align:left;">Ketika Inertia mengatur tingkat deselerasi menentukan seberapa cepat konten berhenti bergerak. Tingkat 0 akan menghentikan pergerakan segera. Nilai 1 berarti pergerakan tidak akan pernah memperlambat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Scroll Sensitivity</strong></td> 
+          <td style="text-align:left;">Sensitivitas untuk menggulir roda dan melacak acara gulir pad.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Viewport</strong><span class="tooltiptext">Area tampilan pengguna aplikasi di layar mereka.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Viewport">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Referensi ke viewport Rect Transform yang merupakan orang tua dari konten yang diubah.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Horizontal Scrollbar</strong></td> 
+          <td style="text-align:left;">Referensi opsional ke elemen scrollbar horisontal.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Visibility</strong> </td> 
+          <td style="text-align:left;">Apakah gulir harus secara otomatis tersembunyi ketika tidak diperlukan, dan secara opsional memperluas viewport serta.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Spacing</strong> </td> 
+          <td style="text-align:left;">Ruang antara scrollbar dan viewport.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Vertical Scrollbar</strong></td> 
+          <td style="text-align:left;">Referensi opsional ke elemen scrollbar vertikal.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Visibility</strong> </td> 
+          <td style="text-align:left;">Apakah gulir harus secara otomatis tersembunyi ketika tidak diperlukan, dan secara opsional memperluas viewport serta.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Spacing</strong> </td> 
+          <td style="text-align:left;">Ruang antara scrollbar dan viewport.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Events</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong><em>Property:</em></strong></th> 
+          <th style="text-align:left;"><strong><em>Function:</em></strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>On Value Changed</strong></td> 
+          <td style="text-align:left;">Sebuah <a href="UnityEvents.html">UnityEvent</a> yang diinvokasi ketika posisi gulir dari perubahan Rect Gulir. Acara dapat mengirim posisi gulir saat ini sebagai argumen dinamis tipe <code>Vector2</code>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Details</h2> 
+       <p>Elemen penting dalam tampilan gulir adalah <strong>viewport</strong>, gulir <strong>content</strong>, dan opsional satu atau dua <strong>scrollbars</strong>.</p> 
+       <ul> 
+        <li>Root <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> memiliki komponen Scroll Rect.</li> 
+        <li>viewport memiliki komponen <a href="script-Mask.html">Mask</a>. Penampilan dapat menjadi akar GameObject, atau GameObject terpisah yang anak ke akar. Jika gulir otomatis digunakan, itu harus menjadi anak. viewport Rect Transform perlu direferensikan di properti <strong>Viewport</strong> dari Scroll Rect.</li> 
+        <li>Semua konten gulir harus anak-anak dari satu konten GameObject yang anak ke viewport. Konten Ret Transform perlu direferensikan di properti <strong>Content</strong> dari Scroll Rect.</li> 
+        <li>gulir - jika digunakan - adalah anak-anak ke akar GameObject. Lihat halaman <a href="script-Scrollbar.html">Scrollbar</a> untuk detail lebih lanjut tentang pengaturan gulir dan lihat bagian <strong>Scrollbar setup</strong> di bawah ini untuk informasi tentang pengaturan gulir dengan tampilan gulir.</li> 
+       </ul> 
+       <p>Gambar ini menunjukkan setup di mana viewport adalah anak ke akar tampilan gulir. Ini adalah default yang digunakan ketika menggunakan GameObject &gt; UI &gt; Gulir Lihat opsi menu.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UI_ScrollRectHierarchy.png" alt=""> 
+       </figure> 
+       <p>Untuk menggulir konten, input harus diterima dari dalam batas-batas ScrollRect, bukan pada konten itu sendiri.</p> 
+       <p>Berhati-hatilah ketika menggunakan gerakan gulir yang tidak dibatasi karena dimungkinkan untuk kehilangan kontrol konten dengan cara yang tidak diinginkan. Ketika menggunakan gerakan elastis atau terlatih yang terbaik untuk memposisikan konten sehingga dimulai dalam batas-batas perilaku GulirRect, atau tidak diinginkan dapat terjadi sebagai RectTransform mencoba membawa konten kembali dalam batas-batasnya.</p> 
+       <h3>Scrollbar setup</h3> 
+       <p>Opsional, Scroll Rect dapat dihubungkan ke horizontal dan / atau vertikal <strong>Scrollbar</strong>. Ini biasanya ditempatkan di hirarki sebagai saudara ke viewport, dan saat ini, harus diseret ke properti <strong>Horizontal Scrollbar</strong> dan <strong>Vertical Scrollbar</strong> dari Scroll Rect, masing-masing. Perhatikan bahwa properti <strong>Direction</strong> pada bilah gulir horisontal tersebut harus diatur ke <strong>Left To Right</strong>, dan pada bilah gulir vertikal ke <strong>Bottom To Top</strong>.</p> 
+       <p>Garis gulir dapat secara opsional memiliki perilaku yang menyembunyikan bilah gulir jika konten tidak perlu gulir karena tidak lebih besar dari viewport. Perhatikan bahwa otomatis menyembunyikan hanya yang pernah terjadi di Play Mode. Dalam Edit Mode gulir selalu ditampilkan. Ini mencegah menandai <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> sebagai kotor ketika seharusnya tidak, dan juga membantu penulis konten dengan proporsi yang ada ruang untuk bahkan ketika scrollbars ditampilkan.</p> 
+       <p>Jika satu atau kedua gulir memiliki perilaku visibilitas mereka diatur ke <strong>Auto Hide And Expand View</strong>, viewport secara otomatis diperluas ketika scrollbars tersembunyi untuk mengambil ruang tambahan di mana gulir tidak akan. Dengan pengaturan ini, posisi dan ukuran <strong>view</strong> didorong oleh Scroll Rect, dan lebar <strong>horizontal scrollbar</strong> serta ketinggian <strong>vertical scrollbar</strong> didorong juga. Dengan pengaturan ini viewport serta gulir harus anak-anak ke Gulir Rect root GameObject.</p> 
+       <h2>Hints</h2> 
+       <ul> 
+        <li>pivot dan jangkar konten RectTransform dapat digunakan untuk menentukan bagaimana konten dijajarkan dalam tampilan gulir jika konten tumbuh atau menyusut. Jika konten harus tetap selaras dengan bagian atas, atur jangkar ke bagian atas induk, dan atur pivot ke posisi atas.</li> 
+        <li>Lihat halaman <a href="HOWTO-UIFitContentSize.html">Membuat elemen UI sesuai dengan ukuran konten mereka</a> untuk informasi tentang cara membuat konten Ubah ukuran otomatis agar sesuai dengan konten.</li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="script-InputField.html"></a></span> 
+         <div class="tip">
+           Bidang Masukan 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="comp-UIAutoLayout.html"></a></span> 
+         <div class="tip">
+           Tata letak otomatis 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

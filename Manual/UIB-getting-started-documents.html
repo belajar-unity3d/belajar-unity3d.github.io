@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Buat dan mengelola Dokumen UI (UXML)</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UIToolkits.html">Buat antarmuka pengguna (UI)</a></li> 
+         <li><a href="UIElements.html">UI Toolkit</a></li> 
+         <li><a href="UIBuilder.html">Pembuat UI</a></li> 
+         <li><a href="UIB-getting-started.html">Mulai dengan Pembuat UI</a></li> 
+         <li>Buat dan mengelola Dokumen UI (UXML)</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UIB-getting-started-workflow.html"></a></span> 
+          <div class="tip">
+            Gambaran keseluruhan alur kerja 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UIB-getting-started-canvas.html"></a></span> 
+          <div class="tip">
+            Mengatur Kanvas 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Buat dan mengelola Dokumen UI (UXML)</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Saat ini membuka dan aktif <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span> Document (UXML) nama aset ditampilkan dalam pane <strong>Hierarchy</strong> sebagai item pohon akar serta dalam header <strong>Canvas</strong> di dalam <strong><span class="tooltip"><strong>Viewport</strong><span class="tooltiptext">The user’s visible area of an app on their screen.<br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Viewport">Glossary</a></span></span></span></strong>. Sebuah asterisk <strong>*</strong> di sebelah nama menunjukkan perubahan yang tidak disadari.</p> 
+       <p>UI Builder akan selalu dimulai, secara default, dengan UI Dokumen yang tidak disaved kosong (UXML). Ini akan ditampilkan sebagai <code>&lt;unsaved file&gt;*.uxml</code>. Anda dapat mulai bekerja dalam Dokumen UI ini (UXML) dan kemudian membuatnya sebagai aset di disk nanti ketika Anda menyimpan untuk pertama kalinya.</p> 
+       <h2>Buka Dokumen UI</h2> 
+       <p>Anda dapat membuka dokumen UI yang ada dalam beberapa cara:</p> 
+       <ol> 
+        <li>Gunakan menu <strong>File</strong> di dalam UI Builder <strong>Viewport</strong> pane <span class="tooltip"><strong>toolbar</strong><span class="tooltiptext">Se baris tombol dan kontrol dasar di bagian atas Editor Unity yang memungkinkan Anda untuk berinteraksi dengan Editor dengan berbagai cara (misalnya scaling, terjemahan). <a class="tooltipMoreInfoLink" href="Toolbar.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Toolbar">Glossary</a></span></span></span> dan pilih <strong>Open…</strong>.</li> 
+        <li>Pada tab <strong>Project</strong> pane <strong>Library</strong>, klik kanan pada dokumen dan pilih <strong>Open in UI Builder</strong>.</li> 
+        <li>Pada Unity <span class="tooltip"><strong>Project window</strong><span class="tooltiptext">Jendela yang menunjukkan isi folder <code>Assets</code> (Project tab) <a class="tooltipMoreInfoLink" href="ProjectView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Projectwindow">Glossary</a></span></span></span>, klik dua kali pada dokumen. jika Anda sudah memiliki dokumen terbuka di UI Builder dan klik dua kali di jendela Proyek Unity, UI Document (UXML) akan terbuka menggunakan editor teks default atau IDE.</li> 
+       </ol> 
+       <p>Anda dapat menyimpan setiap perubahan pada Dokumen UI aktif (UXML) dengan menggunakan menu <strong>File &gt; Save</strong> di UI Builder's <strong>Viewport</strong> pane toolbar. <strong>Ctrl/CMD + S</strong> juga dapat bekerja tetapi jendela UI Builder perlu difokuskan. Perhatikan bahwa Simpan seluruh proyek Unity tidak akan menyimpan Dokumen UI aktif (UXML) terbuka di Pembuat UI.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UIB-getting-started-workflow.html"></a></span> 
+         <div class="tip">
+           Gambaran keseluruhan alur kerja 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UIB-getting-started-canvas.html"></a></span> 
+         <div class="tip">
+           Mengatur Kanvas 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

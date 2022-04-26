@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Data Mesh</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="mesh.html">Meshes</a></li> 
+         <li>Data Mesh</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="mesh-introduction.html"></a></span> 
+          <div class="tip">
+            Pengenalan jala 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="class-Mesh.html"></a></span> 
+          <div class="tip">
+            aset mesh 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Data Mesh</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Halaman ini berisi informasi tentang data yang mengandung mesh, dan bagaimana toko Unity data di kelas <span class="tooltip"><a class="tooltipMoreInfoLink" href="../ScriptReference/Mesh.html">Mesh</a><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mesh">Glossary</a></span></span></span>.</p> 
+       <h2>Overview</h2> 
+       <p>A mesh didefinisikan oleh properti ini:</p> 
+       <ul> 
+        <li> <a href="#vertex-data">Vertices</a>: Koleksi posisi di ruang 3D, dengan atribut tambahan opsional.</li> 
+        <li> <a href="#topology">Topology</a>: Jenis struktur yang mendefinisikan setiap wajah permukaan.</li> 
+        <li> <a href="#index-data">Indices</a>: Koleksi integer yang menjelaskan bagaimana simpul menggabungkan untuk menciptakan permukaan, berdasarkan topologi.</li> 
+       </ul> 
+       <p>Selain mesh deformable ini mengandung keduanya:</p> 
+       <ul> 
+        <li> <a href="#blend-shapes">Bentuk campuran</a>: Data yang menggambarkan versi cacat yang berbeda dari mesh, untuk digunakan dengan animasi.</li> 
+        <li> <a href="#bind-poses">Bind poses</a>: Data yang menggambarkan pose "base" dari kerangka dalam mesh berkelok-kelok.</li> 
+       </ul> 
+       <p><a name="vertex-data"></a></p> 
+       <h2>Vertex data</h2> 
+       <p>Elemen data simpul disebut <strong>vertex attributes</strong>.</p> 
+       <p>Setiap simpul dapat memiliki atribut berikut:</p> 
+       <ul> 
+        <li><a href="#position">Position</a></li> 
+        <li><span class="tooltip"><a class="tooltipMoreInfoLink" href="#normal">Normal</a><span class="tooltiptext">Arah tegak lurus ke permukaan jala, diwakili oleh vektor. Unity menggunakan normal untuk menentukan orientasi objek dan menerapkan pencukur. <a href="VectorCookbook.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Normal">Glossary</a></span></span></span></li> 
+        <li><a href="#tangent">Tangent</a></li> 
+        <li><a href="#color">Color</a></li> 
+        <li>Hingga 8 <a href="#uvs">koordinasi tekstur</a> </li> 
+        <li> <a href="#bone-weight">Berat tulang dan campuran indeks</a> (mata uang hanya)</li> 
+       </ul> 
+       <p>Secara internal, semua data simpul disimpan dalam array terpisah dari ukuran yang sama. Jika mesh Anda mengandung array dengan posisi 10 vertex, itu juga memiliki array dengan 10 elemen untuk setiap atribut simpul lainnya yang digunakan.</p> 
+       <p>Dalam C #, Unity menggambarkan atribut vertex yang tersedia dengan es <a href="../ScriptReference/Rendering.VertexAttribute.html">VertexAttribute</a>. Anda dapat memeriksa apakah contoh kelas <code>Mesh</code> memiliki atribut vertex yang diberikan dengan fungsi <a href="../ScriptReference/Mesh.HasVertexAttribute.html">Mesh.HasVertexAttribute</a>.</p> 
+       <p><a name="position"></a></p> 
+       <h3>Position</h3> 
+       <p><strong>vertex position</strong> mewakili posisi simpul di <strong>object space</strong>.</p> 
+       <p>Unity menggunakan nilai ini untuk menentukan permukaan mesh.</p> 
+       <p>Atribut simpul ini diperlukan untuk semua jala.</p> 
+       <p>Dalam kelas <code>Mesh</code>, cara paling sederhana untuk mengakses data ini adalah dengan <a href="../ScriptReference/Mesh.GetVertices.html">Mesh.GetVertices</a> dan <a href="../ScriptReference/Mesh.SetVertices.html">Mesh.SetVertik</a>. Unity juga menyimpan data ini di <a href="../ScriptReference/Mesh-vertices.html">Mesh.vertices</a>, tetapi properti yang lebih tua ini kurang efisien dan ramah pengguna.</p> 
+       <p><a name="normal"></a></p> 
+       <h3>Normal</h3> 
+       <p><strong>vertex normal</strong> mewakili arah yang poin langsung “out” dari permukaan pada posisi simpul.</p> 
+       <p>Unity menggunakan nilai ini untuk menghitung cara yang cahaya memantulkan permukaan jala.</p> 
+       <p>Atribut simpul ini opsional.</p> 
+       <p>Dalam kelas <code>Mesh</code>, cara paling sederhana untuk mengakses data ini adalah dengan <a href="../ScriptReference/Mesh.GetNormals.html">Mesh.GetNormals</a> dan <a href="../ScriptReference/Mesh.SetNormals.html">Mesh.SetNormals</a>. Unity juga menyimpan data ini di <a href="../ScriptReference/Mesh-normals.html">Mesh.normals</a>, tetapi properti yang lebih tua ini kurang efisien dan ramah pengguna.</p> 
+       <p><a name="tangent"></a></p> 
+       <h3>Tangent</h3> 
+       <p><strong>vertex tangent</strong> mewakili arah yang poin di sepanjang sumbu "u" (tekstur horizontal) permukaan pada posisi simpul.</p> 
+       <p>Unity menyimpan tangent simpul dengan bagian tambahan data, dalam vektor empat komponen. Komponen x,y,z dari vektor menggambarkan tangent, dan komponen w vektor menggambarkan <a href="https://en.wikipedia.org/wiki/Orientation_(vector_space)">orientation</a>. Unity menggunakan nilai w untuk menghitung <strong>binormal</strong>, yang merupakan produk silang tangen dan normal.</p> 
+       <p>Unity menggunakan nilai tangen dan binormal dalam pemetaan normal.</p> 
+       <p>Atribut simpul ini opsional.</p> 
+       <p>Dalam kelas <code>Mesh</code>, cara paling sederhana untuk mengakses data ini adalah dengan <a href="../ScriptReference/Mesh.GetTangents.html">Mesh.GetTangents</a> dan <a href="../ScriptReference/Mesh.SetTangents.html">Mesh.SetTangents</a>. Unity juga menyimpan data ini di <a href="../ScriptReference/Mesh-tangents.html">Mesh.tangents</a>, tetapi properti yang lebih tua ini kurang efisien dan ramah pengguna.</p> 
+       <p><a name="uvs"></a></p> 
+       <h3>Tekstur koordinat (UVs)</h3> 
+       <p>A mesh dapat mengandung hingga delapan set <strong>texture coordinates</strong>. Koordinat tekstur umumnya disebut <strong>UVs</strong>, dan set disebut <strong>channels</strong>.</p> 
+       <p>Unity menggunakan koordinat tekstur ketika “wraps” tekstur di sekitar jala. UV menunjukkan bagian dari tekstur selaras dengan permukaan mesh pada posisi simpul.</p> 
+       <p>saluran UV umumnya disebut "UV0" untuk saluran pertama, "UV1" untuk saluran kedua, dan sebagainya untuk "UV7". Saluran masing-masing peta ke semantik <span class="tooltip"><strong>shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span>, <code>TEXCOORD0</code>, dan sebagainya hingga <code>TEXCOORD1</code>.<code>TEXCOORD7</code>.</p> 
+       <p>Secara default, Unity menggunakan saluran pertama (UV0) untuk menyimpan UV untuk tekstur biasa seperti peta diffuse dan peta specular. Unity dapat menggunakan saluran kedua (UV1) untuk menyimpan panggang UV <span class="tooltip"><strong>lightmap</strong><span class="tooltiptext">Tekstur pra-render yang mengandung efek sumber cahaya pada objek statis di tempat kejadian. Lightmaps dilalui atas geometri adegan untuk menciptakan efek pencahayaan. <a class="tooltipMoreInfoLink" href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Lightmap">Glossary</a></span></span></span>, dan saluran ketiga (UV2) untuk menyimpan data input untuk UV peta cahaya real-time. Untuk informasi lebih lanjut tentang UV Lightmap dan bagaimana Unity menggunakan saluran ini, [[wiki:LightingGiUvs|Lightmap UVs]. Untuk informasi lebih lanjut tentang UV Lightmap, lihat <a href="LightingGiUvs.html">Lightmap UVs</a>.</p> 
+       <p>Semua atribut berkoordinasi delapan tekstur opsional.</p> 
+       <p>Dalam kelas <code>Mesh</code>, cara paling sederhana untuk mengakses data ini adalah dengan <a href="../ScriptReference/Mesh.GetUVs.html">Mesh.GetUVs</a> dan <a href="../ScriptReference/Mesh.SetUVs.html">Mesh.SetUVs</a>. Unity juga menyimpan data ini di properti berikut: <a href="../ScriptReference/Mesh-uv.html">Mesh.uv</a>, <a href="../ScriptReference/Mesh-uv2.html">Mesh.uv2</a>, <a href="../ScriptReference/Mesh-uv3.html">Mesh.uv3</a> dan sebagainya, hingga <a href="../ScriptReference/Mesh-uv8.html">Mesh.uv8</a>. Perhatikan bahwa sifat yang lebih tua ini kurang efisien dan ramah pengguna.</p> 
+       <p><a name="color"></a></p> 
+       <h3>Color</h3> 
+       <p><strong>vertex color</strong> mewakili warna dasar simpul, jika ada.</p> 
+       <p>Warna ini ada secara independen dari setiap tekstur yang mesh dapat digunakan.</p> 
+       <p>Atribut simpul ini opsional.</p> 
+       <p>Dalam kelas <code>Mesh</code>, cara paling sederhana untuk mengakses data ini adalah dengan <a href="../ScriptReference/Mesh.GetColors.html">Mesh.GetColors</a> dan <a href="../ScriptReference/Mesh.SetColors.html">Mesh.SetWarna</a>. Unity juga menyimpan data ini di <a href="../ScriptReference/Mesh.colors.html">Mesh.colors</a>, tetapi properti yang lebih tua ini kurang efisien dan ramah pengguna.</p> 
+       <p><a name="bone-weight"></a></p> 
+       <h3>Blend indeks dan berat tulang</h3> 
+       <p>Dalam mesh berkelok-kelok, <strong>blend indices</strong> menunjukkan tulang mana yang mempengaruhi simpul, dan <strong>bone weights</strong> menjelaskan berapa banyak pengaruh tulang tersebut pada simpul.</p> 
+       <p>Dalam Unity, atribut vertex ini disimpan bersama.</p> 
+       <p>Unity menggunakan indeks campuran dan bobot tulang untuk menentukan mesh yang dikupas berdasarkan pergerakan kerangkanya. Untuk informasi lebih lanjut, lihat <a href="class-SkinnedMeshRenderer.html">Ms. YANG</a>.</p> 
+       <p>Atribut simpul ini diperlukan untuk jaring berkelok-kelok.</p> 
+       <p>Di masa lalu, Unity hanya diperbolehkan hingga 4 tulang untuk mempengaruhi simpul. Data ini disimpan dalam array <a href="BoneWeight">BoneWeight</a>, di array <a href="../ScriptReference/Mesh.boneWeights.html">Mesh.boneWeights</a>. Sekarang, Unity memungkinkan hingga 256 tulang untuk mempengaruhi simpul. Ini menyimpan data ini dalam bangunan <a href="../ScriptReference/BoneWeight1.html">BoneWeight1</a>, dan Anda dapat mengaksesnya dengan <a href="../ScriptReference/Mesh.GetAllBoneWeights.html">Mesh.GetAllBoneWeights</a> dan <a href="../ScriptReference/Mesh.SetBoneWeights.html">Mesh.SetBoneWeights</a>. Untuk informasi lebih lanjut, baca dokumentasi API terkait.</p> 
+       <p><a name="topology"></a></p> 
+       <h2>Topology</h2> 
+       <p>Topologi menggambarkan jenis wajah yang dimiliki jala.</p> 
+       <p>Topologi jala mendefinisikan struktur penyangga indeks, yang pada gilirannya menjelaskan bagaimana posisi simpul menggabungkan ke wajah. Setiap jenis topology menggunakan sejumlah elemen yang berbeda dalam array indeks untuk mendefinisikan satu wajah.</p> 
+       <p>Unity mendukung topologi jala berikut:</p> 
+       <ul> 
+        <li>Triangle</li> 
+        <li>Quad</li> 
+        <li>Lines</li> 
+        <li>LineStrip</li> 
+        <li>Points</li> 
+       </ul> 
+       <p>Sitemap Topologi Poin tidak membuat wajah; bukan, render Unity satu titik pada setiap posisi. Semua topologi jala lainnya menggunakan lebih dari satu indeks untuk membuat wajah atau tepi.<strong>Note:</strong> The Points topology doesn’t create faces; instead, Unity renders a single point at each position. All other mesh topologies use more than one index to create either faces or edges.</p> 
+       <p>Di kelas <code>Mesh</code>, Anda bisa mendapatkan topologi dengan <a href="../ScriptReference/Mesh.GetTopology.html">Mesh.GetTopology</a>, dan mengaturnya sebagai parameter <a href="../ScriptReference/Mesh.SetIndices.html">Mesh.SetIndices</a>.</p> 
+       <p>Untuk informasi lebih lanjut tentang topologi mesh yang didukung, lihat dokumentasi untuk peringatan MeshTopology.</p> 
+       <p>Sitemap Anda harus mengubah jala apa pun yang menggunakan teknik pemodelan lainnya (seperti NURBS atau NURMS/Subdivision Surfaces modelling) menjadi format yang didukung dalam perangkat lunak pemodelan Anda sebelum Anda dapat menggunakannya dalam Unity.<strong>Note:</strong> You must convert any meshes that use other modelling techniques (such as NURBS or NURMS/Subdivision Surfaces modelling) into supported formats in your modelling software before you can use them in Unity.</p> 
+       <p><a name="index-data"></a></p> 
+       <h2>Index data</h2> 
+       <p>Array indeks mengandung bilangan bulat yang merujuk pada elemen dalam array posisi simpul. Integer ini disebut indeks.</p> 
+       <p>Unity menggunakan indeks untuk menghubungkan posisi simpul ke wajah. Jumlah indeks yang membuat setiap wajah tergantung pada topology mesh.</p> 
+       <p>Di kelas <code>Mesh</code>, Anda bisa mendapatkan data ini dengan <a href="../ScriptReference/Mesh.GetIndices.html">Mesh.GetIndices</a>, dan mengaturnya dengan <a href="../ScriptReference/Mesh.SetIndices.html">Mesh.SetIndices</a>. Unity juga menyimpan data ini di <a href="../ScriptReference/Mesh.triangles.html">Mesh.triangles</a>, tetapi properti yang lebih tua ini kurang efisien dan ramah pengguna.</p> 
+       <p>Sitemap Topologi Poin tidak membuat wajah; bukan, render Unity satu titik pada setiap posisi. Semua topologi jala lainnya menggunakan lebih dari satu indeks untuk membuat wajah atau tepi.<strong>Note:</strong> The Points topology doesn’t create faces; instead, Unity renders a single point at each position. All other mesh topologies use more than one index to create either faces or edges.</p> 
+       <p>Misalnya, untuk mesh yang memiliki array indeks yang mengandung nilai-nilai berikut:</p> 
+       <p>0,1,2,3,4,5</p> 
+       <p>Jika jala memiliki topologi segitiga, maka tiga elemen pertama (0,1,2) mengidentifikasi satu segitiga, dan tiga elemen berikut (3, 4, 5) mengidentifikasi segitiga lain. Tidak ada batasan jumlah wajah yang dapat berkontribusi. Ini berarti bahwa simpul yang sama dapat muncul dalam array indeks beberapa kali. Misalnya, array indeks dapat mengandung nilai-nilai ini:</p> 
+       <p>0,1,2,1,2,3</p> 
+       <p>Jika jala memiliki topologi segitiga, maka tiga elemen pertama (0,1,2) mengidentifikasi satu segitiga, dan tiga elemen berikut (1,2,3) mengidentifikasi segitiga lain yang saham vertices dengan yang pertama.</p> 
+       <h3>Winding order</h3> 
+       <p>Urutan simpul di setiap kelompok dalam array indeks disebut <strong>winding order</strong>. Unity menggunakan pesanan berliku untuk menentukan apakah wajah adalah front-facing atau back-facing, dan pada gilirannya apakah harus membuat wajah atau kusam itu (tidak termasuk itu dari rendering). Secara default, Unity render poligon front-facing dan poligons back-facing. Unity menggunakan order berliku searah jarum jam, yang berarti bahwa Unity menganggap wajah di mana indeks terhubung ke arah searah jarum jam menghadap ke depan.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/mesh-winding-order.png" alt="Unity’s winding order visualized on a prism"> 
+        <figcaption>
+          Pesanan berliku Unity divisualkan pada prisma 
+        </figcaption> 
+       </figure> 
+       <p>Diagram di atas menunjukkan bagaimana Unity menggunakan pesanan berliku. Urutan simpul di setiap wajah menentukan arah normal untuk wajah dan Unity membandingkan ini ke arah depan perspektif <span class="tooltip"><strong>camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span> saat ini. Jika titik-titik normal dari arah ke depan kamera saat ini, itu kembali-menghadapi. segitiga lebih dekat dipesan (1, 2, 3), yang merupakan arah searah jarum jam sehubungan dengan perspektif saat ini, sehingga segitiga menghadap ke depan. Segitiga lebih lanjut dipesan (4, 5, 6), yang dari perspektif ini adalah arah anti-arah, sehingga segitiga menghadap kembali.</p> 
+       <p><a name="blend-shapes"></a></p> 
+       <h2>Bentuk campuran</h2> 
+       <p>Bentuk campuran menggambarkan versi mesh yang cacat menjadi bentuk yang berbeda. Bersatu antara bentuk ini. Anda menggunakan bentuk campuran untuk <a href="https://en.wikipedia.org/wiki/Morph_target_animation">morph target animasi</a>, yang merupakan teknik umum untuk animasi wajah.</p> 
+       <p>Untuk informasi lebih lanjut tentang bentuk campuran, lihat <a href="​​BlendShapes">Bekerja dengan bentuk campuran</a>.</p> 
+       <p>Data ini opsional.</p> 
+       <p><a name="bind-poses"></a></p> 
+       <h2>Bind poses</h2> 
+       <p>Dalam mesh berkelok-kelok, <strong>bind pose</strong> tulang menggambarkan posisinya ketika kerangka berada dalam posisi default (juga disebut pose mengikat atau pose istirahat).</p> 
+       <p>Di kelas <code>Mesh</code>, Anda bisa mendapatkan data ini dengan <a href="../ScriptReference/Mesh.GetBindposes.html">Mesh.GetBindposes</a> dan mengaturnya dengan <a href="../ScriptReference/Mesh.SetBindposes.html">Mesh.SetBindposes</a>. Unity juga menyimpan data ini di <a href="../ScriptReference/Mesh.bindPoses.html">Mesh.bindPoses</a>, tetapi properti yang lebih tua ini kurang efisien dan ramah pengguna. Setiap elemen mengandung data untuk tulang dengan indeks yang sama.</p> 
+       <p>Data ini diperlukan untuk memutihkan jala.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="mesh-introduction.html"></a></span> 
+         <div class="tip">
+           Pengenalan jala 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="class-Mesh.html"></a></span> 
+         <div class="tip">
+           aset mesh 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

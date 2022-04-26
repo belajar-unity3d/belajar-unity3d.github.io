@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Interaksi dengan skrip browser</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="platforms" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Unity User Manual 2022.1 (beta)</a></li> 
+         <li><a href="PlatformSpecific.html">Pengembangan platform</a></li> 
+         <li><a href="webgl.html">WebGL</a></li> 
+         <li><a href="webgl-develop.html">WebGL</a></li> 
+         <li>Interaksi dengan scripting browser</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="webgl-caching.html"></a></span> 
+          <div class="tip">
+            perilaku Cache di WebGL 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="webgl-performance.html"></a></span> 
+          <div class="tip">
+            Pertimbangan kinerja WebGL 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Interaksi dengan scripting browser</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Ketika membangun konten untuk web, Anda mungkin perlu berkomunikasi dengan elemen lain di halaman web Anda. Atau Anda mungkin ingin menerapkan fungsi menggunakan Web API yang Unity tidak saat ini diekspos secara default. Dalam kedua kasus, Anda perlu langsung antarmuka dengan mesin JavaScript browser. Unity <span class="tooltip"><strong>WebGL</strong><span class="tooltiptext">Login API yang membuat grafis 2D dan 3D di browser web. Opsi build Unity WebGL memungkinkan Unity untuk mempublikasikan konten sebagai program JavaScript yang menggunakan teknologi HTML5 dan WebGL rendering API untuk menjalankan konten Unity di browser web. <a class="tooltipMoreInfoLink" href="webgl-gettingstarted.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#WebGL">Glossary</a></span></span></span> menyediakan metode yang berbeda untuk melakukan ini.</p> 
+       <h2>Memanggil fungsi JavaScript dari skrip Unity</h2> 
+       <p>Cara yang disarankan untuk menggunakan JavaScript browser di proyek Anda adalah untuk menambahkan sumber JavaScript Anda ke proyek Anda, dan kemudian sebutkan fungsi tersebut langsung dari kode skrip Anda. Untuk melakukannya, tempatkan file dengan kode JavaScript menggunakan ekstensi .jslib di bawah subfolder "Plugins" di folder Aset Anda. File plugin perlu memiliki sintaks seperti ini:</p> 
+       <pre><code>mergeInto(LibraryManager.library, {
+
+  Hello: function () {
+    window.alert("Hello, world!");
+  },
+
+  HelloString: function (str) {
+    window.alert(UTF8ToString(str));
+  },
+
+  PrintFloatArray: function (array, size) {
+    for(var i = 0; i &lt; size; i++)
+    console.log(HEAPF32[(array &gt;&gt; 2) + i]);
+  },
+
+  AddNumbers: function (x, y) {
+    return x + y;
+  },
+
+  StringReturnValueFunction: function () {
+    var returnStr = "bla";
+    var bufferSize = lengthBytesUTF8(returnStr) + 1;
+    var buffer = _malloc(bufferSize);
+    stringToUTF8(returnStr, buffer, bufferSize);
+    return buffer;
+  },
+
+  BindWebGLTexture: function (texture) {
+    GLctx.bindTexture(GLctx.TEXTURE_2D, GL.textures[texture]);
+  },
+
+});
+</code></pre> 
+       <p>Kemudian Anda dapat memanggil fungsi ini dari Anda C# <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> seperti ini:</p> 
+       <pre><code>using UnityEngine;
+using System.Runtime.InteropServices;
+
+public class NewBehaviourScript : MonoBehaviour {
+
+    [DllImport("__Internal")]
+    private static extern void Hello();
+
+    [DllImport("__Internal")]
+    private static extern void HelloString(string str);
+
+    [DllImport("__Internal")]
+    private static extern void PrintFloatArray(float[] array, int size);
+
+    [DllImport("__Internal")]
+    private static extern int AddNumbers(int x, int y);
+
+    [DllImport("__Internal")]
+    private static extern string StringReturnValueFunction();
+
+    [DllImport("__Internal")]
+    private static extern void BindWebGLTexture(int texture);
+
+    void Start() {
+        Hello();
+        
+        HelloString("This is a string.");
+        
+        float[] myArray = new float[10];
+        PrintFloatArray(myArray, myArray.Length);
+        
+        int result = AddNumbers(5, 7);
+        Debug.Log(result);
+        
+        Debug.Log(StringReturnValueFunction());
+        
+        var texture = new Texture2D(0, 0, TextureFormat.ARGB32, false);
+        BindWebGLTexture(texture.GetNativeTexturePtr());
+    }
+}
+</code></pre> 
+       <p>Jenis numerik sederhana dapat dilewatkan ke JavaScript dalam parameter fungsi tanpa memerlukan konversi. Jenis data lain dilewatkan sebagai pointer di landai emscripten (yang hanya array besar dalam JavaScript). Untuk string, Anda dapat menggunakan fungsi bantuan <code>UTF8ToString</code> untuk mengkonversi ke string JavaScript. Untuk mengembalikan nilai string yang Anda butuhkan untuk memanggil <code>_malloc</code> untuk mengalokasikan beberapa memori dan fungsi bantuan <code>stringToUTF8</code> untuk menulis string JavaScript ke dalamnya. Jika string adalah nilai pengembalian, maka runtime <span class="tooltip"><strong>il2cpp</strong><span class="tooltiptext">Back-end scripting bersatu yang dapat Anda gunakan sebagai alternatif untuk Mono ketika proyek bangunan untuk beberapa platform. <a class="tooltipMoreInfoLink" href="IL2CPP.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#IL2CPP">Glossary</a></span></span></span> akan mengurus membebaskan memori untuk Anda. Untuk array dari jenis primitif, <code>emscripten</code> menyediakan <code>ArrayBufferViews</code> yang berbeda menjadi heap untuk berbagai ukuran integer, bilangan bulat atau representasi titik mengambang memori: <strong>HEAP8, HEAPU8, HEAP16, HEAPU16, HEAP32, HEAPU32, HEAPF32, HEAPF64</strong>. Untuk mengakses tekstur di WebGL, emscripten menyediakan array <code>GL.textures</code> yang memetakan ID tekstur asli dari Unity ke objek tekstur WebGL. Fungsi WebGL dapat disebut pada konteks WebGL emscripten, <code>GLctx</code>.</p> 
+       <p>Untuk informasi lebih lanjut tentang cara berinteraksi dengan JavaScript, merujuk ke <a href="https://kripken.github.io/emscripten-site/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html">Dokumentasi emscripten</a>.</p> 
+       <p>Selain itu, perhatikan bahwa di folder instalasi Unity ada beberapa plugin yang dapat Anda gunakan sebagai referensi, di <code>PlaybackEngines/WebGLSupport/BuildTools/lib</code> dan <code>PlaybackEngines/WebGLSupport/BuildTools/Emscripten/src/library*</code>.</p> 
+       <h3>Code visibility</h3> 
+       <p>Mulai dari Unity 5.6 semua kode build dieksekusi dalam lingkupnya sendiri. Pendekatan ini memungkinkan untuk menanam konten Anda di halaman arbitrase tanpa menyebabkan konflik dengan kode halaman yang timbul, dan memungkinkan untuk menanam lebih dari satu membangun di halaman yang sama.</p> 
+       <p>Jika Anda memiliki semua kode JavaScript Anda dalam bentuk plugin <em>.jslib</em> di dalam proyek Anda, maka kode JavaScript ini akan berjalan di dalam lingkup yang sama sebagai build yang disusun dan kode Anda harus bekerja sama seperti versi Unity sebelumnya. Misalnya, objek dan fungsi berikut harus langsung terlihat dari kode plugin JavaScript: <em>Modul, SendMesssage, HEAP8, ccall dll.</em>.</p> 
+       <p>Namun, jika Anda berencana untuk memanggil fungsi JavaScript internal dari lingkup global halaman embedding, Anda harus menggunakan variabel <code>unityInstance</code> di indeks Template WebGL Anda.html. Apakah ini setelah mesin Unity instaniasi berhasil, misalnya:</p> 
+       <pre><code>  var myGameInstance = null;
+  script.onload = () =&gt; {
+    createUnityInstance(canvas, config, (progress) =&gt; {...}).then((unityInstance) =&gt; {
+      myGameInstance = unityInstance;
+      …
+</code></pre> 
+       <p>Kemudian Anda dapat mengirim pesan ke build menggunakan <code>myGameInstance.SendMessage()</code>, atau mengakses objek modul build menggunakan <code>myGameInstance.Module</code>.</p> 
+       <h2>Memanggil fungsi skrip Unity dari JavaScript</h2> 
+       <p>Kadang-kadang Anda perlu mengirim beberapa data atau pemberitahuan ke script Unity dari JavaScript browser. Cara yang disarankan untuk melakukannya adalah untuk memanggil metode pada <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> dalam konten Anda. Jika Anda membuat panggilan dari plugin JavaScript, tertanam dalam proyek Anda, Anda dapat menggunakan kode berikut:</p> 
+       <p><code>MyGameInstance.SendMessage(objectName, methodName, value);</code></p> 
+       <p>Di mana <strong>objectName </strong>is nama objek di tempat kejadian Anda; <strong>methodName </strong>is nama metode di skrip, saat ini melekat pada objek itu; <strong>value </strong>can menjadi string, angka, atau bisa kosong. Contoh:</p> 
+       <pre><code>MyGameInstance.SendMessage('MyGameObject', 'MyFunction');
+MyGameInstance.SendMessage('MyGameObject', 'MyFunction', 5);
+
+MyGameInstance.SendMessage('MyGameObject', 'MyFunction', 'MyString');
+</code></pre> 
+       <p>Jika Anda ingin membuat panggilan dari lingkup global halaman yang timbul, lihat bagian <em>Code Visibility</em> di bawah ini.</p> 
+       <h2>Memanggil fungsi C dari skrip Unity</h2> 
+       <p>Unity mengkompilasi sumber Anda ke JavaScript dari C / C++ kode menggunakan emscripten, sehingga Anda juga dapat menulis plugin dalam kode C / C++, dan memanggil fungsi ini dari C #. Jadi, bukan file jslib dalam contoh di atas, Anda bisa memiliki C / C++ file dalam proyek Anda - akan secara otomatis dikompilasi dengan skrip Anda, dan Anda dapat memanggil fungsi dari itu, seperti dalam contoh JavaScript di atas.</p> 
+       <p>Jika Anda menggunakan C++ (.cpp) untuk mengimplementasikan plugin maka Anda harus memastikan fungsi yang diumumkan dengan tautan C untuk menghindari masalah nama mangling:</p> 
+       <pre><code>#include &lt;stdio.h&gt;
+
+extern "C" void Hello ()
+{
+    printf("Hello, world!\n");
+}
+
+extern "C" int AddNumbers (int x, int y)
+{
+    return x + y;
+}
+</code></pre> 
+       <p>Sitemap Unity menggunakan emscripten versi 2.0.19 toolchain.<strong>Note:</strong> Unity is using the Emscripten version 2.0.19 toolchain.</p> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-history">diganti Pointer__stringify() dengan UTF8ToString di 2021.2 seterusnya</span></p></li> 
+        <li><p><span class="page-history">Sitemap Instance diganti dengan membuat UnityInstance pada 2020.1</span></p></li> 
+        <li><p><span class="page-history">Kesalahan tetap dalam contoh kode.</span></p></li> 
+        <li><p><span class="page-history">Contoh WebGL berganti nama dari gameInstance to unityInstance di 2019. 1 Artikel</span></p></li> 
+       </ul> 
+       <!-- area:platforms --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="webgl-caching.html"></a></span> 
+         <div class="tip">
+           perilaku Cache di WebGL 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="webgl-performance.html"></a></span> 
+         <div class="tip">
+           Pertimbangan kinerja WebGL 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Membangun aplikasi WebGL Anda</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="platforms" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Unity User Manual 2022.1 (beta)</a></li> 
+         <li><a href="PlatformSpecific.html">Pengembangan platform</a></li> 
+         <li><a href="webgl.html">WebGL</a></li> 
+         <li><a href="webgl-building-distribution.html">Membangun dan mendistribusikan proyek WebGL</a></li> 
+         <li>Membangun aplikasi WebGL Anda</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="webgl-building-distribution.html"></a></span> 
+          <div class="tip">
+            Membangun dan mendistribusikan proyek WebGL 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="webgl-assetbundles.html"></a></span> 
+          <div class="tip">
+            Mengurangi waktu beban dengan AssetBundles 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Membangun aplikasi WebGL Anda</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Untuk membuat build untuk WebGL, pergi ke <strong>File &gt; Build Settings</strong> dari menu utama Unity. Dalam daftar Platform, pilih <strong>WebGL</strong> dan kemudian klik <strong>Switch Platform</strong>.</p> 
+       <p>Ketika Anda telah mengkonfigurasi Pengaturan Build, pilih satu opsi berikut:</p> 
+       <ul> 
+        <li> <strong>Build</strong>: Bangun aplikasi Anda ke dalam Pemain.</li> 
+        <li> <strong>Build and Run</strong>: Bangun aplikasi Anda di Pemain, dan buka Pemain di platform target Anda.</li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/WebGLBuilding-BuildPlayerOptions.png" alt="Build Settings Window"> 
+        <figcaption>
+          Membangun jendela pengaturan 
+        </figcaption> 
+       </figure> 
+       <p>Sistem build Unity untuk <span class="tooltip"><strong>WebGL</strong><span class="tooltiptext">Login API yang membuat grafis 2D dan 3D di browser web. Opsi build Unity WebGL memungkinkan Unity untuk mempublikasikan konten sebagai program JavaScript yang menggunakan teknologi HTML5 dan WebGL rendering API untuk menjalankan konten Unity di browser web. <a class="tooltipMoreInfoLink" href="webgl-gettingstarted.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#WebGL">Glossary</a></span></span></span> mendukung pengaturan berikut:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Setting</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Texture <span class="tooltip"><strong>Compression</strong><span class="tooltiptext">A method of storing data that reduces the amount of storage space it requires. See <a href="class-TextureImporterOverride.html">Texture Compression</a>, <a href="class-AnimationClip.html#AssetProperties">Animation Compression</a>, <a href="class-AudioClip.html">Audio Compression</a>, <a href="ReducingFilesize.html">Build Compression</a>.<br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#compression">Glossary</a></span></span></span></strong></td> 
+          <td style="text-align:left;">Format <span class="tooltip"><strong>texture compression</strong><span class="tooltiptext">Perangkat keras grafis 3D memerlukan Tekstur untuk dikompresi dalam format khusus yang dioptimalkan untuk pengambilan sampel Tekstur cepat. <a class="tooltipMoreInfoLink" href="class-TextureImporterOverride.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#TextureCompression">Glossary</a></span></span></span> untuk digunakan untuk membangun. Pilihannya adalah:</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Use Player Settings</strong></td> 
+          <td style="text-align:left;">Ini adalah pilihan default. Ini menggunakan format kompresi tekstur yang Anda set di jendela <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-PlayerSettingsWebGL.html">Pengaturan pemain</a><span class="tooltiptext">Pengaturan yang memungkinkan Anda mengatur berbagai pilihan khusus pemain untuk permainan akhir yang dibangun oleh Unity. <a href="class-PlayerSettings.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#PlayerSettings">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>ETC2</strong></td> 
+          <td style="text-align:left;">Menggunakan format ETC2, yang banyak didukung pada perangkat seluler.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>ASTC</strong></td> 
+          <td style="text-align:left;">Menggunakan format ASTC, yang banyak didukung pada perangkat seluler.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>DXT</strong></td> 
+          <td style="text-align:left;">Menggunakan format DXT, yang banyak didukung pada perangkat desktop.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong><span class="tooltip"><strong>Development Build</strong><span class="tooltiptext">A development build includes debug symbols and enables the Profiler. <a class="tooltipMoreInfoLink" href="UnityCloudBuildDevelopmentBuilds.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#DevelopmentBuild">Glossary</a></span></span></span></strong></td> 
+          <td style="text-align:left;">Aktifkan pengaturan ini untuk menyertakan simbol debug scripting dan Profiler di build Anda. Ketika Anda mengaktifkan ini, Unity menetapkan skrip <code>DEVELOPMENT_BUILD</code> mendefinisikan. Anda harus menggunakan pengaturan ini hanya ketika Anda ingin menguji aplikasi Anda. Perhatikan bahwa pembangunan membangun tidak menambang konten, yang berarti pembangunan membangun sangat besar untuk mendistribusikan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Code Optimization</strong></td> 
+          <td style="text-align:left;">Pilih mode optimasi untuk digunakan untuk membandingkan kode WebGL.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Speed</strong></td> 
+          <td style="text-align:left;">Ini adalah pengaturan default. Memilih ini menghasilkan kode WebGL yang dioptimalkan untuk kinerja runtime.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Size</strong></td> 
+          <td style="text-align:left;">Memilih ini menghasilkan WebGL kode yang dioptimalkan untuk membangun ukuran. Ini berguna ketika membangun game WebGL untuk berjalan di browser seluler di Android dan iOS, di mana opsi mengoptimalkan-for-speed default akan menghasilkan file WebAssembly yang lebih besar untuk perangkat seluler untuk dikonsumsi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Autoconnect Profiler</strong></td> 
+          <td style="text-align:left;">Biasanya, ketika diaktifkan, pengaturan ini memungkinkan Anda untuk secara otomatis menghubungkan Unity Profiler untuk membangun Anda. Namun untuk WebGL, karena Anda tidak dapat menghubungkan <span class="tooltip"><a class="tooltipMoreInfoLink" href="#Profiler">Profiler</a><span class="tooltiptext">Jendela yang membantu Anda untuk mengoptimalkan permainan Anda. Ini menunjukkan berapa banyak waktu yang dihabiskan di berbagai bidang permainan Anda. Sebagai contoh, dapat melaporkan persentase waktu yang dihabiskan <strong>rendering</strong>, aimating, atau dalam logika permainan Anda. <a href="Profiler.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profiler">Glossary</a></span></span></span> ke build yang berjalan, gunakan opsi ini untuk menghubungkan konten ke Editor. Ini karena koneksi Profiler ditangani menggunakan WebSockets di WebGL, tetapi browser web hanya memungkinkan koneksi keluar dari konten. Untuk pengaturan ini tersedia, Anda harus mengaktifkan opsi <strong>Development Build</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Deep Profiling</strong></td> 
+          <td style="text-align:left;">Aktifkan pengaturan ini untuk menyalakan <a href="ProfilerWindow.html#deep-profiling">Profil</a> di Profiler. Ini membuat instrumen Profiler setiap panggilan fungsi dalam aplikasi Anda dan mengembalikan data profil yang lebih rinci. Ketika Anda mengaktifkan Dukungan Profil Dalam, mungkin memperlambat eksekusi skrip. Opsi ini hanya tersedia jika Anda mengaktifkan opsi <strong>Development Build</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Build</strong></td> 
+          <td style="text-align:left;">Gunakan aplikasi Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Build And Run</strong></td> 
+          <td style="text-align:left;">Gunakan untuk melihat WebGL Player secara lokal. Unity menggunakan server web lokal untuk menghosting build Anda, dan membukanya dari URL localhost. Atau, Anda dapat menggunakan server web lokal kustom dengan header respons yang dikonfigurasi dengan benar. Untuk informasi lebih lanjut, lihat <a href="webgl-deploying.html">Membangun terkompresi dan konfigurasi server</a>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Untuk mengubah pengaturan untuk <strong>Asset Import Overrides</strong>, lihat <a href="BuildSettings.html#AssetImportOverride">Membangun Pengaturan</a>.</p> 
+       <h2>Membangun Folder</h2> 
+       <p>Folder <code>Build</code> berisi file berikut (<code>[ExampleBuild]</code> mewakili nama folder build target).</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Nama file</th> 
+          <th style="text-align:left;">Contains</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>[ExampleBuild].loader.js</code></td> 
+          <td style="text-align:left;">Kode JavaScript yang diperlukan halaman web untuk memuat konten Unity.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>[ExampleBuild].framework.js</code></td> 
+          <td style="text-align:left;">JavaScript runtime dan plugin.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>[ExampleBuild].wasm</code></td> 
+          <td style="text-align:left;">WebAssembly biner.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>[ExampleBuild].mem</code></td> 
+          <td style="text-align:left;">Gambar biner untuk menginisialisasi memori heap untuk Pemain Anda. Unity hanya menghasilkan file ini untuk membangun WebAssembly multi-threaded.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>[ExampleBuild].data</code></td> 
+          <td style="text-align:left;">Data aset dan <span class="tooltip"><strong>Scenes</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>[ExampleBuild].symbols.json</code></td> 
+          <td style="text-align:left;">Nama simbol debug perlu untuk mengubah jejak tumpukan kesalahan. File ini hanya dihasilkan untuk membangun Rilis ketika Anda mengaktifkan opsi Simbol Debug (<strong>File</strong> &gt; <strong>Build Settings</strong> &gt; <strong>Player Settings</strong>.)</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>[ExampleBuild].jpg</code></td> 
+          <td style="text-align:left;">Gambar latar belakang, yang menampilkan sementara build memuat. File ini hanya dihasilkan ketika Gambar Latar Belakang disediakan dalam Pengaturan Pemain (<strong>File</strong> &gt; <strong>Build Settings</strong> &gt; <strong>Player Settings</strong> &gt; <strong>Splash Image</strong>. Lihat halaman Layar Splash untuk informasi lebih lanjut.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Jika Anda mengaktifkan <strong>Compression Method</strong> untuk membangun Anda, Unity mengidentifikasi ekstensi yang sesuai dengan metode kompresi dan menambahkan ekstensi ini ke nama file di dalam Build subfolder. Jika Anda mengaktifkan <strong>Decompression Fallback</strong>, Unity menerapkan ekstensi <code>.unityweb</code> ke nama file build. Jika tidak, Unity menerapkan ekstensi <code>.gz</code> untuk metode kompresi Gzip, atau <code>.br</code> untuk metode kompresi Brotli. Untuk informasi lebih lanjut, lihat <a href="webgl-deploying.html">WebGL: Membangun terkompresi dan konfigurasi server</a>.</p> 
+       <p>Jika Anda mengaktifkan <strong>Name Files As Hashes</strong> di <strong>Player Settings</strong>, Unity menggunakan hash konten file bukan nama file default. Ini berlaku untuk setiap file di folder build. Opsi ini memungkinkan Anda untuk meng-upload versi terbaru dari permainan membangun ke folder yang sama di server, dan hanya mengunggah file yang telah berubah antara membangun iterasi.</p> 
+       <p> <strong>Note</strong>: Membuka Pemain langsung dari sistem file mungkin tidak bekerja di beberapa browser. Ini karena pembatasan keamanan yang diterapkan pada URL file lokal.</p> 
+       <h2>Dukungan Profil Dalam</h2> 
+       <p>Aktifkan pengaturan <strong>Deep Profiling Support</strong> untuk membuat profil Unity Profiler setiap panggilan fungsi dalam aplikasi Anda. Untuk informasi lebih lanjut lihat dokumentasi pada <a href="ProfilerWindow.html#deep-profiling">Profil</a>.</p> 
+       <h2>Pengecualian yang Dapat Diaktifkan</h2> 
+       <p>Buka <strong>Publishing Settings</strong> untuk mengakses <strong>Enable Exceptions</strong>. <strong>Enable Exceptions</strong> memungkinkan Anda untuk menentukan perilaku kode yang tidak terduga (juga dikenal sebagai kesalahan) ditangani pada waktu berjalan. Ini memiliki opsi ini:</p> 
+       <ul> 
+        <li> <strong>None</strong>: Pilih ini jika Anda tidak memerlukan dukungan pengecualian. Ini memberikan kinerja terbaik dan membangun terkecil. Dengan opsi ini, setiap pengecualian dibuang menyebabkan konten Anda berhenti dengan kesalahan dalam pengaturan itu.</li> 
+        <li> <strong>Explicitly Thrown Exceptions Only</strong> (default): Pilih ini untuk menangkap pengecualian yang secara eksplisit ditentukan dari pernyataan <code>throw</code> di <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> Anda dan juga memastikan blok <code>finally</code> disebut. Perhatikan bahwa memilih opsi ini membuat kode JavaScript yang dihasilkan dari skrip Anda lebih lama dan lebih lambat; Ini mungkin hanya menjadi masalah jika skrip adalah kemacetan utama dalam proyek Anda.</li> 
+        <li> <strong>Full Without Stacktrace</strong>: Pilih opsi ini untuk menangkap: * Kecuali yang ditentukan secara eksplisit dari pernyataan <code>throw</code> di skrip Anda (sama dengan opsi <em>Jelas Lempar Kecuali Sitemap</em>) 
+         <ul> 
+          <li>Indeks Null</li> 
+          <li>Di luar akses Array Bounds</li> 
+         </ul> </li> 
+        <li> <strong>Full With Stacktrace</strong>: Pilihan ini mirip dengan opsi di atas tetapi juga menangkap jejak Stack. Unity menghasilkan pengecualian ini dengan mengecilkan pemeriksaan untuk mereka dalam kode, sehingga opsi ini mengurangi kinerja dan meningkatkan penggunaan memori browser. Hanya menggunakan ini untuk debugging, dan selalu menguji di browser 64-bit.</li> 
+       </ul> 
+       <h2>Caching Data</h2> 
+       <p>Untuk mengakses <strong>Data Caching</strong>, pergi ke <strong>Publishing Setings</strong> melalui <strong>File</strong> &gt; <strong>Build Settings</strong> &gt; <strong>Player Settings</strong> &gt; <strong>WebGL</strong>. Ini memungkinkan browser untuk menyimpan file data utama ke database IndexedDB.</p> 
+       <p>Menggunakan cache HTTP browser default tidak menjamin bahwa cache browser respons tertentu. Ini karena cache HTTP browser memiliki ruang terbatas, dan browser mungkin tidak dapat cache file yang terlalu besar.</p> 
+       <p>Untuk meningkatkan kecepatan pemuatan Anda, IndexedDB memungkinkan Anda untuk menyimpan file di atas batas browser. Ketika Anda melihat lebih banyak file, Anda meningkatkan kemungkinan bahwa konten yang diunduh tersedia pada mesin pengguna selama perjalanan berikutnya dari build.</p> 
+       <p>Data Caching hanya cache file <code>.data</code> di cache IndexedDB untuk tanggapan HTTP. Untuk cache AssetBundles, Anda perlu mengaktifkan Data Caching dan override <code>unityInstance.Module.cacheControl()</code>. Untuk melakukan ini, pastikan pengembalian <code>Module.cacheControl(url)</code> <code>must-revalidate</code> untuk URL Aset yang diminta. Misalnya, Anda dapat menimpa fungsi unityInstance.Module.cacheControl() dalam panggilan pemenuhan Promise yang membuatUnityInstance() kembali. Untuk informasi lebih lanjut tentang createUnityInstance() lihat <a href="webgl-deploying.html">WebGL: Membangun terkompresi dan konfigurasi server</a>.</p> 
+       <h2>Kompresi Tekstur</h2> 
+       <p>Pengaturan kompresi tekstur di WebGL memungkinkan Anda membuat membangun platform target berdasarkan format kompresi tekstur yang mereka dukungan. Nilai format kompresi tekstur yang Anda set di sini memiliki prioritas atas nilai format kompresi tekstur <a href="class-PlayerSettingsWebGL.html">Pengaturan pemain</a>. Untuk menjalankan permainan Anda di kedua browser desktop dan seluler dengan tekstur terkompresi, Anda mungkin ingin membuat dua build: * Menargetkan browser desktop dengan DXT set sebagai format kompresi tekstur * Menargetkan peramban seluler dengan ASTC set sebagai format kompresi tekstur</p> 
+       <p><a name="desktop+mobile"></a></p> 
+       <h3>Buat build untuk browser desktop dan seluler dari skrip</h3> 
+       <p>Anda dapat menjalankan build untuk browser desktop dan browser seluler dengan format kompresi tekstur yang sesuai secara bersamaan menggunakan skrip. Contoh:</p> 
+       <pre><code>using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEditor;
+using System.Diagnostics;
+using System.IO;
+using UnityEditor.Build.Reporting;
+
+public class comboBuild
+{
+    //This creates a menu item to trigger the dual builds https://docs.unity3d.com/ScriptReference/MenuItem.html 
+
+    [MenuItem("Game Build Menu/Dual Build")]
+    public static void BuildGame()
+    {
+      //This builds the player twice: a build with desktop-specific texture settings (WebGL_Build) as well as mobile-specific texture settings (WebGL_Mobile), and combines the necessary files into one directory (WebGL_Build)
+      
+      string dualBuildPath    = "WebGLBuilds";
+      string desktopBuildName = "WebGL_Build";
+      string mobileBuildName  = "WebGL_Mobile";
+
+      string desktopPath = Path.Combine(dualBuildPath, desktopBuildName);
+      string mobilePath  = Path.Combine(dualBuildPath, mobileBuildName);
+      string[] scenes = new string[] {"Assets/scene.unity"};
+
+      EditorUserBuildSettings.webGLBuildSubtarget = WebGLTextureSubtarget.DXT;
+      BuildPipeline.BuildPlayer(scenes, desktopPath, BuildTarget.WebGL, BuildOptions.Development); 
+
+      EditorUserBuildSettings.webGLBuildSubtarget = WebGLTextureSubtarget.ASTC;
+      BuildPipeline.BuildPlayer(scenes,  mobilePath, BuildTarget.WebGL, BuildOptions.Development); 
+
+      // Copy the mobile.data file to the desktop build directory to consolidate them both
+      FileUtil.CopyFileOrDirectory(Path.Combine(mobilePath, "Build", mobileBuildName + ".data"), Path.Combine(desktopPath, "Build", mobileBuildName + ".data"));
+    }  
+}
+</code></pre> 
+       <p>Akhirnya, Anda dapat memodifikasi file <a href="webgl-templates.html">WebGL template</a> <code>index.html</code> untuk memilih file data yang sesuai jika ada dukungan untuk ekstensi format kompresi tekstur:</p> 
+       <pre><code>// choose the data file based on whether there's support for the ASTC texture compression format
+      var dataFile = "/{{{ DATA_FILENAME }}}";                                  
+      var c = document.createElement("canvas");                                 
+      var gl = c.getContext("webgl");                                      
+      var gl2 = c.getContext("webgl2");                                    
+      if ((gl &amp;&amp; gl.getExtension('WEBGL_compressed_texture_astc')) || (gl2 &amp;&amp;   
+              gl2.getExtension('WEBGL_compressed_texutre_astc'))) {             
+        dataFile =  "/WebGL_Mobile.data";                                       
+      }                                                                         
+
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/{{{ LOADER_FILENAME }}}";                    
+      var config = {                                                            
+        dataUrl: buildUrl + dataFile,                                           
+        frameworkUrl: buildUrl + "/{{{ FRAMEWORK_FILENAME }}}",                 
+#if USE_WASM                                                                    
+        codeUrl: buildUrl + "/{{{ CODE_FILENAME }}}",                           
+#endif                                                                          
+#if MEMORY_FILENAME                                                             
+        memoryUrl: buildUrl + "/{{{ MEMORY_FILENAME }}}",                       
+#endif
+#if SYMBOLS_FILENAME                                                            
+        symbolsUrl: buildUrl + "/{{{ SYMBOLS_FILENAME }}}",                     
+#endif                                                                          
+        streamingAssetsUrl: "StreamingAssets",                                
+        companyName: {{{ JSON.stringify(COMPANY_NAME) }}},
+        productName: {{{ JSON.stringify(PRODUCT_NAME) }}},
+      productVersion: {{{ JSON.stringify(PRODUCT_VERSION) }}},                
+        showBanner: unityShowBanner,                                            
+     };  
+
+</code></pre> 
+       <hr> 
+       <ul> 
+        <li><span class="page-history">Dihapus target tautan asm.js di Unity 2019. 1 Artikel</span></li> 
+        <li><span class="page-history">Membangun pembaruan file dan Caching Data ditambahkan pada Unity 2020. 1 Artikel</span></li> 
+       </ul> 
+       <!-- area:platforms --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="webgl-building-distribution.html"></a></span> 
+         <div class="tip">
+           Membangun dan mendistribusikan proyek WebGL 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="webgl-assetbundles.html"></a></span> 
+         <div class="tip">
+           Mengurangi waktu beban dengan AssetBundles 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

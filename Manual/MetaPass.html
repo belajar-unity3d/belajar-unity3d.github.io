@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Lightmapping dan naungan</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="LightingOverview.html">Lighting</a></li> 
+         <li><a href="Lightmappers.html">Lightmapping</a></li> 
+         <li>Lightmapping and shaders</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="Lightmaps-TechnicalInformation.html"></a></span> 
+          <div class="tip">
+            Lightmaps: Informasi teknis 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="LightingGiUvs.html"></a></span> 
+          <div class="tip">
+            Cahayamap UVs pengenalan 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Lightmapping and shaders</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Halaman ini berisi informasi tentang cara membuat <span class="tooltip"><strong>shaders</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Shader">Glossary</a></span></span></span> kompatibel dengan Unity <span class="tooltip"><strong>lightmappers</strong><span class="tooltiptext">Alat dalam Unity yang bakes lightmap sesuai dengan pengaturan lampu dan geometri di tempat kejadian Anda. <a href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Lightmapper">Glossary</a></span></span></span>.</p> 
+       <h2>The Meta Pass</h2> 
+       <p>Meta Pass adalah lulusan Shader yang menyediakan nilai albedo dan emisi ke sistem <span class="tooltip"><strong>Global Illumination</strong><span class="tooltiptext">Kelompok teknik yang model pencahayaan langsung dan tidak langsung untuk memberikan hasil pencahayaan yang realistis.<br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#globalillumination">Glossary</a></span></span></span>. Nilai-nilai ini terpisah dari mereka yang digunakan dalam rendering real-time, yang berarti bahwa Anda dapat menggunakan Meta Pass untuk mengontrol bagaimana <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> terlihat dari sudut pandang sistem baking pencahayaan tanpa mempengaruhi penampilannya tepat waktu.</p> 
+       <p>Contoh ketika ini akan berguna adalah jika Anda menginginkan mos hijau di tebing untuk menghasilkan cahaya tidak langsung hijau yang berlebihan di <span class="tooltip"><strong>lightmaps</strong><span class="tooltiptext">Tekstur pra-render yang mengandung efek sumber cahaya pada objek statis di tempat kejadian. Lightmaps dilalui atas geometri adegan untuk menciptakan efek pencahayaan. <a class="tooltipMoreInfoLink" href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Lightmap">Glossary</a></span></span></span> Anda, tetapi Anda tidak ingin mengubah warna <span class="tooltip"><strong>terrain</strong><span class="tooltiptext">Pemandangan di tempat kejadian Anda. Terrain GameObject menambahkan pesawat datar besar untuk adegan Anda dan Anda dapat menggunakan jendela Inspektur Terrain untuk menciptakan lanskap rinci. <a href="terrain-UsingTerrains.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Terrain">Glossary</a></span></span></span> dalam waktu nyata dari naungan.</p> 
+       <p>Semua Bahan bawaan Unity memiliki Meta Pass, dan Standar Shader mengandung Meta pass. Jika Anda menggunakan ini, Anda tidak perlu melakukan apa pun untuk mengaktifkan Meta Pass. Jika Anda menggunakan Shader kustom, Anda dapat menambahkan Meta Pass Anda sendiri.</p> 
+       <h3>Sitemap Contoh Shader dengan Meta lulus<a name="ExampleMetaPass"></a> Example Shader with a Meta pass</h3> 
+       <p>Shader di bawah ini memungkinkan Anda untuk menentukan warna albedo dan albedo Tekstur yang hanya digunakan oleh sistem baking pencahayaan, tanpa mempengaruhi munculnya Material pada runtime. Dalam contoh ini, emisi diambil dari UV; tetapi nilai apa pun dapat digunakan untuk mengontrolnya.</p> 
+       <pre><code>Shader "Custom/metaPassShader"{
+
+    Properties {
+        _Color ("Color", Color)=(1,1,1,1)
+        _MainTex ("Albedo (RGB)",2D)="white"{}
+        _Glossiness ("Smoothness", Range(0,1))=0.5
+        _Metallic ("Metallic", Range(0,1))=0.0
+
+        _GIAlbedoColor ("Color Albedo (GI)", Color)=(1,1,1,1)
+        _GIAlbedoTex ("Albedo (GI)",2D)="white"{}
+    }
+
+    SubShader {
+    // ------------------------------------------------------------------
+    // Extracts information for lightmapping, GI (emission, albedo, ...)
+    // This pass is not used during regular rendering.
+        Pass
+        {
+            Name "META"
+            Tags {"LightMode"="Meta"}
+            Cull Off
+            CGPROGRAM
+
+            #include"UnityStandardMeta.cginc"
+
+            sampler2D _GIAlbedoTex;
+            fixed4 _GIAlbedoColor;
+            float4 frag_meta2 (v2f_meta i): SV_Target
+            {
+                // We're interested in diffuse &amp; specular colors
+                // and surface roughness to produce final albedo.
+
+                FragmentCommonData data = UNITY_SETUP_BRDF_INPUT (i.uv);
+                UnityMetaInput o;
+                UNITY_INITIALIZE_OUTPUT(UnityMetaInput, o);
+                fixed4 c = tex2D (_GIAlbedoTex, i.uv);
+                o.Albedo = fixed3(c.rgb * _GIAlbedoColor.rgb);
+                o.Emission = Emission(i.uv.xy);
+                return UnityMetaFragment(o);
+            }
+
+            #pragma vertex vert_meta
+            #pragma fragment frag_meta2
+            #pragma shader_feature _EMISSION
+            #pragma shader_feature _METALLICGLOSSMAP
+            #pragma shader_feature ___ _DETAIL_MULX2
+            ENDCG
+        }
+
+        Tags {"RenderType"="Opaque"}
+        LOD 200
+
+        CGPROGRAM
+        // Physically-based Standard lighting model, and enable shadows on all light types
+        #pragma surface surf Standard fullforwardshadows nometa
+        // Use Shader model 3.0 target, to get nicer looking lighting
+        #pragma target 3.0
+
+        sampler2D _MainTex;
+
+        struct Input {
+            float2 uv_MainTex;
+        };
+
+        half _Glossiness;
+        half _Metallic;
+        fixed4 _Color;
+
+        void surf (Input IN,inout SurfaceOutputStandard o){
+            // Albedo comes from a texture tinted by color
+            fixed4 c = tex2D (_MainTex, IN.uv_MainTex)* _Color;
+            o.Albedo = c.rgb;
+            // Metallic and smoothness come from slider variables
+            o.Metallic = _Metallic;
+            o.Smoothness = _Glossiness;
+            o.Alpha = c.a;
+        }
+        ENDCG
+    }
+
+    FallBack "Diffuse"
+}
+</code></pre> 
+       <h3>Meta Pass informasi teknis</h3> 
+       <p>Enlighten Realtime Global Illumination dan lightmapping menggunakan Meta Pass Unity untuk mengekstrak nilai albedo dari permukaan dan menangani angkutan sendiri dengan menggunakan albedo permukaan pada setiap bouncing.</p> 
+       <p>Permukaan metalik dengan hitam (atau hampir hitam) albedo sangat sedikit cahaya redup. Karena lightmappers hanya menangani angkutan cahaya diffuse, ini berarti bahwa Anda dapat melihat cahaya yang sangat sedikit beruncing dari jenis permukaan ini. Akun Meta Passes bawaan unity untuk ini dengan menyediakan versi yang ditingkatkan dari warna hue logam bukan albedo yang benar secara fisik. Ini berarti bahwa Anda mendapatkan beberapa bounce bahkan dari bahan logam. Jika Anda ingin perilaku yang berbeda, Anda dapat membuat lulus meta kustom.</p> 
+       <p>Built-in Meta Passes tidak menangani refleksi spektral.</p> 
+       <p>Catatan: Jika Anda menggunakan <span class="tooltip"><strong>Enlighten</strong><span class="tooltiptext">Sistem pencahayaan oleh Geomerics yang digunakan dalam Unity untuk lightmapping dan untuk Mencerahkan Penerangan Global Realtime. <a class="tooltipMoreInfoLink" href="https://www.siliconstudio.co.jp/en/products-service/enlighten/">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Enlighten">Glossary</a></span></span></span> Realtime Global Illumination, Meta lulus di Pemain tidak secepatnya, tetapi lebih fleksibel karena Anda tidak terbatas pada warna tunggal.</p> 
+       <h2>Transparansi RGB kustom</h2> 
+       <p>Secara default, naungan dalam penggunaan Unity transparansi monokrom. Ini berarti bahwa Unity menggunakan saluran alfa warna material atau tekstur albedo untuk mengevaluasi transmisi cahaya melalui bahan.</p> 
+       <p>Selama lightmapping, Anda dapat menggunakan transparansi RGB kustom sebagai gantinya. Ini berarti bahwa Unity menggunakan nilai tekstur yang diberikan untuk mengevaluasi transmisi cahaya melalui bahan. Ini berguna ketika Anda ingin transparansi berbasis warna yang independen dari warna material atau tekstur albedo; misalnya, jika Anda ingin memanggang pencahayaan yang mensimulasikan perilaku cahaya bersinar melalui jendela kaca patri.</p> 
+       <p>Untuk menggunakan transparansi RGB kustom selama lightmapping, tambahkan garis berikut ke kode <span class="tooltip"><a class="tooltipMoreInfoLink" href="SL-Reference.html">ShaderLab</a><span class="tooltiptext">Bahasa Unity untuk mendefinisikan struktur benda-benda Shader. <a href="SL-Shader.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ShaderLab">Glossary</a></span></span></span> Anda:</p> 
+       <p><code>_TransparencyLM ("Transmissive Texture", 2D) = "white" {}</code></p> 
+       <p>Ini menciptakan <a class="tooltipMoreInfoLink" href="SL-Properties.html">bahan properti</a> yang muncul dalam Bahan <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span> dengan nama " Tekstur yang diizinkan". Menetapkan tekstur yang diinginkan ke bidang ini.</p> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="Lightmaps-TechnicalInformation.html"></a></span> 
+         <div class="tip">
+           Lightmaps: Informasi teknis 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="LightingGiUvs.html"></a></span> 
+         <div class="tip">
+           Cahayamap UVs pengenalan 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

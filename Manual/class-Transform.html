@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Transforms</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="CreatingGameplay.html">Membuat Gameplay</a></li> 
+         <li><a href="GameObjects.html">GameObjects</a></li> 
+         <li>Transforms</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="GameObjects.html"></a></span> 
+          <div class="tip">
+            GameObjects 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="Components.html"></a></span> 
+          <div class="tip">
+            Pengantar komponen 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Transforms</h1> 
+       <!--BeginSwitchLink--> 
+       <a href="../ScriptReference/Transform.html" title="Go to Transform page in the Scripting Reference" class="switch-link gray-btn sbtn left">Switch to Scripting</a> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p><strong>Transform</strong> digunakan untuk menyimpan posisi <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span>, rotasi, skala dan keadaan parenting dan sangat penting. GameObject akan selalu memiliki <strong>Transform component</strong> terpasang - tidak mungkin untuk menghapus Transform atau untuk membuat GameObject tanpa satu.</p> 
+       <h2>Komponen Transform</h2> 
+       <p>Komponen <strong>Transform</strong> menentukan <strong>Position</strong>, <strong>Rotation</strong>, dan <strong>Scale</strong> dari setiap objek di <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>. Setiap GameObject memiliki Transform.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TransformExample4.png" alt=""> 
+       </figure> 
+       <h2>Properties</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong><em>Property:</em></strong></th> 
+          <th style="text-align:left;"><strong><em>Function:</em></strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Position</strong></td> 
+          <td style="text-align:left;">Posisi Transform di X, Y, dan Z berkoordinasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Rotation</strong></td> 
+          <td style="text-align:left;">Rotasi Transformasi di sekitar X, Y, dan sumbu Z, diukur dalam derajat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Scale</strong></td> 
+          <td style="text-align:left;">Timbangan Transform sepanjang X, Y, dan Z axes. Nilai "1" adalah ukuran asli (ukuran di mana objek diimpor). Login Pilih ikon tautan di sebelah nilai-nilai untuk beralih penskalaan proporsional. Penskalaan proporsional menyesuaikan nilai skala secara proporsional satu sama lain. Misalnya, jika nilai sumbu GameObject Anda adalah (1, 2, 4) dan Anda menggandakan nilai sumbu x ke 2, nilai sumbu y dan z berubah menjadi 4 dan 8 masing-masing. Ketika diaktifkan, scaling proporsional juga berlaku untuk perubahan yang Anda buat menggunakan alat Timbangan dalam tampilan Adegan. Login Jika ada nilai skala nol, itu diabu-abu dan tidak secara otomatis menyesuaikan ketika scaling proporsional diaktifkan. <br><br>: Anda dapat menetapkan shortcut keyboard untuk mengaktifkan atau menonaktifkan scaling proporsional. Sitemap<br><strong>Note</strong>: You can assign a keyboard shortcut to enable or disable proportional scaling. See <a href="ShortcutsManager.html">Shortcuts Manager</a>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Posisi, rotasi dan nilai skala Transform diukur relatif terhadap induk Transform. Jika Transform tidak memiliki orang tua, sifatnya diukur di ruang dunia.</p> 
+       <h2>Mengedit Transforms</h2> 
+       <p>Transforms dimanipulasi di ruang 3D di X, Y, dan Z sumbu atau di ruang 2D hanya dalam X dan Y. Dalam Unity, kapak ini diwakili oleh warna merah, hijau, dan biru masing-masing.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TransformExample2.png" alt="A transform showing the color-coding of the axes"> 
+        <figcaption>
+          Perubahan menunjukkan pengkodean warna dari kapak 
+        </figcaption> 
+       </figure> 
+       <p>Transformator dapat diedit dalam <span class="tooltip"><strong>Scene View</strong><span class="tooltiptext">Tampilan interaktif ke dunia yang Anda buat. Anda menggunakan Adegan Lihat untuk memilih dan posisi pemandangan, karakter, kamera, lampu, dan semua jenis lain dari Game Object. <a class="tooltipMoreInfoLink" href="UsingTheSceneView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#SceneView">Glossary</a></span></span></span> atau dengan mengubah sifatnya dalam <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>. Dalam adegan, Anda dapat memodifikasi Transforms menggunakan alat Pindah, Putar dan Skala. Alat-alat ini terletak di sudut kiri atas dari Editor Unity.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Transform-Tools.png" alt="The View, Translate, Rotate, and Scale tools"> 
+        <figcaption>
+          Tampilan, Terjemahkan, Berputar, dan Alat Timbangan 
+        </figcaption> 
+       </figure> 
+       <p>Alat dapat digunakan pada objek di tempat kejadian. Ketika Anda mengklik objek, Anda akan melihat alat <span class="tooltip"><strong>gizmo</strong><span class="tooltiptext">Overlay grafis yang terkait dengan GameObject di Adegani, dan ditampilkan di Tampilan Adegan. Alat adegan internal seperti alat bergerak adalah Gizmos, dan Anda dapat membuat Gizmos kustom menggunakan tekstur atau scripting. Beberapa Gizmos hanya ditarik ketika GameObject dipilih, sementara Gizmos lainnya ditarik oleh Editor terlepas dari GameObjects mana yang dipilih. <a class="tooltipMoreInfoLink" href="GizmosMenu.html#GizmosIcons">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Gizmo">Glossary</a></span></span></span> muncul di dalamnya. Penampilan gizmo tergantung pada alat mana yang dipilih.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TransformGizmo35.png" alt="Transform gizmo"> 
+        <figcaption>
+          Transform gizmo 
+        </figcaption> 
+       </figure> 
+       <p>Ketika Anda mengklik dan menyeret pada salah satu dari tiga sumbu gizmo, Anda akan melihat bahwa perubahan warnanya menjadi kuning. Ketika Anda menyeret mouse, Anda akan melihat objek menerjemahkan, memutar, atau berskala sumbu yang dipilih. Ketika Anda melepaskan tombol mouse, sumbu tetap dipilih.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TransformExample3.png" alt="A Transform showing the selected (yellow) X axis"> 
+        <figcaption>
+          Transform yang menampilkan sumbu X yang dipilih (kuning) 
+        </figcaption> 
+       </figure> 
+       <p>Ada juga pilihan tambahan dalam mode Terjemahkan untuk mengunci gerakan ke pesawat tertentu (yaitu, memungkinkan penyeret dalam dua sumbu sambil menjaga ketiga tidak berubah). Tiga kotak berwarna kecil di sekitar pusat Gizmo Terjemahkan mengaktifkan kunci untuk setiap pesawat; warna sesuai dengan sumbu yang akan dikunci ketika kotak diklik (misalnya, kunci biru sumbu Z).</p> 
+       <p><a name="parent"></a></p> 
+       <h2>Parenting</h2> 
+       <p>Parenting adalah salah satu konsep yang paling penting untuk memahami ketika menggunakan Unity. Ketika GameObject adalah <span class="tooltip"><strong>Parent</strong><span class="tooltiptext">Sebuah objek yang berisi objek anak dalam hierarki. Ketika GameObject adalah orang tua dari GameObject lain, Anak PermainanObject akan bergerak, berputar, dan skala persis seperti orang tuanya. Anda dapat memikirkan orang tua seperti hubungan antara lengan Anda dan tubuh Anda; ketika tubuh Anda bergerak, lengan Anda juga bergerak bersama dengannya. <a class="tooltipMoreInfoLink" href="class-Transform.html#parent">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Parent">Glossary</a></span></span></span> dari GameObject lain, <strong>Child</strong> GameObject akan bergerak, berputar, dan skala persis seperti orang tuanya. Anda dapat memikirkan orang tua seperti hubungan antara lengan Anda dan tubuh Anda; ketika tubuh Anda bergerak, lengan Anda juga bergerak bersama dengannya. Objek anak juga dapat memiliki anak-anak mereka sendiri dan sebagainya. Jadi tangan Anda bisa dianggap sebagai "anak" lengan Anda dan kemudian setiap tangan memiliki beberapa jari, dll. Setiap objek dapat memiliki beberapa anak, tetapi hanya satu orang tua. Beberapa tingkat hubungan induk-anak ini membentuk Transform <em>hierarchy</em>. Objek di bagian atas hirarki (yaitu, satu-satunya objek dalam hirarki yang tidak memiliki induk) dikenal sebagai <strong>root</strong>.</p> 
+       <p>Anda dapat membuat Orang tua dengan menyeret GameObject di <strong>Hierarchy View</strong> ke yang lain. Ini akan menciptakan hubungan Parent-Child antara dua GameObjects.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ParentingExample.png" alt="Example of a Parent-Child hierarchy. GameObjects with foldout arrows to the left of their names are parents."> 
+        <figcaption>
+          Contoh hierarki Parent-Child. GameObjects dengan panah lipat ke kiri nama mereka adalah orang tua. 
+        </figcaption> 
+       </figure> 
+       <p>Perhatikan bahwa nilai Transform di Inspektur untuk setiap anak GameObject ditampilkan relatif terhadap nilai Transformasi Parent. Nilai-nilai ini disebut sebagai <strong>local coordinates</strong>. Kembali ke analogi tubuh dan lengan, posisi tubuh Anda dapat bergerak saat Anda berjalan tetapi lengan Anda masih akan melekat pada posisi relatif yang sama. Untuk konstruksi adegan, biasanya cukup untuk bekerja dengan koordinat lokal untuk objek anak tetapi dalam gameplay sering berguna untuk menemukan posisi yang tepat di ruang dunia atau <strong>global coordinates</strong>. API scripting untuk komponen Transform memiliki sifat yang terpisah untuk posisi lokal dan global, rotasi dan skala dan juga memungkinkan Anda untuk mengubah titik antara koordinat lokal dan global.</p> 
+       <h2>Batasan dengan Scaling Non-Uniform</h2> 
+       <p>Penskalaan non-uniform adalah ketika <strong>Scale</strong> dalam Transform memiliki nilai yang berbeda untuk x, y, dan z; misalnya (2, 4, 2). Sebaliknya, penasaran seragam memiliki nilai yang sama untuk x, y, dan z; misalnya (3, 3, 3). Penskalaan non-uniform dapat berguna dalam beberapa kasus tertentu tetapi memperkenalkan beberapa kemungkinan yang tidak terjadi dengan penskalaan seragam: -</p> 
+       <ul> 
+        <li>Komponen tertentu tidak mendukung skala non-uniform. Misalnya, beberapa komponen memiliki elemen melingkar atau bulat yang didefinisikan oleh properti <strong>radius</strong>, di antara mereka <span class="tooltip"><strong>Sphere Collider</strong><span class="tooltiptext">Komponen collider berbentuk sphere yang menangani tabrakan untuk GameObjects seperti bola atau hal-hal lain yang dapat kira-kira perkiraan sebagai bidang untuk tujuan fisika. <a class="tooltipMoreInfoLink" href="class-SphereCollider.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#SphereCollider">Glossary</a></span></span></span>, <span class="tooltip"><strong>Capsule Collider</strong><span class="tooltiptext">Komponen collider berbentuk kapsul yang menangani tabrakan untuk GameObjects seperti barel dan tungkai karakter. <a href="class-CapsuleCollider.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#capsulecollider">Glossary</a></span></span></span>, <strong>Light</strong> dan <span class="tooltip"><strong>Audio Source</strong><span class="tooltiptext">Komponen yang memainkan kembali Klip Audio dalam adegan ke pendengaran audio atau melalui mixer audio. <a href="class-AudioSource.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AudioSource">Glossary</a></span></span></span>. Dalam kasus seperti bentuk melingkar ini tidak akan menjadi elips di bawah scaling non-uniform seperti yang Anda harapkan dan hanya akan tetap melingkar.</li> 
+        <li>Ketika objek anak memiliki orang tua yang berskala non-uniformal dan diputar kerabat kepada orang tua itu, itu mungkin muncul skewed atau “sheared”. Ada komponen yang mendukung penskalaan non-uniform sederhana tetapi tidak berfungsi dengan benar ketika ditabur seperti ini. Misalnya, skewed <span class="tooltip"><strong>Box Collider</strong><span class="tooltiptext">Komponen collider berbentuk kubus yang menangani tabrakan untuk GameObjects seperti dadu dan es batu. <a class="tooltipMoreInfoLink" href="class-BoxCollider.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#boxcollider">Glossary</a></span></span></span> tidak akan sesuai dengan bentuk <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mesh">Glossary</a></span></span></span> yang diberikan secara akurat.</li> 
+        <li>Untuk alasan kinerja, objek anak orang tua berskala non-uniform tidak akan memiliki skalanya secara otomatis diperbarui ketika berputar. Akibatnya, bentuk anak mungkin muncul untuk mengubah tiba-tiba ketika skala akhirnya <em>is</em> diperbarui, mengatakan jika objek anak terurai dari orang tua.</li> 
+       </ul> 
+       <h2>Pentingnya Timbangan</h2> 
+       <p>Skala Transform menentukan perbedaan antara ukuran mesh dalam aplikasi pemodelan Anda dan ukuran jala dalam Unity. Ukuran jala dalam Unity (dan oleh karena itu skala Transform) adalah <em>very</em> penting, terutama selama simulasi fisika. Secara default, <span class="tooltip"><strong>physics engine</strong><span class="tooltiptext">Sebuah sistem yang mensimulasikan aspek sistem fisik sehingga benda dapat mempercepat dengan benar dan dipengaruhi oleh tabrakan, gravitasi dan kekuatan lainnya. <a class="tooltipMoreInfoLink" href="PhysicsSection.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#PhysicsEngine">Glossary</a></span></span></span> menganggap bahwa satu unit di ruang dunia sesuai dengan satu meter. Jika sebuah objek sangat besar, itu bisa muncul jatuh di "geser lambat"; simulasi sebenarnya benar karena efektif, Anda melihat objek yang sangat besar jatuh jarak yang besar.</p> 
+       <p>Ada tiga faktor yang dapat mempengaruhi skala objek Anda:</p> 
+       <ul> 
+        <li>Ukuran mesh Anda dalam aplikasi pemodelan 3D Anda.</li> 
+        <li>Pengaturan <strong>Mesh Scale Factor</strong> pada <strong>Import Settings</strong> objek.</li> 
+        <li>Nilai <strong>Scale</strong> dari Komponen Transform Anda.</li> 
+       </ul> 
+       <p>Idealnya, Anda tidak boleh menyesuaikan <strong>Scale</strong> objek Anda di Komponen Transform. Pilihan terbaik adalah membuat model Anda pada skala real-life sehingga Anda tidak perlu mengubah skala Transform Anda. Pilihan terbaik berikutnya adalah untuk menyesuaikan skala di mana mesh Anda diimpor di <strong>Import Settings</strong> untuk mesh individu Anda. Optimasi tertentu terjadi berdasarkan ukuran impor, dan mengulangi objek yang memiliki nilai skala yang disesuaikan dapat mengurangi kinerja. Untuk informasi lebih lanjut, lihat bagian tentang mengoptimalkan skala pada halaman referensi komponen <a href="class-Rigidbody.html">Rigidbody</a>.</p> 
+       <h2>Tips Bekerja dengan Transforms</h2> 
+       <ul> 
+        <li>Ketika orang tua Transforms, berguna untuk mengatur lokasi orang tua untuk &lt;0,0,0&gt; sebelum menambahkan anak. Ini berarti bahwa koordinat lokal untuk anak akan sama dengan koordinat global membuatnya lebih mudah untuk memastikan Anda memiliki anak dalam posisi yang tepat.</li> 
+        <li>Jika Anda menggunakan <span class="tooltip"><strong>Rigidbodies</strong><span class="tooltiptext">Komponen yang memungkinkan GameObject untuk dipengaruhi oleh gravitasi simulasi dan kekuatan lainnya. <a class="tooltipMoreInfoLink" href="class-Rigidbody.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Rigidbody">Glossary</a></span></span></span> untuk simulasi fisika maka pastikan untuk membaca tentang properti Timbangan di halaman referensi komponen <a href="class-Rigidbody.html">Rigidbody</a>.</li> 
+        <li>Anda dapat mengubah warna kapak Transform (dan elemen UI lainnya) dari preferensi (<strong>Menu: Unity &gt; Preferences</strong> dan kemudian pilih panel <strong>Colors &amp; keys</strong>).</li> 
+        <li>Mengubah Timbangan mempengaruhi posisi perubahan anak. Sebagai contoh menskala orang tua ke (0,0,0) akan memposisikan semua anak di (0,0,0) relatif terhadap orang tua.</li> 
+       </ul> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="GameObjects.html"></a></span> 
+         <div class="tip">
+           GameObjects 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="Components.html"></a></span> 
+         <div class="tip">
+           Pengantar komponen 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

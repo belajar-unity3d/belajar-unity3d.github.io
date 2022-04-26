@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Pengenalan Mesh</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="mesh.html">Meshes</a></li> 
+         <li>Pengenalan jala</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="mesh.html"></a></span> 
+          <div class="tip">
+            Meshes 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="AnatomyofaMesh.html"></a></span> 
+          <div class="tip">
+            Data Mesh 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Pengenalan jala</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>A mesh adalah koleksi data yang menggambarkan bentuk. Dalam Unity, Anda menggunakan jala dengan cara berikut:</p> 
+       <ul> 
+        <li>Dalam grafis, Anda menggunakan jala bersama dengan <span class="tooltip"><a class="tooltipMoreInfoLink" href="Materials.html">materials</a><span class="tooltiptext">Aset yang menentukan bagaimana permukaan harus diberikan. <a href="class-Material.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Material">Glossary</a></span></span></span>; jala menggambarkan bentuk objek yang render GPU, dan bahan menggambarkan penampilan permukaannya.</li> 
+        <li>Secara fisika, Anda dapat menggunakan mesh untuk menentukan bentuk <span class="tooltip"><strong>collider</strong><span class="tooltiptext">Bentuk tak terlihat yang digunakan untuk menangani tabrakan fisik untuk objek. Seorang sari tidak perlu menjadi bentuk yang sama dengan jala objek - perkiraan kasar sering lebih efisien dan tidak dapat dibedakan dalam gameplay. <a class="tooltipMoreInfoLink" href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Collider">Glossary</a></span></span></span>.</li> 
+       </ul> 
+       <p><a name="deformable-meshes"></a></p> 
+       <h2>Deformable meshes</h2> 
+       <p>Selain jaring biasa, Unity juga mendukung mesh yang dapat diuraikan.</p> 
+       <p>Mesh yang dapat diubah menjadi kategori berikut:</p> 
+       <ul> 
+        <li>Mesh yang dikeringkan: Mesh ini bekerja dengan data tambahan yang disebut tulang. Tulang membentuk struktur yang disebut skeleton (juga disebut rig, atau hierarki sendi), dan mesh kulit mengandung data yang memungkinkan untuk deform dalam cara realistis ketika skeleton bergerak. Biasanya Anda menggunakan jaring berkelok-kelok untuk fitur <a href="https://en.wikipedia.org/wiki/Skeletal_animation">animasi kerangka</a> dengan fitur Unity <a href="AnimationSection.html">Animation</a>, tetapi Anda juga dapat menggunakannya dengan <a href="class-Rigidbody.html">komponen kaku</a> untuk menciptakan efek "ragdoll".</li> 
+        <li>Mesh dengan bentuk campuran: Mesh ini mengandung data yang disebut bentuk campuran. Bentuk campuran menggambarkan versi mesh yang cacat menjadi bentuk yang berbeda, yang bersatu antara. Anda menggunakan bentuk campuran untuk <a href="https://en.wikipedia.org/wiki/Morph_target_animation">morph target animasi</a>, yang merupakan teknik umum untuk animasi wajah.</li> 
+        <li>Mesh yang bekerja dengan komponen <a href="class-Cloth.html">Komponen kain</a> untuk simulasi kain realistis.</li> 
+       </ul> 
+       <p><a name="creating-meshes"></a></p> 
+       <h2>Membuat jala</h2> 
+       <p>Anda dapat menambahkan mesh ke proyek Unity dengan cara berikut:</p> 
+       <ul> 
+        <li>Buat mesh sebagai bagian dari program pemodelan 3D, lalu impornya. Unity menciptakan aset mesh sebagai bagian dari hierarki model ketika Anda mengimpor model. Untuk informasi lebih lanjut, lihat <span class="tooltip"><a class="tooltipMoreInfoLink" href="models.html">model</a><span class="tooltiptext">representasi model 3D dari objek, seperti karakter, bangunan, atau sepotong furnitur. <a href="3D-formats.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Model">Glossary</a></span></span></span>.<a href="ImportingModelFiles.html">Model impor</a>.</li> 
+        <li>Buat jala langsung dengan alat in-Editor. Unity memiliki bentuk primitif bawaan seperti bidang dan kapsul yang dapat Anda tempatkan langsung ke dalam <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>. Anda juga dapat menggunakan paket seperti model mesh kustom di Editor.</li> 
+        <li> <a href="GeneratingMeshGeometryProcedurally.html">Buat jala dengan kode</a>, baik di runtime atau di Editor.</li> 
+       </ul> 
+       <p><a name="working-with-meshes"></a></p> 
+       <h2>Bekerja dengan jala</h2> 
+       <p>Unity menyimpan mesh di proyek Anda sebagai <a class="tooltipMoreInfoLink" href="class-Mesh.html">aset mesh</a>, dan mewakili mereka dalam kode C# dengan kelas <span class="tooltip"><a href="../ScriptReference/Mesh.html">Mesh</a><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mesh">Glossary</a></span></span></span>.</p> 
+       <p>Tergantung pada bagaimana Anda menggunakan jala, mereka bekerja dengan komponen yang berbeda:</p> 
+       <ul> 
+        <li>Dalam grafis, Unity renders jaring biasa dengan komponen <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-MeshRenderer.html">Mesh Renderer</a><span class="tooltiptext">Komponen mesh yang mengambil geometri dari Filter Mesh dan render di posisi yang ditentukan oleh komponen Transform objek. <a href="class-MeshRenderer.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#MeshRenderer">Glossary</a></span></span></span>, dan mesh deformable dengan komponen <a href="class-SkinnedMeshRenderer.html">Ms. YANG</a>.</li> 
+        <li>Secara fisika, Unity menggunakan komponen <span class="tooltip"><span class="tooltiptext">Komponen collider bentuk bebas yang menerima referensi jala untuk menentukan bentuk permukaan tabrakannya. <a href="class-MeshCollider.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#MeshCollider">Glossary</a></span></span></span> untuk menentukan bentuk tabrakan.</li> 
+       </ul> 
+       <p>Untuk informasi rinci tentang data yang mengandung jala dan bagaimana Unity mewakili data, lihat <a href="AnatomyofaMesh.html">Data Mesh</a>.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="mesh.html"></a></span> 
+         <div class="tip">
+           Meshes 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="AnatomyofaMesh.html"></a></span> 
+         <div class="tip">
+           Data Mesh 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Kamera dan tekstur kedalaman</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="CamerasOverview.html">Kamera</a></li> 
+         <li>Kamera dan tekstur kedalaman</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="PhysicalCameras.html"></a></span> 
+          <div class="tip">
+            Menggunakan Kamera Fisik 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="CameraTricks.html"></a></span> 
+          <div class="tip">
+            Trik Kamera 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Kamera dan tekstur kedalaman</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Sebuah <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-Camera.html">Kamera</a><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Camera">Glossary</a></span></span></span> dapat menghasilkan kedalaman, kedalaman + normal, atau tekstur vektor gerak. Ini adalah tekstur G-buffer minimalis yang dapat digunakan untuk efek <span class="tooltip"><strong>post-processing</strong><span class="tooltiptext">Proses yang meningkatkan visual produk dengan menerapkan filter dan efek sebelum gambar muncul di layar. Anda dapat menggunakan efek pasca proses untuk mensimulasikan kamera fisik dan sifat film, misalnya Bloom dan Kedalaman Lapangan. <a href="PostProcessingOverview.html">More info</a> <span class="search-words">pemrosesan pos, pasca proses, pasca proses</span><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#post-processing">Glossary</a></span></span></span> atau untuk menerapkan model pencahayaan kustom (misalnya pra-pass cahaya).</p> 
+       <p>Ini sebagian besar digunakan oleh efek; misalnya, <a href="PostProcessingOverview.html">efek pasca proses</a> sering menggunakan informasi kedalaman.</p> 
+       <p>Nilai piksel dalam rentang tekstur kedalaman antara 0 dan 1, dengan distribusi non-linear. Presisi biasanya 32 atau 16 bit, tergantung pada konfigurasi dan platform yang digunakan. Ketika membaca dari Tekstur Kedalaman, nilai presisi tinggi dalam kisaran antara 0 dan 1 dikembalikan. Jika Anda perlu mendapatkan jarak dari Kamera, atau nilai 0–1 linier, menghitung bahwa secara manual menggunakan makro pembantu (lihat di bawah).</p> 
+       <p>Tekstur kedalaman didukung pada sebagian besar perangkat keras modern dan API grafis. Persyaratan khusus tercantum di bawah ini:</p> 
+       <ul> 
+        <li>Direct3D 11+ (Windows), OpenGL 3+ (Mac/Linux), OpenGL ES 3.0+ (iOS), Metal (iOS), dan konsol populer mendukung tekstur kedalaman.</li> 
+        <li>OpenGL ES 2.0 (Android) membutuhkan ekstensi <a href="http://www.khronos.org/registry/gles/extensions/OES/OES_depth_texture.txt">GL_OES_depth_texture</a> untuk hadir.</li> 
+        <li><span class="tooltip"><strong>WebGL</strong><span class="tooltiptext">Login API yang membuat grafis 2D dan 3D di browser web. Opsi build Unity WebGL memungkinkan Unity untuk mempublikasikan konten sebagai program JavaScript yang menggunakan teknologi HTML5 dan WebGL rendering API untuk menjalankan konten Unity di browser web. <a class="tooltipMoreInfoLink" href="webgl-gettingstarted.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#WebGL">Glossary</a></span></span></span> memerlukan ekstensi <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_depth_texture">WebGL_depth_texture</a>.</li> 
+       </ul> 
+       <p>Mode Tekstur kedalaman kamera dapat diaktifkan menggunakan variabel <a href="../ScriptReference/Camera-depthTextureMode.html">Kamera.depthTextureMode</a> dari script. Hal ini juga memungkinkan untuk membangun tekstur yang sama sendiri, menggunakan fitur <a href="SL-ShaderReplacement.html">Penggantian Shader</a>.</p> 
+       <p>Ada tiga mode tekstur kedalaman yang mungkin:</p> 
+       <ul> 
+        <li> <strong>DepthTextureMode.Depth</strong>: tekstur kedalaman.</li> 
+        <li> <strong>DepthTextureMode.DepthNormals</strong>: kedalaman dan ruang pandangan normal dikemas menjadi satu tekstur. Sitemap</li> 
+        <li> <strong>DepthTextureMode.MotionVectors</strong>: gerakan ruang layar per-piksel dari setiap layar texel untuk bingkai saat ini. Dikemas ke dalam tekstur RG16.</li> 
+       </ul> 
+       <p>Ini adalah bendera, sehingga dimungkinkan untuk menentukan kombinasi tekstur di atas.</p> 
+       <h2>Login Tekstur kedalaman</h2> 
+       <p>Ini membangun tekstur kedalaman berukuran layar.</p> 
+       <p>Tekstur kedalaman dirender menggunakan <span class="tooltip"><strong>shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> yang sama digunakan untuk rendering kasang (tipe pass<code>ShadowCaster</code>). Jadi dengan ekstensi, jika naungan tidak mendukung pengecoran bayangan (yaitu tidak ada kasang yang dilewati di naungan atau salah satu fallback), maka benda-benda yang menggunakan naungan itu tidak akan muncul dalam tekstur kedalaman.</p> 
+       <ul> 
+        <li>Buat naungan Anda <a href="SL-Fallback.html">fallback</a> untuk beberapa naungan lain yang memiliki umpan balik bayangan, atau</li> 
+        <li>Jika Anda menggunakan <span class="tooltip"><a class="tooltipMoreInfoLink" href="SL-SurfaceShaders.html">permukaan naungan</a><span class="tooltiptext">Cara merampingkan naungan menulis untuk Pipeline Render Built-in. <a href="SL-SurfaceShaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SurfaceShader">Glossary</a></span></span></span>, tambahkan arahan <code>addshadow</code> akan membuat mereka menghasilkan bayangan yang lewat juga.</li> 
+       </ul> 
+       <p>Perhatikan bahwa hanya objek “opaque” (yang memiliki bahan dan naungan mereka setup untuk menggunakan <a href="SL-SubShaderTags.html">render queue</a> &lt;= 2500) diberikan ke dalam tekstur kedalaman.</p> 
+       <h2>KedalamanTextureMode.DepthNormals tekstur</h2> 
+       <p>Ini membangun tekstur 32 bit berukuran layar (8 bit / saluran), di mana ruang tampilan normal dikodekan ke saluran R &amp; G, dan kedalaman dikodekan dalam saluran B &amp; A. Normal dikodekan menggunakan proyeksi Stereografis, dan kedalaman adalah nilai 16 bit dikemas menjadi dua saluran 8 bit.</p> 
+       <p> <a class="tooltipMoreInfoLink" href="SL-BuiltinIncludes.html"><code>UnityCG.cginc</code> termasuk file</a> memiliki fungsi helper <code>DecodeDepthNormal</code> untuk menurunkan kedalaman dan normal dari nilai <span class="tooltip"><strong>pixel</strong><span class="tooltiptext">Unit terkecil dalam gambar komputer. Ukuran piksel tergantung pada resolusi layar Anda. Pencahayaan pixel dihitung pada setiap piksel layar. <a href="ShadowPerformance.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#pixel">Glossary</a></span></span></span> yang dikodekan. Kedalaman pengembalian adalah dalam kisaran 0..1.</p> 
+       <p>Sebagai contoh tentang cara menggunakan tekstur kedalaman dan normal, silakan merujuk ke <a href="SL-ShaderReplacement.html">Mengganti naungan pada runtime</a> atau <a href="PostProcessing-AmbientOcclusion.html">Ruang Layar Efek Gambar Occlusion Ambient</a>.</p> 
+       <h2>KedalamanTextureMode.MotionVectors tekstur</h2> 
+       <p>Ini membangun tekstur RG16 (16-bit float/channel), di mana gerakan piksel ruang layar dikodekan ke saluran R &amp; G. Gerakan pixel dikodekan dalam ruang UV layar.</p> 
+       <p>Ketika pengambilan dari gerakan tekstur ini dari pixel yang dikodekan dikembalikan dalam rance dari -1...1. Ini akan menjadi UV offset dari bingkai terakhir ke bingkai saat ini.</p> 
+       <h2>Tips &amp; Trik</h2> 
+       <p> <a href="class-Camera.html">Inspektur kamera</a> menunjukkan ketika kamera rendering kedalaman atau tekstur abnormal kedalaman.</p> 
+       <p>Cara tekstur kedalaman yang diminta dari Kamera (<a href="../ScriptReference/Camera-depthTextureMode.html">Kamera.depthTextureMode</a>) mungkin berarti bahwa setelah Anda menonaktifkan efek yang diperlukan, Kamera mungkin masih terus membuat mereka. Jika ada beberapa efek yang ada pada kamera, di mana masing-masing dari mereka membutuhkan tekstur kedalaman, tidak ada cara yang baik untuk secara otomatis menonaktifkan rendering tekstur kedalaman jika Anda menonaktifkan efek individu.</p> 
+       <p>Ketika menerapkan bayangan kompleks atau Efek Gambar, menjaga <a href="SL-PlatformDifferences.html">Perbedaan rendering Antara Platform</a> dalam pikiran. Secara khusus, menggunakan tekstur mendalam dalam Efek Gambar sering membutuhkan penanganan khusus pada Direct3D + Anti-Aliasing.</p> 
+       <p>Dalam beberapa kasus, tekstur kedalaman mungkin datang langsung dari penyangga Z asli. Jika Anda melihat artefak dalam tekstur mendalam Anda, pastikan bahwa naungan yang menggunakannya <strong>do not</strong> menulis ke buffer Z (menggunakan <a href="SL-ZWrite.html">ZWrite Off</a>).</p> 
+       <h2>variabel Shader</h2> 
+       <p>Tekstur kedalaman tersedia untuk pengambilan sampel dalam naungan sebagai sifat naungan global. Dengan menentukan sampler yang disebut <code>_CameraDepthTexture</code>, Anda akan dapat mencicipi tekstur kedalaman utama untuk kamera.</p> 
+       <p> <code>_CameraDepthTexture</code> selalu mengacu pada tekstur kedalaman primer kamera. Dengan kontras, Anda dapat menggunakan <code>_LastCameraDepthTexture</code> untuk merujuk pada tekstur kedalaman terakhir yang diberikan oleh kamera apa pun. Ini bisa berguna misalnya jika Anda membuat tekstur kedalaman setengah resolusi di skrip menggunakan kamera sekunder dan ingin membuatnya tersedia untuk naungan pasca proses.</p> 
+       <p>Tekstur vektor gerak (ketika diaktifkan) tersedia di Shaders sebagai properti Shader global. Dengan menentukan sampler yang disebut '_CameraMotionVectorsTexture' Anda dapat mencicipi Tekstur untuk kamera rendering keriting.</p> 
+       <h2>Di bawah kap</h2> 
+       <p>Tekstur kedalaman dapat datang langsung dari <span class="tooltip"><strong>depth buffer</strong><span class="tooltiptext">Sebuah toko memori yang memegang kedalaman nilai z setiap pixel dalam gambar, di mana nilai z adalah kedalaman untuk setiap piksel yang diberikan dari pesawat proyeksi. <a class="tooltipMoreInfoLink" href="class-RenderTexture.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#depthbuffer">Glossary</a></span></span></span> yang sebenarnya, atau diberikan dalam lulus terpisah, tergantung pada jalur rendering yang digunakan dan perangkat keras. Biasanya ketika menggunakan Deferred Shading atau Legacy Deferred Lighting <span class="tooltip"><strong>rendering paths</strong><span class="tooltiptext">Teknik yang menggunakan pipa render untuk membuat grafik. Memilih jalur rendering yang berbeda mempengaruhi bagaimana pencahayaan dan pembentukan dihitung. Beberapa jalur rendering lebih cocok untuk berbagai platform dan perangkat keras daripada yang lain. <a class="tooltipMoreInfoLink" href="RenderingPaths.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#RenderingPath">Glossary</a></span></span></span>, tekstur kedalaman datang "gratis" karena mereka adalah produk dari G-buffer rendering anyway.</p> 
+       <p>Ketika tekstur KedalamanNormal diberikan dalam lulus terpisah, ini dilakukan melalui <a href="SL-ShaderReplacement.html">Penggantian Shader</a>. Oleh karena itu penting untuk memiliki tag "<strong>RenderType</strong>" yang benar di naungan Anda.</p> 
+       <p>Ketika diaktifkan, tekstur GerakVectors selalu berasal dari lulus render tambahan. Unity akan membuat bergerak <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> menjadi penyangga ini, dan membangun gerakan mereka dari bingkai terakhir ke bingkai saat ini.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="PhysicalCameras.html"></a></span> 
+         <div class="tip">
+           Menggunakan Kamera Fisik 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="CameraTricks.html"></a></span> 
+         <div class="tip">
+           Trik Kamera 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

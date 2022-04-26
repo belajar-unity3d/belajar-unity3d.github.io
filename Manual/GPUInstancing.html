@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: GPU</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="graphics-performance-profiling.html">Kinerja grafis dan profil</a></li> 
+         <li><a href="optimizing-draw-calls.html">Mengoptimalkan panggilan menggambar</a></li> 
+         <li>GPU instancing</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="optimizing-draw-calls.html"></a></span> 
+          <div class="tip">
+            Mengoptimalkan panggilan menggambar 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="gpu-instancing-shader.html"></a></span> 
+          <div class="tip">
+            Menciptakan naungan yang mendukung sikap GPU 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>GPU instancing</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>GPUSicing adalah metode <a class="tooltipMoreInfoLink" href="optimizing-draw-calls.html">draw call optimization</a> yang membuat beberapa salinan <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Mesh">Glossary</a></span></span></span> dengan bahan yang sama dalam panggilan tunggal. Setiap salinan mesh disebut instance. Ini berguna untuk menggambar hal-hal yang muncul beberapa kali dalam <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>, misalnya, pohon atau semak.</p> 
+       <p>GPU baycing membuat jala identik dalam panggilan menggambar yang sama. Untuk menambahkan variasi dan mengurangi munculnya pengulangan, setiap kasus dapat memiliki sifat yang berbeda, seperti <strong>Color</strong> atau <strong>Scale</strong>. Gambar panggilan yang membuat beberapa contoh muncul di <a href="FrameDebugger.html">Bingkai Debugger</a> sebagai <strong>Draw Mesh (instanced)</strong>.</p> 
+       <p><a name="requirements-and-compatibility"></a></p> 
+       <h2>Persyaratan dan kompatibilitas</h2> 
+       <p>Bagian ini mencakup informasi tentang platform, <span class="tooltip"><strong>render pipeline</strong><span class="tooltiptext">Rangkaian operasi yang mengambil isi dari Adegan, dan menampilkannya di layar. Unity memungkinkan Anda memilih dari pipa render yang dibangun sebelumnya, atau menulis sendiri. <a class="tooltipMoreInfoLink" href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span>, dan kompatibilitas SRP Batcher GPU.</p> 
+       <h3>Kompatibilitas platform</h3> 
+       <p>Penjahitan GPU tersedia di setiap platform kecuali <span class="tooltip"><strong>WebGL</strong><span class="tooltiptext">Login API yang membuat grafis 2D dan 3D di browser web. Opsi build Unity WebGL memungkinkan Unity untuk mempublikasikan konten sebagai program JavaScript yang menggunakan teknologi HTML5 dan WebGL rendering API untuk menjalankan konten Unity di browser web. <a class="tooltipMoreInfoLink" href="webgl-gettingstarted.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#WebGL">Glossary</a></span></span></span> 1.0.</p> 
+       <h3>Kompatibilitas pipa Render</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature</strong></th> 
+          <th style="text-align:left;"><strong>Built-in Render Pipeline</strong></th> 
+          <th style="text-align:left;"><strong>Universal Render Pipeline (URP)</strong></th> 
+          <th style="text-align:left;"><strong>High Definition Render Pipeline (HDRP)</strong></th> 
+          <th style="text-align:left;"><strong>Custom Scriptable Render Pipeline (SRP)</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>GPU instancing</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">G (1)</td> 
+          <td style="text-align:left;">G (1)</td> 
+          <td style="text-align:left;">G (1)</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p> <strong>Notes</strong>:</p> 
+       <ol> 
+        <li>Hanya jika naungan tidak kompatibel dengan <a href="SRPBatcher.html">Login Login</a>.</li> 
+       </ol> 
+       <p><a name="srp-batcher"></a></p> 
+       <h3>Login Login</h3> 
+       <p>Penjahitan GPU tidak kompatibel dengan <a class="tooltipMoreInfoLink" href="SRPBatcher.html">Login Login</a>. The SRP Batcher mengambil prioritas atas GPU... Jika sebuah <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> kompatibel dengan SRP Batcher, Unity menggunakan SRP Batcher untuk membuatnya, bukan GPU Suspensioncing. Untuk informasi lebih lanjut tentang prioritas metode optimasi, lihat <a href="optimizing-draw-calls.html#optimization-priority">Mengoptimalkan prioritas</a>.</p> 
+       <p>Jika proyek Anda menggunakan SRP Batcher dan Anda ingin menggunakan GPU Archcing untuk GameObject, Anda dapat melakukan salah satu berikut:</p> 
+       <ul> 
+        <li>Gunakan <a href="../ScriptReference/Graphics.DrawMeshInstanced.html">Grafik.DrawMeshInstanced</a>. API ini memotong penggunaan GameObjects dan menggunakan parameter yang ditentukan untuk langsung menggambar mesh di layar.</li> 
+        <li>Manual menghapus SRP Kompatibilitas batcher. Untuk informasi tentang cara melakukan ini, lihat <a href="SRPBatcher.html#intentionally-removing-compatibility">Secara sengaja menghilangkan kompatibilitas</a>.</li> 
+       </ul> 
+       <h2>Using GPU instancing</h2> 
+       <p>Unity menggunakan GPUlawcing untuk GameObjects yang berbagi mesh dan material yang sama. Misalnya jala dan bahan:</p> 
+       <ul> 
+        <li><span class="tooltip"><a class="tooltipMoreInfoLink" href="Shaders.html">shader</a><span class="tooltiptext">Program yang berjalan di GPU. <a href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Shader">Glossary</a></span></span></span> material harus mendukung GPU rincing. Unity's <a href="shader-StandardShader.html">Standar Shader</a> mendukung GPUlawcing, seperti melakukan semua <span class="tooltip"><a href="SL-SurfaceShaders.html">permukaan naungan</a><span class="tooltiptext">Cara merampingkan naungan menulis untuk Pipeline Render Built-in. <a href="SL-SurfaceShaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SurfaceShader">Glossary</a></span></span></span>. Untuk menambahkan dukungan GPUjahcing ke naungan lain, lihat [Creating shaders yang mendukung GPUSicing (gpu-instancing-shader).</li> 
+        <li>Jaring harus dari salah satu sumber berikut: 
+         <ul> 
+          <li>Komponen <a href="class-MeshRenderer.html">MeshRenderer</a> atau panggilan <a href="../ScriptReference/Graphics.DrawMesh.html">Grafik.DrawMesh</a>. Unity menambahkan jala dari sumber-sumber ini ke daftar dan upaya untuk membuat mereka bersama. Jika GameObject yang merupakan komponen MeshRenderer melekat pada SRP Batcher kompatibel, maka Unity tidak dapat instance yang mesh. Untuk informasi lebih lanjut, lihat <a href="#srp-batcher">Login Kompatibilitas batcher</a>. <br><strong>Note</strong>: Unity tidak mendukung GPU bertatahkan untuk <a href="class-SkinnedMeshRenderer.html">SkinnedMeshRenderers</a>.</li> 
+          <li>Sebuah panggilan <a href="../ScriptReference/Graphics.DrawMeshInstanced.html">Grafik.DrawMeshInstanced</a> atau <a href="../ScriptReference/Graphics.DrawMeshInstancedIndirect.html">Grafik.DrawMeshInstancedIndirect</a>. Metode ini memungkinkan mesh yang sama di beberapa tempat menggunakan naungan yang sama. Unity mengeksekusi setiap panggilan secara terpisah yang berarti tidak bisa mengeluarkan jala dari panggilan yang berbeda bersama.</li> 
+         </ul> </li> 
+       </ul> 
+       <p>Untuk menggunakan GPUrentcing untuk bahan, pilih opsi <strong>Enable GPU Instancing</strong> di <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/enable-gpu-instancing-inspector.png" alt="The Enable GPU Instancing option as it appears in the material Inspector."> 
+        <figcaption>
+          GPU yang Dapat Diaktifkan Opsi penyeimbang karena muncul di Inspektur materi. 
+        </figcaption> 
+       </figure> 
+       <h3>Lighting</h3> 
+       <p>Peredam GPU mendukung <a href="GI-Enlighten.html">Sistem Penerangan Global Baked</a> Unity. Unity Standard Shaders dan naungan permukaan mendukung sistem GPUrincing dan Unity Baked <span class="tooltip"><strong>Global Illumination</strong><span class="tooltiptext">Kelompok teknik yang model pencahayaan langsung dan tidak langsung untuk memberikan hasil pencahayaan yang realistis.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#globalillumination">Glossary</a></span></span></span> secara default.</p> 
+       <p>Setiap instance GPU mendukung pencahayaan global dari salah satu sumber berikut:</p> 
+       <ul> 
+        <li>Jumlah <span class="tooltip"><a class="tooltipMoreInfoLink" href="LightProbes.html">Probe Cahaya</a><span class="tooltiptext">probe cahaya menyimpan informasi tentang bagaimana cahaya melewati ruang di tempat kejadian Anda. Koleksi probe cahaya yang diatur dalam ruang tertentu dapat meningkatkan pencahayaan pada objek bergerak dan pemandangan LOD statis dalam ruang itu. <a href="LightProbes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#LightProbe">Glossary</a></span></span></span>.</li> 
+        <li>Satu <span class="tooltip"><a class="tooltipMoreInfoLink" href="Lightmapping.html">lightmap</a><span class="tooltiptext">Tekstur pra-render yang mengandung efek sumber cahaya pada objek statis di tempat kejadian. Lightmaps dilalui atas geometri adegan untuk menciptakan efek pencahayaan. <a href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Lightmap">Glossary</a></span></span></span>. <br><strong>Note</strong>: Contohnya dapat menggunakan beberapa daerah atlas di lightmap.</li> 
+        <li>Satu komponen <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-LightProbeProxyVolume.html">Volume Proxy Probe Cahaya</a><span class="tooltiptext">Komponen yang memungkinkan Anda untuk menggunakan informasi lebih banyak pencahayaan untuk GameObjects dinamis besar yang tidak dapat menggunakan peta cahaya panggang (misalnya, Sistem Partikel besar atau Mesh Berwarna). <a href="class-LightProbeProxyVolume.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#LightProbeProxyVolume">Glossary</a></span></span></span> (LPPV). <br><strong>Note</strong>: Anda harus bake LPPV untuk volume ruang yang mengandung semua kasus.</li> 
+       </ul> 
+       <p>GPU tenggelam secara otomatis bekerja dengan:</p> 
+       <ul> 
+        <li>Dynamic <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-MeshRenderer.html">Mesh Renderers</a><span class="tooltiptext">Komponen mesh yang mengambil geometri dari Filter Mesh dan render di posisi yang ditentukan oleh komponen Transform objek. <a href="class-MeshRenderer.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#MeshRenderer">Glossary</a></span></span></span> dipengaruhi oleh Probe Cahaya.</li> 
+        <li>Mesh Statis Renderers Anda bake ke tekstur lightmap yang sama. Renderer Mesh statis dalam konteks ini jika termasuk <strong>Contribute GI</strong> dalam <a href="StaticObjects.html">Bendera Editor Statis</a>.</li> 
+       </ul> 
+       <p>Untuk mengaktifkan rendering Probe Cahaya untuk <code>Graphics.DrawMeshInstanced</code>, atur parameter <a href="../ScriptReference/Rendering.LightProbeUsage.html">LightProbeUsage</a> ke <a href="../ScriptReference/Rendering.LightProbeUsage.CustomProvided.html">CustomProvided</a> dan memberikan <a href="../ScriptReference/MaterialPropertyBlock.html">BahanPropertyBlock</a> yang mencakup data Probe. Untuk informasi lebih lanjut dan contoh kode, lihat <a href="../ScriptReference/LightProbes.CalculateInterpolatedLightAndOcclusionProbes.html">LightProbes.CalculateInterpolatedLightAndOcclusionProbes</a>.</p> 
+       <p>Atau, Anda dapat lulus referensi komponen LPPV dan <a href="../ScriptReference/Rendering.LightProbeUsage.UseProxyVolume.html">LightProbeUsage.UseProxyVolume</a> ke <code>Graphics.DrawMeshInstanced</code>. Ketika Anda melakukan ini, semua contoh volume untuk <a href="LightProbes-TechnicalInformation.html">L0 dan L1 band</a> data Probe Cahaya. Jika Anda ingin melengkapi data L2 dan data oklusi, gunakan <code>MaterialPropertyBlock</code>. Untuk informasi lebih lanjut, lihat <a href="LightProbes-TechnicalInformation.html">Probe Cahaya: Informasi teknis</a>.</p> 
+       <p><a name="performance-implications"></a></p> 
+       <h2>Performance implications</h2> 
+       <p>Mesh yang memiliki sejumlah simpul yang rendah tidak dapat diproses secara efisien menggunakan GPU tenggelam karena GPU tidak dapat mendistribusikan pekerjaan dengan cara yang sepenuhnya menggunakan sumber daya GPU. Inefisiensi pemrosesan ini dapat memiliki efek merugikan pada kinerja. Batasan di mana ketidakseimbangan mulai tergantung pada GPU, tetapi sebagai aturan umum, jangan gunakan GPU Suspensioncing untuk jala yang memiliki lebih sedikit dari 256 simpul.</p> 
+       <p>Jika Anda ingin membuat jala dengan sejumlah kecil vertices berkali-kali, praktik terbaik adalah untuk membuat penyangga tunggal yang berisi semua informasi mesh dan gunakan yang menarik jala.</p> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2017–10–24 Login</span></p></li> 
+        <li><p><span class="page-history">Panduan checkbox yang dapat disengaja, DrawMeshInstancedIndirect, #pragma multi-kompile ditambahkan di 5.6</span></p></li> 
+        <li><p><span class="page-history">Shader menghangatkan untuk GPU lancip ditambahkan dalam <span class="search-words">NewIn20173</span></span></p></li> 
+        <li><p><span class="page-history">Global Illumination (GI) dukungan di GPUSicing ditambahkan dalam <span class="search-words">Oktober 2018</span></span></p></li> 
+       </ul> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="optimizing-draw-calls.html"></a></span> 
+         <div class="tip">
+           Mengoptimalkan panggilan menggambar 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="gpu-instancing-shader.html"></a></span> 
+         <div class="tip">
+           Menciptakan naungan yang mendukung sikap GPU 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

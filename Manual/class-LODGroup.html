@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: LOD Group</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="mesh.html">Meshes</a></li> 
+         <li><a href="LevelOfDetail.html">Tingkat Detail (LOD) untuk jala</a></li> 
+         <li>LOD Group</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="LevelOfDetail.html"></a></span> 
+          <div class="tip">
+            Tingkat Detail (LOD) untuk jala 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="importing-lod-meshes.html"></a></span> 
+          <div class="tip">
+            Login Login 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>LOD Group</h1> 
+       <!--BeginSwitchLink--> 
+       <a href="../ScriptReference/LODGroup.html" title="Go to LODGroup page in the Scripting Reference" class="switch-link gray-btn sbtn left">Switch to Scripting</a> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Komponen <strong>LOD Group</strong> mengelola <span class="tooltip"><a class="tooltipMoreInfoLink" href="LevelOfDetail.html">tingkat detail</a><span class="tooltiptext">Teknik <em>Tingkat Detail</em> (LOD) adalah optimasi yang mengurangi jumlah segitiga yang dimiliki Unity untuk membuat GameObject ketika jaraknya dari kamera meningkat. <a href="LevelOfDetail.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#levelofdetail">Glossary</a></span></span></span> (LOD) untuk <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/InspectorLODGroup.png" alt="LOD Group inspector"> 
+        <figcaption>
+          Login Inspektur kelompok 
+        </figcaption> 
+       </figure> 
+       <p>Sitemap Kontrol untuk ruang <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LetterA.png" alt="A">%<a href="#transitions">transisi antara level LOD</a> </p> 
+       <p> <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LetterB.png" alt="B"> <a href="#LODGroup">Login Bar pilihan kelompok</a> untuk beralih antara level LOD dan preview rendering LOD</p> 
+       <p>Sitemap Informasi tentang pengaturan kualitas <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LetterC.png" alt="C">. Pesan ini muncul jika properti <a href="class-QualitySettings.html#LODBias">Lod Bias</a> diatur ke apa pun selain 1.<strong>Lod Bias</strong> property is set to anything other than 1.</p> 
+       <p> <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LetterD.png" alt="D"> <a href="#width">Lebar Transition Fade</a> pengaturan untuk tingkat LOD yang dipilih. Properti ini hanya muncul jika Anda menonaktifkan properti <strong>Animate Cross-fading</strong>: yaitu, ketika Anda memilih untuk mengatur zona transisi dengan lebar bukan waktu.</p> 
+       <p> <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LetterE.png" alt="E"> <strong>Mesh</strong> <a href="#renderers">Renderers</a> set untuk tingkat LOD yang dipilih</p> 
+       <p>Selain ada dua tombol di bagian bawah komponen:</p> 
+       <ul> 
+        <li>Klik <strong>Recalculate Bounds</strong> untuk merekalkan <span class="tooltip"><strong>bounding volume</strong><span class="tooltiptext">Bentuk tertutup mewakili tepi dan wajah sari atau pemicu.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Boundingvolume">Glossary</a></span></span></span> dari semua LOD Mesh GameObjects setelah tingkat LOD baru ditambahkan.</li> 
+        <li>Klik <strong>Recalculate <span class="tooltip"><strong>Lightmap</strong><span class="tooltiptext">A pre-rendered texture that contains the effects of light sources on static objects in the scene. Lightmaps are overlaid on top of scene geometry to create the effect of lighting. <a class="tooltipMoreInfoLink" href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#Lightmap">Glossary</a></span></span></span> Scale</strong> untuk memperbarui properti <a href="class-MeshRenderer.html#Lightmap">Skala di Lightmap</a> pada semua LOD <span class="tooltip"><strong>Mesh Renderers</strong><span class="tooltiptext">Komponen mesh yang mengambil geometri dari Filter Mesh dan render di posisi yang ditentukan oleh komponen Transform objek. <a href="class-MeshRenderer.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#MeshRenderer">Glossary</a></span></span></span>, berdasarkan perubahan yang Anda buat ke batas level LOD.</li> 
+       </ul> 
+       <p><a name="LODGroup"></a></p> 
+       <h2>Login Bar pilihan kelompok</h2> 
+       <p>LOD Group memilih bar mewakili tingkat LOD yang berbeda sebagai kotak berwarna.</p> 
+       <p>Persentase yang muncul di setiap kotak tingkat LOD mewakili ambang di mana tingkat itu menjadi aktif, berdasarkan rasio ketinggian ruang layar GameObject ke ketinggian layar total. Misalnya, jika ambang batas untuk LOD 1 ditetapkan hingga 50%, maka LOD 1 menjadi aktif ketika <span class="tooltip"><strong>camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span> menarik kembali cukup jauh bahwa tinggi GameObject mengisi setengah dari pandangan.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LODGroup-selectionbar.png" alt="LOD Group selection bar"> 
+        <figcaption>
+          Login Bar pilihan kelompok 
+        </figcaption> 
+       </figure> 
+       <p>Sitemap Playhead untuk <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LetterA.png" alt="A">. Anda dapat menggosok ikon kamera kembali dan ke depan untuk menguji tingkat LOD dan transisi mereka. Di bagian bawah playhead Anda dapat melihat persentase saat ini.<a href="#preview">the LOD preview</a>. You can scrub the camera icon back and forth to test the LOD levels and their transitions. At the bottom of the playhead you can see the current percentage. </p> 
+       <p>Sitemap Untuk memilih tingkat, klik pada kotak tingkat. Untuk setiap level LOD, Anda dapat <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LetterB.png" alt="B"> atau <a href="#renderers">pilih Renderer untuk digunakan</a>.<a href="#width">menyesuaikan zona transisi</a>.</p> 
+       <p>Sitemap Untuk menambahkan dan menghapus level LOD dari bilah seleksi, klik kanan kotak level LOD dan kemudian pilih <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LetterC.png" alt="C"> atau <strong>Insert Before</strong> dari menu konteks.<strong>Delete</strong> from the context menu. </p> 
+       <p>Sitemap Kontrol penyesuaian tingkat. Untuk mengubah nilai persentase untuk level LOD, tarik batas kiri dari batas kotak tingkat LOD.<img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LetterD.png" alt="D"> Level adjustment control. To change the percentage value for the LOD level, drag the left border of the LOD level box’s boundary.</p> 
+       <blockquote> 
+        <p> <strong>Note</strong>: Jika properti <a href="class-QualitySettings.html#LODBias">Lod Bias</a> tidak diatur ke 1, posisi Kamera mungkin tidak cocok posisi di mana setiap tingkat LOD benar-benar transisi dari berikutnya. Dalam hal ini, pesan peringatan muncul di bawah bar pilihan.</p> 
+       </blockquote> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LODGroup-BiasWarning.png" alt="Lod Bias warning"> 
+        <figcaption>
+          Lod Bias peringatan 
+        </figcaption> 
+       </figure> 
+       <p><a name="preview"></a></p> 
+       <h2>Mempertinjau transisi LOD</h2> 
+       <p>Tampilan <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> menampilkan pratinjau transisi antara level LOD ketika Anda memindahkan ikon kamera di bar pemilihan LOD Group. Ikon kamera bertindak seperti playhead yang dapat Anda gunakan untuk menggosok kembali dan ke depan untuk mengontrol posisi yang tepat untuk Pratinjau sepanjang bar pemilihan LOD Group. Pratinjau menunjukkan apa kamera akan render di setiap level LOD.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LODGroup-previewing.png" alt="Control transition previews on the LOD Group selection bar"> 
+        <figcaption>
+          Kontrol pratinjau transisi di LOD Group pilihan bar 
+        </figcaption> 
+       </figure> 
+       <p>The LOD Pratinjau playhead menunjukkan posisi yang tepat sebagai persentase sepanjang bar pemilihan LOD Group dari 100% di sebelah kiri ke 0% di kanan. Persentase mewakili rasio tinggi ruang layar GameObject ke ketinggian layar total.</p> 
+       <p>Ketika Anda bergerak melalui tingkat, <span class="tooltip"><strong>Scene view</strong><span class="tooltiptext">Tampilan interaktif ke dunia yang Anda buat. Anda menggunakan Adegan Lihat untuk memilih dan posisi pemandangan, karakter, kamera, lampu, dan semua jenis lain dari Game Object. <a class="tooltipMoreInfoLink" href="UsingTheSceneView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SceneView">Glossary</a></span></span></span> menampilkan kotak yang terikat dari Aset Pohon dan overlay menunjukkan bahwa LOD aktif:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LODGroup-levels.png" alt="Overlays displaying the active LOD levels"> 
+        <figcaption>
+          Overlays menampilkan tingkat LOD aktif 
+        </figcaption> 
+       </figure> 
+       <p>Sitemap Unity hanya menampilkan label LOD ketika GameObject tunggal dipilih. Tidak ditampilkan ketika beberapa GameObjects dipilih.<strong>Note:</strong> Unity only displays the LOD label when a single GameObject is selected. It is not displayed when multiple GameObjects are selected.</p> 
+       <p><a name="renderers"></a></p> 
+       <h2>Login Login</h2> 
+       <p>Ketika Anda memilih kotak level LOD pada bar pemilihan <strong>LOD Group</strong>, panel <strong>Renderers</strong> muncul.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LODGroup-renderers.png" alt="Renderers panel with the Billboard Renderer for LOD 3"> 
+        <figcaption>
+          Renderers panel dengan Billboard Renderer untuk LOD 3 
+        </figcaption> 
+       </figure> 
+       <p>'Renderers' sebenarnya GameObjects yang memegang Mesh untuk level LOD. Biasanya ini adalah anak dari GameObject yang memiliki komponen <strong>LODGroup</strong>.</p> 
+       <p>Untuk mengatur mesh renderer untuk level LOD saat ini, klik kotak <strong>Add</strong> dan pilih GameObject untuk level LOD dari pemilih objek.</p> 
+       <p>Anda dapat memilih GameObject untuk renderer, tetapi jika Anda memilih GameObject yang belum anak, Unity meminta Anda untuk orang tua itu ke GameObject <strong>LODGroup</strong>.</p> 
+       <p><a name="transitions"></a></p> 
+       <h2>Transisi antara level LOD</h2> 
+       <p>transisi halus antara tingkat LOD meningkatkan pengalaman pemain dari permainan Anda. Ketika Kamera bergerak lebih dekat atau jauh, Anda tidak ingin pemain untuk melihat switchover yang jelas (kadang kali disebut <em>popping</em>) dari tingkat LOD saat ini ke depan.</p> 
+       <p>transisi halus terjadi di dalam <em>zona transisi</em>, di mana Unity membuat tingkat LOD saat ini dan berikutnya secara terpisah, dan kemudian melintang mereka bersama-sama.</p> 
+       <p> <em>Cross-fading</em> adalah teknik rendering dua tingkat pada saat yang sama, dengan bobot 1 hingga 0 untuk tingkat LOD <em>current</em> dan 0 hingga 1 untuk tingkat LOD <em>next</em>:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LODGroup-blending.png" alt="Cross-fading between the current LOD level and the next"> 
+        <figcaption>
+          Menyenangkan antara level LOD saat ini dan selanjutnya 
+        </figcaption> 
+       </figure> 
+       <p>Unity biasanya menerapkan cross-fading dengan menggunakan dithering atau transparansi ruang layar. Untuk tingkat LOD terakhir, tidak ada lintasan: tingkat saat ini hanya memudar.</p> 
+       <p>Untuk mengatur transisi halus pada tingkat LOD Anda:</p> 
+       <ol> 
+        <li> <p>Pilih menu drop-down <strong>Fade Mode</strong> dan pilih <strong>Cross Fade</strong>:</p> 
+         <figure> 
+          <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LODGroup-transitions.png" alt="Fade Mode drop-down menu"> 
+          <figcaption>
+            Menu drop-down Mode Fade 
+          </figcaption> 
+         </figure> <p>Sitemap Jika Aset Pohon Anda dibuat dengan <strong>Note:</strong>, pilih mode <a href="https://store.speedtree.com/unity/">SpeedTree</a>. Untuk informasi lebih lanjut, lihat <strong>Speed Tree</strong>.<a href="#SpeedTreeModels">Bekerja dengan Model SpeedTree</a>.</p> </li> 
+        <li> <p>Secara default, opsi <strong>Animate Cross-fading</strong> diaktifkan, berarti bahwa Unity melakukan transisi berbasis waktu. Jika Anda ingin menentukan zona transisi Anda sendiri berdasarkan posisi Kamera, menonaktifkan opsi <strong>Animate Cross-fading</strong> dan mengatur properti <strong>Fade Transition Width</strong>.</p> <p>Untuk informasi lebih lanjut, lihat nilai <a href="#width">Sesuaikan zona transisi</a>.</p> </li> 
+       </ol> 
+       <p><a name="width"></a></p> 
+       <h3>Sesuaikan zona transisi</h3> 
+       <p>Transisi antara dua level LOD dimulai saat rasio tinggi Model melintasi ambang LOD berikutnya. Misalnya, jika ambang LOD 1 ditetapkan pada 60%, transisi antara LOD 0 dan LOD 1 tingkat selalu dimulai segera setelah ketinggian Model adalah 60%. transisi berlangsung untuk jangka waktu singkat:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LODGroup-AnimateCrossFading.png" alt="Animate Cross-fading (by time)"> 
+        <figcaption>
+          Animate Cross-fading (oleh waktu) 
+        </figcaption> 
+       </figure> 
+       <p>Perilaku ini animasi oleh waktu, jadi Anda tidak perlu mengatur properti apa pun setelah Anda mengaktifkan properti <strong>Animate Cross-fading</strong>. Durasi yang tepat dari cross-fade adalah sama untuk setiap level LOD.</p> 
+       <p>Atau, Anda dapat secara manual mendefinisikan zona transisi di setiap level LOD dengan posisinya. Setiap zona dimulai dan berakhir sebelum ambang level LOD berikutnya. Anda menentukan proporsi apa dari setiap tingkat LOD untuk digunakan sebagai zona transisi; yaitu, Anda mengatur berapa jauh sebelum ambang tingkat berikutnya transisi dimulai:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LODGroup-FadeTransitionWidth.png" alt="Fade Transition Width (by position)"> 
+        <figcaption>
+          Fade Transition Lebar (dengan posisi) 
+        </figcaption> 
+       </figure> 
+       <p>Gunakan properti <strong>Fade Transition Width</strong> untuk menentukan zona transisi pada setiap level LOD:</p> 
+       <ol> 
+        <li><p>menonaktifkan opsi <strong>Animate Cross-fading</strong>.</p></li> 
+        <li> <p>Klik pada kotak level LOD tertentu yang ingin Anda set.</p> <p>Properti <strong>Fade Transition Width</strong> muncul di bawah bar pemilihan <strong>LOD Group</strong>.</p> 
+         <figure> 
+          <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LODGroup-width.png" alt="The Fade Transition Width property appears"> 
+          <figcaption>
+            Properti Lebar Transition Fade muncul 
+          </figcaption> 
+         </figure> </li> 
+        <li><p>Mengatur properti <strong>Fade Transition Width</strong> untuk menentukan lebar zona transisi lintas-fade sebagai proporsi (antara 0,0 dan 1.0) dari seluruh level LOD saat ini. Misalnya, tentukan nilai yang lebih kecil untuk menunda timbulnya campuran dan membuat transisi yang lebih cepat.</p></li> 
+       </ol> 
+       <p><a name="SpeedTreeModels"></a></p> 
+       <h3>Bekerja dengan Model SpeedTree</h3> 
+       <p>geometri SpeedTree menyimpan posisi LOD <em>next</em> untuk setiap simpul. Setiap simpul kemudian tahu cara mengganggu posisi LOD saat ini dan posisi LOD berikutnya. Ketika model impor Unity dibuat dalam SpeedTree, secara otomatis mengaturnya ke mode <strong>Speed Tree</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LODGroup-SpeedTreeModels.png" alt="Speed Tree Fade Mode for a SpeedTree Model"> 
+        <figcaption>
+          Mode Fade Pohon Kecepatan untuk Model SpeedTree 
+        </figcaption> 
+       </figure> 
+       <p>Unity hanya perlu membuat geometri LOD saat ini dan memberikan nilai dari 0 hingga 1 untuk menginstruksikan setiap simpul untuk secara bertahap <em>move</em> ke posisi LOD berikutnya. Pada akhir transisi, geometri LOD saat ini dan pertandingan LOD berikutnya sempurna.</p> 
+       <p>Campuran antara dua tingkat LOD dimulai pada 0 dan berakhir pada 1. Setiap titik sepanjang zona ini adalah faktor campuran, yang mewakili bobot antara tingkat LOD saat ini dan tingkat LOD berikutnya:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LODGroup-blend_factor.png" alt="Blending for SpeedTree Models"> 
+        <figcaption>
+          Blending untuk Model SpeedTree 
+        </figcaption> 
+       </figure> 
+       <p>Mode <strong>Speed Tree</strong> menggunakan faktor campuran untuk mencemari posisi simpul antara <strong>Mesh LOD level</strong> saat ini dan tingkat LOD Mesh berikutnya, dan kemudian render geometri pada posisi itu.</p> 
+       <blockquote> 
+        <p>Sitemap Mode <strong>Note:</strong> hanya digunakan untuk campuran antara dua <strong>Speed Tree</strong>: yaitu, ketika tingkat LOD saat ini dan berikutnya memiliki Renderer Mesh. Ketika transisi ke <em>Tingkat LOD Mesh</em> atau ketika memudar sepenuhnya, Unity melakukan campuran gaya <em>Lookbook</em>.<strong>Cross Fade</strong>-style blending. </p> 
+       </blockquote> 
+       <h2>Faktor Blend dalam kode Shader</h2> 
+       <p>Unity tidak memberikan teknik bawaan default untuk mencampur geometri LOD. Anda perlu menerapkan teknik Anda sendiri sesuai dengan jenis permainan Anda dan pipa produksi Aset.</p> 
+       <p>Unity menghitung faktor campuran dari ukuran layar GameObject dan melewatinya ke <span class="tooltip"><strong>shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> Anda dalam variabel <a href="SL-UnityShaderVariables.html#unity_LODFade">unity_LODFade.x seragam</a>. Tergantung pada <strong>Fade Mode</strong> yang Anda pilih, gunakan kata kunci <code>LOD_FADE_PERCENTAGE</code> atau <code>LOD_FADE_CROSSFADE</code> untuk GameObjects rendered dengan fading LOD.</p> 
+       <p>Untuk transisi berbasis waktu (perkiraan), Anda dapat mengatur durasi transisi secara global untuk setiap level LOD dengan anggota <a href="../ScriptReference/LODGroup-crossFadeAnimationDuration.html">LODGroup.crossFadeAnimationDuration</a>.</p> 
+       <p>Untuk informasi tentang konvensi naming LOD, lihat <a href="LevelOfDetail.html">Tingkat Detail</a>.</p> 
+       <p><br></p> 
+       <hr> 
+       <ul> 
+        <li><span class="page-edit">2018–02–08 Sitemap</span></li> 
+       </ul> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="LevelOfDetail.html"></a></span> 
+         <div class="tip">
+           Tingkat Detail (LOD) untuk jala 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="importing-lod-meshes.html"></a></span> 
+         <div class="tip">
+           Login Login 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

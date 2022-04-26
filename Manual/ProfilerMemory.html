@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Modul Profiler Memori</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="analysis.html">Analysis</a></li> 
+         <li><a href="Profiler.html">Profiler</a></li> 
+         <li><a href="ProfilerWindow.html">WordPress.org</a></li> 
+         <li>Modul Profiler Memori</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="ProfilerGPU.html"></a></span> 
+          <div class="tip">
+            Login Database 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="ProfilerPhysics.html"></a></span> 
+          <div class="tip">
+            Modul Profiler Fisika 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Modul Profiler Memori</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Ada dua cara penggunaan memori menganalisis dalam aplikasi Anda di Unity:</p> 
+       <ul> 
+        <li> <strong>Memory</strong> <span class="tooltip"><strong>Profiler</strong><span class="tooltiptext">Jendela yang membantu Anda untuk mengoptimalkan permainan Anda. Ini menunjukkan berapa banyak waktu yang dihabiskan di berbagai bidang permainan Anda. Sebagai contoh, dapat melaporkan persentase waktu yang dihabiskan <strong>rendering</strong>, aimating, atau dalam logika permainan Anda. <a class="tooltipMoreInfoLink" href="Profiler.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profiler">Glossary</a></span></span></span> <strong>module</strong>: Modul Profiler bawaan yang memberi Anda informasi dasar di mana aplikasi Anda menggunakan memori.</li> 
+        <li> <strong>Memory Profiler package</strong>: Paket Unity yang dapat Anda tambahkan ke proyek Anda. Ini menambahkan jendela Profiler Memori tambahan ke Editor Unity, yang kemudian Anda gunakan untuk menganalisis penggunaan memori dalam aplikasi Anda bahkan lebih detail. Anda dapat menyimpan dan membandingkan snapshot untuk menemukan kebocoran memori, atau melihat tata letak memori untuk menemukan masalah fragmentasi memori.</li> 
+       </ul> 
+       <p>Halaman ini mencakup informasi pada modul Profiler Memori bawaan. Untuk informasi lebih lanjut tentang paket profiler Memori, lihat .</p> 
+       <p>Modul Memory Profileer memvisualisasikan kontra yang mewakili total memori yang dialokasikan dalam aplikasi Anda. Anda dapat menggunakan modul memori untuk melihat informasi seperti jumlah benda yang dimuat, dan memori yang mereka ambil dalam total per kategori. Anda juga dapat melihat jumlah bingkai <a href="performance-garbage-collector.html">Alokasi GC</a> per Profiler.</p> 
+       <h2>Profil memori di Editor</h2> 
+       <p>Ketika Anda menprofilkan aplikasi Anda di Editor, daripada membangun dan memprofilkan aplikasi Anda pada perangkat target, data profil dalam modul Memory Profileer lebih besar dari ketika Anda menjalankan aplikasi Anda di platform rilis. Ini karena Editor Unity menggunakan objek spesifik yang mengambil memori, dan jendela Editor itu sendiri menggunakan memori ekstra.</p> 
+       <p>Juga, karena Unity tidak dapat secara bersih memisahkan memori bahwa Profiler sendiri mengambil dari memori mode Play, memori bahwa penggunaan Profiler ditampilkan di jendela Profiler. Untuk mengingatkan Anda tentang ini, tampilan peringatan di bagian atas rincian modul Memory Profileer pane setiap kali Anda memiliki target Profiler ditetapkan ke <strong>Play Mode</strong> atau <strong>Editor</strong>. Untuk jumlah yang lebih tepat dan penggunaan memori untuk aplikasi Anda, Anda harus memberi profil aplikasi Anda pada perangkat target dan sistem operasi Anda berniat untuk dijalankan. Untuk informasi lebih lanjut, lihat dokumentasi pada <a href="profiler-profiling-applications.html">Profil aplikasi Anda</a>.</p> 
+       <h2>Kategori grafik</h2> 
+       <p>Modul Memory Profileer dibagi menjadi kategori yang menampilkan informasi rinci di mana aplikasi Anda menghabiskan memori. Anda juga dapat mengklik legenda berwarna kategori untuk memotong tampilannya.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Category</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Total Allocated</strong></td> 
+          <td style="text-align:left;">Total memori aplikasi Anda telah digunakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Texture Memory</strong></td> 
+          <td style="text-align:left;">Berapa banyak memori <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-TextureImporter.html">Textures</a><span class="tooltiptext">Gambar yang digunakan ketika membuat elemen GameObject, Sprite, atau UI. Tekstur sering diterapkan pada permukaan mesh untuk memberikan detail visual. <a href="class-TextureImporter.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#texture">Glossary</a></span></span></span> dalam aplikasi Anda telah digunakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a class="tooltipMoreInfoLink" href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span> Memory</strong></td> 
+          <td style="text-align:left;">Berapa banyak memori <a href="class-Mesh.html">Meshes</a> dalam aplikasi Anda telah digunakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Material Count</strong></td> 
+          <td style="text-align:left;">Jumlah instance <span class="tooltip"><a class="tooltipMoreInfoLink" href="Materials.html">Material</a><span class="tooltiptext">Aset yang menentukan bagaimana permukaan harus diberikan. <a href="class-Material.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Material">Glossary</a></span></span></span> dalam aplikasi Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Object Count</strong></td> 
+          <td style="text-align:left;">Jumlah instance objek asli dalam aplikasi Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>GC Used Memory</strong></td> 
+          <td style="text-align:left;">Jumlah memori <a href="performance-managed-memory.html#managed-heap">GC heap</a> telah digunakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>GC Allocated in Frame</strong></td> 
+          <td style="text-align:left;">Jumlah memori yang dialokasikan per bingkai pada heap GC.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Detail modul pane</h2> 
+       <p>Ada dua pandangan yang tersedia di panel detail modul, terletak di bagian bawah jendela Profiler:</p> 
+       <ul> 
+        <li>Sitemap Menampilkan ikhtisar tingkat tinggi dari statistik memori per bingkai<strong>Simple:</strong> Displays a high level overview of the memory statistics per frame</li> 
+        <li>Sitemap Tangkap snapshot memori yang berisi lebih detail tentang memori yang benda-benda asli yang digunakan, termasuk referensi asli kepada mereka, dan subsistem yang berbeda Unity.<strong>Detailed:</strong> Captures a memory snapshot which contains more details on the memory that native objects used, including native references to them, and Unity’s different subsystems.</li> 
+       </ul> 
+       <p>Untuk mengubah tampilan, pilih dari dropdown di sebelah kiri atas pane detail modul.</p> 
+       <h3>Tampilan sederhana</h3> 
+       <p>Tampilan sederhana menampilkan ikhtisar bagaimana Unity menggunakan memori secara real-time pada dasar per-frame. Ini memecah memori total yang digunakan aplikasi Anda menjadi beberapa kategori utama. Nilai <strong>Total</strong> didasarkan pada Counter Profiler Memori yang Digunakan Sistem, yang menunjukkan berapa banyak laporan sistem operasi (OS) seperti yang digunakan oleh aplikasi Anda.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/profiler-memory-simple-view.png" alt="The Simple view with some Profiler data loaded"> 
+        <figcaption>
+          Tampilan sederhana dengan beberapa data Profiler dimuat 
+        </figcaption> 
+       </figure> 
+       <p>Unity menetapkan beberapa kolam memori selain alokasi untuk menghindari meminta sistem operasi untuk memori terlalu sering. Modul Profiler menampilkan berapa banyak cadangan Unity memori, dan berapa banyak memori Unity yang digunakan pada saat pengambilan Profiler.</p> 
+       <p>Tampilan sederhana menampilkan data yang dikumpulkan dalam <strong>System Used Memory</strong> <span class="tooltip"><span class="tooltiptext">Ditempatkan dalam kode dengan ProfilerCounter API untuk melacak metrik, seperti jumlah musuh yang ditidur dalam permainan Anda. <br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profilercounter">Glossary</a></span></span></span>. Ini menunjukkan berapa banyak memori sistem operasi (OS) laporan sebagai digunakan oleh aplikasi dan sesuai dengan nilai <strong>Total</strong> dari bar <strong>Total Committed Memory</strong> dan bar <strong>Total Memory Breakdown</strong>.</p> 
+       <p>Pada platform yang mendukung mendapatkan total ukuran memori aplikasi dari sistem operasi, <strong>System Memory Usage</strong> lebih dari 0 dan adalah ukuran yang sama dalam manajer tugas.</p> 
+       <p>Tabel referensi berikut menjelaskan statistik yang tersedia dalam tampilan Sederhana, ditambah counter profiler yang sesuai, dan ketersediaan dalam membangun rilis. Informasi ini juga tersedia melalui<a href="../ScriptReference/Unity.Profiling.ProfilerRecorder.html">ProfilerRecorder API</a> dan di<a href="profiler-module-editor.html">Profiler Modul Editor</a> sehingga Anda dapat menambahkannya ke modul Profiler kustom.</p> 
+       <p><a name="markers"></a></p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+          <th style="text-align:left;"><strong>Corresponding Profiler counter</strong></th> 
+          <th style="text-align:left;"><strong>Available in Release Players?</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Normalized</strong></td> 
+          <td style="text-align:left;">Aktifkan pengaturan ini untuk mengukur grafik <strong>Total Committed Memory</strong> dan <strong>Total Memory Breakdown</strong> untuk penggunaan memori dari bingkai yang dipilih. Jika Anda menonaktifkan pengaturan ini, skala grafik ke total memori yang digunakan dalam rentang bingkai. Pengaturan ini dapat membantu Anda melihat berapa jumlah total atau relatif dari perubahan memori dari bingkai ke bingkai</td> 
+          <td style="text-align:left;">N/A</td> 
+          <td style="text-align:left;">N/A</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Total Committed Memory</strong></td> 
+          <td style="text-align:left;">Panjang Total Committed Memory bar menunjukkan jumlah total memori yang sistem Unity Memory Manager dilacak, berapa banyak yang digunakan, dan berapa banyak memori tidak dilacak melalui sistem ini.</td> 
+          <td style="text-align:left;">Sistem Memori yang Digunakan</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Memori yang dilacak (dalam penggunaan / dilangsungkan)</td> 
+          <td style="text-align:left;">Menunjukkan jumlah total memori yang digunakan Unity dan trek (<strong>in use</strong>), dan jumlah memori yang dimiliki Unity untuk tujuan pelacakan dan alokasi kolam (<strong>Reserved</strong>).</td> 
+          <td style="text-align:left;">Total Digunakan Memori <br><br>Total 0 produk untuk Memory</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Memori yang tidak dilacak</td> 
+          <td style="text-align:left;">Menunjukkan jumlah total memori yang digunakan Unity tetapi tidak menyadari. Beberapa contoh memori yang tidak dilacak adalah: <br><br>- Memori dialokasikan melalui plug-ins asli atau beberapa driver <br>- Mono atau IL2CPP jenis metadata <br>- Memori yang dapat dieksekusi kode dan DLL menggunakan <br><br> Penyedia platform asli mungkin memiliki informasi lebih lanjut tentang beberapa jumlah memori yang tidak dilacak ini.</td> 
+          <td style="text-align:left;">N/A</td> 
+          <td style="text-align:left;">N/A</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Total Memory Breakdown</strong></td> 
+          <td style="text-align:left;">Menampilkan jumlah total yang sama sebagai bar <strong>Total Committed Memory</strong> tetapi memecahnya ke beberapa kategori tingkat tinggi, berdasarkan subsistem Unity mengalokasikan memori untuk. <br><br> Tidak semua sistem memori menggunakan pool atau membedakan antara memori yang digunakan dan dicadangkan. Mereka yang menampilkan dua angka, yang digunakan dan jumlah memori yang disediakan. Jika jumlah yang digunakan tidak berbagi unit yang sama (B, MB, GB) sebagai jumlah yang disediakan, Unity menampilkan unit, jika tidak dihilangkan.</td> 
+          <td style="text-align:left;">Sistem Memori yang Digunakan</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Dikelola Heap (dalam penggunaan / dilangsungkan)</td> 
+          <td style="text-align:left;">Ukuran heap yang digunakan dan ukuran heap total yang menggunakan kode yang dikelola. Memori ini adalah <a href="performance-garbage-collector.html">sampah yang dikumpulkan</a>.</td> 
+          <td style="text-align:left;">GC Digunakan Memori <br><br>GC Sitemap</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Grafik &amp; Grafik Login</td> 
+          <td style="text-align:left;">Perkiraan jumlah memori driver yang digunakan pada Tekstur, target render, Shaders, dan data Mesh.</td> 
+          <td style="text-align:left;">Gfx Digunakan Memori<br><br>Gfx Sitemap</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Audio</td> 
+          <td style="text-align:left;">Perkiraan penggunaan memori sistem Audio.</td> 
+          <td style="text-align:left;">Audio Digunakan Memori<br><br>Audio Sitemap</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Video</td> 
+          <td style="text-align:left;">Perkiraan penggunaan memori sistem Video.</td> 
+          <td style="text-align:left;">Video Digunakan Memori<br><br>Video Sitemap</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Other</td> 
+          <td style="text-align:left;">Menampilkan memori asli yang trek Unity, tetapi tidak dilaporkan di bawah counter tertentu. <br><br> Untuk mendapatkan informasi lebih lanjut tentang makeup dari kategori ini atau lainnya, ambil snapshot di <a href="#detailed-view">Tampilan terperinci</a> atau dengan paket Memory Profileer. <br><br><strong>Important:</strong> Kategori lain tidak langsung peta ke kelompok lain dalam tampilan <strong>Detailed</strong>. Dalam pandangan ini, <strong>Other</strong> mengandung sisa memori asli yang tidak digunakan untuk sisi GPU memori grafis, Profiler, Audio, atau memori Video.</td> 
+          <td style="text-align:left;">N/A</td> 
+          <td style="text-align:left;">N/A</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Profiler</td> 
+          <td style="text-align:left;">Memori yang menggunakan fungsi Profileer dan cadangan dari sistem.</td> 
+          <td style="text-align:left;">Profiler Memori<br><br>Profiler Sitemap</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Objects stats</strong></td> 
+          <td style="text-align:left;">Menampilkan jumlah kasus objek dari jenis Aset yang umumnya mengambil persentase tinggi memori (Tekstil, Mesh, Bahan, Klip Animasi), bersama dengan ukuran terakumulasi mereka dalam memori (Assets, GameObjects, objek Adegan). <br><br><strong>Note:</strong> Tekstur dan Memori Mesh tidak peta langsung ke <strong>Graphics &amp; Graphics</strong> Driver stat dalam pandangan <strong>Total Memory Breakdown</strong>. Ini karena beberapa memori itu mungkin juga jatuh ke dalam kategori <strong>Other</strong> dari Total Memory Breakdown bar.</td> 
+          <td style="text-align:left;">Hitungan objek</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Textures</td> 
+          <td style="text-align:left;">Jumlah total tekstur yang dimuat dan memori yang mereka gunakan.</td> 
+          <td style="text-align:left;">Tekstur Count<br><br>Texture Login</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Meshes</td> 
+          <td style="text-align:left;">Jumlah total mesh yang dimuat dan memori yang mereka gunakan.</td> 
+          <td style="text-align:left;">Hitung Mesh<br><br>Mesh Memory</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Materials</td> 
+          <td style="text-align:left;">Jumlah total bahan dimuat dan memori yang mereka gunakan.</td> 
+          <td style="text-align:left;">Bahan Count<br><br>Material Login</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Animasi Klip</td> 
+          <td style="text-align:left;">Jumlah total Animasi yang dimuat dan memori yang mereka gunakan.</td> 
+          <td style="text-align:left;">AnimasiClip Count<br><br>AnimationClip Login</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Assets</td> 
+          <td style="text-align:left;">Jumlah total aset yang dimuat.</td> 
+          <td style="text-align:left;">Jumlah Aset</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Objek Permainan</td> 
+          <td style="text-align:left;">Jumlah total instance <span class="tooltip"><a class="tooltipMoreInfoLink" href="../ScriptReference/GameObject.html">GameObject</a><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#GameObject">Glossary</a></span></span></span> pada <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>.</td> 
+          <td style="text-align:left;">Hitungan GameObject</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Objek Adegan</td> 
+          <td style="text-align:left;">Jumlah total <code>UnityEngine.Objects</code> dinamis. Jumlah ini termasuk Hitungan GameObject, ditambah jumlah total komponen, dan semuanya yang bukan aset di tempat kejadian.</td> 
+          <td style="text-align:left;">Adegan Objek Count</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">GC dialokasikan dalam bingkai</td> 
+          <td style="text-align:left;">Menampilkan jumlah alokasi yang dikelola dalam bingkai yang dipilih, dan ukuran total mereka di byte.</td> 
+          <td style="text-align:left;">GC Alokasi Dalam Bingkai Count<br><br>GC Sitemap</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>Ketersediaan dalam Pemain</h3> 
+       <p>Anda dapat menggunakan <a href="../ScriptReference/Unity.Profiling.ProfilerRecorder.html">ProfilerRecorder API</a> untuk mengakses kontra modul Memory Profileer di Pemain. Contoh berikut mengandung skrip sederhana yang mengumpulkan <strong>Total Reserved Memory</strong>, <strong>GC Reserved Memory</strong> dan metrik <strong>System Used Memory</strong>, dan menampilkan mereka sebagai <a href="../ScriptReference/GUI.TextAreaGUI.TextArea.html">Login Login</a>. Informasi modul Memory Profileer milik <a href="../ScriptReference/Unity.Profiling.ProfilerCategory.Memory.html">ProfilerCategory. Login</a> <span class="tooltip"><strong>Profiler category</strong><span class="tooltiptext">Mengidentifikasi data beban kerja untuk subsistem Unity (misalnya, rendering, Scripting dan kategori Animasi). Unity menerapkan pengkodean warna untuk kategori untuk secara visual membedakan antara jenis data di jendela <strong>Profiler</strong>.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profilercategory">Glossary</a></span></span></span>.</p> 
+       <pre><code class="language-csharp">using System.Text;
+using Unity.Profiling;
+using UnityEngine;
+
+public class MemoryStatsScript : MonoBehaviour
+{
+    string statsText;
+    ProfilerRecorder totalReservedMemoryRecorder;
+    ProfilerRecorder gcReservedMemoryRecorder;
+    ProfilerRecorder systemUsedMemoryRecorder;
+
+    void OnEnable()
+    {
+        totalReservedMemoryRecorder = ProfilerRecorder.StartNew(ProfilerCategory.Memory, "Total Reserved Memory");
+        gcReservedMemoryRecorder = ProfilerRecorder.StartNew(ProfilerCategory.Memory, "GC Reserved Memory");
+        systemUsedMemoryRecorder = ProfilerRecorder.StartNew(ProfilerCategory.Memory, "System Used Memory");
+    }
+
+    void OnDisable()
+    {
+        totalReservedMemoryRecorder.Dispose();
+        gcReservedMemoryRecorder.Dispose();
+        systemUsedMemoryRecorder.Dispose();
+    }
+
+    void Update()
+    {
+        var sb = new StringBuilder(500);
+        if (totalReservedMemoryRecorder.Valid)
+            sb.AppendLine($"Total Reserved Memory: {totalReservedMemoryRecorder.LastValue}");
+        if (gcReservedMemoryRecorder.Valid)
+            sb.AppendLine($"GC Reserved Memory: {gcReservedMemoryRecorder.LastValue}");
+        if (systemUsedMemoryRecorder.Valid)
+            sb.AppendLine($"System Used Memory: {systemUsedMemoryRecorder.LastValue}");
+        statsText = sb.ToString();
+    }
+
+    void OnGUI()
+    {
+        GUI.TextArea(new Rect(10, 30, 250, 50), statsText);
+    }
+}
+</code></pre> 
+       <p>screenshot berikut menunjukkan hasil dari menambahkan skrip ke .</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/profiler-tanks-memory-overlay.png" alt="Tanks! tutorial with the overlaid memory information"> 
+        <figcaption>
+          Login tutorial dengan informasi memori overlaid 
+        </figcaption> 
+       </figure> 
+       <p>Informasi ini tersedia di Release Players, seperti penghitung tingkat tinggi lainnya di tabel di atas. Jika Anda ingin melihat kontra memori yang dipilih dalam modul kustom di jendela Profiler, gunakan <a href="profiler-module-editor.html">Modul Editor</a> untuk mengkonfigurasi grafik.</p> 
+       <p><a name="detailed-view"></a></p> 
+       <h3>Tampilan terperinci</h3> 
+       <p>Tampilan terperinci memberikan snapshot dari state saat ini aplikasi Anda. Pilih tombol <strong>Take Sample</strong> untuk menangkap penggunaan memori rinci untuk target saat ini. Dibutuhkan waktu Profiler untuk mendapatkan data ini, sehingga tampilan terperinci tidak memberikan rincian waktu nyata. Setelah Profiler mengambil sampel, jendela Profiler menampilkan tampilan daftar di mana Anda dapat menjelajahi penggunaan memori aplikasi Anda secara lebih rinci.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/profiler-memory-detailed-view.png" alt="The Detailed memory module view"> 
+        <figcaption>
+          Tampilan modul memori terperinci 
+        </figcaption> 
+       </figure> 
+       <p>Aktifkan pengaturan <strong>Gather Object References</strong> di bagian atas detail modul pane untuk mengumpulkan informasi tentang apa yang merujuk objek pada saat snapshot. Profiler menampilkan informasi ini di pane kanan jendela.</p> 
+       <p>Tampilan daftar membagi objek yang menggunakan memori ke dalam kategori berikut:</p> 
+       <ul> 
+        <li>Sitemap Objek yang bukan Aset, GameObjects, atau komponen. Ini termasuk informasi seperti penggunaan Unity memori untuk sistem yang berbeda.<strong>Other:</strong> Objects that are neither Assets, GameObjects, or components. This includes information such as the memory Unity uses for different systems.</li> 
+        <li>Sitemap Objek ditandai sebagai <strong>Not Saved:</strong> Objects marked as <a href="../ScriptReference/HideFlags.html">DontSave</a> </li> 
+        <li>Sumber daya Editor Unity <strong>Builtin Resources:</strong><span class="tooltip"><strong>Shaders</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> atau sumber daya default Unity, seperti <a href="class-GraphicsSettings.html#Always">Selalu Termasuk Shaders</a> Anda telah ditambahkan ke daftar dari pengaturan Grafik.</li> 
+        <li>Sitemap Aset yang dirujuk dari pengguna atau kode asli.<strong>Assets:</strong> Assets referenced from user or native code.</li> 
+        <li>Sitemap Objek dan komponen terpasang.<strong>Scene Memory:</strong> Objects and attached components.</li> 
+       </ul> 
+       <p>Ketika Anda mengklik GameObject di Aset atau daftar Memori Adegan, Unity menyorotinya di Proyek atau <span class="tooltip"><strong>Scene view</strong><span class="tooltiptext">Tampilan interaktif ke dunia yang Anda buat. Anda menggunakan Adegan Lihat untuk memilih dan posisi pemandangan, karakter, kamera, lampu, dan semua jenis lain dari Game Object. <a class="tooltipMoreInfoLink" href="UsingTheSceneView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SceneView">Glossary</a></span></span></span>.</p> 
+       <p>Sitemap Dalam kategori lain, memori yang dilaporkan di bawah memori <strong>Note:</strong> dibaca. Sistem operasi mungkin membuang halaman ini sesuai kebutuhan dan kemudian memuat ulang mereka dari sistem file. Ini menghasilkan penggunaan memori yang lebih rendah, dan tidak langsung berkontribusi pada keputusan sistem operasi untuk menutup aplikasi Anda jika menggunakan terlalu banyak memori. Beberapa halaman ini juga dapat dibagikan dengan aplikasi lain yang menggunakan framework yang sama.<code>System.ExecutableAndDlls</code> is read-only memory. The operating system might discard these pages as needed and later reload them from the file system. This generates lower memory usage, and doesn’t directly contribute to the operating system’s decision to close your application if it uses too much memory. Some of these pages might also be shared with other applications that are using the same frameworks.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="ProfilerGPU.html"></a></span> 
+         <div class="tip">
+           Login Database 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="ProfilerPhysics.html"></a></span> 
+         <div class="tip">
+           Modul Profiler Fisika 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

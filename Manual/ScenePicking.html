@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Pilih dan pilih GameObjects</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="UsingTheEditor.html">Antarmuka unity</a></li> 
+         <li><a href="UsingTheSceneView.html">Tampilan adegan</a></li> 
+         <li>Pilih dan pilih GameObjects</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="SceneViewNavigation.html"></a></span> 
+          <div class="tip">
+            Adegan melihat navigasi 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="overlays.html"></a></span> 
+          <div class="tip">
+            Overlays 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Pilih dan pilih GameObjects</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Anda dapat memilih satu <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#GameObject">Glossary</a></span></span></span> di <span class="tooltip"><a href="UsingTheSceneView.html">Tampilan adegan</a><span class="tooltiptext">Tampilan interaktif ke dunia yang Anda buat. Anda menggunakan Adegan Lihat untuk memilih dan posisi pemandangan, karakter, kamera, lampu, dan semua jenis lain dari Game Object. <a href="UsingTheSceneView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SceneView">Glossary</a></span></span></span> atau dari <a href="Hierarchy.html">Jendela Hierarchy</a>. Anda juga dapat memilih lebih dari satu GameObject pada waktu.</p> 
+       <p>Unity menyoroti GameObjects yang dipilih dan anak-anak mereka dalam pandangan Adegan. Secara default, pilihan warna garis besar berwarna oranye, dan warna garis anak berwarna biru. Anda juga dapat memilih untuk menyoroti kabel GameObjects yang dipilih dalam warna yang berbeda. Anda dapat mengubah semua warna menyorot garis besar ini dari Preferensi Unity (<strong>Unity &gt; Preferences</strong> pada macOS atau <strong>Edit &gt; Preferences</strong> pada Windows).</p> 
+       <p>Untuk informasi lebih lanjut tentang visualisasi pilihan outline dan wireframe, lihat dokumentasi pada <a href="GizmosMenu.html">Menu di Gizmos</a>.</p> 
+       <h2>Pilih GameObjects</h2> 
+       <p>Untuk memilih GameObject tunggal, pilih salah satu metode ini:</p> 
+       <ul> 
+        <li> <p>Klik padanya di <a href="UsingTheSceneView.html">Tampilan adegan</a>. Jika Anda berulang kali klik di ruang bersama antara overlapping GameObjects, siklus seleksi antara mereka.</p> <p><em>or</em></p> </li> 
+        <li><p>Klik nama di <a href="Hierarchy.html">Jendela Hierarchy</a>.</p></li> 
+       </ul> 
+       <p>Untuk memilih atau memilih beberapa GameObjects memilih salah satu metode ini:</p> 
+       <ul> 
+        <li> <p>Seret persegi panjang di beberapa GameObjects. Unity memilih apa pun yang jatuh di dalam kotak terikat ini.</p> <p><em>or</em></p> </li> 
+        <li> <p>Tahan kunci <strong>Shift</strong> sambil mengklik GameObjects di <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>. Anda juga dapat menggunakan tombol <strong>Ctrl</strong> (Windows) atau <strong>Command</strong> (macOS) untuk menambahkan atau menghapus GameObjects dari pilihan.</p> <p>Sitemap Ketika sesuatu di Editor membutuhkan GameObject yang dipilih tunggal untuk melakukan aksi, itu terlihat untuk objek "Active". Misalnya, Unity harus memutuskan GameObject mana yang digunakan sebagai pivot untuk mengubah alat sementara dalam mode Pivot. Secara default, Unity mempertimbangkan GameObject pertama yang Anda pilih menjadi objek "Aktif". Dan setiap kali Anda beralih + klik pada salah satu dari beberapa GameObjects yang dipilih, Anda mengubah yang salah satu dari mereka aktif. Ketika GameObject aktif dalam pandangan Adegan, Unity tidak menampilkan kuas yang terlihat yang aktif. Namun, Anda dapat melihat GameObject yang aktif dalam pandangan Adegan ketika Anda berulang kali Pergeseran + klik di <strong>Note:</strong> dengan beberapa objek yang dipilih.<a href="PositioningGameObjects.html#GizmoHandlePositions">Modus</a> with multiple objects selected.</p> </li> 
+       </ul> 
+       <p>Namun, jika Anda bekerja dengan Adegan besar yang mengandung banyak item Adegan (seperti GameObjects, benda Terrain, Kamera, dan Lampu), memilih beberapa objek bisa sangat rumit. Untuk membantu Anda memilih hanya item yang Anda inginkan, Anda dapat memblokir beberapa objek yang dipilih, menggunakan kontrol pengambilan adegan.</p> 
+       <h2>Adegan memilih kontrol</h2> 
+       <p>Anda dapat beralih Adegan memilih kontrol dan off untuk menandai item mana yang dapat dipilih ketika Anda bekerja di Editor. Secara default, semua item yang dapat dipilih, tetapi Anda dapat memilih item Adegan yang ditambahkan ke pilihan ketika Anda mengkliknya. Misalnya, jika Anda bekerja di Adegan yang besar dengan lebih dari 10.000 benda, Anda dapat memblokir PermainanObjects tertentu dari yang dipilih untuk mencegah pengeditan yang tidak disengaja.</p> 
+       <p>Setelah Anda menandai item yang tidak dapat dipick, Unity terus membuat mereka meskipun Anda tidak bisa lagi memilih atau mengeditnya dalam tampilan Adegan. Penjemputan negara hanya dalam Editor dan hanya untuk pengguna di Proyek di mana itu ditetapkan. Mengubah keadaan pick tidak “dirty” Adegan (yaitu, dihitung sebagai modifikasi).</p> 
+       <p>Kontrol picking adegan sangat mirip dengan kontrol <a href="SceneVisibility.html">Kesimpulan adegan</a>.</p> 
+       <h3>Datasheet</h3> 
+       <p>Anda mengontrol Adegan pickability untuk GameObjects individu dari <a href="Hierarchy.html">Jendela Hierarchy</a>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/scene-picking-icons-hierarchy.png" alt="Every GameObject has a Scene pickability icon/toggle"> 
+        <figcaption>
+          Setiap GameObject memiliki ikon pickability adegan / toggle 
+        </figcaption> 
+       </figure> 
+       <p>Login Adegan pickability:</p> 
+       <ul> 
+        <li> <p>Klik ikon pemilih GameObject di jendela <a href="Hierarchy.html">Hierarchy</a> untuk beralih antara memungkinkan dan menonaktifkan memilih GameObject dan anak-anaknya.</p> <p>Penjemputan untuk GameObject dan anak-anaknya mempengaruhi semua anak GameObjects, dari "target" GameObject semua jalan ke bagian bawah hierarki.</p> </li> 
+        <li> <p> <strong>Alt</strong> + Klik ikon pickability GameObject di jendela Hierarchy untuk beralih antara memungkinkan dan menonaktifkan memilih GameObject hanya.</p> <p>Penjemputan untuk satu GameObject tidak mempengaruhi anak-anaknya. Mereka mempertahankan status kemampuan memilih apa pun yang sebelumnya.</p> </li> 
+       </ul> 
+       <p>Karena Anda dapat beralih kejemputan untuk seluruh cabang atau GameObject tunggal, Anda dapat berakhir dengan GameObjects yang dapat dipilih, tetapi memiliki anak-anak atau orang tua yang tidak dapat Anda pilih. Untuk membantu Anda melacak apa yang terjadi, perubahan ikon penjemputan untuk menunjukkan setiap status GameObject.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/scene-picking-icons-ovw.png" alt="Unity only selects pickable items when you draw a selection bounding box in the Scene view"> 
+        <figcaption>
+          Unity hanya memilih item yang dapat dipilih ketika Anda menggambar pilihan kotak yang terikat dalam tampilan adegan 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"></th> 
+          <th style="text-align:left;"></th> 
+          <th style="text-align:left;"></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>A</strong></td> 
+          <td style="text-align:left;"><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ScenePickingPickableUnpickableChildren.png" alt=""></td> 
+          <td style="text-align:left;">Anda dapat memilih GameObject, tetapi Anda tidak dapat memilih beberapa anak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>B</strong></td> 
+          <td style="text-align:left;"><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ScenePickingUnpickablePickableChildren.png" alt=""></td> 
+          <td style="text-align:left;">Anda tidak dapat memilih GameObject, tetapi Anda dapat memilih beberapa anak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>C</strong></td> 
+          <td style="text-align:left;"><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ScenePickingUnpickable.png" alt=""></td> 
+          <td style="text-align:left;">Anda tidak dapat memilih GameObject atau anak-anaknya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>D</strong></td> 
+          <td style="text-align:left;"><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ScenePickingPickable.png" alt=""></td> 
+          <td style="text-align:left;">Anda dapat memilih GameObject dan anak-anaknya. Ikon ini hanya muncul ketika Anda menginjak GameObject.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Setiap Adegan mengambil perubahan yang Anda buat di jendela Hierarchy terus-menerus. Unity re-applies mereka setiap kali Anda menggunakan <strong>Select All</strong> atau <strong>Deselect All</strong>, menutup dan membuka kembali adegan, dan sebagainya.</p> 
+       <hr> 
+       <ul> 
+        <li><span class="page-history">Adegan Memilih ditambahkan dalam <span class="search-words">NewIn20193</span></span></li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="SceneViewNavigation.html"></a></span> 
+         <div class="tip">
+           Adegan melihat navigasi 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="overlays.html"></a></span> 
+         <div class="tip">
+           Overlays 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

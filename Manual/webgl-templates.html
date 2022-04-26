@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Template WebGL</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="platforms" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Unity User Manual 2022.1 (beta)</a></li> 
+         <li><a href="PlatformSpecific.html">Pengembangan platform</a></li> 
+         <li><a href="webgl.html">WebGL</a></li> 
+         <li><a href="webgl-building-distribution.html">Membangun dan mendistribusikan proyek WebGL</a></li> 
+         <li>WebGL template</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="webgl-distributionsize-codestripping.html"></a></span> 
+          <div class="tip">
+            Ukuran distribusi dan pengupasan kode 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="webgl-canvas-size.html"></a></span> 
+          <div class="tip">
+            Konfigurasikan ukuran WebGL Canvas 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>WebGL template</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Sitemap Untuk menggunakan fitur template di <strong>Important:</strong>, Anda perlu pengetahuan sebelumnya tentang konsep JavaScript dan terminologi.<span class="tooltip"><strong>WebGL</strong><span class="tooltiptext">Login API yang membuat grafis 2D dan 3D di browser web. Opsi build Unity WebGL memungkinkan Unity untuk mempublikasikan konten sebagai program JavaScript yang menggunakan teknologi HTML5 dan WebGL rendering API untuk menjalankan konten Unity di browser web. <a class="tooltipMoreInfoLink" href="webgl-gettingstarted.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#WebGL">Glossary</a></span></span></span>, you need prior knowledge of JavaScript concepts and terminology.</p> 
+       <p>Ketika Anda membangun proyek WebGL, Unity menyematkan Pemain di halaman HTML seperti browser dapat membukanya. Templat WebGL adalah pengaturan konfigurasi yang memungkinkan Anda mengontrol tampilan halaman HTML ini, sehingga Anda dapat: menguji, menunjukkan, dan pratinjau aplikasi WebGL Anda di browser.</p> 
+       <p>Untuk mengakses template WebGL:</p> 
+       <ol> 
+        <li>Pergi ke <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-PlayerSettings.html">Pengaturan pemain</a><span class="tooltiptext">Pengaturan yang memungkinkan Anda mengatur berbagai pilihan khusus pemain untuk permainan akhir yang dibangun oleh Unity. <a href="class-PlayerSettings.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#PlayerSettings">Glossary</a></span></span></span> (menu: <strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Player</strong>), dan mengatur pengaturan spesifik platform ke WebGL.</li> 
+        <li>Buka <strong>Resolution and Presentation</strong>.</li> 
+       </ol> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/WebGLResolutionandPresentationWindow.png" alt="Image of Player Resolution and Presentation window. "> 
+        <figcaption>
+          Gambar dari jendela Resolusi dan Presentasi Pemain. 
+        </figcaption> 
+       </figure> 
+       <p>Secara default, pengaturan WebGL Template memiliki opsi berikut:</p> 
+       <ul> 
+        <li> <strong>Default</strong>: Halaman putih dengan bar pemuatan di kanvas abu-abu.</li> 
+        <li> <strong>Minimal</strong>: Templat WebGL minimal dengan hanya kode boilerplate yang diperlukan untuk menjalankan konten WebGL.</li> 
+        <li>Sitemap A <strong>PWA:</strong> termasuk file manifestasi web dan kode pekerja layanan.<span class="tooltip"><strong>Progressive Web App</strong><span class="tooltiptext">Aplikasi perangkat lunak yang disampaikan melalui web. Ini menggunakan fitur browser tertentu untuk membuat pengalaman pengguna di par dengan aplikasi asli. <a class="tooltipMoreInfoLink" href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ProgressiveWebApp">Glossary</a></span></span></span> including a web manifest file and service worker code.</li> 
+       </ul> 
+       <p>Halaman HTML built-in ini berguna untuk menguji dan menunjukkan Pemain minimal.</p> 
+       <p>Anda juga dapat menggunakan JavaScript untuk membangun dan menyediakan template WebGL Anda sendiri untuk menghosting Pemain. Ini berguna untuk tujuan produksi, sehingga Anda dapat melihat pratinjau Pemain yang dihosting di halaman di mana itu akhirnya akan digunakan. Misalnya, jika konten Unity Player berinteraksi dengan elemen lain di halaman melalui antarmuka panggilan eksternal, Anda harus mengujinya dengan halaman yang berisi elemen berinteraksi.</p> 
+       <h2>Tambahkan template WebGL</h2> 
+       <p>Untuk menambahkan template kustom ke proyek Anda, arahkan ke folder <code>Assets</code> Proyek Anda dan buat folder yang disebut <code>WebGLTemplates</code>. Setiap template adalah subfolder dalam folder <code>WebGLTemplates</code>. Setiap subfolder template berisi file <code>index.html</code> bersama dengan sumber daya lain yang diperlukan halaman, seperti gambar atau stylesheet.</p> 
+       <p>Cara termudah untuk membuat template WebGL kustom baru adalah membuat salinan template bawaan atau minimal. Ini disimpan dalam subfolder yang sesuai di bawah <code>&lt;Unity Installation&gt;/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/</code>. Setiap Proyek Unity mencakup ini secara default. Salin satu dan letakkan di folder <code>Project/Assets/WebGLTemplates</code> Anda sendiri, dan nama kembali ke sesuatu yang berarti sehingga Anda dapat mengidentifikasi template Anda nanti.</p> 
+       <p>Templat di folder <code>WebGLTemplates</code> Proyek Anda muncul dalam pengaturan Template WebGL Unity Player. Nama template sama dengan foldernya. Untuk memberikan opsi ini gambar thumbnail untuk referensi mudah, tambahkan gambar 128x128-piksel ke folder template dan nama <code>thumbnail.png</code>.</p> 
+       <h2>variabel template, makro, dan sekian kondisional</h2> 
+       <p>Selama proses build, file template pra-proses Unity dan mengevaluasi semua makro dan arahan kondisi termasuk dalam file-file tersebut. Sebagai bagian dari proses ini, penemuan Unity dan mengganti semua deklarasi makro dengan nilai-nilai persediaan Editor. Unity secara otomatis pra-proses semua .html, .php, .css, .js dan .json file di folder template.</p> 
+       <h3>Variabel praprosesor internal</h3> 
+       <p>Variabel preprocessor internal berikut mengacu pada data dalam Proyek, dan menetapkan nilai untuk mereka pada membangun waktu sesuai dengan nilai-nilai persediaan Editor. JavaScript makro dan directives kondisional dapat menggunakan variabel preprocessor internal ini.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Variable</strong></th> 
+          <th style="text-align:left;"><strong>Type</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">COMPANY_NAME</td> 
+          <td style="text-align:left;">String</td> 
+          <td style="text-align:left;">Nama Perusahaan didefinisikan dalam Pengaturan Pemain.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Catalog</td> 
+          <td style="text-align:left;">String</td> 
+          <td style="text-align:left;">Nama Produk yang didefinisikan dalam Pengaturan Pemain.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">PRODUK_VERSI</td> 
+          <td style="text-align:left;">String</td> 
+          <td style="text-align:left;">Versi yang didefinisikan dalam Pengaturan Pemain.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">WIDTH</td> 
+          <td style="text-align:left;">Integer</td> 
+          <td style="text-align:left;">Standar Canvas Lebar didefinisikan dalam Pengaturan Pemain &gt; Resolusi dan Presentasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">HEIGHT</td> 
+          <td style="text-align:left;">Integer</td> 
+          <td style="text-align:left;">Tinggi Kanvas Default di Pengaturan Pemain &gt; Resolusi dan Presentasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">SPLASH_SCREEN_STYLE</td> 
+          <td style="text-align:left;">String</td> 
+          <td style="text-align:left;">Ini diatur ke nilai "Dark" ketika Pengaturan Pemain Gaya Splash &gt; Login Gambar diatur ke Light di Dark, jika tidak diatur ke nilai "Light".</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">BACKGROUND_COLOR</td> 
+          <td style="text-align:left;">String</td> 
+          <td style="text-align:left;">Mewakili Warna Latar Belakang didefinisikan dalam bentuk triplet hex.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">UNITY_VERSI</td> 
+          <td style="text-align:left;">String</td> 
+          <td style="text-align:left;">Versi Unity.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">DEVELOPMENT_PLAYER</td> 
+          <td style="text-align:left;">Boolean</td> 
+          <td style="text-align:left;">Ini diatur untuk benar jika opsi <span class="tooltip"><strong>Development Build</strong><span class="tooltiptext">Membangun pengembangan termasuk simbol debug dan memungkinkan Profiler. <a class="tooltipMoreInfoLink" href="UnityCloudBuildDevelopmentBuilds.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#DevelopmentBuild">Glossary</a></span></span></span> diaktifkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">DECOMPRESSION_FALLBACK</td> 
+          <td style="text-align:left;">String</td> 
+          <td style="text-align:left;">Ini diatur untuk "Gzip" atau "Brotli", tergantung pada metode <span class="tooltip"><strong>compression</strong><span class="tooltiptext">Metode menyimpan data yang mengurangi jumlah ruang penyimpanan yang dibutuhkan. <a href="class-TextureImporterOverride.html">Kompresi Tekstur</a>, <a href="class-AnimationClip.html#AssetProperties">Kompresi Animasi</a>, <a href="class-AudioClip.html">Kompresi Audio</a>, <a href="ReducingFilesize.html">Membangun Kompresi</a>.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#compression">Glossary</a></span></span></span> digunakan dan yang depresi disertakan dalam build. Jika tidak termasuk, variabel diatur ke string kosong.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">INITIAL_MEMORY</td> 
+          <td style="text-align:left;">Integer</td> 
+          <td style="text-align:left;">Ukuran awal dari heap memori WASM di megabytes (MB).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">USE_WASM</td> 
+          <td style="text-align:left;">Boolean</td> 
+          <td style="text-align:left;">Ini diatur untuk benar jika build saat ini adalah build WebAssembly.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">USE_THREADS</td> 
+          <td style="text-align:left;">Boolean</td> 
+          <td style="text-align:left;">Ini diatur untuk benar jika build saat ini menggunakan benang.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Facebook Twitter Google Plus Pinterest Email</td> 
+          <td style="text-align:left;">Boolean</td> 
+          <td style="text-align:left;">Ini diatur untuk benar jika build saat ini mendukung API grafis WebGL1.0.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">USE_WEBGL_2_0</td> 
+          <td style="text-align:left;">Boolean</td> 
+          <td style="text-align:left;">Ini diatur untuk benar jika build saat ini mendukung API grafis WebGL2.0.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">USE_DATA_CACHING</td> 
+          <td style="text-align:left;">Boolean</td> 
+          <td style="text-align:left;">Ini diatur untuk benar jika build saat ini menggunakan caching diindeksDB untuk file yang diunduh.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">LOADER_FILENAME</td> 
+          <td style="text-align:left;">String</td> 
+          <td style="text-align:left;">Ini diatur ke nama file skrip build loader.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">DATA_FILENAME</td> 
+          <td style="text-align:left;">String</td> 
+          <td style="text-align:left;">Ini diatur ke nama file dari file data utama.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">FRAMEWORK_FILENAME</td> 
+          <td style="text-align:left;">String</td> 
+          <td style="text-align:left;">Ini diatur ke nama file skrip kerangka build.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Artikelcode_FILENAME</td> 
+          <td style="text-align:left;">String</td> 
+          <td style="text-align:left;">Ini diatur ke nama file modul WebAssembly ketika build saat ini adalah build WebAssembly, jika tidak diatur ke nama file modul <code>asm.js</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">MEMORY_FILENAME</td> 
+          <td style="text-align:left;">String</td> 
+          <td style="text-align:left;">Ini diatur ke nama file dari file memori ketika memori disimpan dalam file eksternal, jika tidak diatur ke string kosong.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">SYMBOLS_FILENAME</td> 
+          <td style="text-align:left;">String</td> 
+          <td style="text-align:left;">Ini diatur ke nama file dari file JSON yang mengandung simbol debug ketika build saat ini menggunakan simbol debug, jika tidak diatur ke string kosong.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">BACKGROUND_FILENAME</td> 
+          <td style="text-align:left;">String</td> 
+          <td style="text-align:left;">Ini diatur ke nama file gambar latar belakang ketika gambar latar belakang dipilih dalam Pengaturan Pemain &gt; Login Gambar, jika tidak diatur ke string kosong.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>JavaScript macros</h2> 
+       <p>JavaScript macro adalah blok kode JavaScript dalam file template, dikelilingi oleh tiga set kurungan keriting. Kode JavaScript ini dapat menggunakan variabel preprocessor internal yang tercantum di atas. Variabel ini ditugaskan pada membangun waktu sesuai dengan nilai-nilai persediaan Editor. Selama build, preprocessor mengevaluasi semua makro dan menggantinya dengan output variabel.</p> 
+       <p>Anda dapat menggunakan makro JavaScript untuk nilai preprocess yang disediakan oleh Editor. makro-makro ini dapat menjadi kompleks seperti yang Anda sukai. Mereka dapat menyertakan beberapa operator, loop, fungsi, dan konstruksi JavaScript lainnya.</p> 
+       <p>Garis contoh berikut adalah dari file <code>index.html</code> yang digunakan dalam template default:</p> 
+       <p><code>&lt;div id="unity-build-title"&gt;{{{ PRODUCT_NAME }}}&lt;/div&gt;</code></p> 
+       <p>Jika nilai <strong>Product Name</strong> dalam Pengaturan Pemain diatur ke "My WebGL Game", variabel preprocessor internal PRODUK_ NAMA memiliki nilai “My WebGL Game”. Dalam file output <code>index.html</code>, garis muncul sebagai:</p> 
+       <p><code>&lt;div id="unity-build-title"&gt;My WebGL Game&lt;/div&gt;</code></p> 
+       <p>Di bawah ini adalah contoh yang lebih kompleks dari file template <code>index.html</code> yang sama:</p> 
+       <p><code>canvas.style.background = "url('" + buildUrl + "/{{{ BACKGROUND_FILENAME.replace(/'/g, '%27') }}}') center / cover";</code></p> 
+       <p>Jika folder build target disebut <code>Let’s try WebGL</code>, dan gambar latar belakang dipilih dalam Pengaturan Pemain, variabel preprocessor internal BACKGROUND_FILENAME memiliki nilai "Let mencoba WebGL.jpg". Dalam file output <code>index.html</code>, perubahan garis menjadi:</p> 
+       <p><code>canvas.style.background = "url('" + buildUrl + "/Let%27s try WebGL.jpg') center / cover";</code></p> 
+       <h2>Politik</h2> 
+       <p>Directives bersyarat <strong>#if</strong>, <strong>#else</strong>, dan kontrol <strong>#endif</strong> apakah Unity mencakup bagian spesifik dari file yang telah diproses dalam file output, atau membuangnya untuk membangun saat ini.</p> 
+       <p>Kode yang dimulai dengan arahan <strong>#if</strong> dan berakhir dengan arahan <strong>#endif</strong> disebut kelompok kondisional. Kelompok bersyarat juga dapat mencakup arahan <strong>#else</strong>. Unity mengevaluasi ekspresi yang ditulis setelah <strong>#if</strong> sebagai ekspresi JavaScript. Jika ekspresi ini memiliki nilai yang benar (yaitu, nilai yang diterjemahkan ke benar ketika dievaluasi dalam konteks Boolean) Unity menjaga kelompok garis segera mengikuti petunjuk <strong>#if</strong> dalam file output. Jika ekspresi <strong>#if</strong> palsu, dan arahan <strong>#else</strong> disertakan dalam kelompok kondisional, Unity menjaga kelompok garis segera mengikuti arahan <strong>#else</strong> dalam output. Contoh kelompok kondisional adalah sebagai berikut:</p> 
+       <pre><code class="lang-js">#if EXPRESSION
+  // this block is included in the output if EXPRESSION has a truthy value
+#else
+  // this block is included in the output otherwise
+#endif
+</code></pre> 
+       <p>Mengevaluasi ekspresi JavaScript dapat mencakup kurung, operator logika dan konstruksi JavaScript lainnya. Directives bersyarat dapat bersarang.</p> 
+       <h2>variabel pengguna kustom</h2> 
+       <p>Ketika Anda memilih template WebGL, menyatukan template dan mencari makro JavaScript dan arahan kondisional. Variabel JavaScript diperlakukan sebagai variabel pengguna kustom jika memenuhi semua kriteria berikut:</p> 
+       <ul> 
+        <li>Mereka digunakan dalam makro JavaScript dan arahan kondisional.</li> 
+        <li>Mereka tidak dinyatakan dalam kode template.</li> 
+        <li>Mereka tidak variabel preprocessor internal.</li> 
+       </ul> 
+       <p>Unity secara otomatis menambahkan variabel pengguna kustom ini ke bagian <strong>Resolution and Presentation</strong> di jendela <strong>Player Settings</strong>.</p> 
+       <p>Sebagai contoh, jika Anda ingin mengontrol judul halaman <code>index.html</code> yang dihasilkan langsung dari jendela <strong>Player Settings</strong>, Anda harus memodifikasi garis <code>&amp;lt;title&amp;gt;</code> dari <code>index.html</code> dalam template kustom Anda, seperti ini: <code> &lt;title&gt;{{{ PAGE_TITLE }}}&lt;/title&gt; </code> Setelah Anda melakukan ini, pilih ulang template kustom Anda. Ini membuat template lagi, dan Anda harus menemukan lapangan <strong>Page Title</strong> di bagian <strong>Resolution and Presentation</strong> &gt; <strong>WebGL Template</strong> dari <strong>Player Settings window</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/WebGLResolutionandPresentationCustomTemplate.png" alt="Image of Resolution and Presentation window with custom template"> 
+        <figcaption>
+          Gambar jendela Resolusi dan Presentasi dengan template kustom 
+        </figcaption> 
+       </figure> 
+       <p>Ketika Anda memasukkan teks ke dalam bidang ini dan membangun Anda Proyek, PAGE_ variabel kustom TITLE digunakan dalam makro template secara otomatis menjadi teks di bidang <strong>Page Title</strong>.</p> 
+       <p>Jika Anda ingin menggunakan variabel integer atau float kustom di makro Anda, gunakan fungsi JavaScript <code>parseInt()</code> atau <code>parseFloat()</code> di makro Anda untuk preprocess string nilai yang disediakan oleh Editor. Ini karena variabel pengguna kustom selalu ditugaskan nilai string.</p> 
+       <p> <strong>Note</strong>: Karakter underscore dalam tampilan nama variabel sebagai ruang di dalam bidang untuk meningkatkan kemampuan membaca.</p> 
+       <h3>Struktur file index.html</h3> 
+       <p><code>index.html</code> mengandung kode yang diperlukan untuk memuat build dan harus menyertakan berikut:</p> 
+       <ul> 
+        <li>Elemen <code>&lt;canvas&gt;</code>. Waktu runtime unity menggunakan elemen <code>&lt;canvas&gt;</code> untuk membuat aplikasi.</li> 
+        <li>Kode JavaScript untuk mengunduh build loader. Contoh:</li> 
+       </ul> 
+       <pre><code class="lang-js">var buildUrl = "Build";
+var loaderUrl = buildUrl + "/{{{ LOADER_FILENAME }}}";
+var script = document.createElement("script");
+script.src = loaderUrl;
+script.onload = () =&gt; {
+  // code for instantiating the build
+};
+document.body.appendChild(script);`
+</code></pre> 
+       <p>Dalam contoh ini, <code>{{{ LOADER_FILENAME }}}</code> secara otomatis diselesaikan oleh preprocessor template ketika build dihasilkan.</p> 
+       <p>Atau, Anda dapat mengunduh build loader menggunakan tag script, misalnya: <code>lang-js &lt;script src="Build/{{{ LOADER_FILENAME }}}"&gt;&lt;/script&gt; </code> </p> 
+       <ul> 
+        <li>Kode JavaScript untuk mengulangi build. Unity builds sesaat menggunakan fungsi <code>createUnityInstance()</code>, yang didefinisikan dalam skrip build loader.</li> 
+       </ul> 
+       <h2>Fungsi instansi: createUnityInstance()</h2> 
+       <p>Fungsi <code>createUnityInstance()</code> menciptakan contoh baru konten Anda. Anda dapat menggunakannya seperti ini: <code> createUnityInstance(canvas, config, onProgress).then(onSuccess).catch(onError); </code> </p> 
+       <p>Fungsi ini mengembalikan objek Promise, di mana:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Object</th> 
+          <th style="text-align:left;">Use</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>canvas</code></td> 
+          <td style="text-align:left;">Waktu runtime unity menggunakan objek <code>canvas</code> untuk membuat permainan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>config</code></td> 
+          <td style="text-align:left;">Objek <code>config</code> mengandung konfigurasi build, seperti URL kode dan data, nama produk dan perusahaan, dan versi. Untuk informasi lebih lanjut tentang definisi konfigurasi, lihat bagian <a href="#build_configuration">Membangun Konfigurasi</a> di halaman ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>onProgress(progress) {...}</code></td> 
+          <td style="text-align:left;">WebGL loader menyebut objek callback <code>onProgress</code> setiap kali pembaruan kemajuan unduh. argumen <code>progress</code> yang datang dengan callback <code>onProgress</code> menentukan kemajuan pemuatan sebagai nilai antara 0,0 dan 1.0.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>onSuccess(unityInstance) {...}</code></td> 
+          <td style="text-align:left;">Penelepon <code>onSuccess</code> disebut setelah bangunan telah berhasil sesaat. Objek instance Unity yang dibuat disediakan sebagai argumen. Objek ini dapat digunakan untuk interaksi dengan build.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>onError(message) {...}</code></td> 
+          <td style="text-align:left;">Callback onError disebut jika kesalahan terjadi selama membangun instansi. Pesan kesalahan disediakan sebagai argumen.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Fungsi <code>createUnityInstance()</code> didefinisikan dalam skrip build loader dan spesifik untuk membangun yang sesaat. Oleh karena itu, jika Anda menanamkan dua atau lebih membangun dalam dokumen HTML yang sama, pastikan bahwa fungsi <code>createUnityInstance()</code> disebut dari callback <code>onload</code> dari skrip build loader yang sesuai. Untuk informasi lebih lanjut tentang Unity WebGL Loader, lihat <a href="webgl-building.html">Membangun dan Menjalankan Proyek WebGL</a>.</p> 
+       <h2>Membangun konfigurasi <a name="build_configuration"></a> </h2> 
+       <p>Objek konfigurasi berisi konfigurasi build, yang terdiri dari URL kode dan data, nama produk, nama perusahaan, dan versi. Anda dapat mendefinisikannya menggunakan kode berikut:</p> 
+       <pre><code class="lang-js">var buildUrl = "Build";
+var config = {
+  dataUrl: buildUrl + "/{{{ DATA_FILENAME }}}",
+  frameworkUrl: buildUrl + "/{{{ FRAMEWORK_FILENAME }}}",
+  codeUrl: buildUrl + "/{{{ CODE_FILENAME }}}",
+#if MEMORY_FILENAME
+  memoryUrl: buildUrl + "/{{{ MEMORY_FILENAME }}}",
+#endif
+#if SYMBOLS_FILENAME
+  symbolsUrl: buildUrl + "/{{{ SYMBOLS_FILENAME }}}",
+#endif
+  streamingAssetsUrl: "StreamingAssets",
+  companyName: "{{{ COMPANY_NAME }}}",
+  productName: "{{{ PRODUCT_NAME }}}",
+  productVersion: "{{{ PRODUCT_VERSION }}}",
+};
+</code></pre> 
+       <p>Dalam contoh di atas, URL folder build disimpan sebagai variabel terpisah yang disebut <code>buildUrl</code>. Ini berguna dalam kasus di mana Anda tidak tahu hubungan antara halaman yang timbul dan membangun folder di server hosting. Ini memungkinkan Anda untuk menggunakan ulang kode embedding di dokumen HTML lain. Contoh ketika menggunakan ini adalah jika Anda memindahkan folder <code>Build</code> ke lokasi lain di server Anda. Anda dapat menyesuaikan nilai variabel <code>buildUrl</code> pada halaman embedding, dan Anda dapat menggunakan kode embedding yang sama. Ini juga berlaku untuk folder <code>StreamingAssets</code> (<code>streamingAssetsUrl</code>).</p> 
+       <h2>Membangun interaksi</h2> 
+       <p>Setelah build berhasil disaatkan, penelepon handler fulfilment dari objek Promise menerima objek instance Unity yang baru diciptakan sebagai argumen. Untuk berinteraksi dengan build, sebut metode berikut dari instance Unity:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Method</th> 
+          <th style="text-align:left;">Use</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>unityInstance.SetFullscreen(fullscreen)</code></td> 
+          <td style="text-align:left;">Metode <code>SetFullscreen</code> toggles mode layar penuh. Metode ini tidak mengembalikan nilai. Login Mode layar penuh diaktifkan ketika argumen <br> memiliki nilai 1. * Mode layar penuh dinonaktifkan ketika argumen <code>fullscreen</code> memiliki nilai 0.<code>fullscreen</code> argument has a value of 0.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>unityInstance.SendMessage(objectName, methodName, value)</code></td> 
+          <td style="text-align:left;">Metode SendMesssage mengirim pesan ke GameObjects. Metode ini tidak mengembalikan nilai. <br>- <strong>objectName</strong> adalah nama objek di Adegan Anda. <br> - <strong>methodName</strong> adalah nama metode di script, saat ini melekat pada objek itu. <br>- <strong>value</strong> bisa menjadi string, angka, atau bisa kosong.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>unityInstance.Quit().then(onQuit)</code></td> 
+          <td style="text-align:left;">Metode <code>Quit()</code> dapat digunakan untuk menghentikan runtime dan membersihkan memori yang digunakan oleh instance Unity. Metode ini mengembalikan objek Promise. <br> - <strong>onQuit</strong> callback disebut setelah build runtime telah berhenti.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <!-- area:platforms --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="webgl-distributionsize-codestripping.html"></a></span> 
+         <div class="tip">
+           Ukuran distribusi dan pengupasan kode 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="webgl-canvas-size.html"></a></span> 
+         <div class="tip">
+           Konfigurasikan ukuran WebGL Canvas 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

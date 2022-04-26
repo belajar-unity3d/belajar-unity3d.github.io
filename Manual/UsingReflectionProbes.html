@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Menggunakan Probe Reflection</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Unity User Manual 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="LightingOverview.html">Lighting</a></li> 
+         <li><a href="ReflectionProbes.html">Refleksi Probe</a></li> 
+         <li>Menggunakan Probe Reflection</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="RefProbeTypes.html"></a></span> 
+          <div class="tip">
+            Jenis Probe Reflection 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="AdvancedRefProbe.html"></a></span> 
+          <div class="tip">
+            Fitur Probe Reflection Lanjutan 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Menggunakan Probe Reflection</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <h2>Probe Reflection default</h2> 
+       <p>Unity mencakup manajer khusus — SkyManager — untuk memastikan bahwa pencahayaan lingkungan mempengaruhi <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> Anda secara default. SkyManager secara otomatis menghasilkan <a href="../ScriptReference/RenderSettings-ambientProbe.html">ambient probe</a> dan untuk menangkap pencahayaan lingkungan.</p> 
+       <p>Untuk menonaktifkan kontribusi lingkungan dalam hasil pencahayaan untuk adegan atau GameObject yang tidak memiliki peta cahaya yang dibuat secara manual dan <span class="tooltip"><strong>Light Probes</strong><span class="tooltiptext">probe cahaya menyimpan informasi tentang bagaimana cahaya melewati ruang di tempat kejadian Anda. Koleksi probe cahaya yang diatur dalam ruang tertentu dapat meningkatkan pencahayaan pada objek bergerak dan pemandangan LOD statis dalam ruang itu. <a class="tooltipMoreInfoLink" href="LightProbes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#LightProbe">Glossary</a></span></span></span>, menonaktifkan Probe Reflection default dan probe ambient. Untuk menonaktifkan probe ini, lihat <a href="using-skymanager.html#disableskymanager">Menonaktifkan SkyManager</a>.</p> 
+       <h2>Menambahkan Probe Refleksi</h2> 
+       <p>Anda dapat menambahkan komponen <a href="class-ReflectionProbe.html">Refleksi Probe</a> ke objek apa pun dalam Adegan tetapi standarnya untuk menambahkan setiap probe ke GameObject kosong yang terpisah. Aliran kerja yang biasa adalah:</p> 
+       <ul> 
+        <li>Buat GameObject kosong baru (menu: <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#GameObject">Glossary</a></span></span></span> &gt; <strong>Create Empty</strong>) dan kemudian tambahkan komponen Probe Reflection ke dalamnya (menu: <span class="tooltip"><strong>Component</strong><span class="tooltiptext">Bagian fungsional dari GameObject. GameObject dapat mengandung sejumlah komponen. Unity memiliki banyak komponen built-in, dan Anda dapat membuat Anda sendiri dengan menulis skrip yang berwarisi dari MonoBehaviour. <a href="UsingComponents.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#component">Glossary</a></span></span></span> &gt; <strong>Rendering</strong> &gt; <span class="tooltip"><strong>Reflection Probe</strong><span class="tooltiptext">Komponen rendering yang menangkap pandangan bulat dari sekitarnya di semua arah, seperti kamera. Gambar yang ditangkap kemudian disimpan sebagai kubus yang dapat digunakan oleh benda dengan bahan reflektif. <a href="class-ReflectionProbe.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ReflectionProbe">Glossary</a></span></span></span>). Atau, jika Anda sudah memiliki probe di tempat kejadian Anda mungkin akan merasa lebih mudah untuk menduplikasi bahwa bukan (menu: <strong>Edit</strong> &gt; <strong>Duplicate</strong>).</li> 
+        <li>Tempatkan probe baru di lokasi yang diinginkan dan atur titik <strong>Offset</strong> dan ukuran zona efeknya.</li> 
+        <li>Secara opsional mengatur sifat lain pada probe untuk menyesuaikan perilakunya.</li> 
+        <li>Lanjutkan menambahkan probe sampai semua lokasi yang diperlukan telah ditetapkan.</li> 
+       </ul> 
+       <p>Untuk melihat refleksi, Anda juga akan membutuhkan setidaknya satu objek reflektif di tempat kejadian. Objek tes sederhana dapat dibuat sebagai berikut:</p> 
+       <ul> 
+        <li>Tambahkan objek primitif seperti Sphere ke tempat kejadian (menu: <strong>GameObject</strong> &gt; <span class="tooltip"><strong>3D Object</strong><span class="tooltiptext">Permainan 3D Objek seperti kubus, terrain atau ragdoll. <a class="tooltipMoreInfoLink" href="GameObjects.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#3DObject">Glossary</a></span></span></span> &gt; <strong>Sphere</strong>).</li> 
+        <li>Buat materi baru (menu: <span class="tooltip"><strong>Assets</strong><span class="tooltiptext">Setiap media atau data yang dapat digunakan dalam permainan atau proyek Anda. Aset mungkin berasal dari file yang dibuat di luar Unity, seperti model 3D, file audio atau gambar. Anda juga dapat membuat beberapa jenis aset di Unity, seperti Pengontrol Animator, Audio Mixer atau Tekstur Render. <a class="tooltipMoreInfoLink" href="AssetWorkflow.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Asset">Glossary</a></span></span></span> &gt; <strong>Create</strong> &gt; <span class="tooltip"><strong>Material</strong><span class="tooltiptext">Aset yang menentukan bagaimana permukaan harus diberikan. <a href="class-Material.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Material">Glossary</a></span></span></span>) dan biarkan default teduh <strong>Standard</strong> di tempat.</li> 
+        <li>Membuat bahan reflektif dengan mengatur sifat <strong>Metallic</strong> dan <strong>Smoothness</strong> untuk <strong>1.0</strong>.</li> 
+        <li>Seret bahan yang baru dibuat ke objek sphere untuk menetapkannya.</li> 
+       </ul> 
+       <p>Bola sekarang dapat menunjukkan refleksi yang diperoleh dari probe. Pengaturan sederhana dengan probe tunggal cukup untuk melihat efek dasar dari refleksi.</p> 
+       <p>Akhirnya, probe harus dipanggang sebelum refleksi menjadi terlihat. Jika Anda memiliki opsi <strong>Auto Generate</strong> diaktifkan dalam <a class="tooltipMoreInfoLink" href="lighting-window.html">Jendela pencahayaan</a> (ini adalah pengaturan default) maka refleksi akan memperbarui saat Anda memposisikan atau mengubah objek di tempat kejadian, meskipun responsnya tidak sesaat. Jika Anda menonaktifkan baking otomatis maka Anda harus mengklik tombol <strong>Bake</strong> dalam Probe Reflection <span class="tooltip"><strong>inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span> untuk memperbarui probe. Alasan utama untuk menonaktifkan baking otomatis adalah bahwa proses baking dapat mengambil cukup beberapa waktu untuk adegan yang rumit dengan banyak probe.</p> 
+       <h2>Positioning probes</h2> 
+       <p>Posisi probe terutama ditentukan oleh posisi GameObject dan sehingga Anda hanya dapat menyeret objek ke lokasi yang diinginkan. Setelah melakukan ini, Anda harus mengatur zona probe efek; ini adalah bentuk kotak yang selaras sumbu yang dimensinya ditetapkan oleh properti <strong>Box Size</strong>. Anda dapat mengatur nilai ukuran secara langsung atau mengaktifkan mode pengeditan ukuran dalam inspektur dan seret sisi kotak di <span class="tooltip"><strong>Scene view</strong><span class="tooltiptext">Tampilan interaktif ke dunia yang Anda buat. Anda menggunakan Adegan Lihat untuk memilih dan posisi pemandangan, karakter, kamera, lampu, dan semua jenis lain dari Game Object. <a class="tooltipMoreInfoLink" href="UsingTheSceneView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SceneView">Glossary</a></span></span></span> (lihat halaman komponen <a href="class-ReflectionProbe.html">Refleksi Probe</a> untuk rincian). Zona set penuh probe harus secara kolektif mencakup semua daerah adegan di mana objek reflektif mungkin berlalu.</p> 
+       <p>Anda harus menempatkan probe dekat dengan benda-benda besar di tempat kejadian yang akan tercermin. Area di sekitar pusat dan sudut dinding adalah lokasi kandidat yang baik untuk probe. Objek yang lebih kecil mungkin memerlukan probe yang dekat jika efek visual yang kuat. Misalnya, Anda mungkin ingin nyala api kamp api untuk tercermin bahkan jika objek itu sendiri kecil dan tidak signifikan.</p> 
+       <p>Ketika Anda memiliki probe di semua tempat yang tepat, Anda kemudian perlu menentukan zona efek untuk setiap probe, yang dapat Anda lakukan menggunakan properti <strong>Box Size</strong> seperti yang disebutkan di atas. Dinding mungkin hanya perlu zona probe tunggal di sepanjang sebagian besar panjangnya (setidaknya jika memiliki penampilan yang cukup seragam) tetapi zona mungkin relatif sempit dalam arah tegak lurus ke dinding; ini akan menyiratkan bahwa dinding hanya tercermin oleh benda-benda yang cukup dekat dengannya. Ruang terbuka yang penampilannya bervariasi dari tempat ke tempat sering dapat ditutupi oleh satu probe. Perhatikan bahwa zona probe sejajar dengan kapak dunia utama (X, Y dan Z) dan tidak dapat diputar. Ini berarti bahwa kadang-kadang sekelompok probe mungkin diperlukan di sepanjang dinding seragam jika tidak dilaraskan sumbu.</p> 
+       <p>Secara default, zona efek probe dipusatkan pada sudut pandangnya tetapi ini mungkin tidak menjadi posisi ideal untuk menangkap refleksi <span class="tooltip"><strong>cubemap</strong><span class="tooltiptext">Koleksi enam tekstur persegi yang dapat mewakili refleksi di lingkungan atau skybox yang digambar di balik geometri Anda. Enam kotak membentuk wajah kubus imajiner yang mengelilingi objek; setiap wajah mewakili pandangan di sepanjang arah sumbu dunia (hingga, kiri, kanan, ke depan dan belakang). <a class="tooltipMoreInfoLink" href="class-Cubemap.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Cubemap">Glossary</a></span></span></span>. Misalnya, zona probe untuk dinding yang sangat tinggi mungkin memperpanjang beberapa jarak dari dinding tetapi Anda mungkin ingin refleksi untuk ditangkap dari titik dekat dengan itu daripada pusat zona. Anda dapat secara opsional menambahkan offset untuk melihat titik menggunakan properti <strong>Box Offset</strong> (yaitu, offset adalah posisi di ruang lokal GameObject yang pandangan cubemap probe dihasilkan dari). Menggunakan ini, Anda dapat dengan mudah menempatkan sudut pandang di mana saja di zona efek atau memang di luar zona sama sekali.</p> 
+       <h2>Overlapping zona probe</h2> 
+       <p>Ini akan sangat sulit untuk memposisikan zona probe refleksi tetangga tanpa tumpang tindih dan untungnya, tidak perlu melakukannya. Namun, ini meninggalkan masalah memilih probe mana yang digunakan di daerah tumpang tindih. Secara default, Unity menghitung persimpangan antara kotak terikat objek reflektif dan masing-masing zona probe yang tumpang tindih; zona yang memiliki volume terbesar persimpangan dengan kotak yang terikat adalah salah satu yang akan dipilih.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ProbeZoneOverlap.svg" alt="Probe A is selected since its intersection with the object is larger"> 
+        <figcaption>
+          Login A dipilih karena persimpangannya dengan objek lebih besar 
+        </figcaption> 
+       </figure> 
+       <p>Anda dapat memodifikasi perhitungan menggunakan sifat <strong>Importance</strong> probe. Probe dengan nilai penting yang lebih tinggi memiliki prioritas atas pentingnya yang lebih rendah dalam zona tumpang tindih. Ini berguna, mengatakan, jika Anda memiliki zona probe kecil yang terkandung sepenuhnya di dalam zona yang lebih besar (yaitu, persimpangan kotak pengikat karakter dengan zona enclosing mungkin selalu lebih besar dan sehingga zona kecil tidak akan pernah digunakan).</p> 
+       <h3>Blending</h3> 
+       <p>Untuk mengaktifkan Reflection Probe blending arahkan ke <strong>Graphic Settings</strong> &gt; <strong>Tier settings</strong>. Pengaturan tingkat hanya tersedia dalam <a href="built-in-render-pipeline.html">Pipa Render Built-in</a> Unity. Ketika campuran diaktifkan, Unity secara bertahap memudar satu kubus probe sementara memudar di yang lain sebagai objek reflektif melewati dari satu zona ke zona lain. transisi bertahap ini menghindari situasi di mana objek yang khas tiba-tiba "pops" ke dalam refleksi sebagai objek melintasi batas zona.</p> 
+       <p>Blending dikendalikan menggunakan properti <strong>Reflection Probes</strong> dari komponen <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-MeshRenderer.html">Mesh Renderer</a><span class="tooltiptext">Komponen mesh yang mengambil geometri dari Filter Mesh dan render di posisi yang ditentukan oleh komponen Transform objek. <a href="class-MeshRenderer.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#MeshRenderer">Glossary</a></span></span></span>. Empat pilihan campuran tersedia:</p> 
+       <ul> 
+        <li> <strong>Off</strong> - Campuran probe refleksi dinonaktifkan. Hanya <span class="tooltip"><strong>skybox</strong><span class="tooltiptext">Jenis khusus Bahan yang digunakan untuk mewakili langit. Biasanya enam sisi. <a class="tooltipMoreInfoLink" href="class-Skybox.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Skybox">Glossary</a></span></span></span> akan digunakan untuk refleksi</li> 
+        <li> <strong>Blend Probes</strong> - Blends hanya probe yang berdekatan dan mengabaikan skybox. Anda harus menggunakan ini untuk objek yang "indoor" atau di bagian tertutup dari adegan (misalnya, gua dan terowongan) karena langit tidak terlihat dari tempat ini dan tidak boleh muncul dalam refleksi.</li> 
+        <li> <strong>Blend Probes and Skybox</strong> - Bekerja seperti <em>Probe Campuran</em> tetapi juga memungkinkan skybox untuk digunakan dalam blending. Anda harus menggunakan opsi ini untuk objek di udara terbuka, di mana langit akan selalu terlihat.</li> 
+        <li> <strong>Simple</strong> - Disables blending antara probe ketika ada dua volume probe refleksi tumpang tindih.</li> 
+       </ul> 
+       <p>Ketika probe memiliki nilai <strong>Importance</strong> yang sama, bobot campuran untuk zona probe yang diberikan dihitung dengan membagi persimpangannya (volume) dengan kotak terikat objek oleh jumlah semua persimpangan probe dengan kotak. Misalnya, jika kotak intersects probe Zona A oleh unit kubik 1.0 dan intersects probe B zona oleh 2.0 unit kubik kemudian nilai campuran akan:</p> 
+       <ul> 
+        <li>Probe A: 1.0 / (1.0 + 2.0) = 0.33</li> 
+        <li>Probe B: 2.0 / (1.0 + 2.0) = 0,67</li> 
+       </ul> 
+       <p>Dengan kata lain, campuran akan menggabungkan 33% dari probe Refleksi A dan 67% dari refleksi probe B.</p> 
+       <p>Perhitungan harus ditangani sedikit berbeda dalam kasus di mana satu probe sepenuhnya terkandung dalam yang lain, karena zona bagian dalam tumpang tindih sepenuhnya dengan luar. Jika kotak terikat objek sepenuhnya dalam zona dalam maka berat campuran zona adalah 1,0 (yaitu, zona luar tidak digunakan sama sekali). Ketika objek sebagian di luar zona bagian dalam, volume persimpangan kotak yang terikat dengan zona dalam dibagi oleh total volume kotak. Misalnya, jika volume persimpangan adalah unit kubik 1,0 dan volume kotak yang terikat adalah unit kubik 4.0, maka bobot campuran dari probe bagian dalam akan 1.0 / 4.0 = 0,25. Nilai ini kemudian ditarik dari 1,0 untuk mendapatkan berat untuk probe luar yang dalam kasus ini akan 0,75.</p> 
+       <p>Ketika satu probe yang terlibat dalam campuran memiliki nilai <strong>Importance</strong> yang lebih tinggi daripada yang lain, probe yang lebih penting menimpa yang lain dengan cara yang biasa. <br> <br> </p> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-history">diperbarui pada 5.6</span></p></li> 
+        <li><p><span class="page-edit">2017–06–06 Sitemap</span></p></li> 
+       </ul> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="RefProbeTypes.html"></a></span> 
+         <div class="tip">
+           Jenis Probe Reflection 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="AdvancedRefProbe.html"></a></span> 
+         <div class="tip">
+           Fitur Probe Reflection Lanjutan 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

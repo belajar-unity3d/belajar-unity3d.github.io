@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Pengumpul garbage yang tidak praktis</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="analysis.html">Analysis</a></li> 
+         <li><a href="performance-memory-overview.html">Memori dalam Unity</a></li> 
+         <li><a href="performance-garbage-collector.html">Gambaran keseluruhan kolektor sampah</a></li> 
+         <li>Pengumpulan sampah</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="performance-garbage-collector.html"></a></span> 
+          <div class="tip">
+            Gambaran keseluruhan kolektor sampah 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="performance-disabling-garbage-collection.html"></a></span> 
+          <div class="tip">
+            Mengaktifkan koleksi sampah 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Pengumpulan sampah</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Incremental <a href="https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/fundamentals">Photogallery</a> (GC) menyebar proses pengumpulan sampah atas beberapa bingkai. Ini adalah perilaku pengumpulan sampah default di Unity.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/player-settings-incremental-gc.png" alt="To enable incremental garbage collection, open the Player Settings and enable Use incremental GC. This is enabled by default."> 
+        <figcaption>
+          Untuk mengaktifkan koleksi garbage inkremental, buka Pengaturan Pemain dan aktifkan 
+         <strong>Use incremental GC</strong>. Ini diaktifkan secara default. 
+        </figcaption> 
+       </figure> 
+       <p>Pengumpul sampah Unity menggunakan <a href="https://www.hboehm.info/gc/">Boehm-Demers – Pengumpul garbage Weiser</a>. Secara default, Unity menggunakan mode inkremental, yang berarti bahwa kolektor garbage membagi beban kerjanya lebih dari beberapa bingkai, bukan menghentikan benang CPU utama (<a href="https://en.wikipedia.org/wiki/Tracing_garbage_collection#Stop-the-world_vs._incremental_vs._concurrent">koleksi garbage berhenti-the-world</a>) untuk memproses semua objek di tumpukan yang dikelola. Ini berarti bahwa Unity membuat gangguan yang lebih pendek untuk eksekusi aplikasi Anda, bukan satu gangguan panjang untuk membiarkan proses kolektor garbage objek di landai yang berhasil.</p> 
+       <p>Mode tidak membuat pengumpulan sampah secara keseluruhan, tetapi karena mendistribusikan beban kerja atas beberapa bingkai, lonjakan kinerja terkait GC berkurang. Gangguan ini disebut <strong>GC spikes</strong> karena mereka muncul sebagai lonjakan besar dalam graf waktu bingkai <a href="ProfilerWindow.html">WordPress.org</a>.</p> 
+       <p>Jika Anda menonaktifkan mode inkremental (<strong>menu: Edit &gt; Project Settings &gt; Player &gt; Other Settings &gt; Configuration &gt; Use Incremental GC</strong>), kolektor garbage harus memeriksa seluruh heap ketika melakukan lulus koleksi. Ini dikenal sebagai koleksi garbage <strong>stop-the-world</strong>, karena setiap kali kolektor sampah berjalan, itu menghentikan benang CPU utama. Ini hanya melanjutkan eksekusi setelah telah memproses semua objek di tumpukan yang berhasil, yang mungkin menyebabkan lonjakan GC mempengaruhi kinerja aplikasi Anda. Pengumpul sampah juga non-perlengkapan, yang berarti bahwa Unity tidak mendistribusikan benda-benda dalam memori untuk menutup kesenjangan antara benda.</p> 
+       <p>Sitemap Platform <strong>Important:</strong> tidak mendukung koleksi garbage inkremental.<span class="tooltip"><strong>WebGL</strong><span class="tooltiptext">Login API yang membuat grafis 2D dan 3D di browser web. Opsi build Unity WebGL memungkinkan Unity untuk mempublikasikan konten sebagai program JavaScript yang menggunakan teknologi HTML5 dan WebGL rendering API untuk menjalankan konten Unity di browser web. <a class="tooltipMoreInfoLink" href="webgl-gettingstarted.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#WebGL">Glossary</a></span></span></span> platform doesn’t support incremental garbage collection.</p> 
+       <p>Ketika koleksi sampah yang masuk akal dinonaktifkan, lonjakan GC terjadi ketika Unity berhenti menjalankan kode program Anda untuk melakukan pengumpulan sampah. Keterlambatan ini mungkin berlangsung selama ratusan mili detik, tergantung pada berapa banyak alokasi kolektor sampah perlu diproses, dan platform yang aplikasi Anda berjalan.</p> 
+       <p>Ini bermasalah untuk aplikasi real-time seperti permainan, karena sulit untuk aplikasi Anda untuk mempertahankan tingkat bingkai konsisten yang animasi halus membutuhkan ketika kolektor garbage menangguhkan eksekusi aplikasi Anda.</p> 
+       <h2>Contoh pengumpulan garbage Incremental</h2> 
+       <p>screenshot berikut dari Profiler menggambarkan bagaimana pengumpulan garbage incremental mengurangi masalah tingkat bingkai:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/profiler-incremental-gc.png" alt="Profiling session with Incremental GC enabled"> 
+        <figcaption>
+          Sesi profil dengan mengaktifkan GC 
+        </figcaption> 
+       </figure> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/profiler-incremental-gc-disabled.png" alt="Profiling session with Incremental GC disabled"> 
+        <figcaption>
+          Profiling sesi dengan GC Incremental dinonaktifkan 
+        </figcaption> 
+       </figure> 
+       <p>Pada sesi profil teratas, <strong>Incremental GC</strong> diaktifkan. Aplikasi ini memiliki tingkat bingkai 60fps yang konsisten, karena kolektor garbage mendistribusikan operasi pengumpulan sampah selama beberapa bingkai, dan menggunakan irisan waktu kecil dari setiap bingkai (penutup hijau yang lebih gelap hanya di atas jejak VSync kuning).</p> 
+       <p>Sesi profil bawah telah dinonaktifkan <strong>Incremental GC</strong>, dan ada lonjakan GC yang jelas terlihat. lonjakan ini mengganggu tingkat bingkai 60fps yang halus, dan mendorong bingkai di mana pengumpulan sampah terjadi selama 16 batas mili detik yang diperlukan untuk mempertahankan 60fps.</p> 
+       <p>Jika aplikasi Anda menggunakan <span class="tooltip"><a href="../ScriptReference/QualitySettings-vSyncCount.html">VSync</a><span class="tooltiptext">Sinkronisasi vertikal (VSync) adalah pengaturan tampilan yang menangkap tingkat bingkai permainan untuk mencocokkan tingkat refresh monitor, untuk mencegah robek gambar.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#VSync">Glossary</a></span></span></span> atau <a href="../ScriptReference/Application-targetFrameRate.html">Aplikasi.targetFrameRate</a>, Unity menyesuaikan waktu yang dialokasikan untuk pengumpulan sampah berdasarkan waktu bingkai yang tersedia. Cara ini, Unity dapat menjalankan koleksi sampah pada saat itu akan menghabiskan waktu tunggu, dan dapat melakukan pengumpulan sampah dengan dampak kinerja minimal.</p> 
+       <p>Sitemap Jika Anda mengatur <strong>Note:</strong> untuk apa pun selain <strong>VSync Count</strong> (dalam proyek Anda <strong>Don’t Sync</strong> atau dengan properti <a href="class-QualitySettings.html">Pengaturan kualitas</a>) atau Anda mengaktifkan properti <a href="../ScriptReference/QualitySettings-vSyncCount.html">Aplikasi.VSync</a>, Unity secara otomatis menggunakan waktu idle yang tersisa pada akhir bingkai yang diberikan untuk koleksi garbage incremental.<a href="../ScriptReference/Application-targetFrameRate.html">Aplikasi.targetFrameRate</a> property, Unity automatically uses any idle time left at the end of a given frame for incremental garbage collection.</p> 
+       <p>Untuk mendapatkan kontrol yang lebih tepat atas perilaku pengumpulan sampah, Anda dapat menggunakan kelas <a href="../ScriptReference/Scripting.GarbageCollector.html">Scripting.GarbageCollector</a>. Misalnya, jika Anda tidak ingin menggunakan VSync atau tingkat bingkai target, Anda dapat menghitung jumlah waktu yang tersedia sebelum akhir bingkai sendiri, dan memberikan waktu kepada kolektor sampah untuk digunakan.</p> 
+       <p><a name="disabling"></a></p> 
+       <h2>Mengaktifkan koleksi garbage inkremental</h2> 
+       <p>Pengumpulan sampah yang tidak dapat dimasalahkan untuk aplikasi Anda, karena ketika pengumpul sampah membagi pekerjaannya dalam mode ini, itu juga membagi fase penandaan. Fase penandaan adalah fase di mana kolektor sampah memindai semua benda yang dikelola untuk menentukan objek mana yang masih digunakan, dan benda-benda yang dapat membersihkan.</p> 
+       <p>Menagihkan fase penandaan bekerja dengan baik ketika sebagian besar referensi antara benda tidak berubah antara irisan pekerjaan. Namun, ketika perubahan referensi objek, kolektor sampah harus memindai benda-benda tersebut lagi dalam iterasi berikutnya. Ini berarti bahwa terlalu banyak perubahan dapat kewalahan kolektor sampah dan menciptakan situasi di mana fase penandaan tidak pernah selesai karena selalu memiliki lebih banyak pekerjaan untuk dilakukan. Jika ini terjadi, kolektor sampah jatuh kembali untuk melakukan koleksi penuh, non-incremental.</p> 
+       <p>Ketika Unity menggunakan koleksi garbage inkremental, itu menghasilkan kode tambahan (dikenal sebagai penghalang tulis) untuk menginformasikan kolektor sampah setiap kali perubahan referensi, sehingga mengetahui apakah perlu memindai objek. Ini menambahkan beberapa overhead ketika <a href="performance-managed-memory.html#value-reference">mengubah referensi</a>, yang memiliki dampak kinerja dalam kode yang dikelola.</p> 
+       <p>Untuk koleksi sampah yang dapat disable, buka jendela Pengaturan Pemain (<strong>Edit &gt; Project Settings &gt; Player &gt; Configuration</strong>) dan disable <strong>Use Incremental GC</strong>. Sebagian besar proyek Unity mendapatkan keuntungan dari koleksi sampah yang tidak konsisten, terutama jika mereka menderita lonjakan pengumpulan sampah, tetapi Anda harus selalu menggunakan <span class="tooltip"><a class="tooltipMoreInfoLink" href="Profiler.html">Profiler</a><span class="tooltiptext">Jendela yang membantu Anda untuk mengoptimalkan permainan Anda. Ini menunjukkan berapa banyak waktu yang dihabiskan di berbagai bidang permainan Anda. Sebagai contoh, dapat melaporkan persentase waktu yang dihabiskan <strong>rendering</strong>, aimating, atau dalam logika permainan Anda. <a href="Profiler.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profiler">Glossary</a></span></span></span> untuk memverifikasi bahwa aplikasi Anda melakukan seperti yang Anda harapkan.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="performance-garbage-collector.html"></a></span> 
+         <div class="tip">
+           Gambaran keseluruhan kolektor sampah 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="performance-disabling-garbage-collection.html"></a></span> 
+         <div class="tip">
+           Mengaktifkan koleksi sampah 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

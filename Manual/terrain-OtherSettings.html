@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Pengaturan Terrain</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="CreatingEnvironments.html">Bangunan dunia</a></li> 
+         <li><a href="script-Terrain.html">Terrain</a></li> 
+         <li>Pengaturan Terrain</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="terrain-Heightmaps.html"></a></span> 
+          <div class="tip">
+            Bekerja dengan Heightmaps 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="terrain-Runtime.html"></a></span> 
+          <div class="tip">
+            Menggunakan Terrain pada runtime 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Pengaturan Terrain</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Alat akhir pada lima-icon <span class="tooltip"><strong>toolbar</strong><span class="tooltiptext">Se baris tombol dan kontrol dasar di bagian atas Editor Unity yang memungkinkan Anda untuk berinteraksi dengan Editor dengan berbagai cara (misalnya scaling, terjemahan). <a class="tooltipMoreInfoLink" href="Toolbar.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Toolbar">Glossary</a></span></span></span> adalah untuk pengaturan. Pada <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>, klik ikon gigi untuk mengungkapkan <strong>Terrain settings</strong>.</p> 
+       <h2>Basic Terrain</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TerrainSettings01.png" alt=""> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong><em>Property</em></strong></th> 
+          <th style="text-align:left;"><strong><em>Function</em></strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Grouping ID</strong></td> 
+          <td style="text-align:left;">ID kelompok untuk fitur <strong>Auto connect</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Auto Connect</strong></td> 
+          <td style="text-align:left;">Periksa kotak ini untuk secara otomatis menghubungkan ubin <span class="tooltip"><strong>Terrain</strong><span class="tooltiptext">Pemandangan di tempat kejadian Anda. Terrain GameObject menambahkan pesawat datar besar untuk adegan Anda dan Anda dapat menggunakan jendela Inspektur Terrain untuk menciptakan lanskap rinci. <a class="tooltipMoreInfoLink" href="terrain-UsingTerrains.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Terrain">Glossary</a></span></span></span> saat ini ke ubin tetangga berbagi <strong>Grouping ID</strong> yang sama.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Reconnect</strong></td> 
+          <td style="text-align:left;">Pada kesempatan yang jarang terjadi, Anda mungkin kehilangan koneksi antara ubin Terrain jika Anda mengubah <strong>Grouping ID</strong>, atau disable <strong>Auto connect</strong> untuk satu atau lebih ubin. Untuk menciptakan kembali koneksi antara ubin, klik tombol <strong>Reconnect</strong>. <strong>Reconnect</strong> hanya menghubungkan dua ubin yang berdekatan jika memiliki <strong>Grouping ID</strong> yang sama dan jika kedua ubin memiliki <strong>Auto Connect</strong> diaktifkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Draw</strong></td> 
+          <td style="text-align:left;">Cek kotak ini untuk mengaktifkan rendering dari Terrain.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Draw Instanced</strong></td> 
+          <td style="text-align:left;">Periksa kotak ini untuk mengaktifkan rendering yang dicontoh.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Pixel Error</strong></td> 
+          <td style="text-align:left;">Keakuratan pemetaan antara peta Terrain (seperti peta tinggi dan Tekstur) dan Terrain yang dihasilkan. Nilai yang lebih tinggi menunjukkan akurasi yang lebih rendah, tetapi dengan overhead rendering yang lebih rendah.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Base Map Dist.</strong></td> 
+          <td style="text-align:left;">Jarak maksimum di mana Unity menampilkan Terrain Tekstur pada resolusi penuh. Di luar jarak ini, sistem menggunakan gambar komposit resolusi rendah untuk efisiensi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Cast Shadows</strong></td> 
+          <td style="text-align:left;">Gunakan ini untuk menentukan bagaimana bayangan cor Terrain ke objek lain di <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>. <a href="../ScriptReference/Rendering.ShadowCastingMode.html">Rendering.ShadowCastingMode</a> mengontrol bagaimana bayangan Terrain berinteraksi dengan objek Adegan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Off</em></td> 
+          <td style="text-align:left;">Terrain tidak melemparkan bayangan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>On</em></td> 
+          <td style="text-align:left;">The Terrain melemparkan bayangan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Dua Sisi</em></td> 
+          <td style="text-align:left;">Membuang bayangan dua sisi dari kedua sisi Terrain. Progresif <span class="tooltip"><strong>Lightmapper</strong><span class="tooltiptext">Alat dalam Unity yang bakes lightmap sesuai dengan pengaturan lampu dan geometri di tempat kejadian Anda. <a class="tooltipMoreInfoLink" href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Lightmapper">Glossary</a></span></span></span> mendukung bayangan dua sisi. <span class="tooltip"><strong>Enlighten</strong><span class="tooltiptext">Sistem pencahayaan oleh Geomerics yang digunakan dalam Unity untuk lightmapping dan untuk Mencerahkan Penerangan Global Realtime. <a href="https://www.siliconstudio.co.jp/en/products-service/enlighten/">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Enlighten">Glossary</a></span></span></span> Baked dan Enlighten Realtime <span class="tooltip"><strong>Global Illumination</strong><span class="tooltiptext">Kelompok teknik yang model pencahayaan langsung dan tidak langsung untuk memberikan hasil pencahayaan yang realistis.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#globalillumination">Glossary</a></span></span></span> tidak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Bayangan Hanya</em></td> 
+          <td style="text-align:left;">Bayangan dari Terrain terlihat, tetapi Terrain itu sendiri tidak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><span class="tooltip"><strong>Reflection Probes</strong><span class="tooltiptext">Komponen rendering yang menangkap pandangan bulat dari sekitarnya di semua arah, seperti kamera. Gambar yang ditangkap kemudian disimpan sebagai kubus yang dapat digunakan oleh benda dengan bahan reflektif. <a class="tooltipMoreInfoLink" href="class-ReflectionProbe.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ReflectionProbe">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Gunakan ini untuk mengatur bagaimana Unity menggunakan Probe Reflection di Terrain. Pengaturan ini hanya memiliki efek ketika <span class="tooltip"><strong>Material</strong><span class="tooltiptext">Aset yang menentukan bagaimana permukaan harus diberikan. <a class="tooltipMoreInfoLink" href="class-Material.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Material">Glossary</a></span></span></span> diatur ke <strong>Built In Standard</strong>, atau jika Anda menggunakan Bahan kustom (dengan set <strong>Material</strong> untuk <strong>Custom</strong>) yang mendukung rendering dengan refleksi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Off</em></td> 
+          <td style="text-align:left;">Disables Reflection Probe, dan menggunakan <span class="tooltip"><strong>skybox</strong><span class="tooltiptext">Jenis khusus Bahan yang digunakan untuk mewakili langit. Biasanya enam sisi. <a class="tooltipMoreInfoLink" href="class-Skybox.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Skybox">Glossary</a></span></span></span> untuk refleksi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Probe Campuran</em></td> 
+          <td style="text-align:left;">Probe Refleksi yang Dapat Diaktifkan. Blending hanya terjadi antara probe. Menggunakan refleksi default jika tidak ada Probe Refleksi di dekatnya, tetapi tidak ada campuran antara refleksi dan probe default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Probe Blend Dan Skybox</em></td> 
+          <td style="text-align:left;">Aktifkan probe refleksi. Blending terjadi antara probe, atau antara probe dan refleksi default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Simple</em></td> 
+          <td style="text-align:left;">Enables Reflection probe, tetapi tidak ada campuran terjadi antara probe ketika ada dua volume overlapping.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Material</strong></td> 
+          <td style="text-align:left;">Memungkinkan Anda menentukan Bahan untuk digunakan untuk rendering Terrain.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Create</strong></td> 
+          <td style="text-align:left;">Tombol <strong>Create</strong> hanya muncul ketika Anda memilih Bahan Terrain default. Tidak muncul ketika Anda memilih Bahan kustom. Ketika Anda mengklik <strong>Create</strong>, Unity membuat salinan Bahan di folder Proyek Anda, yang Anda dapat memodifikasi, dan kemudian secara otomatis memilih salinan baru ini.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Objek Pohon dan Detail</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TerrainSettings02.png" alt=""> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong><em>Property</em></strong></th> 
+          <th style="text-align:left;"><strong><em>Function</em></strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Draw</strong></td> 
+          <td style="text-align:left;">Cek kotak ini untuk menggambar pohon, rumput, dan detail.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Bake Light Probes For Trees</strong></td> 
+          <td style="text-align:left;">Jika Anda memeriksa kotak ini, Unity membuat Probe Cahaya internal pada posisi setiap pohon, dan menerapkannya ke renderer pohon untuk penerangan. probe ini internal, dan tidak mempengaruhi renderer lain di Adegan.<br><br> Jika Anda tidak memeriksa kotak ini, pohon masih dipengaruhi oleh <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-LightProbeGroup.html">Grup Probe Cahaya</a><span class="tooltiptext">Komponen yang memungkinkan Anda untuk menambahkan Probe Cahaya ke GameObjects di tempat kejadian Anda. <a href="class-LightProbeGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#LightProbeGroup">Glossary</a></span></span></span>. Pilihan ini hanya efektif untuk pohon dengan Light Probe diaktifkan pada prototipe Prefab mereka.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Remove Light Probe Ringing</strong></td> 
+          <td style="text-align:left;">Jika Anda memeriksa kotak ini, Unity menghapus overshooting terlihat, yang sering muncul sebagai cincin pada <span class="no tooltip">GameObjects</span> yang dipengaruhi oleh pencahayaan intens. Pengaturan ini mengurangi kontras, dan tergantung pada Bake Light Probe untuk Pohon. Untuk informasi lebih lanjut, lihat <a href="class-LightProbeGroup.html#Ringing">Grup Probe Cahaya: Ringing</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Preserve Tree Prototype Layers</strong></td> 
+          <td style="text-align:left;">Periksa kotak ini jika Anda ingin instance pohon Anda untuk mengambil nilai lapisan dari prototipe mereka <span class="tooltip"><strong>Prefabs</strong><span class="tooltiptext">Jenis aset yang memungkinkan Anda untuk menyimpan GameObject lengkap dengan komponen dan properti. Prefab bertindak sebagai template dari mana Anda dapat membuat instance objek baru di tempat kejadian. <a class="tooltipMoreInfoLink" href="Prefabs.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Prefab">Glossary</a></span></span></span>, bukan nilai lapisan Terrain <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Detail Distance</strong></td> 
+          <td style="text-align:left;">Jarak dari <span class="tooltip"><strong>camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span> di luar rincian mana yang muncul.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Detail Density</strong></td> 
+          <td style="text-align:left;">Jumlah objek detail/grass dalam unit area yang diberikan. Mengatur nilai ini lebih rendah untuk mengurangi overhead rendering.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Tree Distance</strong></td> 
+          <td style="text-align:left;">Jarak dari kamera di luar pohon-pohon mana yang muncul.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Billboard Start</strong></td> 
+          <td style="text-align:left;">Jarak dari kamera di mana gambar <span class="tooltip"><strong>Billboard</strong><span class="tooltiptext">Objek 2D bertekstur yang berputar sehingga selalu menghadapi Kamera. <a class="tooltipMoreInfoLink" href="class-BillboardRenderer.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Billboard">Glossary</a></span></span></span> menggantikan benda Pohon 3D.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Fade Length</strong></td> 
+          <td style="text-align:left;">Jarak di mana Pohon transisi antara <span class="tooltip"><strong>3D objects</strong><span class="tooltiptext">Permainan 3D Objek seperti kubus, terrain atau ragdoll. <a class="tooltipMoreInfoLink" href="GameObjects.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#3DObject">Glossary</a></span></span></span> dan Billboard.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Max <span class="no tooltip">Mesh</span> Trees</strong></td> 
+          <td style="text-align:left;">Jumlah maksimum Pohon yang terlihat yang diwakili sebagai jaring 3D padat. Di luar batas ini, Billboard mengganti Pohon.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Pengaturan Angin untuk Rumput</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TerrainSettings03.png" alt=""> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong><em>Property</em></strong></th> 
+          <th style="text-align:left;"><strong><em>Function</em></strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Speed</strong></td> 
+          <td style="text-align:left;">Kecepatan angin karena pukulan di rumput.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Size</strong></td> 
+          <td style="text-align:left;">Ukuran riak di daerah rumput sebagai angin bertiup di atasnya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Bending</strong></td> 
+          <td style="text-align:left;">Tingkat ke mana tikungan angin di atas benda-benda rumput.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Grass Tint</strong></td> 
+          <td style="text-align:left;">Tint warna keseluruhan diterapkan pada benda-benda rumput. Warna akhir yang muncul adalah pengaturan <strong>Grass Tint</strong> yang dikalikan oleh pengaturan <strong>Healthy Color</strong> dan <strong>Dry Color</strong> dari setiap objek rumput.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p> <strong>Wind Settings for Grass</strong> tidak memiliki koneksi dengan komponen <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-WindZone.html">Zona Angin</a><span class="tooltiptext">GameObject yang menambahkan efek angin ke medan Anda. Misalnya, Pohon dalam zona angin akan menekuk dalam mode animasi realistis dan angin itu sendiri akan bergerak dalam pulsa untuk menciptakan pola alami gerakan di antara pohon. <a href="class-WindZone.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#windzone">Glossary</a></span></span></span>. Dua tidak berhubungan.</p> 
+       <h2>Resolusi Mesh</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TerrainSettings04.png" alt=""> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong><em>Property</em></strong></th> 
+          <th style="text-align:left;"><strong><em>Function</em></strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Terrain Width</strong></td> 
+          <td style="text-align:left;">Ukuran Terrain GameObject dalam sumbu X, di unit dunia.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Terrain Length</strong></td> 
+          <td style="text-align:left;">Ukuran Terrain GameObject di sumbu Z, di unit dunia.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Terrain Height</strong></td> 
+          <td style="text-align:left;">Perbedaan dalam nilai Y-koordinat antara nilai <span class="tooltip"><strong>heightmap</strong><span class="tooltiptext">Tekstur abu-abu yang menyimpan data tinggi untuk objek. Setiap pixel menyimpan perbedaan tinggi tegak lurus dengan wajah yang pixel mewakili.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Heightmap">Glossary</a></span></span></span> terendah dan yang tertinggi, dalam unit dunia.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Detail Resolution Per Patch</strong></td> 
+          <td style="text-align:left;">Jumlah sel dalam patch tunggal (mesh). Nilai ini persegi untuk membentuk grid sel, dan harus divisor dari resolusi detail.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Detail Resolution</strong></td> 
+          <td style="text-align:left;">Jumlah sel yang tersedia untuk menempatkan rincian ke ubin Terrain. Nilai ini persegi untuk membuat grid sel.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Pengaturan Lubang</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TerrainSettings05.png" alt=""> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong><em>Property</em></strong></th> 
+          <th style="text-align:left;"><strong><em>Function</em></strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Compress Holes Texture</strong></td> 
+          <td style="text-align:left;">Jika Anda memeriksa kotak ini, Unity mengompres Tekstur Terrain Holes ke format grafis DXT1 di Pemain selama runtime. Jika Anda tidak memeriksa kotak ini, Unity tidak mengompres Tekstur.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Resolusi Tekstur</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TerrainSettings06.png" alt=""> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong><em>Property</em></strong></th> 
+          <th style="text-align:left;"><strong><em>Function</em></strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Heightmap Resolution</strong></td> 
+          <td style="text-align:left;">Resolusi <span class="tooltip"><strong>pixel</strong><span class="tooltiptext">Unit terkecil dalam gambar komputer. Ukuran piksel tergantung pada resolusi layar Anda. Pencahayaan pixel dihitung pada setiap piksel layar. <a class="tooltipMoreInfoLink" href="ShadowPerformance.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#pixel">Glossary</a></span></span></span> dari peta tinggi Terrain. Nilai ini harus menjadi kekuatan dua plus satu, misalnya, 513, yang 512 + 1.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Control Texture Resolution</strong></td> 
+          <td style="text-align:left;">Resolusi splatmap yang mengontrol perpaduan Tekstur Terrain yang berbeda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Base Texture Resolution</strong></td> 
+          <td style="text-align:left;">Resolusi Tekstur komposit untuk digunakan di Terrain ketika Anda melihatnya dari jarak yang lebih besar dari Jarak Basemap.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p> <strong>Require resampling on change</strong> menunjukkan bahwa ketika Anda mengubah properti di bawah <strong>Texture Resolutions</strong>, Editor mengubah konten ubin Terrain dengan ukuran baru yang Anda tentukan, yang berpotensi dapat mempengaruhi kualitas konten Anda.</p> 
+       <h3>Tombol impor / ekspor</h3> 
+       <p>Tombol <strong>Import Raw</strong> dan <strong>Export Raw</strong> memungkinkan Anda untuk mengatur atau menyimpan peta tinggi Terrain ke file gambar dalam format abu-abu RAW. Anda dapat membuat file format RAW di alat pengeditan medan pihak ketiga (seperti Bryce), dan Anda dapat membuka, mengedit, dan menyimpannya di Photoshop. Hal ini memungkinkan untuk generasi dan pengeditan medan di luar Unity.</p> 
+       <h2>Lighting</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TerrainSettings07.png" alt=""> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong><em>Property</em></strong></th> 
+          <th style="text-align:left;"><strong><em>Function</em></strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Contribute Global Illumination</strong></td> 
+          <td style="text-align:left;">Aktifkan kotak cek ini untuk menunjukkan kepada Unity bahwa Terrain mempengaruhi komputasi Penerangan Global. Ketika Anda mengaktifkan properti ini, sifat <strong>Lightmapping</strong> muncul.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Receive Global Illumination</strong></td> 
+          <td style="text-align:left;">Anda hanya dapat mengkonfigurasi opsi ini jika Anda telah mengaktifkan <strong>Contribute Global Illumination</strong> di atas. Jika Anda tidak mengaktifkan <strong>Contribute Global Illumination</strong>, Terrain mendaftar sebagai non-statis, dan menerima Penerangan Global dari <span class="tooltip"><strong>Light Probes</strong><span class="tooltiptext">probe cahaya menyimpan informasi tentang bagaimana cahaya melewati ruang di tempat kejadian Anda. Koleksi probe cahaya yang diatur dalam ruang tertentu dapat meningkatkan pencahayaan pada objek bergerak dan pemandangan LOD statis dalam ruang itu. <a class="tooltipMoreInfoLink" href="LightProbes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#LightProbe">Glossary</a></span></span></span>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Lightmapping</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TerrainSettings08.png" alt=""> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong><em>Property</em></strong></th> 
+          <th style="text-align:left;"><strong><em>Function</em></strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Scale in Lightmap</strong></td> 
+          <td style="text-align:left;">Memungkinkan ukuran relatif UV objek dalam <span class="tooltip"><strong>lightmap</strong><span class="tooltiptext">Tekstur pra-render yang mengandung efek sumber cahaya pada objek statis di tempat kejadian. Lightmaps dilalui atas geometri adegan untuk menciptakan efek pencahayaan. <a class="tooltipMoreInfoLink" href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Lightmap">Glossary</a></span></span></span>. Jika Anda mengatur ini ke nol, objeknya tidak ringan, tetapi masih berkontribusi pencahayaan pada objek lain di Adegan. Nilai lebih besar dari 1,0 meningkatkan jumlah piksel (konfigurasi lightmap) yang digunakan untuk GameObject ini, sementara nilai kurang dari 1,0 menurun.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Lightmap Parameters</strong></td> 
+          <td style="text-align:left;">Memungkinkan Anda menyesuaikan parameter canggih yang mempengaruhi proses menghasilkan peta ringan untuk objek menggunakan pencahayaan global. Lihat <a href="class-LightmapParameters.html">Parameter Lightmap</a> untuk informasi lebih lanjut tentang pengaturan ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Rendering Layer Mask</strong></td> 
+          <td style="text-align:left;">Menentukan lapisan rendering ini Terrain hidup. Ketika Anda menggunakan <a class="tooltipMoreInfoLink" href="ScriptableRenderPipeline.html">API documentation</a>, Anda dapat menentukan tambahan rendering-specific <span class="tooltip"><strong>layer mask</strong><span class="tooltiptext">Nilai yang menentukan lapisan yang termasuk atau dikecualikan dari operasi, seperti rendering, tabrakan atau kode Anda sendiri. <a href="Layers.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#LayerMask">Glossary</a></span></span></span>. Ini menyaring renderer berdasarkan masker renderer memiliki dan masker yang dilewati ke perintah <a href="../ScriptReference/Rendering.ScriptableRenderContext.DrawRenderers.html">DrawRenderers</a>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Terrain Collider</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TerrainSettings09.png" alt=""> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong><em>Property</em></strong></th> 
+          <th style="text-align:left;"><strong><em>Function</em></strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Material</strong></td> 
+          <td style="text-align:left;">Referensi ke <span class="tooltip"><a class="tooltipMoreInfoLink" href="../ScriptReference/PhysicMaterial.html">Bahan Fisik</a><span class="tooltiptext">A aset fisika untuk menyesuaikan gesekan dan efek bouncing benda-benda tabrakan. <a href="class-PhysicMaterial.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#PhysicMaterial">Glossary</a></span></span></span> yang menentukan bagaimana <span class="tooltip"><strong>Collider</strong><span class="tooltiptext">Bentuk tak terlihat yang digunakan untuk menangani tabrakan fisik untuk objek. Seorang sari tidak perlu menjadi bentuk yang sama dengan jala objek - perkiraan kasar sering lebih efisien dan tidak dapat dibedakan dalam gameplay. <a href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Collider">Glossary</a></span></span></span> Terrain ini berinteraksi dengan Collider lain di Adegan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Terrain Data</strong></td> 
+          <td style="text-align:left;">Login Aset yang menyimpan heightmaps, Terrain Textures, detail Mesh, dan Pohon.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Enable Tree Colliders</strong></td> 
+          <td style="text-align:left;">Periksa kotak ini untuk mengaktifkan Pohon Colliders.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2020–01–16 Login</span></p></li> 
+        <li><p><span class="page-history">Konten yang diperbarui untuk mencerminkan UI dan opsi baru</span></p></li> 
+       </ul> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="terrain-Heightmaps.html"></a></span> 
+         <div class="tip">
+           Bekerja dengan Heightmaps 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="terrain-Runtime.html"></a></span> 
+         <div class="tip">
+           Menggunakan Terrain pada runtime 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

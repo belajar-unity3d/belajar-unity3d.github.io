@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Preparing Assets untuk AssetBundles</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="cloud" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="AssetWorkflow.html">Arus kerja aset</a></li> 
+         <li><a href="AssetBundlesIntro.html">AssetBundles</a></li> 
+         <li>Aset Persiapan untuk AsetBundles</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="AssetBundles-Workflow.html"></a></span> 
+          <div class="tip">
+            AssetBundle workflow 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="AssetBundles-Building.html"></a></span> 
+          <div class="tip">
+            Aset Bangunan 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Aset Persiapan untuk AsetBundles</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Ketika menggunakan AssetBundles Anda bebas untuk menetapkan aset apapun untuk setiap bundel yang Anda inginkan. Namun, ada strategi tertentu untuk mempertimbangkan ketika mengatur bundel Anda. Strategi kelompok ini dimaksudkan untuk digunakan namun Anda melihat cocok untuk proyek spesifik Anda. Jangan ragu untuk mencampur dan mencocokkan strategi ini sesuai keinginan Anda.</p> 
+       <h2>Kelompok Entitas Logika</h2> 
+       <p>Entitas Logika Berkelompok adalah di mana aset ditugaskan untuk AssetBundles berdasarkan bagian fungsional proyek yang mereka wakili. Ini termasuk bagian seperti User-Interface, karakter, lingkungan, dan apa pun yang mungkin muncul sering sepanjang masa pakai aplikasi.</p> 
+       <h3>Examples</h3> 
+       <ul> 
+        <li>Memenuhi semua tekstur dan data tata letak untuk layar User-Interface</li> 
+        <li>Memenuhi semua model dan animasi untuk karakter / set karakter</li> 
+        <li>Memenuhi tekstur dan model untuk potongan-potongan pemandangan bersama di beberapa tingkat</li> 
+       </ul> 
+       <p>Kelompok Entitas Logika sangat ideal untuk konten yang dapat diunduh (DLC) untuk fakta bahwa, dengan segala sesuatu yang dipisahkan dengan cara ini, Anda dapat membuat perubahan pada entitas tunggal dan tidak memerlukan unduhan tambahan, tidak berubah, aset.</p> 
+       <p>Strik terbesar untuk dapat menerapkan strategi ini adalah bahwa pengembang menetapkan aset untuk bundel masing-masing harus akrab dengan tepat ketika dan di mana setiap aset akan digunakan oleh proyek.</p> 
+       <h2>Type Grouping</h2> 
+       <p>Untuk strategi ini Anda akan menetapkan aset yang jenis serupa, seperti trek audio atau file lokalisasi bahasa, ke aset tunggal.</p> 
+       <p>Jenis kelompok adalah salah satu strategi yang lebih baik untuk membangun AssetBundles untuk digunakan oleh beberapa platform. Misalnya jika pengaturan audio <span class="tooltip"><strong>compression</strong><span class="tooltiptext">Metode menyimpan data yang mengurangi jumlah ruang penyimpanan yang dibutuhkan. <a class="tooltipMoreInfoLink" href="class-TextureImporterOverride.html">Kompresi Tekstur</a>, <a href="class-AnimationClip.html#AssetProperties">Kompresi Animasi</a>, <a href="class-AudioClip.html">Kompresi Audio</a>, <a href="ReducingFilesize.html">Membangun Kompresi</a>.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#compression">Glossary</a></span></span></span> Anda identik antara platform windows dan mac, Anda dapat mengemas semua data audio ke AssetBundles sendiri dan menggunakan ulang bundel tersebut, sedangkan naungan cenderung dikompilasi dengan lebih banyak opsi spesifik platform sehingga bundel <span class="tooltip"><strong>shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Shader">Glossary</a></span></span></span> yang Anda bangun untuk mac mungkin tidak digunakan kembali di windows. Selain itu, metode ini sangat bagus untuk membuat AssetBundles Anda kompatibel dengan versi pemain lebih kesatuan sebagai format kompresi tekstur dan perubahan pengaturan kurang sering daripada sesuatu seperti kode <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Scripts">Glossary</a></span></span></span> atau <span class="tooltip"><strong>prefabs</strong><span class="tooltiptext">Jenis aset yang memungkinkan Anda untuk menyimpan GameObject lengkap dengan komponen dan properti. Prefab bertindak sebagai template dari mana Anda dapat membuat instance objek baru di tempat kejadian. <a href="Prefabs.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Prefab">Glossary</a></span></span></span>.</p> 
+       <h2>Concurrent Content Grouping</h2> 
+       <p>Concurrent Content Grouping adalah ide bahwa Anda akan menggabungkan aset bersama-sama yang akan dimuat dan digunakan pada saat yang sama. Anda dapat memikirkan jenis bundel ini karena digunakan untuk permainan berbasis tingkat di mana setiap tingkat mengandung karakter yang benar-benar unik, tekstur, musik, dll. Anda ingin benar-benar yakin bahwa aset dalam salah satu dari AssetBundles ini hanya digunakan pada saat yang sama sisa aset dalam bundel itu akan digunakan. Memiliki ketergantungan pada aset tunggal di dalam Bundel Kelompok Konten Koncurrent akan menghasilkan waktu beban yang meningkat. Anda akan dipaksa untuk mengunduh seluruh bundel untuk aset tunggal itu.</p> 
+       <p>Kasus penggunaan yang paling umum untuk bundel Grup Konten Koncurrent adalah untuk bundel yang didasarkan pada adegan. Dalam strategi penugasan ini, setiap bundel <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> harus mengandung sebagian besar atau semua ketergantungan adegan.</p> 
+       <p>Perhatikan bahwa proyek benar-benar dapat dan harus mencampur strategi ini sesuai kebutuhan Anda. Menggunakan strategi penugasan aset optimal untuk setiap skenario yang diberikan sangat meningkatkan efisiensi untuk setiap proyek.</p> 
+       <p>Sebagai contoh, sebuah proyek dapat memutuskan untuk mengelompokkan elemen User-Interface (UI) untuk platform yang berbeda ke dalam Bundel spesifik Platform-UI mereka sendiri tetapi mengelompokkan konten interaktif dengan level/scene.</p> 
+       <p>Terlepas dari strategi yang Anda ikuti, berikut adalah beberapa tips tambahan yang baik untuk diingat di papan:</p> 
+       <ul> 
+        <li>Objek yang sering diperbarui menjadi AssetBundles terpisah dari objek yang jarang berubah</li> 
+        <li>Objek kelompok yang cenderung dimuat secara bersamaan. Seperti model, teksturnya, dan animasinya</li> 
+        <li>Jika Anda melihat beberapa objek di beberapa AssetBundles tergantung pada aset tunggal dari Aset yang benar-benar berbeda, memindahkan ketergantungan pada AsetBundle terpisah. Jika beberapa AssetBundles merujuk pada kelompok aset yang sama di AsetBundles lain, mungkin layak menarik ketergantungan tersebut menjadi Aset Bersama untuk mengurangi duplikasi.</li> 
+        <li>Jika dua set benda tidak mungkin untuk pernah dimuat pada saat yang sama, seperti aset Standard dan High Definition, pastikan mereka berada di AssetBundles mereka sendiri.</li> 
+        <li>Pertimbangkan terpisahkan AsetBundle jika kurang dari 50% dari bundel itu pernah sering dimuat pada saat yang sama</li> 
+        <li>Pertimbangkan menggabungkan AsetBundles yang kecil (kecuali dari lima hingga sepuluh aset) tetapi kontennya sering dimuat secara bersamaan</li> 
+        <li>Jika sekelompok objek hanya berbeda versi objek yang sama, pertimbangkan Varian AsetBundle</li> 
+       </ul> 
+       <!-- area:cloud --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="AssetBundles-Workflow.html"></a></span> 
+         <div class="tip">
+           AssetBundle workflow 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="AssetBundles-Building.html"></a></span> 
+         <div class="tip">
+           Aset Bangunan 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

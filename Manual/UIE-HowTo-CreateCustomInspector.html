@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Buat Inspektur Kustom</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UIToolkits.html"></a></li> 
+         <li><a href="UIElements.html"></a></li> 
+         <li><a href="UIE-Getting-Started.html">Mulai dengan UI Toolkit</a></li> 
+         <li>Buat Inspektur Kustom</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UIE-simple-ui-toolkit-workflow.html"></a></span> 
+          <div class="tip">
+            Sederhana UI Toolkit alur kerja 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UIE-HowTo-CreateRuntimeUI.html"></a></span> 
+          <div class="tip">
+            Membuat UI runtime pertama Anda 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Buat Inspektur Kustom</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Meskipun Unity menghasilkan <span class="tooltip"><strong>inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span> default untuk MonoBehaviours dan ScriptableObjects, ada alasan yang baik untuk menulis inspektur kustom, seperti:</p> 
+       <ul> 
+        <li>Buat representasi yang lebih user-friendly dari sifat skrip.</li> 
+        <li>Mengatur dan properti kelompok bersama.</li> 
+        <li>Menampilkan atau menyembunyikan bagian dari <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span> tergantung pada pilihan pengguna.</li> 
+        <li>Memberikan informasi tambahan tentang arti pengaturan dan properti individu.</li> 
+       </ul> 
+       <p>Membuat inspektur kustom menggunakan UI Toolkit mirip dengan menggunakan Immediate Mode GUI (IMGUI), tetapi UI Toolkit memiliki beberapa keunggulan, seperti mengikat data otomatis dan dukungan undo otomatis. Di mana IMGUI menciptakan UI untuk inspektur sepenuhnya melalui script, UI Toolkit memungkinkan Anda untuk membangun UI melalui script, secara visual di UI Builder, atau kombinasi keduanya.</p> 
+       <p>Anda dapat menemukan kode sumber akhir panduan ini di bagian bawah halaman ini <a href="#finalCode">here</a>.</p> 
+       <p>Dalam panduan ini, Anda akan membuat inspektur kustom untuk kelas MonoBehaviour, menggunakan kedua <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Scripts">Glossary</a></span></span></span> dan UXML (menggunakan UI Builder) untuk membuat UI. Inspektur kustom juga akan menampilkan <span class="tooltip"><strong>property drawers</strong><span class="tooltiptext">Fitur Unity yang memungkinkan Anda untuk menyesuaikan tampilan kontrol tertentu di jendela Inspektur dengan menggunakan atribut pada skrip Anda, atau dengan mengendalikan bagaimana kelas Serializable tertentu harus terlihat <a href="editor-PropertyDrawers.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#PropertyDrawer">Glossary</a></span></span></span> kustom.</p> 
+       <h2>Prerequisites</h2> 
+       <p>Panduan ini adalah untuk pengembang yang akrab dengan Unity, tetapi baru ke UI Toolkit. Disarankan untuk memiliki pemahaman dasar dari Unity dan C# scripting.</p> 
+       <p>Panduan ini juga merujuk pada konsep berikut:</p> 
+       <ul> 
+        <li><a href="UIE-VisualTree.html">Pohon Visual</a></li> 
+        <li><a href="UIE-Binding.html">Data binding</a></li> 
+       </ul> 
+       <h2>Content</h2> 
+       <p><strong>Topics covered:</strong></p> 
+       <ul> 
+        <li>Pembuat UI</li> 
+        <li><a href="../ScriptReference/UIElements.Foldout.html">Foldout</a></li> 
+        <li><a href="../ScriptReference/UIElements.PropertyField.html">PropertyField</a></li> 
+        <li><a href="../ScriptReference/PropertyDrawer.html">PropertyDrawer</a></li> 
+        <li><a href="../ScriptReference/UIElements.InspectorElement.html">InspectorElement</a></li> 
+       </ul> 
+       <p>Dalam panduan ini, Anda akan melakukan hal berikut:</p> 
+       <ul> 
+        <li>Membuat MonoBehaviour baru</li> 
+        <li>Membuat skrip inspektur kustom</li> 
+        <li>Menggunakan UXML di dalam inspektur kustom</li> 
+        <li>Undo dan mengikat data</li> 
+        <li>Membuat inspektur default</li> 
+        <li>Bidang properti</li> 
+        <li>Membuat laci properti kustom</li> 
+       </ul> 
+       <h2>Buat MonoBehaviour baru</h2> 
+       <p>Untuk memulai, Anda perlu membuat kelas kustom yang dapat membuat inspektur kustom untuk, yang merupakan <code>MonoBehaviour</code> atau <code>ScriptableObject</code>. Panduan ini bekerja dengan skrip <code>MonoBehaviour</code> yang mewakili mobil sederhana dengan properti, seperti model dan warna.</p> 
+       <p>Buat file skrip baru <code>Car.cs</code> di dalam <strong>Assets/Scripts</strong> dan salin kode berikut ke dalamnya.</p> 
+       <pre><code class="lang-csharp">using UnityEngine;
+
+public class Car : MonoBehaviour
+{
+  public string m_Make = "Toyota";
+  public int m_YearBuilt = 1980;
+  public Color m_Color = Color.black;
+}
+</code></pre> 
+       <p>Buat <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#GameObject">Glossary</a></span></span></span> baru di komponen skrip <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> dan melampirkan komponen skrip <code>Car</code> ke dalamnya.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-custominspector-defaultinspector.png" alt="Default inspector for the Car object"> 
+        <figcaption>
+          Inspektur default untuk objek mobil 
+        </figcaption> 
+       </figure> 
+       <h2>Buat skrip inspektur kustom</h2> 
+       <p>Untuk membuat inspektur kustom untuk setiap objek serial, Anda perlu membuat kelas berkembang dari kelas dasar <a href="../ScriptReference/Editor.html">Editor</a>, dan tambahkan atribut <a href="../ScriptReference/CustomEditor.html">CustomEditor</a> untuk itu. Atribut ini memungkinkan Unity tahu kelas inspektur kustom ini mewakili. Aliran kerja untuk ini di UI Toolkit identik dengan <a href="editor-CustomEditors.html">GUI (IMGUI)</a>.</p> 
+       <p>Buat file <code>Car_Inspector.cs</code> di dalam <strong>Assets/Scripts/Editor</strong> dan salin kode berikut ke dalamnya.</p> 
+       <pre><code class="lang-csharp">using UnityEditor;
+using UnityEditor.UIElements;
+using UnityEngine.UIElements;
+
+[CustomEditor(typeof(Car))]
+public class Car_Inspector : Editor
+{
+}
+</code></pre> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Note</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">File inspektur kustom harus berada di dalam folder <code>Editor</code>, atau dalam definisi perakitan Editor-only. Mencoba untuk membuat build mandiri akan gagal, sebagai ruang nama UnityEditor tidak tersedia.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Jika Anda memilih GameObject Anda dengan komponen <code>Car</code> pada titik ini, Unity masih akan menampilkan inspektur default. Anda harus menimpa <a href="EScriptRef:ditor.CreateInspectorGUI">CreateInspectorGUI()</a> di dalam kelas <code>Car_Inspector</code> Anda untuk menggantikan inspektur default.</p> 
+       <p>Fungsi <code>CreateInspectorGUI()</code> membangun pohon visual untuk inspektur. Fungsi perlu mengembalikan VisualElement yang mengandung UI. Pelaksanaan <code>CreateInspectorGUI()</code> di bawah ini menciptakan VisualElement baru kosong dan menambahkan label ke dalamnya.</p> 
+       <p>Override fungsi <code>CreateInspectorGUI()</code> di dalam skrip <code>Car_Inspector</code> Anda dan salin kode di bawah ini.</p> 
+       <pre><code class="lang-csharp">public override VisualElement CreateInspectorGUI()
+{
+  // Create a new VisualElement to be the root of our inspector UI
+  VisualElement myInspector = new VisualElement();
+
+  // Add a simple label
+  myInspector.Add(new Label("This is a custom inspector"));
+
+  // Return the finished inspector UI
+  return myInspector;
+}
+</code></pre> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-custominspector-label.png" alt="Custom inspector with a label"> 
+        <figcaption>
+          Inspektur kustom dengan label 
+        </figcaption> 
+       </figure> 
+       <h2>Gunakan UXML di dalam inspektur kustom</h2> 
+       <p>UI Toolkit memungkinkan Anda untuk menambahkan kontrol UI dalam dua cara:</p> 
+       <ul> 
+        <li>Menerapkan skrip</li> 
+        <li>Memuat file UXML yang mengandung pohon UI yang sudah dibuat sebelumnya.</li> 
+       </ul> 
+       <p>Bagian ini akan menggunakan UI Builder untuk membuat file UXML yang mengandung UI, dan menggunakan kode untuk memuat dan mengulang UI dari file UXML.</p> 
+       <p>Buka UI Builder melalui menu <strong>Window &gt; UI Toolkit &gt; UI Builder</strong> dan buat Aset Visual Tree baru menggunakan entri menu <strong>File &gt; New</strong> di dalam UI Builder.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-custominspector-uibuilder-new.png" alt="Custom inspector with a label"> 
+        <figcaption>
+          Inspektur kustom dengan label 
+        </figcaption> 
+       </figure> 
+       <p>UI Toolkit menawarkan jenis kontrol tambahan ketika Anda menggunakannya untuk membuat jendela Editor dan inspektur kustom. Secara default, kontrol Editor-only ini tidak terlihat dalam Pembuat UI. Untuk membuat mereka tersedia, Anda perlu mengaktifkan kotak cemen.<strong>Editor Extension Authoring</strong>.</p> 
+       <p>Pilih <code>&lt;unsaved file&gt;*.uxml</code> dalam tampilan <strong>Hierarchy</strong> di UI Builder dan mengaktifkan kotak cemen.<strong>Editor Extension Authoring</strong> checkbox.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-custominspector-uibuilder-extensionauthoring.png" alt="Custom inspector with a label"> 
+        <figcaption>
+          Inspektur kustom dengan label 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Note</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Jika Anda menggunakan UI Toolkit untuk membuat jendela Editor dan inspektur kustom, Anda dapat mengaktifkan pengaturan ini secara default di <strong>Project Settings &gt; UI Builder</strong>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Untuk menambahkan kontrol ke UI, pilih dari <strong>Library</strong> dan tarik ke <strong>Hierarchy</strong> di atas. Anda tidak perlu menyesuaikan posisi atau ukuran kontrol baru kecuali Anda ingin memodifikasi tata letak otomatis. Secara default, label menggunakan seluruh lebar panel yang tersedia dan tinggi menyesuaikan dengan ukuran font yang dipilih.</p> 
+       <p>Tambahkan kontrol label ke pohon visual dengan menyeretnya dari <strong>Library</strong> ke <strong>Hierarchy</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-custominspector-uibuilder-label.png" alt="Custom inspector with a label"> 
+        <figcaption>
+          Inspektur kustom dengan label 
+        </figcaption> 
+       </figure> 
+       <p>Anda dapat mengubah teks di dalam label dengan memilih dan mengubah teks dalam inspektur elemen di sisi kanan editor UI Builder.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-custominspector-uibuilder-text.png" alt="Custom inspector with a label"> 
+        <figcaption>
+          Inspektur kustom dengan label 
+        </figcaption> 
+       </figure> 
+       <p>Ketika UI Builder menyimpan pohon visual, itu menyimpannya sebagai <a href="../ScriptReference/UIElements.VisualTreeAsset.html">Aset Pohon Visual</a> dalam format UXML. Anda dapat mempelajari lebih lanjut tentang ini pada <a href="UIE-UXML.html">UXML documentation page</a>.</p> 
+       <p>UXML di bawah menampilkan kode yang dihasilkan oleh UI Builder dari langkah-langkah sebelumnya:</p> 
+       <pre><code class="lang-xml">&lt;ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True"&gt;
+    &lt;ui:Label text="Label created in UI Builder" /&gt;
+&lt;/ui:UXML&gt;
+</code></pre> 
+       <p>Simpan pohon visual yang Anda buat di bawah <strong>Asset &gt; Script &gt; Editor</strong> sebagai <code>Car_Inspector_UXML.uxml</code>, gunakan menu <strong>File</strong> di UI Builder.</p> 
+       <p>Untuk menggunakan file UX yang Anda buat di dalam inspektur kustom Anda, Anda perlu memuat dan mengacaukannya di dalam fungsi <code>CreateInspectorGUI()</code> dan menambahkannya ke pohon visual. Untuk melakukan ini, Anda menggunakan metode <a href="../ScriptReference/UIElements.VisualTreeAsset.CloneTree.html">CloneTree</a>. Anda dapat lulus setiap <code>VisualElement</code> sebagai parameter untuk bertindak sebagai orang tua untuk elemen yang dibuat.</p> 
+       <p>Modifikasi fungsi <code>CreateInspectorGUI()</code> untuk clone pohon visual di dalam file UXML dan menggunakannya dalam inspektur kustom Anda.</p> 
+       <pre><code class="lang-csharp">public override VisualElement CreateInspectorGUI()
+{
+  // Create a new VisualElement to be the root of our inspector UI
+  VisualElement myInspector = new VisualElement();
+
+  // Add a simple label
+  myInspector.Add(new Label("This is a custom inspector"));
+
+  // Load and clone a visual tree from UXML
+  VisualTreeAsset visualTree = AssetDatabase.LoadAssetAtPath&lt;VisualTreeAsset&gt;("Assets/Scripts/Editor/Car_Inspector_UXML.uxml");
+  visualTree.CloneTree(myInspector);
+
+  // Return the finished inspector UI
+  return myInspector;
+}
+</code></pre> 
+       <p>Inspektur untuk komponen <code>car</code> sekarang menampilkan dua label yang dibuat: satu melalui script, dan satu melalui UI Builder / UXML.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-custominspector-labels.png" alt="Custom inspector with two labels label"> 
+        <figcaption>
+          Inspektur kustom dengan dua label 
+        </figcaption> 
+       </figure> 
+       <p>Kode harus memuat file Visual Tree Asset (UXML) untuk mengacaukan pohon visual, dan menggunakan jalur yang dikodekan keras dan nama file. Namun, file yang sulit dikodekan tidak dianjurkan, karena jika sifat file berubah, seperti path atau nama file, itu mungkin membatalkan kode.</p> 
+       <p>Solusi yang lebih baik untuk mengakses Aset Pohon Visual adalah untuk menggunakan referensi ke file aset. GUID di dalam file meta menyimpan referensi file. Jika Anda mengubah nama atau memindahkan file, GUID tetap tidak berubah, dan Unity masih akan dapat menemukan dan memuat file dari lokasi baru.</p> 
+       <p>Untuk <span class="tooltip"><strong>Prefabs</strong><span class="tooltiptext">Jenis aset yang memungkinkan Anda untuk menyimpan GameObject lengkap dengan komponen dan properti. Prefab bertindak sebagai template dari mana Anda dapat membuat instance objek baru di tempat kejadian. <a class="tooltipMoreInfoLink" href="Prefabs.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Prefab">Glossary</a></span></span></span> dan ScriptableObjects, Anda dapat menetapkan referensi ke file lain di Editor. Untuk file skrip, Unity memungkinkan pengaturan <code>Default Reference</code>. Jika Anda menyatakan bidang publik tipe <code>VisualTreeAsset</code> di kelas jendela, Inspektur menawarkan kemampuan untuk menyeret referensi ke bidang objek yang sesuai. Ini berarti bahwa setiap contoh baru kelas <code>Car_Inspector</code> yang diisi dengan referensi yang ditetapkan ke objek <code>VisualTreeAsset</code> yang sesuai. Ini adalah cara yang disarankan untuk menetapkan file UXML untuk memeriksa kustom dan skrip jendela Editor.</p> 
+       <p>Buat variabel publik untuk <code>VisualTreeAsset</code> di script Anda, dan menetapkan file <code>Car_Inspector_UXML.uxml</code> sebagai referensi default di Editor.</p> 
+       <pre><code class="lang-csharp">public VisualTreeAsset m_InspectorXML;
+</code></pre> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-custominspector-defaultreference.png" alt="Custom inspector with two labels label"> 
+        <figcaption>
+          Inspektur kustom dengan dua label 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Note</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Referensi default hanya bekerja di Editor. Mereka tidak bekerja dengan komponen runtime dalam membangun mandiri menggunakan metode AddComponent().</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Dengan set referensi default, Anda tidak perlu lagi memuat <code>VisualTreeAsset</code> menggunakan fungsi <code>LoadAssetAtPath</code>. Sebaliknya, Anda dapat menggunakan <a href="../ScriptReference/UIElements.VisualTreeAsset.CloneTree.html">CloneTree</a> langsung pada referensi ke file UXML Anda.</p> 
+       <p>Ini mengurangi kode dalam metode <code>CreateInspectorGUI()</code> ke 3 baris.</p> 
+       <pre><code class="lang-csharp">public VisualTreeAsset m_InspectorXML;
+
+public override VisualElement CreateInspectorGUI()
+{
+  // Create a new VisualElement to be the root of our inspector UI
+  VisualElement myInspector = new VisualElement();
+
+  // Load from default reference
+  m_InspectorXML.CloneTree(myInspector);
+
+  // Return the finished inspector UI
+  return myInspector;
+}
+</code></pre> 
+       <h2>Undo dan mengikat data</h2> 
+       <p>Tujuan dari inspektur kustom ini adalah untuk menampilkan semua sifat kelas <code>Car</code>. Ketika pengguna memodifikasi kontrol UI, nilai-nilai dalam kasus kelas <code>Car</code> juga harus berubah. Untuk melakukannya, Anda perlu menambahkan kontrol UI ke pohon visual dan menghubungkannya ke properti individu kelas.</p> 
+       <p>UI Toolkit mendukung menghubungkan kontrol UI ke properti serialisasi dengan <strong><a href="UIE-Binding.html">data binding</a></strong>. Kontrol yang terikat dengan properti serialisasi secara otomatis menampilkan nilai saat ini properti, dan mereka juga secara otomatis memperbarui nilai properti jika pengguna mengubahnya di UI. Anda tidak perlu menulis kode yang mengambil nilai dari kontrol dan menulis kembali ke properti, seperti Anda akan di IMGUI.</p> 
+       <p>Tambahkan kontrol <code>TextField</code> untuk properti <code>m_Make</code> mobil ke inspektur menggunakan UI Builder.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-custominspector-textfield.png" alt="Adding a text field to the UI"> 
+        <figcaption>
+          Menambahkan kolom teks ke UI 
+        </figcaption> 
+       </figure> 
+       <p>Untuk mengikat kontrol ke properti serial, menetapkan properti ke bidang <code>binding-path</code> dari kontrol. Anda dapat melakukan ini dalam kode, UXML atau UI Builder. Properti cocok dengan nama, jadi pastikan untuk memeriksa ejaan Anda.</p> 
+       <p>Bind <code>TextField</code> baru untuk properti <code>m_Make</code> di UI Builder.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-custominspector-binding.png" alt="Binding a property to a control in UI Builder"> 
+        <figcaption>
+          Mengikat properti untuk kontrol di UI Builder 
+        </figcaption> 
+       </figure> 
+       <p>Di bawah ini adalah kode UX untuk UI inspektur, termasuk atribut pengikat data.</p> 
+       <pre><code class="lang-uxml">&lt;ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True"&gt;
+    &lt;ui:TextField label="Make of the car" text="&amp;lt;not set&amp;gt;" binding-path="m_Make" /&gt;
+&lt;/ui:UXML&gt;
+</code></pre> 
+       <p>Ketika Anda mengatur jalur mengikat dari kontrol, Anda memberi tahu kontrol nama properti serial harus terhubung ke. Tapi kontrol masih perlu menerima dan kasus objek serialisasi yang milik properti. Anda dapat menggunakan metode <a href="../ScriptReference/UIElements.BindingExtensions.html">Login Login</a> untuk mengikat objek serialisasi seperti <code>MonoBehaviour</code> ke seluruh Pohon Visual, dan kontrol individu akan mengikat sifat yang tepat pada objek tersebut.</p> 
+       <p>Ketika menulis inspektur kustom, mengikat otomatis. <code>CreateInspectorGUI()</code> adalah mengikat implicit setelah Anda mengembalikan pohon visual Anda. Untuk mempelajari lebih lanjut, lihat halaman dokumentasi pada <strong><a href="UIE-Binding.html">Data binding</a></strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-custominspector-firstproperty.png" alt="Custom inspector showing a text field"> 
+        <figcaption>
+          Inspektur kustom menunjukkan bidang teks 
+        </figcaption> 
+       </figure> 
+       <p>Karena UI Toolkit bekerja dengan properti serial, tidak ada kode tambahan yang diperlukan untuk mendukung fungsi Undo/Redo. Ini didukung secara otomatis.</p> 
+       <h2>Bidang properti</h2> 
+       <p>Untuk menampilkan sifat kelas <code>Car</code>, Anda harus menambahkan kontrol untuk setiap bidang. Kontrol harus sesuai dengan jenis properti sehingga dapat terikat. Sebagai contoh, <code>int</code> harus terikat pada bidang Integer atau penggeser.</p> 
+       <p>Alih-alih menambahkan kontrol spesifik berdasarkan jenis properti, Anda juga dapat menggunakan kontrol generik <a href="../ScriptReference/UIElements.PropertyField.html">PropertyField</a>. Kontrol ini bekerja untuk sebagian besar jenis properti serial, dan menghasilkan UI inspektur default untuk jenis properti ini.</p> 
+       <p>Tambahkan kontrol <code>PropertyField</code> untuk sifat <code>m_YearBuilt</code> dan <code>m_Color</code> kelas <code>Car</code>. Menetapkan jalur mengikat untuk setiap dan mengisi teks <code>Label</code>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-custominspector-uibuilder-propertyfield.png" alt="Adding a property field in UI Builder"> 
+        <figcaption>
+          Menambahkan bidang properti di UI Builder 
+        </figcaption> 
+       </figure> 
+       <p>Keuntungan dari <code>PropertyField</code> adalah UI inspektur akan secara otomatis menyesuaikan ketika Anda mengubah jenis variabel di dalam skrip Anda. Namun, Anda tidak bisa mendapatkan pratinjau kontrol di dalam UI Builder, karena jenis kontrol yang diperlukan tidak diketahui sampai pohon visual terikat dengan objek serial, dan UI Toolkit dapat menentukan jenis properti.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-custominspector-custominspector.png" alt="Custom inspector with property fields"> 
+        <figcaption>
+          Inspektur kustom dengan bidang properti 
+        </figcaption> 
+       </figure> 
+       <h2>Buat laci properti kustom</h2> 
+       <p>Sebuah laci properti kustom adalah UI inspektur kustom untuk kelas serializable kustom. Jika kelas serializable adalah bagian dari objek serialisasi lain, UI kustom menampilkan properti dalam inspektur. Dalam UI Toolkit, kontrol <code>PropertyField</code> menampilkan laci properti kustom untuk lapangan jika satu ada.</p> 
+       <p>Buat skrip baru <code>Tire.cs</code> dalam <strong>Assets/Scripts</strong> dan salin kode berikut ke file:</p> 
+       <pre><code class="lang-csharp">[System.Serializable]
+public class Tire
+{
+  public float m_AirPressure = 21.5f;
+  public int m_ProfileDepth = 4;
+}
+</code></pre> 
+       <p>Tambahkan daftar <code>Tire</code> ke kelas <code>Car</code> seperti yang ditunjukkan dalam kode di bawah ini:</p> 
+       <pre><code class="lang-csharp">public class Car : MonoBehaviour
+{
+  public string m_Make = "Toyota";
+  public int m_YearBuilt = 1980;
+  public Color m_Color = Color.black;
+
+  // This car has four tires
+  public Tire[] m_Tires = new Tire[4];
+}
+</code></pre> 
+       <p>Kontrol <code>PropertyField</code> bekerja dengan semua jenis properti standar, tetapi juga mendukung kelas dan array serializable kustom. Untuk menampilkan sifat ban mobil, tambahkan <code>PropertyField</code> lain di UI Builder dan mengikatnya ke <code>m_Tires</code>.</p> 
+       <p>Tambahkan kontrol <code>PropertyField</code> untuk properti <code>m_Tires</code>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-custominspector-serializable.png" alt="Using a PropertyField control to display an array"> 
+        <figcaption>
+          Menggunakan Properti Kontrol lapangan untuk menampilkan array 
+        </figcaption> 
+       </figure> 
+       <p>Anda dapat menemukan kode UXML dari <code>Car_Inspector_UXML.uxml</code> yang dihasilkan untuk UI inspektur saat ini di bawah ini:</p> 
+       <pre><code class="lang-uxml">&lt;ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True"&gt;
+    &lt;ui:TextField label="Make of the car" text="&amp;lt;not set&amp;gt;" binding-path="m_Make" /&gt;
+    &lt;uie:PropertyField label="Year Built" binding-path="m_YearBuilt" /&gt;
+    &lt;uie:PropertyField binding-path="m_Color" label="Paint Color" /&gt;
+    &lt;uie:PropertyField binding-path="m_Tires" label="Tires" /&gt;
+&lt;/ui:UXML&gt;
+</code></pre> 
+       <p>Penggambar properti kustom memungkinkan Anda untuk menyesuaikan tampilan elemen <code>Tire</code> individu dalam daftar. Dari kelas dasar <code>Editor</code>, laci properti kustom berasal dari kelas <strong><a href="../ScriptReference/PropertyDrawer.html">PropertyDrawer</a></strong>. Untuk membuat UI untuk properti kustom, Anda perlu menimpa metode <a href="../ScriptReference/PropertyDrawer.CreatePropertyGUI.html">CreatePropertyGUI</a>.</p> 
+       <p>Buat skrip baru <code>Tire_PropertyDrawer.cs</code> di dalam folder <strong>Assets/Scripts/Editor</strong> dan salin kode di bawahnya.</p> 
+       <pre><code class="lang-csharp">using UnityEditor;
+using UnityEditor.UIElements;
+using UnityEngine.UIElements;
+
+[CustomPropertyDrawer(typeof(Tire))]
+public class Tire_PropertyDrawer : PropertyDrawer
+{
+  public override VisualElement CreatePropertyGUI(SerializedProperty property)
+  {
+    // Create a new VisualElement to be the root the property UI
+    var container = new VisualElement();
+
+    // Create drawer UI using C#
+    // ...
+
+    // Return the finished UI
+    return container;
+  }
+}
+</code></pre> 
+       <p>Anda dapat menggunakan kode dan UXML untuk membuat UI untuk properti, seperti dalam inspektur yang disesuaikan. Contoh ini menggunakan kode untuk membuat UI kustom.</p> 
+       <p>Buat UI kustom untuk laci properti kelas <code>Tire</code> dengan memperluas metode <code>CreatePropertyGUI</code> seperti yang ditunjukkan di bawah ini.</p> 
+       <pre><code class="lang-csharp">public override VisualElement CreatePropertyGUI(SerializedProperty property)
+{
+  // Create a new VisualElement to be the root the property UI
+  var container = new VisualElement();
+
+  // Create drawer UI using C#
+  var popup = new UnityEngine.UIElements.PopupWindow();
+  popup.text = "Tire Details";
+  popup.Add(new PropertyField(property.FindPropertyRelative("m_AirPressure"), "Air Pressure (psi)"));
+  popup.Add(new PropertyField(property.FindPropertyRelative("m_ProfileDepth"), "Profile Depth (mm)"));
+  container.Add(popup);
+
+  // Return the finished UI
+  return container;
+}
+</code></pre> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-custominspector-custompropertydrawer.png" alt="Inspector using a custom property drawer"> 
+        <figcaption>
+          Inspektur menggunakan laci properti kustom 
+        </figcaption> 
+       </figure> 
+       <p>Untuk informasi lebih lanjut tentang laci properti, silakan lihat dokumentasi <strong><a href="../ScriptReference/PropertyDrawer.html">PropertyDrawer</a></strong> </p> 
+       <h2>Buat inspektur default</h2> 
+       <p>Selama pengembangan inspektur kustom itu membantu untuk menjaga akses ke inspektur default. Dengan UI Toolkit, sederhana untuk menambahkan UI inspektur default ke UI kustom Anda.</p> 
+       <p>Tambahkan kontrol <code>Foldout</code> ke UI Anda di UI Builder, nama <strong>Default_Inspector</strong> dan menetapkan teks label:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-custominspector-uibuilder-foldout.png" alt="Foldout for the Default Inspector"> 
+        <figcaption>
+          Lipatan untuk Inspektur Default 
+        </figcaption> 
+       </figure> 
+       <p>Anda akan menggunakan UI Builder untuk membuat lipatan, tetapi bukan inspektur. Konten inspektur default menghasilkan dalam skrip inspektur dan melampirkan kontrol lipat melalui kode.</p> 
+       <p>Untuk melampirkan UI inspektur default ke lipatan yang Anda buat di UI Builder, Anda harus mendapatkan referensi untuk itu. Anda dapat mengambil elemen visual lipatan dari pohon visual dari inspektur Anda. Ini dilakukan menggunakan keluarga <a href="UIE-UQuery.html">UQuery</a> API. Anda dapat mengambil elemen individu di dalam UI Anda dengan nama, kelas AS atau dengan jenis, atau kombinasi atribut ini.</p> 
+       <p>Dapatkan referensi untuk kontrol <code>Foldout</code> di dalam metode <code>CreateInspectorGUI</code> Anda, menggunakan nama yang Anda set di UI Builder.</p> 
+       <pre><code class="lang-csharp">// Get a reference to the default inspector foldout control
+VisualElement inspectorFoldout = myInspector.Q("Default_Inspector");
+</code></pre> 
+       <p>Metode <a href="../ScriptReference/UIElements.InspectorElement.FillDefaultInspector.html">FillDefaultInspector</a> dari <a href="../ScriptReference/InspectorElement.html">InspectorElement</a> menciptakan pohon visual dengan inspektur default untuk objek serial dan melampirkannya ke elemen visual induk yang dilewatkan ke metode sebagai parameter.</p> 
+       <p>Buat dan melampirkan inspektur default ke lipatan menggunakan kode di bawah ini:</p> 
+       <pre><code class="lang-csharp">// Attach a default inspector to the foldout
+InspectorElement.FillDefaultInspector(inspectorFoldout, serializedObject, this);
+</code></pre> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-custominspector-foldoutinspector.png" alt="Foldout with the Default Inspector"> 
+        <figcaption>
+          Lipat dengan Inspektur Default 
+        </figcaption> 
+       </figure> 
+       <h2>Sitemap skrip akhir<a name="finalCode"></a>Final scripts</h2> 
+       <p>Di bawah ini Anda dapat menemukan kode sumber penuh untuk semua file yang dibuat dalam panduan ini.</p> 
+       <h3>Car.cs</h3> 
+       <pre><code class="lang-csharp">using UnityEngine;
+
+public class Car : MonoBehaviour
+{
+  public string m_Make = "Toyota";
+  public int m_YearBuilt = 1980;
+  public Color m_Color = Color.black;
+
+  // This car has four tires
+  public Tire[] m_Tires = new Tire[4];
+}
+</code></pre> 
+       <h3>Mobil_Inspector.cs</h3> 
+       <pre><code class="lang-csharp">using UnityEditor;
+using UnityEditor.UIElements;
+using UnityEngine.UIElements;
+
+[CustomEditor(typeof(Car))]
+public class Car_Inspector : Editor
+{
+  public VisualTreeAsset m_InspectorXML;
+
+  public override VisualElement CreateInspectorGUI()
+  {
+    // Create a new VisualElement to be the root of our inspector UI
+    VisualElement myInspector = new VisualElement();
+
+    // Load from default reference
+    m_InspectorXML.CloneTree(myInspector);
+
+    // Get a reference to the default inspector foldout control
+    VisualElement inspectorFoldout = myInspector.Q("Default_Inspector");
+
+    // Attach a default inspector to the foldout
+    InspectorElement.FillDefaultInspector(inspectorFoldout, serializedObject, this);
+
+    // Return the finished inspector UI
+    return myInspector;
+  }
+}
+</code></pre> 
+       <h3>Car_Inspector_UXML.uxml</h3> 
+       <pre><code class="lang-uxml">&lt;ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True"&gt;
+    &lt;ui:TextField label="Make of the car" text="&amp;lt;not set&amp;gt;" binding-path="m_Make" /&gt;
+    &lt;uie:PropertyField label="Year Built" binding-path="m_YearBuilt" /&gt;
+    &lt;uie:PropertyField binding-path="m_Color" label="Paint Color" /&gt;
+    &lt;uie:PropertyField binding-path="m_Tires" label="Tires" /&gt;
+    &lt;ui:Foldout text="Default Inspector" name="Default_Inspector" /&gt;
+&lt;/ui:UXML&gt;
+</code></pre> 
+       <h3>Tire.cs</h3> 
+       <pre><code class="lang-csharp">[System.Serializable]
+public class Tire
+{
+  public float m_AirPressure = 21.5f;
+  public int m_ProfileDepth = 4;
+}
+</code></pre> 
+       <h3>Tire_Property.cs</h3> 
+       <pre><code class="lang-csharp">using UnityEditor;
+using UnityEditor.UIElements;
+using UnityEngine.UIElements;
+
+[CustomPropertyDrawer(typeof(Tire))]
+public class Tire_PropertyDrawer : PropertyDrawer
+{
+  public override VisualElement CreatePropertyGUI(SerializedProperty property)
+  {
+    // Create a new VisualElement to be the root the property UI
+    var container = new VisualElement();
+
+    // Create drawer UI using C#
+    var popup = new UnityEngine.UIElements.PopupWindow();
+    popup.text = "Tire Details";
+    popup.Add(new PropertyField(property.FindPropertyRelative("m_AirPressure"), "Air Pressure (psi)"));
+    popup.Add(new PropertyField(property.FindPropertyRelative("m_ProfileDepth"), "Profile Depth (mm)"));
+    container.Add(popup);
+
+    // Return the finished UI
+    return container;
+  }
+}
+</code></pre> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UIE-simple-ui-toolkit-workflow.html"></a></span> 
+         <div class="tip">
+           Sederhana UI Toolkit alur kerja 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UIE-HowTo-CreateRuntimeUI.html"></a></span> 
+         <div class="tip">
+           Membuat UI runtime pertama Anda 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy"> 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

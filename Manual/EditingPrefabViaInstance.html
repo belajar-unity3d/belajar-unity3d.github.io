@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Mengedit Prefab melalui instancenya</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="CreatingGameplay.html">Membuat Gameplay</a></li> 
+         <li><a href="Prefabs.html">Prefabs</a></li> 
+         <li>Mengedit Prefab melalui contohnya</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="PrefabInstanceOverrides.html"></a></span> 
+          <div class="tip">
+            Instance overrides 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="NestedPrefabs.html"></a></span> 
+          <div class="tip">
+            Nested Prefabs 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Mengedit Prefab melalui contohnya</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p><span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Inspector">Glossary</a></span></span></span> untuk akar instance <span class="tooltip"><strong>Prefab</strong><span class="tooltiptext">Jenis aset yang memungkinkan Anda untuk menyimpan GameObject lengkap dengan komponen dan properti. Prefab bertindak sebagai template dari mana Anda dapat membuat instance objek baru di tempat kejadian. <a href="Prefabs.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Prefab">Glossary</a></span></span></span> memiliki tiga kontrol lebih dari <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> normal: <strong>Open</strong>, <strong>Select</strong> dan <strong>Overrides</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PrefabsInspectorControls1.png" alt="The three Prefab controls in the Inspector window for a Prefab instance"> 
+        <figcaption>
+          Tiga kontrol prefab di jendela Inspektur untuk instance Prefab 
+        </figcaption> 
+       </figure> 
+       <p>Tombol <strong>Open</strong> membuka Aset Prefab bahwa instancenya dari dalam Mode Prefab, memungkinkan Anda untuk mengedit Aset Prefab dan dengan demikian mengubah semua instancenya. Tombol <strong>Select</strong> memilih Aset Prefab yang instance ini dari dalam <span class="tooltip"><strong>Project window</strong><span class="tooltiptext">Jendela yang menunjukkan isi folder <code>Assets</code> (Project tab) <a class="tooltipMoreInfoLink" href="ProjectView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Projectwindow">Glossary</a></span></span></span>. Tombol <strong>Overrides</strong> membuka jendela drop-down overrides.</p> 
+       <p><a name="OverridesDropdown"></a></p> 
+       <h2>Overrides dropdown</h2> 
+       <p>Jendela drop-down <strong>Overrides</strong> menunjukkan semua overrides pada instance Prefab. Ini juga memungkinkan Anda menerapkan overrides dari instance ke Aset Prefab, atau mengalihkan overrides pada instance kembali ke nilai-nilai pada Aset Prefab. Tombol drop-down <strong>Overrides</strong> hanya muncul untuk instance prefab akar, bukan untuk Prefab yang berada di dalam Prefab lain.</p> 
+       <p>Jendela drop-down <strong>Overrides</strong> memungkinkan Anda untuk menerapkan atau mengubah override prefab secara individual, atau menerapkan atau mengalihkan semua override prefab dalam satu arah.</p> 
+       <ul> 
+        <li><p> <strong>Applying</strong> override memodifikasi Aset Prefab. Ini menempatkan override (yang saat ini hanya pada instance Prefab Anda) ke Aset. Ini berarti Aset Prefab sekarang memiliki modifikasi, dan instance Prefab tidak lagi memiliki modifikasi sebagai override.</p></li> 
+        <li><p> <strong>Reverting</strong> override memodifikasi instance Prefab. Ini pada dasarnya membuang override Anda dan mengalihkan kembali ke keadaan Aset Prefab.</p></li> 
+       </ul> 
+       <p>Jendela drop-down menunjukkan daftar perubahan pada kasus dalam bentuk komponen yang dimodifikasi, ditambahkan dan dihapus, dan menambahkan GameObjects (termasuk Prefab lain).</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PrefabsOverridesDropdown1.png" alt="The Overrides dropdown in the Inspector window when viewing a Prefab instance"> 
+        <figcaption>
+          Overrides dropdown di jendela Inspektur ketika melihat instance Prefab 
+        </figcaption> 
+       </figure> 
+       <p>Untuk memeriksa entri, klik. Ini menampilkan pandangan mengambang yang menunjukkan perubahan dan memungkinkan Anda untuk mengalihkan atau menerapkan perubahan itu.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PrefabsOverridesDropdownAddedComponent1.png" alt="The overrides dropdown window with an added component override selected"> 
+        <figcaption>
+          Jendela dropdown overrides dengan override komponen tambahan yang dipilih 
+        </figcaption> 
+       </figure> 
+       <p>Untuk komponen dengan nilai yang dimodifikasi, tampilan menampilkan perbandingan sisi-by-side dari nilai komponen pada Aset Prefab dan komponen yang dimodifikasi pada instance Prefab. Ini memungkinkan Anda untuk membandingkan nilai Aset Prefab asli dengan override saat ini, sehingga Anda dapat memutuskan apakah Anda ingin mengalihkan atau menerapkan nilai-nilai tersebut.</p> 
+       <p>Dalam contoh di bawah ini, "GermOBlaster" anak GameObject ada di Aset Prefab dan instance Prefab, namun skalanya telah meningkat pada kasus. Peningkatan skala ini adalah override instance, dan dapat dilihat sebagai perbandingan samping di jendela drop-down <strong>Overrides</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PrefabsOverridesDropdownCompareComponent1.png" alt="The Overrides dropdown with comparison view, showing modified values in the Transform component of a child GameObject of the prefab instance"> 
+        <figcaption>
+          Overrides dropdown dengan tampilan perbandingan, menunjukkan nilai-nilai yang dimodifikasi dalam komponen Transform anak GameObject dari instance prefab 
+        </figcaption> 
+       </figure> 
+       <p>Jendela drop-down <strong>Overrides</strong> juga memiliki tombol <strong>Revert All</strong> dan <strong>Apply All</strong> untuk mengalihkan atau menerapkan semua perubahan sekaligus. Jika Anda memiliki Prefab di dalam Prefab lain, tombol <strong>Apply All</strong> selalu berlaku untuk sebagian besar Prefab, yang merupakan salah satu yang memiliki tombol drop-down <strong>Overrides</strong> pada GameObject akarnya.</p> 
+       <p>Jika Anda memilih beberapa entri sekaligus, Revert Semua dan Terapkan Semua tombol diganti oleh tombol <strong>Revert Selected</strong> dan <strong>Apply Selected</strong>. Anda dapat menggunakan ini untuk mengubah atau menerapkan beberapa overrides sekaligus. Mirip dengan tombol <strong>Apply All</strong>, tombol <strong>Apply Selected</strong> selalu berlaku untuk sebagian besar Prefab.</p> 
+       <p><a name="ContextMenus"></a></p> 
+       <h2>Context menus</h2> 
+       <p>Anda juga dapat mengesampingkan individu <strong>revert</strong> menggunakan menu konteks di Inspektur, bukan menggunakan jendela Overrides drop-down.<strong>apply</strong> individual overrides using the context menu in the Inspector, instead of using the Overrides drop-down window.</p> 
+       <p>Sifat overridden ditunjukkan dalam bentuk tebal. Mereka dapat dibalik atau diterapkan melalui menu konteks:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PrefabsContextSingleProperty1.png" alt="Context menu for a single property"> 
+        <figcaption>
+          Menu konteks untuk properti tunggal 
+        </figcaption> 
+       </figure> 
+       <p>Komponen yang dimodifikasi dapat dibalik atau diterapkan melalui tombol drop-down cog atau menu konteks header komponen:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PrefabsContextModifiedComponent1.png" alt="Context menu for modified component"> 
+        <figcaption>
+          Menu konteks untuk komponen yang dimodifikasi 
+        </figcaption> 
+       </figure> 
+       <p>Komponen tambahan memiliki lencana plus yang mengeras ikon. Mereka dapat dibalik atau diterapkan melalui tombol drop-down cog atau menu konteks dari header komponen:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PrefabsContextAddedComponent1.png" alt="Context menu for added component"> 
+        <figcaption>
+          Menu konteks untuk menambahkan komponen 
+        </figcaption> 
+       </figure> 
+       <p>Komponen yang dihapus memiliki lencana minus yang mengeras ikon. Penghapusan dapat dibalik atau diterapkan melalui tombol drop-down cog atau menu konteks header komponen. Mengalihkan penghapusan menempatkan komponen kembali, dan menerapkan penghapusan menghapusnya dari Aset Prefab juga:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PrefabsContextRemovedComponent1.png" alt="Context menu for removed component"> 
+        <figcaption>
+          Menu konteks untuk menghapus komponen 
+        </figcaption> 
+       </figure> 
+       <p>GameObjects (termasuk Prefab lain) yang ditambahkan sebagai anak-anak untuk instance Prefab memiliki lencana plus yang menunda ikon di Hierarchy. Mereka dapat dibalik atau diterapkan melalui menu konteks pada objek di Hierarchy:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PrefabsContextAddedGameObject1.png" alt="Context menu for added GameObject child"> 
+        <figcaption>
+          Menu konteks untuk menambahkan anak GameObject 
+        </figcaption> 
+       </figure> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2018–07–31 Sitemap</span></p></li> 
+        <li><p><span class="page-history">Bersarang Prefab dan Varian Prefab ditambahkan pada 2018.3</span></p></li> 
+       </ul> 
+       <!-- area:none --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="PrefabInstanceOverrides.html"></a></span> 
+         <div class="tip">
+           Instance overrides 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="NestedPrefabs.html"></a></span> 
+         <div class="tip">
+           Nested Prefabs 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

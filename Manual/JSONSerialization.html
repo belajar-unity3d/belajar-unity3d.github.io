@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: JSON Serialisasi</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="core" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="ScriptingSection.html">Scripting</a></li> 
+         <li><a href="unity-architecture.html">Arsitektur persatuan</a></li> 
+         <li><a href="script-Serialization.html">Script serialization</a></li> 
+         <li>JSON Serialisasi</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="script-Serialization-Errors.html"></a></span> 
+          <div class="tip">
+            Kesalahan serialisasi Script 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="script-compilation.html"></a></span> 
+          <div class="tip">
+            Joomla 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>JSON Serialisasi</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Gunakan kelas <a href="../ScriptReference/JsonUtility.html">JsonUtility</a> untuk mengkonversi objek Unity ke dan dari format <a href="http://www.json.org">JSON</a>. Misalnya, Anda dapat menggunakan JSON Serialisasi untuk berinteraksi dengan layanan web, atau dengan mudah mengemas dan membongkar data ke format berbasis teks.</p> 
+       <p>Login Serialisasi menggunakan gagasan "distruktur" JSON: Anda membuat kelas atau struktur untuk menggambarkan variabel apa yang ingin Anda simpan dalam data JSON Anda. Contoh:</p> 
+       <pre><code>[Serializable]
+public class MyClass
+{
+    public int level;
+    public float timeElapsed;
+    public string playerName;
+}
+</code></pre> 
+       <p>Ini mendefinisikan polos Kelas C# mengandung tiga variabel (<strong>level</strong>, <strong>timeElapsed</strong>, dan <strong>playerName</strong>) dan menandainya dengan atribut <code>Serializable</code>, untuk bekerja dengan serializer JSON. Untuk membuat instance kelas Anda, Anda dapat menggunakan sesuatu seperti ini:</p> 
+       <pre><code>MyClass myObject = new MyClass();
+myObject.level = 1;
+myObject.timeElapsed = 47.5f;
+myObject.playerName = "Dr Charles Francis";
+</code></pre> 
+       <p>Kemudian gunakan metode <a href="../ScriptReference/JsonUtility.ToJson.html">JsonUtility.ToJson</a> untuk serialisasinya (mengkonversinya) ke format JSON:</p> 
+       <pre><code class="c#">string json = JsonUtility.ToJson(myObject);
+// json now contains: '{"level":1,"timeElapsed":47.5,"playerName":"Dr Charles Francis"}'
+</code></pre> 
+       <p>Untuk mengubah JSON kembali ke objek, gunakan <a href="../ScriptReference/JsonUtility.FromJson.html">JsonUtility.DariJson</a>:</p> 
+       <pre><code>myObject = JsonUtility.FromJson&lt;MyClass&gt;(json);
+</code></pre> 
+       <p>Ini menciptakan contoh baru <code>MyClass</code> dan menetapkan nilai-nilai di atasnya menggunakan data JSON. Jika data JSON mengandung nilai-nilai yang tidak peta ke bidang di <code>MyClass</code>, maka serializer mengabaikan nilai-nilai tersebut. Jika data JSON hilang nilai untuk bidang di <code>MyClass</code>, maka serializer meninggalkan nilai-nilai yang dibangun untuk bidang-bidang tersebut dalam objek yang dikembalikan.</p> 
+       <h2>Overwriting objek dengan JSON</h2> 
+       <p>Anda juga dapat merusak data JSON melalui objek yang ada, yang menimpa data yang ada:</p> 
+       <pre><code>JsonUtility.FromJsonOverwrite(json, myObject);
+</code></pre> 
+       <p>Jika data JSON tidak mengandung nilai untuk lapangan, serializer tidak mengubah nilai lapangan. Metode ini memungkinkan Anda untuk menjaga alokasi minimal dengan menggunakan kembali objek yang Anda buat sebelumnya. Hal ini juga memungkinkan Anda untuk "patch" objek dengan sengaja menuliskannya dengan JSON yang hanya mengandung sedikit subset bidang.</p> 
+       <p>Sitemap JSON Serializer API mendukung subclass <strong>Warning:</strong> dan <a href="../ScriptReference/MonoBehaviour.html">MonoBehaviour</a> serta struktur dan kelas polos. Namun, ketika deserializing JSON ke subclasses <a href="../ScriptReference/ScriptableObject.html">Login Sitemap</a> atau <code>MonoBehaviour</code>, Anda harus menggunakan metode <code>ScriptableObject</code>. Jika Anda mencoba menggunakan <a href="../ScriptReference/JsonUtility.FromJsonOverwrite.html">FromJsonOverwrite</a>, Unity membuang pengecualian karena perilaku ini tidak didukung.<a href="../ScriptReference/JsonUtility.FromJson.html">FromJson</a>, Unity throws an exception because this behavior is not supported.</p> 
+       <h2>Jenis yang didukung</h2> 
+       <p>JSON Serializer API mendukung subclass <code>MonoBehaviour</code>, subklas <code>ScriptableObject</code>, atau kelas polos atau merusak atribut <code>[Serializable]</code>. Ketika Anda melewati objek pada serializer Unity standar untuk pemrosesan, aturan dan batasan yang sama berlaku karena mereka melakukan Inspektur: Unity serializes bidang hanya; dan jenis seperti <code>Dictionary&lt;&gt;</code> tidak didukung.</p> 
+       <p>Unity tidak mendukung melewati jenis lain langsung ke API, seperti jenis atau array primitif. Jika Anda perlu mengonversi mereka, membungkusnya dalam <code>class</code> atau <code>struct</code> dari beberapa jenis.</p> 
+       <p>Dalam editor hanya, ada API paralel, <a href="../ScriptReference/EditorJsonUtility.html">EditorJsonUtility</a>, yang memungkinkan Anda untuk menampilkan objek yang berasal dari <a href="../ScriptReference/Object.html">Login Sitemap</a> baik ke dan dari JSON. Ini menghasilkan JSON yang berisi data yang sama dengan representasi YAML objek.</p> 
+       <p> <a href="../ScriptReference/JsonUtility.html">JsonUtility</a> dan <a href="../ScriptReference/EditorJsonUtility.html">EditorJsonUtility</a> adalah kelas utilitas untuk serializing Objek dan dari format string JSON menggunakan <a href="script-Serialization.html#SerializationRules">Aturan serialisasi Unity</a>. Dalam kasus di mana perlu untuk memanipulasi data JSON melalui kode, atau untuk serialisasi struktur data yang serialisasi Unity tidak mendukung, Anda dapat menggunakan tujuan umum. NET JSON library sebagai pendamping ke JsonUtility API.</p> 
+       <h2>Performance</h2> 
+       <p>Tes Benchmark menunjukkan bahwa <a href="../ScriptReference/JsonUtility.html">JsonUtility</a> secara signifikan lebih cepat daripada populer. Solusi JSON NET, meskipun kelas ini memberikan fitur yang lebih sedikit dalam beberapa kasus.</p> 
+       <p>Penggunaan memori untuk pengumpulan sampah (GC) minimal:</p> 
+       <ul> 
+        <li> <a href="../ScriptReference/JsonUtility.ToJson.html">ToJson</a> mengalokasikan memori GC hanya untuk string yang dikembalikan.</li> 
+        <li> <a href="../ScriptReference/JsonUtility.FromJson.html">FromJson</a> mengalokasikan memori GC hanya untuk objek yang dikembalikan, serta setiap subobjects yang diperlukan (misalnya, jika Anda mendedikasikan objek yang mengandung array, maka mengalokasikan memori GC Unity untuk array).</li> 
+        <li> <a href="../ScriptReference/JsonUtility.FromJsonOverwrite.html">FromJsonOverwrite</a> mengalokasikan memori GC hanya diperlukan untuk bidang tertulis (misalnya, string dan array). Ini berarti bahwa Unity tidak mengalokasikan memori GC apa pun di semua jika semua bidang yang ditimpakan oleh JSON diberi nama.</li> 
+       </ul> 
+       <p>Anda dapat menggunakan JsonUtility API dari benang latar belakang. Namun, seperti dengan kode multithreaded, berhati-hati untuk tidak mengakses atau mengubah objek pada satu benang sementara benang lain serializing atau deserializing itu.</p> 
+       <h2>Mengontrol output ToJson()</h2> 
+       <p>Metode <a href="../ScriptReference/JsonUtility.ToJson.html">ToJson</a> mendukung output JSON yang cukup. Dimatikan secara default tetapi Anda dapat mengubahnya dengan melewati <code>true</code> sebagai parameter kedua.</p> 
+       <p>Anda dapat omit field dari output dengan menggunakan atribut <code>[NonSerialized]</code>.</p> 
+       <h2>Menggunakan DariJson() dengan tipe yang tidak diketahui</h2> 
+       <p>Jika Anda tidak tahu jenis objek di depan waktu, mendedikasikan JSON ke dalam kelas atau merusak yang mengandung bidang “kommon”, dan kemudian gunakan nilai-nilai bidang tersebut untuk mengerjakan jenis yang sebenarnya yang Anda inginkan. Kemudian deserialize waktu kedua ke dalam jenis itu.</p> 
+       <!-- area:core --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="script-Serialization-Errors.html"></a></span> 
+         <div class="tip">
+           Kesalahan serialisasi Script 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="script-compilation.html"></a></span> 
+         <div class="tip">
+           Joomla 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

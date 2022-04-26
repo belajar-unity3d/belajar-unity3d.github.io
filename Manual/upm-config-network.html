@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Pemecahan masalah jaringan</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="PackagesList.html">Paket dan set fitur</a></li> 
+         <li><a href="Packages.html">Manajer Paket Unity</a></li> 
+         <li><a href="upm-config.html">Configuration</a></li> 
+         <li>Pemecahan masalah jaringan</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="upm-config.html"></a></span> 
+          <div class="tip">
+            Configuration 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="upm-config-scoped.html"></a></span> 
+          <div class="tip">
+            Otentikasi registry tersedak 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Pemecahan masalah jaringan</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Gunakan prosedur ini untuk:</p> 
+       <ul> 
+        <li> <a href="#Firewall">Konfigurasikan pengaturan firewall Anda</a> sehingga Unity memiliki akses ke server registry Paket Manager.</li> 
+        <li> <a href="#Proxy">Konfigurasikan server proxy Anda</a>, baik oleh <a href="#Hub">mengatur variabel lingkungan untuk Hub</a> atau <a href="#SSL">sertifikat kustom otoritas (CA) sertifikat</a>.</li> 
+       </ul> 
+       <p><a name="Firewall"></a></p> 
+       <h2>Mengkonfigurasi firewall Anda</h2> 
+       <p>Tambahkan ini ke daftar firewall Anda dari domain yang diizinkan:</p> 
+       <ul> 
+        <li><code>packages.unity.com</code></li> 
+        <li><code>download.packages.unity.com</code></li> 
+        <li> <code>upm-cdn.unity.com</code> (atau <code>upm-cdn-china.unitychina.cn</code> untuk lokasi di Cina)</li> 
+       </ul> 
+       <p>Ini memastikan bahwa Unity Package Manager dapat mengakses nama domain ini menggunakan HTTPS.</p> 
+       <p> <strong>Tip</strong>: Lihat bantuan sistem operasi Anda untuk mempelajari cara menambahkan nama domain ke daftar aman firewall.</p> 
+       <p><a name="Proxy"></a></p> 
+       <h2>Mengkonfigurasi server proxy Anda</h2> 
+       <p>Saat menggunakan server proxy, mengkonfigurasi variabel lingkungan <code>HTTP_PROXY</code> dan <code>HTTPS_PROXY</code> untuk Manajer Paket Unity untuk digunakan ketika melakukan permintaan terhadap registry paket Unity.</p> 
+       <p>Anda dapat mengatur variabel ini secara global (baiknya sistem atau variabel pengguna) sesuai dengan sistem operasi Anda. Atau, Anda dapat <a href="#Hub">set mereka hanya untuk Hub Unity</a> ketika diluncurkan.</p> 
+       <p>Untuk lingkungan di mana Anda berada di belakang server proxy menggunakan sertifikat yang tidak mengenali Paket Manager, Anda dapat mengkonfigurasi <a href="#SSL">otoritas sertifikat kustom</a>.</p> 
+       <p><a name="SSL"></a></p> 
+       <h3>otoritas sertifikat kustom</h3> 
+       <p>Dalam beberapa perusahaan dan institusi, pengguna hanya dapat mengakses internet melalui server proxy. Beberapa proxy membongkar konten HTTPS dan membongkarnya dengan sertifikat SSL mereka sendiri. Dalam beberapa kasus, Unity Package Manager mendasari lapisan HTTPS menolak sertifikat ini karena tidak mengenali otoritas sertifikat yang memancarkan mereka, dan memperlakukan koneksi sebagai <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack">serangan man-in-the-middle</a> yang mungkin. Ini berarti bahwa Anda tidak dapat menggunakan banyak fitur di Unity, termasuk Manajer Paket, kecuali Anda mengkonfigurasi otoritas sertifikat SSL tambahan untuk memungkinkan sertifikat ini.</p> 
+       <p>Untuk mengkonfigurasi otoritas sertifikat SSL tambahan:</p> 
+       <ol> 
+        <li><p>Login Jika file tidak ada, buat file teks kosong.<a href="upm-config.html#upmconfig"><code>upmconfig.toml</code></a>. If the file does not already exist, create an empty text file.</p></li> 
+        <li> <p>Buat file teks dengan satu atau lebih sertifikat untuk otoritas sertifikat kustom. File harus terdiri dari satu atau lebih sertifikat tepercaya dalam format <a href="https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail">Sitemap Login</a> (PEM). Contoh:</p> <pre><code class="lang-pem">-----BEGIN CERTIFICATE-----
+MIIC+zCCAeOgAwIBAgIJAO0U6hVJnbvjMA0GCSqGSIb3DQEBBQUAMBQxEjAQBgNV
+BAMMCWxvY2FsaG9zdDAeFw0xOTAzMTIwMTIxMzRaFw0yOTAzMDkwMTIxMzRaMBQx
+EjAQBgNVBAMMCWxvY2FsaG9zdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBAKNh0EM7j57pXorGs5OHzlk9TYeUqITtXXdWfY1fbqRdj+a8qLNs4m/nDsDW
+KgibHYG3FUqIidjPL61DLQuWUPY9Zo+uQaccIe0E5wb+To9mwMlLuhMD6iCPFRpe
+jcDhNj4vG1RVARMO1jupeZqdb+xHBZqtmMJmtiDOBxt662Z4hvoH8mdqNEuSkozz
+HqXmcdigrTO37DspGRBx08GJlHFHUs7C+hYOsOdNjME3dH/8uihjKYiqQb1E12dN
+PNL7jYm3AZv+qUmDFM3BJE0hSmAP00GuTJxbe31Kh4e7N5/XSiLsnqwircOj/Hfi
+eWjtsoXbCNDIiWUQtXBeLD/BdvkCAwEAAaNQME4wHQYDVR0OBBYEFDFw8VDkgMne
+mDjgo+b1iaPfUkdVMB8GA1UdIwQYMBaAFDFw8VDkgMnemDjgo+b1iaPfUkdVMAwG
+A1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAFEjUWGz1r3xSsbwUJsRhbMc
+M7Jjf9/r833H7eq31mbl/JbXPnpo8IctMuWyw42ccMtgq7i+coQeKwvWnHtI5rhe
+vshEkIqNPAoCnpW5NLprYDDTG1PDEhv6FYpW8Alq65i03tptzaoHlH3sH+97E/h0
+qSYI7yNHWMC5u0r1DB0BR+lZsj6RnwWPySMSuXx5sSiKIS/HkkMVwwmxKa4ZwuwS
+LFwHSUdqk0lJK4b0mCwyTHNvYO1IDziE5EKwfuaKVgOa62iCHVahgIVa+een4EfS
+hCCr3M3cq11Mi+mnRi1scxxrOno4OEEChWg2szZLlxBrkVJllrrq620XJ6RLB/8=
+-----END CERTIFICATE-----
+-----BEGIN CERTIFICATE-----
+MIIDtzCCAp+gAwIBAgIQDOfg5RfYRv6P5WD8G/AwOTANBgkqhkiG9w0BAQUFADBl
+MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3
+d3cuZGlnaWNlcnQuY29tMSQwIgYDVQQDExtEaWdpQ2VydCBBc3N1cmVkIElEIFJv
+b3QgQ0EwHhcNMDYxMTEwMDAwMDAwWhcNMzExMTEwMDAwMDAwWjBlMQswCQYDVQQG
+EwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3d3cuZGlnaWNl
+cnQuY29tMSQwIgYDVQQDExtEaWdpQ2VydCBBc3N1cmVkIElEIFJvb3QgQ0EwggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCtDhXO5EOAXLGH87dg+XESpa7c
+JpSIqvTO9SA5KFhgDPiA2qkVlTJhPLWxKISKityfCgyDF3qPkKyK53lTXDGEKvYP
+mDI2dsze3Tyoou9q+yHyUmHfnyDXH+Kx2f4YZNISW1/5WBg1vEfNoTb5a3/UsDg+
+wRvDjDPZ2C8Y/igPs6eD1sNuRMBhNZYW/lmci3Zt1/GiSw0r/wty2p5g0I6QNcZ4
+VYcgoc/lbQrISXwxmDNsIumH0DJaoroTghHtORedmTpyoeb6pNnVFzF1roV9Iq4/
+AUaG9ih5yLHa5FcXxH4cDrC0kqZWs72yl+2qp/C3xag/lRbQ/6GW6whfGHdPAgMB
+AAGjYzBhMA4GA1UdDwEB/wQEAwIBhjAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQW
+BBRF66Kv9JLLgjEtUYunpyGd823IDzAfBgNVHSMEGDAWgBRF66Kv9JLLgjEtUYun
+pyGd823IDzANBgkqhkiG9w0BAQUFAAOCAQEAog683+Lt8ONyc3pklL/3cmbYMuRC
+dWKuh+vy1dneVrOfzM4UKLkNl2BcEkxY5NM9g0lFWJc1aRqoR+pWxnmrEthngYTf
+fwk8lOa4JiwgvT2zKIn3X/8i4peEH+ll74fg38FnSbNd67IJKusm7Xi+fT8r87cm
+NW1fiQG2SVufAQWbqz0lwcy2f8Lxb4bG+mRo64EtlOtCt/qMHt1i8b5QZ7dsvfPx
+H2sMNgcWfzd8qVttevESRmCD1ycEvkvOl77DZypoEd+A5wwzZr8TDRRu838fYxAe
++o0bJW1sj6W3YQGx0qMmoRBxna3iw/nDmVG3KwcIzi7mULKn+gpFL6Lw8g==
+-----END CERTIFICATE-----
+</code></pre> </li> 
+        <li><p>Simpan file ini ke folder yang sama dengan file konfigurasi global jika memungkinkan, meskipun Unity mendukung lokasi pada sistem file.</p></li> 
+        <li> <p>Dalam file konfigurasi global, tambahkan atribut <strong>caFile</strong> yang ditetapkan ke path file absolut untuk file PEM Anda. Contoh:</p> <pre><code class="lang-toml">caFile = "C:\\ProgramData\\Unity\\config\\cert.pem"
+</code></pre> </li> 
+       </ol> 
+       <p><a name="Hub"></a></p> 
+       <h3>Mengatur variabel lingkungan untuk Hub Unity</h3> 
+       <p>Bagian ini memberikan instruksi untuk membuat file perintah yang dapat Anda jalankan dari <a href="#Windows">Windows perintah prompt</a> atau <a href="#MacOS">macOS atau terminal Linux</a>. Atau, Anda dapat menyalin dan menempel perintah langsung ke jendela prompt atau terminal.</p> 
+       <p>Sitemap Sebelum menjalankan file perintah, tutup Hub sepenuhnya. Jika Hub sudah berjalan, skrip beralih fokus ke Hub tanpa relaunching, sehingga tidak menerapkan pengaturan proxy yang berubah.<strong>Note:</strong> Before you run the command file, shut down the Hub completely. If the Hub is already running, the script switches focus to the Hub without relaunching, so it does not apply the changed proxy settings.</p> 
+       <p><a name="Windows"></a></p> 
+       <h4>Windows</h4> 
+       <p>Instruksi ini membuat file perintah di Windows.</p> 
+       <p>File meluncurkan Hub dengan variabel lingkungan yang ditetapkan. Anda dapat mengklik dua kali file, atau memanggilnya dari perintah prompt. Unity melewati variabel lingkungan ini untuk setiap proses Editor Unity yang diluncurkan dari Hub.</p> 
+       <ol> 
+        <li><p>Buka editor teks seperti Notepad.</p></li> 
+        <li> <p>Masukkan teks berikut, mengganti <strong>proxy-url</strong> dengan URL server proxy yang benar dan menyesuaikan jalur pemasangan Hub jika diperlukan:</p> <pre><code class="lang-powershell">@echo off
+set HTTP_PROXY=proxy-url
+set HTTPS_PROXY=proxy-url
+start "" "C:\Program Files\Unity Hub\Unity Hub.exe"
+
+</code></pre> <p>Sitemap Jika ada ruang di jalan, Anda harus menggunakan kutipan ganda di sekitar jalan ke program.<strong>Note:</strong> If there are spaces in the path, you must use double quotes around the path to the program.</p> </li> 
+        <li><p>Simpan file ke lokasi di mana Anda dapat dengan mudah menemukannya (seperti <code>Desktop</code>), dan pastikan file memiliki <code>.cmd</code> (misalnya, <code>launchUnityHub.cmd</code>).</p></li> 
+       </ol> 
+       <p><a name="MacOS"></a></p> 
+       <h4>macOS</h4> 
+       <p>Instruksi ini membuat file <code>launchUnityHub.command</code> pada macOS.</p> 
+       <p>File meluncurkan Hub dengan variabel lingkungan yang ditetapkan. Anda dapat mengklik dua kali file, atau memanggilnya dari terminal Bash. Unity melewati variabel lingkungan ini untuk setiap proses Editor Unity yang diluncurkan dari Hub.</p> 
+       <p>Sitemap Double-klik file perintah membuka jendela Terminal atau tab dan meninggalkannya terbuka, bahkan setelah selesai skrip. Anda dapat mengubah perilaku ini dalam preferensi untuk <strong>Note:</strong>.<strong>Terminal.app</strong>.</p> 
+       <ol> 
+        <li><p>Buka jendela Terminal.</p></li> 
+        <li> <p>Masukkan script berikut, penggantian <strong>proxy-url</strong> dengan URL server proxy yang benar dan menyesuaikan jalur pemasangan Hub jika diperlukan:</p> <pre><code class="lang-bash">echo '#!/bin/bash
+export HTTP_PROXY=proxy-url
+export HTTPS_PROXY=proxy-url
+nohup "/Applications/Unity Hub.app/Contents/MacOS/Unity Hub" &amp;&gt;/dev/null &amp;' &gt; launchUnityHub.command
+chmod +x launchUnityHub.command
+</code></pre> <p>Sitemap Jika ada ruang di jalan, Anda harus menggunakan kutipan ganda di sekitar jalan ke program.<strong>Note:</strong> If there are spaces in the path, you must use double quotes around the path to the program.</p> </li> 
+        <li><p>Pindahkan file <code>launchUnityHub.command</code> ke lokasi yang nyaman (misalnya, <code>Desktop</code>), jika Anda lebih suka.</p></li> 
+       </ol> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="upm-config.html"></a></span> 
+         <div class="tip">
+           Configuration 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="upm-config-scoped.html"></a></span> 
+         <div class="tip">
+           Otentikasi registry tersedak 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

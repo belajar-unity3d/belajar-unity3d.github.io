@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Mendistribusikan permainan Anda dengan UDP</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityServices.html">Layanan Unity</a></li> 
+         <li><a href="udp.html">Portal Distribusi Unity</a></li> 
+         <li>Mendistribusikan permainan Anda dengan UDP</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="udp-getting-started.html"></a></span> 
+          <div class="tip">
+            Mulai dengan UDP 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="udp-implementing-iap.html"></a></span> 
+          <div class="tip">
+            Menerapkan produk IAP 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Mendistribusikan permainan Anda dengan UDP</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Langkah-langkah di bawah ini menunjukkan proses keseluruhan untuk mempublikasikan permainan ke toko aplikasi melalui UDP.</p> 
+       <ol> 
+        <li> <a href="udp-distribution.html#create">Membuat permainan di konsol UDP</a>. 
+         <ol> 
+          <li>Masukkan info game Anda di konsol UDP.</li> 
+          <li>Mengatur bahasa yang didukung.</li> 
+         </ol> </li> 
+        <li> . 
+         <ol> 
+          <li>Instal paket.</li> 
+          <li>Tautan proyek Anda ke klien UDP.</li> 
+          <li>Menawarkan SDK UDP.</li> 
+          <li>Menerapkan IAP (jika ada).</li> 
+          <li>Menerapkan Licence Periksa game premium (opsional).</li> 
+         </ol> </li> 
+        <li> 
+         <ol> 
+          <li>Membangun permainan Anda <span class="tooltip"><strong>APK</strong><span class="tooltiptext">Format paket Android output oleh Unity. Sebuah APK secara otomatis digunakan untuk perangkat Anda ketika Anda memilih File &gt; Build &amp; Run. <a class="tooltipMoreInfoLink" href="android-BuildProcess.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#APK">Glossary</a></span></span></span>.</li> 
+          <li>Pastikan semua produk IAP Anda tercantum dalam konsol UDP (jika berlaku).</li> 
+          <li>Uji permainan Anda di Sandbox.</li> 
+         </ol> </li> 
+        <li> <a href="udp-managing-and-publishing.html">Unggah permainan Anda APK ke konsol UDP</a>.</li> 
+        <li>Finalisasi halaman informasi game di konsol UDP. 
+         <ol> 
+          <li>Verifikasi pengujian berhasil.</li> 
+          <li>Unggah aplikasi Anda menandatangani kunci pribadi.</li> 
+          <li>Mengatur harga premium (jika berlaku).</li> 
+          <li>Lokalisasi informasi game Anda untuk bahasa tambahan (jika ada).</li> 
+         </ol> </li> 
+        <li> <a href="udp-managing-and-publishing.html#release">Rilis permainan Anda di UDP</a>.</li> 
+        <li> <a href="udp-managing-and-publishing.html#publish">Publikasikan permainan Anda ke toko</a>.</li> 
+       </ol> 
+       <p>Gambar di bawah ini menggambarkan alur kerja keseluruhan.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main//UDPWorkflow.png" alt="The workflow."> 
+        <figcaption>
+          Aliran kerja. 
+        </figcaption> 
+       </figure> 
+       <p><a name="create"></a></p> 
+       <h2>Membuat permainan di konsol UDP</h2> 
+       <p>Untuk membuat permainan baru di konsol UDP:</p> 
+       <ol> 
+        <li>Di tab My Games, pilih <strong>Add Game</strong>.</li> 
+        <li>Tambahkan judul untuk permainan Anda dan pilih <strong>Create New Game</strong>.<br> Halaman Info Game dibuka.</li> 
+        <li>Pilih <strong>Save</strong>.</li> 
+       </ol> 
+       <p>Ini adalah minimum yang diperlukan untuk membuat permainan baru di konsol UDP. Langkah selanjutnya adalah <a href="#edit">masukkan informasi permainan Anda</a>.</p> 
+       <p>Ketika Anda membuat permainan baru di konsol UDP itu menghasilkan klien UDP dan ID klien UDP. Anda harus di Editor Unity.</p> 
+       <p><a name="edit"></a></p> 
+       <h2>Masukkan informasi permainan di konsol UDP</h2> 
+       <p>Untuk mengedit informasi game Anda di konsol UDP:</p> 
+       <ol> 
+        <li>Di tab game saya, pilih kartu game Anda.</li> 
+        <li>Di halaman Game Info, pilih <strong>EDIT INFO</strong> untuk memasukkan mode edit. 
+         <ol> 
+          <li>Memperbarui informasi permainan Anda. Pelajari lebih lanjut tentang persyaratan untuk halaman Game Info. Login Untuk membantu menyelesaikan informasi ini, Anda juga dapat mengimpor metadata dari Google Play.<br>To help complete this information, you can also import metadata from Google Play.</li> 
+         </ol> </li> 
+        <li>Untuk menghemat perubahan pilih <strong>SAVE</strong>. Untuk membuang perubahan, pilih <strong>CANCEL</strong>.</li> 
+       </ol> 
+       <p>Jika Anda ingin memberikan deskripsi untuk permainan Anda dalam beberapa bahasa, <a href="#languages">tambahkan bahasa yang didukung</a> di konsol UDP. Sitemap<a href="#implement">menerapkan UDP dalam proyek Anda</a>.</p> 
+       <p><a name="languages"></a></p> 
+       <h2>Menambahkan bahasa yang didukung</h2> 
+       <p>Ketika Anda menambahkan bahasa di halaman Game Info, itu menyalin informasi dari versi default. Oleh karena itu, untuk mengurangi duplikasi pekerjaan, menambahkan informasi sebanyak mungkin dalam versi default sebelum Anda menambahkan lebih banyak bahasa. Untuk menambahkan bahasa:</p> 
+       <ol> 
+        <li>Di halaman Game Info, pilih <strong>EDIT INFO</strong>.</li> 
+        <li>Dalam bahasa dropdown, pilih <strong>Manage languages</strong>. 
+         <ol> 
+          <li>Pilih bahasa yang ingin Anda dukung dan pilih <strong>Save</strong>.</li> 
+         </ol> </li> 
+        <li>Di halaman Game Info, pilih <strong>Save</strong>.</li> 
+       </ol> 
+       <p>Jika Anda akan menggunakan fitur impor massal untuk mengimpor produk IAP, termasuk deskripsi dalam beberapa bahasa, Anda harus terlebih dahulu menambahkan bahasa di Konsol UDP. Jika tidak, deskripsi IAP tidak akan diimpor untuk bahasa tersebut.</p> 
+       <p><a name="implement"></a></p> 
+       <h2>Menerapkan UDP dalam proyek Anda</h2> 
+       <p>Ikuti langkah-langkah untuk . Ini termasuk:</p> 
+       <ol> 
+        <li>Instal paket UDP.</li> 
+        <li>Tautan proyek Anda ke ID klien UDP yang ada.</li> 
+        <li>Menawarkan SDK.</li> 
+        <li>Jika berlaku, menerapkan kode dalam permainan Anda untuk: 
+         <ul> 
+          <li>IAP</li> 
+          <li>Game premium</li> 
+         </ul> </li> 
+       </ol> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="udp-getting-started.html"></a></span> 
+         <div class="tip">
+           Mulai dengan UDP 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="udp-implementing-iap.html"></a></span> 
+         <div class="tip">
+           Menerapkan produk IAP 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

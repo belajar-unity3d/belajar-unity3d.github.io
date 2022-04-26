@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: FrameTimingManager</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="CamerasOverview.html">Kamera</a></li> 
+         <li><a href="DynamicResolution.html">Resolusi dinamis</a></li> 
+         <li>FrameTimingManager</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="DynamicResolution.html"></a></span> 
+          <div class="tip">
+            Resolusi dinamis 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="deep-learning-super-sampling.html"></a></span> 
+          <div class="tip">
+            Dalam belajar super sampling 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>FrameTimingManager</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Login Manajer adalah API yang menangkap data waktu rinci tentang kinerja selama bingkai individu dalam aplikasi. Anda dapat menggunakan data ini untuk menilai bingkai tersebut untuk memahami mengapa aplikasi Anda tidak memenuhi target kinerja.</p> 
+       <p>Anda dapat menggunakan FrameTimingManager untuk:</p> 
+       <ul> 
+        <li>Anda perlu debug pada tingkat bingkai-by-frame.</li> 
+        <li>Anda ingin menggunakan fitur <span class="tooltip"><a class="tooltipMoreInfoLink" href="DynamicResolution.html">Resolusi Dinamis</a><span class="tooltiptext">Pengaturan kamera yang memungkinkan Anda untuk menargetkan render individu skala dinamis, untuk mengurangi beban kerja pada GPU. <a href="DynamicResolution.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#dynamicresolution">Glossary</a></span></span></span>.</li> 
+        <li>Anda ingin menggunakan paket <a href="https://docs.unity.cn/Packages/com.unity.mobile.adaptiveperformance@0.1/manual/index.html">Kinerja Adaptif</a>.</li> 
+       </ul> 
+       <p>Waktu bingkai tidak menggantikan data dari <span class="tooltip"><a class="tooltipMoreInfoLink" href="Profiler.html">Profiler</a><span class="tooltiptext">Jendela yang membantu Anda untuk mengoptimalkan permainan Anda. Ini menunjukkan berapa banyak waktu yang dihabiskan di berbagai bidang permainan Anda. Sebagai contoh, dapat melaporkan persentase waktu yang dihabiskan <strong>rendering</strong>, aimating, atau dalam logika permainan Anda. <a href="Profiler.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profiler">Glossary</a></span></span></span>; setelah Anda profil aplikasi Anda pada tingkat tinggi, gunakan FrameTimingManager untuk menyelidiki rincian spesifik. FrameTimingManager mengurangi kinerja ketika data catatan, sehingga tidak dapat menghasilkan pengukuran yang akurat tentang bagaimana aplikasi Anda melakukan.</p> 
+       <h2>Cara mengaktifkan FrameTimingManager</h2> 
+       <p> <strong>Tip</strong>: Login Manajer selalu aktif untuk membangun pemain pembangunan.</p> 
+       <p>Untuk mengaktifkan FrameTimingManage untuk menghapus build dan di Editor Unity:</p> 
+       <ol> 
+        <li><strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Player</strong>.</li> 
+        <li>Pada <strong>Other Settings</strong>, arahkan ke judul <strong>Rendering</strong>.</li> 
+        <li>Aktifkan properti <strong>Frame Timing Stats</strong>.</li> 
+       </ol> 
+       <p>Jika Anda menggunakan platform OpenGL, Anda juga perlu mengaktifkan properti <strong>OpenGL: Profiler GPU Recorders</strong> untuk mengukur penggunaan GPU. Untuk melakukan ini:</p> 
+       <ol> 
+        <li><strong>Edit</strong> &gt; <strong>Project</strong> &gt; <strong>Settings</strong> &gt; <strong>Player</strong>.</li> 
+        <li>Pada <strong>Other Settings</strong>, arahkan ke judul <strong>Rendering</strong>.</li> 
+        <li>Aktifkan properti <strong>OpenGL: Profiler GPU</strong>.</li> 
+       </ol> 
+       <p>Catatan: Dalam versi Unity 2021.2 dan sebelumnya, <strong>OpenGL Profiler GPU Recorder</strong> menonaktifkan properti <strong>Frame Timing Stats</strong>, sehingga Anda tidak dapat menggunakannya bersama.</p> 
+       <h2>Cara menggunakan FrameTimingManager</h2> 
+       <p>Untuk mengakses data yang catatan FrameTimingManager, gunakan salah satu metode berikut:</p> 
+       <ul> 
+        <li> <a href="#ViewFrameTimeDataCustomProfilerModule">Lihat data waktu bingkai dalam modul Profiler Kustom</a>.</li> 
+        <li> <a href="#RetrieveTimestampDataFrameTimingManagerAPI">Ambil data timestamp dari FrameTimingManager C# API</a>.</li> 
+        <li><a href="#RecordFrameTimeDataProfilerCounters">Rekam data melalui counter profiler tertentu.</a></li> 
+       </ul> 
+       <p><a name="ViewFrameTimeDataCustomProfilerModule"></a></p> 
+       <h3>Lihat data waktu bingkai dengan modul Profiler Kustom</h3> 
+       <p>Untuk melihat data waktu bingkai dalam modul Profiler Kustom:</p> 
+       <ol> 
+        <li>Buat modul profiler kustom sesuai instruksi pada <a href="profiler-module-editor.html#creating-a-custom-module">Membuat modul profiler kustom</a>.</li> 
+        <li>Pada <strong>Profiler Module Editor </strong>window, pilih modul kustom Anda.</li> 
+        <li>Di panel <strong>Available Counters</strong>, pilih <strong>Unity</strong>.</li> 
+        <li>Pilih <strong>Render</strong> untuk membuka submenu yang mengandung <span class="tooltip"><strong>profiler counters</strong><span class="tooltiptext">Ditempatkan dalam kode dengan ProfilerCounter API untuk melacak metrik, seperti jumlah musuh yang ditidur dalam permainan Anda. <br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profilercounter">Glossary</a></span></span></span> yang berkaitan dengan penggunaan memori, yang mencakup properti <strong>FrameTimingStats</strong> memungkinkan. Anda kemudian dapat mengklik counter yang relevan di submenu untuk menambahkannya ke modul kustom Anda.</li> 
+       </ol> 
+       <p>Tabel berikut menjelaskan tujuan setiap counter yang tersedia ketika Anda mengaktifkan <strong>Frame Timing Stats</strong>:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Measurement</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>CPU Total Frame Time (ms)</strong></td> 
+          <td style="text-align:left;">Total waktu bingkai CPU, dalam mili detik. Unity menghitung ini sebagai waktu antara akhir dua bingkai, termasuk setiap overhead atau waktu yang dihabiskan menunggu di antara bingkai.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>CPU Main Thread Frame Time (ms)</strong></td> 
+          <td style="text-align:left;">Waktu antara awal bingkai dan waktu ketika Thread Utama selesai pekerjaan yang dilakukan selama bingkai itu, dalam mili detik.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>CPU Main Thread Present Wait Time (ms)</strong></td> 
+          <td style="text-align:left;">Waktu CPU yang dihabiskan menunggu Present() selama bingkai.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>CPU Render Thread Frame Time (ms)</strong></td> 
+          <td style="text-align:left;">Waktu antara awal pekerjaan pada Thread Render dan ketika Unity memanggil fungsi Present(), dalam mili detik.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>GPU Frame Time (ms)</strong></td> 
+          <td style="text-align:left;">Perbedaan waktu antara awal dan akhir GPU rendering bingkai tunggal, dalam mili detik.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="RetrieveTimestampDataFrameTimingManagerAPI"></a></p> 
+       <h3>Ambil data timestamp dari FrameTimingManager C# API</h3> 
+       <p>Gunakan API FrameTimingManager untuk mengakses informasi timestamp. Dalam setiap variabel, FrameTimingManager mencatat waktu acara tertentu terjadi selama bingkai.</p> 
+       <p>Tabel berikut menunjukkan nilai-nilai yang tersedia melalui API, agar Unity mengeksekusi mereka selama bingkai:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>frameStartTimestamp</strong></td> 
+          <td style="text-align:left;">Waktu jam CPU ketika bingkai dimulai.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>firstSubmitTimestamp</strong></td> 
+          <td style="text-align:left;">Waktu jam CPU ketika Unity mengirimkan pekerjaan pertama ke GPU selama bingkai ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>cpuTimePresentCalled</strong></td> 
+          <td style="text-align:left;">Waktu jam CPU ketika Unity memanggil fungsi Present() untuk bingkai saat ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>cpuTimeFrameComplete</strong></td> 
+          <td style="text-align:left;">Waktu jam CPU ketika selesai GPU rendering bingkai dan mengganggu CPU.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="RecordFrameTimeDataProfilerCounters"></a></p> 
+       <h3>Rekam data dengan counter profiler khusus</h3> 
+       <p>Anda dapat membaca nilai FrameTimingManager menggunakan ProfilerRecorder API bukan FrameTimingManager C# API. Manfaat ini adalah bahwa ketika Anda menggunakan ProfilerRecorder API, FrameTimingManager hanya mencatat nilai ketika Anda melampirkan perekam ke counter tertentu. Perilaku ini memungkinkan Anda untuk mengontrol penghitung pengumpulan data dan sebagainya, mengurangi dampak bahwa FrameTimingManager memiliki kinerja.</p> 
+       <p>Contoh berikut menunjukkan bagaimana untuk melacak hanya CPU Main Thread Frame Time variabel dengan ProfilerRecordAPI:</p> 
+       <pre><code class="csharp">
+using Unity.Profiling;
+
+using UnityEngine;
+
+public class ExampleScript : MonoBehaviour
+
+{
+
+    string statsText;
+
+    ProfilerRecorder mainThreadTimeRecorder;
+
+    void OnEnable()
+
+    {
+        mainThreadTimeRecorder = ProfilerRecorder.StartNew(ProfilerCategory.Internal, "CPU Main Thread Frame Time");
+    }
+
+    void OnDisable()
+
+    {
+        mainThreadTimeRecorder.Dispose();
+    }
+
+    void Update()
+
+    {
+
+        var frameTime = mainThreadTimeRecorder.LastValue;
+
+        // Your code logic here
+
+    }
+}
+
+</code></pre> 
+       <h2>Bagaimana FrameTimingManager bekerja</h2> 
+       <p>Login Manajer memberikan hasil dengan penundaan set empat bingkai. Ini karena hasil waktu tidak segera tersedia di akhir setiap bingkai, sehingga FrameTimingManager menunggu untuk mendapatkan data CPU dan GPU untuk bingkai.</p> 
+       <p>Keterlambatan tidak menjamin hasil waktu yang akurat, karena GPU mungkin tidak memiliki sumber daya yang tersedia untuk mengembalikan hasil, atau mungkin gagal mengembalikannya dengan benar.</p> 
+       <p>Login Perubahan kemarahan bagaimana menghasilkan kalitamp FrameTimeComplete dalam beberapa keadaan:</p> 
+       <ul> 
+        <li>Jika GPU mendukung GPU kalitamps, GPU menyediakan kalitamp FrameTimeComplete.</li> 
+        <li>Jika GPU tidak mendukung GPU kalitamps dan mengembalikan GPU Time, FrameTimingManager menghitung nilai untuk gpuFrameTime. Nilai adalah jumlah yang dilaporkan GPU Time dan nilai-nilai FirstSubmitTimestamp.</li> 
+        <li>Jika GPU tidak mendukung GPU kalitamps dan tidak mengembalikan GPU Time, FrameTimingManager menetapkan nilai PresentTimestamp sebagai nilai FrameTimeComplete.</li> 
+       </ul> 
+       <h3>Kecukuran yang mungkin dengan rendering yang berbasis ubin</h3> 
+       <p>Untuk GPU yang menggunakan arsitektur rendering yang berbasis ubin, seperti GPU Logam di perangkat Apple, Waktu GPU yang dilaporkan mungkin lebih besar dari waktu bingkai yang dilaporkan.</p> 
+       <p>Ini dapat terjadi ketika GPU berada di bawah beban berat, atau ketika pipa GPU penuh. Dalam kasus ini, GPU mungkin mendefinisikan eksekusi beberapa fase rendering. Karena FrameTimingManager mengukur waktu antara awal dan akhir rendering bingkai, kesenjangan antara fase meningkatkan waktu GPU yang dilaporkan.</p> 
+       <p>Dalam contoh di bawah ini, tidak ada sumber daya GPU yang tersedia, karena GPU melewati pekerjaan dari antrian Vertex ke antrian Fragment. API grafis GPU oleh karena itu mendefinisikan pelaksanaan fase berikutnya. Ketika ini terjadi, pengukuran waktu GPU mencakup waktu kerja fase dan kesenjangan di antara. Hasilnya adalah bahwa FrameTimingManager melaporkan pengukuran waktu GPU yang lebih tinggi dari yang diharapkan.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/frame-timing-manager-deferred-rendering-diagram.png" alt="Diagram showing how the discrepancy in reported GPU time can happen in the Metal API"> 
+        <figcaption>
+          Diagram menunjukkan bagaimana perbedaan dalam melaporkan waktu GPU dapat terjadi di API Logam 
+        </figcaption> 
+       </figure> 
+       <h2>Dukungan platform</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+          <th style="text-align:left;"><strong>Supported</strong></th> 
+          <th style="text-align:left;"><strong>Comment</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Windows</strong></td> 
+          <td style="text-align:left;">WinZip 11</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">DirectX 12</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">OpenGL</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Vulkan</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>macOS</strong></td> 
+          <td style="text-align:left;">Metal</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Might melaporkan pengukuran waktu GPU yang lebih besar daripada waktu bingkai total karena perilaku rendering GPU yang berbasis ubin.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Linux</strong></td> 
+          <td style="text-align:left;">OpenGL</td> 
+          <td style="text-align:left;">Partial</td> 
+          <td style="text-align:left;">Tidak mendukung pengukuran waktu GPU.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Vulkan</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Android</strong></td> 
+          <td style="text-align:left;">OpenGL ES</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Vulkan</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>iOS</strong></td> 
+          <td style="text-align:left;">Metal</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Might melaporkan pengukuran waktu GPU yang lebih besar daripada waktu bingkai total karena perilaku rendering GPU yang berbasis ubin.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>tvOS</strong></td> 
+          <td style="text-align:left;">Metal</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Might melaporkan pengukuran waktu GPU yang lebih besar daripada waktu bingkai total karena perilaku rendering GPU yang berbasis ubin.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><span class="tooltip"><strong>WebGL</strong><span class="tooltiptext">A JavaScript API that renders 2D and 3D graphics in a web browser. The Unity WebGL build option allows Unity to publish content as JavaScript programs which use HTML5 technologies and the WebGL rendering API to run Unity content in a web browser. <a class="tooltipMoreInfoLink" href="webgl-gettingstarted.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#WebGL">Glossary</a></span></span></span></strong></td> 
+          <td style="text-align:left;">WebGL</td> 
+          <td style="text-align:left;">Partial</td> 
+          <td style="text-align:left;">Tidak mendukung pengukuran waktu GPU.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Sumber daya tambahan</h2> 
+       <ul> 
+        <li><a href="DynamicResolution.html">Resolusi dinamis</a></li> 
+        <li><a href="../ScriptReference/FrameTiming.html">API Reference</a></li> 
+        <li><a href="../ScriptReference/FrameTimingManager.html">Login API</a></li> 
+        <li><a href="Profiler.html">Profiler</a></li> 
+       </ul> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="DynamicResolution.html"></a></span> 
+         <div class="tip">
+           Resolusi dinamis 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="deep-learning-super-sampling.html"></a></span> 
+         <div class="tip">
+           Dalam belajar super sampling 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

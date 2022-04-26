@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Penggunaan dan Kinerja Shaders Built-in</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="Shaders.html">Shaders</a></li> 
+         <li><a href="shader-built-in.html">Reflektor built-in</a></li> 
+         <li><a href="Built-inShaderGuide.html">Legacy Shaders</a></li> 
+         <li>Penggunaan dan Kinerja Shaders Built-in</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="Built-inShaderGuide.html"></a></span> 
+          <div class="tip">
+            Legacy Shaders 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="shader-NormalFamily.html"></a></span> 
+          <div class="tip">
+            Keluarga Shader Normal 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Penggunaan dan Kinerja Shaders Built-in</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Shaders di Unity digunakan melalui <span class="tooltip"><strong>Materials</strong><span class="tooltiptext">Aset yang menentukan bagaimana permukaan harus diberikan. <a class="tooltipMoreInfoLink" href="class-Material.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Material">Glossary</a></span></span></span>, yang pada dasarnya menggabungkan kode <span class="tooltip"><strong>shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> dengan parameter seperti tekstur. Penjelasan mendalam tentang hubungan Shader / Material dapat dibaca <a href="Materials.html">here</a>.</p> 
+       <p>Sifat bahan akan muncul di <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Inspector">Glossary</a></span></span></span> ketika Bahan itu sendiri atau <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> yang menggunakan Material dipilih. Bahan Inspektur terlihat seperti ini:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/MatInspector.png" alt=""> 
+       </figure> 
+       <p>Setiap Bahan akan terlihat sedikit berbeda dalam Inspektur, tergantung pada naungan tertentu itu digunakan. Iself naungan menentukan sifat apa yang akan tersedia untuk menyesuaikan Inspektur. Inspektur bahan dijelaskan secara rinci dalam <a href="class-Material.html">Halaman referensi material</a>. Ingat bahwa naungan diimplementasikan melalui Bahan. Jadi sementara naungan mendefinisikan sifat yang akan ditampilkan dalam Inspektur, setiap Material sebenarnya mengandung data yang disesuaikan dari slider, warna, dan tekstur. Hal yang paling penting untuk diingat tentang ini adalah bahwa naungan tunggal dapat digunakan dalam beberapa Bahan, tetapi satu Bahan tidak dapat menggunakan beberapa naungan.</p> 
+       <h2>Nama Shader</h2> 
+       <p>Mengubah nama Koran dapat mempengaruhi fungsinya. Ini karena sebelum Unity 5.0, beberapa fungsi naungan ditentukan oleh jalan dan namanya. Hal ini masih bagaimana karya Heritage Shaders. Untuk informasi lebih lanjut, lihat <a href="SL-Shader.html#legacyShaderNames">Nama naungan Legacy</a> </p> 
+       <h2>Pertimbangan Kinerja</h2> 
+       <p>Ada sejumlah faktor yang dapat mempengaruhi kinerja keseluruhan permainan Anda. Halaman ini akan berbicara secara khusus tentang pertimbangan kinerja untuk <a class="tooltipMoreInfoLink" href="Built-inShaderGuide.html">Home &gt; Sitemap</a>. Kinerja naungan sebagian besar tergantung pada dua hal: naungan itu sendiri dan yang <span class="tooltip"><a href="RenderingPaths.html">Rendering Path</a><span class="tooltiptext">Teknik yang menggunakan pipa render untuk membuat grafik. Memilih jalur rendering yang berbeda mempengaruhi bagaimana pencahayaan dan pembentukan dihitung. Beberapa jalur rendering lebih cocok untuk berbagai platform dan perangkat keras daripada yang lain. <a href="RenderingPaths.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#RenderingPath">Glossary</a></span></span></span> digunakan oleh proyek atau <span class="tooltip"><strong>camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span> khusus. Untuk tips kinerja ketika menulis naungan Anda sendiri, lihat halaman <a href="SL-ShaderPerformance.html">Kinerja ShaderLab</a>.</p> 
+       <h3>Rendering Paths dan kinerja naungan</h3> 
+       <p>Dari jalur rendering Unity mendukung, jalur <span class="tooltip"><a class="tooltipMoreInfoLink" href="RenderTech-DeferredShading.html">Deferred Shading</a><span class="tooltiptext">Sebuah jalur rendering di Pipa Render Built-in yang tidak membatasi jumlah Lampu yang dapat mempengaruhi GameObject. Semua Lampu dievaluasi per-piksel, yang berarti bahwa mereka semua berinteraksi dengan peta normal dan sebagainya. Selain itu, semua Lampu bisa memiliki cookie dan bayangan. <a href="RenderTech-DeferredShading.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Deferredshading">Glossary</a></span></span></span> dan <a href="RenderTech-VertexLit.html">Vertex Lit</a> memiliki kinerja yang paling dapat diprediksi. Dalam pencukur rusak, setiap objek umumnya ditarik sekali, tidak peduli apa lampu yang mempengaruhinya. Demikian pula, di Vertex Lit setiap objek umumnya ditarik sekali. Jadi, perbedaan kinerja dalam naungan sebagian besar tergantung pada berapa banyak tekstur yang mereka gunakan dan perhitungan apa yang mereka lakukan.</p> 
+       <h3>Kinerja Shader di jalur rendering Maju</h3> 
+       <p>Dalam jalur rendering <a class="tooltipMoreInfoLink" href="RenderTech-ForwardRendering.html">Forward</a>, kinerja naungan tergantung pada <strong>both</strong> naungan itu sendiri dan lampu di <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>. Bagian berikut menjelaskan rincian. Ada dua kategori dasar naungan dari perspektif kinerja, <strong>Vertex-Lit</strong>, dan <strong>Pixel-Lit</strong>.</p> 
+       <p> <strong>Vertex-Lit</strong> naungan di jalur <span class="tooltip"><strong>Forward rendering</strong><span class="tooltiptext">Sebuah jalur rendering yang membuat setiap objek dalam satu atau lebih melewati, tergantung pada lampu yang mempengaruhi objek. Lampu sendiri juga diperlakukan berbeda dengan Rendering Maju, tergantung pada pengaturan dan intensitas mereka. <a class="tooltipMoreInfoLink" href="RenderTech-ForwardRendering.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#ForwardRendering">Glossary</a></span></span></span> selalu lebih murah daripada Pixel-Lit naungan. Naungan ini bekerja dengan menghitung pencahayaan berdasarkan vertik <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mesh">Glossary</a></span></span></span>, menggunakan semua lampu sekaligus. Karena ini, tidak peduli berapa banyak lampu yang bersinar pada objek, itu hanya akan harus ditarik sekali.</p> 
+       <p>Perjuk <strong>Pixel-Lit</strong><span class="tooltip"><strong>pixel</strong><span class="tooltiptext">Unit terkecil dalam gambar komputer. Ukuran piksel tergantung pada resolusi layar Anda. Pencahayaan pixel dihitung pada setiap piksel layar. <a class="tooltipMoreInfoLink" href="ShadowPerformance.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#pixel">Glossary</a></span></span></span> menghitung pencahayaan akhir pada setiap yang ditarik. Karena ini, objek harus ditarik sekali untuk mendapatkan ambient &amp; lampu directional utama, dan sekali untuk setiap lampu tambahan yang bersinar di atasnya. Oleh karena itu formula adalah N rendering pass, di mana N adalah jumlah akhir lampu pixel bersinar pada objek. Ini meningkatkan beban pada CPU untuk memproses dan mengirim perintah ke kartu grafis, dan pada kartu grafis untuk memproses simpul dan menggambar piksel. Ukuran objek Pixel-lit di layar juga akan mempengaruhi kecepatan di mana itu ditarik. Semakin besar objek, semakin lambat akan ditarik.</p> 
+       <p>Jadi pixel lit shaders datang pada biaya kinerja, tetapi biaya itu memungkinkan untuk beberapa efek spektakuler: bayangan, normal-mapping, sorotan specular yang baik dan cookie ringan, hanya untuk nama beberapa.</p> 
+       <p>Ingat bahwa lampu dapat dipaksa ke pixel ("important") atau vertex/SH ("tidak penting"). Setiap lampu vertex bersinar pada naungan Pixel-Lit akan dihitung berdasarkan simpul objek atau seluruh objek, dan tidak akan menambah biaya rendering atau efek visual yang terkait dengan lampu pixel.</p> 
+       <h2>Kinerja naungan umum</h2> 
+       <p>Dari <a href="Built-inShaderGuide.html">Home &gt; Sitemap</a>, mereka datang kira-kira dalam urutan ini meningkatkan kompleksitas:</p> 
+       <ul> 
+        <li> <strong>Unlit</strong>. Ini hanya tekstur, tidak dipengaruhi oleh pencahayaan apa pun.</li> 
+        <li> <strong>VertexLit</strong>.</li> 
+        <li> <strong>Diffuse</strong>.</li> 
+        <li> <strong>Normal mapped</strong>. Ini sedikit lebih mahal daripada Diffuse: itu menambahkan satu tekstur lebih ( peta normal), dan beberapa instruksi naungan.</li> 
+        <li> <strong>Specular</strong>. Ini menambahkan perhitungan sorotan specular.</li> 
+        <li> <strong>Normal Mapped Specular</strong>. Sekali lagi, ini sedikit lebih mahal daripada Specular.</li> 
+        <li> <strong>Parallax Normal mapped</strong>. Ini menambahkan perhitungan berukuran normal parallax.</li> 
+        <li> <strong>Parallax Normal Mapped Specular</strong>. Ini menambahkan perhitungan sorotan normal parallax dan spekulasi.</li> 
+       </ul> 
+       <h2>Mobile disederhanakan naungan</h2> 
+       <p>Selain itu, Unity memiliki beberapa warna yang disederhanakan yang ditargetkan di platform seluler, di bawah kategori "Mobile". Naungan ini bekerja di platform lain juga, jadi jika Anda dapat hidup dengan kesederhanaan mereka (misalnya perkiraan specular, tidak ada dukungan warna bahan dll), coba menggunakannya!</p> 
+       <p>Untuk melihat kesederhanaan spesifik yang telah dibuat untuk setiap naungan, lihat file <code>.shader</code> dari paket "built-in shaders" dan informasi tercantum di bagian atas file dalam beberapa komentar.</p> 
+       <p>Beberapa contoh perubahan yang umum di seluruh naungan Mobile adalah:</p> 
+       <ul> 
+        <li>Tidak ada warna material atau warna utama untuk mewarnai warna.</li> 
+        <li>Untuk naungan mengambil <span class="tooltip"><strong>normal map</strong><span class="tooltiptext">Jenis tekstur Peta Bump yang memungkinkan Anda untuk menambahkan detail permukaan seperti benjolan, alur, dan goresan ke model yang menangkap cahaya seolah-olah mereka diwakili oleh geometri nyata.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Normalmap">Glossary</a></span></span></span>, tiling dan offset dari tekstur dasar digunakan.</li> 
+        <li>Partikel naungan tidak mendukung <code>AlphaTest</code> atau <code>ColorMask</code>.</li> 
+        <li>Fitur terbatas dan dukungan pencahayaan - misalnya beberapa warna hanya mendukung satu arah cahaya.</li> 
+       </ul> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="Built-inShaderGuide.html"></a></span> 
+         <div class="tip">
+           Legacy Shaders 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="shader-NormalFamily.html"></a></span> 
+         <div class="tip">
+           Keluarga Shader Normal 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Komponen Billboard Renderer</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="visual-effects.html">Efek visual</a></li> 
+         <li><a href="visual-effects-lines-trails-billboards.html">Garis, jalur, dan papan iklan</a></li> 
+         <li>Komponen Renderer Billboard</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="class-TrailRenderer.html"></a></span> 
+          <div class="tip">
+            Komponen Renderer Trail 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="class-BillboardAsset.html"></a></span> 
+          <div class="tip">
+            Billboard asset 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Komponen Renderer Billboard</h1> 
+       <!--BeginSwitchLink--> 
+       <a href="../ScriptReference/BillboardRenderer.html" title="Go to BillboardRenderer page in the Scripting Reference" class="switch-link gray-btn sbtn left">Switch to Scripting</a> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p><strong>Billboard</strong> Renderer renders <a class="tooltipMoreInfoLink" href="class-BillboardAsset.html">Aset Billboard</a>. Billboard adalah metode level-of-detail (LOD) untuk menggambar 3D Mesh yang rumit dengan cara yang lebih sederhana ketika mereka jauh dari <span class="tooltip"><strong>Camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Camera">Glossary</a></span></span></span>. Ketika <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mesh">Glossary</a></span></span></span> jauh dari Kamera, ukurannya di layar berarti tidak perlu menggambarnya secara lengkap. Sebagai gantinya, Anda dapat mengganti 3D Mesh yang kompleks dengan representasi billboard 2D.</p> 
+       <p>Fitur tertentu, seperti SpeedTree, Aset Billboard ekspor, tetapi Anda juga dapat membuat mereka sendiri. Untuk informasi tentang cara membuat Aset Billboard, lihat halaman Manual <a href="class-BillboardAsset.html">BillboardAssets</a> dan halaman referensi Script <a href="../ScriptReference/BillboardAsset.html">BillboardAsset</a>.</p> 
+       <h2>Properties</h2> 
+       <p>Properti pada komponen ini dibagi menjadi bagian berikut:</p> 
+       <ul> 
+        <li><a href="#properties">Properties</a></li> 
+        <li><a href="#general">General</a></li> 
+        <li><a href="#lighting">Lighting</a></li> 
+        <li><a href="#probes">Probes</a></li> 
+        <li><a href="#additional-settings">Pengaturan Tambahan</a></li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BillboardRenderer.png" alt=""> 
+       </figure> 
+       <p><a name="General"></a></p> 
+       <h3>General</h3> 
+       <p>Bagian ini mengandung sifat umum dalam akar komponen.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property:</strong></th> 
+          <th style="text-align:left;"><strong>Function:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Billboard</strong></td> 
+          <td style="text-align:left;">Tentukan render komponen ini <a href="class-BillboardAsset.html">Aset Billboard</a>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="Lighting"></a></p> 
+       <h3>Lighting</h3> 
+       <p>Bagian <strong>Lighting</strong> mengandung sifat yang menentukan bagaimana Renderer Billboard ini berinteraksi dengan pencahayaan di Unity.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Property:</strong></th> 
+          <th style="text-align:left;"><strong>Function:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Cast Shadows</strong></td> 
+          <td style="text-align:left;">Tentukan jika dan bagaimana Mesh melemparkan bayangan ketika cocok <a href="class-Light.html">Light</a> bersinar di atasnya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>On</strong></td> 
+          <td style="text-align:left;">Mesh melemparkan bayangan ketika lampu bayangan-casting bersinar di atasnya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Off</strong></td> 
+          <td style="text-align:left;">Mesh tidak melemparkan bayangan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Two Sided</strong></td> 
+          <td style="text-align:left;">Mesh melemparkan dua sisi bayangan dari kedua sisi. <span class="tooltip"><strong>Enlighten</strong><span class="tooltiptext">Sistem pencahayaan oleh Geomerics yang digunakan dalam Unity untuk lightmapping dan untuk Mencerahkan Penerangan Global Realtime. <a class="tooltipMoreInfoLink" href="https://www.siliconstudio.co.jp/en/products-service/enlighten/">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Enlighten">Glossary</a></span></span></span> dan Progresif <span class="tooltip"><strong>Lightmapper</strong><span class="tooltiptext">Alat dalam Unity yang bakes lightmap sesuai dengan pengaturan lampu dan geometri di tempat kejadian Anda. <a href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Lightmapper">Glossary</a></span></span></span> tidak mendukung bayangan dua sisi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Shadows Only</strong></td> 
+          <td style="text-align:left;">Bayangan dari Mesh terlihat, tetapi bukan Mesh itu sendiri.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Receive Shadows</strong></td> 
+          <td style="text-align:left;">Aktifkan opsi ini untuk membuat tampilan Mesh bayangan yang dilemparkkan di atasnya. Ini hanya didukung ketika menggunakan <a href="progressive-lightmapper.html">Progres Lightmapper</a>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="Probes"></a></p> 
+       <h3>Probes</h3> 
+       <p>Bagian <strong>Probes</strong> mengandung sifat yang berkaitan dengan Probe Cahaya dan Probe Reflection.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Light Probes</strong></td> 
+          <td style="text-align:left;">Mengatur bagaimana Renderer ini menerima cahaya dari sistem <span class="tooltip"><a class="tooltipMoreInfoLink" href="LightProbes.html">Probe Cahaya</a><span class="tooltiptext">probe cahaya menyimpan informasi tentang bagaimana cahaya melewati ruang di tempat kejadian Anda. Koleksi probe cahaya yang diatur dalam ruang tertentu dapat meningkatkan pencahayaan pada objek bergerak dan pemandangan LOD statis dalam ruang itu. <a href="LightProbes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#LightProbe">Glossary</a></span></span></span>.<br><br> Untuk informasi lebih lanjut, lihat <a href="LightProbes.html">Probe Cahaya</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Off</strong></td> 
+          <td style="text-align:left;">Renderer tidak menggunakan probe cahaya yang diserbuki.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Blend Probes</strong></td> 
+          <td style="text-align:left;">Renderer menggunakan satu Probe Cahaya yang diserbuki. Ini adalah nilai default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Use Proxy Volume</strong></td> 
+          <td style="text-align:left;">Renderer menggunakan grid 3D dari Probe Cahaya yang diserbuki.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Custom Provided</strong></td> 
+          <td style="text-align:left;">Ekstrak Renderer Light Probe <span class="tooltip"><strong>shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> nilai seragam dari <a href="../ScriptReference/MaterialPropertyBlock.html">BahanPropertyBlock</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Proxy Volume Override</strong></td> 
+          <td style="text-align:left;">Mengatur referensi ke GameObject lain yang memiliki komponen Volume Proxy Light Probe.<br><br> Properti ini hanya terlihat ketika <strong>Light Probes</strong> diatur ke <strong>Use Proxy Volume</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Reflection Probes</strong></td> 
+          <td style="text-align:left;">Mengatur bagaimana Renderer menerima refleksi dari sistem <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-ReflectionProbe.html">Refleksi Probe</a><span class="tooltiptext">Komponen rendering yang menangkap pandangan bulat dari sekitarnya di semua arah, seperti kamera. Gambar yang ditangkap kemudian disimpan sebagai kubus yang dapat digunakan oleh benda dengan bahan reflektif. <a href="class-ReflectionProbe.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ReflectionProbe">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Off</strong></td> 
+          <td style="text-align:left;">Diaktifkan Probe Refleksi. Unity menggunakan <span class="tooltip"><strong>skybox</strong><span class="tooltiptext">Jenis khusus Bahan yang digunakan untuk mewakili langit. Biasanya enam sisi. <a class="tooltipMoreInfoLink" href="class-Skybox.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Skybox">Glossary</a></span></span></span> untuk refleksi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Blend Probes</strong></td> 
+          <td style="text-align:left;">Probe Refleksi yang Dapat Diaktifkan. Blending hanya terjadi antara Probe Reflection. Ini berguna di lingkungan dalam ruangan di mana karakter dapat transisi antara daerah dengan pengaturan pencahayaan yang berbeda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Blend Probes and Skybox</strong></td> 
+          <td style="text-align:left;">Probe Refleksi yang Dapat Diaktifkan. Blending terjadi antara Probe Reflection, atau antara Probe Reflection dan refleksi default. Ini berguna untuk lingkungan luar ruangan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Simple</strong></td> 
+          <td style="text-align:left;">Enables Reflection Probe, tetapi tidak ada campuran terjadi antara Probe Reflection ketika ada dua volume tumpang tindih.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="AdditionalSettings"></a></p> 
+       <h3>Pengaturan Tambahan</h3> 
+       <p>Bagian ini mengandung sifat rendering tambahan.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Motion Vectors</strong></td> 
+          <td style="text-align:left;">Mengatur apakah menggunakan vektor gerak untuk melacak per-piksel Renderer ini, gerakan ruang layar dari satu bingkai ke depan. Anda dapat menggunakan informasi ini untuk menerapkan efek pasca-olahan seperti blur gerak.<br><br> Perhatikan bahwa tidak semua platform mendukung vektor gerakan. Lihat <a href="SystemInfo-supportsMotionVectors">SystemInfo.supportsMotionVectors</a> untuk informasi lebih lanjut.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Camera Motion Only</strong></td> 
+          <td style="text-align:left;">Gunakan hanya gerakan kamera untuk melacak gerakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Per Object Motion</strong></td> 
+          <td style="text-align:left;">Gunakan umpan tertentu untuk melacak gerakan untuk Renderer ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Force No Motion</strong></td> 
+          <td style="text-align:left;">Jangan melacak gerakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Dynamic Occlusion</strong></td> 
+          <td style="text-align:left;">Ketika <strong>Dynamic Occlusion</strong> diaktifkan, Unity culls Renderer ini ketika diblokir dari tampilan Kamera oleh Occluder Statis. Occlusion dinamis diaktifkan secara default.<br><br> Ketika <strong>Dynamic Occlusion</strong> dinonaktifkan, Unity tidak kusam Renderer ini ketika diblokir dari tampilan Kamera oleh Occluder Statis. Disable Dynamic Occlusion untuk mencapai efek seperti menggambar garis besar karakter di belakang dinding.<br><br> Lihat dokumentasi tentang <span class="tooltip"><a class="tooltipMoreInfoLink" href="OcclusionCulling.html">occlusion culling</a><span class="tooltiptext">A yang menonaktifkan rendering objek ketika mereka tidak saat ini dilihat oleh kamera karena mereka dikabur (disebutkan) oleh benda lain. <a href="OcclusionCulling.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Occlusionculling">Glossary</a></span></span></span> untuk informasi lebih lanjut.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="class-TrailRenderer.html"></a></span> 
+         <div class="tip">
+           Komponen Renderer Trail 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="class-BillboardAsset.html"></a></span> 
+         <div class="tip">
+           Billboard asset 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

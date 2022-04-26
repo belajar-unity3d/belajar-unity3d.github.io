@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Pertimbangan kinerja WebGL</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="platforms" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Unity User Manual 2022.1 (beta)</a></li> 
+         <li><a href="PlatformSpecific.html">Pengembangan platform</a></li> 
+         <li><a href="webgl.html">WebGL</a></li> 
+         <li><a href="webgl-develop.html">WebGL</a></li> 
+         <li>Pertimbangan kinerja WebGL</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="webgl-interactingwithbrowserscripting.html"></a></span> 
+          <div class="tip">
+            Interaksi dengan scripting browser 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="webgl-debugging.html"></a></span> 
+          <div class="tip">
+            Cara debug dan pemecahan masalah WebGL builds 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Pertimbangan kinerja WebGL</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Secara umum, kinerja <span class="tooltip"><strong>WebGL</strong><span class="tooltiptext">Login API yang membuat grafis 2D dan 3D di browser web. Opsi build Unity WebGL memungkinkan Unity untuk mempublikasikan konten sebagai program JavaScript yang menggunakan teknologi HTML5 dan WebGL rendering API untuk menjalankan konten Unity di browser web. <a class="tooltipMoreInfoLink" href="webgl-gettingstarted.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#WebGL">Glossary</a></span></span></span> dekat dengan aplikasi asli di GPU, karena API grafis WebGL menggunakan GPU Anda untuk rendering yang dicentang perangkat keras. Satu-satunya pengecualian adalah sedikit overhead untuk menerjemahkan panggilan WebGL API dan <span class="tooltip"><strong>shaders</strong><span class="tooltiptext">Program yang berjalan di GPU. <a href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> ke API grafis OS Anda (biasanya DirectX di Windows, OpenGL di Mac, dan Linux).</p> 
+       <p>Pada CPU, Emscripten menerjemahkan kode Anda ke WebAssembly, kinerja yang tergantung pada browser web yang Anda gunakan. Untuk informasi lebih lanjut, lihat posting blog Unity.</p> 
+       <p>Berikut adalah pertimbangan tambahan yang harus Anda ketahui: * Bahasa JavaScript tidak mendukung multi-threading atau SIMD. * Setiap kode yang manfaat dari fitur-fitur ini cenderung lebih lambat dari kode lain. * Anda tidak dapat menulis threading atau SIMD kode di WebGL di <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Scripts">Glossary</a></span></span></span> Anda, tetapi sebagai beberapa bagian mesin yang multi-threaded atau SIMD dioptimalkan, mereka menawarkan kinerja rendah di WebGL. Misalnya, WebGL <span class="tooltip"><strong>Skinning</strong><span class="tooltiptext">Proses mengikat sendi tulang ke vertices mesh karakter atau ‘skin’. Dilakukan dengan alat eksternal, seperti Blender atau Autodesk Maya. <a href="UsingHumanoidChars.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Skinning">Glossary</a></span></span></span> adalah multi-threaded dan SIMD-optimalkan.</p> 
+       <p>Sitemap Untuk melihat bagaimana Unity mendistribusikan pekerjaan ke benang yang berbeda pada platform non-WebGL, lihat garis waktu baru <strong>Tip:</strong> di Unity.<span class="tooltip"><a class="tooltipMoreInfoLink" href="Profiler.html">Profiler</a><span class="tooltiptext">Jendela yang membantu Anda untuk mengoptimalkan permainan Anda. Ini menunjukkan berapa banyak waktu yang dihabiskan di berbagai bidang permainan Anda. Sebagai contoh, dapat melaporkan persentase waktu yang dihabiskan <strong>rendering</strong>, aimating, atau dalam logika permainan Anda. <a href="Profiler.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profiler">Glossary</a></span></span></span> in Unity.</p> 
+       <h2>Pengaturan WebGL-specific yang mempengaruhi kinerja</h2> 
+       <p>Untuk kinerja terbaik, atur tingkat optimasi ke <strong>Faster</strong> di jendela Build Player, dan atur <strong>Exception support</strong> ke <strong>None</strong> dalam pengaturan <strong>Player</strong> untuk WebGL dengan memperluas <strong>Other Settings &gt; Stack Trace</strong>.</p> 
+       <h2>Profil WebGL</h2> 
+       <p>WebGL mendukung profiler Unity. Lihat dokumentasi <a href="Profiler.html">Profiler</a> untuk mempelajari cara mengaturnya.</p> 
+       <h2>Konten WebGL di tab latar belakang</h2> 
+       <p>Jika <strong>Run in background</strong> diaktifkan pada <a href="class-PlayerSettingsWebGL.html">Pengaturan pemain untuk platform WebGL</a>, atau jika Anda mengaktifkan <a href="../ScriptReference/Application-runInBackground.html">Aplikasi.runInBackground</a>, konten Anda terus berjalan ketika kanvas atau jendela browser kehilangan fokus.</p> 
+       <p>Namun, beberapa browser dapat throttle konten berjalan di tab latar belakang. Jika tab dengan konten Anda tidak terlihat, konten Anda hanya memperbarui sekali per detik di sebagian besar browser. Perhatikan bahwa penyebab ini <a href="../ScriptReference/Time-time.html">Time.time</a> untuk maju lebih lambat dari biasanya dengan pengaturan default, sebagai nilai default <a href="../ScriptReference/Time-maximumDeltaTime.html">Time.maximumDeltaTime</a> lebih rendah dari satu detik.</p> 
+       <h2>Throttling WebGL performance</h2> 
+       <p>Anda mungkin ingin menjalankan konten WebGL Anda pada tingkat bingkai yang lebih rendah dalam beberapa situasi untuk mengurangi penggunaan CPU. Misalnya, pada platform lain, Anda dapat menggunakan API <a href="../ScriptReference/Application-targetFrameRate.html">Aplikasi.targetFrameRate</a> untuk melakukannya.</p> 
+       <p>Ketika Anda tidak ingin kinerja throttle, atur API ini ke nilai default -1, daripada nilai tinggi. Ini memungkinkan browser untuk menyesuaikan tingkat bingkai untuk animasi yang paling halus dalam loop render browser, dan mungkin menghasilkan hasil yang lebih baik daripada Unity mencoba melakukan waktu loop utama sendiri untuk mencocokkan tingkat bingkai target.</p> 
+       <hr> 
+       <ul> 
+        <li><span class="page-edit">2019–06–10 Login</span></li> 
+       </ul> 
+       <!-- area:platforms --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="webgl-interactingwithbrowserscripting.html"></a></span> 
+         <div class="tip">
+           Interaksi dengan scripting browser 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="webgl-debugging.html"></a></span> 
+         <div class="tip">
+           Cara debug dan pemecahan masalah WebGL builds 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

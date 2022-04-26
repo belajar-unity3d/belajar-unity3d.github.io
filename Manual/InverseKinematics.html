@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Kinematik terbalik</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="AnimationSection.html">Animation</a></li> 
+         <li><a href="AnimatorControllers.html">Pengontrol Animator</a></li> 
+         <li><a href="AnimationStateMachines.html">Mesin Negara Animasi</a></li> 
+         <li>Kinematik</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="TargetMatching.html"></a></span> 
+          <div class="tip">
+            Pencokan Target 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="RootMotion.html"></a></span> 
+          <div class="tip">
+            Akar gerak - bagaimana ia bekerja 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Kinematik</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Kebanyakan animasi diproduksi dengan memutar sudut sendi dalam kerangka untuk nilai yang telah ditentukan. Posisi perubahan <span class="tooltip"><strong>joint</strong><span class="tooltiptext">Komponen fisika yang memungkinkan koneksi dinamis antara komponen Rigidbody, biasanya memungkinkan beberapa tingkat pergerakan seperti engsel. <a class="tooltipMoreInfoLink" href="Joints.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#joint">Glossary</a></span></span></span> anak sesuai dengan rotasi induknya dan sehingga titik akhir rantai sendi dapat ditentukan dari sudut dan posisi relatif dari sendi individu yang mengandung. Metode ini berpose skeleton dikenal sebagai <strong>forward <span class="tooltip"><strong>kinematics</strong><span class="tooltiptext">The geometry that describes the position and orientation of a character’s joints and bodies. Used by inverse kinematics to control character movement.<br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#kinematics">Glossary</a></span></span></span></strong>.</p> 
+       <p>Namun, seringkali berguna untuk melihat tugas berpose sendi dari sudut pandang berlawanan - mengingat posisi yang dipilih di ruang, bekerja mundur dan menemukan cara yang valid untuk orientasi sendi sehingga titik akhir mendarat pada posisi itu. Ini dapat berguna ketika Anda ingin karakter untuk menyentuh objek pada titik yang dipilih oleh pengguna atau menanam kakinya meyakinkan pada permukaan yang tidak rata. Pendekatan ini dikenal sebagai <strong>Inverse Kinematics</strong> (IK) dan didukung di Mecanim untuk setiap karakter humanoid <em>dengan dikonfigurasi dengan benar Login</em>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/MecanimIKGrabbing.jpg" alt=""> 
+       </figure> 
+       <p>Untuk mengatur IK untuk karakter, Anda biasanya memiliki benda di sekitar <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> bahwa karakter berinteraksi dengan, dan kemudian mengatur IK melalui script, khususnya, fungsi Animator seperti <a href="../ScriptReference/Animator.SetIKPositionWeight.html">SetIKPositionWeight</a>, <a href="../ScriptReference/Animator.SetIKRotationWeight.html">SetIKRotationWeight</a>, <a href="../ScriptReference/Animator.SetIKPosition.html">SetIKPosition</a>, <a href="../ScriptReference/Animator.SetIKRotation.html">SetIKRotation</a>, <a href="../ScriptReference/Animator.SetLookAtPosition.html">SetLookAtPosition</a>, <a href="../ScriptReference/Animator-bodyPosition.html">bodyPosition</a>, <a href="../ScriptReference/Animator-bodyRotation.html">bodyRotation</a> </p> 
+       <p>Dalam ilustrasi di atas, kami menunjukkan karakter mengambil objek silinder. Bagaimana kita melakukan hal ini?</p> 
+       <p>Kita mulai dengan karakter yang memiliki <span class="tooltip"><strong>Avatar</strong><span class="tooltiptext">Antarmuka untuk penargetan ulang animasi dari satu rig ke yang lain. <a class="tooltipMoreInfoLink" href="ConfiguringtheAvatar.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Avatar">Glossary</a></span></span></span> yang valid.</p> 
+       <p>Selanjutnya buat <span class="tooltip"><strong>Animator Controller</strong><span class="tooltiptext">Kontrol animasi melalui Lapisan Animasi dengan Mesin Negara Animasi dan Pohon Animasi Blend, dikendalikan oleh Parameter Animasi. Pengontrol Animator yang sama dapat direferensikan oleh beberapa model dengan komponen Animator. <a class="tooltipMoreInfoLink" href="class-AnimatorController.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#AnimatorController">Glossary</a></span></span></span> dengan mengandung setidaknya satu animasi untuk karakter. Kemudian di lapisan pane <span class="tooltip"><strong>Animator window</strong><span class="tooltiptext">Jendela di mana Animator Controller divisualkan dan diedit. <a href="AnimatorWindow.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnimatorWindow">Glossary</a></span></span></span>, klik ikon pengaturan cog Layer dan dan periksa kotak centang IK Pass di menu yang muncul.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AnimatorControllerToolSettingsIKPass.png" alt="Setting the IK Pass checkbox for the Default Layer"> 
+        <figcaption>
+          Menyiapkan kotak centang IK Pass untuk Layer Default 
+        </figcaption> 
+       </figure> 
+       <p>Pastikan Animator Controller ditugaskan ke <span class="tooltip"><strong>Animator Component</strong><span class="tooltiptext">Komponen pada model yang merupakan model yang menggunakan sistem Animasi. Komponen ini memiliki referensi aset Animator Controller yang mengontrol animasi. <a class="tooltipMoreInfoLink" href="class-AnimatorController.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnimatorComponent">Glossary</a></span></span></span> karakter: <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AnimatorInspectorForIK.png" alt="">%</p> 
+       <p>Selanjutnya, melampirkan skrip yang benar-benar mengurus IK, mari kita sebutkan <strong>IKControl</strong>. Script ini menetapkan target IK untuk tangan kanan karakter, dan posisi tampilannya untuk membuatnya melihat objek yang memegang:</p> 
+       <pre><code>using UnityEngine;
+using System;
+using System.Collections;
+
+[RequireComponent(typeof(Animator))] 
+
+public class IKControl : MonoBehaviour {
+    
+    protected Animator animator;
+    
+    public bool ikActive = false;
+    public Transform rightHandObj = null;
+    public Transform lookObj = null;
+
+    void Start () 
+    {
+        animator = GetComponent&lt;Animator&gt;();
+    }
+    
+    //a callback for calculating IK
+    void OnAnimatorIK()
+    {
+        if(animator) {
+            
+            //if the IK is active, set the position and rotation directly to the goal. 
+            if(ikActive) {
+
+                // Set the look target position, if one has been assigned
+                if(lookObj != null) {
+                    animator.SetLookAtWeight(1);
+                    animator.SetLookAtPosition(lookObj.position);
+                }    
+
+                // Set the right hand target position and rotation, if one has been assigned
+                if(rightHandObj != null) {
+                    animator.SetIKPositionWeight(AvatarIKGoal.RightHand,1);
+                    animator.SetIKRotationWeight(AvatarIKGoal.RightHand,1);  
+                    animator.SetIKPosition(AvatarIKGoal.RightHand,rightHandObj.position);
+                    animator.SetIKRotation(AvatarIKGoal.RightHand,rightHandObj.rotation);
+                }        
+                
+            }
+            
+            //if the IK is not active, set the position and rotation of the hand and head back to the original position
+            else {          
+                animator.SetIKPositionWeight(AvatarIKGoal.RightHand,0);
+                animator.SetIKRotationWeight(AvatarIKGoal.RightHand,0); 
+                animator.SetLookAtWeight(0);
+            }
+        }
+    }    
+}
+
+
+</code></pre> 
+       <p>Seperti yang kita tidak berniat untuk tangan karakter untuk mencapai di dalam objek ke pusatnya (titik pivot silinder), kita memposisikan objek anak kosong (dalam kasus ini, bernama “Cylinder Grab Handle”) di mana tangan harus berada di silinder, dan memutarnya sesuai. Tangan kemudian menargetkan objek anak ini.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/MecanimIKGrabHandle.jpg" alt="An empty Game Object acts as the IK target, so the hand will sit correctly on the visible Cylinder object"> 
+        <figcaption>
+          Objek Game kosong bertindak sebagai target IK, sehingga tangan akan duduk dengan benar pada objek Silinder yang terlihat 
+        </figcaption> 
+       </figure> 
+       <p>Pegangan “grab” Login Objek kemudian harus ditugaskan sebagai properti "Right Hand Obj" dari skrip IKControl</p> 
+       <p>Dalam contoh ini, kita memiliki target terlihat diatur ke silinder itu sendiri, sehingga karakter terlihat langsung ke pusat objek meskipun pegangan dekat bagian bawah.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/MecanimIKSetupInspector.png" alt=""> 
+       </figure> 
+       <p>Masukkan mode bermain, dan Anda harus melihat IK datang ke kehidupan. Mengamati pola karakter dan mengukir objek saat Anda mengeklik kotak centang <strong>IKActive</strong>, dan mencoba memindahkan silinder di sekitar playmode untuk melihat lengan dan tangan mengikuti objek.</p> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="TargetMatching.html"></a></span> 
+         <div class="tip">
+           Pencokan Target 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="RootMotion.html"></a></span> 
+         <div class="tip">
+           Akar gerak - bagaimana ia bekerja 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

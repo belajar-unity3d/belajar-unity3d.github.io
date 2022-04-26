@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Membuat penghitung Profiler kustom</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="analysis.html">Analysis</a></li> 
+         <li><a href="Profiler.html">Profiler</a></li> 
+         <li><a href="Profiler-customizing.html">Sesuaikan Profiler</a></li> 
+         <li>Membuat kustom Login</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="Profiler-customizing.html"></a></span> 
+          <div class="tip">
+            Sesuaikan Profiler 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="Profiler-creating-custom-modules.html"></a></span> 
+          <div class="tip">
+            Membuat modul Profiler Kustom 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Membuat kustom Login</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Untuk menampilkan metrik kustom di Unity <span class="tooltip"><strong>profiler</strong><span class="tooltiptext">Jendela yang membantu Anda untuk mengoptimalkan permainan Anda. Ini menunjukkan berapa banyak waktu yang dihabiskan di berbagai bidang permainan Anda. Sebagai contoh, dapat melaporkan persentase waktu yang dihabiskan <strong>rendering</strong>, aimating, atau dalam logika permainan Anda. <a class="tooltipMoreInfoLink" href="Profiler.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profiler">Glossary</a></span></span></span>, Anda harus menggunakan API ProfileerCounter dalam paket.</p> 
+       <p>Anda dapat menggunakan Profiling Core API untuk melacak metrik dalam aplikasi Anda. Anda dapat menampilkan informasi yang dilacak di Unity Profileer. Gunakan custom <span class="tooltip"><strong>Profiler counters</strong><span class="tooltiptext">Ditempatkan dalam kode dengan ProfilerCounter API untuk melacak metrik, seperti jumlah musuh yang ditidur dalam permainan Anda. <br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profilercounter">Glossary</a></span></span></span> untuk membandingkan metrik sistem dan mengidentifikasi masalah kinerja di jendela Profiler.</p> 
+       <p>Counter Profiler kustom dapat menampilkan data dari <code>ProfilerCounter</code> atau <code>ProfilerCounterValue</code>.</p> 
+       <p>Untuk panduan lengkap untuk menggunakan API Inti Profiling Unity untuk membuat counter Profiler, lihat .</p> 
+       <p>Untuk menambahkan counter profiler, buat <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> untuk melakukan berikut:</p> 
+       <ul> 
+        <li> <a href="#define-counter">Buat counter baru</a>.</li> 
+        <li>Menetapkan penghitung Anda ke <span class="tooltip"><a href="#using-profiler-categories">Profiler</a><span class="tooltiptext">Mengidentifikasi data beban kerja untuk subsistem Unity (misalnya, rendering, Scripting dan kategori Animasi). Unity menerapkan pengkodean warna untuk kategori untuk secara visual membedakan antara jenis data di jendela <strong>Profiler</strong>.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profilercategory">Glossary</a></span></span></span>.</li> 
+        <li> <a href="#update-counter-value">Memperbarui nilai counter</a>.</li> 
+       </ul> 
+       <p>Contoh kode di bagian ini menambahkan penghitung Profiler untuk melacak jumlah total partikel yang dibuat Unit untuk setiap kasus efek jejak <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span>. Dalam contoh ini, nama GameObject adalah "Tank".</p> 
+       <p><a name="define-counter"></a></p> 
+       <h2>Menentukan counter</h2> 
+       <p>Untuk membuat counter baru, tulis skrip untuk menentukan jenis nilai counter baru, dan menetapkan nama dan unit ke jenis ini.</p> 
+       <p>Ketika Anda membuat counter Anda harus menentukan mana <a href="../ScriptReference/Unity.Profiling.ProfilerCategory.html">Profiler</a> counter baru Anda milik. Untuk melakukan ini menggunakan kategori Unity yang ada. Misalnya, contoh script di bawah ini menggunakan kategori <code>ProfilerCategory.Scripts</code> yang ada. Untuk informasi lebih lanjut, lihat <a href="#using-profiler-categories">Menggunakan kategori Profiler</a> </p> 
+       <p>Script contoh berikut mendefinisikan <code>TankTrailParticleCount</code>, dengan nama "Tank Trail Partikel". Counter ini memiliki unit “Count”:</p> 
+       <pre><code class="lang-csharp"> 
+ public static class GameStats
+ {
+    public static readonly ProfilerCategory TanksCategory = ProfilerCategory.Scripts;
+
+    public const string TankTrailParticleCountName = "Tank Trail Particles";
+    public static readonly ProfilerCounterValue&lt;int&gt; TankTrailParticleCount =
+        new ProfilerCounterValue&lt;int&gt;(TanksCategory, TankTrailParticleCountName, ProfilerMarkerDataUnit.Count,
+            ProfilerCounterOptions.FlushOnEndOfFrame | ProfilerCounterOptions.ResetToZeroOnFlush);
+}
+</code></pre> 
+       <p>Opsi <code>FlushOnEndOfFrame</code> dan <code>ResetToZeroOnFlush</code> secara otomatis mengirimkan counter ke aliran data Profiler dan mengatur ulang nilai Count ke nol pada akhir bingkai.</p> 
+       <p><a name="using-profiler-categories"></a></p> 
+       <h2>Menggunakan kategori Profiler</h2> 
+       <p>Unity secara otomatis kelompok Profiler counter ke dalam kategori berdasarkan jenis pekerjaan profil counter, misalnya, rendering, Scripting, atau Animasi. Anda dapat menetapkan penghitung Profiler kustom untuk setiap kategori profil Unity. Untuk daftar lengkap kategori Profiler yang tersedia, lihat <a href="../ScriptReference/Unity.Profiling.ProfilerCategory.html">ProfilerCategory</a>.</p> 
+       <h3>Menetapkan penghitung Profiler ke kategori Profiler</h3> 
+       <p>Counter Profiler harus milik kategori Profiler. Anda harus menetapkan kategori ke counter Profiler ketika Anda mendefinisikan counter. Untuk melakukan ini, gunakan argumen konstruktor ProfilerModule opsional <code>autoEnabledCategoryNames</code> untuk menetapkan satu atau lebih kategori ke counter Profiler. Ada contoh metode ini dalam kode contoh berikut:</p> 
+       <pre><code class="lang-csharp">
+ using Unity.Profiling;
+ using Unity.Profiling.Editor;
+
+ [System.Serializable]
+ [ProfilerModuleMetadata("Tank Effects")] 
+ public class TankEffectsProfilerModule : ProfilerModule
+ {
+    static readonly ProfilerCounterDescriptor[] k_Counters = new ProfilerCounterDescriptor[]
+    {
+        new ProfilerCounterDescriptor(GameStatistics.TankTrailParticleCountName, GameStatistics.TanksCategory),
+        new ProfilerCounterDescriptor(GameStatistics.ShellExplosionParticleCountName, GameStatistics.TanksCategory),
+        new ProfilerCounterDescriptor(GameStatistics.TankExplosionParticleCountName, GameStatistics.TanksCategory),
+    };
+
+    // Ensure that both ProfilerCategory.Scripts and ProfilerCategory.Memory categories are enabled when our module is active.
+    static readonly string[] k_AutoEnabledCategoryNames = new string[]
+    {
+        ProfilerCategory.Scripts.Name,
+        ProfilerCategory.Memory.Name
+    };
+
+
+    // Pass the auto-enabled category names to the base constructor.
+    public TankEffectsProfilerModule() : base(k_Counters, autoEnabledCategoryNames: k_AutoEnabledCategoryNames) { }
+}
+</code></pre> 
+       <p><a name="update-counter-value"></a></p> 
+       <h2>Memperbarui nilai counter</h2> 
+       <p>Untuk memperbarui nilai penghitung, buat skrip MonoBehaviour yang menetapkan nilai penghitung yang telah ditentukan. Untuk informasi lebih lanjut, lihat .</p> 
+       <h3>Memperbarui contoh skrip nilai counter</h3> 
+       <p>Contoh ini MonoBehaviour script menghitung jumlah partikel jejak yang milik GameObject yang ditugaskan setiap bingkai dalam fungsi Update. Untuk melakukan ini, ia menggunakan counter yang disebut <code>TankTrailParticleCount</code>.</p> 
+       <p>Script contoh berikut juga menciptakan properti publik yang disebut <strong>Trail <span class="tooltip"><strong>Particle System</strong><span class="tooltiptext">A component that simulates fluid entities such as liquids, clouds and flames by generating and animating large numbers of small 2D images in the scene. <a class="tooltipMoreInfoLink" href="class-ParticleSystem.html">More info</a><br><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#particlesystem">Glossary</a></span></span></span></strong> (<code>m_TrailParticleSystem</code>) di <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>:</p> 
+       <pre><code class="lang-csharp">
+ using UnityEngine;
+
+ class TankMovement : MonoBehaviour
+ {
+    public ParticleSystem m_TrailParticleSystem;
+
+    void Update()
+    {
+        GameStats.TankTrailParticleCount.Value += m_TrailParticleSystem.particleCount;
+    }
+ }
+</code></pre> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Profiler_Tank_example.png" alt=""> 
+       </figure> 
+       <p><a name="release-build-counters"></a></p> 
+       <h2>Menggunakan profiler counter untuk profil sebuah rilis build</h2> 
+       <p>Ketika Anda menjalankan proyek Anda di pemain rilis, Anda tidak memiliki akses ke jendela Profiler. Namun, Anda dapat menampilkan counter sebagai elemen <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span> dalam pemain rilis. Ini berarti Anda dapat menyertakan alat profil dalam aplikasi yang dirilis. Untuk melakukan ini, lihat <strong>Getting counter values in players</strong> di .</p> 
+       <p>Gambar berikut menampilkan counter di kiri atas <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> menggunakan UI kustom di pemain rilis:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Tanks-Runtime-Stats.png" alt=""> 
+       </figure> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="Profiler-customizing.html"></a></span> 
+         <div class="tip">
+           Sesuaikan Profiler 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="Profiler-creating-custom-modules.html"></a></span> 
+         <div class="tip">
+           Membuat modul Profiler Kustom 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

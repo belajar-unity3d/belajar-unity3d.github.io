@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Triggers modul</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="visual-effects.html">Efek visual</a></li> 
+         <li><a href="ParticleSystems.html">Sistem partikel</a></li> 
+         <li><a href="Built-inParticleSystem.html">Sistem Partikel Built-in</a></li> 
+         <li><a href="PartSysReference.html">Komponen dan Modul</a></li> 
+         <li><a href="ParticleSystemModules.html">Modul Sistem Partikel</a></li> 
+         <li>Triggers modul</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="PartSysCollisionModule.html"></a></span> 
+          <div class="tip">
+            Collision modul 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="PartSysSubEmitModule.html"></a></span> 
+          <div class="tip">
+            Sub modul Emitters 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Triggers modul</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Modul Pemicu Sistem Partikel Built-in memungkinkan Anda untuk mengakses dan memodifikasi partikel berdasarkan interaksi mereka dengan satu atau lebih <span class="tooltip"><strong>Colliders</strong><span class="tooltiptext">Bentuk tak terlihat yang digunakan untuk menangani tabrakan fisik untuk objek. Seorang sari tidak perlu menjadi bentuk yang sama dengan jala objek - perkiraan kasar sering lebih efisien dan tidak dapat dibedakan dalam gameplay. <a class="tooltipMoreInfoLink" href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Collider">Glossary</a></span></span></span> di <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Scene">Glossary</a></span></span></span>. Ketika Anda mengaktifkan modul ini, Sistem Partikel memanggil callback <a href="../ScriptReference/MonoBehaviour.OnParticleTrigger.html">OnParticleTrigger()</a> pada terpasang <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span>, yang dapat Anda gunakan untuk mengakses daftar partikel tergantung di mana mereka sehubungan dengan Collider di Adegan.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PartSysTriggersModule.png" alt="Particle Systems Triggers module"> 
+        <figcaption>
+          Modul Pemicu Sistem Partikel 
+        </figcaption> 
+       </figure> 
+       <h2>Menggunakan modul Pemicu</h2> 
+       <p>Modul ini adalah bagian dari komponen <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-ParticleSystem.html">Sistem partikel</a><span class="tooltiptext">Komponen yang mensimulasikan entitas fluida seperti cairan, awan dan nyala dengan menghasilkan dan memikat sejumlah besar gambar 2D kecil di tempat kejadian. <a href="class-ParticleSystem.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#particlesystem">Glossary</a></span></span></span>. Ketika Anda membuat Sistem Partikel baru <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span>, atau tambahkan komponen Sistem Partikel ke GameObject yang keluar, Unity menambahkan modul Pemicu ke Sistem Partikel. Secara default, Unity menonaktifkan modul ini. Untuk membuat Sistem Partikel baru dan mengaktifkan modul ini:</p> 
+       <ol> 
+        <li><strong>GameObject</strong> &gt; <strong>Effects</strong> &gt; <strong>Particle System</strong>.</li> 
+        <li>Pada <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>, temukan komponen Sistem Partikel.</li> 
+        <li>Dalam komponen Sistem Partikel, temukan lipatan modul Pemicu.</li> 
+        <li>Di sebelah kiri header lipat, aktifkan kotak centang.</li> 
+       </ol> 
+       <p>Untuk memulai, tentukan bahwa Collider di Adegan partikel dapat berinteraksi dengan. Untuk melakukan ini, menetapkan satu atau lebih Collider ke properti daftar <strong>Colliders</strong>. Untuk meningkatkan jumlah Collider dalam daftar, klik tombol Add (+) di bawah daftar Collider. Untuk menghapus Collider dari daftar, pilih Collider dan klik tombol Hapus (-). Jika Anda belum ditugaskan Collider ke indeks daftar, Anda dapat menggunakan tombol Add (+) yang lebih kecil, ke kanan entri kosong, untuk membuat dan menetapkan Collider baru. Ini menciptakan GameObject baru sebagai anak Sistem Partikel dan melampirkan <span class="tooltip"><strong>Sphere Collider</strong><span class="tooltiptext">Komponen collider berbentuk sphere yang menangani tabrakan untuk GameObjects seperti bola atau hal-hal lain yang dapat kira-kira perkiraan sebagai bidang untuk tujuan fisika. <a class="tooltipMoreInfoLink" href="class-SphereCollider.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SphereCollider">Glossary</a></span></span></span> untuk itu, kemudian menetapkan Collider ke entri kosong.</p> 
+       <p>Setelah Anda menambahkan Collider, Anda kemudian dapat menentukan partikel apa yang dilakukan ketika memenuhi kriteria untuk melewati jenis acara pemicu tertentu. Ada empat jenis acara yang menjelaskan bagaimana partikel dapat berinteraksi dengan Collider. Mereka adalah:</p> 
+       <ul> 
+        <li> <strong>Inside</strong>: Partikel di dalam batas Collider.</li> 
+        <li> <strong>Outside</strong>: Partikel di luar batas Collider.</li> 
+        <li> <strong>Enter</strong>: Partikel memasuki batas Collider.</li> 
+        <li> <strong>Exit</strong>: Sebuah partikel keluar dari batas Collider.</li> 
+       </ul> 
+       <p>Dalam Inspektur, ada drop-down untuk masing-masing jenis acara ini yang memungkinkan Anda memilih apa yang harus terjadi pada partikel jika melewati kondisi acara pemicu. Pilihannya adalah:</p> 
+       <ul> 
+        <li> <strong>Callback</strong>: Memungkinkan Anda untuk mengakses partikel dalam fungsi callback OnParticleTrigger().</li> 
+        <li> <strong>Kill</strong>: Menghapus partikel. Anda tidak dapat mengakses partikel dalam fungsi callback OnParticleTrigger().</li> 
+        <li> <strong>Ignore</strong>: Mengabaikan partikel. Anda tidak dapat mengakses partikel dalam fungsi callback OnParticleTrigger().</li> 
+       </ul> 
+       <h3>API</h3> 
+       <p>Karena modul ini adalah bagian dari komponen Sistem Partikel, Anda mengaksesnya melalui kelas <a href="../ScriptReference/ParticleSystem.html">ParticleSystem</a>. Untuk informasi tentang cara mengaksesnya dan mengubah nilai pada runtime, lihat <a href="../ScriptReference/ParticleSystem-triggers.html">Pemicu modul API dokumentasi</a>.</p> 
+       <h3>Mengakses partikel dalam OnParticleTrigger()</h3> 
+       <p>Jika Anda memilih <strong>Callback</strong> sebagai reaksi ke salah satu peristiwa pemicu, Anda dapat mengakses partikel yang memenuhi kondisi acara dari script yang terpasang. Untuk melakukan ini, Anda harus menambahkan fungsi <code>OnParticleTrigger()</code> ke script yang terpasang. Dalam fungsi ini, sebut fungsi <a class="tooltipMoreInfoLink" href="../ScriptReference/ParticlePhysicsExtensions.GetTriggerParticles.html">PartikelPhysicsExtensions.GetTriggerParticles()</a> untuk mendapatkan daftar partikel yang memenuhi kriteria peristiwa pemicu. Fungsi ini mengambil <a href="../ScriptReference/ParticleSystemTriggerEventType.html">ParticleSystemTriggerEventType</a>, yang menentukan peristiwa pemicu yang ingin Anda dapatkan partikel untuk (<strong>Inside</strong>, <strong>Outside</strong>, atau <strong>Enter</strong>), dan daftar <strong>Exit</strong> yang berfungsi diisi dengan hasilnya. Dari daftar, Anda dapat mengakses, memodifikasi, atau menghancurkan partikel. Fungsi juga dapat mengambil parameter opsional yang menghasilkan informasi <span class="tooltip"><a href="../ScriptReference/ParticleSystem.Particle.html">Particles</a><span class="tooltiptext">Gambar kecil atau mesh sederhana yang dipancarkan oleh sistem partikel. Sistem partikel dapat menampilkan dan memindahkan partikel dalam jumlah besar untuk mewakili entitas fluida atau amorf. Efek semua partikel bersama menciptakan kesan entitas lengkap, seperti asap. <a href="class-ParticleSystem.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#particle">Glossary</a></span></span></span>, seperti yang Collider setiap partikel yang dipicu. Properti <span class="tooltip"><strong>collision</strong><span class="tooltiptext">tabrakan terjadi ketika mesin fisika mendeteksi bahwa tabrakan dari dua GameObjects membuat kontak atau tumpang tindih, ketika setidaknya satu memiliki komponen kaku dan bergerak. <a href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Collision">Glossary</a></span></span></span> mengontrol informasi apa yang tersedia melalui parameter ini.<strong>Collider Query Mode</strong> property controls what information is available through this parameter.</p> 
+       <p>Untuk informasi lebih lanjut tentang API dan cara menggunakannya, lihat <a href="#Example">below example</a>.</p> 
+       <h2>Properties</h2> 
+       <p>Untuk beberapa properti di bagian ini, Anda dapat menggunakan mode yang berbeda untuk mengatur nilai mereka. Untuk informasi pada mode yang dapat Anda gunakan, lihat <a href="PartSysUsage.html#VaryOverTime">Memanfaatkan sifat seiring waktu</a>.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Inside</strong></td> 
+          <td style="text-align:left;">Tentukan aksi Sistem Partikel diperlukan partikel setiap bingkai yang berada di dalam Collider. Pilihannya adalah:<br>• <strong>Callback</strong>: Tambahkan partikel ke daftar yang dapat Anda ambil di callback OnParticleTrigger() • <br>: Menghapus partikel. <strong>Kill</strong>• <br>: Mengabaikan partikel.<strong>Ignore</strong>: Ignores the particle.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Outside</strong></td> 
+          <td style="text-align:left;">Tentukan aksi Sistem Partikel diperlukan partikel setiap bingkai yang berada di luar Collider. Pilihannya adalah:<br>• <strong>Callback</strong>: Tambahkan partikel ke daftar yang dapat Anda ambil di callback OnParticleTrigger() • <br>: Menghapus partikel. <strong>Kill</strong>• <br>: Mengabaikan partikel.<strong>Ignore</strong>: Ignores the particle.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Enter</strong></td> 
+          <td style="text-align:left;">Tentukan tindakan Sistem Partikel diperlukan untuk partikel dalam bingkai yang mereka masukkan Collider. Pilihannya adalah:<br>• <strong>Callback</strong>: Tambahkan partikel ke daftar yang dapat Anda ambil di callback OnParticleTrigger() • <br>: Menghapus partikel. <strong>Kill</strong>• <br>: Mengabaikan partikel.<strong>Ignore</strong>: Ignores the particle.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Exit</strong></td> 
+          <td style="text-align:left;">Menentukan tindakan Sistem Partikel diperlukan untuk partikel dalam bingkai mereka keluar Collider. Pilihannya adalah:<br>• <strong>Callback</strong>: Tambahkan partikel ke daftar yang dapat Anda ambil di callback OnParticleTrigger() • <br>: Menghapus partikel. <strong>Kill</strong>• <br>: Mengabaikan partikel.<strong>Ignore</strong>: Ignores the particle.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Collider Query Mode</strong></td> 
+          <td style="text-align:left;">Tentukan metode Sistem Partikel ini menggunakan untuk mendapatkan informasi tentang Collider yang partikel berinteraksi dengan. Ini meningkatkan intensitas sumber daya pemrosesan modul Pemicu sehingga, jika Anda tidak perlu informasi tabrakan tambahan, atur properti ini ke <strong>Disabled</strong>. Pilihannya adalah:<br>• <strong>Disabled</strong>: Tidak mendapatkan informasi apa pun tentang yang Collider setiap partikel berinteraksi dengan. <br>• <strong>One</strong>: Dapatkan informasi tentang Collider pertama setiap partikel berinteraksi. Jika partikel berinteraksi dengan beberapa Collider dalam bingkai, ini mengembalikan Collider pertama dalam daftar <strong>Collider</strong> partikel berinteraksi dengan. <br>• <strong>All</strong>: Dapatkan informasi tentang setiap Collider setiap partikel berinteraksi dengan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Radius Scale</strong></td> 
+          <td style="text-align:left;">Collider partikel terikat. Ini memungkinkan Anda untuk mencocokkan kolider partikel yang terikat pada penampilan visual partikel lebih erat. Ini berguna jika partikel melingkar dengan fade dalam teksturnya karena partikel default Collider akan berada di dalam pemicu sebelum partikel terlihat secara visual. Perhatikan bahwa pengaturan ini tidak berubah ketika peristiwa itu benar-benar memicu, tetapi dapat menunda atau memajukan efek visual pemicu. <br><br>• Masukkan <strong>1</strong> untuk menjaga partikel Colliders ukuran yang sama dan untuk acara muncul terjadi sebagai partikel menyentuh Collider. Login Masukkan nilai kurang dari <br> untuk membuat partikel Collider lebih kecil dan untuk pemicu muncul untuk terjadi setelah partikel menembus Collider <strong>1</strong>• Masukkan nilai lebih besar dari <br> untuk membuat partikel Colliders lebih besar dan untuk pemicu muncul untuk terjadi sebelum partikel menembus Collider<strong>1</strong> to make the particle Colliders larger and for the trigger to appear to happen before a particle penetrates the Collider</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Visualize Bounds</strong></td> 
+          <td style="text-align:left;">Menunjukkan apakah untuk menampilkan batas Collider setiap partikel dalam <span class="tooltip"><strong>Scene view</strong><span class="tooltiptext">Tampilan interaktif ke dunia yang Anda buat. Anda menggunakan Adegan Lihat untuk memilih dan posisi pemandangan, karakter, kamera, lampu, dan semua jenis lain dari Game Object. <a class="tooltipMoreInfoLink" href="UsingTheSceneView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SceneView">Glossary</a></span></span></span>. Aktifkan properti ini untuk menampilkan batas Collider dan menonaktifkannya untuk menyembunyikan batas Collider.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="Example"></a></p> 
+       <h2>Examples</h2> 
+       <h3>Interaksi dengan sari</h3> 
+       <p>Contoh di bawah ini menyebabkan partikel untuk mengubah merah karena mereka memasuki batas Collider, kemudian mengubah hijau saat mereka meninggalkan batas Collider.</p> 
+       <pre><code>using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+[ExecuteInEditMode]
+public class TriggerScript : MonoBehaviour
+{
+    ParticleSystem ps;
+
+    // these lists are used to contain the particles which match
+    // the trigger conditions each frame.
+    List&lt;ParticleSystem.Particle&gt; enter = new List&lt;ParticleSystem.Particle&gt;();
+    List&lt;ParticleSystem.Particle&gt; exit = new List&lt;ParticleSystem.Particle&gt;();
+
+    void OnEnable()
+    {
+        ps = GetComponent&lt;ParticleSystem&gt;();
+    }
+
+    void OnParticleTrigger()
+    {
+        // get the particles which matched the trigger conditions this frame
+        int numEnter = ps.GetTriggerParticles(ParticleSystemTriggerEventType.Enter, enter);
+        int numExit = ps.GetTriggerParticles(ParticleSystemTriggerEventType.Exit, exit);
+
+        // iterate through the particles which entered the trigger and make them red
+        for (int i = 0; i &lt; numEnter; i++)
+        {
+            ParticleSystem.Particle p = enter[i];
+            p.startColor = new Color32(255, 0, 0, 255);
+            enter[i] = p;
+        }
+
+        // iterate through the particles which exited the trigger and make them green
+        for (int i = 0; i &lt; numExit; i++)
+        {
+            ParticleSystem.Particle p = exit[i];
+            p.startColor = new Color32(0, 255, 0, 255);
+            exit[i] = p;
+        }
+
+        // re-assign the modified particles back into the particle system
+        ps.SetTriggerParticles(ParticleSystemTriggerEventType.Enter, enter);
+        ps.SetTriggerParticles(ParticleSystemTriggerEventType.Exit, exit);
+    }
+}
+
+</code></pre> 
+       <p>Lihat gambar di bawah ini untuk hasil dari contoh ini:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PartSysTriggersModule-ExampleEditorView.jpg" alt="Editor view"> 
+        <figcaption>
+          Editor view 
+        </figcaption> 
+       </figure> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PartSysTriggersModule-ExampleGameView.jpg" alt="Game view"> 
+        <figcaption>
+          Tampilan permainan 
+        </figcaption> 
+       </figure> 
+       <h3>Interaksi dengan beberapa sari</h3> 
+       <p>Contoh berikut mengambil keuntungan dari data tabrakan tambahan yang dapat Anda ekstrak dari fungsi <code>GetTriggerParticles()</code>. Ini menyebabkan partikel di dalam batas Collider pertama untuk mengubah warna merah, di dalam batas Collider kedua untuk mengubah biru, atau di dalam Collider untuk mengubah hijau. Ini juga mengubah partikel putih jika tidak ada di dalam Collider. Untuk contoh ini, <strong>Collider Query Mode</strong> diatur ke <strong>All</strong>.</p> 
+       <pre><code>using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+[ExecuteInEditMode]
+public class TriggerScript : MonoBehaviour
+{
+    void OnParticleTrigger()
+    {
+        ParticleSystem ps = GetComponent();
+ 
+        // particles
+        List inside = new List();
+        List exit = new List();
+ 
+        // get
+        int numInside = ps.GetTriggerParticles(ParticleSystemTriggerEventType.Inside, inside, out var insideData);
+        int numExit = ps.GetTriggerParticles(ParticleSystemTriggerEventType.Exit, exit);
+ 
+        // iterate
+        for (int i = 0; i &lt; numInside; i++)
+        {
+            ParticleSystem.Particle p = inside[i];
+            if (insideData.GetColliderCount(i) == 1)
+            {
+                if (insideData.GetCollider(i, 0) == ps.trigger.GetCollider(0))
+                    p.startColor = new Color32(255, 0, 0, 255);
+                else
+                    p.startColor = new Color32(0, 0, 255, 255);
+            }
+            else if (insideData.GetColliderCount(i) == 2)
+            {
+                p.startColor = new Color32(0, 255, 0, 255);
+            }
+            inside[i] = p;
+        }
+        for (int i = 0; i &lt; numExit; i++)
+        {
+            ParticleSystem.Particle p = exit[i];
+            p.startColor = new Color32(1, 1, 1, 255);
+            exit[i] = p;
+        }
+ 
+        // set
+        ps.SetTriggerParticles(ParticleSystemTriggerEventType.Inside, inside);
+        ps.SetTriggerParticles(ParticleSystemTriggerEventType.Exit, exit);
+    }
+}
+
+</code></pre> 
+       <p>Lihat gambar berikut untuk hasil contoh ini:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PartSysTriggersModule-Example2.png" alt="Game view"> 
+        <figcaption>
+          Tampilan permainan 
+        </figcaption> 
+       </figure> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="PartSysCollisionModule.html"></a></span> 
+         <div class="tip">
+           Collision modul 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="PartSysSubEmitModule.html"></a></span> 
+         <div class="tip">
+           Sub modul Emitters 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

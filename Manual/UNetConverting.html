@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Mengkonversi permainan pemain tunggal ke Unity Multiplayer</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="cloud" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UNet.html">Multiplayer dan Jaringan</a></li> 
+         <li>Mengkonversi permainan pemain tunggal ke Unity Multiplayer</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UNetManagerHUDMatchMakerMode.html"></a></span> 
+          <div class="tip">
+            Jaringan Manager HUD dalam mode matchmaker 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UNetDebugging.html"></a></span> 
+          <div class="tip">
+            Informasi Debugging 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Mengkonversi permainan pemain tunggal ke Unity Multiplayer</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Important</strong>: UNet adalah solusi yang diuraikan, dan Solusi Multiplayer baru dan <span class="tooltip"><strong>Networking</strong><span class="tooltiptext">Sistem Unity yang memungkinkan game multiplayer di jaringan komputer. <a class="tooltipMoreInfoLink" href="UNetOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Networking">Glossary</a></span></span></span> (Netcode untuk GameObjects) sedang berkembang. Untuk informasi lebih lanjut dan langkah selanjutnya melihat informasi di .</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Dokumen ini menjelaskan langkah-langkah untuk mengkonversi permainan pemain tunggal ke permainan multiplayer, menggunakan sistem jaringan Multiplayer Unity baru. Proses yang dijelaskan di sini adalah versi yang sederhana dan lebih tinggi dari proses aktual untuk permainan nyata; itu tidak selalu bekerja persis seperti ini, tetapi memberikan resep dasar untuk proses.</p> 
+       <h2>WordPress.org</h2> 
+       <ul> 
+        <li>Tambahkan <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#GameObject">Glossary</a></span></span></span> baru ke <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> dan nama ulang "NetworkManager".</li> 
+        <li>Tambahkan komponen <strong>NetworkManager</strong> ke "NetworkManager" GameObject.</li> 
+        <li>Tambahkan komponen <span class="tooltip"><strong>NetworkManagerHUD</strong><span class="tooltiptext">Login Komponen jaringan yang membuat menu UI yang memungkinkan Anda untuk mengontrol keadaan jaringan permainan Anda menggunakan Manajer Jaringan Anda. <a class="tooltipMoreInfoLink" href="class-NetworkManagerHUD.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#NetworkManagerHUD">Glossary</a></span></span></span> ke GameObject. Ini menyediakan default <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span> untuk mengelola keadaan permainan jaringan.</li> 
+       </ul> 
+       <p>See <a href="UNetManager.html">Menggunakan NetworkManager</a>.</p> 
+       <h2>Pemain <span class="tooltip"><strong>Prefab</strong><span class="tooltiptext">Jenis aset yang memungkinkan Anda untuk menyimpan GameObject lengkap dengan komponen dan properti. Prefab bertindak sebagai template dari mana Anda dapat membuat instance objek baru di tempat kejadian. <a class="tooltipMoreInfoLink" href="Prefabs.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Prefab">Glossary</a></span></span></span> set-up</h2> 
+       <ul> 
+        <li>Temukan Prefab untuk pemain GameObject dalam permainan, atau membuat Prefab dari pemain GameObject</li> 
+        <li>Tambahkan komponen <span class="tooltip"><strong>NetworkIdentity</strong><span class="tooltiptext">Komponen Jaringan yang memungkinkan Anda untuk menetapkan identitas ke GameObject Anda untuk jaringan untuk mengenalinya sebagai GameObject Pemain Lokal atau Server Hanya GameObject. <a class="tooltipMoreInfoLink" href="class-NetworkIdentity.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#NetworkIdentity">Glossary</a></span></span></span> ke pemain Prefab</li> 
+        <li>Cek kotak LocalPlayerAuthority di JaringanIdentitas</li> 
+        <li>Mengatur <code>playerPrefab</code> di bagian <strong>Spawn Info</strong> NetworkManager ke pemain Prefab</li> 
+        <li>Hapus pemain GameObject instance dari adegan jika ada di tempat kejadian</li> 
+       </ul> 
+       <p>Lihat <span class="tooltip"><a class="tooltipMoreInfoLink" href="UNetPlayers.html">Tujuan Pemain</a><span class="tooltiptext">Objek API Tingkat Tinggi (HPAPI) yang mewakili pemain di server dan memiliki kemampuan untuk menjalankan perintah (yang mengamankan panggilan prosedur jarak jauh klien-to-server) dari klien pemain. <a href="UNetPlayers.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#PlayerObject">Glossary</a></span></span></span> untuk informasi lebih lanjut.</p> 
+       <h2>Gerakan pemain</h2> 
+       <ul> 
+        <li>Menambahkan komponen NetworkTransform ke pemain Prefab</li> 
+        <li>Memperbarui input dan kontrol <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> untuk menghormati <code>isLocalPlayer</code> </li> 
+        <li>Perbaiki <span class="tooltip"><strong>Camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span> untuk menggunakan pemain spawned dan <code>isLocalPlayer</code> </li> 
+       </ul> 
+       <p>Misalnya, script ini hanya memproses input untuk pemain lokal:</p> 
+       <pre><code>using UnityEngine;
+using UnityEngine.Networking;
+
+public class Controls : NetworkBehaviour
+{
+    void Update()
+    {
+        if (!isLocalPlayer)
+        {
+            // exit from update if this is not the local player
+            return;
+        }
+
+        // handle player input for movement
+    }
+}
+</code></pre> 
+       <h2>status permainan pemain dasar</h2> 
+       <ul> 
+        <li>Membuat skrip yang mengandung data penting ke JaringanBehaviours bukan MonoBehaviours</li> 
+        <li>Membuat variabel anggota penting menjadi SyncVars</li> 
+       </ul> 
+       <p>See <a href="UNetStateSync.html">Sinkronisasi Negara</a>.</p> 
+       <h2>Tindakan jaringan</h2> 
+       <ul> 
+        <li>Membuat skrip yang melakukan tindakan penting ke JaringanBehaviours bukan MonoBehaviours</li> 
+        <li>Memperbarui fungsi yang melakukan tindakan pemain penting untuk menjadi perintah</li> 
+       </ul> 
+       <p>See <a href="UNetActions.html">Aksi Jaringan</a>.</p> 
+       <h2>Non-pemain GameObjects</h2> 
+       <p>Memperbaiki prefab non-pemain seperti musuh:</p> 
+       <ul> 
+        <li>Tambahkan komponen <strong>NetworkIdentify</strong> component</li> 
+        <li>Tambahkan komponen <span class="tooltip"><strong>NetworkTransform</strong><span class="tooltiptext">Komponen Jaringan yang memungkinkan Anda untuk menyinkronkan pergerakan GameObjects di jaringan. <a class="tooltipMoreInfoLink" href="class-NetworkTransform.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#NetworkTransform">Glossary</a></span></span></span> component</li> 
+        <li>Daftar spawnable Prefabs dengan <strong>NetworkManager</strong> </li> 
+        <li>Memperbarui skrip dengan keadaan permainan dan tindakan</li> 
+       </ul> 
+       <h2>Spawners</h2> 
+       <ul> 
+        <li>Secara potensial mengubah skrip pemijat menjadi JaringanBehaviours</li> 
+        <li>Memodifikasi pemijat hanya berjalan di server (menggunakan properti Server atau fungsi <code>OnStartServer()</code>)</li> 
+        <li>Call <code>NetworkServer.Spawn()</code> untuk membuat GameObjects</li> 
+       </ul> 
+       <h2>Posisi Spawn untuk pemain</h2> 
+       <ul> 
+        <li>Tambahkan GameObject baru dan letakkan di lokasi awal pemain</li> 
+        <li>Tambahkan komponen <strong>NetworkStartPosition</strong> ke GameObject baru</li> 
+       </ul> 
+       <h2>Lobby</h2> 
+       <ul> 
+        <li>Buat adegan lobi</li> 
+        <li>Tambahkan GameObject baru ke Adegan dan nama kembali ke "NetworkLobbyManager".</li> 
+        <li>Tambahkan komponen NetworkLobbyManager ke GameObject baru.</li> 
+        <li>Konfigurasikan Manager: 
+         <ul> 
+          <li>Scenes</li> 
+          <li>Prefabs</li> 
+          <li>Spawners</li> 
+         </ul> </li> 
+       </ul> 
+       <!-- area:cloud --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UNetManagerHUDMatchMakerMode.html"></a></span> 
+         <div class="tip">
+           Jaringan Manager HUD dalam mode matchmaker 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UNetDebugging.html"></a></span> 
+         <div class="tip">
+           Informasi Debugging 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy"> 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

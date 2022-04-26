@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Membuat Klip Animasi baru</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="AnimationSection.html">Animation</a></li> 
+         <li><a href="AnimationClips.html">Animasi Klip</a></li> 
+         <li><a href="AnimationEditorGuide.html">Panduan Jendela Animasi</a></li> 
+         <li>Membuat Klip Animasi baru</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="animeditor-UsingAnimationEditor.html"></a></span> 
+          <div class="tip">
+            Menggunakan tampilan Animasi 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="animeditor-AnimatingAGameObject.html"></a></span> 
+          <div class="tip">
+            Meninggalkan GameObject 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Membuat Klip Animasi baru</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Untuk membuat <span class="tooltip"><strong>Animation Clip</strong><span class="tooltiptext">Animasi data yang dapat digunakan untuk karakter animasi atau animasi sederhana. Ini adalah bagian "unit" sederhana dari gerakan, seperti (salah satu contoh spesifik) "Idle", "Walk" atau "Run". <a class="tooltipMoreInfoLink" href="class-AnimationClip.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnimationClip">Glossary</a></span></span></span> baru, pilih GameObject di Adegan Anda, dan buka <strong>Animation Window</strong> (top menu:) <strong>Window</strong> &gt; <strong>Animation</strong> &gt; <strong>Animation</strong>.</p> 
+       <p>Jika <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> belum memiliki Klip Animasi yang ditugaskan, tombol “Create” muncul di pusat area Timeline Animasi Window (lihat <em>Fig 1: Buat Klip Animasi baru</em>).</p> 
+       <p>Klik tombol <strong>Create</strong>. Unity meminta Anda untuk menyimpan klip animasi kosong baru Anda di folder <span class="tooltip"><strong>Assets</strong><span class="tooltiptext">Setiap media atau data yang dapat digunakan dalam permainan atau proyek Anda. Aset mungkin berasal dari file yang dibuat di luar Unity, seperti model 3D, file audio atau gambar. Anda juga dapat membuat beberapa jenis aset di Unity, seperti Pengontrol Animator, Audio Mixer atau Tekstur Render. <a class="tooltipMoreInfoLink" href="AssetWorkflow.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Asset">Glossary</a></span></span></span> Anda.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AnimationEditorNewClip.png" alt="Fig 1: Create a new Animation Clip"> 
+        <figcaption>
+          Fig 1: Buat Klip Animasi baru 
+        </figcaption> 
+       </figure> 
+       <p>Ketika Anda menyimpan Klip Animasi kosong baru ini, Unity melakukan berikut:</p> 
+       <ul> 
+        <li>Buat Aset Pengendali Animator baru</li> 
+        <li>Menambahkan klip baru ke Animator Controller sebagai state default</li> 
+        <li>Menambahkan Komponen Animator ke GameObject yang Anda gunakan animasi untuk</li> 
+        <li>Menetapkan Pengontrol Animator baru ke Komponen Animator</li> 
+       </ul> 
+       <p>Semua elemen yang diperlukan dari sistem animasi sekarang diatur, dan Anda dapat memulai mengumumkan GameObject.</p> 
+       <h2>Menambahkan Klip Animasi lain</h2> 
+       <p>Jika GameObject sudah memiliki satu atau lebih Klip Animasi yang ditugaskan, tombol "Create" tidak terlihat. Sebagai gantinya, salah satu klip yang ada terlihat di jendela Animasi. Untuk beralih antara Klip Animasi, gunakan menu di kiri atas jendela Animasi, di bawah kendali pemutaran (lihat <em>Fig 2: Menambahkan lebih banyak Klip Animasi</em>).</p> 
+       <p>Untuk membuat Klip Animasi baru di GameObject yang memiliki animasi yang ada, pilih <strong>Create New Clip</strong> dari menu ini. Sekali lagi, Unity meminta Anda untuk menyimpan Klip Animasi kosong baru Anda sebelum Anda dapat bekerja di atasnya.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AnimationEditorNewClipMenu.png" alt="Fig 2: Adding more Animation Clips"> 
+        <figcaption>
+          Fig 2: Menambahkan lebih banyak Klip Animasi 
+        </figcaption> 
+       </figure> 
+       <h2>Bagaimana cocok bersama</h2> 
+       <p>Langkah di atas secara otomatis mengatur komponen dan referensi yang relevan. Namun, berguna untuk memahami bagaimana potongan terhubung.</p> 
+       <ul> 
+        <li>Permainan Objek harus memiliki komponen <strong>Animator</strong> component</li> 
+        <li>Komponen Animator harus memiliki Aset <span class="tooltip"><strong>Animator Controller</strong><span class="tooltiptext">Kontrol animasi melalui Lapisan Animasi dengan Mesin Negara Animasi dan Pohon Animasi Blend, dikendalikan oleh Parameter Animasi. Pengontrol Animator yang sama dapat direferensikan oleh beberapa model dengan komponen Animator. <a class="tooltipMoreInfoLink" href="class-AnimatorController.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnimatorController">Glossary</a></span></span></span> yang ditugaskan</li> 
+        <li>The Animator Controller aset harus memiliki satu atau lebih Animasi Klip ditugaskan</li> 
+       </ul> 
+       <p>Diagram di bawah ini menunjukkan bagaimana Unity menetapkan potongan-potongan ini, mulai dari Klip Animasi baru di Jendela Animasi (lihat <em>Fig 3: Diagram Klip Animasi</em>).</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AnimationNewClipAutoSetup.png" alt="Fig 3: Animation Clip Diagram. "> 
+        <figcaption>
+          Fig 3: Diagram Klip Animasi. 
+        </figcaption> 
+       </figure> 
+       <p>Setelah Anda membuat Klip Animasi baru, Anda sekarang dapat melihat:</p> 
+       <ul> 
+        <li>Jendela Animasi (top kiri) menunjukkan garis waktu dengan garis kepala pemutaran putih, siap untuk merekam <span class="tooltip"><strong>keyframes</strong><span class="tooltiptext">Bingkai yang menandai titik awal atau akhir transisi dalam animasi. Bingkai di antara bingkai kunci disebut inbetweens.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#keyframe">Glossary</a></span></span></span> baru. Nama klip terlihat di menu klip, di bawah kendali pemutaran.</li> 
+        <li><span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Inspector">Glossary</a></span></span></span> (center) menunjukkan bahwa "Cube" GameObject memiliki <span class="tooltip"><strong>Animator Component</strong><span class="tooltiptext">Komponen pada model yang merupakan model yang menggunakan sistem Animasi. Komponen ini memiliki referensi aset Animator Controller yang mengontrol animasi. <a href="class-AnimatorController.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnimatorComponent">Glossary</a></span></span></span>, dan bidang <strong>Controller</strong> dari komponen menunjukkan bahwa Aset Pengontrol Animator yang disebut <strong>Cube</strong> ditugaskan untuk itu.</li> 
+        <li><span class="tooltip"><strong>Project Window</strong><span class="tooltiptext">Jendela yang menunjukkan isi folder <code>Assets</code> (Project tab) <a class="tooltipMoreInfoLink" href="ProjectView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Projectwindow">Glossary</a></span></span></span> (bawah kanan) menunjukkan bahwa dua aset baru telah diciptakan: aset Animator Controller yang disebut <strong>Cube</strong> dan Aset Klip Animasi yang disebut <strong>Cube Animation Clip</strong>.</li> 
+        <li><span class="tooltip"><strong>Animator Window</strong><span class="tooltiptext">Jendela di mana Animator Controller divisualkan dan diedit. <a class="tooltipMoreInfoLink" href="AnimatorWindow.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnimatorWindow">Glossary</a></span></span></span> (bottom kiri) menunjukkan isi dari Animator Controller: ada <strong>Cube Animation Clip</strong> pada pengontrol, dan itu dalam keadaan default (seperti yang ditunjukkan oleh warna oranye). Subsequent klip yang Anda tambahkan ke controller memiliki warna abu-abu, menunjukkan mereka bukan state default (lihat <em>Fig 4: Klip Animasi Baru di Jendela Proyek</em>).</li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AnimationEditorNewAnimationAdded.png" alt="Fig 4: New Animation Clip in the Project Window"> 
+        <figcaption>
+          Fig 4: Klip Animasi Baru di Jendela Proyek 
+        </figcaption> 
+       </figure> 
+       <hr> 
+       <ul> 
+        <li><span class="page-edit">2017–09–05 Login</span></li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="animeditor-UsingAnimationEditor.html"></a></span> 
+         <div class="tip">
+           Menggunakan tampilan Animasi 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="animeditor-AnimatingAGameObject.html"></a></span> 
+         <div class="tip">
+           Meninggalkan GameObject 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

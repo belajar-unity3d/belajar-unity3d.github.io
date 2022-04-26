@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Mengedit Prefab dalam Mode Prefab</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="CreatingGameplay.html">Membuat Gameplay</a></li> 
+         <li><a href="Prefabs.html">Prefabs</a></li> 
+         <li>Mengedit Prefab dalam Mode Prefab</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="CreatingPrefabs.html"></a></span> 
+          <div class="tip">
+            Membuat Prefab 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="PrefabInstanceOverrides.html"></a></span> 
+          <div class="tip">
+            Instance overrides 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Mengedit Prefab dalam Mode Prefab</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Untuk mengedit Aset <span class="tooltip"><strong>Prefab</strong><span class="tooltiptext">Jenis aset yang memungkinkan Anda untuk menyimpan GameObject lengkap dengan komponen dan properti. Prefab bertindak sebagai template dari mana Anda dapat membuat instance objek baru di tempat kejadian. <a class="tooltipMoreInfoLink" href="Prefabs.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Prefab">Glossary</a></span></span></span>, buka di <strong>Prefab Mode</strong>. Mode Prefab memungkinkan Anda untuk melihat dan mengedit konten dari Aset Prefab secara terpisah dari setiap <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#GameObject">Glossary</a></span></span></span> lain dalam <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> Anda. Perubahan yang Anda buat dalam Mode Prefab mempengaruhi semua kasus yang Prefab.</p> 
+       <p><a name="EnteringAndExiting"></a></p> 
+       <h2>Memasukkan dan keluar Mode Prefab</h2> 
+       <p>Anda dapat mengedit Aset Prefab <strong>in isolation</strong>, atau <strong>in context</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PrefabContextVsIsolation.png" alt="Left: editing a Prefab in isolation. Right: editing a *Prefab in context."> 
+        <figcaption>
+          Kiri: mengedit prefab dalam isolasi. Kanan: mengedit *Prefab dalam konteks. 
+        </figcaption> 
+       </figure> 
+       <ul> 
+        <li><p>Sitemap Ketika Anda mengedit Prefab dalam isolasi, Unity menyembunyikan sisa adegan kerja Anda saat ini, dan Anda hanya melihat GameObjects yang berkaitan dengan Prefab itu sendiri (plus, opsional, pre-set <strong>In isolation:</strong>- lihat di bawah ini).<strong>editing environment </strong>- see below).</p></li> 
+        <li><p>Sitemap Ketika Anda mengedit Prefab dalam konteks, sisa adegan kerja saat ini tetap terlihat, tetapi terkunci untuk mengedit.<strong>In context:</strong> When you edit a Prefab in context, the rest of your current working Scene remains visible, but locked for editing. </p></li> 
+       </ul> 
+       <h3>Mengedit dalam isolasi</h3> 
+       <p>Anda dapat mulai mengedit Mode Prefab dalam beberapa cara. Untuk membuka Aset Prefab dan edit <strong>in isolation</strong> Anda dapat melakukannya dengan cara berikut:</p> 
+       <ul> 
+        <li>Klik ganda Aset Prefab di jendela Proyek</li> 
+        <li>Pilih Prefab Aset di <span class="tooltip"><strong>Project window</strong><span class="tooltiptext">Jendela yang menunjukkan isi folder <code>Assets</code> (Project tab) <a class="tooltipMoreInfoLink" href="ProjectView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Projectwindow">Glossary</a></span></span></span> dan klik tombol <strong>Open Prefab</strong> di jendela <strong><span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, asset or project settings, allowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span></strong> window</li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PrefabAssetOpenPrefabButton.png" alt="A Prefab Asset selected in the Project window (left), and the Open Prefab button visible in the inspector (right)"> 
+        <figcaption>
+          Aset Prefab yang dipilih di jendela Proyek (kiri), dan tombol Open Prefab terlihat di inspektur (kanan) 
+        </figcaption> 
+       </figure> 
+       <p>Ketika Anda memasukkan Mode Prefab dalam isolasi, Unity hanya menunjukkan isi dari Prefab itu pada <strong><span class="tooltip"><strong>Scene view</strong><span class="tooltiptext">An interactive view into the world you are creating. You use the Scene View to select and position scenery, characters, cameras, lights, and all other types of Game Object. <a class="tooltipMoreInfoLink" href="UsingTheSceneView.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SceneView">Glossary</a></span></span></span></strong> dan jendela Hierarchy. Dalam gambar berikut, akar Prefab adalah <strong>GameObject</strong> biasa - itu tidak memiliki ikon instance biru.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PrefabsSceneAndHierarchyInPrefabMode.png" alt="The Scene view and Hierarchy, with Prefab Mode in isolation"> 
+        <figcaption>
+          Pemandangan dan Hierarchy, dengan Mode Prefab dalam isolasi 
+        </figcaption> 
+       </figure> 
+       <p>Dalam Mode Prefab, tampilan <strong>Scene</strong> menampilkan bar breadcrumb di bagian atas. Masuk paling tepat adalah Prefab terbuka saat ini. Gunakan bar breadcrumb untuk menavigasi kembali ke Adegan utama atau Aset Prefab lainnya yang mungkin Anda buka.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PrefabsBreadcrumbBar.png" alt="The breadcrumb bar at the top of the Scene view, visible when in Prefab Mode"> 
+        <figcaption>
+          Bar breadcrumb di bagian atas tampilan Adegan, terlihat ketika dalam Mode Prefab 
+        </figcaption> 
+       </figure> 
+       <p>Jendela <strong>Hierarchy</strong> menampilkan bilah header Prefab di bagian atas yang menunjukkan Prefab terbuka saat ini. Anda dapat menggunakan panah belakang di bilah header untuk menavigasi kembali satu langkah, yang setara dengan mengklik breadcrumb sebelumnya di bar breadcrumb di pemandangan.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PrefabsBackArrow.png" alt="The back arrow in the header bar of the Hierarchy window, visible when in Prefab Mode"> 
+        <figcaption>
+          panah belakang di bar header jendela Hierarchy, terlihat ketika dalam Mode Prefab 
+        </figcaption> 
+       </figure> 
+       <h3>Mengedit dalam konteks</h3> 
+       <p>Atau, Anda dapat membuka Aset Prefab <strong>in Context</strong> melalui contoh Prefab itu. Cara melakukan yang meliputi:</p> 
+       <ul> 
+        <li>Pilih instance Prefab di jendela Hierarchy dan klik tombol <strong>Open</strong> di jendela Inspector</li> 
+        <li>Pilih instance Prefab di jendela Hierarchy dan tekan <strong>P</strong> pada keyboard. Ini adalah default <a href="UnityHotkeys.html">keyboard mengikat</a> </li> 
+        <li>Gunakan <strong>arrow button</strong> di samping instance Prefab di jendela Hierarchy</li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PrefabInstanceInspectorOpenButton.png" alt="The Open button in the Inspector when a Prefab Instance is selected"> 
+        <figcaption>
+          Tombol terbuka di Inspektur ketika Instance Prefab dipilih 
+        </figcaption> 
+       </figure> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PrefabHierarchyOpenArrow.png" alt="The arrow button next to a Prefab in the Hierarchy window"> 
+        <figcaption>
+          Tombol panah di sebelah Prefab di jendela Hierarchy 
+        </figcaption> 
+       </figure> 
+       <p>Secara default, Unity menampilkan representasi visual konteks dalam skala abu-abu untuk secara visual membedakannya dari konten Prefab yang Anda edit. Namun, Anda dapat menggunakan kontrol <strong>Context:</strong> di bilah Prefab untuk mengaturnya ke negara-negara berikut:</p> 
+       <ul> 
+        <li> <strong>Normal</strong> - Menunjukkan konteks dengan warna normal</li> 
+        <li> <strong>Gray</strong> - Menunjukkan konteks dalam skala abu-abu</li> 
+        <li> <strong>Hidden</strong> - Sembunyikan konteks sepenuhnya sehingga hanya konten Prefab terlihat</li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PrefabModeContextControl.png" alt="The Prefab Mode controls in the Prefab bar in at the top of the Scene view, including the Context control and the Show Overrides toggle"> 
+        <figcaption>
+          Kontrol Mode Prefab di bar Prefab di bagian atas tampilan Adegan, termasuk kontrol Context dan Show Overrides toggle 
+        </figcaption> 
+       </figure> 
+       <p>Anda tidak dapat memilih GameObjects yang merupakan bagian dari konteks, atau apakah mereka menunjukkan dalam Hierarchy. Ini jadi Anda dapat fokus pada mengedit Prefab Anda tanpa sengaja memilih GameObjects yang tidak terkait lainnya, dan tanpa memiliki jendela Hierarchy yang berantakan. Namun, ketika Anda memindahkan GameObjects di sekitar itu adalah bagian dari konten Prefab, Anda dapat menggunakan fitur snapping di Unity untuk snap ke GameObjects dalam konteks, asalkan konteks tidak diatur ke <strong>Hidden</strong>.</p> 
+       <p>Dalam Mode Prefab dalam Context, Unity menampilkan konten Prefab pada posisi yang cocok dengan instance Prefab itu dibuka melalui. Ini berarti bahwa Anda mungkin melihat pratinjau <span class="tooltip"><strong>root Transform</strong><span class="tooltiptext">Transform di bagian atas hirarki Transforms. Dalam Prefab, transformasi akar adalah Transform paling atas di Prefab. Dalam karakter humanoid animasi, Root Transform adalah proyeksi di bidang Y Body Transform dan bersaing pada waktu yang berjalan. Pada setiap bingkai, perubahan dalam Root Transform dikomputasikan, dan kemudian ini diterapkan pada GameObject untuk membuatnya bergerak. <a class="tooltipMoreInfoLink" href="RootMotion.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#RootTransform">Glossary</a></span></span></span> dari konten Prefab dengan posisi yang berbeda dan nilai rotasi dari Aset Prefab sebenarnya memiliki.</p> 
+       <p>Anda tidak dapat mengedit nilai-nilai ini dalam Mode Prefab dalam Context. Jika Anda perlu mengeditnya, Anda dapat membuka Prefab dalam isolasi, atau memilih Aset Prefab di jendela Proyek dan mengedit nilai-nilai di Inspektur.</p> 
+       <p>Terlepas dari sifat Transform akar, Anda juga dapat menahan sifat lain dari instance Prefab, yang mungkin secara drastis mengubah penampilannya dibandingkan dengan Aset Prefab itu adalah contoh. Untuk melihat nilai-nilai overridden ini dari instance Prefab, sementara dalam Mode Prefab dalam Context memungkinkan toggle <strong>Show Overrides</strong> di bilah Prefab. Sementara pengaturan ini diaktifkan, setiap properti yang menimpa pada instance Prefab ditinjau cara yang sama pada konteks Prefab dan Anda tidak dapat mengeditnya. Untuk mengedit sifat-sifat tersebut, menonaktifkan toggle <strong>Show Overrides</strong> lagi.</p> 
+       <p><a name="AutoSave"></a></p> 
+       <h2>Otomatis Simpan</h2> 
+       <p>Mode Prefab memiliki pengaturan <strong>Auto Save</strong> di sudut kanan atas pemandangan. Ketika diaktifkan, Unity secara otomatis menghemat setiap perubahan yang Anda buat untuk Prefab Asset. <strong>Auto Save</strong> adalah secara default.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PrefabsAutoSave.png" alt="The Auto Save toggle in the upper right corner of the Scene view in Prefab Mode"> 
+        <figcaption>
+          Auto Simpan toggle di sudut kanan atas pemandangan dalam Mode Prefab 
+        </figcaption> 
+       </figure> 
+       <p>Jika Anda ingin melakukan perubahan tanpa secara otomatis menyimpan perubahan tersebut ke Aset Preset, menonaktifkan kotak cemen. Dalam hal ini, Unity meminta Anda jika Anda ingin menyimpan perubahan yang tidak disadari atau tidak ketika Anda keluar Mode Prefab untuk Prefab saat ini. Jika mengedit Prefab dalam Mode Prefab tampaknya lambat, matikan <strong>Auto Save</strong> mungkin membantu.<strong>Auto Save</strong> might help.</p> 
+       <h2>Mengubah antara isolasi atau dalam mode konteks</h2> 
+       <p>Ketika Anda membuka Mode Prefab melalui Aset Prefab, Unity menampilkan isi dari Prefab dalam isolasi. Namun, ketika Anda membuka Mode Prefab melalui instance Prefab di jendela Hierarchy, buka ini <strong>Prefab Mode in Context</strong>.</p> 
+       <p>Ketika Anda membuka Mode Prefab dengan cara ini, Anda dapat melihat konteks instance Prefab dalam pandangan Adegan meskipun Anda tidak mengedit instance tetapi bukan Aset Prefab itu sendiri. Misalnya, jika Anda membuka Mode Prefab di Context melalui instance Prefab di Adegan, maka Anda dapat melihat lingkungan di Adegan itu saat Anda mengedit Prefab. Prefab juga ditunjukkan dengan kondisi pencahayaan yang sama seperti di Adegan.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PrefabModeContextView.png" alt="A Prefab opened in Prefab Mode in Context, with the surrounding context displayed in gray scale"> 
+        <figcaption>
+          Prefab dibuka dalam Mode Prefab dalam Context, dengan konteks sekitarnya ditampilkan dalam skala abu-abu 
+        </figcaption> 
+       </figure> 
+       <p>Jika Anda memiliki instance Prefab yang tidak ingin Anda buka dalam konteks, tetapi ingin membuka isolasi, tahan tombol <strong>Alt</strong> dan klik tombol <strong>Open</strong> atau tombol panah untuk membuka Mode Prefab. Anda juga dapat mengatur shortcut kustom di jendela <strong>Shortcuts</strong> untuk perintah <strong>Stage &gt; Edit Prefab in Isolation</strong>.</p> 
+       <p><a name="Undo"></a></p> 
+       <h2>Undo</h2> 
+       <p>Ketika Anda membuat perubahan Aset Prefab sementara dalam Mode Prefab, Anda hanya dapat membatalkan perubahan tersebut sementara masih dalam Mode Prefab. Setelah Anda keluar Mode Prefab untuk Aset Prefab yang diberikan, edit Anda berkaitan dengan Aset Prefab itu tidak lagi tersedia dalam sejarah yang tidak ada.</p> 
+       <p><a name="Environment"></a></p> 
+       <h2>Mengedit Lingkungan</h2> 
+       <p>Anda dapat menetapkan Adegan sebagai <strong>editing environment</strong> untuk digunakan dengan Mode Prefab dalam Isolasi. Ini memungkinkan Anda untuk mengedit Prefab Anda terhadap latar belakang pilihan Anda daripada adegan kosong. Ini dapat berguna untuk melihat bagaimana Prefab Anda terlihat terhadap pemandangan tertentu dari pilihan Anda. Unity hanya menggunakan lingkungan pengeditan ini ketika Anda membuka Mode Prefab dalam Isolasi.</p> 
+       <p>Anda tidak dapat memilih GameObjects di Adegani bahwa Anda menetapkan lingkungan pengeditan ketika dalam Mode Prefab, atau apakah mereka menunjukkan dalam Hierarchy. Ini jadi Anda dapat fokus pada mengedit Prefab Anda tanpa sengaja memilih GameObjects yang tidak terkait lainnya, dan tanpa jendela Hierarchy yang berantakan.</p> 
+       <p>Untuk mengatur Adegan sebagai lingkungan pengeditan, buka jendela (top menu: <strong>Edit &gt; Project Settings</strong>, kemudian pilih kategori <strong>Editor</strong>) dan pergi ke bagian <strong>Prefab Editing Environment</strong>. Gunakan pengaturan <strong>Regular Environment</strong> untuk "non-UI" Prefabs, dan pengaturan <strong>UI Environment</strong> untuk UI Prefabs. Prefab UI adalah mereka yang memiliki komponen pada akar, daripada komponen Transform biasa. Prefab "non-UI" adalah mereka yang memiliki komponen Transform biasa.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PrefabsEnvironmentSettings1.png" alt="Prefab editing environment settings in the Editor Project Settings"> 
+        <figcaption>
+          Pengaturan lingkungan edit prefab di Pengaturan Proyek Editor 
+        </figcaption> 
+       </figure> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="CreatingPrefabs.html"></a></span> 
+         <div class="tip">
+           Membuat Prefab 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="PrefabInstanceOverrides.html"></a></span> 
+         <div class="tip">
+           Instance overrides 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

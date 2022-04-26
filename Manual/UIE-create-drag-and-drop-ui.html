@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Buat UI drag-and-drop di dalam jendela editor kustom</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UIToolkits.html">Buat antarmuka pengguna (UI)</a></li> 
+         <li><a href="UIElements.html">UI Toolkit</a></li> 
+         <li><a href="UIE-examples.html">Examples</a></li> 
+         <li>Buat UI drag-and-drop di dalam jendela editor kustom</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UIE-create-tabbed-menu-for-runtime.html"></a></span> 
+          <div class="tip">
+            Buat menu tabbed untuk runtime 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UIE-ListView-TreeView.html"></a></span> 
+          <div class="tip">
+            Buat daftar dan pemandangan pohon 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Buat UI drag-and-drop di dalam jendela editor kustom</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Drag-and-drop adalah fitur umum dalam desain <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span>. Anda dapat menggunakan UI Toolkit untuk membuat UI drag-and-drop di dalam jendela editor kustom atau dalam aplikasi yang dibangun oleh Unity. Contoh ini menunjukkan cara membuat UI drag-and-drop di dalam jendela editor kustom.</p> 
+       <h2>Contoh gambaran</h2> 
+       <p>Contoh menambahkan beberapa slot dan satu objek di jendela editor kustom. Anda dapat menyeret objek ke dalam slot apa pun, seperti yang ditunjukkan di bawah ini:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UIBuilder/drag-drop.gif" alt="A preview of a drag-and-drop UI"> 
+        <figcaption>
+          Pratinjau UI drag-and-drop 
+        </figcaption> 
+       </figure> 
+       <p>Anda dapat menemukan file yang lengkap yang contoh ini menciptakan di <a href="https://github.com/Unity-Technologies/ui-toolkit-manual-code-examples/tree/master/create-a-drag-and-drop-window-inside-a-custom-editor-window">Repositori GitHub</a> ini.</p> 
+       <h2>Prerequisites</h2> 
+       <p>Ini adalah contoh canggih untuk pengembang yang akrab dengan Editor Unity, UI Toolkit, dan C # scripting. Disarankan bahwa Anda memiliki pemahaman dasar tentang konsep berikut:</p> 
+       <ul> 
+        <li><a href="UIBuilder.html">Pembuat UI</a></li> 
+        <li><a href="UIE-VisualTree.html">Pohon Visual</a></li> 
+        <li><a href="UIE-UXML.html">UXML</a></li> 
+        <li><a href="UIE-USS.html">USS</a></li> 
+        <li><a href="UIE-Pointer-Events.html">Kalender</a></li> 
+       </ul> 
+       <h2>Buat jendela editor kustom</h2> 
+       <p>Untuk memulai, buat jendela editor kustom untuk menahan UI drag-and-drop Anda.</p> 
+       <ol> 
+        <li>Buat proyek di Unity menggunakan template.</li> 
+        <li>Buat folder di <code>Assets</code> yang disebut <code>DragAndDrop</code> untuk menyimpan semua file Anda.</li> 
+        <li>Dalam folder <code>DragAndDrop</code>, klik kanan dan pilih <strong>Create</strong> &gt; <strong>UI Toolkit</strong> &gt; <strong>Editor Window</strong>.</li> 
+        <li>Di <strong>UI Toolkit Editor Window Creator</strong>, masukkan <code>DragAndDropWindow</code>.</li> 
+        <li>Klik <strong>Confirm</strong>. Ini secara otomatis menciptakan file C#, UXML, dan USS untuk jendela kustom Anda.</li> 
+        <li>Buka <code>DragAndDropWindow.cs</code> dan ubah nama menu dan judul jendela ke <code>Drag And Drop</code>, dan lepaskan kode untuk label default, untuk membuat UI lebih ramah pengguna.</li> 
+       </ol> 
+       <p>Anda selesai <code>DragAndDropWindow.cs</code> harus terlihat seperti berikut:</p> 
+       <pre><code class="lang-cs">using UnityEditor;
+using UnityEngine;
+using UnityEngine.UIElements;
+using UnityEditor.UIElements;
+
+public class DragAndDropWindow : EditorWindow
+{
+    [MenuItem("Window/UI Toolkit/Drag And Drop")]
+    public static void ShowExample()
+    {
+        DragAndDropWindow wnd = GetWindow&lt;DragAndDropWindow&gt;();
+        wnd.titleContent = new GUIContent("Drag And Drop");
+    }
+
+    public void CreateGUI()
+    {
+        // Each editor window contains a root VisualElement object
+        VisualElement root = rootVisualElement;
+
+          // Import UXML
+        var visualTree = AssetDatabase.LoadAssetAtPath&lt;VisualTreeAsset&gt;("Assets/Drag and Drop/DragAndDropWindow.uxml");
+        VisualElement labelFromUXML = visualTree.Instantiate();
+        root.Add(labelFromUXML);
+
+        // A stylesheet can be added to a VisualElement.
+        // The style will be applied to the VisualElement and all of its children.
+        var styleSheet = AssetDatabase.LoadAssetAtPath&lt;StyleSheet&gt;("Assets/Drag and Drop/DragAndDropWindow.uss");
+    
+    }
+}
+</code></pre> 
+       <h2>Buat slot dan objek</h2> 
+       <p>Selanjutnya, tambahkan kontrol UI ke jendela kustom Anda.</p> 
+       <ol> 
+        <li><p>Dalam folder <code>DragAndDrop</code>, klik dua <code>DragAndDropWindow.uxml</code> untuk membuka UI Builder.</p></li> 
+        <li><p>Pada <strong>StyleSheet</strong>, klik <strong>Add Existing USS</strong> dan pilih <code>DragAndDropWindow.uss</code>.</p></li> 
+        <li> <p>Tambahkan kontrol UI <code>VisualElement</code> berikut:</p> 
+         <ul> 
+          <li>Satu bernama <code>slots</code> dengan dua anak bernama <code>slot_row1</code> dan <code>slot_row2</code>. Setiap baris harus memiliki dua anak bernama <code>slot1</code> dan <code>slot2</code>.</li> 
+          <li>Satu bernama <code>object</code> pada tingkat yang sama dengan <code>slots</code>. <code>object</code> harus datang setelah <code>slots</code> di <strong>Hierarchy</strong>.</li> 
+         </ul> </li> 
+        <li> <p>Gaya kontrol UI sebagai berikut:</p> 
+         <ul> 
+          <li>Untuk <code>slot1</code> dan <code>slot2</code>, gaya mereka sebagai kotak 80px X 80px dengan warna latar belakang putih dan sudut bulat. Menyiapkan slot sebagai dua baris dengan dua slot di setiap baris.</li> 
+          <li>Untuk <code>object</code>, gaya itu sebagai titik bulat 50px X 50px dengan warna latar belakang hitam. 
+           <!--To make your project more fun, you can use a background image for the object. You can find the image (Pouch.png) in the [GitHub repository](https://github.com/Unity-Technologies/ui-toolkit-manual-code-examples/blob/master/create-a-drag-and-drop-window-inside-a-custom-editor-window/Pouch.png).--> </li> 
+         </ul> </li> 
+       </ol> 
+       <p>Untuk instruksi tentang cara menambahkan dan gaya UI kontrol, lihat <a href="UIBuilder.html">Pembuat UI</a>.</p> 
+       <p>Anda selesai <code>DragAndDropWindow.uxml</code> harus terlihat seperti berikut:</p> 
+       <pre><code class="lang-xml">&lt;ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False"&gt;
+    &lt;Style src="project://database/Assets/DragAndDrop/DragAndDropWindow.uss?fileID=7433441132597879392&amp;amp;guid=3d86870c8637c4a3c979a8b4fe0cba4c&amp;amp;type=3#DragAndDrop" /&gt;
+    &lt;ui:VisualElement name="slots"&gt;
+        &lt;ui:VisualElement name="slot_row1" class="slot_row"&gt;
+            &lt;ui:VisualElement name="slot1" class="slot" /&gt;
+            &lt;ui:VisualElement name="slot2" class="slot" /&gt;
+        &lt;/ui:VisualElement&gt;
+        &lt;ui:VisualElement name="slot_row2" class="slot_row"&gt;
+            &lt;ui:VisualElement name="slot1" class="slot" /&gt;
+            &lt;ui:VisualElement name="slot2" class="slot" /&gt;
+        &lt;/ui:VisualElement&gt;
+    &lt;/ui:VisualElement&gt;
+    &lt;ui:VisualElement name="object" class="object" /&gt;
+&lt;/ui:UXML&gt;
+</code></pre> 
+       <p>Anda selesai <code>DragAndDropWindow.uss</code> harus terlihat seperti berikut:</p> 
+       <pre><code class="lang-css">.slot {
+width: 80px;
+height: 80px;
+margin: 5px;
+background-color: rgb(255, 255, 255);
+border-top-radius: 10px;
+}
+
+.slot_row {
+    flex-direction: row;
+}
+
+.object {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    border-radius: 30px;
+    background-color: rgb(0, 0, 0);
+}
+</code></pre> 
+       <h2>Tentukan logika drag-and-drop</h2> 
+       <p>Untuk menentukan perilaku drag-and-drop, memperpanjang kelas <a href="../ScriptReference/UIElements.PointerManipulator.html"><code>PointerManipulator</code></a> dan menentukan logika.</p> 
+       <ol> 
+        <li><p>Dalam folder <code>DragAndDrop</code>, buat file C# lain yang disebut <code>DragAndDropManipulator.cs</code>.</p></li> 
+        <li><p>Buka <code>DragAndDropManipulator.cs</code>.</p></li> 
+        <li><p>Tambahkan deklarasi <code>using UnityEngine.UIElements;</code>.</p></li> 
+        <li> <p>Membuat kelas <code>DragAndDropManipulator</code> memperpanjang <code>PointerManipulator</code> daripada <code>MonoBehaviour</code>, dan lakukan berikut:</p> 
+         <ul> 
+          <li>Menerapkan metode yang diwariskan <a href="../ScriptReference/UIElements.Manipulator.RegisterCallbacksOnTarget.html"><code>RegisterCallbacksOnTarget()</code></a> untuk mendaftarkan semua callback yang diperlukan</li> 
+          <li>Menerapkan <a href="../ScriptReference/UIElements.Manipulator.UnregisterCallbacksFromTarget.html"><code>UnregisterCallbacksOnTarget()</code></a> untuk tidak ada penelepon yang Meme it</li> 
+          <li>Tulis konstruktor untuk mengatur <a href="../ScriptReference/UIElements.Manipulator-target.html"><code>target</code></a> dan menyimpan referensi ke akar pohon visual</li> 
+         </ul> </li> 
+        <li> <p>Tulis empat metode yang bertindak sebagai callback untuk <a href="../ScriptReference/UIElements.PointerDownEvent.html"><code>PointerDownEvent</code></a>s, <a href="../ScriptReference/UIElements.PointerMoveEvent.html"><code>PointerMoveEvent</code></a>s, <a href="../ScriptReference/UIElements.PointerUpEvent.html"><code>PointerUpEvent</code></a>s, dan <a href="../ScriptReference/UIElements.PointerCaptureOutEvent.html"><code>PointerCaptureOutEvent</code></a>s:</p> 
+         <ul> 
+          <li> <code>PointerDownHandler()</code>: Menyimpan posisi awal <code>target</code> dan pointer, membuat <code>target</code> menangkap pointer, dan menunjukkan bahwa seret sekarang dalam kemajuan.</li> 
+          <li> <code>PointerMoveHandler()</code>: Periksa apakah seret dalam kemajuan dan apakah <code>target</code> telah menangkap pointer. Jika keduanya benar, menghitung posisi baru untuk <code>target</code> dalam batas jendela.</li> 
+          <li> <code>PointerUpHandler()</code>: Periksa apakah seret dalam kemajuan dan apakah <code>target</code> telah menangkap pointer. Jika keduanya benar, membuat <code>target</code> melepaskan pointer.</li> 
+          <li> <code>PointerCaptureOutHandler()</code>: Cek apakah seret sedang berlangsung. Jika benar, pertanyaan akar pohon visual untuk menemukan semua slot, memutuskan slot mana adalah yang paling dekat yang tumpang tindih <code>target</code>, dan menetapkan posisi <code>target</code> sehingga beristirahat di atas slot itu. Mengatur posisi <code>target</code> kembali ke posisi aslinya jika tidak ada slot yang tumpang tindih.</li> 
+         </ul> </li> 
+        <li><p>Pada <code>RegisterCallbacksOnTarget()</code>, daftarkan empat callback ini pada <code>target</code>.</p></li> 
+        <li><p>Pada <code>UnregisterCallbacksOnTarget()</code>, un-register ini empat callback dari <code>target</code>.</p></li> 
+       </ol> 
+       <p>Anda selesai <code>DragAndDropManipulator.cs</code> harus terlihat seperti berikut:</p> 
+       <pre><code class="lang-cs">using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UIElements;
+
+public class DragAndDropManipulator : PointerManipulator
+{
+    public DragAndDropManipulator(VisualElement target)
+    {
+        this.target = target;
+        root = target.parent;
+    }
+
+    protected override void RegisterCallbacksOnTarget()
+    {
+        target.RegisterCallback&lt;PointerDownEvent&gt;(PointerDownHandler);
+        target.RegisterCallback&lt;PointerMoveEvent&gt;(PointerMoveHandler);
+        target.RegisterCallback&lt;PointerUpEvent&gt;(PointerUpHandler);
+        target.RegisterCallback&lt;PointerCaptureOutEvent&gt;(PointerCaptureOutHandler);
+    }
+
+    protected override void UnregisterCallbacksFromTarget()
+    {
+        target.UnregisterCallback&lt;PointerDownEvent&gt;(PointerDownHandler);
+        target.UnregisterCallback&lt;PointerMoveEvent&gt;(PointerMoveHandler);
+        target.UnregisterCallback&lt;PointerUpEvent&gt;(PointerUpHandler);
+        target.UnregisterCallback&lt;PointerCaptureOutEvent&gt;(PointerCaptureOutHandler);
+    }
+
+    private Vector2 targetStartPosition { get; set; }
+
+    private Vector3 pointerStartPosition { get; set; }
+
+    private bool enabled { get; set; }
+
+    private VisualElement root { get; }
+
+    private void PointerDownHandler(PointerDownEvent evt)
+    {
+        targetStartPosition = target.transform.position;
+        pointerStartPosition = evt.position;
+        target.CapturePointer(evt.pointerId);
+        enabled = true;
+    }
+
+    private void PointerMoveHandler(PointerMoveEvent evt)
+    {
+        if (enabled &amp;&amp; target.HasPointerCapture(evt.pointerId))
+        {
+            Vector3 pointerDelta = evt.position - pointerStartPosition;
+
+            target.transform.position = new Vector2(
+                Mathf.Clamp(targetStartPosition.x + pointerDelta.x, 0, target.panel.visualTree.worldBound.width),
+                Mathf.Clamp(targetStartPosition.y + pointerDelta.y, 0, target.panel.visualTree.worldBound.height));
+        }
+    }
+
+    private void PointerUpHandler(PointerUpEvent evt)
+    {
+        if (enabled &amp;&amp; target.HasPointerCapture(evt.pointerId))
+        {
+            target.ReleasePointer(evt.pointerId);
+        }
+    }
+
+    private void PointerCaptureOutHandler(PointerCaptureOutEvent evt)
+    {
+        if (enabled)
+        {
+            VisualElement slotsContainer = root.Q&lt;VisualElement&gt;("slots");
+            UQueryBuilder&lt;VisualElement&gt; allSlots =
+                slotsContainer.Query&lt;VisualElement&gt;(className: "slot");
+            UQueryBuilder&lt;VisualElement&gt; overlappingSlots =
+                allSlots.Where(OverlapsTarget);
+            VisualElement closestOverlappingSlot =
+                FindClosestSlot(overlappingSlots);
+            Vector3 closestPos = Vector3.zero;
+            if (closestOverlappingSlot != null)
+            {
+                closestPos = RootSpaceOfSlot(closestOverlappingSlot);
+                closestPos = new Vector2(closestPos.x - 5, closestPos.y - 5);
+            }
+            target.transform.position =
+                closestOverlappingSlot != null ?
+                closestPos :
+                targetStartPosition;
+
+            enabled = false;
+        }
+    }
+
+    private bool OverlapsTarget(VisualElement slot)
+    {
+        return target.worldBound.Overlaps(slot.worldBound);
+    }
+
+    private VisualElement FindClosestSlot(UQueryBuilder&lt;VisualElement&gt; slots)
+    {
+        List&lt;VisualElement&gt; slotsList = slots.ToList();
+        float bestDistanceSq = float.MaxValue;
+        VisualElement closest = null;
+        foreach (VisualElement slot in slotsList)
+        {
+            Vector3 displacement =
+                RootSpaceOfSlot(slot) - target.transform.position;
+            float distanceSq = displacement.sqrMagnitude;
+            if (distanceSq &lt; bestDistanceSq)
+            {
+                bestDistanceSq = distanceSq;
+                closest = slot;
+            }
+        }
+        return closest;
+    }
+
+    private Vector3 RootSpaceOfSlot(VisualElement slot)
+    {
+        Vector2 slotWorldSpace = slot.parent.LocalToWorld(slot.layout.position);
+        return root.WorldToLocal(slotWorldSpace);
+    }
+}
+</code></pre> 
+       <h2>Instantiate perilaku drag-and-drop</h2> 
+       <p>Untuk mengaktifkan drag-and-drop di jendela kustom, sesaat ketika jendela terbuka.</p> 
+       <ol> 
+        <li> <p>Pada <code>DragAndDropWindow.cs</code>, tambahkan metode <code>CreateGUI()</code> untuk meluruskan kelas <code>DragAndDropManipulator</code>:</p> <pre><code class="lang-cs">DragAndDropManipulator manipulator =
+    new(rootVisualElement.Q&lt;VisualElement&gt;("object"));
+</code></pre> </li> 
+        <li><p>Pergi ke bar menu Unity, klik <strong>Window</strong> &gt; <strong>UI Toolkit</strong> &gt; <strong>Drag And Drop</strong>. Di jendela kustom yang dibuka, Anda dapat menyeret objek ke slot apa pun.</p></li> 
+       </ol> 
+       <hr> 
+       <p><span class="page-history">Contoh UI Drag-and-drop ditambahkan dalam Unity <span class="search-words">Panties20212</span></span></p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UIE-create-tabbed-menu-for-runtime.html"></a></span> 
+         <div class="tip">
+           Buat menu tabbed untuk runtime 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UIE-ListView-TreeView.html"></a></span> 
+         <div class="tip">
+           Buat daftar dan pemandangan pohon 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

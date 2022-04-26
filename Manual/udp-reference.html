@@ -1,0 +1,1515 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Referensi UDP</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityServices.html">Layanan Unity</a></li> 
+         <li><a href="udp.html">Portal Distribusi Unity</a></li> 
+         <li>Referensi UDP</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="udp-firebase.html"></a></span> 
+          <div class="tip">
+            Menggunakan Firebase dengan build UDP 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="udp-api.html"></a></span> 
+          <div class="tip">
+            API 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Referensi UDP</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p><a name="console"></a></p> 
+       <h2>Referensi konsol UDP</h2> 
+       <p>Bagian ini memberikan ikhtisar tingkat tinggi dari arsitektur informasi konsol UDP.</p> 
+       <p>Konsol UDP mengandung bilah navigasi yang memungkinkan Anda menavigasi antara bagian berikut dari konsol UDP:</p> 
+       <ul> 
+        <li><a href="#start">Overview</a></li> 
+        <li><a href="#games">Permainan saya</a></li> 
+        <li><a href="#partner">Daftar Toko</a></li> 
+        <li><a href="#reporting">Reporting</a></li> 
+        <li><a href="#docs">Documentation</a></li> 
+        <li><a href="#resources">Resources</a></li> 
+        <li><a href="#settings">Settings</a></li> 
+        <li><a href="#dev-api">API Developer</a></li> 
+       </ul> 
+       <p><a name="start"></a></p> 
+       <h3>Overview</h3> 
+       <p>Tab Ikhtisar konsol UDP mengandung informasi yang berguna tentang cara menggunakan konsol UDP, termasuk:</p> 
+       <ul> 
+        <li>Video tutorial</li> 
+        <li>Panduan walkthrough untuk membantu Anda melacak kemajuan Anda</li> 
+        <li>Informasi khusus toko</li> 
+        <li>FAQ</li> 
+       </ul> 
+       <p><a name="games"></a></p> 
+       <h3>Permainan saya</h3> 
+       <p>Tab Game Saya menampilkan proyek UDP Anda. Dari sini Anda dapat beralih antara proyek UDP, <a href="udp-distribution.html#create">menciptakan permainan baru</a>, dan game <a href="udp-managing-and-publishing.html#archive">archive</a> dan <a href="udp-managing-and-publishing.html#restore">restore</a>.</p> 
+       <p>Anda dapat menyaring daftar permainan dengan status, misalnya:</p> 
+       <ul> 
+        <li><strong>All Games</strong></li> 
+        <li><strong>Published to UDP</strong></li> 
+        <li><strong>Submitted to stores</strong></li> 
+        <li><strong>Live on stores</strong></li> 
+       </ul> 
+       <p>Jika Anda memilih <strong>Submitted to stores</strong> atau <strong>Live on stores</strong>, Anda juga dapat menyaring daftar permainan dengan menyimpan.</p> 
+       <p>Ketika Anda memilih permainan, tab berikut tersedia:</p> 
+       <ul> 
+        <li>Info Game</li> 
+        <li>Publish</li> 
+        <li>Status</li> 
+       </ul> 
+       <p>Setiap kartu permainan menampilkan status permainan. Status Diterbitkan menunjukkan permainan telah menyelesaikan langkah-langkah yang tersedia untuk dikemas ulang dan diserahkan ke toko.</p> 
+       <h4>Info Game</h4> 
+       <p>Gunakan halaman Game Info untuk melihat dan mengedit informasi permainan Anda. Sitemap Untuk melihat halaman Game Info untuk permainan, pilih kartu di tab Game Saya.<a href="udp-distribution.html#edit">Masukkan informasi permainan di konsol UDP</a> To view the Game Info page for a game, select the card in the My Games tab.</p> 
+       <p>Halaman Info Game berisi bagian berikut:</p> 
+       <ul> 
+        <li><a href="#desc">Game Description</a></li> 
+        <li><a href="#binary">Binary</a></li> 
+        <li><a href="#ads">Ads</a></li> 
+        <li><a href="#premium">Harga Premium</a></li> 
+        <li><a href="#iap">Pembelian In-App</a></li> 
+        <li><a href="#sandbox">Pengujian Sandbox</a></li> 
+        <li><a href="#app-sign">Aplikasi Signature</a></li> 
+        <li><a href="#integrate">Informasi Integrasi</a></li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UDPManagingGame_01.png" alt=""> 
+       </figure> 
+       <p>Halaman Game Info berisi progress bar untuk menampilkan bagaimana menutup Anda dapat melepaskan permainan Anda. Setiap bagian menampilkan status <strong>Completed</strong> ketika Anda telah menambahkan info yang diperlukan untuk bagian itu.</p> 
+       <p><a name="desc"></a></p> 
+       <h4>Deskripsi permainan</h4> 
+       <p>Gunakan bagian Game Description untuk memasukkan informasi bahwa toko aplikasi akan ditampilkan untuk permainan Anda.</p> 
+       <p>Tabel di bawah ini menjelaskan superset dari semua persyaratan toko yang berpartisipasi. Tidak semua toko menggunakan semua properti yang dijelaskan. Bendera konsol UDP yang merupakan wajib dan yang bersifat opsional. Konsol UDP juga menunjukkan persyaratan sintaks khusus toko.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Property</th> 
+          <th style="text-align:left;">Description</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Import from Google Play</strong></td> 
+          <td style="text-align:left;">Jika Anda telah menerbitkan permainan Anda di Google Play, Anda dapat mengimpor informasi dasar menggunakan URL Google Play game Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Game Title</strong></td> 
+          <td style="text-align:left;">Judul permainan Anda (bidang ini disinkronkan dengan Editor).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Genre</strong></td> 
+          <td style="text-align:left;">Menunjukkan kategori bahwa permainan Anda milik. Anda dapat memilih dari Tindakan, Petualangan, Arcade, Dewan, Kartu, Casino, Kasual, Pendidikan, Musik, Puzzle, Racing, Bermain Peran, Simulasi, Olahraga, Strategi, Trivia, dan Word.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Device</strong></td> 
+          <td style="text-align:left;">Pilih antara Smartphone, Tablet, atau Universal.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Game Icon</strong></td> 
+          <td style="text-align:left;">Ikon permainan untuk ditampilkan di toko aplikasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Short Description</strong></td> 
+          <td style="text-align:left;">Deskripsi singkat (max 60 char) dari permainan Anda untuk ditampilkan di toko aplikasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Description</strong></td> 
+          <td style="text-align:left;">Deskripsi lengkap (4,000 char) dari permainan Anda untuk ditampilkan di toko aplikasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Game Banners</strong></td> 
+          <td style="text-align:left;">Gambar yang digunakan oleh toko untuk menampilkan permainan Anda. Misalnya, itu bisa menjadi penempatan di carousel. Banner lansekap wajib, spanduk potret adalah opsional.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Keywords</strong></td> 
+          <td style="text-align:left;">Define hingga 4 kata kunci (30 char masing-masing). Ini digunakan untuk tujuan pencarian di toko aplikasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Feature Video</strong></td> 
+          <td style="text-align:left;">Tambahkan trailer video untuk permainan Anda. <br><strong>Note</strong>: Untuk video, beberapa toko hanya menerima file MP4 sementara yang lain hanya menerima tautan Youtube. Unity merekomendasikan Anda mengunggah keduanya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Screenshots</strong></td> 
+          <td style="text-align:left;">Tambahkan screenshot dari permainan Anda, termasuk gambar penutup (thumbnail) untuk meletakkan lebih dari video MP4 ketika tidak bermain. Login Tambahkan setidaknya empat gambar per orientasi yang Anda gunakan. Login Beberapa toko aplikasi hanya menerima gambar potret atau lansekap, tetapi tidak keduanya. Jika Anda meng-upload gambar potret dan lansekap ke UDP, pilih orientasi pilihan Anda di bidang <br>. UDP akan memberi tahu Anda jika screenshot tidak memenuhi persyaratan toko.<br>Some app stores only accept either portrait or landscape images, but not both. If you upload both portrait and landscape images to UDP, select your preferred orientation in the <strong>Preference</strong> field. UDP will inform you if the screenshots don’t meet the stores’ requirements.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Use these screenshots for all languages</strong></td> 
+          <td style="text-align:left;">Aktifkan toggle ini untuk menggunakan screenshot yang sama untuk semua bahasa. Nonaktifkan toggle ini jika Anda ingin menambahkan screenshot spesifik bahasa.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Preference</strong></td> 
+          <td style="text-align:left;">Toko tertentu hanya menerima gambar potret atau lansekap. Untuk toko-toko tersebut, tentukan orientasi gambar yang akan digunakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Ratings</strong></td> 
+          <td style="text-align:left;">Pilih penonton yang permainan cocok untuk.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Anda dapat menentukan metadata untuk setiap bahasa yang didukung. Untuk menambahkan bahasa baru, pilih bahasa dropdown sementara dalam mode edit dan pilih Kelola Bahasa.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UDPManagingGame_02.png" alt=""> 
+       </figure> 
+       <p><a name="binary"></a></p> 
+       <h4>Binary</h4> 
+       <p>Gunakan bagian Biner untuk mengunggah file <span class="tooltip"><strong>APK</strong><span class="tooltiptext">Format paket Android output oleh Unity. Sebuah APK secara otomatis digunakan untuk perangkat Anda ketika Anda memilih File &gt; Build &amp; Run. <a class="tooltipMoreInfoLink" href="android-BuildProcess.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#APK">Glossary</a></span></span></span> Anda dan file OBB, atau file AAB:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Property</th> 
+          <th style="text-align:left;">Description</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>APK Files (or AAB)</strong></td> 
+          <td style="text-align:left;">Game UDP Anda membangun. Jika Anda mendorong build UDP Anda melalui Build Cloud, Anda tidak perlu mengunggahnya lagi. Login Untuk UDP untuk menerima file APK Anda, file APK:<br>- Harus mengandung metode <br><code>versionName</code><br><code>Initialize()</code><br>- Harus memiliki metode <code>Purchase()</code> (untuk permainan dengan IAP)<br> Jika Anda mengunggah versi APK baru yang berisi nama paket yang berbeda, Anda akan menerima kesalahan. Ini juga mencegah menerbitkan versi APK baru. Login Untuk mengunggah file Android App Bundle (AAB), pilih opsi <br>. UDP mengkonversi file AAB ke APK untuk penerbitan ke toko.<strong>Convert from AAB file</strong> option. UDP converts AAB files to APK for publishing to stores.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Version code</strong></td> 
+          <td style="text-align:left;">Bidang ini hanya ditampilkan setelah Anda mengunggah permainan Anda ke UDP.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Minimum Android Version Support</strong></td> 
+          <td style="text-align:left;">Minimum versi Android yang didukung untuk permainan Anda. Bidang ini hanya ditampilkan setelah Anda mengunggah permainan Anda ke UDP.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>What’s New</strong></td> 
+          <td style="text-align:left;">Jelaskan apa yang berubah dengan versi game ini. UDP menerbitkan informasi ini di toko. Login Bidang ini hanya ditampilkan setelah Anda mengunggah permainan Anda ke UDP.<br>This field is only displayed once you’ve uploaded your game to UDP.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>OBB File (Main)</strong></td> 
+          <td style="text-align:left;">File ekstensi utama untuk sumber daya tambahan yang dibutuhkan permainan atau aplikasi Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>OBB File (Patch)</strong></td> 
+          <td style="text-align:left;">File opsional untuk membuat pembaruan kecil ke file ekspansi utama.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Does your game use Google Play Services?</strong></td> 
+          <td style="text-align:left;">Mengetahui tentang Anda Penggunaan Layanan Google Play membantu UDP panduan yang lebih baik selama tahap pengiriman.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>File OBB tidak didorong selama penyebaran CloudBuild, jadi jika permainan Anda menggunakannya Anda harus mengunggahnya secara manual ke konsol UDP.</p> 
+       <p> <strong>Note</strong>: Anda hanya dapat mengubah file APK dan file OBB dalam tampilan bahasa default (Inggris).</p> 
+       <p><a name="ads"></a></p> 
+       <h4>Ads</h4> 
+       <p>Tabel di bawah ini menjelaskan bagian Iklan.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Property</th> 
+          <th style="text-align:left;">Description</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Does your game contain ads</strong></td> 
+          <td style="text-align:left;">Pilih apakah atau tidak permainan Anda berisi iklan. Informasi ini berguna bagi UDP untuk panduan yang lebih baik selama pengajuan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>What ad mediation solutions does your game use?</strong> (Opsional)</td> 
+          <td style="text-align:left;">Jika permainan Anda berisi iklan, pilih solusi mediasi mana yang digunakan permainan Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>What ad networks does your game use?</strong> (Opsional)</td> 
+          <td style="text-align:left;">Jika permainan Anda berisi iklan, pilih jaringan iklan yang digunakan permainan Anda.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Toko tertentu mengharapkan Anda untuk menerapkan jaringan iklan eksklusif mereka dalam permainan yang Anda kirimkan kepada mereka.</p> 
+       <p>UDP meminta jika permainan Anda berisi iklan untuk lebih menginformasikan pengiriman Anda ke toko, terutama jika UDP dapat memastikan bahwa pengajuan Anda akan ditolak dari toko karena ini.</p> 
+       <p>Toko yang mungkin menolak permainan Anda menampilkan ikon peringatan di bagian Publikasi, dan tooltip untuk menjelaskan masalah yang mungkin terjadi. UDP tidak mengubah implementasi iklan game Anda dengan cara apa pun.</p> 
+       <p> <strong>Note</strong>: Uji lapisan mediasi yang paling umum dan jaringan iklan menunjukkan bahwa permainan yang dikemas ulang untuk toko UDP umumnya tidak memiliki masalah menerima kampanye iklan. Jangan ragu untuk menghubungi pengaturan iklan Anda dan kesesuaian untuk distribusi melalui UDP. Pastikan Anda menyebutkan SDK mediasi dan jaringan iklan yang digunakan permainan Anda, untuk mendapatkan jawaban yang lebih baik lebih cepat.</p> 
+       <p><a name="premium"></a></p> 
+       <h4>Harga premium</h4> 
+       <p>Harga Premium adalah harga biaya pemain untuk mengunduh permainan Anda.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Property</th> 
+          <th style="text-align:left;">Description</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Manage amounts and currencies</strong></td> 
+          <td style="text-align:left;">Mengatur harga permainan di USD.<br>Pilih <strong>Convert</strong> untuk secara otomatis mengkonversi harga USD ke mata uang terdaftar lainnya. Anda juga dapat mengedit harga secara manual untuk mata uang tertentu.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p> <strong>Note</strong>: Anda hanya dapat mengirimkan game premium ke toko yang mendukung permainan premium.</p> 
+       <p><a name="iap"></a></p> 
+       <h4>Pembelian In-App</h4> 
+       <p>Gunakan bagian Pembelian In-App untuk menambahkan dan mengelola item IAP.</p> 
+       <p>Jika menggunakan paket UDP, UDP secara otomatis menyimpan Katalog IAP permainan Anda disinkronkan antara Editor Unity dan konsol UDP.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Property</th> 
+          <th style="text-align:left;">Description</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Kotak pencarian</td> 
+          <td style="text-align:left;">Filter daftar item IAP dengan teks.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Jenis dropdown</td> 
+          <td style="text-align:left;">Filter daftar IAP dengan tipe, yaitu, habis pakai atau tidak dapat dikonsumsi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Sort dropdown</td> 
+          <td style="text-align:left;">Pilih cara menyortir daftar item IAP.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Add Item</strong></td> 
+          <td style="text-align:left;">Klik untuk menambahkan item IAP baru. Ini membuka jendela untuk memasukkan rincian IAP.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Manage amounts and currencies</strong></td> 
+          <td style="text-align:left;">Klik untuk mengatur harga untuk mata uang tambahan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Convert</strong></td> 
+          <td style="text-align:left;">Mengkonversi harga USD item IAP Anda ke mata uang global. Ini menimpa harga yang ditetapkan secara manual untuk mata uang lain.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Favourite Currencies</strong></td> 
+          <td style="text-align:left;">Pilih untuk membuka jendela mata uang Favorit. Untuk mengatur mata uang sebagai mata uang favorit, pilih ikon bintang di sebelah kode mata uang mereka. Ini mencubit mata uang ke bagian atas daftar. Pilih bintang ke pin.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h5>Login Sitemap</h5> 
+       <p>Gunakan jendela Item IAP untuk menambahkan dan mengedit rincian untuk produk IAP. Untuk membuka jendela ini pilih <strong>Add Item</strong>. Tabel di bawah ini menjelaskan jendela dari jendela <strong>Add IAP Item</strong>.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Field</th> 
+          <th style="text-align:left;">Description</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Product ID</strong></td> 
+          <td style="text-align:left;">ID unik yang digunakan untuk mengidentifikasi produk IAP.<br>Produk ID harus mengikuti persyaratan ini:<br>- Mulai dengan surat atau digit<br>- Berisi hanya huruf, digit, titik (.) dan underscores (_)<br>- Tidak boleh menggunakan huruf kapitalisasi</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Product Name</strong></td> 
+          <td style="text-align:left;">Nama produk IAP.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Currency</td> 
+          <td style="text-align:left;">Menampilkan mata uang harga ditampilkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Price</td> 
+          <td style="text-align:left;">Harga produk IAP di USD. Login Anda harus menentukan harga untuk mengaktifkan pemain untuk membeli produk dalam permainan Anda.<br>You must specify a price to enable players to purchase products in your game.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Consumable</strong></td> 
+          <td style="text-align:left;">Pilih opsi ini untuk item IAP yang dapat dikonsumsi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Description</strong></td> 
+          <td style="text-align:left;">Deskripsi singkat dari produk IAP.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="sandbox"></a></p> 
+       <h4>Pengujian Sandbox</h4> 
+       <p>Bagian Pengujian Sandbox menampilkan status pengujian untuk permainan Anda. Gunakan bagian ini untuk membuat kredensial pengguna untuk pengujian di lingkungan sandbox dan melihat status tes. Tabel di bawah ini menggambarkan bidang bagian ini.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Field</th> 
+          <th style="text-align:left;">Description</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Test status</strong></td> 
+          <td style="text-align:left;">Menampilkan status pengujian untuk permainan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UDP Initialization</strong></td> 
+          <td style="text-align:left;">Menampilkan status pengujian untuk pemeriksaan Awalisasi. Pemeriksaan ini untuk memastikan metode Initialize() disebut (untuk semua permainan).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>IAP Transaction</strong></td> 
+          <td style="text-align:left;">Menampilkan status pengujian untuk pemeriksaan transaksi IAP. Metode Purchase() disebut (untuk game IAP saja)</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Sandbox Test Account</strong></td> 
+          <td style="text-align:left;">Alamat email untuk akun uji sandbox. Ini digunakan sebagai nama login untuk lingkungan kotak pasir UDP hanya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Password</strong></td> 
+          <td style="text-align:left;">Kata sandi untuk akun uji.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="app-sign"></a></p> 
+       <h4>Aplikasi Signature</h4> 
+       <p>UDP menggunakan kunci pribadi yang ditugaskan untuk menandatangani file APK yang dikemas ulang yang dikirimkan ke toko.</p> 
+       <p>Unity merekomendasikan bahwa Anda memilih <strong>Export and upload the key and certificate</strong> dan menggunakan aplikasi Anda sendiri menandatangani kunci pribadi. Jika permainan Anda dirilis di Google Play, gunakan kunci yang sama seperti di Google Play. Ini secara signifikan mengurangi kemungkinan Google Play Protect menandai permainan Anda ketika pengguna menginstalnya.</p> 
+       <p> <strong>Note</strong>: Jika permainan Anda ditandai, Anda dapat menarik ke Google <a href="https://support.google.com/googleplay/android-developer/answer/2992033?hl=en">here</a>.</p> 
+       <p>Tabel di bawah ini menggambarkan bagian Tanda Tangan dari tab Game Info.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Property</th> 
+          <th style="text-align:left;">Description</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Export and upload the key and certificate (recommended)</strong></td> 
+          <td style="text-align:left;">UDP menggunakan kunci pribadi penandaan Aplikasi yang Anda unggah untuk menandatangani build yang dipaketkan. Jika Anda memilih opsi ini, itu berlaku untuk semua toko yang Anda kirimkan permainan Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Let UDP create and manage App signing private key</strong></td> 
+          <td style="text-align:left;">UDP menghasilkan kunci pribadi penandaan aplikasi yang berbeda untuk setiap toko permainan dikemas ulang. Login Pilihan ini membuat permainan Anda lebih rentan terhadap peringatan Google Play Protect.<br>This option leaves your game more vulnerable to Google Play Protect warnings.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p> <strong>Note</strong>: Peringkat tanda tangan aplikasi hanya didukung untuk Versi SDK Android 18 dan di atas. Jika permainan Anda menggunakan versi SDK yang lebih rendah daripada ini, gunakan tanda tangan algoritma RSA atau meningkatkan tingkat API Minimum permainan.</p> 
+       <h5>Mengubah kunci</h5> 
+       <p>Anda dapat beralih dari menggunakan tombol UDP ke kunci Anda sendiri kapan saja. Perubahan ini hanya berlaku untuk toko-toko yang belum dikemas ulang untuk (dan oleh karena itu ditandatangani). Jika Anda sebelumnya telah mengirim ulang untuk toko menggunakan tombol UDP, toko itu akan selalu menggunakan tombol UDP.</p> 
+       <p>Anda hanya dapat beralih dari menggunakan kunci Anda sendiri ke tombol UDP jika Anda belum membongkar permainan Anda (dan kunci Anda sendiri) untuk toko apa pun.</p> 
+       <h5>Kunci yang dihasilkan oleh UDP</h5> 
+       <p>UDP menggunakan informasi perusahaan untuk menghasilkan keystore untuk file APK repacked ketika kondisi berikut dipenuhi:</p> 
+       <ul> 
+        <li>File APK yang diunggah oleh pengembang tidak mengandung file keystore.</li> 
+        <li>Permainan belum dikemas dalam toko mitra.</li> 
+       </ul> 
+       <p>Jika kondisi ini tidak terpenuhi, UDP menggunakan keystore UDP yang ada jika tersedia, atau menggunakan informasi pengembang untuk menghasilkan file tanda tangan baru.</p> 
+       <p><a name="integrate"></a></p> 
+       <h4>Informasi Integrasi</h4> 
+       <p>Informasi ini disinkronkan dengan Editor. Bidang berikut dapat diedit:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Field</th> 
+          <th style="text-align:left;">Description</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Unity Project ID</strong></td> 
+          <td style="text-align:left;">ID proyek Unity terkait dengan klien UDP. Login Untuk menghubungkan proyek Unity dari klien UDP, menghapus ID di bidang ini dan pilih <br>.<strong>Save</strong><br><strong>Note</strong>: Only owners and managers can edit this field.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Callback URL</strong></td> 
+          <td style="text-align:left;">URL dari server game. UDP menggunakan ini untuk mengirim notifikasi untuk hasil pembayaran.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h4>Jendela rilis</h4> 
+       <p>Jendela Rilis memungkinkan Anda melepaskan versi permainan Anda. Ini ditampilkan ketika Anda memilih Rilis di halaman Game Info.</p> 
+       <p>Jendela rilis berisi bidang untuk menentukan versi:</p> 
+       <ul> 
+        <li>Tag</li> 
+        <li>Release notes</li> 
+       </ul> 
+       <p>Tag dan rilis catatan dari semua revisi Anda terlihat dalam:</p> 
+       <ul> 
+        <li>Bagian Info Game, ketika memperluas drop-down Revisi</li> 
+        <li>Bagian Status, yang diselenggarakan oleh Rilis</li> 
+       </ul> 
+       <p> <strong>Note</strong>: Anda hanya dapat mempublikasikan revisi terbaru ke toko.</p> 
+       <p>Pelajari lebih lanjut tentang:</p> 
+       <ul> 
+        <li><a href="udp-managing-and-publishing.html#release">Mengedit revisi</a></li> 
+        <li><a href="udp-managing-and-publishing.html#select-target">Mengirimkan revisi yang berbeda ke toko yang berbeda</a></li> 
+       </ul> 
+       <h3>Panel Publikasi</h3> 
+       <p>Gunakan panel Publish untuk mendaftar ke toko dan menerbitkan permainan Anda. Setiap toko memiliki bagian sendiri di halaman.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UDPManagingGame_11.png" alt=""> 
+       </figure> 
+       <p>Tabel di bawah ini menjelaskan halaman Publish.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Field</th> 
+          <th style="text-align:left;">Description</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Publish</strong></td> 
+          <td style="text-align:left;">Menerbitkan game yang dipilih.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Only show stores that accept the game’s pricing model</strong></td> 
+          <td style="text-align:left;">Sembunyikan toko yang tidak mendukung model harga game Anda dari halaman Publish.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>All Stores</strong></td> 
+          <td style="text-align:left;">Pilih semua toko yang terlihat untuk penerbitan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Store checkbox</td> 
+          <td style="text-align:left;">Pilih kotak centang untuk toko hanya penerbit ke toko yang dipilih.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Premium</strong></td> 
+          <td style="text-align:left;">Label Premium ditampilkan untuk toko yang mendukung permainan premium.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>IAP</strong></td> 
+          <td style="text-align:left;">Label IAP ditampilkan untuk toko yang mendukung IAP.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Info icon</td> 
+          <td style="text-align:left;">Ikon info menyatakan apakah toko sepenuhnya atau sebagian terintegrasi dengan UDP.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Sign up</strong></td> 
+          <td style="text-align:left;">Daftar ke toko yang dipilih.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Countries</strong></td> 
+          <td style="text-align:left;">Pilih Negara untuk memilih negara mana yang ingin Anda publikasikan permainan Anda. Login Ini membuka jendela yang berisi daftar negara yang mendukung toko. Pilih kotak centang untuk mengaktifkan permainan Anda untuk negara dan pilih Save.<br> Opsi ini hanya ditampilkan ketika Anda mendaftar untuk toko.<br>This option is only displayed when you’ve signed up for the store.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Advanced</strong></td> 
+          <td style="text-align:left;">Pilih untuk mengkonfigurasi sifat canggih untuk toko tertentu. Login Opsi ini hanya ditampilkan ketika Anda mendaftar untuk toko.<br>This option is only displayed when you’ve signed up for the store.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="target"></a></p> 
+       <h4>Target langkah</h4> 
+       <p>Di tab Publikasi, setiap toko berisi dropdown untuk memungkinkan Anda memilih langkah target untuk toko yang diberikan. Opsi berikut tersedia:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Target langkah</th> 
+          <th style="text-align:left;">Description</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Repack Game</strong></td> 
+          <td style="text-align:left;">UDP membongkar build UDP generik dan membongkar permainan Anda dengan SDK dari toko yang dipilih. Ini menggunakan katalog IAP dari build terakhir yang Anda kirimkan ke toko.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Submit to Store</strong></td> 
+          <td style="text-align:left;">UDP repacks dan mengirimkan permainan Anda, metadata dan katalog IAP ke lingkungan produksi toko yang dipilih. Login Pertama kali Anda mempublikasikan permainan Anda, Anda harus menyerahkannya untuk membuat katalog IAP di server toko.<br>The first time you publish your game, you must submit it to create an IAP catalog on the stores’ servers.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="advanced"></a></p> 
+       <h3>Pengaturan lanjutan</h3> 
+       <p>Untuk mengkonfigurasi pengaturan spesifik toko sebelum Anda mengirimkan permainan Anda, pilih Lanjutan untuk toko di tab Publikasi. Anda dapat mengkonfigurasi properti berikut secara khusus untuk toko:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Property</th> 
+          <th style="text-align:left;">Function</th> 
+          <th style="text-align:left;">Affected store</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Target SDK</strong></td> 
+          <td style="text-align:left;">Versi SDK toko yang Anda publikasikan permainan Anda. Secara default, repack UDP untuk versi terbaru dari SDK toko.</td> 
+          <td style="text-align:left;">All</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>CP ID</strong></td> 
+          <td style="text-align:left;">Merchant ID di Huawei AppGallery Hubungkan konsol.</td> 
+          <td style="text-align:left;">Huawei</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Product ID</strong></td> 
+          <td style="text-align:left;">Produk ID di Huawei AppGallery Hubungkan konsol.</td> 
+          <td style="text-align:left;">Huawei</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>App ID</strong></td> 
+          <td style="text-align:left;">Aplikasi ID di Huawei AppGallery Hubungkan konsol.</td> 
+          <td style="text-align:left;">Huawei</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Configuration version on the Huawei AppGallery Connect console.</strong></td> 
+          <td style="text-align:left;">Versi permainan</td> 
+          <td style="text-align:left;">Huawei</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>PubKey</strong></td> 
+          <td style="text-align:left;">Kunci publik di konsol Huawei AppGallery Connect.</td> 
+          <td style="text-align:left;">Huawei</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>App Secret</strong></td> 
+          <td style="text-align:left;">Rahasia aplikasi di konsol Huawei AppGallery Connect.</td> 
+          <td style="text-align:left;">Huawei</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>privacyPolicy</strong></td> 
+          <td style="text-align:left;">Pernyataan privasi alamat di Huawei AppGallery Connect console.</td> 
+          <td style="text-align:left;">Huawei</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Premium Price</strong></td> 
+          <td style="text-align:left;">Pemain harga akan membayar untuk men-download permainan Anda.</td> 
+          <td style="text-align:left;">Semua toko yang mendukung permainan premium</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>In-App Purchases</strong></td> 
+          <td style="text-align:left;">Nama item IAP Anda.</td> 
+          <td style="text-align:left;">All</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Approval Number from SAPPRFT (aka ISBN)</strong></td> 
+          <td style="text-align:left;">Masukkan nomor persetujuan SAPPRFT untuk permainan yang Anda publikasikan di Cina. Jika Anda tidak memiliki lisensi penerbitan untuk ini, pilih China dari daftar negara.</td> 
+          <td style="text-align:left;">Email: info@ids-imaging.com<br>Huawei</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Registration Number from MCPRC</strong></td> 
+          <td style="text-align:left;">Kementerian Kebudayaan Rekam jumlah untuk permainan yang Anda terbitkan di Cina.</td> 
+          <td style="text-align:left;">Huawei</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Launch Manually</strong></td> 
+          <td style="text-align:left;">Set untuk meluncurkan permainan secara manual di toko.</td> 
+          <td style="text-align:left;">Huawei</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Launch on</strong></td> 
+          <td style="text-align:left;">Tentukan tanggal dan waktu untuk meluncurkan permainan Anda di toko.</td> 
+          <td style="text-align:left;">Huawei</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Renew authentication</strong></td> 
+          <td style="text-align:left;">Pilih untuk memperbarui token otentikasi Anda untuk toko yang dipilih.</td> 
+          <td style="text-align:left;">Huawei</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Package Name</strong></td> 
+          <td style="text-align:left;">Menampilkan nama paket. Ini tidak dapat diedit setelah terdaftar.</td> 
+          <td style="text-align:left;">QooApp<br>Viveport</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>URL for Privacy Policy</strong></td> 
+          <td style="text-align:left;">Masukkan URL kebijakan privasi game Anda.</td> 
+          <td style="text-align:left;">Viveport</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>URL for EULA/Terms of Use</strong></td> 
+          <td style="text-align:left;">Masukkan URL EULA / Ketentuan permainan Anda.</td> 
+          <td style="text-align:left;">Viveport</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="detail"></a></p> 
+       <h4>Detail</h4> 
+       <p>Jika pengajuan Anda hilang apa pun, konsol UDP menampilkan kesalahan atau pesan peringatan. Pilih <strong>Detail</strong> untuk memperluas informasi lebih lanjut tentang masalah.</p> 
+       <p>Kesalahan ditampilkan dalam panel merah. Anda harus memperbaiki kesalahan sebelum Anda dapat mengirimkan permainan Anda. Pilih <strong>Modify</strong> untuk pergi ke daerah erron untuk memperbaiki masalah.</p> 
+       <p>Anda juga dapat memilih untuk hanya mengirimkan ke toko di mana tidak ada kesalahan.</p> 
+       <p>Peringatan ditampilkan dalam panel kuning. Anda dapat memberhentikan peringatan yang Anda putuskan untuk mengabaikan.</p> 
+       <h3>Panel status</h3> 
+       <p>Ketika UDP mulai memproses permainan Anda, kunjungi panel <strong>Status</strong> untuk memantau kemajuan dan memeriksa riwayat pengiriman permainan Anda.</p> 
+       <p>Panel <strong>Status</strong> menampilkan gambaran sejarah permainan Anda.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Field</th> 
+          <th style="text-align:left;">Description</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Revisions repacked</strong></td> 
+          <td style="text-align:left;">Jumlah total pembuatan APK yang dikemas ulang yang dibuat dengan UDP.<br><strong>Note</strong>: Jika permainan telah dipaketkan tiga kali untuk toko yang sama, jumlah ini sebagai tiga.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Revisions submitted</strong></td> 
+          <td style="text-align:left;">Total jumlah pengajuan yang dilakukan melalui UDP.<br><strong>Note</strong>: Jika permainan diserahkan lima kali ke toko, jumlah ini sebagai lima.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Submissions accepted</strong></td> 
+          <td style="text-align:left;">Jumlah pengajuan yang telah diterima untuk toko aplikasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Submissions rejected</strong></td> 
+          <td style="text-align:left;">Jumlah revisi yang telah ditolak oleh toko aplikasi.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Untuk setiap revisi game, panel <strong>Status</strong> menampilkan rincian berikut:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Field</th> 
+          <th style="text-align:left;">Description</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Store</strong></td> 
+          <td style="text-align:left;">Toko (s) bahwa permainan diserahkan kepada.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Status</strong></td> 
+          <td style="text-align:left;">Status revisi. Login Tidak semua toko dapat memberikan visibilitas sampai ‘Live’. Bagian Status hanya menyediakan informasi yang bisa diperoleh dari toko.<br>Not all stores can provide visibility until ‘Live’. The Status section only provides the information it can get from the store.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Countries</strong></td> 
+          <td style="text-align:left;">Jumlah negara yang permainan Anda diaktifkan untuk, untuk setiap toko. Pilih nomor di kolom ini untuk melihat negara.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Action</strong></td> 
+          <td style="text-align:left;">Lakukan tindakan tambahan, seperti revisi <strong>download</strong> dari permainan Anda atau <strong>go to store</strong> untuk menyelesaikan langkah penerbitan.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Game Anda dapat memiliki status berikut:</p> 
+       <ul> 
+        <li> <strong>Repacked</strong>: permainan Anda berhasil dikemas dengan SDK toko yang dipilih</li> 
+        <li> <strong>Published</strong>: permainan Anda telah berlalu semua langkah yang diperlukan untuk toko ketika repacking dan menyerahkan ke toko itu</li> 
+        <li> <strong>Pending</strong>: permainan Anda sedang dikemas dengan SDK toko yang dipilih</li> 
+        <li> <strong>Failed</strong>: permainan Anda tidak bisa dibongkar dengan SDK toko yang dipilih</li> 
+        <li> <strong>Canceled</strong>: pengajuan permainan Anda dibatalkan oleh Anda atau seseorang dari Organisasi Anda</li> 
+       </ul> 
+       <p><a name="partner"></a></p> 
+       <h3>Daftar Toko</h3> 
+       <p>Toko Sign-Ups tab menampilkan informasi tentang toko-toko Anda dapat mendistribusikan permainan Anda untuk menggunakan UDP.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UDPSettingUp_07.png" alt=""> 
+       </figure> 
+       <p>Pilih tautan lebih untuk informasi lebih lanjut di toko, seperti gambaran, FAQ, dan tautan berguna lainnya yang spesifik untuk setiap toko.</p> 
+       <p>Untuk gambaran informasi untuk semua toko, pilih <strong>Compare stores</strong> untuk membuka Partner Stores cheatsheet. Ini membandingkan rincian untuk semua toko, termasuk data seperti jumlah pengguna, negara di mana toko tersedia, dan apakah atau tidak toko mendukung game premium.</p> 
+       <p><a name="reporting"></a></p> 
+       <h3>WordPress.org</h3> 
+       <p>Tab Pelaporan menampilkan informasi kinerja untuk permainan Anda yang diterbitkan. Pantau kinerja permainan yang dipublikasikan dari Das Pelaporan, yang dapat diakses dari bilah navigasi atas.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UDPReportingDashboard_01.png" alt=""> 
+       </figure> 
+       <p>Anda dapat menyaring informasi yang disajikan di dashboard Pelaporan dengan permainan dan toko.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UDPReportingDashboard_02.png" alt=""> 
+       </figure> 
+       <p>Jika Anda tidak memilih apa pun di filter <strong>All Games</strong> dan <strong>All Stores</strong> untuk seluruh dashboard Pelaporan, Anda dapat melihat kerusakan pada tingkat grafik individu (di mana berlaku). Pada grafik yang didukung, pilih filter <strong>by store</strong> atau <strong>by game</strong> untuk melihat kinerja di toko tertentu atau untuk permainan individu.</p> 
+       <p>Dasbor Pelaporan dibagi menjadi lima panel, semua tunduk pada permainan dan Toko filter. Untuk panel yang tunduk pada filter tanggal, Anda dapat mengekspor data grafik sebagai file CSV dan gambar. Untuk mengunduh data sebagai file CSV atau gambar, pilih ikon yang sesuai untuk grafik.</p> 
+       <p> <strong>Note</strong>: The Huawei AppGallery hanya mengembalikan informasi pendapatan ke UDP jika Anda telah mengatur validasi sisi server menggunakan QueryOrder. Jika Anda menggunakan notifikasi callback, tidak ada grafik atau informasi terkait pendapatan yang tersedia untuk Huawei.</p> 
+       <h4>Metrik dan definisi</h4> 
+       <p>Dasbor <strong>Reporting</strong> melacak data berikut dari toko UDP di mana permainan Anda diterbitkan:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Metric</th> 
+          <th style="text-align:left;">Description</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Gross revenue</strong></td> 
+          <td style="text-align:left;">Jumlah yang dikumpulkan dari pemain di USD (misalnya, jika harga IAP = 0.99 maka= $0.99)</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Players</strong></td> 
+          <td style="text-align:left;">Jumlah pengguna unik yang mengunduh dan memulai permainan. Ini dihitung oleh perangkat unik.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Spenders</strong></td> 
+          <td style="text-align:left;">Jumlah pemain membayar. Itu, jumlah pengguna unik yang telah membuat setidaknya satu pembayaran yang sukses.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Days since 1st activity</strong></td> 
+          <td style="text-align:left;">Jumlah hari sejak permainan mencapai 10 pemain di toko aplikasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>New Players</strong></td> 
+          <td style="text-align:left;">Jumlah pemain yang memulai permainan untuk pertama kalinya selama periode waktu yang dipilih.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><span class="tooltip"><strong>DAU</strong><span class="tooltiptext">(Daily Active Users) The number of different players who started a session on a given day. DAU includes both new and returning players. <a class="tooltipMoreInfoLink" href="UnityAnalyticsTerminology.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#DAU">Glossary</a></span></span></span></strong></td> 
+          <td style="text-align:left;">Pengguna aktif setiap hari. Jumlah pengguna unik yang meluncurkan permainan setidaknya sekali pada hari itu.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><span class="tooltip"><strong>MAU</strong><span class="tooltiptext">(Monthly Active Users) The number of players who started a session within the last 30 days. <a class="tooltipMoreInfoLink" href="UnityAnalyticsTerminology.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#MAU">Glossary</a></span></span></span></strong></td> 
+          <td style="text-align:left;">Pengguna Aktif Bulanan. Jumlah pengguna unik yang meluncurkan permainan setidaknya sekali selama 30 hari terakhir.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>IAP Revenue</strong></td> 
+          <td style="text-align:left;">Pendapatan kotor dari IAP, di USD.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Average Revenue per Transaction</strong></td> 
+          <td style="text-align:left;">Ini didefinisikan sebagai Pendapatan / Jumlah Transaksi, di USD.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><span class="tooltip"><strong>ARPPU</strong><span class="tooltiptext">(Average Revenue Per Paying User) Average verified IAP revenue per user who completed a verified IAP transaction. <a class="tooltipMoreInfoLink" href="UnityAnalyticsTerminology.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ARPPU">Glossary</a></span></span></span></strong></td> 
+          <td style="text-align:left;">Rata-rata pendapatan per membayar pengguna, di USD. Ini didefinisikan sebagai Pendapatan Kotor / Jumlah Pemain Membayar.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>ARPU</strong></td> 
+          <td style="text-align:left;">Pendapatan rata-rata per pengguna, dalam USD. Ini didefinisikan sebagai Pendapatan Kotor / Jumlah Pemain.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Spender Conversion Rate</strong></td> 
+          <td style="text-align:left;">Ini didefinisikan sebagai Jumlah Pemain Pembayaran / Jumlah Pemain.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Transactions</strong></td> 
+          <td style="text-align:left;">Jumlah transaksi yang berhasil yang menghasilkan pembayaran (OrderID berhasil dan diverifikasi oleh server UDP).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Revenue by IAP</strong></td> 
+          <td style="text-align:left;">Breakdown dari pendapatan kotor oleh IAP, di USD.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Transaction Volume by IAP</strong></td> 
+          <td style="text-align:left;">Breakdown transaksi oleh IAP.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Premium Revenue</strong></td> 
+          <td style="text-align:left;">Pendapatan kotor yang dihasilkan oleh game premium, dalam USD.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Sessions</strong></td> 
+          <td style="text-align:left;">Jumlah kali permainan diluncurkan, pada perangkat apa pun.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><span class="tooltip"><strong>Day 1 Retention</strong><span class="tooltiptext">The percentage of players who returned to your game one day after playing the first time. <a class="tooltipMoreInfoLink" href="UnityAnalyticsTerminology.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Day1Retention">Glossary</a></span></span></span> (%)</strong></td> 
+          <td style="text-align:left;">Ini didefinisikan sebagai Persentase Pemain yang masih aktif 1 hari setelah peluncuran game pertama mereka.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><span class="tooltip"><strong>Day 7 Retention</strong><span class="tooltiptext">The percentage of players who returned to your game seven days after playing the first time. <a class="tooltipMoreInfoLink" href="UnityAnalyticsTerminology.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Day7Retention">Glossary</a></span></span></span> (%)</strong></td> 
+          <td style="text-align:left;">Ini didefinisikan sebagai Persentase Pemain yang masih aktif 7 hari setelah peluncuran game pertama mereka.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><span class="tooltip"><strong>Day 30 Retention</strong><span class="tooltiptext">The percentage of players who returned to your game thirty days after playing the first time. <a class="tooltipMoreInfoLink" href="UnityAnalyticsTerminology.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Day30Retention">Glossary</a></span></span></span> (%)</strong></td> 
+          <td style="text-align:left;">Ini didefinisikan sebagai Persentase Pemain yang masih aktif 30 hari setelah peluncuran game pertama mereka.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Sitemap Dasbor Pelaporan mengandung estimasi data; Anda bisa mendapatkan angka yang tepat langsung dari toko. Data yang ditampilkan dalam waktu UTC dan sampai hari sebelumnya untuk menampilkan data yang paling akurat, lengkap.<strong>Note:</strong> The Reporting dashboard contains estimated data; you can get exact numbers directly from the stores. The data shown is in UTC time and is until the previous day to display the most accurate, complete data.</p> 
+       <h4>All Time</h4> 
+       <p>Panel ini menampilkan metrik seumur hidup berikut:</p> 
+       <ul> 
+        <li>Pendapatan kotor (dalam USD)</li> 
+        <li>Players</li> 
+        <li>Spenders</li> 
+        <li>Hari sejak 1 aktivitas</li> 
+       </ul> 
+       <h4>Yesterday</h4> 
+       <p>Panel ini menampilkan metrik berikut dari hari 24 jam terakhir (basis UTC):</p> 
+       <ul> 
+        <li>Pendapatan kotor (dalam USD) <em>dengan perbandingan $ atau % pada hari sebelumnya</em> </li> 
+        <li>Pemain baru</li> 
+        <li>DAU <em>dengan perbandingan % dengan nilai DAU rata-rata 7 hari terakhir</em> </li> 
+        <li>MAU <em>dengan perbandingan % dengan nilai MAU rata-rata 7 hari terakhir</em> </li> 
+       </ul> 
+       <h4>Kinerja IAP</h4> 
+       <p>Panel ini menampilkan metrik berikut untuk rentang tanggal yang dipilih:</p> 
+       <ul> 
+        <li>Login Login</li> 
+        <li>Pendapatan rata-rata per Transaksi</li> 
+        <li>ARPPU</li> 
+        <li>ARPU</li> 
+        <li>Tingkat Konversi Spender</li> 
+        <li>Transactions</li> 
+        <li>Login Anda dapat melihat hingga 5 IAP di grafik, dan pilih yang harus dilihat melalui pemilih drop-down. Grafik ini mengandung preset untuk: 
+         <ul> 
+          <li>Kebanyakan pendapatan</li> 
+          <li>Transaksi</li> 
+          <li>Nilai harga tertinggi</li> 
+          <li>Nilai harga termurah</li> 
+         </ul> </li> 
+        <li>Volume Transaksi oleh IAP. Anda dapat melihat hingga 5 IAP di grafik, dan pilih yang harus dilihat melalui pemilih drop-down. Grafik ini mengandung preset untuk: 
+         <ul> 
+          <li>Kebanyakan pendapatan</li> 
+          <li>Transaksi</li> 
+          <li>Nilai harga tertinggi</li> 
+          <li>Nilai harga termurah</li> 
+         </ul> </li> 
+       </ul> 
+       <h4>Pendapatan premium</h4> 
+       <p>Tampilan panel ini, untuk rentang tanggal yang dipilih:</p> 
+       <ul> 
+        <li>Revenue Premium (mendapat dari unduhan berbayar)</li> 
+       </ul> 
+       <h4>Permainan Kesehatan</h4> 
+       <p>Panel ini menampilkan metrik berikut untuk rentang tanggal yang dipilih:</p> 
+       <ul> 
+        <li>DAU - per hari dan rata-rata selama periode</li> 
+        <li>MAU - per hari dan rata-rata selama periode</li> 
+        <li>Pemain baru - per hari dan total periode</li> 
+        <li>Sesi - per hari dan total periode</li> 
+        <li>Hari 1 Tingkat Retention - per hari dan rata-rata selama periode</li> 
+        <li>Hari 7 Tingkat Retention - per hari dan rata-rata selama periode</li> 
+        <li>Hari 30 Tingkat Retention - per hari dan rata-rata selama periode</li> 
+       </ul> 
+       <p><a name="docs"></a></p> 
+       <h3>Documentation</h3> 
+       <p>Tab Dokumentasi menampilkan informasi yang berguna untuk membantu Anda memulai, termasuk:</p> 
+       <ul> 
+        <li>Tautan ke dokumentasi UDP</li> 
+        <li>Panduan untuk berbagai toko aplikasi</li> 
+        <li>Video tutorial</li> 
+       </ul> 
+       <p><a name="resources"></a></p> 
+       <h3>Resources</h3> 
+       <p>Tab Sumber Daya menyediakan informasi yang berguna untuk membantu Anda memulai, termasuk:</p> 
+       <ul> 
+        <li>Panduan Memulai</li> 
+        <li>Video tutorial</li> 
+        <li>Panduan Toko</li> 
+        <li>Knowledge base</li> 
+        <li>Release notes</li> 
+       </ul> 
+       <p><a name="settings"></a></p> 
+       <h3>Settings</h3> 
+       <h4>Informasi Perusahaan</h4> 
+       <p>Gunakan jendela Informasi Perusahaan untuk menambahkan informasi untuk ditampilkan untuk perusahaan Anda di toko aplikasi. Di konsol UDP, pilih organisasi Anda dan pilih ikon pensil untuk mengedit profil.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Field</th> 
+          <th style="text-align:left;">Description</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Company Name</strong></td> 
+          <td style="text-align:left;">Nama perusahaan Anda saat Anda ingin pemain untuk melihatnya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Company Icon</strong></td> 
+          <td style="text-align:left;">Upload gambar untuk ditampilkan untuk perusahaan Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Location</strong></td> 
+          <td style="text-align:left;">Lokasi yang ingin Anda tentukan sebagai kantor pusat studio Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Company Size</strong></td> 
+          <td style="text-align:left;">Gunakan drop-down untuk menentukan jumlah orang di perusahaan Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Official Website</strong></td> 
+          <td style="text-align:left;">Situs web resmi perusahaan Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Support Email Address</strong></td> 
+          <td style="text-align:left;">Dukungan email yang dapat digunakan untuk menghubungi perusahaan Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Introduction</strong></td> 
+          <td style="text-align:left;">Setiap informasi tambahan tentang perusahaan / studio Anda.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h4>API Developer</h4> 
+       <p>Halaman API Developer memungkinkan Anda menghasilkan dan mengelola token otentikasi untuk digunakan dengan <a href="udp-api.html">API</a>. Anda dapat menggunakan UDP API untuk mengunggah file biner ke konsol UDP. Sitemap<a href="udp-managing-and-publishing.html#api-upload">Mengelola dan menerbitkan permainan Anda di konsol UDP</a> </p> 
+       <p>Tabel di bawah ini menjelaskan halaman Developer API.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Field</th> 
+          <th style="text-align:left;">Description</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Token</strong></td> 
+          <td style="text-align:left;">Token otentikasi untuk digunakan untuk membiarkan API UDP mengakses konsol UDP. Pilih COPY untuk menyalin token ke clipboard Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Expiry date</strong></td> 
+          <td style="text-align:left;">Tanggal kedaluwarsa token otentikasi, jika ditentukan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Operations</strong></td> 
+          <td style="text-align:left;">Edit atau menghapus token yang ada.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>NEW TOKEN</strong></td> 
+          <td style="text-align:left;">Pilih untuk membuat token baru.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="csv"></a></p> 
+       <h2>Referensi CSV</h2> 
+       <h3>Nilai data untuk file CSV</h3> 
+       <p>Setiap baris dalam file CSV dari Pembelian In-App dapat berisi nilai-nilai berikut. Jangan lewatkan nilai kosong.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Field</th> 
+          <th style="text-align:left;">Description</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>product_id</code></td> 
+          <td style="text-align:left;">Mewakili ID produk IAP yang unik. produk_id perlu memulai dengan huruf yang lebih rendah atau digit dan harus terdiri dari hanya huruf huruf huruf kecil (a-z), digit (0–9), underscores (_), dan periode (.)</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>language; product_name; description</code></td> 
+          <td style="text-align:left;">Saat mengatur nilai bahasa, gunakan kode bahasa yang tercantum dalam TABLE A.<br>UDP menggunakan en-US sebagai bahasa default.<br> Gunakan semicolon (;) untuk bahasa terpisah, nama dan deskripsi produk. Login Untuk menyertakan versi lokal dari nama produk item dan deskripsi, daftar bahasa default, nama produk_, dan deskripsi, diikuti oleh bahasa, nama produk_, dan deskripsi untuk setiap penduduk setempat. Dalam contoh berikut, produk telah en-US (ENGLISH) sebagai bahasa default dan zh-CN (CHINESE) sebagai lokalisasi:<br>en-US; Produk 1; Ini adalah produk pertama saya; zh-CN; Brexit1; Riwayat situs web1.<br> Catatan: UDP hanya mengimpor bidang untuk bahasa yang telah didefinisikan dalam bagian <br> dari Konsol UDP. Untuk mendukung beberapa bahasa, mendefinisikan mereka di Konsol UDP sebelum Anda mengimpor katalog IAP Anda.<strong>Game Info</strong> section of the UDP Console. To support multiple languages, define them on the UDP Console before you import your IAP catalog.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>consumable</code></td> 
+          <td style="text-align:left;">Set ke TRUE atau FALSE (karena kasus) untuk menentukan apakah atau bukan produk IAP dapat dikonsumsi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>auto_convert_prices</code></td> 
+          <td style="text-align:left;">Jika benar, UDP secara otomatis mengubah harga ke mata uang lain. Untuk mengecualikan mata uang dari konversi, tentukan mata uang dan harganya di bidang <code>currency;price</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>currency; price</code></td> 
+          <td style="text-align:left;">Saat mengatur nilai mata uang, gunakan kode mata uang yang tercantum dalam TABLE B. Harga harus positif. Mata uang default adalah USD. Harga setiap produk IAP harus segera mengikuti mata uang yang sesuai. Contohnya: USD;0.99;JPY;6</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h4><strong>TABLE A - Language codes</strong></h4> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Language</th> 
+          <th style="text-align:left;">Code</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">AFRIKAANS</td> 
+          <td style="text-align:left;">af</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">AMHARIC</td> 
+          <td style="text-align:left;">am</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">BULGARIAN</td> 
+          <td style="text-align:left;">bg</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">CATALAN</td> 
+          <td style="text-align:left;">ca</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">CHINESE</td> 
+          <td style="text-align:left;">zh-CN</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">HONGKONG (HONGKONG)</td> 
+          <td style="text-align:left;">zh-HK</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">CHINESE (TAIWAN)</td> 
+          <td style="text-align:left;">zh-TW</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">CROATIAN</td> 
+          <td style="text-align:left;">hr</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">CZECH</td> 
+          <td style="text-align:left;">cs</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">DANISH</td> 
+          <td style="text-align:left;">da</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">DUTCH</td> 
+          <td style="text-align:left;">nl</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Bahasa Indonesia</td> 
+          <td style="text-align:left;">en-GB</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">ENGLISH</td> 
+          <td style="text-align:left;">en-US</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">ESTONIAN</td> 
+          <td style="text-align:left;">et</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">FILIPINO</td> 
+          <td style="text-align:left;">fil</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">FINNISH</td> 
+          <td style="text-align:left;">fi</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">FRENCH (CANADA)</td> 
+          <td style="text-align:left;">fr-CA</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">FRENCH</td> 
+          <td style="text-align:left;">fr-FR</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">GERMAN</td> 
+          <td style="text-align:left;">de</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">GREEK</td> 
+          <td style="text-align:left;">el</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">HINDI</td> 
+          <td style="text-align:left;">hi</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">HUNGARIAN</td> 
+          <td style="text-align:left;">hu</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">INDONESIA</td> 
+          <td style="text-align:left;">id</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">ITALIAN</td> 
+          <td style="text-align:left;">it</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">JAPANESE</td> 
+          <td style="text-align:left;">ja</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Korea</td> 
+          <td style="text-align:left;">ko</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">LATVIAN</td> 
+          <td style="text-align:left;">lv</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">LITHUANIAN</td> 
+          <td style="text-align:left;">lt</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">MALAY</td> 
+          <td style="text-align:left;">ms</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">NORWEGIAN</td> 
+          <td style="text-align:left;">no</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">POLISH</td> 
+          <td style="text-align:left;">pl</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">PORTUGUESE (BRAZIL)</td> 
+          <td style="text-align:left;">pt-BR</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">PORTUGUESE (PORTUGAL)</td> 
+          <td style="text-align:left;">pt-PT</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">ROMANIAN</td> 
+          <td style="text-align:left;">ro</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">RUSSIAN</td> 
+          <td style="text-align:left;">ru</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">SERBIAN</td> 
+          <td style="text-align:left;">sr</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">SLOVAK</td> 
+          <td style="text-align:left;">sk</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">SLOVENIAN</td> 
+          <td style="text-align:left;">sl</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">SPANISH (LATIN AMERIKA)</td> 
+          <td style="text-align:left;">es</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">SPANISH</td> 
+          <td style="text-align:left;">es-ES</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">SWAHILI</td> 
+          <td style="text-align:left;">sw</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">SWEDISH</td> 
+          <td style="text-align:left;">sv</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">THAI</td> 
+          <td style="text-align:left;">th</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">TURKISH</td> 
+          <td style="text-align:left;">tr</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">UKRAINIAN</td> 
+          <td style="text-align:left;">uk</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">VIETNAMESE</td> 
+          <td style="text-align:left;">vi</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">ZULU</td> 
+          <td style="text-align:left;">zu</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h4><strong>TABLE B - Currency codes</strong></h4> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Code</th> 
+          <th style="text-align:left;">Code</th> 
+          <th style="text-align:left;">Code</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">AED</td> 
+          <td style="text-align:left;">IDR</td> 
+          <td style="text-align:left;">PEN</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">ARS</td> 
+          <td style="text-align:left;">ILS</td> 
+          <td style="text-align:left;">PHP</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">AUD</td> 
+          <td style="text-align:left;">INR</td> 
+          <td style="text-align:left;">PKR</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">BGN</td> 
+          <td style="text-align:left;">IQD</td> 
+          <td style="text-align:left;">PLN</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">BHD</td> 
+          <td style="text-align:left;">ISK</td> 
+          <td style="text-align:left;">QAR</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">BND</td> 
+          <td style="text-align:left;">JOD</td> 
+          <td style="text-align:left;">RON</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">BIF</td> 
+          <td style="text-align:left;">JPY</td> 
+          <td style="text-align:left;">RUB</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">BRL</td> 
+          <td style="text-align:left;">KES</td> 
+          <td style="text-align:left;">SAR</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">CAD</td> 
+          <td style="text-align:left;">KHR</td> 
+          <td style="text-align:left;">SDG</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">CHF</td> 
+          <td style="text-align:left;">KRW</td> 
+          <td style="text-align:left;">SEK</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">JPY</td> 
+          <td style="text-align:left;">KWD</td> 
+          <td style="text-align:left;">SGD</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">CZK</td> 
+          <td style="text-align:left;">LAK</td> 
+          <td style="text-align:left;">THB</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">DKK</td> 
+          <td style="text-align:left;">LKR</td> 
+          <td style="text-align:left;">TND</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">DZD</td> 
+          <td style="text-align:left;">LYD</td> 
+          <td style="text-align:left;">TRY</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">EGP</td> 
+          <td style="text-align:left;">MAD</td> 
+          <td style="text-align:left;">TWD</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">EUR</td> 
+          <td style="text-align:left;">MMK</td> 
+          <td style="text-align:left;">TZS</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">GBP</td> 
+          <td style="text-align:left;">MXN</td> 
+          <td style="text-align:left;">USD</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">GHS</td> 
+          <td style="text-align:left;">MYR</td> 
+          <td style="text-align:left;">UYU</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">HKD</td> 
+          <td style="text-align:left;">NOK</td> 
+          <td style="text-align:left;">VND</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">HRK</td> 
+          <td style="text-align:left;">NZD</td> 
+          <td style="text-align:left;">ZAR</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">PLN</td> 
+          <td style="text-align:left;" colspan="2">OMR</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>Contoh 1</h3> 
+       <pre><code>product_id,language; product_name; description,consumable,auto_convert_prices,currency; price
+com.mystudio.mygame.product1,en-US;Product 1;This is my first product; zh-CN; 产品1; 产品描述1,TRUE,TRUE,USD;0.99;CNY;6;EUR;0.79
+com.mystudio.mygame.product2,en-US;Product 2;This is my second product; zh-CN; 产品2; 产品描述2,FALSE,FALSE,USD;1.99;CNY;12;EUR;1.59
+com.mystudio.mygame.product3,en-US;Product 3;This is my third product; zh-CN; 产品3; 产品描述3,TRUE,TRUE,USD;4.99;CNY;30;EUR;3.99 
+</code></pre> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="udp-firebase.html"></a></span> 
+         <div class="tip">
+           Menggunakan Firebase dengan build UDP 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="udp-api.html"></a></span> 
+         <div class="tip">
+           API 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

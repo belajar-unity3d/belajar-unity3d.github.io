@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Single-Pass Stereo Rendering untuk HoloLens</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="platforms" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="XR.html">XR</a></li> 
+         <li><a href="SinglePassStereoRendering.html">Single Pass Stereo rendering (Double-Wide rendering)</a></li> 
+         <li>Single-Pass Stereo Rendering untuk HoloLens</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="SinglePassInstancing.html"></a></span> 
+          <div class="tip">
+            Login Login 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="VRAudioSpatializer.html"></a></span> 
+          <div class="tip">
+            Foto &amp; Video 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Single-Pass Stereo Rendering untuk HoloLens</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Ada dua metode rendering stereo untuk perangkat Holografik Windows (HoloLens); multi-pass dan satu-pass.</p> 
+       <h2>Multi-pass</h2> 
+       <p>Multi-pass rendering berjalan 2 lengkap render pass (satu untuk setiap mata). Ini menghasilkan hampir dua kali lipat beban kerja CPU dibandingkan dengan metode rendering yang dicontoh. Namun metode ini adalah yang paling mundur kompatibel dan tidak memerlukan perubahan <span class="tooltip"><strong>shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span>.</p> 
+       <h2>Single-pass Instanced</h2> 
+       <p>rendering yang luar biasa melakukan satu render lulus di mana setiap panggilan menggambar diganti dengan panggilan penarikan yang dicontoh. Ini sangat mengurangi pemanfaatan CPU. Selain sedikit ini mengurangi pemanfaatan GPU karena koherensi cache antara dua panggilan menggambar. Pada gilirannya konsumsi daya aplikasi Anda akan jauh lebih rendah.</p> 
+       <p>Untuk mengaktifkan fitur ini, buka pengaturan <a class="tooltipMoreInfoLink" href="class-PlayerSettings.html">Player</a> (menu: <strong>Edit</strong> &gt; <span class="tooltip"><strong>Project Settings</strong><span class="tooltiptext">Pengumpulan yang luas dari pengaturan yang memungkinkan Anda untuk mengkonfigurasi bagaimana Fisika, Audio, Jaringan, Grafik, Input dan banyak bidang lain dari jangkauan proyek Anda. <a href="comp-ManagerGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span>, kemudian pilih kategori <strong>Player</strong>). Kemudian arahkan ke panel <strong>Other Settings</strong>, aktifkan properti <strong>Virtual Reality Supported</strong>, lalu pilih <strong>Single Pass Instanced (Fastest)</strong> dari menu dropdown <strong>Stereo Rendering Method</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SinglePassHoloLens1.png" alt=""> 
+       </figure> 
+       <p>Unity default ke pengaturan <strong>Multi pass (Slow)</strong> yang lebih lambat karena Anda mungkin memiliki naungan kustom yang tidak memiliki kode yang diperlukan dalam <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> Anda untuk mendukung fitur ini.</p> 
+       <h2>Persyaratan skrip Shader</h2> 
+       <p>Setiap naungan non built-in harus diperbarui untuk bekerja dengan peninggalan. Baca dokumentasi ini untuk melihat bagaimana ini dilakukan: <a href="GPUInstancing.html">Login Login</a>. Selanjutnya, Anda harus membuat dua perubahan tambahan pada tahap naungan terakhir yang digunakan sebelum naungan fragmen (Vertex/Hull/Domain/Geometry). Pertama, Anda harus menambahkan <code>UNITY_VERTEX_OUTPUT_STEREO</code> ke struct output. Kedua, Anda harus menambahkan <code>UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO()</code> dalam fungsi utama untuk tahap itu setelah <code>UNITY_SETUP_INSTANCE_ID()</code> telah disebut.</p> 
+       <p><strong>Post-Processing Shaders</strong></p> 
+       <p>Anda harus menambahkan makro <code>UNITY_DECLARE_SCREENSPACE_TEXTURE(tex)</code> di sekitar deklarasi tekstur input, sehingga array tekstur 2D akan benar dinyatakan. Selanjutnya, Anda harus menambahkan panggilan ke <code>UNITY_SETUP_INSTANCE_ID()</code> pada awal naungan fragmen. Akhirnya, Anda harus menggunakan makro <code>UNITY_SAMPLE_SCREENSPACE_TEXTURE()</code> ketika pengambilan tekstur. Lihat <a href="SL-BuiltinIncludes.html">HLSLSupport.cginc</a> untuk informasi lebih lanjut tentang tekstur kedalaman makro dan peta bayangan ruang layar yang serupa.</p> 
+       <p>Berikut ini contoh sederhana yang menerapkan semua perubahan yang sebelumnya disebutkan pada efek gambar template:</p> 
+       <pre><code>struct appdata
+{
+    float4 vertex : POSITION;
+    float2 uv : TEXCOORD0;
+    UNITY_INSTANCE_ID
+};
+struct v2f
+{
+    float2 uv : TEXCOORD0;
+    float4 vertex : SV_POSITION;
+    UNITY_INSTANCE_ID
+    UNITY_VERTEX_OUTPUT_STEREO
+};
+v2f vert (appdata v)
+{
+    v2f o;
+    UNITY_SETUP_INSTANCE_ID(v);
+    UNITY_TRANSFER_INSTANCE_ID(v, o);
+    UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
+    o.vertex = UnityObjectToClipPos(v.vertex);
+    o.uv = v.uv;
+    return o;
+}
+
+UNITY_DECLARE_SCREENSPACE_TEXTURE(_MainTex);
+
+fixed4 frag (v2f i) : SV_Target
+{
+    UNITY_SETUP_INSTANCE_ID(i);
+    fixed4 col = UNITY_SAMPLE_SCREENSPACE_TEXTURE(_MainTex, i.uv);
+    // just invert the colors
+    col = 1 - col;
+    return col;
+}
+</code></pre> 
+       <h1>DrawProceduralIndirect</h1> 
+       <p> <code>Graphics.DrawProceduralIndirect()</code> dan <code>CommandBuffer.DrawProceduralIndirect()</code> mendapatkan semua argumen mereka dari buffer compute, sehingga kita tidak dapat dengan mudah meningkatkan jumlah instance. Oleh karena itu Anda harus secara manual menggandakan jumlah instance yang terkandung dalam buffer compute Anda.</p> 
+       <p>Lihat halaman <a href="SL-VertexFragmentShaderExamples.html">Contoh warna Vertex dan fragmen</a> untuk informasi lebih lanjut tentang kode naungan.</p> 
+       <hr> 
+       <ul> 
+        <li><span class="page-edit">2017–09–01 Login</span></li> 
+        <li><span class="page-history">Fitur baru di 5.5</span></li> 
+        <li><span class="page-history">Kode contoh tetap untuk rendering stereo pass tunggal untuk HoloLens</span></li> 
+       </ul> 
+       <!-- area:platforms --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="SinglePassInstancing.html"></a></span> 
+         <div class="tip">
+           Login Login 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="VRAudioSpatializer.html"></a></span> 
+         <div class="tip">
+           Foto &amp; Video 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

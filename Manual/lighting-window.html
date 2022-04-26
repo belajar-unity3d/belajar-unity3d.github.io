@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: jendela pencahayaan</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="LightingOverview.html">Lighting</a></li> 
+         <li>jendela pencahayaan</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="ShadowPerformance.html"></a></span> 
+          <div class="tip">
+            Masalah bayangan 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="class-LightingSettings.html"></a></span> 
+          <div class="tip">
+            Aset Pengaturan Pencahayaan 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>jendela pencahayaan</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Jendela pencahayaan (menu: <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting</strong>) adalah titik kontrol utama untuk fitur pencahayaan Unity. Anda dapat menggunakan jendela Lighting untuk menyesuaikan pengaturan yang terkait dengan pencahayaan di Adegan Anda, dan untuk mengoptimalkan data pencahayaan yang telah ditentukan untuk kualitas, waktu bake, dan ruang penyimpanan.</p> 
+       <h2>API</h2> 
+       <p>Anda dapat melakukan banyak fungsi yang tersedia di jendela Pencahayaan di <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span>, menggunakan API <a href="../ScriptReference/LightingSettings.html">LightingSettings</a> dan <a href="../ScriptReference/Lightmapping.html">Lightmapping</a>.</p> 
+       <h2>Tata letak jendela pencahayaan</h2> 
+       <p>Jendela pencahayaan mengandung unsur-unsur berikut:</p> 
+       <ul> 
+        <li><a href="#Scene">tab adegan</a> </li> 
+        <li><a href="#Environment">tab lingkungan</a> </li> 
+        <li><a href="#RealtimeLightmaps">Realtime Lightmaps tab</a> (Built-in Render Pipeline hanya)</li> 
+        <li><a href="#BakedLightmaps">tab Baked Lightmaps</a> </li> 
+        <li><a href="#ControlArea">area kontrol</a>, di bagian bawah jendela</li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/lighting-window-scene.png" alt=""> 
+       </figure> 
+       <p><a name="Scene"> </a></p> 
+       <h2>tab adegan</h2> 
+       <p>Tab <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> menampilkan informasi tentang <a href="class-LightingSettings.html">Aset Pengaturan Pencahayaan</a> yang ditugaskan ke Adegan aktif. Jika tidak ada Aset Pengaturan Pencahayaan ditugaskan ke Adegan aktif, itu menampilkan informasi tentang <a href="class-LightingSettings.html#DefaultLightingSettings">default LightingSettings objek</a>.</p> 
+       <p>Tab Adegan dibagi menjadi dua bagian:</p> 
+       <ul> 
+        <li><a href="#AssetControls">Pengaturan pencahayaan Kontrol aset</a></li> 
+        <li><a href="#LightingSettingsProperties">Pengaturan pencahayaan</a></li> 
+        <li><a href="#WorkflowSettings">Pengaturan Aliran Kerja</a></li> 
+       </ul> 
+       <p><a name="AssetControls"></a></p> 
+       <h3>Pengaturan pencahayaan Kontrol aset</h3> 
+       <p>Gunakan kontrol di bagian ini untuk menetapkan Aset Pengaturan Pencahayaan ke Adegan aktif, atau untuk membuat Aset Pengaturan Pencahayaan baru.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property:</strong></th> 
+          <th style="text-align:left;"><strong>Function:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Lighting Settings</strong></td> 
+          <td style="text-align:left;">Aset Pengaturan Pencahayaan ditugaskan ke Adegan aktif.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>New Lighting Settings</strong></td> 
+          <td style="text-align:left;">Klik tombol ini untuk menghasilkan Aset Pengaturan Pencahayaan baru di Proyek Anda, dan secara otomatis menetapkan Aset Pengaturan Pencahayaan baru ke Adegan aktif.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="LightingSettingsProperties"></a></p> 
+       <h3>Pengaturan pencahayaan</h3> 
+       <p>Gunakan bagian ini untuk melihat dan mengedit sifat Aset Pengaturan Pencahayaan atau objek <code>LightingSettings</code> yang ditugaskan ke Adegan saat ini. Sitemap<a href="class-LightingSettings.html">Aset Pengaturan Pencahayaan</a>.</p> 
+       <p><a name="WorkflowSettings"> </a></p> 
+       <h3>Pengaturan alur kerja</h3> 
+       <p>Bagian ini berisi pengaturan yang membantu Anda debug Adegan Anda.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Property:</strong></th> 
+          <th style="text-align:left;"><strong>Function:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>GPU Baking Device</strong></td> 
+          <td style="text-align:left;">Gunakan ini untuk mengubah GPU yang menggunakan Unity untuk data pencahayaan prekomputer. Properti ini terlihat hanya ketika Anda menggunakan backend <a href="progressive-lightmapper.html">Login Progres Lightmapper</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Light Probe Visualization</strong></td> 
+          <td style="text-align:left;">Gunakan ini untuk menyaring yang <span class="tooltip"><a class="tooltipMoreInfoLink" href="LightProbes.html">Probe Cahaya</a><span class="tooltiptext">probe cahaya menyimpan informasi tentang bagaimana cahaya melewati ruang di tempat kejadian Anda. Koleksi probe cahaya yang diatur dalam ruang tertentu dapat meningkatkan pencahayaan pada objek bergerak dan pemandangan LOD statis dalam ruang itu. <a href="LightProbes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#LightProbe">Glossary</a></span></span></span> divisualisasikan dalam <span class="tooltip"><strong>Scene view</strong><span class="tooltiptext">Tampilan interaktif ke dunia yang Anda buat. Anda menggunakan Adegan Lihat untuk memilih dan posisi pemandangan, karakter, kamera, lampu, dan semua jenis lain dari Game Object. <a href="UsingTheSceneView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SceneView">Glossary</a></span></span></span>. Nilai default adalah <strong>Only Probes Used By Selection</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Hanya Probe yang Digunakan Dengan Pemilihan</td> 
+          <td style="text-align:left;">Hanya Probe Cahaya yang mempengaruhi pemilihan saat ini divisualkan dalam tampilan Adegan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Semua Probe Tidak Ada Sel</td> 
+          <td style="text-align:left;">Semua Probe Cahaya divisualkan dalam tampilan Adegan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Semua Probe Dengan Sel</td> 
+          <td style="text-align:left;">Semua Probe Cahaya divisualkan dalam tampilan Adegan, dan tetrahedrons yang digunakan untuk interpolasi data Probe Cahaya juga ditampilkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Tidak ada Probe Cahaya divisualkan dalam tampilan Adegan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Display Weights</strong></td> 
+          <td style="text-align:left;">Ketika diaktifkan, Unity menarik garis dari Probe Cahaya yang digunakan untuk pemilihan aktif ke posisi pada tetrahedra digunakan untuk interpolasi. Ini adalah cara untuk debug probe interpolasi dan masalah penempatan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Display Occlusion</strong></td> 
+          <td style="text-align:left;">Ketika diaktifkan, menampilkan data oklusi untuk Probe Cahaya jika <strong>Lighting Mode</strong> diatur ke <span class="tooltip"><strong>Shadowmask</strong><span class="tooltiptext">Tekstur yang berbagi tata letak UV yang sama dan resolusi dengan peta cahaya yang sesuai. <a class="tooltipMoreInfoLink" href="LightMode-Mixed-Shadowmask.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shadowmask">Glossary</a></span></span></span>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="Environment"> </a></p> 
+       <h2>tab lingkungan</h2> 
+       <p>Tab Lingkungan mengandung pengaturan yang terkait dengan efek pencahayaan lingkungan untuk Adegan saat ini. Konten tergantung pada <span class="tooltip"><strong>render pipeline</strong><span class="tooltiptext">Rangkaian operasi yang mengambil isi dari Adegan, dan menampilkannya di layar. Unity memungkinkan Anda memilih dari pipa render yang dibangun sebelumnya, atau menulis sendiri. <a class="tooltipMoreInfoLink" href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span> yang digunakan Proyek Anda.</p> 
+       <h3>Pipa Render Built-in dan Pipa Render Universal</h3> 
+       <p>Di Pipa Render Built-in dan URP, tab Lingkungan dibagi menjadi dua bagian:</p> 
+       <ul> 
+        <li><a href="#EnvironmentSection">Environment</a></li> 
+        <li><a href="#OtherSection">Pengaturan lain</a></li> 
+       </ul> 
+       <p><a name="EnvironmentSection"></a></p> 
+       <h4>Environment</h4> 
+       <p>Bagian lingkungan mengandung pengaturan dan kontrol yang terkait dengan pencahayaan yang berlaku untuk penerangan lingkungan di tempat kejadian saat ini, seperti Skybox, memffuse pencahayaan dan refleksi.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Property:</strong></th> 
+          <th style="text-align:left;"><strong>Function:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Skybox Material</strong></td> 
+          <td style="text-align:left;">Sebuah <a href="class-Skybox.html">Skybox</a> adalah Bahan yang muncul di belakang segala sesuatu yang lain di Adegan untuk mensimulasikan langit atau latar belakang jauh lainnya. Gunakan properti ini untuk memilih Skybox Anda ingin menggunakan untuk Adegan. Nilai default adalah Skybox bawaan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Sun Source</strong></td> 
+          <td style="text-align:left;">Ketika <strong>Skybox Material</strong> adalah Skybox Procedural, gunakan pengaturan ini untuk menentukan GameObject dengan komponen Cahaya arah untuk menunjukkan arah matahari (atau sumber cahaya yang besar, jauh menerangi Adegan Anda). Jika ini diatur ke <strong>None</strong>, cahaya directional paling terang di Adegan diasumsikan untuk mewakili matahari. Lampu yang properti <strong>Render Mode</strong> diatur ke <strong>Not Important</strong> tidak mempengaruhi Skybox. Nilai default adalah <strong>None</strong>. <br><br> Untuk informasi lebih lanjut tentang pengaturan <strong>Render Mode</strong>, lihat bagian pengaturan tambahan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Realtime Shadow Color</strong></td> 
+          <td style="text-align:left;">Tentukan warna yang digunakan Unity untuk membuat bayangan real-time dalam Mode Pencahayaan Subtractive.<br><br> Pengaturan ini terlihat hanya ketika <strong>Lighting Mode</strong> diatur ke <strong>Subtractive</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Environment Lighting</strong></td> 
+          <td style="text-align:left;">Bagian ini berisi pengaturan yang mempengaruhi <a href="lighting-ambient-light.html">cahaya ambient</a> di Adegan saat ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Source</strong></td> 
+          <td style="text-align:left;">Gunakan ini untuk mendefinisikan warna sumber untuk cahaya ambient di Adegan. Nilai default adalah <span class="tooltip"><strong>Skybox</strong><span class="tooltiptext">Jenis khusus Bahan yang digunakan untuk mewakili langit. Biasanya enam sisi. <a class="tooltipMoreInfoLink" href="class-Skybox.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Skybox">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Skybox</strong></td> 
+          <td style="text-align:left;">Gunakan warna set Skybox dalam <strong>Skybox Material</strong> untuk menentukan cahaya ambient yang berasal dari sudut yang berbeda. Hal ini memungkinkan efek yang lebih tepat daripada <strong>Gradient</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Gradient</strong></td> 
+          <td style="text-align:left;">Pilih warna yang terpisah untuk cahaya ambien dari langit, cakrawala dan tanah, dan campuran dengan lancar di antara mereka.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Color</strong></td> 
+          <td style="text-align:left;">Gunakan warna rata untuk semua cahaya ambien.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Intensity Multiplier</strong></td> 
+          <td style="text-align:left;">Gunakan ini untuk mengatur kecerahan cahaya ambient di Adegan, didefinisikan sebagai nilai antara 0 dan 8. Nilai default adalah 1.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Environment Reflections</strong></td> 
+          <td style="text-align:left;">Bagian ini berisi pengaturan global untuk baking <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-ReflectionProbe.html">Refleksi Probe</a><span class="tooltiptext">Komponen rendering yang menangkap pandangan bulat dari sekitarnya di semua arah, seperti kamera. Gambar yang ditangkap kemudian disimpan sebagai kubus yang dapat digunakan oleh benda dengan bahan reflektif. <a href="class-ReflectionProbe.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ReflectionProbe">Glossary</a></span></span></span>, dan pengaturan yang mempengaruhi refleksi global.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Source</strong></td> 
+          <td style="text-align:left;">Gunakan pengaturan ini untuk menentukan apakah Anda ingin menggunakan Skybox untuk efek refleksi, atau kubus pilihan Anda. Nilai default adalah <strong>Skybox</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Skybox</strong></td> 
+          <td style="text-align:left;">Pilih ini untuk menggunakan Skybox sebagai sumber refleksi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Custom</strong></td> 
+          <td style="text-align:left;">Pilih ini untuk menggunakan aset Cubemap atau <a href="class-RenderTexture.html">RenderTexture dari tipe cube</a> untuk refleksi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Resolution</strong></td> 
+          <td style="text-align:left;">Gunakan ini untuk mengatur resolusi Skybox untuk tujuan refleksi. Properti ini terlihat hanya ketika <strong>Source</strong> diatur ke <strong>Skybox</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><span class="tooltip"><strong>Cubemap</strong><span class="tooltiptext">Koleksi enam tekstur persegi yang dapat mewakili refleksi di lingkungan atau skybox yang digambar di balik geometri Anda. Enam kotak membentuk wajah kubus imajiner yang mengelilingi objek; setiap wajah mewakili pandangan di sepanjang arah sumbu dunia (hingga, kiri, kanan, ke depan dan belakang). <a class="tooltipMoreInfoLink" href="class-Cubemap.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Cubemap">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Gunakan ini untuk menentukan Cubemap untuk digunakan untuk tujuan refleksi. Properti ini terlihat hanya ketika <strong>Source</strong> diatur ke <strong>Cubemap</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><span class="tooltip"><strong>Compression</strong><span class="tooltiptext">Metode menyimpan data yang mengurangi jumlah ruang penyimpanan yang dibutuhkan. <a href="class-TextureImporterOverride.html">Kompresi Tekstur</a>, <a href="class-AnimationClip.html#AssetProperties">Kompresi Animasi</a>, <a href="class-AudioClip.html">Kompresi Audio</a>, <a href="ReducingFilesize.html">Membangun Kompresi</a>.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#compression">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Gunakan ini untuk menentukan apakah tekstur refleksi terkompresi. Pengaturan default adalah <strong>Auto</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Auto</strong></td> 
+          <td style="text-align:left;">Tekstur refleksi dikompresi jika format kompresi cocok.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Uncompressed</strong></td> 
+          <td style="text-align:left;">Tekstur refleksi disimpan dalam memori tidak terkompresi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Compressed</strong></td> 
+          <td style="text-align:left;">Tekstur dikompresi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Intensity Multiplier</strong></td> 
+          <td style="text-align:left;">Tingkat dimana sumber refleksi terlihat dalam objek reflektif.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Bounces</strong></td> 
+          <td style="text-align:left;">Bouncing refleksi terjadi ketika refleksi dari satu objek kemudian tercermin oleh objek lain. Gunakan properti ini untuk mengatur berapa kali Probe Refleksi mengevaluasi bouncing kembali dan ke depan antara benda. Jika ini diatur ke 1, maka Unity hanya membutuhkan refleksi awal (dari peta skybox atau cube yang ditentukan dalam properti <strong>Reflection Source</strong>) ke akun.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="OtherSection"></a></p> 
+       <h4>Pengaturan lain</h4> 
+       <p>Bagian Pengaturan lain mengandung pengaturan untuk fog, <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-Halo.html">Halos</a><span class="tooltiptext">Area cahaya yang bersinar di sekitar sumber cahaya, digunakan untuk memberikan kesan partikel debu kecil di udara. <a href="class-Halo.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Halo">Glossary</a></span></span></span>, <a href="class-Flare.html">Flares</a> dan <a href="Cookies.html">Cookies</a>.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="3"></th> 
+          <th style="text-align:left;">Property:</th> 
+          <th style="text-align:left;">Fungsi:</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="4"><span class="tooltip"><strong>Fog</strong><span class="tooltiptext">Efek pasca-olahan yang menunda warna ke objek tergantung pada jarak dari kamera. Gunakan ini untuk mensimulasikan kabut atau kabut di lingkungan luar ruangan, atau untuk menyembunyikan klip benda di dekat pesawat klip jauh kamera. <a class="tooltipMoreInfoLink" href="PostProcessingOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Fog">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Enables atau menonaktifkan fog di itu adegan. Catatan bahwa fog tidak tersedia dengan <a href="RenderingPaths.html">Jalan rendering yang rusak</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="3">Color</td> 
+          <td style="text-align:left;">Gunakan pemilih warna untuk mengatur warna Unity menggunakan untuk menggambar kabut di Adegan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="3">Mode</td> 
+          <td style="text-align:left;">Tentukan cara di mana fogging menumpuk dengan jarak dari <span class="tooltip"><strong>camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"></td> 
+          <td style="text-align:left;" colspan="2"><strong>Linear</strong></td> 
+          <td style="text-align:left;">Kepadatan fog meningkatkan linear dengan jarak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"></td> 
+          <td style="text-align:left;">Start</td> 
+          <td style="text-align:left;">Mengatur jarak dari kamera di mana kabut dimulai.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"></td> 
+          <td style="text-align:left;">End</td> 
+          <td style="text-align:left;">Mengatur jarak dari Kamera di mana kabut benar-benar mengaburkan Adegan <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"></td> 
+          <td style="text-align:left;" colspan="2"><strong>Exponential</strong></td> 
+          <td style="text-align:left;">Kepadatan fog meningkatkan eksponensial dengan jarak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"></td> 
+          <td style="text-align:left;">Density</td> 
+          <td style="text-align:left;">Gunakan ini untuk mengontrol kepadatan kabut. Fog muncul lebih padat sebagai <strong>Density</strong> meningkat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"></td> 
+          <td style="text-align:left;" colspan="2"><strong>Exponential Squared</strong></td> 
+          <td style="text-align:left;">Kepadatan fog meningkat lebih cepat dengan jarak (terkenal dan persegi).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"></td> 
+          <td style="text-align:left;">Density</td> 
+          <td style="text-align:left;">Gunakan ini untuk mengontrol kepadatan kabut. Fog muncul lebih padat sebagai <strong>Density</strong> meningkat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="4"><strong>Halo Texture</strong></td> 
+          <td style="text-align:left;">Mengatur Tekstur yang ingin Anda gunakan untuk menggambar lampu sekitar <a href="class-Halo.html">Halo</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="4"><strong>Halo Strength</strong></td> 
+          <td style="text-align:left;">Tentukan visibilitas Halo di sekitar Lampu, dari nilai antara 0 dan 1.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="4"><strong>Flare Fade Speed</strong></td> 
+          <td style="text-align:left;">Tentukan waktu (dalam detik) di mana fade <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-LensFlare.html">lensa flares</a><span class="tooltiptext">Komponen yang mensimulasikan efek pembiasan lampu di dalam lensa kamera. Gunakan Lens Flare untuk mewakili lampu yang sangat terang atau tambahkan suasana ke tempat kejadian Anda. <a href="class-LensFlare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#LensFlare">Glossary</a></span></span></span> dari pandangan setelah awalnya muncul. Ini diatur ke 3 secara default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="4"><strong>Flare Strength</strong></td> 
+          <td style="text-align:left;">Tentukan visibilitas flares lensa dari lampu, dari nilai antara 0 dan 1.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="4"><strong>Spot Cookie</strong></td> 
+          <td style="text-align:left;">Mengatur tekstur <a href="Cookies.html">Cookie</a> yang ingin Anda gunakan untuk <a href="Lighting.html">Lampu Spot</a>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>Pipa Render Definisi Tinggi</h3> 
+       <p>Di HDRP, tab Lingkungan memungkinkan Anda untuk menentukan langit mana yang digunakan untuk penerangan lingkungan. Untuk informasi lebih lanjut tentang pencahayaan lingkungan di HDRP, lihat.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property:</strong></th> 
+          <th style="text-align:left;"><strong>Function:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Profile</strong></td> 
+          <td style="text-align:left;">Untuk langit. Profil Volume ini harus mencakup setidaknya satu override Volume Sky.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Static Lighting Sky</strong></td> 
+          <td style="text-align:left;">Langit-langit untuk digunakan untuk simulasi Penerangan Global. Drop-down hanya mengandung jenis langit yang Profil termasuk. Misalnya, jika Profil termasuk override Volume Sky Gradient, Anda dapat memilih Gradient Sky dari drop-down ini.<br><br> Anda hanya dapat mengedit pengaturan ini jika Anda menetapkan Profil Volume ke bidang Profil.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="RealtimeLightmaps"></a></p> 
+       <h2>Tab Lightmaps Realtime</h2> 
+       <p>Tab Realtime <span class="tooltip"><strong>Lightmaps</strong><span class="tooltiptext">Tekstur pra-render yang mengandung efek sumber cahaya pada objek statis di tempat kejadian. Lightmaps dilalui atas geometri adegan untuk menciptakan efek pencahayaan. <a class="tooltipMoreInfoLink" href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Lightmap">Glossary</a></span></span></span> menunjukkan daftar semua peta cahaya yang dihasilkan oleh sistem <span class="tooltip"><strong>Enlighten</strong><span class="tooltiptext">Sistem pencahayaan oleh Geomerics yang digunakan dalam Unity untuk lightmapping dan untuk Mencerahkan Penerangan Global Realtime. <a href="https://www.siliconstudio.co.jp/en/products-service/enlighten/">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Enlighten">Glossary</a></span></span></span> Realtime <span class="tooltip"><strong>Global Illumination</strong><span class="tooltiptext">Kelompok teknik yang model pencahayaan langsung dan tidak langsung untuk memberikan hasil pencahayaan yang realistis.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#globalillumination">Glossary</a></span></span></span> di Adegan saat ini. Jika Enlighten Realtime Global Illumination tidak diaktifkan di Proyek Anda, tab ini akan kosong.</p> 
+       <p><a name="BakedLightmaps"></a></p> 
+       <h2>tab Baked Lightmaps</h2> 
+       <p>Tab ini menunjukkan daftar semua peta ringan yang dihasilkan oleh <span class="tooltip"><a class="tooltipMoreInfoLink" href="Lightmappers.html">lightmapper</a><span class="tooltiptext">Alat dalam Unity yang bakes lightmap sesuai dengan pengaturan lampu dan geometri di tempat kejadian Anda. <a href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Lightmapper">Glossary</a></span></span></span> untuk Adegan saat ini, bersama dengan <a href="LightmapSnapshot.html">Aset Data Pencahayaan</a>. Jika Baked Global Illumination tidak diaktifkan di Proyek Anda, tab ini akan kosong.</p> 
+       <p><a name="ControlArea"></a></p> 
+       <h2>Area kontrol</h2> 
+       <p>Kontrol untuk data pencahayaan prakomputer berada di bagian bawah jendela Pencahayaan.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property:</strong></th> 
+          <th style="text-align:left;"><strong>Function:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Auto Generate</strong></td> 
+          <td style="text-align:left;">Jika <strong>Auto Generate</strong> diaktifkan, data pencahayaan prekomputer Unity secara otomatis ketika Anda melakukan perubahan pada Adegan.<br><br> Data ini termasuk lightmaps untuk sistem Penerangan Global Baked, lightmaps untuk sistem Penerangan Global Enlighten Realtime, Probe Cahaya, dan Probe Reflection.<br><br>Unity biasanya memulai bake beberapa detik setelah Anda membuat perubahan ke Adegan. Jika <strong>Auto Generate</strong> dinonaktifkan, Anda harus secara manual memanggil bake sendiri, menggunakan tombol <strong>Generate Lighting</strong> di jendela Pencahayaan, atau API <a href="../ScriptReference/Lightmapping.Bake.html">Login Login</a> atau <a href="../ScriptReference/Lightmapping.BakeAsync.html">Lightmapping.BakeAsync</a>.<br><br> Perhatikan bahwa ketika Anda meminta data pencahayaan menggunakan <strong>Auto Generate</strong>, data pencahayaan yang telah ditentukan tidak disimpan sebagai Aset di Proyek Anda. Ini bukan disimpan dalam memori, dan serialisasi sebagai bagian dari Adegan.<br><br> Properti ini disimpan dalam Aset Pengaturan Pencahayaan. Hal ini terlihat di jendela Lighting hanya jika tab Adegan dipilih, dan Adegan aktif memiliki Aset Pengaturan Pencahayaan yang ditugaskan untuk itu.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Generate Lighting</strong></td> 
+          <td style="text-align:left;">Klik tombol <strong>Generate Lighting</strong> untuk data pencahayaan prakomputer untuk semua adegan terbuka. Data ini mencakup peta ringan untuk sistem Penerangan Global Baked, peta lampu untuk sistem Penerangan Global Enlighten Realtime, Probe Cahaya, dan Probe Reflection. <br><br> Klik menu dropdown di sisi kanan <strong>Generate Lighting</strong> dan kemudian klik <strong>Bake Reflection Probes</strong> untuk bake hanya Probe Reflection untuk semua adegan terbuka.<br><br> Klik menu dropdown di sisi kanan <strong>Generate Lighting</strong> dan kemudian klik <strong>Clear Baked Data</strong> untuk menghapus semua data pencahayaan yang telah ditentukan dari semua adegan terbuka tanpa menghapus <span class="tooltip"><a class="tooltipMoreInfoLink" href="GICache.html">GI Cache</a><span class="tooltiptext">File menengah cache yang digunakan ketika data pencahayaan prekomputer Unity. Unity menyimpan cache ini untuk mempercepat perhitungan. <a href="GICache.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GICache">Glossary</a></span></span></span>.<br><br> Tombol ini hanya diaktifkan jika <strong>Auto Generate</strong> dinonaktifkan.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <hr> 
+       <ul> 
+        <li><span class="page-history">[Aset Pengaturan Cahaya] ditambahkan dalam <span class="search-words">NewIn20201</span></span></li> 
+       </ul> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="ShadowPerformance.html"></a></span> 
+         <div class="tip">
+           Masalah bayangan 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="class-LightingSettings.html"></a></span> 
+         <div class="tip">
+           Aset Pengaturan Pencahayaan 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

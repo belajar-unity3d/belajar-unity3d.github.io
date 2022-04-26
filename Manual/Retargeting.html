@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Penargetan ulang animasi Humanoid</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="AnimationSection.html">Animation</a></li> 
+         <li>Penargetan ulang animasi Humanoid</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="AnimatorOverrideController.html"></a></span> 
+          <div class="tip">
+            Pengontrol Override Animator 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="MecanimPeformanceandOptimization.html"></a></span> 
+          <div class="tip">
+            Kinerja dan optimalisasi 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Penargetan ulang animasi Humanoid</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Salah satu fitur yang paling kuat dari Mecanim adalah <strong>retargeting</strong> dari <span class="tooltip"><strong>humanoid animations</strong><span class="tooltiptext">Animasi menggunakan kerangka humanoid. Model humanoid umumnya memiliki struktur dasar yang sama, mewakili bagian artculate utama tubuh, kepala dan anggota badan. Ini memudahkan untuk memetakan animasi dari satu kerangka humanoid ke yang lain, memungkinkan penargetan ulang dan kinematik terbalik. <a class="tooltipMoreInfoLink" href="ConfiguringtheAvatar.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Humanoidanimation">Glossary</a></span></span></span>. Ini berarti bahwa dengan kemudahan relatif, Anda dapat menerapkan set animasi yang sama untuk berbagai model karakter. Retargeting hanya mungkin untuk model humanoid, di mana <span class="tooltip"><strong>Avatar</strong><span class="tooltiptext">Antarmuka untuk penargetan ulang animasi dari satu rig ke yang lain. <a href="ConfiguringtheAvatar.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Avatar">Glossary</a></span></span></span> telah dikonfigurasi, karena ini memberi kita korespondensi antara struktur tulang model.</p> 
+       <h2>Struktur Hierarchy yang disarankan</h2> 
+       <p>Ketika bekerja dengan animasi Mecanim, Anda dapat mengharapkan <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> Anda untuk mengandung unsur-unsur berikut:-</p> 
+       <ul> 
+        <li>Model karakter yang diimpor, yang memiliki Avatar di atasnya.</li> 
+        <li><span class="tooltip"><strong>Animator Component</strong><span class="tooltiptext">Komponen pada model yang merupakan model yang menggunakan sistem Animasi. Komponen ini memiliki referensi aset Animator Controller yang mengontrol animasi. <a class="tooltipMoreInfoLink" href="class-AnimatorController.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#AnimatorComponent">Glossary</a></span></span></span>, merujuk aset <span class="tooltip"><strong>Animator Controller</strong><span class="tooltiptext">Kontrol animasi melalui Lapisan Animasi dengan Mesin Negara Animasi dan Pohon Animasi Blend, dikendalikan oleh Parameter Animasi. Pengontrol Animator yang sama dapat direferensikan oleh beberapa model dengan komponen Animator. <a href="class-AnimatorController.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnimatorController">Glossary</a></span></span></span>.</li> 
+        <li>Satu set <span class="tooltip"><strong>animation clips</strong><span class="tooltiptext">Animasi data yang dapat digunakan untuk karakter animasi atau animasi sederhana. Ini adalah bagian "unit" sederhana dari gerakan, seperti (salah satu contoh spesifik) "Idle", "Walk" atau "Run". <a class="tooltipMoreInfoLink" href="class-AnimationClip.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnimationClip">Glossary</a></span></span></span>, direferensikan dari Animator Controller.</li> 
+        <li><span class="tooltip"><strong>Scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> untuk karakter.</li> 
+        <li>Komponen yang berkaitan dengan karakter, seperti <span class="tooltip"><strong>Character Controller</strong><span class="tooltiptext">Komponen collider berbentuk kapsul sederhana dengan fitur khusus untuk berperilaku sebagai karakter dalam permainan. Tidak seperti komponen sari sejati, seorang kaku tidak diperlukan dan efek momentum tidak realistis. <a class="tooltipMoreInfoLink" href="class-CharacterController.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#CharacterController">Glossary</a></span></span></span>.</li> 
+       </ul> 
+       <p>Proyek Anda juga harus berisi model karakter lain dengan Avatar yang valid.</p> 
+       <p>Jika ragu tentang terminologi, konsultasikan <a href="AnimationGlossary.html">Animasi Glossary</a> </p> 
+       <p>Pengaturan yang disarankan adalah:</p> 
+       <ul> 
+        <li>Buat <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> di Hierarchy yang mengandung komponen terkait Karakter</li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/MecanimRetargetingTopLevel.png" alt=""> 
+       </figure> 
+       <ul> 
+        <li>Masukkan model sebagai anak dari GameObject, bersama dengan komponen Animator</li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/MecanimRetargetingModel.png" alt=""> 
+       </figure> 
+       <ul> 
+        <li>Pastikan skrip merujuk Animator mencari animator pada anak-anak bukan akar; gunakan GetComponentInChildren &lt;Animator&gt;() bukan GetComponent &lt;Animator&gt;().</li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/MecanimRetargetingKyle.jpg" alt=""> 
+       </figure> 
+       <p>Kemudian untuk menggunakan animasi yang sama pada model lain, Anda perlu:</p> 
+       <ul> 
+        <li>menonaktifkan model asli</li> 
+        <li>Drop dalam model yang diinginkan sebagai anak lain dari GameObject</li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/MecanimRetargetingOtherModel.png" alt=""> 
+       </figure> 
+       <ul> 
+        <li>Pastikan properti Animator Controller untuk model baru merujuk pada aset pengontrol yang sama</li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/MecanimRetargetingOtherModelCorrectController.png" alt=""> 
+       </figure> 
+       <ul> 
+        <li>Tweak pengontrol karakter, transformasi, dan sifat lain pada GameObject tingkat atas, untuk memastikan bahwa animasi bekerja dengan lancar dengan model baru.</li> 
+        <li>You’re done!</li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/MecanimRetargetingTed.jpg" alt=""> 
+       </figure> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="AnimatorOverrideController.html"></a></span> 
+         <div class="tip">
+           Pengontrol Override Animator 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="MecanimPeformanceandOptimization.html"></a></span> 
+         <div class="tip">
+           Kinerja dan optimalisasi 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Gambar batching panggilan</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="graphics-performance-profiling.html">Kinerja grafis dan profil</a></li> 
+         <li><a href="optimizing-draw-calls.html">Mengoptimalkan panggilan menggambar</a></li> 
+         <li>Gambar batching panggilan</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="gpu-instancing-shader.html"></a></span> 
+          <div class="tip">
+            Menciptakan naungan yang mendukung sikap GPU 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="static-batching.html"></a></span> 
+          <div class="tip">
+            batching statis 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Gambar batching panggilan</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Gambar batching panggilan adalah metode <a href="optimizing-draw-calls.html">draw call optimization</a> yang menggabungkan mesh sehingga Unity dapat membuat mereka dalam panggilan yang lebih sedikit. Unity menyediakan dua metode batching panggilan bawaan:</p> 
+       <ul> 
+        <li> <a class="tooltipMoreInfoLink" href="static-batching.html">batching statis</a>: Untuk <a href="StaticObjects.html">static</a> <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span>, Unity menggabungkan mereka dan membuat mereka bersama.</li> 
+        <li> <a href="dynamic-batching.html">batching dinamis</a>: Untuk jaring yang cukup kecil, ini mengubah simpul mereka pada CPU, kelompok simpul bersamaan, dan membuat mereka dalam satu panggilan menggambar.</li> 
+       </ul> 
+       <p>Unity built-in menggambar batching panggilan memiliki beberapa keunggulan dibandingkan jaring merging secara manual; sebagian besar tidak bisa, Unity masih bisa kusam jala secara individual. Namun, itu juga memiliki beberapa sisi bawah; batching statis memori dan penyimpanan overhead, dan batching dinamis mengeluarkan beberapa overhead CPU.</p> 
+       <h2>Persyaratan dan kompatibilitas</h2> 
+       <p>Bagian ini mencakup informasi tentang kompatibilitas <span class="tooltip"><strong>render pipeline</strong><span class="tooltiptext">Rangkaian operasi yang mengambil isi dari Adegan, dan menampilkannya di layar. Unity memungkinkan Anda memilih dari pipa render yang dibangun sebelumnya, atau menulis sendiri. <a class="tooltipMoreInfoLink" href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span> dari metode batching panggilan bawaan Unity.</p> 
+       <h3>Kompatibilitas pipa Render</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature</strong></th> 
+          <th style="text-align:left;"><strong>Built-in Render Pipeline</strong></th> 
+          <th style="text-align:left;"><strong>Universal Render Pipeline (URP)</strong></th> 
+          <th style="text-align:left;"><strong>High Definition Render Pipeline (HDRP)</strong></th> 
+          <th style="text-align:left;"><strong>Custom Scriptable Render Pipeline (SRP)</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Static Batching</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Dynamic Batching</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="using-draw-call-batching"></a></p> 
+       <h2>Menggunakan batching panggilan menarik</h2> 
+       <p>Informasi penggunaan berikut relevan untuk batching statis dan dinamis. Untuk informasi spesifik untuk setiap metode batching panggilan, seperti cara mengaktifkan dan menggunakan setiap metode, lihat <a href="static-batching.html">batching statis</a> dan <a href="dynamic-batching.html">batching dinamis</a>.</p> 
+       <p><span class="tooltip"><a class="tooltipMoreInfoLink" href="class-MeshRenderer.html">Mesh Renderers</a><span class="tooltiptext">Komponen mesh yang mengambil geometri dari Filter Mesh dan render di posisi yang ditentukan oleh komponen Transform objek. <a href="class-MeshRenderer.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#MeshRenderer">Glossary</a></span></span></span>, <span class="tooltip"><a href="class-TrailRenderer.html">Trail Renderers</a><span class="tooltiptext">Efek visual yang memungkinkan Anda untuk membuat jejak di balik GameObjects di Adegan karena mereka bergerak. <a href="class-TrailRenderer.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#TrailRenderer">Glossary</a></span></span></span>, <span class="tooltip"><a href="class-LineRenderer.html">Garis Renderers</a><span class="tooltiptext">Komponen yang mengambil array dari dua atau lebih poin di ruang 3D dan menarik garis lurus antara masing-masing. Anda dapat menggunakan komponen Renderer Baris tunggal untuk menggambar apa pun dari garis lurus sederhana ke spiral yang kompleks. <a href="class-LineRenderer.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#LineRenderer">Glossary</a></span></span></span>, <span class="tooltip"><a href="class-ParticleSystem.html">Sistem partikel</a><span class="tooltiptext">Komponen yang mensimulasikan entitas fluida seperti cairan, awan dan nyala dengan menghasilkan dan memikat sejumlah besar gambar 2D kecil di tempat kejadian. <a href="class-ParticleSystem.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#particlesystem">Glossary</a></span></span></span>, dan <span class="tooltip"><a href="class-SpriteRenderer.html">Sprite Renderers</a><span class="tooltiptext">Komponen yang memungkinkan Anda menampilkan gambar sebagai Sprites untuk digunakan di kedua adegan 2D dan 3D. <a href="class-SpriteRenderer.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#SpriteRenderer">Glossary</a></span></span></span> didukung untuk menggambar batching panggilan. Jenis lain dari rendering komponen, termasuk Skinned <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mesh">Glossary</a></span></span></span> Renderers Cloth, tidak didukung. Unity hanya batch Renderers dengan Renderers lain dari jenis yang sama; misalnya, Mesh Renderers dengan Mesh Renderers.</p> 
+       <p>Unity batch menarik panggilan GameObjects yang menggunakan bahan yang sama. Ini berarti untuk mendapatkan hasil terbaik dari menggambar batching panggilan, berbagi bahan di antara sebanyak GameObjects mungkin. Jika Anda memiliki dua aset bahan yang identik dari tekstur mereka, Anda dapat menggabungkan tekstur menjadi satu tekstur yang lebih besar. Proses ini disebut tekstur alasing. Untuk informasi lebih lanjut, lihat <a href="http://en.wikipedia.org/wiki/Texture_atlas">Wikipedia artikel</a> pada tekstur dilasing. Ketika tekstur berada di atlas yang sama, Anda dapat menggunakan aset bahan tunggal.</p> 
+       <p>Di Pipeline Render Built-in, Anda dapat menggunakan <a href="../ScriptReference/MaterialPropertyBlock.html">BahanPropertyBlock</a> untuk mengubah sifat material tanpa melanggar batching panggilan. CPU masih perlu membuat beberapa perubahan render-state, tetapi menggunakan <code>MaterialPropertyBlock</code> lebih cepat daripada menggunakan beberapa bahan. Jika proyek Anda menggunakan Pipeline Render Scriptable, jangan gunakan <code>MaterialPropertyBlock</code> karena mereka menghapus kompatibilitas SRP Batcher untuk materi.</p> 
+       <p>Transparan <span class="tooltip"><strong>shaders</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> sering mengharuskan Unity untuk membuat jala dalam urutan ke depan. Untuk batch mesh transparan, Unity pertama perintah mereka dari belakang ke depan dan kemudian mencoba untuk batch mereka. Karena Unity harus membuat jala kembali ke depan, sering tidak bisa batch sebanyak banyak jaring transparan sebagai jaring buram.</p> 
+       <p>Unity tidak dapat menerapkan batching dinamis ke GameObjects yang mengandung cermin dalam <span class="tooltip"><strong>Transform component</strong><span class="tooltiptext">Komponen Transform menentukan Posisi, Rotasi, dan Skala setiap objek di tempat kejadian. Setiap GameObject memiliki Transform. <a class="tooltipMoreInfoLink" href="class-Transform.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#TransformComponent">Glossary</a></span></span></span> mereka. Sebagai contoh, jika salah satu GameObject memiliki skala <strong>1</strong> dan GameObject lain memiliki skala <strong>–1</strong>, Unity tidak dapat batch bersama.</p> 
+       <p>Jika Anda tidak dapat menggunakan batching panggilan, menggabungkan mesh secara manual yang dekat satu sama lain dapat menjadi alternatif yang baik. Untuk informasi lebih lanjut tentang menggabungkan mesh, lihat <a href="combining-meshes.html">Combining meshes</a>.</p> 
+       <p> <strong>Warning</strong>: Ketika Anda mengakses properti bahan bersama dari skrip C#, pastikan untuk menggunakan <a href="../ScriptReference/Renderer-sharedMaterial.html">Renderer.sharedMaterial</a> dan tidak <a href="../ScriptReference/Renderer-material.html">Renderer.material</a>. <code>Renderer.material</code> menciptakan salinan materi dan menetapkan salinan kembali ke Renderer. Ini berhenti Unity dari batching panggilan penarikan untuk Renderer.</p> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2017–10–26 Login</span></p></li> 
+        <li><p><span class="page-history">Menambahkan catatan pada batching dinamis yang tidak kompatibel dengan pekerjaan grafis di 2017. 1 Artikel</span></p></li> 
+       </ul> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="gpu-instancing-shader.html"></a></span> 
+         <div class="tip">
+           Menciptakan naungan yang mendukung sikap GPU 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="static-batching.html"></a></span> 
+         <div class="tip">
+           batching statis 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

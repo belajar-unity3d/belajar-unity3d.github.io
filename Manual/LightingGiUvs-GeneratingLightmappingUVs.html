@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Menghasilkan lightmap UVs</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="LightingOverview.html">Lighting</a></li> 
+         <li><a href="Lightmappers.html">Lightmapping</a></li> 
+         <li><a href="LightingGiUvs.html">Cahayamap UVs pengenalan</a></li> 
+         <li>Menghasilkan UV peta cahaya</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="LightingGiUvs.html"></a></span> 
+          <div class="tip">
+            Cahayamap UVs pengenalan 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="LightingGiUvs-visualizing.html"></a></span> 
+          <div class="tip">
+            Visualisasi UV peta cahaya 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Menghasilkan UV peta cahaya</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Unity dapat menghitung UV untuk dipanggang <span class="tooltip"><strong>lightmaps</strong><span class="tooltiptext">Tekstur pra-render yang mengandung efek sumber cahaya pada objek statis di tempat kejadian. Lightmaps dilalui atas geometri adegan untuk menciptakan efek pencahayaan. <a class="tooltipMoreInfoLink" href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Lightmap">Glossary</a></span></span></span> ketika Anda mengimpor model, atau Anda dapat menyediakan data Anda sendiri.</p> 
+       <p>Halaman ini berisi informasi berikut:</p> 
+       <ul> 
+        <li><a href="#providing-own-uvs">Bagaimana untuk menyediakan UV peta cahaya Anda sendiri</a></li> 
+        <li> <a href="#automatically-generate-uvs">Cara secara otomatis menghasilkan UV Lightmap</a> 
+         <ul> 
+          <li><a href="#Settings">Pengaturan generasi UV lightmap otomatis</a></li> 
+          <li><a href="#troubleshooting">Pemecahan Masalah otomatis dihasilkan lightmap UVs</a></li> 
+         </ul> </li> 
+       </ul> 
+       <p><a name="providing-own-uvs"></a></p> 
+       <h2>Bagaimana untuk menyediakan UV peta cahaya Anda sendiri</h2> 
+       <p>Anda dapat memberikan UV Lightmap Anda sendiri di perangkat lunak pembuatan konten pilihan Anda. Unity menggunakan UV ini sebagai masukan untuk perhitungannya.</p> 
+       <p>Di mana Anda menempatkan data ini tergantung pada apakah Anda menyediakan UV untuk peta cahaya panggang, peta cahaya real-time, atau keduanya:</p> 
+       <ul> 
+        <li>Untuk peta lampu panggang, Anda harus menempatkan UV peta cahaya di <a href="../ScriptReference/Mesh-uv2.html">Mesh.uv2</a>. Saluran ini juga disebut “UV1”.</li> 
+        <li>Untuk peta lampu real-time: 
+         <ul> 
+          <li>Jika Anda sudah memiliki UV peta cahaya panggang di <code>Mesh.uv2</code> dari <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a class="tooltipMoreInfoLink" href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mesh">Glossary</a></span></span></span> Anda, dan Anda ingin menggunakan UV yang sama sebagai masukan untuk peta cahaya real-time, Anda tidak perlu melakukan apa pun. Unity jatuh kembali untuk berbagi UV peta cahaya panggang.</li> 
+          <li>Jika Anda sudah memiliki UV peta cahaya panggang di <code>Mesh.uv2</code>, dan Anda ingin menyediakan UV yang berbeda sebagai masukan untuk peta lampu real-time Anda, letakkan UV peta cahaya real-time di <a href="../ScriptReference/Mesh-uv3.html">Mesh.uv3</a>, juga disebut "UV2".</li> 
+          <li>Jika Anda belum memiliki UV peta cahaya panggang di saluran kedua mesh Anda, itu pilihan Anda apakah Anda menggunakan <code>Mesh.uv2</code> atau <code>Mesh.uv3</code> untuk UV peta cahaya real-time.</li> 
+         </ul> </li> 
+       </ul> 
+       <p>Set UV yang baik untuk lightmaps harus mematuhi aturan berikut:</p> 
+       <ul> 
+        <li>Ini harus dalam ruang UV [0,1].</li> 
+        <li>Perlu memiliki margin yang cukup luas antara grafik individu. Untuk informasi lebih lanjut, lihat <a href="ProgressiveLightmapper-UVOverlap.html">Umpan balik tumpang tindih UV</a>.</li> 
+        <li>Tidak harus memiliki wajah yang tumpang tindih.</li> 
+        <li>Harus ada perbedaan rendah antara sudut di UV dan sudut dalam geometri asli.</li> 
+        <li>Harus ada perbedaan rendah antara skala relatif segitiga di UV dan skala relatif segitiga dalam geometri asli), kecuali Anda ingin beberapa daerah untuk memiliki resolusi lightmap yang lebih tinggi.</li> 
+       </ul> 
+       <p><a name="automatically-generate-uvs"></a></p> 
+       <h2>Cara secara otomatis menghasilkan UV Lightmap</h2> 
+       <p>Anda dapat memberitahu Unity untuk secara otomatis menghasilkan UV Lightmap untuk Model, menggunakan <a href="class-FBXImporter.html">Model Pengaturan impor</a>.</p> 
+       <ol> 
+        <li>Pilih Model dalam tampilan Proyek Anda. Unity membuka Pengaturan Impor Model di <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>.</li> 
+        <li>Dalam Model Impor Pengaturan, arahkan ke tab <strong>Model</strong>, dan kemudian bagian <strong>Geometry</strong>.</li> 
+        <li>Tick kotak centang <strong>Generate Lightmap UVs</strong>. Bagian <strong>Lightmap UVs settings</strong> muncul di bawah Generate Lightmap UVs checkbox.</li> 
+        <li>Opsional: Mengkonfigurasi pengaturan di bagian <strong>Lightmap UVs settings</strong>. Lihat <a href="#Settings">Settings</a> untuk informasi lebih lanjut.</li> 
+        <li>Klik tombol <strong>Apply</strong>. Unity menghasilkan UV lightmap ke saluran <a href="../ScriptReference/Mesh-uv2.html">Mesh.uv2</a>.</li> 
+       </ol> 
+       <p><a name="Settings"></a></p> 
+       <h3>Pengaturan generasi UV lightmap otomatis</h3> 
+       <p>Ini adalah pengaturan yang muncul di tab <strong>Model</strong> dari <a href="class-FBXImporter.html">Model Pengaturan impor</a>, ketika Anda mengaktifkan <strong>Generate Lightmap UVs</strong>.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Property:</strong></th> 
+          <th style="text-align:left;"><strong>Function:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Hard Angle</strong></td> 
+          <td style="text-align:left;">Sudut antara segitiga tetangga (dalam derajat) setelah Unity menganggapnya tepi keras dan menciptakan jahitan. Anda dapat mengatur ini ke nilai antara 0 dan 180. Ini diatur ke 88 derajat secara default.<br><br> Jika Anda mengatur ini ke 180 derajat, Unity mempertimbangkan semua tepi halus, yang realistis untuk model organik. Nilai default (88 derajat) realistis untuk model mekanis.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Angle Error</strong></td> 
+          <td style="text-align:left;">Penyimpangan maksimum sudut UV dari sudut dalam geometri sumber (sebagai persentase dari 0–100). Ini diatur ke 8% secara default.<br><br> Ini mengontrol seberapa berbeda segitiga di ruang UV dapat menjadi segitiga dalam geometri asli. Biasanya ini harus cukup rendah, untuk menghindari artefak saat menerapkan lightmap.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Area Error</strong></td> 
+          <td style="text-align:left;">Penyimpangan maksimum dari daerah UV dari daerah dalam geometri sumber (sebagai persentase dari 0–100). Ini diatur hingga 15% secara default.<br><br> Kontrol ini bagaimana baik Unity melestarikan daerah segitiga relatif. Meningkatkan nilai memungkinkan Anda untuk membuat grafik yang lebih sedikit. Namun, meningkatkan nilai dapat mengubah resolusi segitiga, jadi pastikan distorsi yang dihasilkan tidak memburuk kualitas lightmap.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Margin Method</strong></td> 
+          <td style="text-align:left;">Apakah Anda menentukan <a href="#PackMargin">Paket Margin</a> secara manual, atau apakah Unity secara otomatis menghitungnya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Manual</strong></td> 
+          <td style="text-align:left;">Anda menentukan <a href="#PackMargin">Paket Margin</a> secara manual.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Calculate</strong></td> 
+          <td style="text-align:left;">Berdasarkan resolusi lightmap yang diharapkan dan skala objek, Unity menghitung <a href="#PackMargin">Paket Margin</a> cukup besar untuk menghindari tumpang tindih UV.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Pack Margin</strong></td> 
+          <td style="text-align:left;">Margin antara grafik tetangga (dalam pixel), asumsi Mesh mengambil seluruh 1024x1024 lightmap. Anda dapat mengatur ini ke nilai antara 1 dan 64. Nilai yang lebih besar meningkatkan margin, tetapi juga meningkatkan jumlah ruang kebutuhan grafik. Ini diatur ke 4 piksel secara default.<br><br> Untuk informasi lebih lanjut, lihat <a href="#PackMargin">Paket Margin</a>.<br><br> Properti ini hanya terlihat ketika <strong>Margin Method</strong> diatur ke <strong>Manual</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Min Lightmap Resolution</strong></td> 
+          <td style="text-align:left;">Resolusi lightmap minimum (dalam texels per unit) dari MeshRenderers yang menggunakan Mesh ini, di semua Adegan. Resolusi lightmap dari MeshRenderer adalah kombinasi dari properti <code>Scale in Lightmap</code> MeshRenderer, dan properti <code>Lightmap Resolution</code> dari <a href="class-LightingSettings.html">Aset Pengaturan Pencahayaan</a> dari Adegan itu muncul di.<br><br> Untuk informasi lebih lanjut, lihat <a href="#MinResolutionAndScale">Resolusi Min Lightmap dan Skala Objek Min</a>.<br><br>Unity menggunakan informasi ini untuk menghitung paket margin. Properti ini hanya terlihat ketika <strong>Margin Method</strong> diatur ke <strong>Calculate</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Min Object Scale</strong></td> 
+          <td style="text-align:left;">Skala transformasi minimal yang dari GameObjects yang menggunakan Mesh ini, di semua Adegan.<br><br> Untuk informasi lebih lanjut, lihat <a href="#MinResolutionAndScale">Resolusi Min Lightmap dan Skala Objek Min</a>.<br><br>Unity menggunakan informasi ini untuk menghitung paket margin. Properti ini hanya terlihat ketika <strong>Margin Method</strong> diatur ke <strong>Calculate</strong>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="troubleshooting"></a></p> 
+       <h3>Pemecahan Masalah otomatis dihasilkan lightmap UVs</h3> 
+       <p><a name="PackMargin"></a></p> 
+       <h4>Paket Margin</h4> 
+       <p>Untuk memungkinkan penyaringan, lightmap berisi informasi pencahayaan di texels dekat perbatasan grafik, jadi selalu mencakup beberapa margin antara grafik untuk menghindari pendarahan cahaya saat menerapkan lightmap.</p> 
+       <p>Resolusi lightmap mendefinisikan resolusi texel peta cahaya Anda. <span class="tooltip"><strong>Lightmappers</strong><span class="tooltiptext">Alat dalam Unity yang bakes lightmap sesuai dengan pengaturan lampu dan geometri di tempat kejadian Anda. <a class="tooltipMoreInfoLink" href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Lightmapper">Glossary</a></span></span></span> dilate beberapa texels grafik di lightmap untuk menghindari tepi hitam, sehingga grafik UV dari Anda Mesh perlu setidaknya dua texels penuh terpisah dari satu sama lain untuk menghindari pendarahan cahaya. Gunakan pengaturan <strong>Pack Margin</strong> untuk memastikan Anda memiliki margin yang cukup antara grafik UV geometri Anda.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LightingGiUvs-GeneratingLightmappingUVs-1.jpg" alt=""> 
+       </figure> 
+       <p>Di ruang UV lightmap, bantalan antara grafik harus setidaknya dua texel penuh untuk menghindari perdarahan sinar UV dan tidak disengaja. Dalam gambar ini, ruang hitam mewakili ruang antara grafik.</p> 
+       <p><a name="MinResolutionAndScale"></a></p> 
+       <h4>Resolusi Min Lightmap dan Skala Objek Min</h4> 
+       <p>Menempatkan grafik UV terlalu dekat bersama-sama dapat menyebabkan <a href="ProgressiveLightmapper-UVOverlap.html">pendarahan cross-chart texel</a> di peta lampu akhir. Menempatkan grafik terlalu jauh dari setiap memori limbah lainnya. Margin kemasan yang ideal dari objek tergantung pada berapa banyak texels lightmap dialokasikan untuk itu.</p> 
+       <p>Jumlah texels yang digunakan Unity untuk MeshRenderer tergantung pada resolusi lightmap MeshRenderer dan skala transformasi. Untuk menghitung margin yang baik, Kesatuan perlu mengetahui nilai minimum yang diharapkan untuk properti ini.</p> 
+       <p>Resolusi lightmap MeshRenderer adalah kombinasi dari properti <code>Lightmap Resolution</code> dari <a class="tooltipMoreInfoLink" href="class-LightingSettings.html">Aset Pengaturan Pencahayaan</a> untuk <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> yang muncul MeshRenderer, dan properti <code>Scale in Lightmap</code> dari <a href="class-MeshRenderer.html">MeshRenderer</a>. Perhatikan bahwa ini berarti bahwa MeshRenderer yang sama dapat memiliki resolusi lightmap yang berbeda di Adegan yang berbeda.</p> 
+       <p>Anda dapat menggunakan Inspektur untuk melihat resolusi lightmap dari MeshRenderer dalam adegan tertentu:</p> 
+       <ol> 
+        <li>Pada <span class="tooltip"><strong>Scene view</strong><span class="tooltiptext">Tampilan interaktif ke dunia yang Anda buat. Anda menggunakan Adegan Lihat untuk memilih dan posisi pemandangan, karakter, kamera, lampu, dan semua jenis lain dari Game Object. <a class="tooltipMoreInfoLink" href="UsingTheSceneView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#SceneView">Glossary</a></span></span></span> atau Hierarchy, pilih <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> yang memiliki komponen MeshRenderer.</li> 
+        <li>Dalam Inspektur, arahkan ke bagian <strong>Lightmapping</strong> komponen MeshRenderer.</li> 
+        <li>Buka lipatan <strong>Baked Lightmap</strong>. Unity menampilkan resolusi lightmap MeshRenderer di peta cahaya panggang dengan label <strong>Lightmap Resolution</strong>, dan skala transformasinya di peta lampu panggang dengan label <strong>Lightmap Object Scale</strong>.</li> 
+       </ol> 
+       <h4>Distorsi sudut</h4> 
+       <p>screenshot berikut menunjukkan resolusi yang sama, tetapi dengan UV yang berbeda. Gambar pertama memiliki <strong>Angle Error</strong> tinggi, dan hasilnya mengandung artefak yang tidak diinginkan. Gambar kedua memiliki default <strong>Angle Error</strong> (8%). Dalam Mesh dengan lebih banyak segitiga, distorsi sudut dapat secara signifikan mendistorsi bentuk.</p> 
+       <p> <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LightingGiUvs-GeneratingLightmappingUVs-2.png" alt=""><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LightingGiUvs-GeneratingLightmappingUVs-3.jpg" alt=""> </p> 
+       <h4>Area distorsi</h4> 
+       <p>Dalam gambar di bawah ini, dua lampu sorot dengan parameter yang sama menyala sisi silinder. Sisi kanan silinder memiliki nilai <strong>Area Error</strong> yang lebih tinggi, yang mendistorsi segitiga dan mengarah ke resolusi yang lebih rendah, menciptakan artefak dalam cahaya.</p> 
+       <p> <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LightingGiUvs-GeneratingLightmappingUVs-4.png" alt=""><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LightingGiUvs-GeneratingLightmappingUVs-5.jpg" alt=""> </p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="LightingGiUvs.html"></a></span> 
+         <div class="tip">
+           Cahayamap UVs pengenalan 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="LightingGiUvs-visualizing.html"></a></span> 
+         <div class="tip">
+           Visualisasi UV peta cahaya 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

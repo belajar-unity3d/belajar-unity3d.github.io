@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Koleksi data SDK UDP</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityServices.html">Layanan Unity</a></li> 
+         <li><a href="udp.html">Portal Distribusi Unity</a></li> 
+         <li><a href="udp-reference.html">Referensi UDP</a></li> 
+         <li>UDP SDK</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="udp-api.html"></a></span> 
+          <div class="tip">
+            API 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="udp-troubleshooting.html"></a></span> 
+          <div class="tip">
+            Pemecahan masalah UDP 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>UDP SDK</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Untuk berbagai toko aplikasi, penerbit aplikasi harus menentukan data pengumpulan aplikasi mereka, termasuk data yang dikumpulkan oleh SDK pihak ketiga terintegrasi seperti UDP. Untuk kenyamanan Anda, UDP menyediakan informasi tentang praktik pengumpulan data di bawah ini.</p> 
+       <p> <strong>Important</strong>: Pengungkapan data di bawah ini hanya untuk SDK UDP. Anda juga bertanggung jawab untuk memberikan pengungkapan tambahan untuk aplikasi Anda, termasuk SDK pihak ketiga lainnya yang digunakan dalam aplikasi Anda.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Contact info data</strong></th> 
+          <th style="text-align:left;"><strong>Collected?</strong></th> 
+          <th style="text-align:left;"><strong>Linked to user?</strong></th> 
+          <th style="text-align:left;"><strong>Purpose</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Name</strong><br> Misalnya, nama pertama atau terakhir.</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Email Address</strong><br>Including, tetapi tidak terbatas pada alamat email yang telah disebutkan.</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Phone Number</strong><br>Including, tetapi tidak terbatas pada nomor telepon yang telah ada.</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Physical Address</strong><br>Such sebagai alamat rumah, alamat fisik, atau alamat surat.</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Other User Contact Info</strong><br> Setiap informasi lain yang dapat digunakan untuk menghubungi pengguna di luar aplikasi.</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Health and Fitness data</strong></th> 
+          <th style="text-align:left;"><strong>Collected?</strong></th> 
+          <th style="text-align:left;"><strong>Linked to user?</strong></th> 
+          <th style="text-align:left;"><strong>Purpose</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Health</strong><br>Health dan data medis, termasuk tetapi tidak terbatas pada dari API Rekam Kesehatan Klinis, HealthKit API, GerakanDisorderAPIs, atau penelitian subjek manusia terkait kesehatan atau data medis lainnya.</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Fitness</strong><br>Fitness dan data latihan, termasuk namun tidak terbatas pada API Gerak dan Kebugaran.</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Financial data</strong></th> 
+          <th style="text-align:left;"><strong>Collected?</strong></th> 
+          <th style="text-align:left;"><strong>Linked to user?</strong></th> 
+          <th style="text-align:left;"><strong>Purpose</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Payment Info</strong><br>Such sebagai bentuk pembayaran, nomor kartu pembayaran, atau nomor rekening bank.</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Credit Info</strong><br>Such sebagai skor kredit.</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Other Financial Info</strong><br>Such sebagai gaji, pendapatan, aset, utang, atau informasi keuangan lainnya.</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Location data</strong></th> 
+          <th style="text-align:left;"><strong>Collected?</strong></th> 
+          <th style="text-align:left;"><strong>Linked to user?</strong></th> 
+          <th style="text-align:left;"><strong>Purpose</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Precise Location</strong><br>Informasi yang menggambarkan lokasi pengguna atau perangkat dengan resolusi yang sama atau lebih besar sebagai lintang dan longitude dengan tiga atau lebih tempat desimal.</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Coarse Location</strong><br>Informasi yang menggambarkan lokasi pengguna atau perangkat dengan resolusi yang lebih rendah daripada ketangguhan dan longitude dengan tiga atau lebih tempat desimal, seperti layanan lokasi perkiraan.</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+          <td style="text-align:left;">Analisa<br><strong>Note</strong>: Sebagai contoh, Unity mengumpulkan informasi tingkat negara untuk analitik.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Sensitive data</strong></th> 
+          <th style="text-align:left;"><strong>Collected?</strong></th> 
+          <th style="text-align:left;"><strong>Linked to user?</strong></th> 
+          <th style="text-align:left;"><strong>Purpose</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Sensitive Info</strong><br>Such sebagai data ras atau etnis, orientasi seksual, kehamilan atau informasi persalinan, kecacatan, kepercayaan agama atau filosofis, keanggotaan serikat perdagangan, pendapat politik, informasi genetik, atau data biometrik.</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Contact data</strong></th> 
+          <th style="text-align:left;"><strong>Collected?</strong></th> 
+          <th style="text-align:left;"><strong>Linked to user?</strong></th> 
+          <th style="text-align:left;"><strong>Purpose</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Contacts</strong><br>Such sebagai daftar kontak di telepon pengguna, buku alamat, atau grafik sosial.</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>User content</strong></th> 
+          <th style="text-align:left;"><strong>Collected?</strong></th> 
+          <th style="text-align:left;"><strong>Linked to user?</strong></th> 
+          <th style="text-align:left;"><strong>Purpose</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Emails or Text Messages</strong><br>Including subjek baris, sender, penerima, dan isi email atau pesan.</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Photos or Videos</strong><br> Foto atau video pengguna.</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Audio Data</strong><br> Suara pengguna atau rekaman suara.</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Customer Support</strong><br> Data yang dihasilkan oleh pengguna selama permintaan dukungan pelanggan.</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+          <td style="text-align:left;">Tidak berlaku.<br> (Player tidak membuat permintaan CS ke UDP)</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Other User Content</strong><br> Setiap konten yang dihasilkan pengguna lainnya.</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Browsing data</strong></th> 
+          <th style="text-align:left;"><strong>Collected?</strong></th> 
+          <th style="text-align:left;"><strong>Linked to user?</strong></th> 
+          <th style="text-align:left;"><strong>Purpose</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Browsing History</strong><br>Informasi tentang konten pengguna telah melihat bahwa bukan bagian dari aplikasi, seperti situs web.</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Search data</strong></th> 
+          <th style="text-align:left;"><strong>Collected?</strong></th> 
+          <th style="text-align:left;"><strong>Linked to user?</strong></th> 
+          <th style="text-align:left;"><strong>Purpose</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Search History</strong><br>Informasi tentang pencarian yang dilakukan di aplikasi.</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Identifier data</strong></th> 
+          <th style="text-align:left;"><strong>Collected?</strong></th> 
+          <th style="text-align:left;"><strong>Linked to user?</strong></th> 
+          <th style="text-align:left;"><strong>Purpose</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>User ID</strong><br>Such sebagai nama layar, pegangan, ID akun, ID pengguna yang ditugaskan, nomor pelanggan, atau ID tingkat pengguna lainnya yang dapat digunakan untuk mengidentifikasi pengguna atau akun tertentu.</td> 
+          <td style="text-align:left;">Ya (tergantung di mana menyimpan permainan dibongkar untuk)</td> 
+          <td style="text-align:left;">Terhubung ke pengguna</td> 
+          <td style="text-align:left;">Fungsional Aplikasi<br> Untuk toko UDP tertentu, UDP akan mengumpulkan User ID (dibalikkan oleh metode login SDK toko) dan menyimpannya untuk Fungsional Aplikasi lebih lanjut. Untuk toko lain metode login tidak diperlukan dan UDP tidak mengumpulkan data tersebut.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Device ID</strong><br>Such sebagai pengidentifikasi iklan perangkat, atau ID tingkat perangkat lainnya.</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Terhubung ke pengguna</td> 
+          <td style="text-align:left;">Analytics</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Purchase data</strong></th> 
+          <th style="text-align:left;"><strong>Collected?</strong></th> 
+          <th style="text-align:left;"><strong>Linked to user?</strong></th> 
+          <th style="text-align:left;"><strong>Purpose</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Purchase History</strong><br> Pembelian atau kemungkinan pembelian akun.</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Terhubung ke pengguna</td> 
+          <td style="text-align:left;">Pelacakan dan analytics<br><strong>Note</strong>: Sebagai contoh, Unity mengumpulkan informasi pembelian dalam aplikasi untuk memverifikasi pembelian. Tapi tidak menggunakannya untuk menganalisis kemungkinan pembelian pengguna tertentu</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Usage data</strong></th> 
+          <th style="text-align:left;"><strong>Collected?</strong></th> 
+          <th style="text-align:left;"><strong>Linked to user?</strong></th> 
+          <th style="text-align:left;"><strong>Purpose</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Product Interaction</strong><br>Such sebagai peluncuran aplikasi, keran, klik, informasi gulir, data mendengarkan musik, pandangan video, tempat disimpan dalam permainan, video, atau lagu, atau informasi lainnya tentang bagaimana pengguna berinteraksi dengan aplikasi.</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+          <td style="text-align:left;">Analytics</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Advertising Data</strong><br>Such sebagai informasi tentang iklan pengguna telah melihat.</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Other Usage Data</strong><br> Setiap data lain tentang aktivitas pengguna di aplikasi.</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Diagnostic data</strong></th> 
+          <th style="text-align:left;"><strong>Collected?</strong></th> 
+          <th style="text-align:left;"><strong>Linked to user?</strong></th> 
+          <th style="text-align:left;"><strong>Purpose</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Crash Data</strong><br>Such sebagai log kecelakaan.</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Performance Data</strong><br>Such sebagai waktu peluncuran, tingkat hang, atau penggunaan energi.</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Other Diagnostic Data</strong><br> Setiap data lain yang dikumpulkan untuk tujuan mengukur diagnostik teknis yang terkait dengan aplikasi.</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Other data</strong></th> 
+          <th style="text-align:left;"><strong>Collected?</strong></th> 
+          <th style="text-align:left;"><strong>Linked to user?</strong></th> 
+          <th style="text-align:left;"><strong>Purpose</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Other Data Types</strong><br> Setiap jenis data lain yang tidak disebutkan.</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Tidak berlaku</td> 
+          <td style="text-align:left;">Analisa<br><strong>Note</strong>: Misalnya, Unity mengumpulkan data seperti bahasa perangkat, membuat, model, ukuran layar, dan jenis koneksi, untuk dapat memahami distribusi keseluruhan perangkat dalam saluran toko</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="udp-api.html"></a></span> 
+         <div class="tip">
+           API 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="udp-troubleshooting.html"></a></span> 
+         <div class="tip">
+           Pemecahan masalah UDP 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

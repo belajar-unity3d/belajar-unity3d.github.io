@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Bagaimana cara mendapatkan, mengatur, dan mengkonfigurasi pipa render aktif</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="render-pipelines.html">Pipa render</a></li> 
+         <li>Bagaimana cara mendapatkan, mengatur, dan mengkonfigurasi pipa render aktif</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="render-pipelines-feature-comparison.html"></a></span> 
+          <div class="tip">
+            Perbandingan fitur pipa Render 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="BestPracticeLightingPipelines.html"></a></span> 
+          <div class="tip">
+            Memilih dan mengkonfigurasi solusi pipa dan pencahayaan render 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Bagaimana cara mendapatkan, mengatur, dan mengkonfigurasi pipa render aktif</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Halaman ini berisi informasi tentang cara mendapatkan, mengatur, dan mengkonfigurasi <span class="tooltip"><strong>render pipeline</strong><span class="tooltiptext">Rangkaian operasi yang mengambil isi dari Adegan, dan menampilkannya di layar. Unity memungkinkan Anda memilih dari pipa render yang dibangun sebelumnya, atau menulis sendiri. <a class="tooltipMoreInfoLink" href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span> yang Unity saat ini digunakan. Pipa render yang Unity saat ini menggunakan disebut pipa render aktif.</p> 
+       <h2>Overview</h2> 
+       <p>Untuk membuat konten, Unity dapat menggunakan Pipeline Render Built-in atau pipa render berdasarkan <a href="ScriptableRenderPipeline.html">API Reference</a> (SRP), yang mencakup Pipa Render Universal (URP) dan Pipa Render Definisi Tinggi (HDRP).</p> 
+       <p>Untuk menentukan penggunaan Render Pipeline Unity yang Scriptable, Anda menggunakan Aset Pipeline Render. Aset Pipeline Render memberitahu Unity yang digunakan SRP, dan bagaimana mengkonfigurasinya. Jika Anda tidak menentukan Aset Pipa Render, Unity menggunakan Pipa Render Built-in.</p> 
+       <p>Anda dapat membuat beberapa Aset Pipa Render yang menggunakan pipa render yang sama, tetapi dengan konfigurasi yang berbeda; misalnya, Anda dapat menggunakan Aset Pipa Render yang berbeda untuk tingkat kualitas perangkat keras yang berbeda. Untuk pengenalan umum untuk Render Pipeline Assets, lihat <a href="scriptable-render-pipeline-introduction.html">Scriptable Render Pipa pengenalan</a>. Untuk informasi Aset Render Pipeline onURP, lihat, dan untuk Aset Pipeline Render HDRP, lihat.</p> 
+       <p>Segera setelah Anda mengubah pipa render aktif di Editor Unity atau pada runtime, Unity menggunakan pipa render aktif baru untuk membuat konten. Jika Anda berada di Editor Unity, ini termasuk tampilan Game, tampilan <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Scene">Glossary</a></span></span></span>, dan pratinjau untuk Bahan di panel Proyek dan <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>.</p> 
+       <p>Ketika Anda mengubah pipa render aktif, Anda harus memastikan bahwa aset dan kode dalam proyek Anda kompatibel dengan pipa render baru; jika tidak, Anda mungkin mengalami kesalahan atau efek visual yang tidak diinginkan.</p> 
+       <p><a name="determine-the-active-render-pipeline"></a></p> 
+       <h2>Menentukan pipa render aktif</h2> 
+       <p>Pengaturan di kedua <a href="class-GraphicsSettings.html">Pengaturan Grafik</a> dan <a href="class-QualitySettings.html">Pengaturan kualitas</a> menentukan pipa render aktif. Dalam Pengaturan Grafik, Anda mengkonfigurasi pipa render yang digunakan Unity secara default. Dalam Pengaturan Kualitas, Anda dapat menimpa pipa render default untuk tingkat kualitas yang diberikan.</p> 
+       <p>Untuk mendapatkan atau mengatur pipa render default, gunakan Pengaturan Grafik &gt; <strong>Scriptable Render Pipeline Setting</strong> (atau API setara, <a href="../ScriptReference/Rendering.GraphicsSettings-renderPipelineAsset.html">Grafik</a>). Untuk mendapatkan atau mengatur pipa render yang menimpa default untuk tingkat kualitas tertentu, Pengaturan Kualitas &gt; <strong>Render Pipeline</strong> (atau API setara, <a href="../ScriptReference/QualitySettings-renderPipeline.html">QualitySettings.renderPipeline</a>).</p> 
+       <p>Unity menentukan pipa render aktif seperti ini:</p> 
+       <ul> 
+        <li>Jika tingkat Pengaturan Kualitas saat ini &gt; <strong>Render Pipeline</strong> merujuk Aset Pipa Render, Unity menggunakan nilai tersebut.</li> 
+        <li>Artikelnr: 
+         <ul> 
+          <li>Jika Pengaturan Grafik &gt; <strong>Scriptable Render Pipeline Setting</strong> merujuk Aset Render Pipeline, Unity menggunakan nilai itu.</li> 
+          <li>Jika tidak, Unity menggunakan Pipeline Render Built-in.</li> 
+         </ul> </li> 
+       </ul> 
+       <p><a name="set-active-render-pipeline-editor"></a></p> 
+       <h2>Cara mendapatkan dan mengatur pipa render aktif di UI Editor</h2> 
+       <h3>Mendapatkan pipa render aktif</h3> 
+       <p>Untuk mendapatkan pipa render aktif di Editor <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span>, Anda harus memeriksa jendela Pengaturan Grafik dan Pengaturan Kualitas. Untuk informasi tentang cara menggunakan nilai-nilai ini untuk menentukan pipa render aktif, lihat <a href="#determine-the-active-render-pipeline">Menentukan pipa render aktif</a>.</p> 
+       <h3>Mengaktifkan Pipa Render Built-in</h3> 
+       <p>Untuk mengatur pipa render aktif ke Pipeline Render Built-in, menghapus Aset Pipeline Render dari Pengaturan Grafik dan Pengaturan Kualitas.</p> 
+       <p>Untuk melakukan ini:</p> 
+       <ol> 
+        <li>Pilih <strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Quality</strong>.</li> 
+        <li>Untuk setiap tingkat kualitas, jika Aset Render Pipeline ditugaskan ke bidang <strong>Render Pipeline</strong>, unassign it.</li> 
+        <li>Pilih <strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Graphics</strong>.</li> 
+        <li>Jika Aset Pipeline Render ditugaskan ke bidang <strong>Scriptable Render Pipeline Setting</strong>, menetapkannya.</li> 
+       </ol> 
+       <h3>Mengaktifkan URP, HDRP, atau pipa render kustom berdasarkan SRP</h3> 
+       <p>Untuk mengatur pipa render aktif ke satu yang didasarkan pada SRP, beri tahu Unity yang Render Pipeline Asset untuk digunakan sebagai pipa render aktif default, dan opsional yang Render Pipeline Assets untuk digunakan untuk setiap tingkat kualitas.</p> 
+       <p>Untuk melakukan ini:</p> 
+       <ol> 
+        <li>Dalam folder Proyek Anda, cari Aset Pipa Render (s) yang ingin Anda gunakan.</li> 
+        <li>Mengatur pipa render default, yang digunakan Unity ketika tidak ada override untuk tingkat kualitas tertentu. Jika Anda tidak mengatur ini, Unity menggunakan Pipeline Render Built-in ketika tidak ada override berlaku. 
+         <ol> 
+          <li>Pilih <strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Graphics</strong>.</li> 
+          <li>Seret Aset Pipeline Render ke bidang <strong>Scriptable Render Pipeline Setting</strong>.</li> 
+         </ol> </li> 
+        <li> <strong>Optional</strong>: Set override Render Pipeline Assets untuk tingkat kualitas yang berbeda. 
+         <ol> 
+          <li>Pilih <strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Quality</strong>.</li> 
+          <li>Seret Aset Pipeline Render ke bidang <strong>Render Pipeline</strong>.</li> 
+         </ol> </li> 
+       </ol> 
+       <p><a name="get-set-active-render-pipeline-scripts"></a></p> 
+       <h2>Bagaimana cara mendapatkan dan mengatur pipa render aktif dalam skrip C#</h2> 
+       <p>Dalam C # <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span>, Anda bisa mendapatkan dan mengatur pipa render aktif dan menerima callback ketika perubahan pipa render aktif. Anda dapat melakukan ini dalam Edit Mode atau Play Mode di Editor Unity, atau pada runtime di aplikasi Anda.</p> 
+       <p>Untuk melakukan ini, gunakan API berikut:</p> 
+       <ul> 
+        <li>Ada beberapa cara untuk mendapatkan pipa render aktif: 
+         <ul> 
+          <li>Untuk mendapatkan referensi Aset Pipeline Render yang mendefinisikan pipa render aktif, gunakan <a href="../ScriptReference/Rendering.GraphicsSettings.currentRenderPipeline.html">GrafikSettings.currentRenderPipeline</a>.</li> 
+          <li>Untuk mendapatkan referensi Aset Pipeline Render yang mendefinisikan pipa render aktif dan menentukan apakah Unity menggunakan nilai default atau nilai override, mendapatkan nilai <a href="../ScriptReference/Rendering.GraphicsSettings.defaultRenderPipeline.html">Grafik</a> dan <a href="../ScriptReference/QualitySettings.renderPipeline.html">QualitySettings.renderPipeline</a>. Untuk informasi tentang cara menggunakan nilai-nilai ini, lihat <a href="#determine-the-active-render-pipeline">Menentukan pipa render aktif</a> atau sampel kode berikut.</li> 
+          <li>Untuk mendapatkan instance <a href="../ScriptReference/Rendering.RenderPipeline.html">RenderPipeline</a> untuk pipa render aktif, gunakan <a href="../ScriptReference/RenderPipelineManager.currentPipeline.html">RenderPipelineManager.currentPipeline</a>. <strong>Note:</strong> Unity memperbarui properti ini hanya setelah itu telah membuat setidaknya satu bingkai dengan pipa render aktif.</li> 
+         </ul> </li> 
+        <li>Untuk mengatur pipa render aktif, atur nilai <a href="../ScriptReference/Rendering.GraphicsSettings.defaultRenderPipeline.html">Grafik</a> dan <a href="../ScriptReference/QualitySettings.renderPipeline.html">QualitySettings.renderPipeline</a>. Untuk informasi tentang cara menggunakan nilai-nilai ini, lihat <a href="#determine-the-active-render-pipeline">Menentukan pipa render aktif</a> atau sampel kode berikut.</li> 
+        <li>Untuk mendeteksi dan mengeksekusi kode ketika jenis perubahan pipa render aktif, gunakan <a href="../ScriptReference/Rendering.RenderPipeiineManager.activeRenderPipelineTypeChanged.html">RenderPipelineManager.activeRenderPipelineTypeChanged</a>.</li> 
+       </ul> 
+       <p>Kode contoh berikut menunjukkan cara menggunakan API ini:</p> 
+       <pre><code>using UnityEngine;
+using UnityEngine.Rendering;
+ 
+public class ActiveRenderPipelineExample : MonoBehaviour
+{
+    // In the Inspector, assign a Render Pipeline Asset to each of these fields
+    public RenderPipelineAsset defaultRenderPipelineAsset;
+    public RenderPipelineAsset overrideRenderPipelineAsset;
+ 
+    void Start()
+    {
+        GraphicsSettings.defaultRenderPipeline = defaultRenderPipelineAsset;
+        QualitySettings.renderPipeline = overrideRenderPipelineAsset;
+
+        DisplayCurrentRenderPipeline();
+    }
+
+    void Update()
+    {
+        // When the user presses the left shift key, switch the default render pipeline
+        if (Input.GetKeyDown(KeyCode.LeftShift)) {
+            SwitchDefaultRenderPipeline();
+            DisplayCurrentRenderPipeline();
+        }
+        // When the user presses the right shift key, switch the override render pipeline
+        else if (Input.GetKeyDown(KeyCode.RightShift)) {
+            SwitchOverrideRenderPipeline();
+            DisplayCurrentRenderPipeline();
+        }
+    }
+
+    // Switch the default render pipeline between null,
+    // and the render pipeline defined in defaultRenderPipelineAsset
+    void SwitchDefaultRenderPipeline()
+    {
+        if (GraphicsSettings.defaultRenderPipeline == defaultRenderPipelineAsset)
+        {
+            GraphicsSettings.defaultRenderPipeline = null;
+        }
+        else
+        {
+            GraphicsSettings.defaultRenderPipeline = defaultRenderPipelineAsset;
+        }
+    }
+
+    // Switch the override render pipeline between null,
+    // and the render pipeline defined in overrideRenderPipelineAsset
+    void SwitchOverrideRenderPipeline()
+    {
+        if (QualitySettings.renderPipeline == overrideRenderPipelineAsset)
+        {
+            QualitySettings.renderPipeline = null;
+        }
+        else
+        {
+           QualitySettings.renderPipeline = overrideRenderPipelineAsset;
+        }
+    }
+
+    // Print the current render pipeline information to the console
+    void DisplayCurrentRenderPipeline()
+    {
+        // GraphicsSettings.defaultRenderPipeline determines the default render pipeline
+        // If it is null, the default is the Built-in Render Pipeline
+        if (GraphicsSettings.defaultRenderPipeline != null)
+        {
+            Debug.Log("The default render pipeline is defined by " + GraphicsSettings.defaultRenderPipeline.name);
+        }
+        else
+        {
+            Debug.Log("The default render pipeline is the Built-in Render Pipeline");
+        }
+
+        // QualitySettings.renderPipeline determines the override render pipeline for the current quality level
+        // If it is null, no override exists for the current quality level
+        if (QualitySettings.renderPipeline != null)
+        {
+            Debug.Log("The override render pipeline for the current quality level is defined by " + QualitySettings.renderPipeline.name);
+        }
+        else
+        {
+            Debug.Log("No override render pipeline exists for the current quality level");
+        }
+
+        // If an override render pipeline is defined, Unity uses that
+        // Otherwise, it falls back to the default value
+        if (QualitySettings.renderPipeline != null)
+        {
+            Debug.Log("The active render pipeline is the override render pipeline");
+        }
+        else
+        {
+            Debug.Log("The active render pipeline is the default render pipeline");
+        }
+
+        // To get a reference to the Render Pipeline Asset that defines the active render pipeline,
+        // without knowing if it is the default or an override, use GraphicsSettings.currentRenderPipeline
+        if (GraphicsSettings.currentRenderPipeline != null)
+        {
+            Debug.Log("The active render pipeline is defined by " +GraphicsSettings.currentRenderPipeline.name);
+        }
+        else
+        {
+            Debug.Log("The active render pipeline is the Built-in Render Pipeline");
+        }
+    }
+}
+</code></pre> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="render-pipelines-feature-comparison.html"></a></span> 
+         <div class="tip">
+           Perbandingan fitur pipa Render 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="BestPracticeLightingPipelines.html"></a></span> 
+         <div class="tip">
+           Memilih dan mengkonfigurasi solusi pipa dan pencahayaan render 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

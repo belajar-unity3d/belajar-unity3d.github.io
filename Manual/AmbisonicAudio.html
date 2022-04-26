@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Audio Ambisonic</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Audio.html">Audio</a></li> 
+         <li>Audio di Ambisonic</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="AudioProfiler.html"></a></span> 
+          <div class="tip">
+            Profiler Audio 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="class-AudioClip.html"></a></span> 
+          <div class="tip">
+            Audio Klip 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Audio di Ambisonic</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Ambisonics adalah jenis audio yang menyediakan representasi suara yang dapat benar-benar mengelilingi pendengar. Mereka dapat menyediakan audio <span class="tooltip"><strong>skybox</strong><span class="tooltiptext">Jenis khusus Bahan yang digunakan untuk mewakili langit. Biasanya enam sisi. <a class="tooltipMoreInfoLink" href="class-Skybox.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Skybox">Glossary</a></span></span></span> untuk suara ambient jauh, dan sangat berguna untuk video dan aplikasi 360 derajat.</p> 
+       <p>Ambisonics disimpan dalam format multi-channel. Alih-alih memetakan setiap saluran ke speaker tertentu, ambisonics mewakili soundfield dengan cara yang lebih umum. Anda dapat memutar soundfield berdasarkan orientasi listener (seperti rotasi kepala pengguna di VR). Anda juga dapat mendekode soundfield ke dalam format yang sesuai dengan setup speaker.</p> 
+       <h2>Memilih decoder audio ambisonic</h2> 
+       <p>Untuk memilih decoder audio ambisonic di proyek Anda, buka pengaturan <a href="class-AudioManager.html">Audio</a> proyek Anda (menu: <strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Audio</strong>). Pilih <strong>Ambisonic Decoder Plugin</strong> dari daftar decoder yang tersedia dalam proyek. Tidak ada decoders bawaan yang disertakan dengan Unity, tetapi beberapa produsen perangkat keras VR menyediakan mereka dalam SDK audio mereka untuk Unity. Periksa dokumentasi platform target Anda untuk belajar apakah ini tersedia untuk proyek Anda.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AmbisonicAudioSettings.png" alt="Ambisonic options in the Audio settings"> 
+        <figcaption>
+          Opsi Ambisonic dalam pengaturan Audio 
+        </figcaption> 
+       </figure> 
+       <h2>Mengimpor klip audio ambisonic</h2> 
+       <p>Untuk mengimpor file WAV ambisonic <span class="tooltip"><strong>audio clip</strong><span class="tooltiptext">Sebuah wadah untuk data audio dalam Unity. Unity mendukung aset audio mono, stereo dan multichannel (hingga delapan saluran). Unity dapat mengimpor .aif, .wav, .mp3, dan format file audio .ogg, dan .xm, .mod, .it, dan format modul pelacak .s3m. <a class="tooltipMoreInfoLink" href="class-AudioClip.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#AudioClip">Glossary</a></span></span></span>, impor file WAV multi-channel dengan pemesanan komponen ACN, dan normalisasi SN3D. Di jendela <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span> untuk klip audio, memungkinkan <strong>Ambisonic</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AmbisonicAudioClipInspector.png" alt="The Ambisonic option in the audio clip inspector"> 
+        <figcaption>
+          Opsi Ambisonic dalam inspektur klip audio 
+        </figcaption> 
+       </figure> 
+       <h2>Bermain klip audio ambisonic melalui Sumber Audio</h2> 
+       <p>Untuk memainkan klip audio ambisonic melalui <span class="tooltip"><strong>Audio Source</strong><span class="tooltiptext">Komponen yang memainkan kembali Klip Audio dalam adegan ke pendengaran audio atau melalui mixer audio. <a class="tooltipMoreInfoLink" href="class-AudioSource.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AudioSource">Glossary</a></span></span></span>:</p> 
+       <ul> 
+        <li>Menetapkan file WAV sebagai <strong>Audio Clip</strong> pada Sumber Audio.</li> 
+        <li>Gunakan opsi <strong>Spatialize</strong>. Ketika Anda memainkan klip audio ambisonic, secara otomatis dikodekan melalui decoder audio ambisonic yang dipilih proyek. Decoder mengubah klip dari format ambisonic ke format speaker yang dipilih proyek. Ini juga sudah menangani spasialisasi sebagai bagian dari operasi decoding ini, berdasarkan orientasi sumber audio dan <span class="tooltip"><strong>audio listener</strong><span class="tooltiptext">Komponen yang bertindak seperti mikrofon, menerima suara dari sumber audio di tempat kejadian dan output ke speaker komputer. <a class="tooltipMoreInfoLink" href="class-AudioListener.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AudioListener">Glossary</a></span></span></span>.</li> 
+       </ul> 
+       <p>Ketika Unity memainkan klip audio ambisonic, itu mendekompresi file, jika perlu, maka decodes untuk mengkonversinya ke mode speaker yang dipilih proyek. Ini kemudian menerapkan efek Sumber Audio.</p> 
+       <p>Sitemap Zona reverb dinonaktifkan untuk klip audio ambisonic.<strong>Note:</strong> Reverb zones are disabled for ambisonic audio clips.</p> 
+       <h2>Perubahan antarmuka plugin audio</h2> 
+       <p>Untuk informasi tentang cara penulis plugin, lihat halaman Manual Pengguna Unity pada <a href="AudioMixerNativeAudioPlugin.html">Android SDK</a> dan <a href="AudioSpatializerSDK.html">Photogallery Login</a>. Anda juga harus mengunduh <a href="https://github.com/Unity-Technologies/NativeAudioPlugins">SDK</a>.</p> 
+       <p>Ada dua perubahan untuk decoder audio ambisonic:<code>AudioPluginInterface.h</code> for ambisonic audio decoders:</p> 
+       <ul> 
+        <li>Bendera definisi efek baru, <code>UnityAudioEffectDefinitionFlags_IsAmbisonicDecoder</code>.</li> 
+        <li>struct data baru, <code>UnityAudioAmbisonicData</code>.</li> 
+       </ul> 
+       <h3>WordPress.org</h3> 
+       <p>Selama fase pemindaian plugin, bendera ini memberi tahu Unity bahwa efek ini adalah decoder ambisonic. Unity kemudian memungkinkan dekoder untuk ditampilkan sebagai pilihan decoder ambisonic di <span class="tooltip"><strong>Project settings</strong><span class="tooltiptext">Pengumpulan yang luas dari pengaturan yang memungkinkan Anda untuk mengkonfigurasi bagaimana Fisika, Audio, Jaringan, Grafik, Input dan banyak bidang lain dari jangkauan proyek Anda. <a class="tooltipMoreInfoLink" href="comp-ManagerGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span> Anda untuk Audio.</p> 
+       <pre><code>definition.flags |= UnityAudioEffectDefinitionFlags_IsAmbisonicDecoder;
+</code></pre> 
+       <h3>Login Database</h3> 
+       <p>Struct <code>UnityAudioAmbisonicData</code> mirip dengan struct <code>UnityAudioSpatializerData</code> yang melewati ke dalam spasializers, tetapi dengan penambahan integer <code>ambisonicOutChannels</code>. Untuk informasi lebih lanjut tentang struktur <code>UnityAudioSpatializerData</code>, lihat <a href="AudioSpatializerSDK.html#SpatializerMetaData">Photogallery API documentation</a>.</p> 
+       <p>Untuk bangunan <code>UnityAudioAmbisonicData</code>, <code>ambisonicOutChannels</code> harus diatur ke jumlah saluran <code>DefaultSpeakerMode</code>. Decoder Ambisonic berjalan di awal pipa audio di Unity, dan <code>ambisonicOutChannels</code> memberi tahu plugin berapa banyak saluran output Unity perlu digunakan.</p> 
+       <p>Jika Anda bermain kembali urutan pertama klip audio ambisonic yang mengandung 4 saluran, dan mode speaker Anda stereo (yang hanya memiliki 2 saluran), proses callback decoder ambisonic di 4 untuk jumlah saluran masuk dan keluar. Bidang <code>ambisonicOutChannels</code> diatur ke 2. Plugin harus output data spasialisasi ke saluran 2 pertama dan nol keluar saluran 2 lainnya.</p> 
+       <p>Kerangka sumber ambisonic Unity dapat mendukung ambisonic order pertama. Antarmuka plugin mencakup informasi untuk mendukung output stereo binaural dan <span class="tooltip"><strong>quad</strong><span class="tooltiptext">Objek primitif yang menyerupai pesawat tetapi tepinya hanya satu unit panjang, hanya menggunakan 4 simpul, dan permukaan berorientasi pada pesawat XY ruang koordinat lokal. <a class="tooltipMoreInfoLink" href="PrimitiveObjects.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Quad">Glossary</a></span></span></span>, tetapi plugin itu sendiri menentukan output yang didukung. Awalnya, plugin decoder ambisonic mendukung sumber ambisonic order pertama dan output stereo binaural. Tidak ada dukungan untuk ambisonic order kedua.</p> 
+       <p>Tidak ada yang dalam kerangka yang spesifik untuk setiap format ambisonic yang berbeda tersedia. Jika format klip sesuai dengan format ambisonic decoder plugin, maka audio ambisonic harus bekerja tanpa masalah. Format ambisonic pilihan unity adalah B-format, dengan pemesanan komponen ACN, dan normalisasi SN3D.</p> 
+       <hr> 
+       <ul> 
+        <li><span class="page-edit">2017–08–10 Sitemap</span></li> 
+        <li><span class="page-history">Fitur baru dalam Unity <span class="search-words">NewIn20171</span></span></li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="AudioProfiler.html"></a></span> 
+         <div class="tip">
+           Profiler Audio 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="class-AudioClip.html"></a></span> 
+         <div class="tip">
+           Audio Klip 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

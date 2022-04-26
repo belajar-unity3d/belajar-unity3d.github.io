@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Login</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="CreatingEnvironments.html">Bangunan dunia</a></li> 
+         <li><a href="script-Terrain.html">Terrain</a></li> 
+         <li>Trees</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="class-Brush.html"></a></span> 
+          <div class="tip">
+            Brushes 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="SpeedTree.html"></a></span> 
+          <div class="tip">
+            SpeedTree 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Trees</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Anda dapat melukis Pohon ke <span class="tooltip"><strong>Terrain</strong><span class="tooltiptext">Pemandangan di tempat kejadian Anda. Terrain GameObject menambahkan pesawat datar besar untuk adegan Anda dan Anda dapat menggunakan jendela Inspektur Terrain untuk menciptakan lanskap rinci. <a class="tooltipMoreInfoLink" href="terrain-UsingTerrains.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Terrain">Glossary</a></span></span></span> dengan cara yang mirip dengan lukisan <span class="tooltip"><strong>heightmaps</strong><span class="tooltiptext">Tekstur abu-abu yang menyimpan data tinggi untuk objek. Setiap pixel menyimpan perbedaan tinggi tegak lurus dengan wajah yang pixel mewakili.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Heightmap">Glossary</a></span></span></span> dan Tekstur. Namun, Pohon padat <span class="tooltip"><strong>3D objects</strong><span class="tooltiptext">Permainan 3D Objek seperti kubus, terrain atau ragdoll. <a href="GameObjects.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#3DObject">Glossary</a></span></span></span> yang tumbuh dari permukaan. Unity menggunakan optimasi seperti billboarding untuk pohon jauh untuk mempertahankan kinerja rendering yang baik. Ini berarti bahwa Anda dapat memiliki hutan padat dengan ribuan Pohon, dan tetap menjaga tingkat bingkai yang dapat diterima.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TerrainWithTrees.jpg" alt="Terrain with Trees"> 
+        <figcaption>
+          Terrain dengan Pohon 
+        </figcaption> 
+       </figure> 
+       <h2>Pohon Lukisan</h2> 
+       <p>Tombol <strong>Paint Trees</strong> pada <span class="tooltip"><strong>toolbar</strong><span class="tooltiptext">Se baris tombol dan kontrol dasar di bagian atas Editor Unity yang memungkinkan Anda untuk berinteraksi dengan Editor dengan berbagai cara (misalnya scaling, terjemahan). <a class="tooltipMoreInfoLink" href="Toolbar.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Toolbar">Glossary</a></span></span></span> memungkinkan Lukisan pohon:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TerrainTreePaintTool.png" alt="The Paint Trees button"> 
+        <figcaption>
+          Tombol Paint Trees 
+        </figcaption> 
+       </figure> 
+       <p>Awalnya, Terrain tidak memiliki prototipe pohon yang tersedia. Untuk memulai melukis ke Terrain, Anda perlu menambahkan prototipe pohon. Klik tombol <strong>Edit Trees</strong>, dan pilih <strong>Add Tree</strong>. Dari sini, Anda dapat memilih Aset Pohon dari Proyek Anda, dan menambahkannya sebagai <strong>Tree Prefab</strong> untuk digunakan dengan Sikat:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TerrainTreeAddWindow.png" alt="The Add Tree window"> 
+        <figcaption>
+          Jendela Add Tree 
+        </figcaption> 
+       </figure> 
+       <p>Untuk membantu prototyping, SpeedTree menyediakan empat model SpeedTree pada <span class="tooltip"><strong>Asset Store</strong><span class="tooltiptext">Sebuah perpustakaan yang berkembang dari aset gratis dan komersial yang diciptakan oleh Unity dan anggota komunitas. Menawarkan berbagai aset, dari tekstur, model dan animasi ke seluruh contoh proyek, tutorial dan ekstensi Editor. <a href="AssetStore.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AssetStore">Glossary</a></span></span></span>. Atau, Anda dapat membuat Pohon Anda sendiri.</p> 
+       <p>Jika Tree <span class="tooltip"><strong>Prefab</strong><span class="tooltiptext">Jenis aset yang memungkinkan Anda untuk menyimpan GameObject lengkap dengan komponen dan properti. Prefab bertindak sebagai template dari mana Anda dapat membuat instance objek baru di tempat kejadian. <a class="tooltipMoreInfoLink" href="Prefabs.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Prefab">Glossary</a></span></span></span> yang Anda impor mendukung <strong>Bend Factor</strong>, jendela <strong>Add Tree</strong> menampilkan properti <strong>Bend Factor</strong> untuk menyesuaikan responsif angin. Pohon yang dibuat dengan SpeedTree Modeler tidak memiliki <strong>Bend Factor</strong>; hanya yang dibuat dengan Editor Pohon. Lihat bagian pada <strong>Making Trees bend in the wind</strong>, di bawah ini.</p> 
+       <p>Ketika Anda telah mengkonfigurasi <strong>Settings</strong> Anda (diterima di bawah), Anda dapat melukis Pohon ke Terrain dengan cara yang sama Anda tekstur cat atau heightmaps. Untuk menghapus Pohon dari area, tahan tombol Pergeseran saat Anda melukis. Untuk menghapus hanya jenis Pohon yang dipilih saat ini, tahan tombol Kontrol saat Anda cat.</p> 
+       <h2>Settings</h2> 
+       <p>Setelah Anda memilih Pohon mana untuk menempatkan, menyesuaikan pengaturannya untuk menyesuaikan Penempatan pohon dan karakteristik.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TerrainTreePropertiesWindow.jpg" alt="Settings for Trees"> 
+        <figcaption>
+          Pengaturan untuk Pohon 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Mass Place Trees</strong></td> 
+          <td style="text-align:left;">Buat penutup keseluruhan Pohon tanpa melukis di seluruh lansekap. Setelah penempatan massal, Anda masih dapat menggunakan lukisan untuk menambahkan atau menghapus Pohon untuk menciptakan area yang lebih padat atau sparer.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Brush Size</strong></td> 
+          <td style="text-align:left;">Mengontrol ukuran area yang dapat Anda tambahkan Pohon ke.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Tree Density</strong></td> 
+          <td style="text-align:left;"> <strong>Tree Density</strong> mengontrol jumlah rata-rata Pohon yang dicat ke daerah yang ditentukan oleh <strong>Brush Size</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Tree Height</strong></td> 
+          <td style="text-align:left;">Kontrol tinggi minimal pohon dan tinggi maksimal menggunakan slider. Seret slider ke kiri untuk pohon pendek, dan tepat untuk pohon tinggi. Jika Anda membatalkan <strong>Random</strong>, Anda dapat menentukan skala yang tepat untuk ketinggian semua Pohon dicat baru dalam kisaran 0,01 hingga 2.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Lock Width to Height</strong></td> 
+          <td style="text-align:left;">Secara default, lebar Pohon terkunci tinggi sehingga Pohon selalu berskala seragam. Namun, Anda dapat menonaktifkan opsi <strong>Lock Width to Height</strong>, dan menentukan lebar secara terpisah.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Tree Width</strong></td> 
+          <td style="text-align:left;">Jika lebar pohon tidak terkunci dengan tingginya, Anda dapat mengontrol lebar minimal pohon dan lebar maksimal menggunakan slider. Seret slider ke kiri untuk pohon tipis, dan tepat untuk pohon lebar. Jika Anda membatalkan <strong>Random</strong>, Anda dapat menentukan skala yang tepat untuk lebar semua pohon dicat baru dalam kisaran 0,01 hingga 2.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Random Tree Rotation</strong></td> 
+          <td style="text-align:left;">Jika Anda mengonfigurasi Pohon dengan LOD Group, gunakan pengaturan <strong>Random Tree Rotation</strong> untuk membantu menciptakan kesan hutan yang tampak acak, alami daripada perkebunan buatan Pohon identik. Periksa opsi ini jika Anda ingin menempatkan Pohon dengan rotasi tetap, identik.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Color Variation</strong></td> 
+          <td style="text-align:left;">Jumlah pembentuk acak yang diterapkan pada Pohon. Ini hanya bekerja jika <span class="tooltip"><strong>shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> Anda membaca properti <code>_TreeInstanceColor</code>. Misalnya, warna untuk semua pohon yang Anda buat dengan Editor Pohon membaca properti <code>_TreeInstanceColor</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Tree Contribute Global Illumination</strong></td> 
+          <td style="text-align:left;">Aktifkan kotak cek ini untuk menunjukkan kepada Unity bahwa Pohon mempengaruhi perhitungan <span class="tooltip"><strong>Global Illumination</strong><span class="tooltiptext">Kelompok teknik yang model pencahayaan langsung dan tidak langsung untuk memberikan hasil pencahayaan yang realistis.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#globalillumination">Glossary</a></span></span></span>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Membuat Pohon</h2> 
+       <p>Ada dua cara untuk membuat model pohon baru. Gunakan <a href="https://store.speedtree.com/unity/">SpeedTree Modeler</a> dari IDV, Inc. untuk membuat Pohon dengan efek visual canggih, seperti transisi LOD halus, penagihan cepat, dan animasi angin alami. Untuk informasi lebih rinci, lihat <a href="http://docs8.speedTree.com/">Datasheet</a>. Atau, gunakan <a href="class-Tree.html">Editor Pohon</a> untuk membuat Model Pohon.</p> 
+       <p>Secara internal, Mesin Terrain membedakan antara dua jenis model dengan menentukan apakah <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-LODGroup.html">LOD Group</a><span class="tooltiptext">Komponen untuk mengelola tingkat detail (LOD) untuk GameObjects. <a href="class-LODGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#LODGroup">Glossary</a></span></span></span> hadir pada akar Pohon Prefab <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span>. Prefab SpeedTree memiliki komponen <em>LODGroup</em>, tetapi Prefab Editor Pohon tidak.</p> 
+       <p>Saat membuat Pohon, posisi titik jangkar di dasar Pohon di mana muncul dari tanah. Kinerja tergantung pada jumlah poligon Anda Model pohon, jadi pastikan untuk menguji platform Anda, dan buat Pohon yang lebih sederhana jika perlu. Juga, untuk Pohon Editor Pohon, setiap <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a class="tooltipMoreInfoLink" href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mesh">Glossary</a></span></span></span> selalu memiliki persis dua bahan: satu untuk tubuh Pohon dan yang lainnya untuk daun.</p> 
+       <p>Pohon yang Anda buat menggunakan Tree Editor harus menggunakan naungan <strong>Nature/Soft Occlusion Leaves</strong> dan <strong>Nature/Soft Occlusion Bark</strong>. Untuk menggunakan naungan mereka, Anda harus menempatkan Pohon di folder tertentu bernama <em>Ambient-Occlusion</em>, jika pohon tidak render dengan benar. Ketika Anda menempatkan model di folder ini dan mengubahnya, Unity menghitung <span class="tooltip"><strong>ambient occlusion</strong><span class="tooltiptext">Metode perkiraan berapa banyak cahaya ambient (cahaya tidak datang dari arah tertentu) dapat memukul titik di permukaan.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Ambientocclusion">Glossary</a></span></span></span> lembut dengan cara yang dirancang khusus untuk Pohon.</p> 
+       <p>Jika Anda mengubah Aset Pohon yang diimpor dalam aplikasi model 3D terpisah, Anda perlu mengklik tombol <strong>Refresh</strong> di Editor untuk melihat Pohon yang diperbarui di Terrain Anda:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TerrainTreesRefresh.png" alt="Refresh buton location"> 
+        <figcaption>
+          Refresh buton lokasi 
+        </figcaption> 
+       </figure> 
+       <p>Sitemap Ketika Anda mengimpor dan mengubah model SpeedTree dalam program pemodelan 3D, kemudian mengekspor kembali (sebagai <strong>Note:</strong> atau <code>.fbx</code>), Anda mungkin kehilangan fungsi animasi angin alami yang dilengkapi dengan model SpeedTree.<code>.obj</code>), you might lose the natural wind animation functionality that comes with SpeedTree models.</p> 
+       <h2>Menggunakan Collider dengan Pohon</h2> 
+       <p>Anda dapat menambahkan <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-CapsuleCollider.html">Kapsul Collider</a><span class="tooltiptext">Komponen collider berbentuk kapsul yang menangani tabrakan untuk GameObjects seperti barel dan tungkai karakter. <a href="class-CapsuleCollider.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#capsulecollider">Glossary</a></span></span></span> ke Aset Pohon. Pertama, klik <strong>&gt;</strong> di samping Aset Pohon untuk membuka Prefab.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TerrainTreesOpenPrefab.png" alt=""> 
+       </figure> 
+       <p>Kemudian, pilih <strong>Add Component &gt; Physics &gt; Capsule Collider</strong> untuk menambahkan sari. Untuk kembali ke Adegan, klik <strong>&lt;</strong> di sebelah nama Prefab.</p> 
+       <p>Anda juga harus memeriksa <strong>Enable Tree Colliders</strong> dalam komponen <span class="tooltip"><strong>Terrain Collider</strong><span class="tooltiptext">Komponen collider berbentuk medan yang menangani tabrakan untuk permukaan tabrakan dengan bentuk yang sama dengan objek Terrain melekat pada. <a class="tooltipMoreInfoLink" href="class-TerrainCollider.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#TerrainCollider">Glossary</a></span></span></span>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TerrainTreesTerrainCollider.png" alt=""> 
+       </figure> 
+       <h2>Membuat Pohon membungkuk di angin</h2> 
+       <p><span class="tooltip"><a class="tooltipMoreInfoLink" href="class-WindZone.html">Zona Angin</a><span class="tooltiptext">GameObject yang menambahkan efek angin ke medan Anda. Misalnya, Pohon dalam zona angin akan menekuk dalam mode animasi realistis dan angin itu sendiri akan bergerak dalam pulsa untuk menciptakan pola alami gerakan di antara pohon. <a href="class-WindZone.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#windzone">Glossary</a></span></span></span> dapat menekuk Pohon untuk mensimulasikan efek langsung angin. Fitur ini hanya tersedia untuk Pohon yang Anda tempatkan melalui menu Terrain. Untuk melakukan ini, pilih Terrain, klik tombol <strong>Paint Trees</strong> di Inspektur, kemudian pilih <strong>Edit Trees &gt; Add Tree</strong> dan pilih Pohon Prefab Anda. Jika Anda tidak membuat Pohon di Unity, set <strong>Bend Factor</strong> ke 1. Klik di Terrain untuk menempatkan Pohon yang dipilih.</p> 
+       <p>Pohon berbasis Terrain yang memiliki <strong>Bend Factor</strong> bereaksi terhadap Zona Angin dengan membengkokkan dan menggoreng, sesuai dengan nilai <strong>Turbulence</strong> Zona Angin dan sifat <strong>Main</strong>. Pengaturan <strong>Turbulence</strong> mengontrol fluttering daun. Mengurangi nilai ini menghaluskan efek berantakan. Nilai <strong>Main</strong> mengontrol kekuatan utama angin. Untuk membuat Zona Angin, pilih <strong>GameObject &gt; 3D Object &gt; Wind Zone</strong>.</p> 
+       <p>Jika <strong>Mode</strong> Zona Angin adalah <strong>Directional</strong>, maka posisinya relatif terhadap Pohon tidak masalah. Pohon akan masuk ke arah Zona Angin. Namun, jika <strong>Mode</strong> Zona Angin Anda adalah <strong>Spherical</strong>, maka <strong>Radius</strong>nya harus tumpang tindih radius Pohon. Hasil ini dalam gust multi arah angin, dengan jatuh dari pusat menuju tepi.</p> 
+       <p>Dengan pengaturan default, Pohon seperti Broadleaf Prefab (yang disediakan dalam paket Lingkungan Aset Standar) arah dengan cara yang halus dan realistis. Namun, jika Anda menggunakan Prefab Pohon Anda sendiri, Anda mungkin perlu menyesuaikan nilai properti Wind Zone. Jika batang prefab pohon Anda ditekuk semua cara ke satu sisi, cobalah mengurangi nilai <strong>Main</strong>. Atau, jika cabang tikungan Prefab Pohon atau peregangan berlebihan, mengurangi nilai <strong>Turbulence</strong>.</p> 
+       <h2>Tingkat Pohon Zona transisi Detail (LOD)</h2> 
+       <p>Untuk Pohon Editor Pohon, sistem LOD Unity menggunakan zona transisi 2D ke 3D untuk memadukan papan tagihan 2D mulus dengan model Pohon 3D. Ini mencegah munculnya pohon 2D dan 3D tiba-tiba, yang sangat penting di VR. <span class="tooltip"><strong>billboard</strong><span class="tooltiptext">Objek 2D bertekstur yang berputar sehingga selalu menghadapi Kamera. <a class="tooltipMoreInfoLink" href="class-BillboardRenderer.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Billboard">Glossary</a></span></span></span> Pohon tidak menerima pencahayaan lokal seperti Lampu Titik dan Lampu Spot. Mereka bekerja dengan lampu arah, tetapi pencahayaan di papan iklan hanya pembaruan ketika Anda memutar <span class="tooltip"><strong>Camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span>.</p> 
+       <p>Untuk SpeedTree Pohon, lihat dokumentasi <span class="tooltip"><a class="tooltipMoreInfoLink" href="LevelOfDetail.html">LOD</a><span class="tooltiptext">Teknik <em>Tingkat Detail</em> (LOD) adalah optimasi yang mengurangi jumlah segitiga yang dimiliki Unity untuk membuat GameObject ketika jaraknya dari kamera meningkat. <a href="LevelOfDetail.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#LOD">Glossary</a></span></span></span> dan <a href="class-LODGroup.html">LOD Group</a> untuk informasi lebih lanjut tentang mengkonfigurasi komponen LOD.</p> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2020–02-19 Login</span></p></li> 
+        <li><p><span class="page-history">Ditambahkan batasan billboard untuk Pohon Editor Pohon.</span></p></li> 
+       </ul> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="class-Brush.html"></a></span> 
+         <div class="tip">
+           Brushes 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="SpeedTree.html"></a></span> 
+         <div class="tip">
+           SpeedTree 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

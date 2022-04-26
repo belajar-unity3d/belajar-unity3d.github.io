@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Roda Collider Tutorial</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Unity User Manual 2022.1 (beta)</a></li> 
+         <li><a href="PhysicsSection.html">Physics</a></li> 
+         <li><a href="PhysicsHowTos.html">Fisika CARA</a></li> 
+         <li>Roda Collider Tutorial</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="RagdollStability.html"></a></span> 
+          <div class="tip">
+            Kestabilan bersama dan Ragdoll 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="ScriptingSection.html"></a></span> 
+          <div class="tip">
+            Scripting 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Roda Collider Tutorial</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Komponen Wheel <span class="tooltip"><strong>Collider</strong><span class="tooltiptext">Bentuk tak terlihat yang digunakan untuk menangani tabrakan fisik untuk objek. Seorang sari tidak perlu menjadi bentuk yang sama dengan jala objek - perkiraan kasar sering lebih efisien dan tidak dapat dibedakan dalam gameplay. <a class="tooltipMoreInfoLink" href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Collider">Glossary</a></span></span></span> didukung oleh PhysX 3 Vehicles SDK.</p> 
+       <p>Tutorial ini membawa Anda melalui proses membuat mobil fungsi dasar.</p> 
+       <p>Untuk memulai, pilih <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#GameObject">Glossary</a></span></span></span> &gt; <span class="tooltip"><strong>3D Object</strong><span class="tooltiptext">Permainan 3D Objek seperti kubus, terrain atau ragdoll. <a href="GameObjects.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#3DObject">Glossary</a></span></span></span> &gt; <strong>Plane</strong>. Ini adalah tanah mobil akan mengemudi. Meme it Untuk menjaganya sederhana, pastikan tanah memiliki Transformasi <strong>0</strong> (pada komponen Transform di Jendela Inspektur, klik cog Pengaturan dan klik <strong>Reset</strong>). Meningkatkan bidang Skala Transform untuk <strong>100</strong> untuk membuat Plane lebih besar.</p> 
+       <h2>Buat kerangka mobil dasar</h2> 
+       <ol> 
+        <li>Pertama, tambahkan GameObject untuk bertindak sebagai akar mobil GameObject. Untuk melakukan ini, pergi ke <strong>GameObject</strong> &gt; <strong>Create Empty</strong>. Ubah nama GameObject ke <code>car_root</code>.</li> 
+        <li>Tambahkan komponen 3D <span class="tooltip"><strong>Rigidbody</strong><span class="tooltiptext">Komponen yang memungkinkan GameObject untuk dipengaruhi oleh gravitasi simulasi dan kekuatan lainnya. <a class="tooltipMoreInfoLink" href="class-Rigidbody.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Rigidbody">Glossary</a></span></span></span> Fisika ke <code>car_root</code>. Massa default 1kg terlalu ringan untuk pengaturan suspensi default; mengubahnya menjadi 1500kg untuk membuatnya jauh lebih berat.</li> 
+        <li>Selanjutnya, buat Collider tubuh mobil. <strong>GameObject</strong> &gt; <strong>3D Object</strong> &gt; <strong>Cube</strong>. Membuat kubus ini anak GameObject di bawah <code>car_root</code>. Atur Transformasi ke <strong>0</strong> untuk membuatnya sempurna selaras di ruang lokal. Mobil ini berorientasi di sepanjang sumbu Z, jadi atur <strong>Z</strong> <strong>Scale</strong> ke <strong>3</strong>.</li> 
+        <li>Tambahkan akar roda. Pilih <code>car_root</code> dan <strong>GameObject</strong> &gt; <strong>Create Empty Child</strong>. Ubah nama menjadi <code>wheels</code>. Atur Transformasi di atasnya. GameObject ini tidak wajib, tetapi berguna untuk tuning dan debugging nanti.</li> 
+        <li>Untuk membuat roda pertama, pilih <code>wheels</code> GameObject, pergi ke <strong>GameObject</strong> &gt; <strong>Create Empty Child</strong>, dan nama <code>frontLeft</code>. Atur Transformator, kemudian atur Transform <strong>Position</strong> <strong>X</strong> ke -1, <strong>Y</strong> ke 0, dan <strong>Z</strong> untuk 1. Untuk menambahkan Collider ke roda, pergi ke <strong>Add component</strong> &gt; <strong>Physics</strong> &gt; <span class="tooltip"><strong>Wheel Collider</strong><span class="tooltiptext">RUMAH khusus untuk kendaraan yang ditanam. Ini memiliki deteksi tabrakan bawaan, roda fisika, dan model gesekan ban berbasis slip. Ini dapat digunakan untuk benda-benda selain roda, tetapi dirancang khusus untuk kendaraan dengan roda. <a class="tooltipMoreInfoLink" href="class-WheelCollider.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#WheelCollider">Glossary</a></span></span></span>.</li> 
+        <li>Duplikat GameObject. Mengubah posisi <code>frontLeft</code> <strong>Transform</strong> ke 1. Ubah nama menjadi <strong>X</strong>.<code>frontRight</code>.</li> 
+        <li>Pilih kedua <code>frontLeft</code> dan <code>frontRight</code> GameObjects. Menggandakan mereka. Mengubah posisi <strong>Transform</strong> <strong>Z</strong> kedua GameObjects ke -1. Ubah nama menjadi <code>rearLeft</code> dan <code>rearRight</code> masing-masing.</li> 
+        <li>Akhirnya, pilih GameObject <code>car_root</code> dan gunakan Alat Pindah untuk menaikkannya sedikit di atas tanah.</li> 
+       </ol> 
+       <p>Sekarang Anda harus dapat melihat sesuatu seperti ini:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/WheelColliderTutorial.png" alt=""> 
+       </figure> 
+       <p>Untuk membuat mobil ini benar-benar terurai, Anda perlu menulis controller untuk itu. Sampel kode berikut bekerja sebagai pengontrol:</p> 
+       <pre><code>using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+    
+public class SimpleCarController : MonoBehaviour {
+    public List&lt;AxleInfo&gt; axleInfos; // the information about each individual axle
+    public float maxMotorTorque; // maximum torque the motor can apply to wheel
+    public float maxSteeringAngle; // maximum steer angle the wheel can have
+        
+    public void FixedUpdate()
+    {
+        float motor = maxMotorTorque * Input.GetAxis("Vertical");
+        float steering = maxSteeringAngle * Input.GetAxis("Horizontal");
+            
+        foreach (AxleInfo axleInfo in axleInfos) {
+            if (axleInfo.steering) {
+                axleInfo.leftWheel.steerAngle = steering;
+                axleInfo.rightWheel.steerAngle = steering;
+            }
+            if (axleInfo.motor) {
+                axleInfo.leftWheel.motorTorque = motor;
+                axleInfo.rightWheel.motorTorque = motor;
+            }
+        }
+    }
+}
+    
+[System.Serializable]
+public class AxleInfo {
+    public WheelCollider leftWheel;
+    public WheelCollider rightWheel;
+    public bool motor; // is this wheel attached to motor?
+    public bool steering; // does this wheel apply steer angle?
+}
+</code></pre> 
+       <p>Buat skrip C# baru (<strong>Add Component</strong> &gt; <strong>New Script</strong>), pada <code>car_root</code> GameObject, salin sampel ini ke file skrip dan simpan. Anda dapat menyetel parameter skrip seperti yang ditunjukkan di bawah ini; bereksperimen dengan pengaturan dan masukkan Mode Play untuk menguji hasilnya.</p> 
+       <p>Pengaturan berikut sangat efektif sebagai pengontrol mobil:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/WheelColliderSettings.png" alt=""> 
+       </figure> 
+       <p>Hint: Pastikan untuk meningkatkan <code>size</code> <code>AxleInfo</code>.</p> 
+       <p>Anda dapat memiliki hingga 20 roda pada kasus kendaraan tunggal, dengan masing-masing menerapkan kemudi, motor atau torsi pengereman.</p> 
+       <p>Selanjutnya, pindah ke roda visual. Seperti yang dapat Anda lihat, Collider Roda tidak menerapkan posisi roda simulasi dan rotasi kembali ke Transformator Roda Collider, sehingga menambahkan roda visual memerlukan beberapa trik.</p> 
+       <p>Anda memerlukan beberapa geometri roda di sini. Anda dapat membuat bentuk roda sederhana dari silinder. Ada beberapa pendekatan untuk menambahkan roda visual: sehingga Anda harus menetapkan roda visual secara manual dalam sifat skrip, atau menulis beberapa logika untuk menemukan roda visual yang sesuai secara otomatis. Tutorial ini mengikuti pendekatan kedua. Pasang roda visual ke Roda Collider GameObjects.</p> 
+       <p>Selanjutnya, ubah skrip pengontrol:</p> 
+       <pre><code>using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+[System.Serializable]
+public class AxleInfo {
+    public WheelCollider leftWheel;
+    public WheelCollider rightWheel;
+    public bool motor;
+    public bool steering;
+}
+     
+public class SimpleCarController : MonoBehaviour {
+    public List&lt;AxleInfo&gt; axleInfos; 
+    public float maxMotorTorque;
+    public float maxSteeringAngle;
+     
+    // finds the corresponding visual wheel
+    // correctly applies the transform
+    public void ApplyLocalPositionToVisuals(WheelCollider collider)
+    {
+        if (collider.transform.childCount == 0) {
+            return;
+        }
+     
+        Transform visualWheel = collider.transform.GetChild(0);
+     
+        Vector3 position;
+        Quaternion rotation;
+        collider.GetWorldPose(out position, out rotation);
+     
+        visualWheel.transform.position = position;
+        visualWheel.transform.rotation = rotation;
+    }
+     
+    public void FixedUpdate()
+    {
+        float motor = maxMotorTorque * Input.GetAxis("Vertical");
+        float steering = maxSteeringAngle * Input.GetAxis("Horizontal");
+     
+        foreach (AxleInfo axleInfo in axleInfos) {
+            if (axleInfo.steering) {
+                axleInfo.leftWheel.steerAngle = steering;
+                axleInfo.rightWheel.steerAngle = steering;
+            }
+            if (axleInfo.motor) {
+                axleInfo.leftWheel.motorTorque = motor;
+                axleInfo.rightWheel.motorTorque = motor;
+            }
+            ApplyLocalPositionToVisuals(axleInfo.leftWheel);
+            ApplyLocalPositionToVisuals(axleInfo.rightWheel);
+        }
+    }
+}
+</code></pre> 
+       <p>Satu parameter penting dari komponen Collider Roda adalah <strong>Force App Point Distance</strong>. Ini adalah jarak dari dasar roda beristirahat ke titik di mana pasukan roda diterapkan. Nilai default adalah 0, yang berarti untuk menerapkan kekuatan di dasar roda istirahat, tetapi sebenarnya, itu bijaksana untuk memiliki titik ini terletak di suatu tempat sedikit di bawah pusat mobil massa.</p> 
+       <hr> 
+       <ul> 
+        <li><span class="page-edit">2017–11–24 Login</span></li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="RagdollStability.html"></a></span> 
+         <div class="tip">
+           Kestabilan bersama dan Ragdoll 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="ScriptingSection.html"></a></span> 
+         <div class="tip">
+           Scripting 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

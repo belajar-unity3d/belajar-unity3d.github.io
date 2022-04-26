@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Perkenalan Mipmaps</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="Textures.html">Textures</a></li> 
+         <li><a href="texture-mipmaps.html">Mipmaps</a></li> 
+         <li>Perkenalan Mipmaps</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="texture-mipmaps.html"></a></span> 
+          <div class="tip">
+            Mipmaps 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="TextureStreaming.html"></a></span> 
+          <div class="tip">
+            Sistem Streaming Mipmap 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Perkenalan Mipmaps</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Tingkat mip atau mip adalah versi tekstur dengan resolusi tertentu. Mips ada dalam set disebut mipmaps. Mipmaps mengandung versi resolusi yang lebih kecil dan lebih rendah dari satu tekstur.</p> 
+       <p>Misalnya, mipmap mungkin mengandung 4 versi tekstur, dari tekstur asli (Mip 0), ke Mip 1, Mip 2, dan Mip 3:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/mipmaps.png" alt="Mip levels"> 
+        <figcaption>
+          Tingkat Mip 
+        </figcaption> 
+       </figure> 
+       <p>Mipmaps umumnya digunakan untuk membuat objek dalam 3D <span class="tooltip"><strong>scenes</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Scene">Glossary</a></span></span></span>, di mana benda bertekstur dapat bervariasi dalam jarak dari <span class="tooltip"><strong>camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span>. Tingkat mip yang lebih tinggi digunakan untuk objek lebih dekat dengan kamera, dan tingkat mip yang lebih rendah digunakan untuk objek yang lebih jauh.</p> 
+       <p>Mipmaps dapat mempercepat operasi rendering dan mengurangi artefak rendering dalam situasi di mana GPU membuat tekstur kurang dari resolusi penuh. Mip secara efektif adalah versi yang tersimpan. Alih-alih melakukan banyak operasi pengambilan sampel pada tekstur resolusi asli, penuh, GPU dapat melakukan sejumlah operasi yang lebih kecil pada versi yang sudah downsampled.</p> 
+       <p>Kadang-kadang, mipmaps tidak bermanfaat. Mipmaps meningkatkan ukuran tekstur dengan 33%, baik di disk dan dalam memori. Mereka juga tidak memberikan manfaat ketika tekstur hanya diberikan pada resolusi penuh, seperti tekstur <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span> yang tidak berskala. Anda dapat membuat mipmap untuk tekstur secara manual, atau Anda dapat menginstruksikan Unity untuk menghasilkan mipmap untuk Anda. Untuk secara otomatis menghasilkan mipmap, Anda harus memastikan bahwa resolusi tekstur asli Anda adalah kekuatan dua nilai, seperti yang ditunjukkan dalam gambar mipmap contoh.</p> 
+       <p>Anda dapat mengaktifkan atau menonaktifkan mipmap untuk aset tekstur di <a href="class-TextureImporter.html">Tekstur Impor Pengaturan Inspektur</a>.</p> 
+       <h2>Bagaimana tingkat mip sampel GPU</h2> 
+       <p>Ketika sampel GPU tekstur, itu menentukan tingkat mip yang digunakan berdasarkan koordinat tekstur (UVs) untuk <span class="tooltip"><strong>pixel</strong><span class="tooltiptext">Unit terkecil dalam gambar komputer. Ukuran piksel tergantung pada resolusi layar Anda. Pencahayaan pixel dihitung pada setiap piksel layar. <a class="tooltipMoreInfoLink" href="ShadowPerformance.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#pixel">Glossary</a></span></span></span> saat ini, dan dua nilai internal yang dihitung GPU: DDX dan DDY. DDX dan DDY memberikan informasi tentang UV dari piksel di samping dan di atas piksel saat ini, termasuk jarak dan sudut.</p> 
+       <p>GPU menggunakan nilai-nilai ini untuk menentukan berapa banyak detail tekstur terlihat ke kamera. Jarak yang lebih besar dan sudut yang lebih ekstrem antara piksel saat ini dan tetangganya berarti bahwa GPU harus memilih mip resolusi yang lebih rendah; jarak yang lebih pendek dan sudut yang kurang ekstrem berarti bahwa GPU harus memilih mip dengan resolusi yang lebih tinggi.</p> 
+       <p>GPU juga dapat memadukan informasi tekstur dari dua mips bersama ketika menggunakan filter trilinear. Campuran mips sementara pengambilan sampel dapat membuat transisi dari satu mip ke yang lain kurang terlihat. Untuk memadukan mips, GPU mengambil persentase informasi tekstur tertentu dari satu mip dan sisanya dari mip lain.</p> 
+       <h2>Mip bias</h2> 
+       <p>Pengaturan yang disebut bias mip dapat melakukan dua hal selama pengambilan sampel, tergantung pada pengaturan sampler Anda:</p> 
+       <ul> 
+        <li>Bias mip dapat mengubah ambang untuk GPU memilih mip yang lebih rendah atau lebih tinggi untuk sampel. GPU memilih mip tertentu ketika menggunakan filtering titik di sampler Anda. Misalnya, GPU mungkin memutuskan tekstur pada set UV harus menggunakan sampel dari Mip 3. Dengan bias mip dari -2, GPU akan menggunakan resolusi tinggi Mip 1 untuk sampel, bukan.</li> 
+        <li>Bias mip dapat memberi tahu GPU untuk lebih memilih satu mip lain dengan persentase yang tepat ketika mencampur sampel dari mips yang berbeda. GPU campuran mips ketika menggunakan filter linier atau trilinear di sampler Anda. Misalnya, perhitungan GPU mungkin mengembalikan nilai 0,5. Nilai 0,5 memberi tahu GPU untuk mengambil 50% dari informasi tekstur yang dibutuhkan dari satu mip, dan sisa 50% dari mip berikutnya di mipmap. Dengan bias mip tambahan 0,2, nilai 0,5 akan berubah menjadi 0.7, dan GPU akan mengambil 70% dari informasi tekstur dari mip pertama dan hanya 30% dari detik.</li> 
+       </ul> 
+       <p>GPU memiliki bias mip global yang berlaku untuk pemilihan mipnya secara default. Tekstur dapat memiliki bias mip sendiri, yang menambah Unity atau mengurangi bias mip global. Anda juga dapat menentukan bias mip Anda sendiri untuk operasi pengambilan sampel tekstur individu di <span class="tooltip"><strong>shaders</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> Anda.</p> 
+       <p>Untuk mengatur bias mip untuk tekstur individu, lihat <a href="../ScriptReference/Texture-mipMapBias.html">Tekstur.mipMapBias</a>. Untuk mengatur bias mip untuk operasi pengambilan tekstur di naungan yang dikodekan tangan, gunakan fungsi HLSL seperti <a href="https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-tex2dbias">tex2dbias</a>. Untuk mengatur bias mip untuk operasi pengambilan tekstur di Shader Graph, lihat atau .</p> 
+       <h2>Bagaimana Unity memuat mipmaps</h2> 
+       <p>Anda dapat mengontrol cara yang memuat Unity mipmaps pada runtime menggunakan <a href="TextureStreaming.html">Joomla</a>.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="texture-mipmaps.html"></a></span> 
+         <div class="tip">
+           Mipmaps 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="TextureStreaming.html"></a></span> 
+         <div class="tip">
+           Sistem Streaming Mipmap 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

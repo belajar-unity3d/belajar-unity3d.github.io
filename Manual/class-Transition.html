@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: transisi Animasi</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="AnimationSection.html">Animation</a></li> 
+         <li><a href="comp-AnimationGroup.html">Referensi Animasi</a></li> 
+         <li><a href="class-AnimatorController.html">Pengontrol Animator</a></li> 
+         <li>Transisi Animasi</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="class-State.html"></a></span> 
+          <div class="tip">
+            Amerika Animasi 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="MecanimFAQ.html"></a></span> 
+          <div class="tip">
+            Animation FAQ 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Transisi Animasi</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Transisi animasi memungkinkan <span class="tooltip"><a class="tooltipMoreInfoLink" href="StateMachineBasics.html">mesin negara</a><span class="tooltiptext">Satu set negara di Animator Controller yang karakter atau animasi GameObject dapat masuk, bersama dengan satu set transisi antara negara-negara tersebut dan variabel untuk mengingat keadaan saat ini. Negara-negara yang tersedia akan tergantung pada jenis gameplay, tetapi keadaan khas termasuk hal-hal seperti idling, berjalan, berjalan dan melompat. <a href="StateMachineBasics.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#StateMachine">Glossary</a></span></span></span> untuk beralih atau campuran dari satu negara animasi ke yang lain. Transisi mendefinisikan tidak hanya berapa lama campuran antara negara harus mengambil, tetapi juga di bawah kondisi apa yang harus mereka aktifkan. Anda dapat mengatur transisi untuk terjadi hanya ketika kondisi tertentu benar. Untuk mengatur kondisi ini, tentukan nilai parameter dalam <span class="tooltip"><strong>Animator Controller</strong><span class="tooltiptext">Kontrol animasi melalui Lapisan Animasi dengan Mesin Negara Animasi dan Pohon Animasi Blend, dikendalikan oleh Parameter Animasi. Pengontrol Animator yang sama dapat direferensikan oleh beberapa model dengan komponen Animator. <a href="class-AnimatorController.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnimatorController">Glossary</a></span></span></span>.</p> 
+       <p>Sebagai contoh, karakter Anda mungkin memiliki state “patrolling” dan keadaan “tertidur”. Anda dapat mengatur transisi antara patroli dan tidur untuk terjadi hanya ketika nilai parameter "alertness" turun di bawah tingkat tertentu.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/classTransitionAnimatorPreview.jpg" alt="An example of a transition as viewed in the inspector."> 
+        <figcaption>
+          Contoh transisi seperti yang dilihat di inspektur. 
+        </figcaption> 
+       </figure> 
+       <p>Untuk memberikan transisi nama, ketikkan ke lapangan seperti yang ditunjukkan di bawah ini:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AnimatorTransitionName.png" alt=""> 
+       </figure> 
+       <p>Jendela <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span> dari keadaan menunjukkan transisi penggunaan state seperti yang ditunjukkan di bawah ini:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AnimatorTransitionNameInState.png" alt=""> 
+       </figure> 
+       <p>Hanya ada satu transisi aktif pada waktu tertentu. Namun, transisi aktif saat ini dapat terganggu oleh transisi lain jika Anda telah mengkonfigurasi pengaturan untuk memungkinkannya (lihat <a href="#TransitionInterruption">Interrupsi Transition</a> di bawah).</p> 
+       <h3>Sifat transisi</h3> 
+       <p>Untuk melihat properti untuk transisi, klik pada garis transisi menghubungkan dua negara di <span class="tooltip"><strong>Animator window</strong><span class="tooltiptext">Jendela di mana Animator Controller divisualkan dan diedit. <a class="tooltipMoreInfoLink" href="AnimatorWindow.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnimatorWindow">Glossary</a></span></span></span>. Properti yang muncul di jendela Inspektur.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/class-Transition-Properties.png" alt=""> 
+       </figure> 
+       <p>Gunakan sifat berikut untuk menyesuaikan transisi dan bagaimana campuran antara keadaan saat ini dan berikutnya.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Has Exit Time</strong></td> 
+          <td style="text-align:left;"> <strong>Exit Time</strong> adalah transisi khusus yang tidak bergantung pada parameter. Sebaliknya, bergantung pada waktu normal negara. Periksa untuk membuat transisi terjadi pada waktu tertentu yang ditentukan dalam <strong>Exit Time</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Settings</strong></td> 
+          <td style="text-align:left;">Menu Fold-out yang berisi pengaturan transisi rinci seperti di bawah ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Exit Time</strong></td> 
+          <td style="text-align:left;">Jika <strong>Has Exit Time</strong> diperiksa, nilai ini mewakili waktu yang tepat di mana transisi dapat mengambil efek. Ini diwakili dalam waktu normal (misalnya, waktu keluar 0,75 berarti bahwa pada bingkai pertama di mana 75% animasi telah dimainkan, kondisi <strong>Exit Time</strong> benar). Pada bingkai berikutnya, kondisinya palsu.<br><br> Untuk animasi looped, transisi dengan waktu keluar lebih kecil dari 1 dievaluasi setiap loop, sehingga Anda dapat menggunakan ini untuk waktu transisi Anda dengan waktu yang tepat dalam animasi setiap loop. <br><br>Transitions dengan <strong>Exit Time</strong> lebih besar dari 1 dievaluasi hanya sekali, sehingga mereka dapat digunakan untuk keluar pada waktu tertentu setelah jumlah loop tetap. Misalnya, transisi dengan waktu keluar 3,5 dievaluasi sekali, setelah tiga dan setengah loop.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Fixed Duration</strong></td> 
+          <td style="text-align:left;">Jika kotak <strong>Fixed Duration</strong> diperiksa, waktu transisi ditafkan dalam detik. Jika kotak <strong>Fixed Duration</strong> tidak diperiksa, waktu transisi ditafsirkan sebagai fraksi waktu normal dari negara sumber.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Transition Duration</strong></td> 
+          <td style="text-align:left;">Durasi transisi, dalam waktu normal atau detik tergantung pada mode <strong>Fixed Duration</strong>, relatif terhadap durasi negara saat ini. Ini divisualisasikan dalam grafik transisi sebagai bagian antara dua penanda biru.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Transition Offset</strong></td> 
+          <td style="text-align:left;">Mengimbangi waktu untuk mulai bermain di negara tujuan yang dialihkan ke. Misalnya, nilai 0,5 berarti state target mulai bermain pada 50% dari cara melalui timeline sendiri.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Interruption Source</strong></td> 
+          <td style="text-align:left;">Gunakan ini untuk mengontrol keadaan di mana transisi ini dapat terganggu (lihat <a href="#TransitionInterruption">Gangguan transisi</a> di bawah).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Ordered Interruption</strong></td> 
+          <td style="text-align:left;">Menentukan apakah transisi saat ini dapat terganggu oleh transisi lain secara independen dari pesanan mereka (lihat <a href="#TransitionInterruption">Gangguan transisi</a> di bawah).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Conditions</strong></td> 
+          <td style="text-align:left;">Transisi dapat memiliki kondisi tunggal, beberapa kondisi, atau tidak ada kondisi sama sekali. Jika transisi Anda tidak memiliki kondisi, Editor Unity hanya mempertimbangkan <strong>Exit Time</strong>, dan transisi terjadi ketika waktu keluar tercapai. Jika transisi Anda memiliki satu atau lebih kondisi, kondisi harus semua terpenuhi sebelum transisi dipicu.<br><br> Kondisi terdiri dari: <br><br>- Sebuah parameter acara (nilai yang dipertimbangkan dalam kondisi). <br>- Sebuah predikat kondisional (jika diperlukan, misalnya, ‘tidak dari’ atau ‘greater dari’ untuk mengapung). <br>- Nilai parameter (jika diperlukan). <br><br> Jika Anda memiliki <strong>Has Exit Time</strong> yang dipilih untuk transisi dan memiliki satu atau lebih kondisi, perhatikan bahwa Editor Unity menganggap apakah kondisi benar setelah <strong>Exit Time</strong>. Ini memungkinkan Anda untuk memastikan bahwa transisi Anda terjadi selama sebagian tertentu animasi.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="TransitionInterruption"></a></p> 
+       <h3>Gangguan transisi</h3> 
+       <p>Gunakan sifat <strong>Interruption Source</strong> dan <strong>Ordered Interruption</strong> untuk mengontrol bagaimana transisi Anda dapat terganggu.</p> 
+       <p>Order gangguan bekerja, secara konseptual, seolah-olah transisi diqueued dan kemudian parsed untuk transisi yang valid dari transisi pertama dimasukkan ke yang terakhir.</p> 
+       <h4>Harta site</h4> 
+       <p>Transisi di <a href="class-State.html">AnyState</a> selalu ditambahkan pertama di antrian, kemudian transisi lain diqueued tergantung pada nilai <strong>Interruption Source</strong>:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Value</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>None</strong></td> 
+          <td style="text-align:left;">Jangan menambahkan lebih banyak transisi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Current State</strong></td> 
+          <td style="text-align:left;">Segala transisi dari keadaan saat ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Next State</strong></td> 
+          <td style="text-align:left;">Menyiapkan transisi dari keadaan berikutnya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Current State then Next State</strong></td> 
+          <td style="text-align:left;">Menyiapkan transisi dari keadaan saat ini, kemudian antrian yang berasal dari keadaan berikutnya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Next State then Current State</strong></td> 
+          <td style="text-align:left;">Menyiapkan transisi dari keadaan berikutnya, kemudian antrian yang berasal dari keadaan saat ini.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h4>Properti Interrupsi yang dipesan</h4> 
+       <p>Properti <strong>Ordered Interruption</strong> mengubah bagaimana antrian parsed.</p> 
+       <p>Tergantung pada nilainya, membuat antrian berakhir pada saat yang berbeda seperti yang tercantum di bawah ini.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Value</strong></th> 
+          <th style="text-align:left;"><strong>Ends when</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Checked</strong></td> 
+          <td style="text-align:left;">Transisi yang valid atau transisi saat ini telah ditemukan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Unchecked</strong></td> 
+          <td style="text-align:left;">Transisi yang valid telah ditemukan.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Hanya transisi <a href="class-State.html">AnyState</a> dapat terganggu sendiri.</p> 
+       <p>Untuk mempelajari lebih lanjut tentang gangguan transisi, lihat posting blog Unity.</p> 
+       <h3>Grafik transisi</h3> 
+       <p>Untuk menyesuaikan pengaturan yang tercantum di atas, Anda dapat memasukkan nomor langsung ke bidang atau menggunakan grafik transisi. Grafik transisi memodifikasi nilai di atas ketika elemen visual dimanipulasi.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AnimatorTransitionSettingsAndGraph.svg" alt="The Transition settings and graph as shown in the Inspector"> 
+        <figcaption>
+          Pengaturan transisi dan grafik seperti yang ditunjukkan dalam Inspektur 
+        </figcaption> 
+       </figure> 
+       <p>Mengubah sifat transisi dalam tampilan grafik menggunakan arah berikut::</p> 
+       <ul> 
+        <li>Seret penanda <strong>Duration “out”</strong> untuk mengubah <strong>Duration</strong> transisi.</li> 
+        <li>Seret penanda <strong>Duration “in”</strong> untuk mengubah durasi transisi dan <strong>Exit Time</strong>.</li> 
+        <li>Seret state target untuk menyesuaikan <strong>Transition Offset</strong>.</li> 
+        <li>Seret penanda balik pratinjau untuk menggosok melalui campuran animasi di jendela pratinjau di bagian bawah Inspektur.</li> 
+       </ul> 
+       <h3>Transisi antara negara-negara Blend Tree</h3> 
+       <p>Jika keadaan saat ini atau berikutnya milik transisi ini adalah keadaan <a href="class-BlendTree.html">Pohon Blend</a>, parameter Blend Tree muncul dalam Inspektur. Sesuaikan nilai-nilai ini untuk melihat bagaimana transisi Anda akan terlihat dengan nilai Blend Tree yang ditetapkan ke konfigurasi yang berbeda. Jika Anda Blend Tree mengandung klip dari panjang yang berbeda, Anda harus menguji apa transisi Anda terlihat seperti ketika menunjukkan kedua klip pendek dan klip panjang. Menyesuaikan nilai-nilai ini tidak mempengaruhi bagaimana transisi berperilaku pada runtime; mereka hanya untuk membantu Anda melihat pratinjau bagaimana transisi bisa terlihat dalam situasi yang berbeda.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AnimatorTransitionInspectorShowingBlendtreeParams.png" alt="The Blend Tree parameter preview controls, visible when either your current or next state is a Blend Tree state."> 
+        <figcaption>
+          Login Kontrol pratinjau parameter pohon, terlihat ketika keadaan Anda saat ini atau berikutnya adalah keadaan Blend Tree. 
+        </figcaption> 
+       </figure> 
+       <p><a name="Conditions"></a></p> 
+       <h3>Conditions</h3> 
+       <p>Transisi dapat memiliki kondisi tunggal, beberapa kondisi, atau tidak ada kondisi sama sekali. Jika transisi Anda tidak memiliki kondisi, Editor Unity hanya mempertimbangkan <strong>Exit Time</strong>, dan transisi terjadi ketika waktu keluar tercapai. Jika transisi Anda memiliki satu atau lebih kondisi, kondisi harus semua terpenuhi sebelum transisi dipicu.</p> 
+       <p>Kondisi terdiri dari:</p> 
+       <ul> 
+        <li>Sebuah parameter acara, nilai yang dipertimbangkan dalam kondisi.</li> 
+        <li>Predikat kondisional, jika diperlukan (misalnya, kurang atau lebih besar untuk mengapung).</li> 
+        <li>Nilai parameter, jika diperlukan.</li> 
+       </ul> 
+       <p>Jika <strong>Has Exit Time</strong> diaktifkan untuk transisi dan memiliki satu atau lebih kondisi, kondisi ini hanya diperiksa setelah waktu keluar dari negara. Ini memungkinkan Anda untuk memastikan bahwa transisi Anda hanya terjadi selama sebagian tertentu animasi.</p> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="class-State.html"></a></span> 
+         <div class="tip">
+           Amerika Animasi 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="MecanimFAQ.html"></a></span> 
+         <div class="tip">
+           Animation FAQ 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

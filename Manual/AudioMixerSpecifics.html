@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Spesifik di jendela AudioMixer</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Audio.html">Audio</a></li> 
+         <li><a href="AudioMixer.html">Mixer Audio</a></li> 
+         <li>Spesifikasi di jendela AudioMixer</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="AudioMixerOverview.html"></a></span> 
+          <div class="tip">
+            Gambaran keseluruhan konsep dan AudioMixer 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="AudioMixerInspectors.html"></a></span> 
+          <div class="tip">
+            Inspektur AudioGroup 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Spesifikasi di jendela AudioMixer</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <h2>Panel Mixer</h2> 
+       <p>Panel Mixers menunjukkan daftar lengkap semua AudioMixers dalam proyek. AudioMixers dapat dengan cepat beralih antara dengan memilih mereka dalam panel ini. Routing satu AudioMixer ke AudioGroup AudioMixer lain juga dilakukan dalam panel ini.</p> 
+       <p>Anda juga dapat membuat AudioMixers baru dalam proyek saya mengklik ikon '+' di kanan atas panel.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AudioMixerCreate.png" alt=""> 
+       </figure> 
+       <h3>Routing AudioMixers ke AudioMixers lain</h3> 
+       <p>Unity mendukung memiliki beberapa AudioMixers yang digunakan dalam <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> sekaligus. Secara default, setiap AudioMixer output sinyal audio langsung ke AudioListener.</p> 
+       <p>Pengembang juga dapat memilih untuk rute output audio AudioMixer ke AudioGroup dari AudioMixer lain. Ini memungkinkan untuk hierarki routing yang fleksibel dan dinamis pada runtime permainan.</p> 
+       <p>Routing AudioMixer ke AudioGroup lain dapat dicapai dua cara, pertama-tama di editor di dalam Panel Mixers, dan dinamis lainnya pada runtime menggunakan API AudioMixer.</p> 
+       <ul> 
+        <li>Untuk mengubah output AudioMixer dalam editor, cukup klik pada AudioMixer dalam Panel Mixer dan tarik di atas AudioMixer lain.</li> 
+        <li>Anda akan disajikan dengan dialog yang memungkinkan Anda untuk memilih AudioGroup dari AudioMixer target Anda ingin rute ke.</li> 
+        <li>Setelah Anda memilih AudioGroup output, panel akan menunjukkan hubungan parenting dari AudioMixers. Ini juga akan menunjukkan target AudioGroup di sebelah nama AudioMixers.</li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AudioMixerRouting.png" alt=""> 
+       </figure> 
+       <h2>Panel Hierarchy</h2> 
+       <p>Tampilan hirarki adalah di mana Anda mendefinisikan kategori suara AudioMixer dan struktur pencampuran. Seperti yang dijelaskan di atas, memungkinkan Anda untuk mendefinisikan kategori kustom Anda sendiri bahwa AudioSources dapat terhubung ke dan bermain melalui.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AudioMixerHierarchyPanel.png" alt=""> 
+       </figure> 
+       <h3>Menambahkan dan Mengkonfigurasi AudioGroups dalam Hierarchy</h3> 
+       <p>Menambahkan dan memodifikasi topologi AudioMixer dilakukan dalam AudioGroup Hierarchy Panel.</p> 
+       <ul> 
+        <li>Menambahkan AudioGroup baru ke hierarki dapat dilakukan dalam 2 cara; 
+         <ul> 
+          <li>Klik kanan pada AudioGroup yang ada (mereka harus setidaknya satu dalam AudioMixer) dan memilih 'Tambahkan kelompok anak' atau 'Tambahkan kelompok pengacau'.</li> 
+          <li>Memilih AudioGroup yang ingin Anda tambahkan anak ke dan klik ikon '+' di kanan atas panel. Ini akan menambahkan grup baru ke AudioMixer di bawah yang dipilih.</li> 
+         </ul> </li> 
+        <li>Mengubah topologi AudioMixer dapat dilakukan dengan mengklik AudioGroup dalam panel dan menyeretnya di atas AudioGroup lain, ini akan induk target AudioGroup di atas yang dipilih.</li> 
+        <li>Menyiapkan AudioGroup (termasuk anak-anaknya) dicapai 2 cara; 
+         <ul> 
+          <li>Dengan memilih grup yang ingin Anda hapus dan menekan kunci Hapus.</li> 
+          <li>Dengan mengklik kanan grup yang ingin Anda hapus dan pilih opsi "Remove Group (dan anak-anak).</li> 
+         </ul> </li> 
+        <li>Untuk duplikat AudioGroup (dan membuatnya bijaksana), klik kanan AudioGroup yang ingin Anda duplikat dan pilih “Duplicate Group (dan anak-anak)”. Ini akan menggandakan kelompok dan kelompok anak persis, termasuk efek yang terkandung dalam kelompok.</li> 
+        <li>Untuk mengubah nama AudioGroup, klik kanan pada grup dan pilih “Nama”.</li> 
+       </ul> 
+       <h2>Login Login</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AudioMixerAudioGroupView.png" alt=""> 
+       </figure> 
+       <p>AudioGroup Lihat menunjukkan pengaturan rata AudioGroups di AudioMixer. Pengaturan ini diatur secara horizontal dalam tampilan. Kelompok yang ditunjukkan dalam AudioGroup View didiktekan oleh pemilihan View saat ini (dibandingkan nanti).</p> 
+       <p>Setiap AudioGroup dalam pandangan diwakili sebagai "strip". Tata letak dan tampilan dan nuansa strip umum untuk Digital Audio Workstations dan paket editing audio lainnya. Tata letak ini dipilih untuk memfasilitasi transisi Insinyur Audio dari latar belakang musik dan video, serta berfungsi sebagai paralel untuk integrasi perangkat keras audio.</p> 
+       <p>Strip terdiri dari bar judul, diikuti oleh meter VU vertikal yang mewakili tingkat audio saat ini melalui AudioGroup. Selain meter VU adalah pemilih volume yang memungkinkan Anda untuk memasukkan atenuasi AudioGroups sepanjang skala yang sama dengan meter VU, yang diwakili dalam tingkat dB.</p> 
+       <p>Di bawah meter VU adalah 3 tombol dengan fungsi berikut:</p> 
+       <ul> 
+        <li> <strong>Solo</strong> - Toggle ini akan memungkinkan Anda untuk beralih antara mendengar seluruh campuran atau hanya AudioSources yang bermain menjadi anak-anak dari AudioGroup menjadi Soloed.</li> 
+        <li> <strong>Mute</strong> - Toggle ini memungkinkan Anda untuk beralih antara termasuk AudioGroup saat ini dalam campuran audible atau tidak termasuk dari yang didengar dalam campuran global.</li> 
+        <li> <strong>Bypass</strong> - Toggle ini memungkinkan Anda untuk memotong atau mengaktifkan semua efek yang ada dalam AudioGroup.</li> 
+       </ul> 
+       <p>AudioGroup juga berisi daftar Unit Efek DSP dan Unit Atenuasi dalam AudioGroup. Cakupan dapat diterapkan di mana saja di dalam rantai Unit Efek dalam AudioGroup dan memungkinkan Anda untuk memutuskan persis di mana Anda ingin penyesuaian volume diterapkan. Ini berguna untuk efek non-linear dan Unit Penerimaan (dicovered nanti).</p> 
+       <p>Setiap Efek Slot Unit memiliki fungsi berikut:</p> 
+       <ul> 
+        <li>Ini menunjukkan nama Unit Efek yang diterapkan</li> 
+        <li>Ini menunjukkan lingkaran di sisi kiri efek yang dapat dialihkan untuk mengaktifkan atau memotong efek individu.</li> 
+        <li>Jika Anda klik kanan efek dan pilih "Allow Wet Mixing", bar berwarna di bagian bawah efek lambat menjadi aktif, dan menunjukkan jumlah sinyal basah yang dilewatkan melalui efek.</li> 
+        <li>Efek dapat diseret dan turun AudioGroup untuk menyempurnakan pesanan mereka dan juga di AudioGroups untuk memindahkan efek ke AudioGroup lain.</li> 
+       </ul> 
+       <p>Anda juga dapat menambahkan Unit Efek baru dengan mengklik kanan pada efek yang ada untuk ditambahkan sebelum atau setelah itu, atau dengan mengklik tombol "Add.." di bagian bawah strip.</p> 
+       <h2>Snapshot Panel</h2> 
+       <p>Panel Snapshot memungkinkan Anda untuk membuat, beralih antara dan merweak berbeda dalam AudioMixer. Selalu ada setidaknya satu snapshot aktif, dan pilihan snapshot di dalam Panel Snapshot menunjukkan bahwa mengedit lebih lanjut dari AudioMixer diedit ke snapshot itu.</p> 
+       <p>Snapshots didefinisikan dalam Panel Snapshot juga muncul sebagai sub-assets dari AudioMixer. Ini memungkinkan Anda untuk mengakses snapshots di tempat lain dalam editor dan dalam <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AudioMixerSnapshotPanel1.png" alt=""> 
+       </figure> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AudioMixerSnapshotPanel2.png" alt=""> 
+       </figure> 
+       <p>Anda juga mendefinisikan 'Start' (diindikasikan oleh ikon bintang di sisi kanan dari daftar snapshot). The Startshot adalah snapshot yang AudioMixer akan diinisialisasikan untuk ketika dimuat (misalnya, ketika adegan dimulai)</p> 
+       <ul> 
+        <li>Untuk membuat Snapshot baru, klik ikon ‘+’ kecil di kanan atas panel. Masukkan nama untuk snapshot baru.</li> 
+        <li>Untuk menentukan Start Vibrator yang berbeda, klik kanan pada Snapshot yang diinginkan dan pilih "Set as Start Striptease".</li> 
+       </ul> 
+       <h2>Panel Tampilan</h2> 
+       <p>Melihat memungkinkan Anda untuk membuat kelompok AudioGroup yang terlihat di AudioMixer. Dengan pandangan, Anda dapat membuat perspektif minat ke AudioMixer, bukan selalu disajikan dengan hirarki penuh setiap kali. Pandangan murni untuk tujuan optimisasi alur kerja tidak mempengaruhi pengaturan atau kinerja runtime.</p> 
+       <p>Seperti Panel Snapshot, selalu ada satu tampilan yang dipilih dan saat ini ditampilkan dalam Tampilan AudioGroup. Secara default, semua AudioGroup terlihat dalam tampilan default. Apa yang terkandung dalam pandangan dikendalikan oleh ikon mata di Panel Hierarchy (lihat di atas).</p> 
+       <ul> 
+        <li>Untuk menambahkan pandangan baru ke daftar pandangan, klik ikon ‘+’ kecil di kanan atas Panel Tampilan. Masukkan nama untuk tampilan baru.</li> 
+        <li>Mengubah pandangan saat ini dengan memilih antara daftar pandangan di panel View.</li> 
+        <li>Untuk menghapus tampilan, klik kanan pada tampilan dan pilih 'Hapus'</li> 
+        <li>Untuk Duplikat tampilan (dengan semua pengaturan tampilan saat ini, klik kanan pada tampilan dan pilih ‘Duplicate’</li> 
+       </ul> 
+       <h3>Ikon AudioGroup</h3> 
+       <p>Setiap AudioGroup dalam panel hirarki memiliki ikon mata kecil ke kiri kelompok. Ikon ini melayani 2 tujuan;</p> 
+       <ul> 
+        <li>Mengklik ikon mata untuk beralih visibilitas AudioGroup ini di Tampilan yang dipilih saat ini.</li> 
+        <li>Klik kanan pada ikon mata memungkinkan Anda untuk memilih dari berbagai warna untuk menandai AudioGroup ini dengan. Pilih warna selain "Tidak ada Warna" akan memberikan tag warna kecil ke kiri ikon mata serta tag warna di bawah nama AudioGroup dalam tampilan AudioGroup. Indikator warna-warna ini adalah cara yang bagus untuk kelompok visual konsep dan koleksi AudioGroups dalam AudioMixer.</li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="AudioMixerOverview.html"></a></span> 
+         <div class="tip">
+           Gambaran keseluruhan konsep dan AudioMixer 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="AudioMixerInspectors.html"></a></span> 
+         <div class="tip">
+           Inspektur AudioGroup 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

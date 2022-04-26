@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Probe Cahaya untuk objek bergerak</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="LightingOverview.html">Lighting</a></li> 
+         <li><a href="LightProbes.html">Probe Cahaya</a></li> 
+         <li>Probe Cahaya untuk objek bergerak</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="LightProbes-Placing-Scripting.html"></a></span> 
+          <div class="tip">
+            Menempatkan Probe Cahaya menggunakan scripting 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="LightProbes-MeshRenderer.html"></a></span> 
+          <div class="tip">
+            Probe Cahaya dan Renderer Mesh 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Probe Cahaya untuk objek bergerak</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p> <a href="Lightmapping.html">Lightmapping</a> menambahkan sangat untuk realisme dari sebuah adegan dengan menangkap cahaya bouncing realistis sebagai tekstur yang "berbak" ke permukaan <strong>static </strong>objects. Namun, karena sifat lightmapping, itu hanya dapat diterapkan pada objek non-moving ditandai sebagai <a href="StaticObjects.html">Contribute GI</a>.</p> 
+       <p>Sementara lampu mode realtime dan campuran dapat melemparkan <em>direct</em>light pada objek bergerak, benda bergerak tidak menerima cahaya bouncing dari lingkungan statis Anda kecuali Anda menggunakan <span class="tooltip"><strong>light probes</strong><span class="tooltiptext">probe cahaya menyimpan informasi tentang bagaimana cahaya melewati ruang di tempat kejadian Anda. Koleksi probe cahaya yang diatur dalam ruang tertentu dapat meningkatkan pencahayaan pada objek bergerak dan pemandangan LOD statis dalam ruang itu. <a class="tooltipMoreInfoLink" href="LightProbes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#LightProbe">Glossary</a></span></span></span>. Pelaporan cahaya menyimpan informasi tentang bagaimana cahaya berbobot di <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> Anda. Oleh karena itu sebagai objek bergerak melalui ruang di lingkungan permainan Anda, mereka dapat menggunakan informasi yang disimpan dalam probe cahaya Anda untuk menunjukkan perkiraan cahaya bouncing pada posisi saat ini.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LightProbes-MovingObjects-1.jpg" alt="A simple scene showing bounced light from static scenery."> 
+        <figcaption>
+          Sebuah adegan sederhana menunjukkan cahaya bouncing dari pemandangan statis. 
+        </figcaption> 
+       </figure> 
+       <p>Dalam adegan di atas, sebagai lampu directional hits bangunan merah dan hijau, yang merupakan pemandangan statis, <em>lampu bounced</em>is melemparkan ke dalam adegan. Cahaya bouncing terlihat sebagai kaleng merah dan hijau di tanah langsung di depan setiap bangunan. Karena semua model ini adalah <strong>static</strong>, semua pencahayaan ini disimpan dalam <span class="tooltip"><strong>lightmaps</strong><span class="tooltiptext">Tekstur pra-render yang mengandung efek sumber cahaya pada objek statis di tempat kejadian. Lightmaps dilalui atas geometri adegan untuk menciptakan efek pencahayaan. <a class="tooltipMoreInfoLink" href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Lightmap">Glossary</a></span></span></span>.</p> 
+       <p>Ketika Anda memperkenalkan benda-benda yang bergerak ke dalam adegan Anda, mereka tidak secara otomatis menerima cahaya yang bouncing. Dalam gambar di bawah ini, Anda dapat melihat ambulans (objek bergerak dinamis) tidak dipengaruhi oleh lampu merah beruncing yang keluar dari bangunan. Sebaliknya, sisinya adalah warna abu-abu datar. Ini karena ambulans adalah objek dinamis yang dapat bergerak di sekitar permainan, dan karena itu tidak dapat menggunakan peta ringan, karena mereka statis dengan alam. Pemandangan membutuhkan Probe Cahaya sehingga ambulans yang bergerak dapat menerima cahaya yang bouncing.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LightProbes-MovingObjects-2.png" alt="The side of the ambulance is a flat grey color, even though it should be receiving some bounced red light from the front of the building."> 
+        <figcaption>
+          Sisi ambulans adalah warna abu-abu datar, meskipun harus menerima beberapa lampu merah beruncing dari depan bangunan. 
+        </figcaption> 
+       </figure> 
+       <p>Untuk menggunakan fitur probe cahaya untuk melemparkan cahaya bouncing ke objek bergerak dinamis, Anda harus memposisikan probe cahaya di seluruh adegan Anda, sehingga mereka menutupi area ruang yang bergerak objek dalam permainan Anda mungkin melewati.</p> 
+       <p>Probe yang Anda tempatkan dalam adegan Anda mendefinisikan volume 3D. Pencahayaan pada setiap posisi dalam volume ini kemudian dikirakan pada objek bergerak dengan mengganggu informasi yang dipanggang ke dalam probe terdekat.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LightProbes-MovingObjects-3.png" alt="Light probes placed around the static scenery in a simple scene. The light probes are shown as yellow dots. They are shown connected by magenta lines, to visualise the volume that they define."> 
+        <figcaption>
+          probe cahaya ditempatkan di sekitar pemandangan statis dalam adegan sederhana. probe cahaya ditunjukkan sebagai titik kuning. Mereka ditampilkan terhubung dengan garis magenta, untuk memvisualisasikan volume yang mereka mendefinisikan. 
+        </figcaption> 
+       </figure> 
+       <p>Setelah Anda menambahkan probe, dan dipanggang cahaya di tempat kejadian Anda, objek bergerak dinamis Anda akan menerima cahaya yang terpesona berdasarkan probe terdekat di tempat kejadian. Menggunakan contoh yang sama seperti di atas, objek dinamis (ada ambulans) sekarang menerima cahaya bouncing dari pemandangan statis, memberikan sisi kendaraan kaleng merah, karena berada di depan bangunan merah yang casting cahaya beruncing.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LightProbes-MovingObjects-4.png" alt="The side of the ambulance now has a red tint because it is receiving bounced red light from the front of the building, via the light probes in the scene."> 
+        <figcaption>
+          Sisi ambulans sekarang memiliki tint merah karena itu menerima cahaya merah beruncing dari depan bangunan, melalui probe cahaya di tempat kejadian. 
+        </figcaption> 
+       </figure> 
+       <p>Ketika objek dinamis dipilih, <span class="tooltip"><strong>Scene view</strong><span class="tooltiptext">Tampilan interaktif ke dunia yang Anda buat. Anda menggunakan Adegan Lihat untuk memilih dan posisi pemandangan, karakter, kamera, lampu, dan semua jenis lain dari Game Object. <a class="tooltipMoreInfoLink" href="UsingTheSceneView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SceneView">Glossary</a></span></span></span> akan menarik visualisasi probe cahaya mana yang sedang digunakan untuk cahaya yang terganggu. probe terdekat dengan objek dinamis digunakan untuk membentuk volume tetrahedral, dan cahaya objek dinamis diinterpolasi dari empat titik tetrahedron ini.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LightProbes-MovingObjects-5.jpg" alt="The light probes that are being used to light a dynamic object are revealed in the scene view when the object is selected, connected by yellow lines to show the tetrahedral volume."> 
+        <figcaption>
+          probe cahaya yang digunakan untuk menyalakan objek dinamis terungkap dalam pandangan adegan ketika objek dipilih, terhubung dengan garis kuning untuk menunjukkan volume tetrahedral. 
+        </figcaption> 
+       </figure> 
+       <p>Sebagai objek melewati adegan, bergerak dari satu volume tetrahedral ke yang lain, dan pencahayaan dihitung berdasarkan posisinya dalam tetrahedron saat ini.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LightProbes-MovingObjects-6.gif" alt="A dynamic object moving through a scene with light probes, showing how it passes from one tetrahedral light probe volume to another."> 
+        <figcaption>
+          Objek dinamis bergerak melalui adegan dengan probe cahaya, menunjukkan bagaimana melewati satu volume probe cahaya tetrahedral ke yang lain. 
+        </figcaption> 
+       </figure> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2017–06–08 Sitemap</span></p></li> 
+        <li><p><span class="page-history">Probe Cahaya diperbarui di 5.6</span></p></li> 
+       </ul> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="LightProbes-Placing-Scripting.html"></a></span> 
+         <div class="tip">
+           Menempatkan Probe Cahaya menggunakan scripting 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="LightProbes-MeshRenderer.html"></a></span> 
+         <div class="tip">
+           Probe Cahaya dan Renderer Mesh 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

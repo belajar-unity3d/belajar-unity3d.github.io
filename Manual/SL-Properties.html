@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: ShaderLab: mendefinisikan sifat material</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="Shaders.html">Shaders</a></li> 
+         <li><a href="shader-writing.html">Menu Menu</a></li> 
+         <li><a href="SL-Reference.html">ShaderLab</a></li> 
+         <li><a href="SL-Shader.html">ShaderLab: mendefinisikan objek Shader</a></li> 
+         <li>ShaderLab: mendefinisikan sifat material</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="SL-Shader.html"></a></span> 
+          <div class="tip">
+            ShaderLab: mendefinisikan objek Shader 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="SL-Fallback.html"></a></span> 
+          <div class="tip">
+            ShaderLab: menetapkan fallback 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>ShaderLab: mendefinisikan sifat material</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Halaman ini berisi informasi tentang menggunakan blok <code>Properties</code> pada kode <span class="tooltip"><strong>ShaderLab</strong><span class="tooltiptext">Bahasa Unity untuk mendefinisikan struktur benda-benda Shader. <a class="tooltipMoreInfoLink" href="SL-Shader.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#ShaderLab">Glossary</a></span></span></span> Anda untuk menentukan sifat material untuk objek <span class="tooltip"><strong>Shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span>.</p> 
+       <h2>Overview</h2> 
+       <p>Dalam kode ShaderLab Anda, Anda dapat menentukan <strong>material properties</strong>. Properti material adalah properti yang disatukan toko sebagai bagian dari aset material. Ini memungkinkan seniman untuk membuat, mengedit dan berbagi bahan dengan konfigurasi yang berbeda.</p> 
+       <p>Jika Anda menggunakan properti material:</p> 
+       <ul> 
+        <li>Anda bisa mendapatkan atau mengatur nilai variabel dalam <span class="tooltip"><strong>Shader object</strong><span class="tooltiptext">Contoh kelas Shader, objek Shader adalah wadah untuk program naungan dan instruksi GPU, dan informasi yang memberi tahu Unity bagaimana menggunakannya. Gunakan mereka dengan bahan untuk menentukan penampilan adegan Anda. <a class="tooltipMoreInfoLink" href="shader-objects.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shaderobject">Glossary</a></span></span></span> dengan memanggil fungsi pada material (seperti <a href="../ScriptReference/Material.SetFloat.html">Bahan. Login</a>).</li> 
+        <li>Anda dapat melihat dan mengedit nilai menggunakan bahan <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>.</li> 
+        <li>Unity menyimpan perubahan yang Anda buat sebagai bagian dari aset material, sehingga mereka bertahan antara sesi.</li> 
+       </ul> 
+       <p>Jika Anda tidak menggunakan sifat material: * Anda masih bisa mendapatkan atau mengatur nilai variabel dalam objek Shader dengan memanggil fungsi pada material. * Tidak ada editor visual untuk nilai-nilai ini. * Perubahan tidak bertahan antara sesi.</p> 
+       <p>Satu-satunya kali Anda biasanya akan <em>not</em> menciptakan properti material adalah jika Anda ingin mengatur nilai properti naungan sepenuhnya menggunakan <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> (misalnya, jika Anda membuat konten prosedural), jika sifat tidak dapat dibuat menjadi sifat material, atau jika Anda tidak ingin mereka diedit dalam Inspektur.</p> 
+       <h2>Kompatibilitas pipa Render</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature name</strong></th> 
+          <th style="text-align:left;"><strong>Built-in <span class="tooltip"><strong>Render Pipeline</strong><span class="tooltiptext">A series of operations that take the contents of a Scene, and displays them on a screen. Unity lets you choose from pre-built render pipelines, or write your own. <a class="tooltipMoreInfoLink" href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span></strong></th> 
+          <th style="text-align:left;"><strong>Universal Render Pipeline (URP)</strong></th> 
+          <th style="text-align:left;"><strong>High Definition Render Pipeline (HDRP)</strong></th> 
+          <th style="text-align:left;"><strong>Custom SRP</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>ShaderLab: Properties block</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Sitemap Dalam kode HLSL Anda, Anda harus menempatkan variabel per-bahan pada <br> yang sama untuk kompatibilitas SRP Batcher.<code>CBUFFER</code> for SRP Batcher compatibility.</td> 
+          <td style="text-align:left;">Sitemap Dalam kode HLSL Anda, Anda harus menempatkan variabel per-bahan pada <br> yang sama untuk kompatibilitas SRP Batcher.<code>CBUFFER</code> for SRP Batcher compatibility.</td> 
+          <td style="text-align:left;">Sitemap Dalam kode HLSL Anda, Anda harus menempatkan variabel per-bahan pada <br> yang sama untuk kompatibilitas SRP Batcher.<code>CBUFFER</code> for SRP Batcher compatibility.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Menggunakan Blok Properti</h2> 
+       <p>Untuk menetapkan sifat material ke objek ShaderLab, Anda menempatkan blok <code>Properties</code> di dalam blok <code>Shader</code>.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Signature</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>Properties</code><br><code>{</code><br><code>&lt;Material property declaration&gt;</code><br><code>&lt;Material property declaration&gt;</code><br><code>}</code>%</td> 
+          <td style="text-align:left;">Simpan sifat yang diberikan sebagai bagian dari aset material, dan gunakan nilai yang disimpan dalam aset material selama rendering. Login Blok <br> dapat mengandung sejumlah deklarasi properti material.<code>Properties</code> block can contain any number of material property declarations.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>deklarasi properti material</h3> 
+       <p>Semua deklarasi properti materi mengikuti format dasar ini:</p> 
+       <pre><code>[optional: attribute] name("display text in Inspector", type name) = default value
+</code></pre> 
+       <p>Sintaks yang tepat bervariasi oleh jenis.</p> 
+       <p>Bagian ini berisi informasi tentang:</p> 
+       <ul> 
+        <li> <a href="#material-property-declaration-syntax-by-type">Bahan properti deklarasi sintaks dengan jenis</a>.</li> 
+        <li><a href="#material-property-attributes">Atribut properti material</a></li> 
+       </ul> 
+       <p><a name="material-property-declaration-syntax-by-type"></a></p> 
+       <h4>Bahan properti deklarasi sintaks dengan jenis</h4> 
+       <p>Nama tipe dan sintaks untuk nilai default tergantung pada jenis properti.</p> 
+       <p>Dalam kode naungan, konvensional untuk memulai semua nama properti dengan karakter underscore. Contoh di halaman ini mengikuti konvensi ini.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Type</strong></th> 
+          <th style="text-align:left;"><strong>Example syntax</strong></th> 
+          <th style="text-align:left;"><strong>Comment</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Integer</strong></td> 
+          <td style="text-align:left;"><code>_ExampleName ("Integer display name", Integer) = 1</code></td> 
+          <td style="text-align:left;">Jenis ini didukung oleh integer nyata (seperti jenis legacy <code>Int</code> yang dijelaskan di bawah ini, yang didukung oleh pelampung). Gunakan ini bukan Int ketika Anda ingin menggunakan integer.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Int</strong> (legacy)</td> 
+          <td style="text-align:left;"><code>_ExampleName ("Int display name", Int) = 1</code></td> 
+          <td style="text-align:left;">Sitemap Jenis warisan ini didukung oleh pelampung, daripada bilangan bulat. Hal ini didukung untuk alasan kompatibilitas mundur saja. Gunakan tipe <strong>Note:</strong> bukan.<code>Integer</code> type instead.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Float</strong></td> 
+          <td style="text-align:left;"> <code>_ExampleName ("Float display name", Float) = 0.5</code><br><br><code>_ExampleName ("Float with range", Range(0.0, 1.0)) = 0.5</code> </td> 
+          <td style="text-align:left;">Nilai maksimum dan minimum untuk slider kisaran termasuk.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Texture2D</strong></td> 
+          <td style="text-align:left;"> <code>_ExampleName ("Texture2D display name", 2D) = "" {}</code><br><br><code>_ExampleName ("Texture2D display name", 2D) = "red" {}</code> </td> 
+          <td style="text-align:left;">Masukkan nilai berikut dalam string nilai default untuk menggunakan salah satu tekstur built-in Unity: "putih" (RGBA: 1,1,1,1), "hitam" (RGBA: 0,0,0,1), "abu" (RGBA: 0,5,0.5,0,1), "bump" (RGBA: 0.5,0.5,1,0.5) atau "merah" (RGBA: 1,0,0,1).<br><br><br><br><strong>Note:</strong> tekstur default ini tidak terlihat dalam Inspektur.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Texture2DArray</strong></td> 
+          <td style="text-align:left;"><code>_ExampleName ("Texture2DArray display name", 2DArray) = "" {}</code></td> 
+          <td style="text-align:left;">Untuk informasi lebih lanjut, lihat <a href="class-Texture2DArray.html">Tekstur array</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Texture3D</strong></td> 
+          <td style="text-align:left;"><code>_ExampleName ("Texture3D", 3D) = "" {}</code></td> 
+          <td style="text-align:left;">Nilai default adalah "abu" (RGBA: 0.5,0.5,0.5,1) tekstur.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><span class="tooltip"><strong>Cubemap</strong><span class="tooltiptext">A collection of six square textures that can represent the reflections in an environment or the skybox drawn behind your geometry. The six squares form the faces of an imaginary cube that surrounds an object; each face represents the view along the directions of the world axes (up, down, left, right, forward and back). <a class="tooltipMoreInfoLink" href="class-Cubemap.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Cubemap">Glossary</a></span></span></span></strong></td> 
+          <td style="text-align:left;"><code>_ExampleName ("Cubemap", Cube) = "" {}</code></td> 
+          <td style="text-align:left;">Nilai default adalah "abu" (RGBA: 0.5,0.5,0.5,1) tekstur.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>CubemapArray</strong></td> 
+          <td style="text-align:left;"><code>_ExampleName ("CubemapArray", CubeArray) = "" {}</code></td> 
+          <td style="text-align:left;">See <a href="class-CubemapArray.html">Cubemap arrays</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Color</strong></td> 
+          <td style="text-align:left;"><code>_ExampleName("Example color", Color) = (.25, .5, .5, 1)</code></td> 
+          <td style="text-align:left;">Peta ini ke float4 dalam kode naungan Anda.<br><br> Bahan Inspektur menampilkan pemilih warna. Jika Anda agak akan mengedit nilai-nilai sebagai empat pelampung individu, gunakan jenis vektor.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Vector</strong></td> 
+          <td style="text-align:left;"><code>_ExampleName ("Example vector", Vector) = (.25, .5, .5, 1)</code></td> 
+          <td style="text-align:left;">Peta ini ke float4 dalam kode naungan Anda.<br><br> Bahan Inspektur menampilkan empat bidang pelampung individu. Jika Anda agak akan mengedit nilai menggunakan pemilih warna, gunakan jenis warna.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h4>Nama properti materi yang dilindungi</h4> 
+       <p>Unity memiliki beberapa nama yang disediakan untuk properti material. Ketika Anda membuat properti material dengan salah satu nama ini, Unity melakukan operasi yang telah ditentukan. Jangan menggunakan nama ini kecuali Anda berniat untuk menggunakan fungsi ini.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Name</strong></th> 
+          <th style="text-align:left;"><strong>Example syntax</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">_TransparencyLM</td> 
+          <td style="text-align:left;"><code>_TransparencyLM ("Transmissive Texture", 2D) = "white" {}</code></td> 
+          <td style="text-align:left;">Aktifkan transparansi RGB kustom selama lightmapping.<br><br> Untuk informasi lebih lanjut, lihat <a href="MetaPass.html">Lightmapping and shaders</a>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="material-property-attributes"></a></p> 
+       <h3>Atribut properti material</h3> 
+       <p>Pernyataan properti material dapat memiliki atribut opsional yang memberi tahu Unity bagaimana menanganinya.</p> 
+       <p>Selain atribut yang tercantum di sini, Anda dapat menggunakan sintaks yang sama untuk menambahkan <a href="../ScriptReference/MaterialPropertyDrawer.html">BahanPropertyDrawer</a> ke properti material. Ini memungkinkan Anda mengontrol bagaimana sifat material muncul di jendela Inspektur.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Attribute</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>[Gamma]</code></td> 
+          <td style="text-align:left;">Menunjukkan bahwa properti float atau vektor menggunakan nilai sRGB, yang berarti bahwa itu harus dikonversi bersama dengan nilai sRGB lainnya jika ruang warna dalam proyek Anda membutuhkan ini. Untuk informasi lebih lanjut, lihat <a href="SL-PropertiesInPrograms.html">Properti dalam Program Shader</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>[HDR]</code></td> 
+          <td style="text-align:left;">Menunjukkan sifat tekstur atau warna menggunakan nilai <a href="HDR.html">rentang dinamis tinggi (HDR)</a>.<br><br> Untuk sifat tekstur, Editor Unity menampilkan peringatan jika tekstur LDR ditugaskan. Untuk sifat warna, Editor Unity menggunakan pemilih warna HDR untuk mengedit nilai ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>[HideInInspector]</code></td> 
+          <td style="text-align:left;">Memberitahukan Editor Unity untuk menyembunyikan properti ini di Inspektur.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>[MainTexture]</code></td> 
+          <td style="text-align:left;">Mengatur tekstur utama untuk Bahan, yang dapat Anda akses menggunakan <a href="../ScriptReference/Material-mainTexture.html">Bahan.mainTexture</a>.<br><br> Secara default, Unity mempertimbangkan tekstur dengan nama properti <code>_MainTex</code> sebagai tekstur utama. Gunakan atribut ini jika tekstur Anda memiliki nama properti yang berbeda, tetapi Anda ingin Unity untuk mempertimbangkan tekstur utama.<br><br> Jika Anda menggunakan atribut ini lebih dari sekali, Unity menggunakan properti pertama dan mengabaikan yang berikutnya.<br><br><strong>Note:</strong> Ketika Anda mengatur tekstur utama menggunakan atribut ini, tekstur tidak terlihat dalam tampilan Game ketika Anda menggunakan mode tampilan debugging streaming tekstur, atau alat debug kustom.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>[MainColor]</code></td> 
+          <td style="text-align:left;">Mengatur warna utama untuk Bahan, yang dapat Anda akses menggunakan <a href="../ScriptReference/Material-color.html">Bahan. warna</a>.<br><br> Secara default, Unity mempertimbangkan warna dengan nama properti <code>_Color</code> sebagai warna utama. Gunakan atribut ini jika warna Anda memiliki nama properti yang berbeda, tetapi Anda ingin Unity untuk mempertimbangkan warna utama. Jika Anda menggunakan atribut ini lebih dari satu kali, Unity menggunakan properti pertama dan mengabaikan yang berikutnya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>[NoScaleOffset]</code></td> 
+          <td style="text-align:left;">Memberitahu Editor Unity untuk menyembunyikan tiling dan mengimbangi bidang untuk properti tekstur ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>[Normal]</code></td> 
+          <td style="text-align:left;">Menunjukkan properti tekstur mengharapkan peta normal.<br><br> Editor Unity menampilkan peringatan jika Anda menetapkan tekstur yang tidak kompatibel.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>[PerRendererData]</code></td> 
+          <td style="text-align:left;">Menunjukkan bahwa properti tekstur akan datang dari data per-renderer dalam bentuk <a href="../ScriptReference/MaterialPropertyBlock.html">BahanPropertyBlock</a>.<br><br> Inspektur Material menunjukkan sifat-sifat ini sebagai read-only.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Menggunakan properti material dengan kode C#</h2> 
+       <p>Sifat material diwakili dalam kode C# oleh kelas <a href="../ScriptReference/MaterialProperty.html">Login Login</a>.</p> 
+       <p>Untuk mengakses variabel yang didefinisikan dalam kode HLSL Anda, Anda dapat memanggil <a href="../ScriptReference/Material.GetFloat.html">Bahan. Login</a>, <a href="../ScriptReference/Material.SetFloat.html">Bahan. Login</a>. Ada metode lain yang sama; lihat <a href="../ScriptReference/Material.html">API documentation</a> untuk daftar lengkap. Ketika Anda mengakses variabel HLSL menggunakan API ini, tidak masalah apakah variabel adalah properti material atau tidak.</p> 
+       <p>Dalam Editor Unity, Anda dapat mengontrol bagaimana sifat material muncul di jendela Inspektur. Cara termudah untuk melakukan ini menggunakan <a href="../ScriptReference/MaterialPropertyDrawer.html">BahanPropertyDrawer</a>. Untuk kebutuhan yang lebih kompleks, Anda dapat menggunakan kelas <a href="../ScriptReference/MaterialEditor.html">MaterialEditor</a>, <a href="../ScriptReference/MaterialProperty.html">Login Login</a>, dan <a href="../ScriptReference/ShaderGUI.html">ShaderGUI</a>. Untuk informasi lebih lanjut tentang membuat GUI kustom untuk naungan, lihat <a href="SL-CustomEditor.html">ShaderLab: menetapkan editor kustom</a>.</p> 
+       <h2>Menggunakan properti material untuk mengatur variabel dalam kode ShaderLab</h2> 
+       <p>Untuk mengatur nilai variabel dalam kode ShaderLab Anda dari properti material, masukkan nama properti material dalam kurung persegi dalam kode ShaderLab Anda.</p> 
+       <p>Kode contoh ini menunjukkan sintaks untuk menggunakan properti material untuk mengatur nilai <code>units</code> dari perintah ShaderLab <code>Offset</code>.</p> 
+       <pre><code>Shader "Examples/MaterialPropertyShaderLab"
+{
+    Properties
+    {
+        // Change this value in the Material Inspector to affect the value of the Offset command
+        _OffsetUnitScale ("Offset unit scale", Integer) = 1
+    }
+    SubShader
+    {
+        // The code that defines the rest of the SubShader goes here
+
+        Pass
+        {
+            Offset 0, [_OffsetUnitScale]
+
+           // The code that defines the rest of the Pass goes here
+        }
+    }
+}
+</code></pre> 
+       <h2>Menggunakan properti material untuk mengatur variabel dalam kode HLSL</h2> 
+       <p>Untuk mengatur nilai variabel dalam kode HLSL menggunakan properti material, memberikan properti material nama yang sama dengan properti naungan.</p> 
+       <p>Anda dapat melihat teknik ini dalam artikel berikut, yang mencakup contoh kode kerja:</p> 
+       <ul> 
+        <li><a href="SL-VertexFragmentShaderExamples.html">Menulis simpul dan naungan fragmen untuk Pipeline Render Built-in</a></li> 
+        <li></li> 
+       </ul> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="SL-Shader.html"></a></span> 
+         <div class="tip">
+           ShaderLab: mendefinisikan objek Shader 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="SL-Fallback.html"></a></span> 
+         <div class="tip">
+           ShaderLab: menetapkan fallback 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

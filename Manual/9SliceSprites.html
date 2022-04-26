@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: 9-slicing Sprites</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Unity2D.html">2D</a></li> 
+         <li><a href="Sprites.html">Sprites</a></li> 
+         <li>9-slicing Sprit</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="class-SortingGroup.html"></a></span> 
+          <div class="tip">
+            Sorting Groups 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="class-SpriteMask.html"></a></span> 
+          <div class="tip">
+            Masker Sprite 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>9-slicing Sprit</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>9-slicing adalah teknik 2D yang memungkinkan Anda untuk menggunakan kembali gambar pada berbagai ukuran tanpa perlu menyiapkan beberapa <span class="tooltip"><a class="tooltipMoreInfoLink" href="AssetWorkflow.html">Assets</a><span class="tooltiptext">Setiap media atau data yang dapat digunakan dalam permainan atau proyek Anda. Aset mungkin berasal dari file yang dibuat di luar Unity, seperti model 3D, file audio atau gambar. Anda juga dapat membuat beberapa jenis aset di Unity, seperti Pengontrol Animator, Audio Mixer atau Tekstur Render. <a href="AssetWorkflow.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Asset">Glossary</a></span></span></span>. Ini melibatkan membagi gambar menjadi sembilan bagian, sehingga ketika Anda mengubah ukuran <span class="tooltip"><a href="Sprites.html">Sprite</a><span class="tooltiptext">Objek grafis 2D. Jika Anda digunakan untuk bekerja di 3D, Sprites pada dasarnya hanya tekstur standar tetapi ada teknik khusus untuk menggabungkan dan mengelola tekstur sprite untuk efisiensi dan kenyamanan selama perkembangan. <a href="Sprites.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Sprite">Glossary</a></span></span></span>, skala atau ubin bagian yang berbeda (yaitu, berulang dalam formasi grid) dengan cara yang berbeda untuk menjaga Sprite secara proporsional. Ini berguna ketika membuat pola atau <span class="tooltip"><a href="class-TextureImporter.html">Textures</a><span class="tooltiptext">Gambar yang digunakan ketika membuat elemen GameObject, Sprite, atau UI. Tekstur sering diterapkan pada permukaan mesh untuk memberikan detail visual. <a href="class-TextureImporter.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#texture">Glossary</a></span></span></span>, seperti dinding atau lantai di lingkungan 2D.</p> 
+       <p>Ini adalah contoh Sprite 9-sliced, dibagi menjadi sembilan bagian. Setiap bagian dilabeli dengan surat dari A ke I.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/9SliceSprites-0.png" alt=""> 
+       </figure> 
+       <p>Poin berikut menjelaskan apa yang terjadi ketika Anda mengubah dimensi gambar:</p> 
+       <ul> 
+        <li><p>Empat sudut (A, C, G dan saya) tidak berubah dalam ukuran.</p></li> 
+        <li><p>Bagian B dan H peregangan atau ubin secara horizontal.</p></li> 
+        <li><p>Bagian D dan F peregangan atau ubin secara vertikal.</p></li> 
+        <li><p>Bagian E peregangan atau ubin secara horizontal dan vertikal.</p></li> 
+       </ul> 
+       <p>Halaman ini menjelaskan bagaimana cara mengatur 9-pengirisan, dan pengaturan yang berlaku tergantung pada apakah Anda ingin peregangan atau ubin daerah yang ditampilkan di atas.</p> 
+       <h2>Menyiapkan Sprite Anda untuk lisensi 9</h2> 
+       <p>Sebelum Anda 9-slice Sprite, Anda perlu memastikan Sprite diatur dengan benar.</p> 
+       <p>Pertama, Anda perlu memastikan <strong>Mesh Type</strong> diatur ke <strong>Full Rect</strong>. Untuk menerapkan ini, pilih Sprite, lalu di jendela Inspektur klik drop-down <strong>Mesh Type</strong> dan pilih <strong>Full Rect</strong>. Jika <strong>Mesh Type</strong> diatur ke <strong>Tight</strong>, 9-slicing mungkin tidak bekerja dengan benar, karena bagaimana Sprite Renderer menghasilkan dan membuat Sprite ketika diatur untuk 9-slicing.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/9SliceSprites-1.png" alt="The Sprite’s Inspector window. Mesh Type is highlighted in the red box."> 
+        <figcaption>
+          Jendela Inspektur Sprite. 
+         <strong>Mesh Type</strong> disorot dalam kotak merah. 
+        </figcaption> 
+       </figure> 
+       <p>Selanjutnya, Anda perlu menentukan perbatasan Sprite melalui jendela <a class="tooltipMoreInfoLink" href="SpriteEditor.html"><strong>Sprite Editor</strong></a>. Untuk melakukan ini, pilih Sprite, lalu di jendela <span class="tooltip"><a href="UsingTheInspector.html">Inspector</a><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span> klik tombol <strong>Sprite Editor</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/9SliceSprites-2.png" alt="The Sprite’s Inspector window. The Sprite Editor button is highlighted in the red box. See documentation on Sprites for information on all of the properties in the Sprite Import Settings."> 
+        <figcaption>
+          Jendela Inspektur Sprite. Tombol 
+         <strong>Sprite Editor</strong> disorot dalam kotak merah. Lihat dokumentasi tentang 
+         <a href="Sprites.html">Sprites</a> untuk informasi tentang semua sifat dalam Pengaturan Impor Sprite. 
+        </figcaption> 
+       </figure> 
+       <p>Gunakan jendela Editor Sprite untuk menentukan perbatasan Sprite (yaitu, di mana Anda ingin mendefinisikan daerah ubin, seperti dinding ubin lantai). Untuk melakukan ini, gunakan panel kontrol Sprite <strong>L</strong>, <strong>R</strong>, <strong>T</strong>, dan bidang <strong>B</strong> (kiri, kanan, atas, dan bawah, masing-masing). Atau, klik dan seret titik-titik hijau di bagian atas, bawah, dan sisi.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/9SliceSprites-3.jpg" alt="Defining the borders of the Sprite in the Sprite Editor window"> 
+        <figcaption>
+          Menentukan perbatasan Sprite di jendela Editor Sprite 
+        </figcaption> 
+       </figure> 
+       <p>Klik <strong>Apply</strong> di bilah atas jendela Editor Sprite. Tutup jendela Editor Sprite, dan seret Sprite dari <span class="tooltip"><a class="tooltipMoreInfoLink" href="ProjectView.html">Jendela proyek</a><span class="tooltiptext">Jendela yang menunjukkan isi folder <code>Assets</code> (Project tab) <a href="ProjectView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Projectwindow">Glossary</a></span></span></span> ke dalam tampilan <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> untuk mulai bekerja di atasnya.</p> 
+       <h2>9-menjelaskan Sprite Anda</h2> 
+       <p>Pilih Sprite di <span class="tooltip"><a class="tooltipMoreInfoLink" href="UsingTheSceneView.html">Tampilan adegan</a><span class="tooltiptext">Tampilan interaktif ke dunia yang Anda buat. Anda menggunakan Adegan Lihat untuk memilih dan posisi pemandangan, karakter, kamera, lampu, dan semua jenis lain dari Game Object. <a href="UsingTheSceneView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#SceneView">Glossary</a></span></span></span> atau <a href="Hierarchy.html">Jendela Hierarchy</a>. Di jendela Inspektur, arahkan ke komponen <span class="tooltip"><a href="class-SpriteRenderer.html">Sprite Renderer</a><span class="tooltiptext">Komponen yang memungkinkan Anda menampilkan gambar sebagai Sprites untuk digunakan di kedua adegan 2D dan 3D. <a href="class-SpriteRenderer.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SpriteRenderer">Glossary</a></span></span></span> dan mengubah properti <strong>Draw Mode</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SpriteRenderer.png" alt=""> 
+       </figure> 
+       <p>Ini diatur ke <strong>Simple</strong> secara default; untuk menerapkan 9-slicing, mengaturnya ke <strong>Sliced</strong> atau <strong>Tiled</strong> tergantung pada perilaku yang Anda inginkan. Bagian-bagian berikut menjelaskan bagaimana masing-masing berperilaku, menggunakan Sprite ini:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/9SliceSprites-4.jpg" alt="The original Sprite used for the examples shown below"> 
+        <figcaption>
+          Sprite asli digunakan untuk contoh yang ditunjukkan di bawah ini 
+        </figcaption> 
+       </figure> 
+       <h3>Simple</h3> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/9SliceSprites-5.png" alt=""> 
+       </figure> 
+       <p>Ini adalah perilaku Sprite Renderer default. Timbangan gambar di semua arah ketika perubahan dimensi. <strong>Simple</strong> tidak digunakan untuk lisensi 9.</p> 
+       <h3>Sliced</h3> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/9SliceSprites-6.png" alt=""> 
+       </figure> 
+       <p>Dalam mode <strong>Sliced</strong>, sudut tetap ukuran yang sama, bagian atas dan bawah peregangan Sprite secara horizontal, sisi peregangan Sprite secara vertikal, dan pusat Sprite membentang secara horizontal dan vertikal sesuai dengan ukuran Sprite.</p> 
+       <p>Ketika <strong>Draw Mode</strong> Sprite diatur ke <strong>Sliced</strong>, Anda dapat memilih untuk mengubah ukuran menggunakan properti <strong>Size</strong> pada Sprite Renderer atau <a href="Toolbar.html">Alat Transform</a>. Anda masih dapat meningkatkan Sprite menggunakan sifat Transform atau Alat Transform; Namun, skala Transform Sprite tanpa menerapkan lisensi 9.</p> 
+       <h3>Tiled</h3> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/9SliceSprites-7.png" alt=""> 
+       </figure> 
+       <p>Dalam mode <strong>Tiled</strong>, sprite tetap ukuran yang sama, dan tidak berskala. Sebagai gantinya, bagian atas dan bawah Sprite mengulang secara horizontal, sisi mengulang secara vertikal, dan pusat pengulangan Sprite dalam formasi ubin agar sesuai dengan ukuran Sprite.</p> 
+       <p>Ketika <strong>Draw Mode</strong> Sprite diatur ke <strong>Sliced</strong>, Anda dapat memilih untuk mengubah ukuran menggunakan properti <strong>Size</strong> pada Sprite Renderer atau <a href="Toolbar.html">Alat Transform</a>. Anda masih dapat meningkatkan Sprite menggunakan sifat Transform atau Alat Transform; Namun, skala Transform Sprite tanpa menerapkan lisensi 9.</p> 
+       <p>Ketika Anda mengatur <strong>Draw Mode</strong> ke <strong>Tiled</strong>, properti tambahan yang disebut <strong>Tile Mode</strong> muncul. Lihat bagian berikutnya di halaman ini untuk informasi lebih lanjut tentang cara kerja <strong>Tile Mode</strong>.</p> 
+       <p>Lihat dokumentasi tentang <a href="class-SpriteRenderer.html">Sprite Renderer</a> untuk rincian lengkap pada semua properti komponen.</p> 
+       <h2>Mode ubin</h2> 
+       <p>Ketika <strong>Draw Mode</strong> diatur ke <strong>Tiled</strong>, gunakan properti <strong>Tile Mode</strong> untuk mengontrol bagaimana bagian berulang ketika dimensi perubahan Sprite.</p> 
+       <h3><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/9SliceSprites-8.png" alt="Set Draw Mode to Tiled to access Tile Mode in Sprite Renderer"></h3> 
+       <h3>Continuous</h3> 
+       <p> <strong>Tile Mode</strong> diatur ke <strong>Continuous</strong> secara default. Ketika ukuran perubahan Sprite, bagian pengulangan berulang secara merata di Sprite.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/9SliceSprites-9.png" alt=""> 
+       </figure> 
+       <h3>Adaptive</h3> 
+       <p>Ketika <strong>Tile Mode</strong> diatur ke <strong>Adaptive</strong>, bagian pengulangan hanya mengulangi ketika dimensi Sprite mencapai <strong>Stretch Value</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/9SliceSprites-10.png" alt=""> 
+       </figure> 
+       <p>Gunakan slider <strong>Stretch Value</strong> untuk mengatur nilai antara <strong>0</strong> dan <strong>1</strong>. Catatan bahwa <strong>1</strong> mewakili gambar diubah menjadi dua kali dimensi aslinya, jadi jika <strong>Stretch Value</strong> ditetapkan pada <strong>1</strong>, bagian berulang ketika gambar diregangkan dua kali ukuran aslinya.</p> 
+       <p>Untuk menunjukkan ini, gambar berikut menunjukkan perbedaan antara gambar dengan dimensi yang sama tetapi ruang <strong>Stretch Value:</strong>% yang berbeda</p> 
+       <p> <strong>Stretch Value 0.1</strong>:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/9SliceSprites-11.png" alt=""> 
+       </figure> 
+       <p> <strong>Stretch Value 0.5</strong>:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/9SliceSprites-12.png" alt=""> 
+       </figure> 
+       <h2>9-slicing dan Colliders</h2> 
+       <p>Jika <a href="Sprites.html">Sprite</a> Anda memiliki <a href="Collider2D.html">Collider2D</a> terpasang, Anda perlu memastikan bahwa ketika Anda mengubah dimensi Sprite, perubahan Collider2D dengan itu.</p> 
+       <p> <a href="class-BoxCollider2D.html">Kotak Collider 2D</a> dan <a href="class-PolygonCollider2D.html">Poligon Collider 2D</a> adalah satu-satunya komponen Collider2D dalam Unity yang mendukung 9-slicing. Dua Collider2Ds ini memiliki kotak cemen <strong>Auto Tiling</strong>. Untuk memastikan komponen Collider2D diatur untuk 9-slicing, pilih Sprite Anda menerapkannya ke, arahkan ke Collider2D di jendela Inspektur, dan centang kotak centang <strong>Auto Tiling</strong>. Ini memungkinkan pembaruan otomatis pada bentuk Collider2D, yang berarti bahwa bentuknya secara otomatis disesuaikan ketika perubahan dimensi Sprite. Jika Anda tidak mengaktifkan <strong>Auto Tiling</strong>, Collider2D tetap bentuk dan ukuran yang sama, bahkan ketika perubahan dimensi Sprite.</p> 
+       <h3>Batasan dan masalah yang diketahui</h3> 
+       <ul> 
+        <li><p>Satu-satunya dua Collider2D yang mendukung 9-slicing adalah BoxCollider2D dan PolygonCollider2D.</p></li> 
+        <li><p>Anda tidak dapat mengedit BoxCollider2D atau PolygonCollider2D ketika <strong>Draw Mode</strong> Sprite Renderer diatur ke <strong>Sliced</strong> atau <strong>Tiled</strong>. Mengedit di jendela Inspektur dinonaktifkan, dan peringatan muncul untuk memberitahu Anda bahwa Collider2D tidak dapat diedit karena didorong oleh sifat tiling komponen Sprite Renderer.</p></li> 
+        <li><p>Ketika bentuk regenerasi pada <strong>Auto Tiling</strong>, tepi tambahan mungkin muncul dalam bentuk Collider2D. Ini mungkin memiliki efek pada <span class="tooltip"><strong>collisions</strong><span class="tooltiptext">tabrakan terjadi ketika mesin fisika mendeteksi bahwa tabrakan dari dua GameObjects membuat kontak atau tumpang tindih, ketika setidaknya satu memiliki komponen kaku dan bergerak. <a class="tooltipMoreInfoLink" href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Collision">Glossary</a></span></span></span>.</p></li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="class-SortingGroup.html"></a></span> 
+         <div class="tip">
+           Sorting Groups 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="class-SpriteMask.html"></a></span> 
+         <div class="tip">
+           Masker Sprite 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Klip Audio</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Audio.html">Audio</a></li> 
+         <li>Referensi Audio</li> 
+         <li>Audio Klip</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="AmbisonicAudio.html"></a></span> 
+          <div class="tip">
+            Audio di Ambisonic 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="class-AudioListener.html"></a></span> 
+          <div class="tip">
+            Pendengaran Audio 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Audio Klip</h1> 
+       <!--BeginSwitchLink--> 
+       <a href="../ScriptReference/AudioClip.html" title="Go to AudioClip page in the Scripting Reference" class="switch-link gray-btn sbtn left">Switch to Scripting</a> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p> <strong>Audio Clips</strong> mengandung data audio yang digunakan oleh <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-AudioSource.html">Sumber Audio</a><span class="tooltiptext">Komponen yang memainkan kembali Klip Audio dalam adegan ke pendengaran audio atau melalui mixer audio. <a href="class-AudioSource.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#AudioSource">Glossary</a></span></span></span>. Unity mendukung aset audio mono, stereo dan multichannel (hingga delapan saluran). Format file audio yang dapat diimpor adalah <strong>.aif</strong>, <strong>.wav</strong>, <strong>.mp3</strong>, dan <strong>.ogg</strong>. Unity juga dapat mengimpor <a href="TrackerModules.html">modul tracker</a> dalam format <strong>.xm</strong>, <strong>.mod</strong>, <strong>.it</strong>, dan <strong>.s3m</strong>. Aset modul pelacak berperilaku cara yang sama dengan aset audio lainnya di Unity meskipun tidak ada pratinjau gelombang yang tersedia dalam impor aset <span class="tooltip"><strong>inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AudioClipImporter50.png" alt="The Audio Clip inspector"> 
+        <figcaption>
+          Inspektur Klip Audio 
+        </figcaption> 
+       </figure> 
+       <h2>Options</h2> 
+       <p><strong>Force To Mono</strong></p> 
+       <p>Ketika opsi ini diaktifkan, audio multi-channel akan dicampur ke trek mono sebelum pengepakan.</p> 
+       <p><strong>Normalize</strong></p> 
+       <p>Ketika opsi ini diaktifkan, audio akan menjadi <a href="https://en.wikipedia.org/wiki/Audio_normalization">normalized</a> selama proses pencampuran ke Mono.</p> 
+       <p><strong>Load In Background</strong></p> 
+       <p>Ketika opsi ini diaktifkan, pemuatan klip akan terjadi pada waktu yang tertunda pada benang terpisah, tanpa menghalangi benang utama.</p> 
+       <p><strong>Ambisonic</strong></p> 
+       <p>Sumber audio Ambisonic menyimpan audio dalam format yang mewakili lapangan suara yang dapat diputar berdasarkan orientasi pendengar. Ini berguna untuk video 360 derajat dan aplikasi XR. Aktifkan opsi ini jika file audio Anda mengandung audio Ambisonic-encoded.</p> 
+       <h2>Properties</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong><em>Property:</em></strong></th> 
+          <th style="text-align:left;"><strong><em>Function:</em></strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Load&nbsp;Type</strong></td> 
+          <td style="text-align:left;">Metode Unity menggunakan untuk memuat aset audio pada runtime.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Decompress&nbsp;On&nbsp;Load</strong></td> 
+          <td style="text-align:left;">File audio akan terurai segera setelah dimuat. Gunakan opsi ini untuk suara terkompresi yang lebih kecil untuk menghindari kinerja overhead dekompresi di terbang. Ketahuilah bahwa depresi suara Vorbis-encoded pada beban akan menggunakan sekitar sepuluh kali lebih memori daripada menjaga mereka terkompresi (untuk pengkodean ADPCM sekitar 3,5 kali), jadi jangan gunakan opsi ini untuk file besar.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Compressed&nbsp;In&nbsp;Memory</strong></td> 
+          <td style="text-align:left;">Jauhkan suara terkompresi dalam memori dan dekompresi saat bermain. Opsi ini memiliki overhead kinerja sedikit (terutama untuk file yang dikompresi Ogg / Vorbis) sehingga hanya menggunakannya untuk file yang lebih besar di mana dekompresi pada beban akan menggunakan sejumlah memori yang dilarang. Dekompresi terjadi pada benang mixer dan dapat dimonitor di bagian "DSP CPU" dalam pane audio dari jendela <span class="tooltip"><strong>profiler</strong><span class="tooltiptext">Jendela yang membantu Anda untuk mengoptimalkan permainan Anda. Ini menunjukkan berapa banyak waktu yang dihabiskan di berbagai bidang permainan Anda. Sebagai contoh, dapat melaporkan persentase waktu yang dihabiskan <strong>rendering</strong>, aimating, atau dalam logika permainan Anda. <a class="tooltipMoreInfoLink" href="Profiler.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profiler">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Streaming</strong></td> 
+          <td style="text-align:left;">Decode suara di terbang. Metode ini menggunakan jumlah memori minimal untuk menyangga data terkompresi yang secara bertahap dibaca dari disk dan dikodekan di terbang. Perhatikan bahwa dekompresi terjadi pada benang streaming terpisah yang penggunaan CPU dapat dipantau di bagian "Streaming CPU" dalam pane audio dari jendela profiler. Sitemap Streaming klip memiliki kelebihan beban sekitar 200KB, bahkan jika tidak ada data audio dimuat.<strong>Note</strong>: Streaming clips has an overload of approximately 200KB, even if none of the audio data is loaded.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Compression&nbsp;Format</strong></td> 
+          <td style="text-align:left;">Format spesifik yang akan digunakan untuk suara pada runtime. Perhatikan bahwa opsi yang tersedia tergantung pada target build yang dipilih saat ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>PCM</strong></td> 
+          <td style="text-align:left;">Opsi ini menawarkan kualitas yang lebih tinggi pada pengeluaran ukuran file yang lebih besar dan terbaik untuk efek suara yang sangat singkat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>ADPCM</strong></td> 
+          <td style="text-align:left;">Format ini berguna untuk suara yang mengandung sedikit suara yang adil dan perlu dimainkan dalam jumlah besar, seperti langkah kaki, dampak, senjata. Rasio <span class="tooltip"><strong>compression</strong><span class="tooltiptext">Metode menyimpan data yang mengurangi jumlah ruang penyimpanan yang dibutuhkan. <a href="class-TextureImporterOverride.html">Kompresi Tekstur</a>, <a href="class-AnimationClip.html#AssetProperties">Kompresi Animasi</a>, <a href="class-AudioClip.html">Kompresi Audio</a>, <a href="ReducingFilesize.html">Membangun Kompresi</a>.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#compression">Glossary</a></span></span></span> adalah 3,5 kali lebih kecil dari PCM, tetapi penggunaan CPU jauh lebih rendah dari format MP3 / Vorbis yang membuatnya pilihan yang lebih disukai untuk kategori suara yang disebutkan sebelumnya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Vorbis/MP3</strong></td> 
+          <td style="text-align:left;">Hasil kompresi dalam file yang lebih kecil tetapi dengan kualitas yang agak lebih rendah dibandingkan dengan audio PCM. Jumlah kompresi dapat dikonfigurasi melalui slider Kualitas. Format ini terbaik untuk efek suara panjang menengah dan musik.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Sample&nbsp;Rate&nbsp;Setting</strong></td> 
+          <td style="text-align:left;">Format kompresi PCM dan ADPCM memungkinkan pengurangan tingkat sampel secara otomatis dioptimalkan atau manual.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Preserve&nbsp;Sample&nbsp;Rate</strong></td> 
+          <td style="text-align:left;">Pengaturan ini menyimpan tingkat sampel yang tidak dimodifikasi (standar).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Optimize&nbsp;Sample&nbsp;Rate</strong></td> 
+          <td style="text-align:left;">Pengaturan ini secara otomatis mengoptimalkan tingkat sampel sesuai dengan konten frekuensi tertinggi yang dianalisis.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Override&nbsp;Sample&nbsp;Rate</strong></td> 
+          <td style="text-align:left;">Pengaturan ini memungkinkan overriding manual dari tingkat sampel, sehingga efektif ini dapat digunakan untuk membuang konten frekuensi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Force&nbsp;To&nbsp;Mono</strong></td> 
+          <td style="text-align:left;">Jika diaktifkan, klip audio akan dicampur ke suara saluran tunggal. Setelah down-mixing sinyal dinormalisasi puncak, karena proses pencampuran turun biasanya menghasilkan sinyal yang lebih tenang daripada yang asli, maka sinyal yang dinormalkan puncak memberikan ruang kepala yang lebih baik untuk penyesuaian nanti melalui properti volume <a href="class-AudioSource.html">AudioSource</a> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Load&nbsp;In&nbsp;Background</strong></td> 
+          <td style="text-align:left;">Jika diaktifkan, klip audio akan dimuat di latar belakang tanpa menyebabkan kios pada benang utama. Ini dimatikan secara default untuk memastikan perilaku standar Unity di mana semua AudioClips telah selesai memuat ketika <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> mulai bermain. Perhatikan bahwa bermain permintaan pada AudioClips yang masih memuat di latar belakang akan rusak sampai klip dilakukan pemuatan. Negara beban dapat dikuasai melalui properti AudioClip.loadState.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Preload&nbsp;Audio&nbsp;Data</strong></td> 
+          <td style="text-align:left;">Jika diaktifkan, klip audio akan dibongkar saat adegan dimuat. Ini secara default untuk mencerminkan perilaku standar Unity di mana semua AudioClips telah selesai memuat ketika adegan mulai bermain. Jika bendera ini tidak diatur, data audio akan dimuat pada <a href="class-AudioSource.html">AudioSource</a> pertama. Play()/<a href="class-AudioSource.html">AudioSource</a>.PlayOneShot(), atau dapat dimuat melalui <a href="class-AudioSource.html">AudioSource</a>. LoadAudioData() dan dibongkar lagi melalui <a href="class-AudioSource.html">AudioSource</a>. Login</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Quality</strong></td> 
+          <td style="text-align:left;">Menentukan jumlah Kompresi untuk diterapkan pada klip <strong>Compressed</strong>. Tidak berlaku untuk format PCM/ADPCM/HEVAG. Statistik tentang ukuran file dapat dilihat di inspektur. Pendekatan yang baik untuk menyeimbangkan nilai ini adalah untuk menyeret slider ke tempat yang meninggalkan pemutaran "baik yang baik" sambil menjaga file cukup kecil untuk persyaratan distribusi Anda. Perhatikan bahwa ukuran asli berkaitan dengan file asli, jadi jika ini adalah file MP3 dan Format Kompresi diatur ke PCM (yaitu tidak terkompresi), rasio yang dihasilkan akan lebih besar dari 100% karena file sekarang disimpan tidak terkompresi dan mengambil lebih banyak ruang daripada sumber MP3 yang berasal.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Jendela Pratinjau</h2> 
+       <p>Jendela Preview berisi tiga ikon.</p> 
+       <p>Sitemap Ketika Auto Play adalah pada klip akan bermain segera setelah mereka dipilih.<img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AudioPreviewAuto.png" alt="Turn Auto Play On/Off"> When Auto Play is on the clips will play as soon as they are selected.</p> 
+       <p>Sitemap Ketika Loop berada di klip akan bermain dalam lingkaran terus-menerus.<img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AudioPreviewLoop.png" alt="Turn Loop On/Off"> When Loop is on the clips will play in a continual loop.</p> 
+       <p>Sitemap Ini akan memainkan klip.<img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AudioPreviewPlay.png" alt="Play"> This will play the clip.</p> 
+       <h2>Mengimpor Aset Audio</h2> 
+       <p>Unity mampu membaca berbagai format file sumber. Kapan pun file diimpor, itu akan dikodekan ke format yang cocok untuk target build dan jenis suara. Ini dapat dipilih melalui pengaturan Format Kompresi dalam inspektur.</p> 
+       <p>Secara umum, format PCM dan Vorbis / MP3 lebih disukai untuk menjaga suara sedekat mungkin. PCM sangat ringan pada persyaratan CPU, karena suara tidak terkompresi dan hanya bisa dibaca dari memori. Vorbis / MP3 memungkinkan informasi yang tidak dapat didiskusikan secara adaptif melalui slider Kualitas.</p> 
+       <p>ADPCM adalah kompromi antara penggunaan memori dan CPU di mana ia hanya menggunakan CPU yang sedikit lebih dari opsi PCM yang tidak terkompresi, tetapi menghasilkan faktor kompresi 3,5 konstan, yang pada umumnya sekitar 3 kali lebih buruk daripada kompresi yang dapat dicapai dengan kompresi Vorbis atau MP3. Selanjutnya ADPCM (seperti PCM) memungkinkan secara otomatis dioptimalkan atau mengatur tingkat sampel secara manual untuk digunakan, yang - tergantung pada konten frekuensi suara dan kehilangan kualitas yang diterima - dapat lebih menyusut ukuran aset suara yang dikemas.</p> 
+       <p>File modul (.mod,.it,.s3m..xm) dapat memberikan kualitas yang sangat tinggi dengan jejak yang sangat rendah. Ketika menggunakan file modul, kecuali Anda secara khusus ingin ini, pastikan bahwa Jenis Beban diatur ke <em>Terkompresi Dalam Memori</em>, karena jika diatur ke <em>Dekompresi Pada Beban</em> seluruh lagu akan terdekompresi. Ini adalah perilaku baru dalam Unity 5.0 yang memungkinkan GetData / SetData digunakan pada jenis klip ini juga, tetapi kasus penggunaan umum dan default untuk modul pelacak adalah untuk memiliki mereka terkompresi dalam memori.</p> 
+       <p>Sebagai aturan umum thumb, audio <em>Compressed</em> (atau modul) terbaik untuk file panjang seperti musik latar belakang atau dialog, sementara <em>PCM</em> dan <em>ADPCM</em> lebih baik untuk efek suara pendek yang mengandung beberapa kebisingan, sebagai artefak <em>ADPCM</em> terlalu jelas pada sinyal halus. Anda harus mengubah jumlah Kompresi menggunakan slider kompresi. Mulai dengan kompresi tinggi dan secara bertahap mengurangi pengaturan ke titik di mana hilangnya kualitas suara rentan. Kemudian, meningkatkannya lagi sedikit sampai kehilangan kualitas yang dirasakan hilang.</p> 
+       <h2>Detail spesifik platform</h2> 
+       <p>Unity mendukung mengimpor berbagai file suara format sumber. Namun ketika mengimpor file ini (dengan pengecualian file pelacak), mereka selalu dikodekan kembali ke format target build. Secara default, format ini adalah Vorbis, meskipun ini dapat overridden per platform ke format lain (ADPCM, MP3 dll) jika diperlukan.</p> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2017–08–09 Sitemap</span></p></li> 
+        <li><p><span class="page-history">Ambisonic support checkbox ditambahkan dalam Unity <span class="search-words">NewIn20171</span></span></p></li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="AmbisonicAudio.html"></a></span> 
+         <div class="tip">
+           Audio di Ambisonic 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="class-AudioListener.html"></a></span> 
+         <div class="tip">
+           Pendengaran Audio 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Analisis Unity A / B Pengujian</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="monetization" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UnityServices.html">Layanan Unity</a></li> 
+         <li><a href="UnityAnalytics.html">Analisis Unity</a></li> 
+         <li>Analisis Unity A / B Pengujian</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UnityAnalyticsRemoteSettingsTesting.html"></a></span> 
+          <div class="tip">
+            Pengujian Pengaturan Jarak Jauh 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UnityAnalyticsMonetization.html"></a></span> 
+          <div class="tip">
+            Monetization 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Analisis Unity A / B Pengujian</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p> <em><strong>Note</strong>: sekarang tersedia sebagai <span class="tooltip"><strong>preview package</strong><span class="tooltiptext">A </span></span></em>preview* paket dalam pengembangan dan belum siap untuk produksi. Paket dalam pratinjau mungkin ada tahap perkembangan, dari tahap awal hingga penyelesaian dekat.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Previewpackage">Glossary</a></span>. Remote Config adalah penawaran yang ditingkatkan yang memungkinkan Anda untuk mengubah perilaku dan penampilan permainan Anda tanpa memerlukan biner baru. Anda dapat mengaktifkan atau menonaktifkan fitur, mengubah spesifikasi permainan Anda untuk menargetkan audiens tertentu, atau menjalankan acara khusus dengan menjadwalkan rilis konten baru. Sitemap</p> 
+       <p>Tes A / B adalah eksperimen terkontrol yang mengekspos berbagai kelompok pemain untuk variasi beberapa aspek permainan Anda. Aspek permainan yang dapat Anda uji mendasar, seperti skema kontrol input, atau dapat kosmetik, seperti perawatan warna yang berbeda, atau sesuatu yang lain di antaranya. Tes A / B memungkinkan Anda untuk membandingkan metrik kunci yang dikumpulkan selama percobaan untuk membantu Anda menganalisis variasi yang melakukan lebih baik.</p> 
+       <p><strong>How does A/B testing work?</strong></p> 
+       <p>Unity <span class="tooltip"><strong>Analytics</strong><span class="tooltiptext"><strong>Unity Analytics</strong><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Analytics">Glossary</a></span></span></span> A / B kelompok pengujian pemain sesuai dengan varian yang Anda tentukan dalam percobaan Anda. Setiap kelompok melihat perawatan permainan Anda yang Anda tentukan untuk kelompok varian itu. Perawatan adalah satu set atau lebih <span class="tooltip"><span class="tooltiptext">Pengaturan jarak jauh adalah variabel game yang dapat Anda set jarak jauh di Dasbor Analisis Anda. <a href="UnityAnalyticsRemoteSettings.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#RemoteSettings">Glossary</a></span></span></span> yang Anda menetapkan nilai unik untuk setiap kelompok varian. Pada runtime, layanan pengujian A / B secara acak menetapkan pemain ke salah satu kelompok berdasarkan persentase alokasi varian Anda. Pemain menerima nilai Pengaturan Jarak Jauh untuk kelompok mereka yang ditugaskan. Aplikasi Anda kemudian menggunakan Pengaturan Jarak Jauh sehingga pemain mengalami aspek permainan Anda yang ingin Anda uji.</p> 
+       <p>Bagian kunci dari tes A / B meliputi:</p> 
+       <ul> 
+        <li><p> <strong>Experiment</strong> - tes yang dijalankan dengan menunjukkan perawatan yang berbeda untuk kelompok pemain yang berbeda.</p></li> 
+        <li><p> <strong>Variant</strong> — menentukan jumlah kelompok dan distribusi pemain kepada kelompok-kelompok tersebut. Satu varian selalu kelompok kontrol.</p></li> 
+        <li><p> <strong>Treatment</strong> — menentukan Pengaturan Jarak Jauh untuk digunakan untuk percobaan dan nilai pengaturan khusus untuk setiap varian.</p></li> 
+        <li><p> <strong>Goal</strong> - Analisis metrik yang ingin Anda perbaiki dengan percobaan. Percobaan membandingkan metrik tujuan di seluruh kelompok varian sehingga Anda dapat melihat perawatan mana yang memiliki efek yang paling diinginkan.</p></li> 
+       </ul> 
+       <p>Anda dapat menjalankan lebih dari satu percobaan pada saat yang sama, tetapi Anda harus berhati-hati bahwa eksperimen yang berbeda tidak berinteraksi karena beberapa pemain akan melihat perawatan eksperimental untuk kedua percobaan. Misalnya, jika Anda menjalankan tes untuk membandingkan pemesanan langkah-langkah dalam tutorial onboarding Anda dalam satu percobaan dan menjalankan tes yang berbeda untuk menguji pacing tutorial, Anda akan memiliki kesulitan mencari tahu percobaan yang menyebabkan perubahan dalam hasil. Meskipun contoh itu mungkin cukup jelas, bahkan tes bagian yang tidak terkait dari permainan Anda bisa berinteraksi. Semakin mendasar bagian dari permainan Anda, Anda menguji dan semakin besar kelompok eksperimental Anda, semakin banyak kesempatan untuk interaksi eksperimental.</p> 
+       <p>Membuat dan menjalankan tes A / B dari Dasbor <span class="tooltip"><strong>Unity Analytics</strong><span class="tooltiptext">Sebuah platform data yang menyediakan analitik untuk permainan Unity Anda. <a class="tooltipMoreInfoLink" href="UnityAnalytics.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UnityAnalytics">Glossary</a></span></span></span>. Anda juga harus menerapkan perawatan eksperimen dalam aplikasi Anda menggunakan API <a href="UnityAnalyticsRemoteSettings.html">Pengaturan Jarak Jauh</a>.</p> 
+       <h1>Membuat percobaan</h1> 
+       <p>Untuk membuat percobaan:</p> 
+       <ol> 
+        <li><p>Pergi ke Dasbor Analisis untuk proyek Anda.</p></li> 
+        <li><p>Klik <strong>A/B Testing</strong> untuk membuka halaman Pengujian A / B.</p></li> 
+        <li> <p>Klik tombol <strong>Create Experiment</strong>.</p> <p>Dialog <strong>Create new experiment</strong> terbuka.</p> 
+         <figure> 
+          <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UnityAnalyticsABTesting0.png" alt=""> 
+         </figure> </li> 
+        <li><p>Masukkan nama untuk percobaan.</p></li> 
+        <li><p>Klik <strong>Create</strong>.</p></li> 
+       </ol> 
+       <p>Setelah percobaan telah diciptakan, Anda harus menentukan tujuan, varian dan perawatan.</p> 
+       <h2>Pilih tujuan eksperimen</h2> 
+       <p>Tujuan eksperimen mendefinisikan metrik analitik yang perawatan eksperimen dirancang untuk mempengaruhi. Anda dapat memilih:</p> 
+       <ul> 
+        <li><p><span class="tooltip"><strong>Day 1 Retention</strong><span class="tooltiptext">Persentase pemain yang kembali ke permainan Anda satu hari setelah bermain pertama kalinya. <a class="tooltipMoreInfoLink" href="UnityAnalyticsTerminology.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Day1Retention">Glossary</a></span></span></span> — persentase pengguna yang kembali ke permainan Anda persis satu hari setelah pertama kali mereka bermain.</p></li> 
+        <li><p><span class="tooltip"><strong>Day 7 Retention</strong><span class="tooltiptext">Persentase pemain yang kembali ke permainan Anda tujuh hari setelah bermain pertama kalinya. <a class="tooltipMoreInfoLink" href="UnityAnalyticsTerminology.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Day7Retention">Glossary</a></span></span></span> — persentase pengguna yang kembali ke permainan Anda persis tujuh hari setelah pertama kali mereka bermain.</p></li> 
+       </ul> 
+       <p><a href="#reports">report</a> yang dihasilkan untuk percobaan Anda menunjukkan perbedaan dalam metrik di berbagai varian eksperimen. Tujuan yang dipilih juga mempengaruhi jumlah waktu percobaan harus dijalankan untuk mengumpulkan data yang signifikan secara statistik. Misalnya, dibutuhkan lebih lama untuk menjalankan retensi hari pengukuran percobaan dari satu hari retensi 1.</p> 
+       <p>Untuk memilih tujuan percobaan:</p> 
+       <ol> 
+        <li> <p>Klik tombol <strong>Select Experiment Goal</strong>.</p> 
+         <figure> 
+          <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UnityAnalyticsABTesting1.png" alt=""> 
+         </figure> </li> 
+        <li> <p>Pilih tujuan dari daftar drop-down.</p> 
+         <figure> 
+          <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UnityAnalyticsABTesting2.png" alt=""> 
+         </figure> </li> 
+        <li><p>Klik <strong>Save</strong>.</p></li> 
+       </ol> 
+       <h2>Mengatur varian eksperimen</h2> 
+       <p>Gunakan bagian <strong>Variants</strong> eksperimen untuk menentukan kelompok pemain untuk tes A / B dan menetapkan persentase pemain layanan pengujian mengalokasikan ke setiap kelompok.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UnityAnalyticsABTesting3.png" alt="Variants section"> 
+        <figcaption>
+          Variants section 
+        </figcaption> 
+       </figure> 
+       <p>Kelompok <strong>Control</strong> selalu ada. Kelompok kontrol harus menerima pengalaman terkini atau default dalam permainan Anda. Kelompok ini memberikan dasar hasil dari kelompok lain dapat dibandingkan.</p> 
+       <p>Untuk menambahkan varian tambahan, klik tombol <strong>ADD</strong> di bagian atas. Menetapkan nama dan persentase alokasi untuk kelompok. Persentase alokasi untuk semua kelompok harus menambah 100%. Kolom <strong>Estimate</strong> menampilkan jumlah pemain yang diharapkan dapat dialokasikan untuk setiap varian per hari.</p> 
+       <p>Untuk menghapus varian, klik trash dapat ikon di sebelah namanya.</p> 
+       <p>Perkiraan waktu untuk menyelesaikan percobaan didasarkan pada berapa lama harus mengambil untuk mencapai jumlah sampel yang valid secara statistik. Semakin banyak pemain (DAU) aplikasi Anda biasanya memiliki dan semakin besar alokasi pemain untuk varian eksperimental, semakin pendek perkiraan waktu akan.</p> 
+       <p>Klik <strong>Save</strong> ketika varian Anda ditetapkan sesuai keinginan.</p> 
+       <h2>Mengatur perawatan eksperimen</h2> 
+       <p>Gunakan bagian <strong>Treatments</strong> untuk menentukan pengaturan yang digunakan dalam percobaan dan menetapkan nilai pengaturan individu untuk setiap kelompok.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UnityAnalyticsABTesting4.png" alt="Treatments section"> 
+        <figcaption>
+          Bagian perawatan 
+        </figcaption> 
+       </figure> 
+       <p>Klik tombol <strong>ADD</strong> untuk menambahkan pengaturan untuk percobaan.</p> 
+       <p>Anda dapat menggunakan Pengaturan Jarak Jauh yang ada dari konfigurasi Rilis selama pengaturan tidak digunakan dalam eksperimen aktif lainnya. Perhatikan bahwa halaman Pengaturan Jarak Jauh hanya menampilkan nilai default yang digunakan untuk kelompok kontrol. Pengaturan varian hanya dapat dilihat atau diubah di halaman Pengujian A / B.</p> 
+       <p>Anda dapat membuat pengaturan baru tanpa masuk ke halaman Pengaturan Jarak Jauh. Pengaturan yang dibuat dalam Pengujian A / B tidak ditampilkan di halaman Pengaturan Jarak Jauh. Jika Anda ingin terus menggunakan pengaturan setelah percobaan selesai, Anda dapat membuat Pengaturan Jarak Jauh dengan nama yang sama.</p> 
+       <p>Klik <strong>Save</strong> ketika perawatan Anda ditentukan.</p> 
+       <h2>Menerapkan perawatan Anda</h2> 
+       <p>Gunakan <a class="tooltipMoreInfoLink" href="UnityAnalyticsRemoteSettingsUsing.html">API</a> untuk mengakses nilai-nilai yang didefinisikan dalam percobaan Anda saat ini. Gunakan nama pengaturan yang ditunjukkan pada bagian Perawatan sebagai kunci ketika mengakses pengaturan dalam permainan Anda. Anda dapat menerapkan Pengaturan Jarak Jauh pada <a href="UnityAnalyticsRemoteSettingsScripting.html">code</a> atau menggunakan <a href="UnityAnalyticsRemoteSettingsComponent.html">Komponen Pengaturan jarak jauh</a> untuk mengakses dan menerapkan nilai pengaturan di jendela Unity <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>.</p> 
+       <h1>Mengelola eksperimen</h1> 
+       <p>Setelah Anda membuat setidaknya satu percobaan, halaman Pengujian A / B menampilkan eksperimen Anda dalam daftar.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UnityAnalyticsABTesting5.png" alt="Experiment queue"> 
+        <figcaption>
+          Experiment queue 
+        </figcaption> 
+       </figure> 
+       <p><strong>To start an experiment:</strong></p> 
+       <ol> 
+        <li><p>Klik nama percobaan dalam status <strong>Not Started</strong>.</p></li> 
+        <li><p>Klik tombol <strong>Start Experiment</strong>.</p></li> 
+       </ol> 
+       <p>Sitemap Setelah percobaan dimulai, Anda tidak bisa lagi membuat perubahan, karena itu akan membatalkan hasil tes.<strong>Note: </strong>After an experiment has started, you can no longer make changes, since that would invalidate the test results.</p> 
+       <p><strong>To stop an experiment:</strong></p> 
+       <ol> 
+        <li><p>Klik nama percobaan dalam status <strong>Running</strong>.</p></li> 
+        <li><p>Klik tombol <strong>Stop Experiment</strong>.</p></li> 
+       </ol> 
+       <p>Sitemap Anda tidak dapat memulai percobaan.<strong>Note:</strong> You cannot restart an experiment.</p> 
+       <p><strong>To view a report:</strong></p> 
+       <ol> 
+        <li><p>Klik nama percobaan dalam status <strong>Ended</strong>.</p></li> 
+        <li><p>Bagian Pelaporan menampilkan hasil percobaan.</p></li> 
+       </ol> 
+       <p><a name="reports"></a></p> 
+       <h1>Reports</h1> 
+       <p>Gunakan bagian Laporan untuk meninjau hasil eksperimen setelah selesai.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UnityAnalyticsABTesting6.png" alt="Reports section"> 
+        <figcaption>
+          Reports section 
+        </figcaption> 
+       </figure> 
+       <p>Laporan ini mencantumkan kelompok varian, metrik yang direkam untuk tujuan percobaan, dan bagaimana setiap varian dibandingkan dengan kelompok kontrol. ( Peringkat signifikan menggunakan tingkat signifikansi statistik standar 5%.)</p> 
+       <ul> 
+        <li> <span class="page-edit">2018–08–01 Sitemap</span> 
+         <ul> 
+          <li><span class="page-edit">2018-08-01 - Layanan yang kompatibel dengan Unity 5.5 seterusnya pada tanggal ini tetapi kompatibilitas versi dapat dikenakan perubahan.</span></li> 
+          <li><span class="page-history">Fitur baru di 2018.1</span></li> 
+         </ul> </li> 
+       </ul> 
+       <!-- area:monetization --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UnityAnalyticsRemoteSettingsTesting.html"></a></span> 
+         <div class="tip">
+           Pengujian Pengaturan Jarak Jauh 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UnityAnalyticsMonetization.html"></a></span> 
+         <div class="tip">
+           Monetization 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy"> 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

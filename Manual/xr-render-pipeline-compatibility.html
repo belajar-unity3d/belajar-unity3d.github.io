@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Universal Render Pipeline kompatibilitas di XR</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="platforms" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Unity User Manual 2022.1 (beta)</a></li> 
+         <li><a href="XR.html">XR</a></li> 
+         <li>Render Universal Kecocokan pipa di XR</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="configuring-project-for-xr.html"></a></span> 
+          <div class="tip">
+            Mengkonfigurasi Proyek Unity Anda untuk XR 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="xr-template-vr.html"></a></span> 
+          <div class="tip">
+            Template proyek Unity VR 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Render Universal Kecocokan pipa di XR</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Mendukung fitur XR di Universal <span class="tooltip"><strong>Render Pipeline</strong><span class="tooltiptext">Rangkaian operasi yang mengambil isi dari Adegan, dan menampilkannya di layar. Unity memungkinkan Anda memilih dari pipa render yang dibangun sebelumnya, atau menulis sendiri. <a class="tooltipMoreInfoLink" href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span> (URP) bervariasi oleh versi paket URP. Ini rincian halaman kompatibilitas antara fitur XR di Unity 2020.2 dan versi URP kompatibel terbaru.</p> 
+       <p>Untuk menentukan versi URP yang kompatibel dengan versi Unity Anda saat ini, lihat halaman dalam dokumentasi Pipeline Universal Render.</p> 
+       <p>Unity 2020.2 mendukung fitur AR dan VR berikut di Universal Render Pipeline:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature</strong></th> 
+          <th style="text-align:left;"><strong>Supported in XR</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Post-processing</strong><span class="tooltiptext">Proses yang meningkatkan visual produk dengan menerapkan filter dan efek sebelum gambar muncul di layar. Anda dapat menggunakan efek pasca proses untuk mensimulasikan kamera fisik dan sifat film, misalnya Bloom dan Kedalaman Lapangan. <a class="tooltipMoreInfoLink" href="PostProcessingOverview.html">More info</a> <span class="search-words">pemrosesan pos, pasca proses, pasca proses</span><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#post-processing">Glossary</a></span></span></span>: Bloom</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Efek pasca proses: GerakBlur</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Efek pasca proses: Distorsi lensa</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Efek pasca proses: <span class="tooltip"><strong>Depth of Field</strong><span class="tooltiptext">Efek pasca proses yang mensimulasikan sifat fokus dari lensa kamera. <a class="tooltipMoreInfoLink" href="PostProcessingOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#DepthofField">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Efek pasca proses: <span class="tooltip"><strong>ToneMapping</strong><span class="tooltiptext">Proses remapping nilai HDR gambar ke dalam kisaran yang cocok untuk ditampilkan pada layar. <a class="tooltipMoreInfoLink" href="PostProcessing-ColorGrading.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Tonemapping">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Efek pasca-olahan lainnya (pengaturan warna, dll)</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">GI (Global Illumination)</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>HDR</strong><span class="tooltiptext">kisaran dinamis tinggi<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#HDR">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">MSAA</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Fisik <span class="tooltip"><strong>Camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">CopyWarna / ColorDepth</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Multi Tampilan</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Kamera Stacking</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Cascaded Shadow</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">sRGB</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Skybox</strong><span class="tooltiptext">Jenis khusus Bahan yang digunakan untuk mewakili langit. Biasanya enam sisi. <a class="tooltipMoreInfoLink" href="class-Skybox.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Skybox">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Fog</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Billboard</strong><span class="tooltiptext">Objek 2D bertekstur yang berputar sehingga selalu menghadapi Kamera. <a class="tooltipMoreInfoLink" href="class-BillboardRenderer.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Billboard">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> Grafik</td> 
+          <td style="text-align:left;">G (1)</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Particles</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Terrain</strong><span class="tooltiptext">Pemandangan di tempat kejadian Anda. Terrain GameObject menambahkan pesawat datar besar untuk adegan Anda dan Anda dapat menggunakan jendela Inspektur Terrain untuk menciptakan lanskap rinci. <a class="tooltipMoreInfoLink" href="terrain-UsingTerrains.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Terrain">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">2D <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span> (Canvas Renderer, Teks Mesh Pro)</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">URP Debug (Scene View Mode, Bingkai Debug)</td> 
+          <td style="text-align:left;">Promo (2)</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>(1) Meskipun naungan Shader Graph dapat berjalan di XR, Shader Graph tidak saat ini mendukung fitur utilitas XR untuk membuat tekstur input naungan yang kompatibel SPI. Unity akan memperluas dukungan untuk fungsi Shader Graph dalam rilis masa depan. (2) Unity mendukung bingkai debugging untuk mock HMDs. Saat ini, tidak ada dukungan untuk Oculus.</p> 
+       <p>Untuk mempelajari lebih lanjut tentang efek pasca proses, lihat halaman dalam dokumentasi Pipeline Universal Render.</p> 
+       <!-- area:platforms --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="configuring-project-for-xr.html"></a></span> 
+         <div class="tip">
+           Mengkonfigurasi Proyek Unity Anda untuk XR 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="xr-template-vr.html"></a></span> 
+         <div class="tip">
+           Template proyek Unity VR 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

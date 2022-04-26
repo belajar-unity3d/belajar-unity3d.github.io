@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Instantiating Prefab pada waktu lari</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="ScriptingSection.html">Scripting</a></li> 
+         <li><a href="ScriptingConcepts.html">Konsep Scripting</a></li> 
+         <li>Instantiating Prefabs pada waktu berjalan</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="VariablesAndTheInspector.html"></a></span> 
+          <div class="tip">
+            Variabel dan Inspektur 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="ExecutionOrder.html"></a></span> 
+          <div class="tip">
+            Order eksekusi untuk fungsi acara 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Instantiating Prefabs pada waktu berjalan</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p><span class="tooltip"><span class="tooltiptext">Jenis aset yang memungkinkan Anda untuk menyimpan GameObject lengkap dengan komponen dan properti. Prefab bertindak sebagai template dari mana Anda dapat membuat instance objek baru di tempat kejadian. <a href="Prefabs.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Prefab">Glossary</a></span></span></span> datang dalam sangat berguna ketika Anda ingin meluruskan <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> rumit atau koleksi GameObjects pada waktu lari. Dibandingkan dengan membuat GameObjects dari awal menggunakan kode, mengulangi Prefab menggunakan kode memiliki banyak keuntungan karena Anda dapat:</p> 
+       <ul> 
+        <li><p>Instantiate a Prefab menggunakan satu baris kode. Membuat GameObjects setara dari awal membutuhkan banyak garis kode.</p></li> 
+        <li><p>Mengatur, menguji, dan memodifikasi Prefab dengan cepat dan mudah menggunakan <strong><span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#Scene">Glossary</a></span></span></span> view, Hierarchy</strong> dan <strong><span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, asset or project settings, allowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span></strong>.</p></li> 
+        <li><p>Mengubah yang Prefab sesaat tanpa mengubah kode. Anda dapat membuat roket sederhana menjadi roket super-charged, tanpa perubahan kode.</p></li> 
+       </ul> 
+       <p> <strong>Note</strong>: Anda dapat mengunduh Proyek Unity yang berisi semua contoh di halaman ini, di sini:</p> 
+       <p><strong><a href="https://docs.unity3d.com/2022.1/Documentation/uploads/Examples/InstantiatingPrefabsExamples.zip">InstantiatingPrefabsExamples.zip</a></strong></p> 
+       <h2>Dasar-dasar instansi Prefab</h2> 
+       <p>Untuk meluruskan Prefab pada waktu yang berjalan, kode Anda perlu referensi ke Prefab itu. Anda dapat membuat referensi ini dengan membuat variabel publik dalam kode Anda untuk menahan referensi Prefab. Variabel publik dalam kode Anda muncul sebagai bidang yang dapat ditetapkan dalam Inspektur. Anda kemudian dapat menetapkan Prefab sebenarnya yang ingin Anda gunakan di Inspektur.</p> 
+       <p>Contoh skrip di bawah ini memiliki variabel publik tunggal, <strong>“myPrefab”</strong>, yang merupakan referensi untuk Prefab. Ini menciptakan kasus yang Prefab dalam metode <strong>Start()</strong>.</p> 
+       <pre><code>using UnityEngine;
+public class InstantiationExample : MonoBehaviour 
+{
+    // Reference to the Prefab. Drag a Prefab into this field in the Inspector.
+    public GameObject myPrefab;
+
+    // This script will simply instantiate the Prefab when the game starts.
+    void Start()
+    {
+        // Instantiate at position (0, 0, 0) and zero rotation.
+        Instantiate(myPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+    }
+}
+</code></pre> 
+       <p>Untuk menggunakan contoh ini:</p> 
+       <ul> 
+        <li><p>Buat skrip C# baru di Proyek Anda, dan nama "InstantiationExample".</p></li> 
+        <li><p>Copy dan paste dalam contoh skrip di atas ke skrip baru Anda, dan menyimpannya.</p></li> 
+        <li><p>Buat GameObject kosong menggunakan menu <strong>GameObject &gt; Create Empty</strong>.</p></li> 
+        <li><p>Tambahkan script ke GameObject baru sebagai komponen dengan menyeretnya ke GameObject kosong.</p></li> 
+        <li><p> <a class="tooltipMoreInfoLink" href="CreatingPrefabs.html">Buat setiap Prefab</a>, dan tarik dari <strong><span class="tooltip"><strong>Project window</strong><span class="tooltiptext">A window that shows the contents of your <code>Assets</code> folder (Project tab) <a href="ProjectView.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Projectwindow">Glossary</a></span></span></span></strong> ke bidang <strong>My Prefab</strong> dalam komponen skrip.</p></li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PrefabDragIntoField.png" alt="Dragging a Prefab from the Project window into the My Prefab field in the script component"> 
+        <figcaption>
+          Menyeret Prefab dari jendela Proyek ke bidang Prefab Saya di komponen skrip 
+        </figcaption> 
+       </figure> 
+       <p>Ketika Anda mulai Play Mode, Anda harus melihat prasarana Prefab Anda pada posisi (0, 0, 0) di Adegan.</p> 
+       <p>Anda dapat menyeret Prefab yang berbeda ke bidang <strong>My Prefab</strong> dalam Inspektur untuk mengubah yang Prefab disaatkan, tanpa harus mengubah skrip.</p> 
+       <p>Karena contoh pertama ini sangat sederhana, tampaknya tidak memberikan keuntungan hanya menempatkan Prefab ke dalam Adegan diri. Namun, mampu meluruskan Prefab menggunakan kode memberikan Anda kemampuan kuat untuk secara dinamis membuat konfigurasi yang kompleks dari GameObjects sementara permainan atau aplikasi Anda berjalan, seperti yang ditunjukkan dalam contoh berikut.</p> 
+       <h2>skenario umum</h2> 
+       <p>Untuk mengilustrasikan kekuatan memimpin instan pada waktu yang berjalan, berikut adalah beberapa situasi dasar di mana mereka berguna:</p> 
+       <ul> 
+        <li><p>Membangun struktur dari satu Prefab dengan meniru beberapa kali dalam posisi yang berbeda, misalnya dalam pembentukan grid atau lingkaran.</p></li> 
+        <li><p>Mendirikan Prefab proyektif dari peluncur. Prefab proyektil bisa menjadi konfigurasi kompleks yang mengandung <strong><span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a class="tooltipMoreInfoLink" href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#Mesh">Glossary</a></span></span></span></strong>, <strong><span class="tooltip"><strong>Rigidbody</strong><span class="tooltiptext">A component that allows a GameObject to be affected by simulated gravity and other forces. <a href="class-Rigidbody.html">More info</a><br><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#Rigidbody">Glossary</a></span></span></span></strong>, <strong><span class="tooltip"><strong>Collider</strong><span class="tooltiptext">An invisible shape that is used to handle physical collisions for an object. A collider doesn’t need to be exactly the same shape as the object’s mesh - a rough approximation is often more efficient and indistinguishable in gameplay. <a href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#Collider">Glossary</a></span></span></span></strong>, <strong>AudioSource</strong>, <strong>Dynamic Light</strong>, dan anak GameObject dengan jejaknya sendiri <strong><span class="tooltip"><strong>Particle System</strong><span class="tooltiptext">A component that simulates fluid entities such as liquids, clouds and flames by generating and animating large numbers of small 2D images in the scene. <a href="class-ParticleSystem.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#particlesystem">Glossary</a></span></span></span></strong>.</p></li> 
+        <li><p>Sebuah kendaraan, bangunan atau karakter, misalnya robot, melanggar terpisah ke banyak potongan. Dalam skenario ini, contoh script menghapus dan menggantikan yang lengkap, robot operasional Prefab dengan robot wrecked Prefab. Prefab wrecked ini terdiri dari bagian yang rusak terpisah dari robot, masing-masing set up dengan kakubodies dan sistem partikel mereka sendiri. Teknik ini memungkinkan Anda untuk meniup robot ke banyak potongan, hanya dengan satu baris kode, yang menggantikan GameObject asli dengan Prefab wrecked.</p></li> 
+       </ul> 
+       <p>Bagian berikut menunjukkan cara menerapkan skenario ini.</p> 
+       <h3>Membangun struktur</h3> 
+       <p>Anda dapat menggunakan kode untuk membuat banyak salinan Prefab dalam konfigurasi tertentu hampir sesaat. Menggunakan kode untuk menghasilkan struktur seperti ini disebut generasi prosedural. Contoh di bawah ini menciptakan dinding instance blok.</p> 
+       <p>Untuk mencoba contoh ini, buat skrip di bawah ini, nama <strong>Wall</strong>, dan letakkan di GameObject kosong di Adegan Anda.</p> 
+       <pre><code>using UnityEngine;
+public class Wall : MonoBehaviour
+{
+   public GameObject block;
+   public int width = 10;
+   public int height = 4;
+  
+   void Start()
+   {
+       for (int y=0; y&lt;height; ++y)
+       {
+           for (int x=0; x&lt;width; ++x)
+           {
+               Instantiate(block, new Vector3(x,y,0), Quaternion.identity);
+           }
+       }       
+   }
+}
+</code></pre> 
+       <p>Ketika Anda telah melakukan ini, Anda harus melihat variabel <strong>Block</strong> di Inspektur, dengan kata <strong>None</strong> di lapangan. Nilai "None" berarti bahwa tidak ada Prefab telah ditugaskan ke variabel ini.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/InstantiatingWallBlockNotAssigned.png" alt="The Block variable, with no Prefab assigned yet"> 
+        <figcaption>
+          Variabel 
+         <strong>Block</strong>, tanpa Prefab ditugaskan namun 
+        </figcaption> 
+       </figure> 
+       <p>Skrip contoh di atas tidak akan bekerja sampai Anda menetapkan variabel Prefab ke <strong>Block</strong>. Untuk membuat blok sederhana Prefab:</p> 
+       <ol> 
+        <li><p>Pilih <strong>GameObject &gt; 3D Object &gt; Cube.</strong> </p></li> 
+        <li><p>Seret kubus dari <strong>Hierarchy</strong> w<strong>indow </strong>into <strong>Assets </strong>folder di <strong>Project</strong> <strong>window. </strong> Ini menciptakan Aset Prefab.</p></li> 
+        <li><p>Nama kembali Prefab Anda untuk "Block".</p></li> 
+        <li><p>Sekarang bahwa Prefab <strong>Block</strong> Anda ada sebagai Aset, Anda dapat dengan aman menghapus kubus dari Hierarchy Anda.</p></li> 
+       </ol> 
+       <p>Sekarang Anda telah membuat Blok Prefab, Anda dapat menetapkannya ke variabel <strong>Block</strong>. Pilih GameObject asli Anda (yang satu dengan skrip "Wall" yang melekat padanya). Kemudian drag the “Block” Prefab dari <strong>Project window</strong> ke dalam “Block” variabel slot (di mana ia mengatakan “None”).</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/InstantiatingWallBlockAssigned.png" alt="The Block variable, with the Block Prefab assigned to it "> 
+        <figcaption>
+          Variabel 
+         <strong><em>Block</em></strong>, dengan Blok Prefab ditugaskan untuk itu 
+        </figcaption> 
+       </figure> 
+       <p>Ketika Anda telah menyelesaikan set-up ini, klik <strong>Play</strong> dan Anda akan melihat bahwa Unity membangun dinding menggunakan Prefab:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/InstantiatingWallComplete.png" alt="A wall built from 4 rows of 10 blocks, as generated by the example above."> 
+        <figcaption>
+          Dinding yang dibangun dari 4 baris 10 blok, seperti yang dihasilkan oleh contoh di atas. 
+        </figcaption> 
+       </figure> 
+       <p>Ini adalah pola alur kerja yang fleksibel yang dapat Anda gunakan di Unity. Karena Anda menggunakan Prefab dalam skrip ini, Anda dapat dengan mudah mengganti atau mengedit Prefab untuk memodifikasi sifat batu bata di dinding, tanpa perlu menyentuh skrip. Anda juga dapat menggunakan skrip Wall Anda di GameObjects lain di Adegan Anda dengan Prefab yang berbeda ditugaskan untuk mereka memiliki berbagai dinding yang terbuat dari berbagai jenis Prefab.</p> 
+       <p>Anda dapat menggunakan kode untuk menempatkan GameObject di grid, dalam pola lingkaran, secara acak tersebar, atau konfigurasi lain yang dapat Anda pikirkan untuk menyesuaikan permainan atau aplikasi apa pun yang Anda buat. Berikut ini contoh lain yang menunjukkan bagaimana menempatkan instance dalam formasi melingkar:</p> 
+       <pre><code>using UnityEngine;
+public class CircleFormation : MonoBehaviour
+{
+   // Instantiates prefabs in a circle formation
+   public GameObject prefab;
+   public int numberOfObjects = 20;
+   public float radius = 5f;
+   void Start()
+   {
+       for (int i = 0; i &lt; numberOfObjects; i++)
+       {
+           float angle = i * Mathf.PI * 2 / numberOfObjects;
+           float x = Mathf.Cos(angle) * radius;
+           float z = Mathf.Sin(angle) * radius;
+           Vector3 pos = transform.position + new Vector3(x, 0, z);
+           float angleDegrees = -angle*Mathf.Rad2Deg;
+           Quaternion rot = Quaternion.Euler(0, angleDegrees, 0);
+           Instantiate(prefab, pos, rot);
+       }
+   }
+}
+</code></pre> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/InstantiatingCircle.png" alt="A circular arrangement of blocks, as generated by the example above"> 
+        <figcaption>
+          Pengaturan melingkar blok, seperti yang dihasilkan oleh contoh di atas 
+        </figcaption> 
+       </figure> 
+       <h3>Proyektil &amp; ledakan yang Instantiating</h3> 
+       <p>Dalam skenario ini:</p> 
+       <ol> 
+        <li><p>Sebuah "Launcher" GameObject instaniasi Prefab proyektil ketika pemain menekan tombol api. Prefab mengandung mesh, kaku, dan kolider, sehingga dapat terbang melalui udara dan mendeteksi ketika <span class="tooltip"><strong>collision</strong><span class="tooltiptext">tabrakan terjadi ketika mesin fisika mendeteksi bahwa tabrakan dari dua GameObjects membuat kontak atau tumpang tindih, ketika setidaknya satu memiliki komponen kaku dan bergerak. <a class="tooltipMoreInfoLink" href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Collision">Glossary</a></span></span></span> terjadi.</p></li> 
+        <li><p>kolida proyektil dengan sesuatu dan seketika ledakan Prefab. Prefab ledakan mengandung efek Sistem Partikel dan skrip yang berlaku kekuatan untuk GameObjects sekitarnya.</p></li> 
+       </ol> 
+       <p>Dengan cara yang sama dengan Blok Prefab di atas, Anda dapat mengulangi proyektil hanya dalam satu baris kode, tidak peduli seberapa kompleks proyektil Prefab. Setelah mengulangi Prefab, Anda juga dapat memodifikasi sifat apa pun dari GameObject yang disengaja. Sebagai contoh, Anda dapat mengatur kecepatan kaku proyektil.</p> 
+       <p>Juga lebih mudah digunakan, Anda dapat memodifikasi Prefab nanti tanpa menyentuh kode. Jadi jika proyektil Anda adalah roket, kemudian di Anda dapat menambahkan Sistem Partikel untuk membuatnya meninggalkan jejak awan. Setelah Anda melakukan ini, semua roket instan Anda memiliki jejak partikel.</p> 
+       <p>Skrip ini menunjukkan cara meluncurkan proyektil menggunakan fungsi <strong>Instantiate()</strong>.</p> 
+       <pre><code>using UnityEngine;
+public class FireProjectile : MonoBehaviour
+{
+    public Rigidbody projectile;
+    public float speed = 4;
+    void Update()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Rigidbody p = Instantiate(projectile, transform.position, transform.rotation);
+            p.velocity = transform.forward * speed;
+        }
+    }
+}
+</code></pre> 
+       <p>Dalam kode, jenis variabel Prefab adalah kaku, dan tidak GameObject. Ini memiliki dua efek yang berguna:</p> 
+       <ol> 
+        <li><p>Hanya GameObjects yang memiliki komponen kaku dapat ditugaskan ke variabel ini. Ini berguna karena membantu memastikan Anda menetapkan GameObject yang benar ke variabel.</p></li> 
+        <li><p>Metode Instantiate mengembalikan referensi ke komponen Rigidbody pada instance baru. Hal ini berguna karena itu membuatnya sederhana untuk mengatur kecepatan orang kaku segera setelah mengulangnya.</p></li> 
+       </ol> 
+       <p>Ketika membuat variabel prefab publik, jenis variabel dapat menjadi GameObject, atau dapat menjadi jenis Komponen yang valid (baik komponen Unity bawaan atau salah satu skrip MonoBehaviour Anda sendiri).</p> 
+       <p>Permainan Jenis objek variabel, Anda dapat menetapkan GameObject ke variabel, dan fungsi Instantiate kembali referensi ke instance GameObject baru.</p> 
+       <p>Untuk variabel tipe komponen (seperti kaku, Collider, dan Light), Anda hanya dapat menetapkan GameObjects dari jenis komponen tersebut ke variabel, dan fungsi Instantiate kembali referensi ke komponen spesifik pada instance GameObject baru.</p> 
+       <p>Skrip berikut (ditempatkan pada Prefab proyektil) melakukan aksi meluruskan ledakan pada posisi arus proyektil dan menghapus GameObject proyektil ketika kolase proyektil dengan sesuatu.</p> 
+       <pre><code>using UnityEngine;
+public class Projectile : MonoBehaviour
+{
+   public GameObject explosion;
+   void OnCollisionEnter()
+   {
+       Instantiate(explosion,transform.position,transform.rotation);
+       Destroy(gameObject);
+   }
+}
+</code></pre> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PrefabsProjectileAndExplosion.gif" alt="An example of projectile Prefabs being instantiated, and replaced with explosion Prefabs when they impact"> 
+        <figcaption>
+          Contoh prefab proyektif sedang disaatkan, dan diganti dengan prefab ledakan ketika dampaknya 
+        </figcaption> 
+       </figure> 
+       <p>Pemberitahuan dalam gambar di atas, yang menunjukkan <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> berjalan dalam mode Play, PermainanObjects instan muncul di Hierarchy, dengan kata “(Clone)” yang dituju dengan nama.</p> 
+       <h3>Mengganti karakter dengan ragdoll atau wreck</h3> 
+       <p>Sering dalam permainan, Anda mungkin ingin beralih karakter, kendaraan, bangunan atau aset lain dari negara “intact” ke negara “destroyed”. Dari mencoba untuk memodifikasi versi utuh dari GameObject (seperti menghapus skrip, menambahkan komponen kaku dan sebagainya), seringkali jauh lebih efisien dan efektif untuk menghapus seluruh GameObject utuh dan menggantinya dengan Prefab yang dihancurkan secara instan. Ini memberi Anda banyak fleksibilitas. Anda dapat menggunakan Bahan yang berbeda untuk versi yang hancur, melampirkan skrip yang sama sekali berbeda, atau sesaat Prefab yang mengandung GameObject rusak menjadi banyak potongan untuk mensimulasikan versi yang wrecked dan hancur dari GameObject asli. Setiap pilihan ini dapat dicapai dengan panggilan tunggal ke Instantiate(), untuk membawa versi menghancurkan Anda ke Adegan, sambil menghapus aslinya.</p> 
+       <p>Yang paling penting, Anda dapat membuat versi hancur yang Anda Instantiate() dengan GameObjects yang berbeda dibandingkan dengan aslinya. Misalnya, untuk membuat robot rusak, Anda akan model dua versi: satu yang terdiri dari satu GameObject dengan Mesh Renderer</p> 
+       <p>dan skrip untuk gerakan robot, dan yang lainnya terdiri dari beberapa bagian kerangka yang dapat dikontrol secara individual oleh fisika. Game Anda berjalan lebih cepat ketika menggunakan model hanya dengan satu GameObject, karena model mengandung segitiga yang lebih sedikit dan sehingga render lebih cepat daripada robot yang memiliki banyak bagian kecil. Juga sementara robot Anda berjalan dengan bahagia, tidak ada alasan untuk memilikinya di bagian terpisah.</p> 
+       <p>Untuk membangun prefab robot wrecked, Anda bisa:</p> 
+       <ol> 
+        <li><p>Model robot Anda dengan banyak bagian kerangka yang berbeda dalam perangkat lunak pemodelan 3D favorit Anda, dan mengekspornya ke folder Aset Proyek Unity Anda.</p></li> 
+        <li><p>Buat Adegan kosong di Editor Unity.</p></li> 
+        <li><p>Seret model dari jendela Proyek ke tempat kejadian kosong.</p></li> 
+        <li><p>Tambahkan kakubodies ke semua bagian, dengan memilih semua bagian dan memilih <strong>Component &gt; Physics &gt; Rigidbody.</strong> </p></li> 
+        <li><p>Tambahkan Colliders ke semua bagian dengan memilih semua bagian dan memilih <strong>Component &gt; Physics &gt; Mesh Collider</strong> (dapatkan opsi <strong>Convex</strong> untuk kinerja yang lebih cepat).</p></li> 
+        <li><p>Pastikan Anda orang tua semua bagian dari robot wrecked Anda ke satu akar GameObject.</p></li> 
+        <li><p>Untuk efek khusus tambahan, tambahkan Sistem Partikel seperti asap sebagai anak GameObject ke setiap bagian.</p></li> 
+        <li><p>Sekarang Anda memiliki robot dengan beberapa bagian yang dapat meledak. Bagian dapat jatuh ke tanah karena dikontrol oleh fisika, dan setiap bagian menciptakan jejak partikel karena sistem partikel yang terpasang.</p></li> 
+        <li><p>Klik Bermain untuk melihat-lihat bagaimana model Anda bereaksi, dan buat tweak yang diperlukan.</p></li> 
+        <li><p>Seret akar GameObject ke <strong>Assets </strong>folder di <strong>Project window </strong>to menciptakan Prefab baru.</p></li> 
+       </ol> 
+       <p>Contoh berikut menunjukkan bagaimana Anda dapat model langkah-langkah ini dalam kode.</p> 
+       <pre><code>using UnityEngine;
+public class WreckOnCollision : MonoBehaviour
+{
+   public GameObject wreckedVersion;
+   // Update is called once per frame
+   void OnCollisionEnter()
+   {
+       Destroy(gameObject);
+       Instantiate(wreckedVersion,transform.position,transform.rotation);
+   }
+}
+</code></pre> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PrefabWreckSwap.gif" alt="An example of a robot Prefab being swapped for a wrecked Prefab when hit by a projectile"> 
+        <figcaption>
+          Contoh dari robot Prefab yang ditukar untuk wrecked Prefab ketika memukul oleh proyektil 
+        </figcaption> 
+       </figure> 
+       <p>Anda dapat mengunduh Proyek yang berisi semua contoh ini, di sini: <strong><a href="https://docs.unity3d.com/2022.1/Documentation/uploads/Examples/InstantiatingPrefabsExamples.zip">InstantiatingPrefabsExamples.zip</a></strong> </p> 
+       <!-- area:none --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="VariablesAndTheInspector.html"></a></span> 
+         <div class="tip">
+           Variabel dan Inspektur 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="ExecutionOrder.html"></a></span> 
+         <div class="tip">
+           Order eksekusi untuk fungsi acara 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

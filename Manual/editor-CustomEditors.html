@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Editor kustom</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UIToolkits.html">Buat antarmuka pengguna (UI)</a></li> 
+         <li><a href="GUIScriptingGuide.html">GUI (IMGUI)</a></li> 
+         <li><a href="ExtendingTheEditor.html">Memperpanjang Editor</a></li> 
+         <li>Editor kustom</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="editor-PropertyDrawers.html"></a></span> 
+          <div class="tip">
+            Harta site 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="TreeViewAPI.html"></a></span> 
+          <div class="tip">
+            TreeView 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Editor kustom</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Untuk mempercepat pengembangan aplikasi, membuat editor kustom untuk komponen yang Anda gunakan. Halaman ini menunjukkan cara membuat skrip sederhana untuk membuat <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> selalu melihat titik.</p> 
+       <ol> 
+        <li>Create a C# script and name it "“LookAtPoint”.</li> 
+        <li>Buka script dan ganti kontennya dengan kode di bawah ini.</li> 
+        <li>Masukkan skrip ke GameObject di <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> Anda.</li> 
+       </ol> 
+       <pre><code>//C# Example (LookAtPoint.cs)
+using UnityEngine;
+public class LookAtPoint : MonoBehaviour
+{
+    public Vector3 lookAtPoint = Vector3.zero;
+
+    void Update()
+    {
+        transform.LookAt(lookAtPoint);
+    }
+}
+</code></pre> 
+       <p>Ketika Anda memasukkan Mode bermain, GameObject yang Anda tempelkan skrip untuk sekarang mengorientasikan dirinya ke dalam koordinat yang Anda set ke properti "Look At Point". Ketika menulis Editor <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span>, seringkali berguna untuk membuat skrip tertentu dijalankan selama <strong>Edit mode</strong>, sementara aplikasi Anda tidak berjalan. Untuk melakukan ini, tambahkan atribut <code>ExecuteInEditMode</code> ke kelas, seperti ini:</p> 
+       <pre><code>//C# Example (LookAtPoint.cs)
+using UnityEngine;
+[ExecuteInEditMode]
+public class LookAtPoint : MonoBehaviour
+{
+    public Vector3 lookAtPoint = Vector3.zero;
+
+    void Update()
+    {
+        transform.LookAt(lookAtPoint);
+    }
+}
+</code></pre> 
+       <p>Sekarang jika Anda memindahkan GameObject di Editor, atau mengubah nilai "Look At Point" di <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>, GameObject memperbarui rotasinya sehingga terlihat pada titik target di ruang dunia.</p> 
+       <h3>Membuat Editor Kustom</h3> 
+       <p>Di atas menunjukkan bagaimana Anda bisa mendapatkan skrip sederhana yang berjalan selama waktu edit, namun ini sendiri tidak memungkinkan Anda untuk membuat alat Editor Anda sendiri. Langkah selanjutnya adalah membuat <strong>Custom Editor</strong> untuk script yang Anda buat.</p> 
+       <p>Ketika Anda membuat skrip di Unity, secara default itu mengherankan dari MonoBehaviour, dan oleh karena itu adalah komponen yang dapat Anda melampirkan ke GameObject. Ketika Anda menempatkan komponen pada GameObject, Inspector menampilkan antarmuka default yang dapat Anda gunakan untuk melihat dan mengedit setiap variabel publik, misalnya: integer, float, atau string.</p> 
+       <p>Ini adalah bagaimana Inspektur untuk komponen LookAtPoint terlihat secara default:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/NoCustomInspector.png" alt="A default Inspector with a public Vector3 field"> 
+        <figcaption>
+          Inspektur default dengan lapangan vektor3 publik 
+        </figcaption> 
+       </figure> 
+       <p><strong>A custom editor is a separate script which <em>replaces</em> this default layout with any editor controls that you choose.</strong></p> 
+       <p>Untuk membuat editor kustom untuk script LookAtPoint:</p> 
+       <ol> 
+        <li>Buat skrip C# baru dan nama "LookAtPointEditor".</li> 
+        <li>Buka script dan ganti kontennya dengan kode di bawah ini.</li> 
+       </ol> 
+       <pre><code>//C# Example (LookAtPointEditor.cs)
+using UnityEngine;
+using UnityEditor;
+
+[CustomEditor(typeof(LookAtPoint))]
+[CanEditMultipleObjects]
+public class LookAtPointEditor : Editor 
+{
+    SerializedProperty lookAtPoint;
+    
+    void OnEnable()
+    {
+        lookAtPoint = serializedObject.FindProperty("lookAtPoint");
+    }
+
+    public override void OnInspectorGUI()
+    {
+        serializedObject.Update();
+        EditorGUILayout.PropertyField(lookAtPoint);
+        serializedObject.ApplyModifiedProperties();
+    }
+}
+</code></pre> 
+       <p>Kelas ini harus mewarisi dari <strong>Editor</strong>. Atribut <strong>CustomEditor</strong> menginformasikan Komponen Unity yang harus bertindak sebagai editor untuk. Atribut <strong>CanEditMultipleObjects</strong> memberi tahu Unity bahwa Anda dapat memilih beberapa objek dengan editor ini dan mengubahnya setiap pada saat yang sama.</p> 
+       <p>Unity mengeksekusi kode di OnInspectorGUI menampilkan editor di Inspector. Anda dapat menempatkan kode GUI di sini dan bekerja dengan cara yang sama seperti OnGUI tidak, tetapi berjalan di dalam Inspektur. Editor mendefinisikan properti target yang dapat Anda gunakan untuk mengakses GameObject Anda memeriksa.</p> 
+       <p>Ini adalah bagaimana Inspektur untuk komponen LookAtPoint terlihat dengan editor baru:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/CustomInspector.png" alt=""> 
+       </figure> 
+       <p>Hal ini terlihat sangat mirip (meskipun field “Script” sekarang tidak hadir, karena script editor tidak menambahkan kode Inspektur untuk menunjukkannya).</p> 
+       <p>Namun sekarang bahwa Anda memiliki kendali atas bagaimana Inspektur menampilkan dalam skrip Editor, Anda dapat menggunakan kode apa pun yang Anda suka meletakkan bidang Inspektur, memungkinkan pengguna untuk menyesuaikan nilai, dan bahkan menampilkan grafik atau elemen visual lainnya. Bahkan semua Inspektur yang Anda lihat dalam Editor Unity termasuk Inspektur yang lebih kompleks seperti sistem <span class="tooltip"><strong>terrain</strong><span class="tooltiptext">Pemandangan di tempat kejadian Anda. Terrain GameObject menambahkan pesawat datar besar untuk adegan Anda dan Anda dapat menggunakan jendela Inspektur Terrain untuk menciptakan lanskap rinci. <a class="tooltipMoreInfoLink" href="terrain-UsingTerrains.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Terrain">Glossary</a></span></span></span> dan pengaturan impor animasi, semuanya dibuat menggunakan API yang sama yang memiliki akses ke saat membuat editor kustom Anda sendiri.</p> 
+       <p>Berikut adalah contoh sederhana yang memperluas skrip editor Anda untuk menampilkan pesan yang menunjukkan apakah titik target di atas atau di bawah GameObject:</p> 
+       <pre><code>//C# Example (LookAtPointEditor.cs)
+using UnityEngine;
+using UnityEditor;
+
+[CustomEditor(typeof(LookAtPoint))]
+[CanEditMultipleObjects]
+public class LookAtPointEditor : Editor
+{
+    SerializedProperty lookAtPoint;
+
+    void OnEnable()
+    {
+        lookAtPoint = serializedObject.FindProperty("lookAtPoint");
+    }
+
+    public override void OnInspectorGUI()
+    {
+        serializedObject.Update();
+        EditorGUILayout.PropertyField(lookAtPoint);
+        serializedObject.ApplyModifiedProperties();
+        if (lookAtPoint.vector3Value.y &gt; (target as LookAtPoint).transform.position.y)
+        {
+            EditorGUILayout.LabelField("(Above this object)");
+        }
+        if (lookAtPoint.vector3Value.y &lt; (target as LookAtPoint).transform.position.y)
+        {
+            EditorGUILayout.LabelField("(Below this object)");
+        }
+    }
+}
+</code></pre> 
+       <p>Ini adalah bagaimana Inspektur untuk komponen LookAtPoint terlihat dengan pesan yang ditampilkan jika titik target di atas atau di bawah GameObject.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/CustomInspector2.png" alt=""> 
+       </figure> 
+       <p>Anda memiliki akses penuh ke semua perintah IMGUI untuk menggambar semua jenis antarmuka, termasuk rendering Adegan menggunakan <span class="tooltip"><strong>Camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span> dalam jendela Editor.</p> 
+       <h3>Adegan Lihat Additions</h3> 
+       <p>Anda dapat menambahkan kode tambahan ke <span class="tooltip"><strong>Scene View</strong><span class="tooltiptext">Tampilan interaktif ke dunia yang Anda buat. Anda menggunakan Adegan Lihat untuk memilih dan posisi pemandangan, karakter, kamera, lampu, dan semua jenis lain dari Game Object. <a class="tooltipMoreInfoLink" href="UsingTheSceneView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SceneView">Glossary</a></span></span></span>. Untuk melakukan ini, menerapkan OnSceneGUI dalam editor kustom Anda.</p> 
+       <p>OnSceneGUI bekerja sama seperti OnInspectorGUI kecuali berjalan dalam pandangan Adegan. Untuk membantu Anda membuat kontrol pengeditan Anda sendiri, Anda dapat menggunakan fungsi yang didefinisikan dalam kelas <a href="../ScriptReference/Handles.html">Handles</a>. Semua fungsi di sana dirancang untuk bekerja dalam pandangan adegan 3D.</p> 
+       <pre><code>//C# Example (LookAtPointEditor.cs)
+using UnityEngine;
+using UnityEditor;
+
+[CustomEditor(typeof(LookAtPoint))]
+[CanEditMultipleObjects]
+public class LookAtPointEditor : Editor
+{
+    SerializedProperty lookAtPoint;
+
+    void OnEnable()
+    {
+        lookAtPoint = serializedObject.FindProperty("lookAtPoint");
+    }
+
+    public override void OnInspectorGUI()
+    {
+        serializedObject.Update();
+        EditorGUILayout.PropertyField(lookAtPoint);
+        if (lookAtPoint.vector3Value.y &gt; (target as LookAtPoint).transform.position.y)
+        {
+            EditorGUILayout.LabelField("(Above this object)");
+        }
+        if (lookAtPoint.vector3Value.y &lt; (target as LookAtPoint).transform.position.y)
+        {
+            EditorGUILayout.LabelField("(Below this object)");
+        }
+        
+            
+        serializedObject.ApplyModifiedProperties();
+    }
+
+    public void OnSceneGUI()
+    {
+        var t = (target as LookAtPoint);
+
+        EditorGUI.BeginChangeCheck();
+        Vector3 pos = Handles.PositionHandle(t.lookAtPoint, Quaternion.identity);
+        if (EditorGUI.EndChangeCheck())
+        {
+            Undo.RecordObject(target, "Move point");
+            t.lookAtPoint = pos;
+            t.Update();
+        }
+    }
+}
+</code></pre> 
+       <p>Jika Anda ingin menambahkan benda GUI 2D (misalnya: GUI atau EditorGUI), Anda perlu membungkusnya dalam panggilan untuk Menangani. StartGUI() Login</p> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="editor-PropertyDrawers.html"></a></span> 
+         <div class="tip">
+           Harta site 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="TreeViewAPI.html"></a></span> 
+         <div class="tip">
+           TreeView 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

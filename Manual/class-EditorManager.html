@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Editor</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="EditorFeatures.html">Fitur Editor</a></li> 
+         <li><a href="comp-ManagerGroup.html">Pengaturan Proyek</a></li> 
+         <li>Editor</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="class-AudioManager.html"></a></span> 
+          <div class="tip">
+            Audio 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="class-GraphicsSettings.html"></a></span> 
+          <div class="tip">
+            Graphics 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Editor</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Gunakan pengaturan <strong>Editor</strong> (menu utama: <strong>Edit</strong> &gt; <strong>Project Settings</strong>, pilih kategori <strong>Editor</strong>) untuk menerapkan pengaturan global untuk bekerja di Editor Unity.</p> 
+       <p> <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/EditorSettings2020_1a.png" alt="Editor settings"> <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/EditorSettings2020_1b.png" alt="Editor settings"> </p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2">Property</th> 
+          <th style="text-align:left;">Function</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"> <strong>Unity Remote</strong><br><strong>Note</strong>: Unity Remote diuraikan pada 2020.1 dan versi masa depan. Untuk menguji aplikasi Anda pada perangkat seluler, gunakan sebaliknya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Device</strong></td> 
+          <td style="text-align:left;">Pilih jenis perangkat yang ingin Anda gunakan untuk pengujian Unity Remote. <br><span class="tooltip"><a class="tooltipMoreInfoLink" href="UnityRemote5.html">Unity Remote</a><span class="tooltiptext">Aplikasi yang dapat diunduh dirancang untuk membantu pengembangan Android, iOS, dan TVOS. Aplikasi ini terhubung dengan Unity sementara Anda menjalankan proyek Anda dalam Mode Bermain dari Editor Unity. <a href="UnityRemote5.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UnityRemote">Glossary</a></span></span></span> adalah aplikasi yang dapat diunduh yang dirancang untuk membantu pengembangan Android, iOS dan TVOS.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong><span class="tooltip"><strong>Compression</strong><span class="tooltiptext">A method of storing data that reduces the amount of storage space it requires. See <a href="class-TextureImporterOverride.html">Texture Compression</a>, <a href="class-AnimationClip.html#AssetProperties">Animation Compression</a>, <a href="class-AudioClip.html">Audio Compression</a>, <a href="ReducingFilesize.html">Build Compression</a>.<br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#compression">Glossary</a></span></span></span></strong></td> 
+          <td style="text-align:left;">Pilih jenis kompresi gambar untuk digunakan ketika mentransmisikan layar permainan ke perangkat melalui Unity Remote. Default adalah <strong>JPEG</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>JPEG</strong></td> 
+          <td style="text-align:left;">JPEG biasanya memberikan kompresi dan kinerja yang lebih tinggi, tetapi kualitas grafis sedikit lebih rendah. Ini adalah opsi default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>PNG</strong></td> 
+          <td style="text-align:left;">PNG memberikan representasi yang lebih akurat dari tampilan game, tetapi dapat menghasilkan kinerja yang lebih rendah.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Resolution</strong></td> 
+          <td style="text-align:left;">Pilih resolusi permainan harus dijalankan pada Unity Remote. Default adalah <strong>Downsize</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Downsize</strong></td> 
+          <td style="text-align:left;">Tampilkan permainan pada resolusi yang lebih rendah. Hasil ini dalam kinerja yang lebih baik, tetapi akurasi grafis yang lebih rendah. Ini adalah opsi default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Normal</strong></td> 
+          <td style="text-align:left;">Tampilkan permainan pada resolusi normal. Hasil ini dalam akurasi grafis yang lebih baik, tetapi kinerja yang lebih rendah.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Joystick Source</strong></td> 
+          <td style="text-align:left;">Pilih sumber koneksi untuk joysticks yang Anda gunakan. Default adalah <strong>Remote</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Remote</strong></td> 
+          <td style="text-align:left;">Gunakan joysticks yang terhubung ke perangkat yang berjalan Unity Remote. Ini adalah opsi default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Local</strong></td> 
+          <td style="text-align:left;">Gunakan joystick yang terhubung ke komputer yang menjalankan Editor.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong><span class="tooltip"><strong>Version Control</strong><span class="tooltiptext">A system for managing file changes. You can use Unity in conjunction with most common version control tools, including Perforce, Git, Mercurial and PlasticSCM. <a class="tooltipMoreInfoLink" href="VersionControl.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#VersionControl">Glossary</a></span></span></span></strong></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"> <a name="Mode"></a><strong>Mode</strong> </td> 
+          <td style="text-align:left;">Pilih visibilitas file meta. Anda dapat menggunakan Unity bersama dengan <a href="VersionControl.html">alat kontrol versi</a> yang paling umum, termasuk Perforce dan PlasticSCM. Default adalah <strong>Hidden Meta Files</strong>. Login Untuk informasi lebih lanjut tentang menampilkan atau menyembunyikan file meta, lihat di Jawaban Unity.<br> For more information on showing or hiding meta files, see at Unity Answers.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Hidden Meta Files</strong></td> 
+          <td style="text-align:left;">Sembunyikan file meta. Ini adalah opsi default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Visible Meta Files</strong></td> 
+          <td style="text-align:left;">Tampilkan file meta. Ini berguna ketika menggunakan kontrol versi, karena memungkinkan pengguna dan mesin lain untuk melihat file meta ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong><span class="tooltip"><strong>Perforce</strong><span class="tooltiptext">A version control system for file change management. <a class="tooltipMoreInfoLink" href="perForceIntegration.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Perforce">Glossary</a></span></span></span></strong></td> 
+          <td style="text-align:left;">Gunakan sistem kontrol versi Perforce.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>PlasticSCM</strong></td> 
+          <td style="text-align:left;">Gunakan sistem kontrol versi PlasticSCM.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong>Asset Serialization</strong></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Mode</strong></td> 
+          <td style="text-align:left;">Pilih format yang digunakan untuk menyimpan aset serial. Ini diatur ke <strong>Force Text</strong> secara default. <br>Unity menggunakan <a href="script-Serialization-BuiltInUse.html">serialization</a> untuk memuat dan menyimpan Aset dan Aset untuk dan dari hard drive komputer Anda. Untuk membantu dengan penggabungan kontrol versi, Unity dapat menyimpan file Adegan dalam <a href="TextSceneFormat.html">format berbasis teks</a>. Jika Anda tidak merging Adegan, Unity dapat menyimpan Adegan dalam format biner yang lebih hemat ruang, atau memungkinkan kedua file teks dan adegan biner untuk ada pada saat yang sama.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Mixed</strong></td> 
+          <td style="text-align:left;">Aset dalam mode Biner tetap dalam mode Biner, dan Aset dalam mode Teks tetap dalam mode Teks. Unity menggunakan mode biner secara default untuk aset baru.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Force Binary</strong></td> 
+          <td style="text-align:left;">Mengkonversi semua Aset ke mode Biner, termasuk Aset baru.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Force Text</strong></td> 
+          <td style="text-align:left;">Mengkonversi semua Aset ke mode Teks, termasuk Aset baru. Ini adalah opsi default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Serialize Inline Mappings On One Line</strong></td> 
+          <td style="text-align:left;">Aktifkan pengaturan ini untuk membuat referensi menulis Unity dan pemetaan inline pada satu baris. Jika pengaturan ini dinonaktifkan, perpecahan persatuan teks referensi serialisasi lebih dari beberapa garis ketika total karakter dalam garis mencapai lebih dari 80 karakter.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong>Default Behavior Mode</strong></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Mode</strong></td> 
+          <td style="text-align:left;">Pilih mode <a href="2DAnd3DModeSettings.html">Pembangunan 2D atau 3D</a> default. Unity mengatur perilaku default tertentu sesuai dengan mode yang Anda pilih untuk membuat perkembangan lebih mudah. Default adalah <strong>3D</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>3D</strong></td> 
+          <td style="text-align:left;">Tetapkan Unity untuk pengembangan 3D. Ini adalah opsi default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>2D</strong></td> 
+          <td style="text-align:left;">Tetapkan Unity untuk pengembangan 2D.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong>Asset Pipeline</strong></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Mode</strong></td> 
+          <td style="text-align:left;">Pilih versi Aset Pipeline mana yang digunakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Version 1 (deprecated)</strong></td> 
+          <td style="text-align:left;">Gunakan versi Aset Pipeline 1. Fitur ini diuraikan dan tidak lagi didukung.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Version 2</strong></td> 
+          <td style="text-align:left;">Gunakan versi Aset Pipeline 2. Ini adalah opsi default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Active version</strong></td> 
+          <td style="text-align:left;">Menampilkan versi Aset Pipeline aktif. Untuk perubahan untuk mengambil efek, Anda harus menyimpan dan restart proyek.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong><span class="tooltip"><strong>Cache Server</strong><span class="tooltiptext">A standalone app that you can run on your local computer that stores the imported asset data to reduce the time it takes to import assets. <a class="tooltipMoreInfoLink" href="CacheServer.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#CacheServer">Glossary</a></span></span></span> (project specific)</strong></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Mode</strong></td> 
+          <td style="text-align:left;">Pilih yang Cache Server untuk digunakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Use global settings (stored in preferences)</strong></td> 
+          <td style="text-align:left;">Server Cache default diatur dalam jendela <strong>Preferences</strong> digunakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Enabled</strong></td> 
+          <td style="text-align:left;">Pilih Server Cache tertentu untuk menggunakan alih-alih default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Disabled</strong></td> 
+          <td style="text-align:left;">Tidak ada Cache Server digunakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong><span class="tooltip"><strong>Prefab</strong><span class="tooltiptext">An asset type that allows you to store a GameObject complete with components and properties. The prefab acts as a template from which you can create new object instances in the scene. <a class="tooltipMoreInfoLink" href="Prefabs.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Prefab">Glossary</a></span></span></span> Editing Environments</strong></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Regular Environment</strong></td> 
+          <td style="text-align:left;">Menetapkan Adegan sebagai lingkungan pengeditan dalam Mode Prefab untuk Prefab <em>regular</em> (yaitu, Prefab dengan komponen <a href="class-Transform.html">Transform</a> biasa). Ini memungkinkan Anda untuk mengedit Prefab Anda terhadap latar belakang pilihan Anda daripada adegan kosong.<br> Lihat <a href="EditingInPrefabMode.html">Mengedit Prefab dalam Mode Prefab</a> untuk informasi lebih lanjut.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>UI Environment</strong></td> 
+          <td style="text-align:left;">Menetapkan Adegan sebagai lingkungan pengeditan dalam Mode Prefab untuk Prefab <em>UI</em> (yaitu, Prefab dengan komponen <a href="class-RectTransform.html">Rect Transform</a>). Ini memungkinkan Anda untuk mengedit Prefab Anda terhadap latar belakang pilihan Anda daripada adegan kosong.<br> Lihat <a href="EditingInPrefabMode.html">Mengedit Prefab dalam Mode Prefab</a> untuk informasi lebih lanjut.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong>Graphics</strong></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Show lightmap resolution overlay</strong></td> 
+          <td style="text-align:left;">Pengaturan ini berkaitan dengan Draw Mode dalam kategori Penerangan Global Baked. Ketika ini diaktifkan, Unity menarik overlay checkerboard di atas Mode Draw ini, di mana setiap ubin checker sesuai dengan satu texel. Gunakan ini untuk memeriksa kepadatan texel dari Adegan Anda ketika lightmapping.<br><br> Anda juga dapat beralih pengaturan ini dari menu Draw Mode drop-down, ketika Mode Draw aktif berasal dari kategori Penerangan Global Baked.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Use legacy <span class="tooltip"><strong>Light Probe</strong><span class="tooltiptext">Light probes store information about how light passes through space in your scene. A collection of light probes arranged within a given space can improve lighting on moving objects and static LOD scenery within that space. <a class="tooltipMoreInfoLink" href="LightProbes.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#LightProbe">Glossary</a></span></span></span> sample counts</strong></td> 
+          <td style="text-align:left;">Menggunakan jumlah sampel Probe Cahaya tetap untuk dipanggang dengan Progresif <span class="tooltip"><strong>Lightmapper</strong><span class="tooltiptext">Alat dalam Unity yang bakes lightmap sesuai dengan pengaturan lampu dan geometri di tempat kejadian Anda. <a class="tooltipMoreInfoLink" href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Lightmapper">Glossary</a></span></span></span>. Jumlah sampel adalah: 64 sampel langsung, sampel tidak langsung 2048, dan sampel lingkungan 2048.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Enable baked cookies support</strong></td> 
+          <td style="text-align:left;">Untuk Proyek yang dibuat di Unity 2020.1 atau di atas, baked <a href="Cookies.html">cookies</a> diaktifkan untuk Lampu Baked dan Lampu Campuran dalam <a href="progressive-lightmapper.html">Progres Lightmapper</a> secara default. Untuk Proyek yang dibuat dalam versi Unity sebelum 2020.1, cookie panggang dinonaktifkan untuk Lampu Panggang dan Lampu Campuran dalam Progresif Lightmapper secara default. Ini adalah untuk memberikan kompatibilitas ke belakang.<br><br>Enable ini untuk mengaktifkan cookie panggang untuk Lampu Baked dan Lampu Campuran dalam Progresif Lightmapper.<br><br> Untuk informasi lebih lanjut, lihat <a href="Cookies.html">Cookies</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong><span class="tooltip"><strong>Sprite</strong><span class="tooltiptext">A 2D graphic objects. If you are used to working in 3D, Sprites are essentially just standard textures but there are special techniques for combining and managing sprite textures for efficiency and convenience during development. <a class="tooltipMoreInfoLink" href="Sprites.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Sprite">Glossary</a></span></span></span> Packer</strong></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Mode</strong></td> 
+          <td style="text-align:left;">Pilih mode untuk mengkonfigurasi alat <span class="tooltip"><a class="tooltipMoreInfoLink" href="SpritePacker.html">Sprite Packer</a><span class="tooltiptext">Fasilitas yang mengemas grafis dari beberapa tekstur sprite secara ketat bersama dalam satu tekstur yang dikenal sebagai atlas. Unity menyediakan utilitas Sprite Packer untuk mengotomatiskan proses pembuatan dilase dari tekstur sprite individu. <a href="SpritePacker.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SpritePacker">Glossary</a></span></span></span>. Alat Sprite Packer mengotomatiskan proses menghasilkan <a href="class-SpriteAtlas.html">Atlassian</a> dari Tekstur Sprite individu. Pengaturan ini diatur ke <strong>Disabled</strong> secara default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Disabled</strong></td> 
+          <td style="text-align:left;">Unity tidak mengemas Atlassian. Ini adalah pengaturan default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong><span class="tooltip"><strong>Sprite Atlas</strong><span class="tooltiptext">A texture that is composed of several smaller textures. Also referred to as a texture atlas, image sprite, sprite sheet or packed texture. <a class="tooltipMoreInfoLink" href="class-SpriteAtlas.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#spriteatlas">Glossary</a></span></span></span> V1 - Enabled For Builds</strong></td> 
+          <td style="text-align:left;">Paket unity Sprite Atlases untuk membangun hanya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Sprite Atlas V1 - Always Enabled</strong></td> 
+          <td style="text-align:left;">Paket unity Sprite Atlas untuk membangun dan sebelum memasuki mode Play.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Sprite Atlas V2 (Experimental) - Enabled</strong></td> 
+          <td style="text-align:left;">Paket unity Sprite Atlas untuk kedua build dan sebelum memasuki mode Play.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Sprite Atlas V2 (Experimental) - Enabled For Builds</strong></td> 
+          <td style="text-align:left;">Paket unity Sprite Atlases untuk membangun hanya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong>C# Project Generation</strong></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Additional extensions to include</strong></td> 
+          <td style="text-align:left;">Sertakan daftar jenis file tambahan untuk menambah Proyek C#. Memisahkan setiap jenis file dengan semicolon. Secara default, bidang ini mengandung <code>txt;xml;fnt;cd</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Root namespace</strong></td> 
+          <td style="text-align:left;">Isi ruang nama untuk digunakan untuk properti C# <code>RootNamespace</code>. Lihat <a href="https://msdn.microsoft.com/en-us/library/bb629394.aspx">Properti Proyek MSBuild Umum</a> untuk informasi lebih lanjut. Bidang ini kosong secara default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong>ETC Texture Compressor</strong></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Behavior</strong></td> 
+          <td style="text-align:left;">Tentukan alat kompresi untuk digunakan untuk kualitas kompresi yang berbeda dari Tekstur ETC. Login Alat kompresi yang tersedia adalah <br>, <a href="https://bitbucket.org/wolfpld/etcpak/wiki/Home">etcpak</a> dan <a href="https://github.com/Ericsson/ETCPACK">ETCPACK</a>. Ini adalah semua perpustakaan kompresor pihak ketiga.<a href="https://github.com/google/etc2comp">Etc2Comp</a>. These are all third-party compressor libraries.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Legacy</strong></td> 
+          <td style="text-align:left;">Gunakan konfigurasi yang tersedia sebelum kompresi Tekstur ETC menjadi dapat dikonfigurasi. Ini menetapkan sifat berikut: <br> - <strong>Fast</strong>: ETCPACK Sitemap - <br>: ETCPACK Sitemap - <strong>Normal</strong>: ETCPACK Login<br> - <strong>Best</strong>: ETCPACK Best</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Default</strong></td> 
+          <td style="text-align:left;">Gunakan konfigurasi default untuk Unity. Ini menetapkan sifat berikut: <br> - <strong>Fast</strong>: dllpack <br> - <strong>Normal</strong>: ETCPACK Sitemap - <br>: Etc2Comp Login<strong>Best</strong>: Etc2Comp Best</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Custom</strong></td> 
+          <td style="text-align:left;">Sesuaikan konfigurasi ETC <span class="tooltip"><strong>Texture compression</strong><span class="tooltiptext">Perangkat keras grafis 3D memerlukan Tekstur untuk dikompresi dalam format khusus yang dioptimalkan untuk pengambilan sampel Tekstur cepat. <a class="tooltipMoreInfoLink" href="class-TextureImporterOverride.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#TextureCompression">Glossary</a></span></span></span>. Ketika Anda memilih opsi ini, sifat <strong>Fast</strong>, <strong>Normal</strong>, dan <strong>Best</strong> diaktifkan. Peta ini ke <strong>Compressor Quality </strong>setting di <a href="class-TextureImporter.html">Tekstur Importer</a> untuk platform yang didukung.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Fast</strong></td> 
+          <td style="text-align:left;">Tentukan alat kualitas kompresi untuk digunakan untuk kompresi cepat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Normal</strong></td> 
+          <td style="text-align:left;">Tentukan alat kualitas kompresi untuk digunakan untuk kompresi normal.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Best</strong></td> 
+          <td style="text-align:left;">Tentukan alat kualitas kompresi untuk digunakan untuk kompresi terbaik.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong>Line Endings For New <span class="tooltip"><strong>Scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span></strong></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Mode</strong></td> 
+          <td style="text-align:left;">Pilih baris file berakhir untuk berlaku untuk skrip baru yang dibuat dalam Editor. Perhatikan bahwa mengkonfigurasi pengaturan ini tidak mengubah skrip yang ada.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>OS Native</strong></td> 
+          <td style="text-align:left;">Menerapkan garis berakhir berdasarkan sistem operasi Editor berjalan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Unix</strong></td> 
+          <td style="text-align:left;">Menerapkan garis berakhir berdasarkan sistem operasi Unix.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Windows</strong></td> 
+          <td style="text-align:left;">Menerapkan garis berakhir berdasarkan sistem operasi Windows.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong>Streaming Settings</strong></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Enable Texture Streaming in Play Mode</strong></td> 
+          <td style="text-align:left;">Aktifkan <a href="TextureStreaming.html">Joomla</a> dalam Mode Bermain. Login Pengaturan <br>The <a href="class-QualitySettings.html">Quality</a> juga harus diaktifkan.<strong>Texture Streaming</strong> setting must also be enabled.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong><span class="tooltip"><strong>Shader</strong><span class="tooltiptext">A program that runs on the GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Shader">Glossary</a></span></span></span> Compilation</strong></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Asynchronous Shader Compilation</strong></td> 
+          <td style="text-align:left;">Aktifkan kotak centang ini untuk membuat teduh Unity di latar belakang. Sementara compiling, mesin Unity menggunakan Dummy Shader untuk membuat geometri di Editor. Ketika kompilasi Shader selesai, mesin menukar Variant Shader Anda kembali. Ini berarti Editor berjalan mulus, tanpa harus menunggu mesin Unity untuk mengkompilasi setiap varian Shader tunggal sebelum rendering. Untuk informasi lebih lanjut, lihat <a href="AsynchronousShaderCompilation.html">Login Shader kompilasi</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong>Numbering Scheme</strong></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Game Object Naming</strong></td> 
+          <td style="text-align:left;">Skema pendakian untuk duplicated <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span>. GameObjects Duplikat atau instan dinamakan dengan mengakhiri angka berturut-turut ke nama objek asli.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Game Object Digits</strong></td> 
+          <td style="text-align:left;">Menetapkan jumlah digit untuk digunakan untuk nomor GameObject yang digandakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Space Before Number in Asset Names</strong></td> 
+          <td style="text-align:left;">Kontrol apakah untuk menyisipkan ruang sebelum sejumlah nama Aset yang dikutip.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="class-AudioManager.html"></a></span> 
+         <div class="tip">
+           Audio 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="class-GraphicsSettings.html"></a></span> 
+         <div class="tip">
+           Graphics 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

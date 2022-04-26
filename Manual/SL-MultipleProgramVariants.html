@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: menentukan dan menggunakan kata kunci naungan di HLSL</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="Shaders.html">Shaders</a></li> 
+         <li><a href="shader-writing.html">Menu Menu</a></li> 
+         <li><a href="SL-ShaderPrograms.html">HLSL di Unity</a></li> 
+         <li><a href="shader-preprocessor-directives.html">Petunjuk praprosesor di HLSL</a></li> 
+         <li>Mengatur dan menggunakan kata kunci naungan di HLSL</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="SL-ShaderCompilationAPIs.html"></a></span> 
+          <div class="tip">
+            Menargetkan API grafis dan platform di HLSL 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="SL-ShaderSemantics.html"></a></span> 
+          <div class="tip">
+            Shader semantics 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Mengatur dan menggunakan kata kunci naungan di HLSL</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Halaman ini berisi informasi tentang bekerja dengan kata kunci <span class="tooltip"><strong>shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> dalam kode HLSL. Untuk pengenalan umum untuk kata kunci naungan, lihat <a href="shader-keywords.html">Kata kunci Shader</a>. Untuk informasi tentang menentukan dan menggunakan kata kunci naungan di Shader Graph, lihat.</p> 
+       <p>Halaman ini berisi informasi berikut:</p> 
+       <ul> 
+        <li> <a href="#declaring-keywords">Mengatur kata kunci naungan</a> 
+         <ul> 
+          <li><a href="#pragma-directives">pragma directives untuk menentukan kata kunci naungan</a></li> 
+          <li><a href="#declaring-set">Mengatur satu set kata kunci</a></li> 
+          <li><a href="#declaring-multiple-sets">Mengatur beberapa set kata kunci</a></li> 
+          <li><a href="#additional-variants">Membuat varian di mana tidak ada kata kunci dari set didefinisikan</a></li> 
+          <li><a href="#limitations">Limitations</a></li> 
+         </ul> </li> 
+        <li><a href="#conditionals">Membuat kondisi perilaku dengan kata kunci naungan</a></li> 
+        <li><a href="#multi-compile-shortcuts">multi_compile shortcuts</a></li> 
+       </ul> 
+       <p><a name="declaring-keywords"></a></p> 
+       <h2>Mengatur kata kunci naungan</h2> 
+       <p>Dalam kode HLSL Anda, gunakan petunjuk <code>#pragma</code> untuk menyatakan kata kunci naungan. Anda dapat mendeklarasikan kata kunci naungan dalam naungan grafis biasa (termasuk <span class="tooltip"><a class="tooltipMoreInfoLink" href="SL-SurfaceShaders.html">Permukaan Shader</a><span class="tooltiptext">Cara merampingkan naungan menulis untuk Pipeline Render Built-in. <a href="SL-SurfaceShaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SurfaceShader">Glossary</a></span></span></span>) dan <a href="class-ComputeShader.html">compute shaders</a>.</p> 
+       <p><a name="pragma-directives"></a></p> 
+       <h3>pragma directives untuk menentukan kata kunci naungan</h3> 
+       <p>Untuk mendeklarasikan kata kunci naungan, gunakan salah satu petunjuk 100<code>#pragma</code> berikut dalam kode HLSL:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Directive</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>#pragma dynamic_branch</code></td> 
+          <td style="text-align:left;">Tentukan set kata kunci untuk digunakan dengan bercabang dinamis.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>#pragma multi_compile</code></td> 
+          <td style="text-align:left;">Tentukan set kata kunci untuk digunakan dengan varian naungan.<br><br> Secara default, kata kunci ini memiliki lingkup global dan mempengaruhi semua tahap naungan.<br><br> Proses build mencakup semua kata kunci dari set ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>#pragma shader_feature</code></td> 
+          <td style="text-align:left;">Tentukan set kata kunci untuk digunakan dengan varian naungan, dan juga memerintahkan kompilator untuk menyusun varian di mana tidak ada kata kunci ini diaktifkan.<br><br> Secara default, kata kunci ini memiliki lingkup global dan mempengaruhi semua tahap naungan.<br><br> Proses build termasuk kata kunci dari set ini yang digunakan pada waktu build.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Untuk informasi lebih lanjut tentang perbedaan antara opsi ini, dan panduan pada saat menggunakan yang satu, lihat <a href="shader-keywords.html#declaring-keywords-definition-type">Kata kunci Shader</a>.</p> 
+       <p>Sitemap Jika Anda menambahkan naungan ke daftar <strong>Note:</strong> di jendela pengaturan Grafik, Unity mencakup semua kata kunci dari semua set dalam build, bahkan jika mereka dinyatakan dengan <a href="class-GraphicsSettings.html#Always"><strong>Always Included Shaders</strong></a>.<code>#pragma shader_feature</code>.</p> 
+       <p>Anda juga dapat menambahkan suffixes ke petunjuk ini untuk mengubah perilaku mereka:</p> 
+       <ul> 
+        <li>Tambahkan <code>_local</code> untuk menunjukkan bahwa satu set kata kunci memiliki lingkup lokal dan tidak dapat ditimidasi oleh kata kunci global; jika tidak, kata kunci memiliki lingkup global dan dapat ditimidasi oleh kata kunci global.<br><br> Anda dapat menambahkan suffix ini ke <code>#pragma dynamic_branch</code>, <code>#pragma multi_compile</code>, atau directives <code>#pragma shader_feature</code>; misalnya, <code>#pragma dynamic_branch_local</code>, <code>#pragma multi_compile_local</code>, atau <code>#pragma shader_feature_local</code>.</li> 
+        <li>Tambahkan <code>_vertex</code>, <code>_fragment</code>, <code>_hull</code>, <code>_domain</code>, <code>_geometry</code>, atau <code>_raytracing</code> untuk menunjukkan bahwa satu set kata kunci hanya mempengaruhi tahap naungan yang diberikan, yang dapat mengurangi jumlah varian naungan yang tidak diinginkan. Untuk informasi lebih lanjut, lihat <a href="shader-keywords.html#stage-specific-keywords">Kata kunci Shader: Kata kunci spesifik tahap</a>.<br><br> Anda dapat menambahkan suffixes ini ke directives <code>#pragma multi_compile</code> atau <code>#pragma shader_feature</code>, baik standalone atau setelah pengubah <code>_local</code>; misalnya, <code>#pragma multi_compile_vertex</code> atau <code>#pragma shader_feature_local_fragment</code>. Ini tidak bekerja dengan <code>#pragma dynamic_branch</code>.</li> 
+       </ul> 
+       <p>Selain itu, ada beberapa variasi "pendek" dari <code>#pragma multi_compile</code> yang menambahkan set kata kunci yang telah ditentukan. Untuk informasi lebih lanjut tentang ini, lihat <a href="#multi-compile-shortcuts">multi_compile shortcuts</a>.</p> 
+       <p><a name="declaring-set"></a></p> 
+       <h3>Mengatur satu set kata kunci</h3> 
+       <p>Anda menyatakan kata kunci dalam set. Satu set berisi kata kunci eksklusif bersama.</p> 
+       <p>Untuk menyatakan satu set kata kunci, gunakan langsungif <code>#pragma</code> yang tepat, diikuti oleh daftar kata kunci yang didelimited ruang.</p> 
+       <p>Contoh ini menunjukkan bagaimana untuk menyatakan satu set empat kata kunci:</p> 
+       <pre><code>#pragma multi_compile QUALITY_LOW QUALITY_MEDIUM QUALITY_HIGH QUALITY_ULTRA
+</code></pre> 
+       <p>Apa yang terjadi secara internal tergantung pada apakah Anda menyatakan kata kunci ini untuk digunakan dengan varian warna atau dengan percabangan dinamis.</p> 
+       <p>Ketika Anda menggunakan <code>#pragma multi_compile</code> atau <code>#pragma shader_feature</code> untuk menggunakan kata kunci dengan varian naungan, Unity menggunakan kata kunci untuk membuat directives <code>#define</code>. Dalam contoh di atas, ketika Unity menyusun naungan, itu menghasilkan empat varian: satu di mana KUALITAS_ LOW didefinisikan, satu di mana KUALITAS_ MEDIUM didefinisikan, satu di mana KUALITAS_HIGH didefinisikan, dan satu di mana KUALITAS_ULTRA didefinisikan.</p> 
+       <p>Ketika Anda menggunakan <code>#pragma dynamic_branch</code> untuk menggunakan kata kunci dengan percabangan dinamis, Unity menggunakan kata kunci untuk membuat variabel seragam. Jika contoh di atas digunakan <code>#pragma dynamic_branch</code>, ketika Unity mengkompilasi naungan, itu akan menciptakan empat variabel seragam dengan keadaan boolean: satu yang disebut KUALITAS_LOW, satu yang disebut KUALITAS_MEDIUM, dan sebagainya.</p> 
+       <p><a name="declaring-multiple-sets"></a></p> 
+       <h3>Mengatur beberapa set kata kunci</h3> 
+       <p>Anda dapat menyatakan beberapa set kata kunci untuk mewakili fitur yang berbeda. Untuk melakukan ini, gunakan beberapa arahan <code>#pragma</code>.</p> 
+       <p>Contoh ini menunjukkan bagaimana untuk menyatakan satu set empat kata kunci, dan satu set dari tiga kata kunci:</p> 
+       <pre><code>#pragma multi_compile QUALITY_LOW QUALITY_MEDIUM QUALITY_HIGH QUALITY_ULTRA
+#pragma multi_compile COLOR_RED COLOR_GREEN COLOR_BLUE
+</code></pre> 
+       <p><a name="additional-variants"></a></p> 
+       <h3>Membuat varian di mana tidak ada kata kunci didefinisikan</h3> 
+       <p>Ketika Anda menggunakan <code>#pragma shader_feature</code> untuk menyatakan satu set kata kunci, Unity juga menyusun varian di mana tidak ada kata kunci yang ditetapkan. Ini memungkinkan Anda untuk menentukan perilaku tanpa menggunakan kata kunci tambahan. Mengurangi jumlah kata kunci bermanfaat dalam beberapa cara: itu dapat mengurangi jumlah total varian yang disatukan, yang meningkatkan kedua kali build dan kinerja runtime; itu mengurangi jumlah total kata kunci yang digunakan naungan, yang mencegahnya dari memukul <a href="shader-keywords.html#keyword-limits">shader keyword limits</a>; dan itu membuatnya lebih sederhana untuk <a href="shader-keywords.html#scripts">mengelola state kata kunci dari skrip C#</a>, karena ada kata kunci yang lebih sedikit untuk mengaktifkan dan menonaktifkan.</p> 
+       <p>Contoh ini menunjukkan bagaimana untuk menyatakan satu set yang hanya berisi kata kunci tunggal:</p> 
+       <pre><code>#pragma shader_feature EXAMPLE_ON
+</code></pre> 
+       <p>Anda juga dapat menginstruksikan Unity untuk melakukan ini ketika Anda menggunakan <code>#pragma multi_compile</code>. Untuk melakukannya, tambahkan kata kunci “blank” ke set, dengan nama yang satu atau lebih core (<code>_</code>), seperti ini:</p> 
+       <pre><code>#pragma multi_compile __ EXAMPLE_ON
+</code></pre> 
+       <p><a name="limitations"></a></p> 
+       <h3>Limitations</h3> 
+       <p>Ada beberapa batasan untuk bagaimana Anda menyatakan set kata kunci:</p> 
+       <ul> 
+        <li>Jika Anda menyatakan kata kunci yang sama untuk digunakan dengan bercabang dinamis dan varian naungan, Unity memprioritaskan percabangan dinamis dan kata kunci naungan tidak akan bekerja dengan varian.</li> 
+        <li>Anda tidak dapat menyertakan kata kunci yang sama lebih dari sekali dalam set yang sama; Namun, Anda dapat menyatakan kata kunci yang sama dalam set yang berbeda.</li> 
+        <li>Anda tidak dapat menyatakan set kata kunci yang sama lebih dari sekali dalam program naungan.</li> 
+        <li>Ada batasan jumlah kata kunci yang dapat digunakan oleh naungan. Setiap kata kunci dinyatakan dalam file sumber naungan dan jumlah dependensinya terhadap batas ini. Untuk informasi lebih lanjut, lihat <a href="shader-keywords.html#keyword-limits">Batas kata kunci Shader</a>.</li> 
+       </ul> 
+       <p><a name="conditionals"></a></p> 
+       <h2>Membuat kondisi perilaku dengan kata kunci naungan</h2> 
+       <p>Untuk menandai bagian kode naungan Anda sebagai kondisional berdasarkan apakah kata kunci naungan yang diberikan diaktifkan atau dinonaktifkan, gunakan <a href="https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-if">an HLSL <code>if</code> statement</a>.</p> 
+       <p>Ini bekerja untuk kedua kata kunci varian dan kata kunci bercabang dinamis, dan berarti bahwa Anda dapat menggunakan sintaks yang sama untuk keduanya. Ini memudahkan untuk menjaga kode Anda, dan juga mudah untuk mengubah cara yang Anda gunakan kata kunci jika diperlukan. Misalnya, jika Anda menemukan bahwa Anda perlu mengurangi jumlah varian dalam aplikasi Anda, Anda dapat mengubah set kata kunci untuk menggunakan cabang dinamis hanya dengan mengubah deklarasi; Anda tidak perlu juga mengubah kondisi.</p> 
+       <pre><code>// Declare a set of keywords
+#pragma multi_compile QUALITY_LOW QUALITY_MEDIUM QUALITY_HIGH QUALITY_ULTRA
+
+
+if (QUALITY_ULTRA)
+{
+// If the keywords work with shader variants, the shader compiler recognises this code as a static branch and compiles it only for the needed variants
+// If the keywords work with dynamic branching, the shader compiler compiles this code as a regular dynamic branch
+}
+</code></pre> 
+       <p>Ini bekerja karena kompilator naungan Unity mewakili kata kunci varian naungan dinonaktifkan sebagai variabel konstan dengan nilai <code>0</code>.</p> 
+       <p>Catatan: Anda juga dapat menggunakan <span class="externalcitation">[#if, #elif, #else, dan #endif preprocessor langsung]</span>(https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-appendix-pre-if), dan <span class="externalcitation">[#ifdef dan #ifndef preprocessor directives]</span>(https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-appendix-pre-ifdef) dengan kata kunci yang menggunakan varian naungan; namun, jika Anda melakukan ini, akan lebih sulit untuk mengkonversi kode Anda untuk bekerja dengan cabang dinamis di masa depan.</p> 
+       <p>Selain itu, arahan <code>#pragma require</code> dan <code>#pragma target</code> dapat mengambil kata kunci sebagai parameter, sehingga mereka hanya berlaku untuk varian di mana kata kunci yang diberikan diaktifkan. Untuk informasi lebih lanjut, lihat <a href="SL-ShaderCompileTargets.html">Menargetkan model naungan dan fitur GPU di HLSL</a>.</p> 
+       <p><a name="multi-compile-shortcuts"></a></p> 
+       <h2>multi_compile shortcuts</h2> 
+       <p>Unity menyediakan beberapa notasi "pendek" untuk menentukan kata kunci naungan yang menghasilkan varian naungan tertentu.</p> 
+       <p>Potongan-potongan berikut berkaitan dengan cahaya, bayangan dan ringan dalam <span class="tooltip"><strong>Render Pipeline</strong><span class="tooltiptext">Rangkaian operasi yang mengambil isi dari Adegan, dan menampilkannya di layar. Unity memungkinkan Anda memilih dari pipa render yang dibangun sebelumnya, atau menulis sendiri. <a class="tooltipMoreInfoLink" href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span> Built-in:</p> 
+       <ul> 
+        <li> <code>multi_compile_fwdbase</code> menambahkan set kata kunci ini: LIGHTMAP_ON DIRLIGHTMAP_COM Login Login Login LIGHTMAP_SHADOW_MIXING LIGHTPROBE_SH. Varietas ini diperlukan oleh <a href="../ScriptReference/Rendering.PassType.ForwardBase.html">PassType.ForwardBase</a>.</li> 
+        <li> <code>multi_compile_fwdbasealpha</code> menambahkan set kata kunci ini: LIGHTMAP_ON DIRLIGHTMAP_COM LIGHTMAP_SHADOW_MIXING Login LIGHTPROBE_SH. Varietas ini diperlukan oleh <a href="../ScriptReference/Rendering.PassType.ForwardBase.html">PassType.ForwardBase</a>.</li> 
+        <li> <code>multi_compile_fwdadd</code> menambahkan set kata kunci ini: POINT DIRECTIONAL SPOT POINT_COOKIE LANGSUNG_COOKIE. Varietas ini diperlukan oleh <a href="../ScriptReference/Rendering.PassType.ForwardAdd.html">PassType.ForwardAdd</a>.</li> 
+        <li> <code>multi_compile_fwdadd_fullshadows</code> menambahkan set kata kunci ini: POINT DIRECTIONAL SPOT POINT_COOKIE LANGSUNG_COOKIE Login Login Login Login Login LIGHTMAP_SHADOW_MIXING. Ini sama dengan <code>multi_compile_fwdadd</code>, tetapi ini menambahkan kemampuan untuk lampu untuk memiliki bayangan real-time.</li> 
+        <li> <code>multi_compile_lightpass</code> menambahkan set kata kunci ini: POINT DIRECTIONAL SPOT POINT_COOKIE LANGSUNG_COOKIE Login Login Login Login Login LIGHTMAP_SHADOW_MIXING. Ini adalah cara pintas yang efektif untuk semua fungsi yang terkait dengan cahaya dan bayangan real-time, selain <span class="tooltip"><strong>Light Probes</strong><span class="tooltiptext">probe cahaya menyimpan informasi tentang bagaimana cahaya melewati ruang di tempat kejadian Anda. Koleksi probe cahaya yang diatur dalam ruang tertentu dapat meningkatkan pencahayaan pada objek bergerak dan pemandangan LOD statis dalam ruang itu. <a class="tooltipMoreInfoLink" href="LightProbes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#LightProbe">Glossary</a></span></span></span>.</li> 
+        <li> <code>multi_compile_shadowcaster</code> menambahkan set kata kunci ini: SHADOWS_DEPTH SHADOWS_CUBE. Varietas ini diperlukan oleh <a href="../ScriptReference/Rendering.PassType.ShadowCaster.html">PassType.ShadowCaster</a>.</li> 
+        <li> <code>multi_compile_shadowcollector</code> menambahkan set kata kunci ini: SHADOWS_SPLIT_SPHERES SHADOWS_SINGLE_CASCADE. Ini juga menyusun varian tanpa salah satu kata kunci ini. Varietas ini diperlukan untuk bayangan ruang layar.</li> 
+        <li> <code>multi_compile_prepassfinal</code> menambahkan set kata kunci ini: LIGHTMAP_ON DIRLIGHTMAP_COMBINED Login UNITY_HDR_ON Login LIGHTPROBE_SH. Ini juga menyusun varian tanpa salah satu kata kunci ini. Varietas ini diperlukan oleh <a href="../ScriptReference/Rendering.PassType.LightPrePassFinal.html">PassType.LightPrePassFinal</a> dan <a href="../ScriptReference/Rendering.PassType.Deferred.html">PassType.Deferred</a>.</li> 
+       </ul> 
+       <p>Potongan-potongan berikut berkaitan dengan pengaturan lain:</p> 
+       <ul> 
+        <li> <code>multi_compile_particles</code> menambahkan kata kunci ini berkaitan dengan built-in <span class="tooltip"><strong>particle system</strong><span class="tooltiptext">Komponen yang mensimulasikan entitas fluida seperti cairan, awan dan nyala dengan menghasilkan dan memikat sejumlah besar gambar 2D kecil di tempat kejadian. <a class="tooltipMoreInfoLink" href="class-ParticleSystem.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#particlesystem">Glossary</a></span></span></span>: Login Ini juga menyusun varian tanpa kata kunci ini. Untuk informasi lebih lanjut, lihat <a href="Built-inParticleSystem.html">Sistem Partikel Built-in</a>.</li> 
+        <li> <code>multi_compile_fog</code> menambahkan set kata kunci ini yang berkaitan dengan fog: FOG_LINEAR, FOG_EXP, FOG_EXP2. Ini juga menyusun varian tanpa salah satu kata kunci ini. Anda dapat mengontrol perilaku ini di jendela <a href="class-GraphicsSettings.html">Pengaturan grafis</a>.</li> 
+        <li> <code>multi_compile_instancing</code> menambahkan kata kunci yang berkaitan dengan hukuman. Jika naungan menggunakan sikap prosedural, itu menambahkan set kata kunci ini: INSTANCING_ON PROCEDURAL_ON. Jika tidak, itu menambahkan kata kunci ini: Login Ini juga menyusun varian tanpa salah satu kata kunci ini. Anda dapat mengontrol perilaku ini di jendela <a href="class-GraphicsSettings.html">Pengaturan grafis</a>.</li> 
+       </ul> 
+       <p>Sebagian besar pintas ini mengandung beberapa kata kunci. jika Anda tahu proyek tidak perlu mereka, Anda dapat menggunakan <code>#pragma skip_variants</code> untuk menghapus beberapa dari mereka. Contoh:</p> 
+       <pre><code>#pragma multi_compile_fwdadd
+#pragma skip_variants POINT POINT_COOKIE
+</code></pre> 
+       <p>Ini memberi tahu kompilator untuk menghapus kata kunci <code>POINT</code> atau <code>POINT_COOKIE</code> dari arahan lainnya.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="SL-ShaderCompilationAPIs.html"></a></span> 
+         <div class="tip">
+           Menargetkan API grafis dan platform di HLSL 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="SL-ShaderSemantics.html"></a></span> 
+         <div class="tip">
+           Shader semantics 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

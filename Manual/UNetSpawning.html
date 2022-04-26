@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Permainan Spawning</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="cloud" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UNet.html">Multiplayer dan Jaringan</a></li> 
+         <li><a href="UNetUsingHLAPI.html">Multiplayer API</a></li> 
+         <li><a href="UNetGameObjects.html">Bookmark the permalink.</a></li> 
+         <li>Bookmark the permalink.</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UNetPlayersCustom.html"></a></span> 
+          <div class="tip">
+            Gratis WiFi 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UNetCustomSpawning.html"></a></span> 
+          <div class="tip">
+            Fungsi Spawn Khusus 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Bookmark the permalink.</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Important</strong>: UNet adalah solusi yang diuraikan, dan Solusi Multiplayer baru dan <span class="tooltip"><strong>Networking</strong><span class="tooltiptext">Sistem Unity yang memungkinkan game multiplayer di jaringan komputer. <a class="tooltipMoreInfoLink" href="UNetOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Networking">Glossary</a></span></span></span> (Netcode untuk GameObjects) sedang berkembang. Untuk informasi lebih lanjut dan langkah selanjutnya melihat informasi di .</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Pada Unity, Anda biasanya “spawn” (yaitu, menciptakan) <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#GameObject">Glossary</a></span></span></span> baru dengan <code>Instantiate()</code>. Namun, dalam multiplayer <span class="tooltip"><strong>High Level API</strong><span class="tooltiptext">Sistem untuk membangun kemampuan multiplayer untuk permainan Unity. Ini dibangun di atas lapisan komunikasi real-time transportasi tingkat bawah, dan menangani banyak tugas umum yang diperlukan untuk permainan multiplayer. <a href="UNetUsingHLAPI.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#HighLevelAPI">Glossary</a></span></span></span>, kata “spawn” berarti sesuatu yang lebih spesifik. Dalam model server-authoritative HLAPI, untuk "mengagalkan" GameObject pada server berarti bahwa GameObject diciptakan pada klien yang terhubung ke server, dan dikelola oleh sistem pemijahan.</p> 
+       <p>Setelah GameObject ditidur menggunakan sistem ini, pembaruan state dikirim ke klien setiap kali perubahan GameObject pada server. Ketika Unity menghancurkan GameObject pada server, itu juga menghancurkannya pada klien. Server mengelola spawned GameObjects bersama semua GameObjects jaringan lainnya, sehingga jika klien lain bergabung dengan permainan kemudian, server dapat menahan GameObjects pada klien itu. GameObjects ini memiliki ID instance jaringan yang unik yang disebut "<span class="tooltip"><strong>netId</strong><span class="tooltiptext">Pengidentifikasi unik yang diberikan pada instance objek untuk melacak antara klien jaringan dan server. <a class="tooltipMoreInfoLink" href="class-NetworkBehaviour.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#netId">Glossary</a></span></span></span>" yang sama pada server dan klien untuk setiap GameObject. ID instance jaringan yang unik digunakan untuk mengatur pesan rute di jaringan ke GameObjects, dan untuk mengidentifikasi GameObjects.</p> 
+       <p>Ketika server memijat GameObject dengan <a class="tooltipMoreInfoLink" href="class-NetworkIdentity.html">Identitas Jaringan</a>** ** komponen, GameObject ditidur pada klien memiliki "state". Ini berarti identik dengan GameObject pada server; memiliki Transform yang sama, state gerakan, dan (jika <span class="tooltip"><a href="../ScriptReference/Networking.NetworkTransform.html">NetworkTransform</a><span class="tooltiptext">Komponen Jaringan yang memungkinkan Anda untuk menyinkronkan pergerakan GameObjects di jaringan. <a href="class-NetworkTransform.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#NetworkTransform">Glossary</a></span></span></span> dan <a href="UNetStateSync.html">SyncVars</a> digunakan) variabel yang disinkronkan. Oleh karena itu, GameObjects klien selalu terbaru ketika Unity membuat mereka. Ini menghindari masalah seperti GameObjects memijat di lokasi awal yang salah, kemudian muncul kembali pada posisi yang benar mereka ketika pembaruan negara tiba.</p> 
+       <p><span class="tooltip"><strong>Network Manager</strong><span class="tooltiptext">Komponen Jaringan yang mengelola state jaringan proyek. <a class="tooltipMoreInfoLink" href="UNetManager.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#NetworkManager">Glossary</a></span></span></span> hanya dapat memijat dan menyinkronkan GameObjects dari Prefab yang terdaftar, sehingga Anda harus mendaftarkan Prefab GameObject tertentu dengan Manajer Jaringan yang ingin Anda dapat memijat selama permainan Anda. Manajer Jaringan hanya akan menerima Kompor GameObject yang memiliki komponen Identitas Jaringan yang terpasang, sehingga Anda harus memastikan Anda menambahkan komponen Identitas Jaringan ke <span class="tooltip"><strong>Prefab</strong><span class="tooltiptext">Jenis aset yang memungkinkan Anda untuk menyimpan GameObject lengkap dengan komponen dan properti. Prefab bertindak sebagai template dari mana Anda dapat membuat instance objek baru di tempat kejadian. <a href="Prefabs.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Prefab">Glossary</a></span></span></span> Anda sebelum mencoba mendaftarkannya dengan Manajer Jaringan.</p> 
+       <p>Untuk mendaftarkan Prefab dengan Manajer Jaringan di Editor, pilih Manajer Jaringan GameObject, dan di <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>, arahkan ke komponen Manajer Jaringan. Klik segitiga di sebelah <strong>Spawn Info</strong> untuk membuka pengaturan, kemudian di bawah <strong>Registered Spawnable Prefabs</strong>, klik tombol plus (<strong>+</strong>). Seret dan drop Prefab ke lapangan kosong untuk menetapkannya ke daftar.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UNetManagerSpawnInfo.png" alt="The Network Manager Inspector with the Spawn Info* foldout expanded, displaying three assigned Prefabs under Registered Spawnable Prefabs"> 
+        <figcaption>
+          Inspektur Manajer Jaringan dengan 
+         <em>Spawn Info</em> * lipatan diperluas, menampilkan tiga Prefab yang ditugaskan di bawah 
+         <em>Terdaftar Prefab Spawnable</em> 
+        </figcaption> 
+       </figure> 
+       <h2>Spawning tanpa Manajer Jaringan</h2> 
+       <p>Untuk pengguna yang lebih maju, Anda mungkin menemukan bahwa Anda ingin mendaftarkan Prefab dan memijat GameObjects tanpa menggunakan komponen NetworkManager.</p> 
+       <p>Untuk memijat GameObjects tanpa menggunakan Manajer Jaringan, Anda dapat menangani pendaftaran Prefab sendiri melalui skrip. Gunakan metode <a href="../ScriptReference/Networking.ClientScene.RegisterPrefab.html">ClientScene.RegisterPrefab</a> untuk mendaftarkan Prefab ke Manajer Jaringan.</p> 
+       <h3>Contoh: MyNetworkManager</h3> 
+       <pre><code>
+using UnityEngine;
+using UnityEngine.Networking;
+
+public class MyNetworkManager : MonoBehaviour 
+{
+    public GameObject treePrefab;
+    NetworkClient myClient;
+
+    // Create a client and connect to the server port
+    public void ClientConnect() {
+        ClientScene.RegisterPrefab(treePrefab);
+        myClient = new NetworkClient();
+        myClient.RegisterHandler(MsgType.Connect, OnClientConnect);
+        myClient.Connect("127.0.0.1", 4444);
+    }
+
+    void OnClientConnect(NetworkMessage msg) {
+        Debug.Log("Connected to server: " + msg.conn);
+    }
+}
+</code></pre> 
+       <p>Dalam contoh ini, Anda membuat GameObject kosong untuk bertindak sebagai Manajer Jaringan, kemudian membuat dan melampirkan skrip <code>MyNetworkManager</code> (di atas) ke GameObject. Buat Prefab yang memiliki komponen Identitas Jaringan yang melekat padanya, dan tariklah ke slot <strong>treePrefab</strong> pada komponen MyNetworkManager di Inspector. Ini memastikan bahwa ketika server memijat pohon GameObject, itu juga menciptakan jenis yang sama dari GameObject pada klien.</p> 
+       <p>Mendaftar Prefab memastikan bahwa Aset dimuat dengan <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>, sehingga tidak ada warung atau waktu pemuatan untuk membuat Aset.</p> 
+       <p>Namun, untuk script untuk bekerja, Anda juga perlu menambahkan kode untuk server. Tambahkan ini ke <strong>MyNetworkManager </strong>script:</p> 
+       <pre><code>public void ServerListen() {
+    NetworkServer.RegisterHandler(MsgType.Connect, OnServerConnect);
+    NetworkServer.RegisterHandler(MsgType.Ready, OnClientReady);
+    if (NetworkServer.Listen(4444))
+        Debug.Log("Server started listening on port 4444");
+}
+
+// When client is ready spawn a few trees
+void OnClientReady(NetworkMessage msg) {
+    Debug.Log("Client is ready to start: " + msg.conn);
+    NetworkServer.SetClientReady(msg.conn);
+    SpawnTrees();
+}
+
+void SpawnTrees() {
+    int x = 0;
+    for (int i = 0; i &lt; 5; ++i) {
+        var treeGo = Instantiate(treePrefab, new Vector3(x++, 0, 0), Quaternion.identity);
+        NetworkServer.Spawn(treeGo);
+    }
+}
+
+void OnServerConnect(NetworkMessage msg) {
+    Debug.Log("New client connected: " + msg.conn);
+}
+
+</code></pre> 
+       <p>Server tidak perlu mendaftar apa pun, karena tahu apa GameObject sedang ditidur (dan ID aset dikirim dalam pesan pemijahan). Klien harus dapat melihat GameObject, sehingga harus terdaftar di klien.</p> 
+       <p>Ketika menulis manajer jaringan Anda sendiri, penting untuk membuat klien siap menerima pembaruan negara sebelum memanggil perintah spawn pada server, jika tidak mereka tidak akan dikirim. Jika Anda menggunakan komponen Unity built-in Network Manager, ini terjadi secara otomatis.</p> 
+       <p>Untuk penggunaan yang lebih canggih, seperti kolam objek atau aset yang dibuat secara dinamis, Anda dapat menggunakan metode <a href="../ScriptReference/Networking.ClientScene.RegisterSpawnHandler.html">ClientScene.RegisterSpawnHandler</a>, yang memungkinkan fungsi callback untuk terdaftar untuk pemijatan sisi klien. Lihat dokumentasi tentang <a href="UNetCustomSpawning.html">Fungsi Spawn Khusus</a> misalnya ini.</p> 
+       <p>Jika GameObject memiliki state jaringan seperti variabel disinkronkan, maka state disinkronkan dengan pesan spawn. Dalam contoh berikut, script ini melekat pada pohon Prefab:</p> 
+       <pre><code>using UnityEngine;
+using UnityEngine.Networking;
+class Tree : NetworkBehaviour {
+    [SyncVar]
+    public int numLeaves;
+    public override void OnStartClient() {
+        Debug.Log("Tree spawned with leaf count " + numLeaves);
+    }
+}
+</code></pre> 
+       <p>Dengan skrip ini melekat, Anda dapat mengubah variabel <code>numLeaves</code> dan memodifikasi fungsi <code>SpawnTrees</code> untuk melihat secara akurat tercermin pada klien:</p> 
+       <pre><code>void SpawnTrees() {
+    int x = 0;
+    for (int i = 0; i &lt; 5; ++i) {
+        var treeGo = Instantiate(treePrefab, new Vector3(x++, 0, 0), Quaternion.identity);
+        var tree = treeGo.GetComponent&lt;Tree&gt;();
+        tree.numLeaves = Random.Range(10,200);
+        Debug.Log("Spawning leaf with leaf count " + tree.numLeaves);
+        NetworkServer.Spawn(treeGo);
+    }
+}
+</code></pre> 
+       <p>Pasang skrip <code>Tree</code> ke skrip <code>treePrefab</code> yang dibuat sebelumnya untuk melihat ini dalam aksi.</p> 
+       <h3>Constraints</h3> 
+       <ul> 
+        <li><p>Sebuah <span class="tooltip"><strong>NetworkIdentity</strong><span class="tooltiptext">Komponen Jaringan yang memungkinkan Anda untuk menetapkan identitas ke GameObject Anda untuk jaringan untuk mengenalinya sebagai GameObject Pemain Lokal atau Server Hanya GameObject. <a class="tooltipMoreInfoLink" href="class-NetworkIdentity.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#NetworkIdentity">Glossary</a></span></span></span> harus pada akar GameObject dari Prefab yang dapat ditidur. Tanpa ini, Manajer Jaringan tidak dapat mendaftarkan Prefab.</p></li> 
+        <li><p>JaringanBehaviour <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> harus pada GameObject yang sama sebagai JaringanIdentitas, bukan pada anak GameObjects</p></li> 
+       </ul> 
+       <h2>Login Aliran penciptaan objek</h2> 
+       <p>Aliran aktual operasi internal yang terjadi untuk memijat GameObjects adalah:</p> 
+       <ul> 
+        <li><p>Prefab dengan komponen Identitas Jaringan terdaftar sebagai spawnable.</p></li> 
+        <li><p>GameObject digolongkan dari Prefab di server.</p></li> 
+        <li><p>Kode permainan menetapkan nilai-nilai awal pada instance (note bahwa kekuatan fisika 3D diterapkan di sini tidak mengambil efek segera).</p></li> 
+        <li><p> <code>NetworkServer.Spawn()</code> disebut dengan instance.</p></li> 
+        <li><p>Negara SyncVars pada kasus pada server dikumpulkan dengan memanggil <code>OnSerialize()</code> pada komponen <a href="class-NetworkBehaviour.html">Jaringan Behaviour</a>.</p></li> 
+        <li><p>Pesan jaringan tipe <code>MsgType.ObjectSpawn</code> dikirim ke klien yang terhubung yang mencakup data SyncVar.</p></li> 
+        <li><p> <code>OnStartServer()</code> disebut pada instance pada server, dan <code>isServer</code> diatur ke <code>true</code> </p></li> 
+        <li><p>Klien menerima pesan <code>ObjectSpawn</code> dan membuat instance baru dari Prefab terdaftar.</p></li> 
+        <li><p>Data SyncVar diterapkan pada instance baru pada klien dengan memanggil <a href="../ScriptReference/Networking.NetworkBehaviour.OnDeserialize.html">OnDeserialize()</a> pada komponen Perilaku Jaringan.</p></li> 
+        <li><p> <code>OnStartClient()</code> disebut pada instance pada setiap klien, dan <code>isClient</code> diatur ke <code>true</code> </p></li> 
+        <li><p>Sebagai kemajuan gameplay, perubahan nilai SyncVar secara otomatis disinkronkan ke klien. Ini berlanjut sampai permainan berakhir.</p></li> 
+        <li><p> <code>NetworkServer.Destroy()</code> disebut pada contoh pada server.</p></li> 
+        <li><p>Pesan jaringan tipe <code>MsgType.ObjectDestroy</code> dikirim ke klien.</p></li> 
+        <li><p> <code>OnNetworkDestroy()</code> disebut pada kasus pada klien, maka contohnya hancur.</p></li> 
+       </ul> 
+       <h3>Pemain GameObjects</h3> 
+       <p>Pemain GameObjects di HLAPI bekerja sedikit berbeda untuk non-player GameObjects. Aliran untuk memijat pemain GameObjects dengan Network Manager adalah:</p> 
+       <ul> 
+        <li><p>Prefab dengan <code>NetworkIdentity</code> terdaftar sebagai <code>PlayerPrefab</code> </p></li> 
+        <li><p>Klien terhubung ke server</p></li> 
+        <li><p>Klien memanggil <code>AddPlayer()</code>, pesan jaringan tipe <code>MsgType.AddPlayer</code> dikirim ke server</p></li> 
+        <li><p>Server menerima pesan dan panggilan <code>NetworkManager.OnServerAddPlayer()</code> </p></li> 
+        <li><p>GameObject digolongkan dari PlayerPrefab di server</p></li> 
+        <li><p> <code>NetworkManager.AddPlayerForConnection()</code> disebut dengan instance pemain baru di server</p></li> 
+        <li><p>Contoh pemain ditidur - Anda tidak harus memanggil <code>NetworkServer.Spawn()</code> untuk instance pemain. Pesan spawn dikirim ke semua klien seperti pada spawn normal.</p></li> 
+        <li><p>Pesan jaringan tipe <code>MsgType.Owner</code> dikirim ke klien yang menambahkan pemain (hanya klien!)</p></li> 
+        <li><p>Klien asli menerima pesan jaringan</p></li> 
+        <li><p> <code>OnStartLocalPlayer()</code> disebut pada instance pemain pada klien asli, dan <code>isLocalPlayer</code> diatur untuk benar</p></li> 
+       </ul> 
+       <p>Catatan bahwa <code>OnStartLocalPlayer()</code> disebut setelah <code>OnStartClient()</code>, karena hanya terjadi ketika pesan kepemilikan tiba dari server setelah pemain GameObject ditidur, sehingga <code>isLocalPlayer</code> tidak diatur dalam <code>OnStartClient()</code>.</p> 
+       <p>Karena <code>OnStartLocalPlayer</code> hanya disebut untuk pemain lokal klien GameObject, itu adalah tempat yang baik untuk melakukan initialisasi yang hanya harus dilakukan untuk pemain lokal. Ini bisa mencakup pemrosesan input, dan memungkinkan pelacakan <span class="tooltip"><strong>camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span> untuk pemain GameObject.</p> 
+       <h2>Spawning GameObjects dengan otoritas klien</h2> 
+       <p>Untuk memijat GameObjects dan menetapkan wewenang dari GameObjects kepada klien tertentu, gunakan <a href="../ScriptReference/Networking.NetworkServer.SpawnWithClientAuthority.html">WordPress.org</a>, yang mengambil argumen <code>NetworkConnection</code> dari klien yang harus dilakukan otoritas.</p> 
+       <p>Untuk GameObjects ini, properti <code>hasAuthority</code> benar pada klien dengan otoritas, dan <code>OnStartAuthority()</code> disebut pada klien dengan otoritas. Klien itu dapat mengeluarkan perintah untuk GameObject. Klien lain (dan pada host), <code>hasAuthority</code> adalah salah.</p> 
+       <p>Tujuan yang ditidur dengan otoritas klien harus memiliki set <code>LocalPlayerAuthority</code> dalam <code>NetworkIdentity</code> mereka.</p> 
+       <p>Sebagai contoh, pohon spawn contoh di atas dapat dimodifikasi untuk memungkinkan pohon untuk memiliki otoritas klien seperti ini (note bahwa kita sekarang perlu untuk lulus dalam JaringanConnection GameObject untuk koneksi klien sendiri):</p> 
+       <pre><code>void SpawnTrees(NetworkConnection conn) {
+    int x = 0;
+    for (int i = 0; i &lt; 5; ++i)
+    {
+        var treeGo = Instantiate(treePrefab, new Vector3(x++, 0, 0), Quaternion.identity);
+        var tree = treeGo.GetComponent&lt;Tree&gt;();
+        tree.numLeaves = Random.Range(10,200);
+        Debug.Log("Spawning leaf with leaf count " + tree.numLeaves);
+        NetworkServer.SpawnWithClientAuthority(treeGo, conn);
+    }
+}
+</code></pre> 
+       <p>Script Pohon sekarang dapat dimodifikasi untuk mengirim perintah ke server:</p> 
+       <pre><code>public override void OnStartAuthority() {
+    CmdMessageFromTree("Tree with " + numLeaves + " reporting in");
+}
+
+[Command]
+void CmdMessageFromTree(string msg) {
+    Debug.Log("Client sent a tree message: " + msg);
+}
+</code></pre> 
+       <p>Perhatikan bahwa Anda tidak dapat menambahkan panggilan <code>CmdMessageFromTree</code> ke <code>OnStartClient</code>, karena pada saat itu otoritas belum diatur, sehingga panggilan gagal.</p> 
+       <!-- area:cloud --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UNetPlayersCustom.html"></a></span> 
+         <div class="tip">
+           Gratis WiFi 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UNetCustomSpawning.html"></a></span> 
+         <div class="tip">
+           Fungsi Spawn Khusus 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy"> 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Membuat paket kustom</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="PackagesList.html">Paket dan set fitur</a></li> 
+         <li>Membuat paket kustom</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="upm-network.html"></a></span> 
+          <div class="tip">
+            Masalah jaringan 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="cus-naming.html"></a></span> 
+          <div class="tip">
+            Mengajarkan paket Anda 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Membuat paket kustom</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Unity Package Manager adalah sistem manajemen paket resmi untuk Unity. Ini adalah berikut:</p> 
+       <ul> 
+        <li>Memungkinkan Unity untuk mendistribusikan fitur baru dan memperbarui fitur yang ada dengan cepat dan mudah.</li> 
+        <li>Menyediakan platform untuk pengguna untuk menemukan dan berbagi komponen yang dapat digunakan kembali.</li> 
+        <li>Promosikan Unity sebagai platform yang diperluas dan terbuka.</li> 
+       </ul> 
+       <p>Anda dapat menggunakan Manajer Paket untuk menentukan ketergantungan proyek, menyelesaikan ketergantungan paket, mengunduh dan menambahkan paket sesuai kebutuhan, dan mengintegrasikan konten dalam proyek Anda.</p> 
+       <p>Untuk informasi umum tentang paket apa dan bagaimana Manajer Paket Unity bekerja, lihat dokumentasi <span class="tooltip"><a class="tooltipMoreInfoLink" href="Packages.html">Paket</a><span class="tooltiptext">Paket adalah koleksi aset untuk dibagikan dan digunakan kembali dalam Unity. <a href="upm-ui.html">Manajer Paket Unity</a> (UPM) dapat menampilkan, menambahkan, dan menghapus paket dari proyek Anda. Paket-paket ini berasal dari Unity Package Manager dan memberikan metode mendasar untuk memberikan fungsi Unity. Namun, Unity Package Manager juga dapat menampilkan <a href="AssetStorePackages.html">Paket Asset Store</a> yang Anda unduh dari Asset Store. <a href="Packages.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Packages">Glossary</a></span></span></span>.</p> 
+       <h2>Overview</h2> 
+       <p>Paket dapat berisi berikut:</p> 
+       <ul> 
+        <li>C# skrip</li> 
+        <li>Assemblies</li> 
+        <li>WordPress.org</li> 
+        <li>Model, Tekstur, animasi dan <span class="tooltip"><strong>audio clips</strong><span class="tooltiptext">Sebuah wadah untuk data audio dalam Unity. Unity mendukung aset audio mono, stereo dan multichannel (hingga delapan saluran). Unity dapat mengimpor .aif, .wav, .mp3, dan format file audio .ogg, dan .xm, .mod, .it, dan format modul pelacak .s3m. <a class="tooltipMoreInfoLink" href="class-AudioClip.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AudioClip">Glossary</a></span></span></span>, dan aset lainnya.</li> 
+       </ul> 
+       <p> <strong>Note</strong>: Paket Manager tidak mendukung aset streaming dalam paket. Gunakan paket.</p> 
+       <p>Setiap paket juga berisi file <span class="tooltip"><a class="tooltipMoreInfoLink" href="upm-manifestPkg.html">Paket manifest</a><span class="tooltiptext">Setiap paket memiliki <em>manifest</em>, yang menyediakan informasi tentang paket ke Manajer Paket. Manifest mengandung informasi seperti nama paket, versinya, deskripsi untuk pengguna, ketergantungan pada paket lain (jika ada), dan rincian lainnya. <a href="upm-manifestPkg.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Packagemanifest">Glossary</a></span></span></span> yang mencakup informasi seperti nama paket, versinya, daftar dependensinya, dan URL ke repositorinya.</p> 
+       <p>Untuk membuat paket baru:</p> 
+       <ol> 
+        <li> <p>Buat cangkang kosong untuk paket menggunakan salah satu metode ini:</p> 
+         <ul> 
+          <li> <a href="#EmbedMe">Mengatur paket tertanam</a>.</li> 
+          <li> <a href="#LocalMe">Mengatur paket lokal</a>.</li> 
+         </ul> </li> 
+        <li><p>Menerapkan alat, perpustakaan, dan aset yang Anda butuhkan.</p></li> 
+        <li><p>Pastikan tata letak paket Anda mengikuti paket <a href="cus-layout.html">paket tata letak konvensi</a> untuk paket Unity.</p></li> 
+        <li> <p>Tambahkan <a href="cus-tests.html">tests</a> ke paket Anda. Uji penting untuk memastikan bahwa paket bekerja seperti yang diharapkan dalam skenario yang berbeda:</p> 
+         <ul> 
+          <li>Tulis semua Tes Editor Anda di <code>Tests/Editor</code>.</li> 
+          <li>Tulis semua Tes Playmode Anda dalam <code>Tests/Runtime</code>.</li> 
+         </ul> </li> 
+        <li><p>Rename dan memperbarui <a href="cus-asmdef.html">file definisi perakitan</a>.</p></li> 
+        <li> <p>Tambahkan <a href="cus-samples.html">samples</a> ke paket Anda, jika Anda memilikinya.</p> <p> <strong>Note</strong>: Paket dapat berisi hanya sampel, tetapi Anda juga dapat menyertakan sampel sebagai bagian dari paket alat atau template menggunakan tata letak yang sama dan struktur JSON.</p> </li> 
+        <li> <p>Anda dapat memperbarui file <code>CHANGELOG.md</code> setiap kali Anda menerbitkan versi baru. Setiap fitur baru atau perbaikan bug harus memiliki jejak dalam file ini. Untuk detail lebih lanjut tentang format changelog yang dipilih, lihat dokumentasi <a href="http://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>.</p> <p>Ini adalah opsional untuk paket yang tidak Anda bagikan, tetapi sangat dianjurkan untuk paket bersama, sehingga pengguna tahu versi mana yang paling sesuai dengan kebutuhan mereka.</p> <p> <strong>Tip</strong>: Anda dapat menyediakan tautan ke halaman web eksternal di mana Anda menghosting changelog paket ini menggunakan properti <a href="upm-manifestPkg.html#changelogUrl">Login Sitemap</a> dalam file manifestasi paket Anda.<code>package.json</code> manifest file.</p> </li> 
+        <li> <p>Anda dapat <a href="cus-legal.html">termasuk lisensi dan pemberitahuan pihak ketiga</a> dalam file <code>LICENSE.md</code> dan <code>THIRD PARTY NOTICES.md</code>.</p> <p>Ini adalah opsional untuk paket yang tidak Anda bagikan, tetapi sangat dianjurkan untuk paket bersama, sehingga pengguna Anda tidak menyalahgunakan paket atau melanggar lisensi pihak ketiga.</p> <p> <strong>Tip</strong>: Anda dapat menyediakan tautan ke halaman web eksternal di mana Anda menghosting lisensi paket ini dan pemberitahuan pihak ketiga menggunakan properti <a href="upm-manifestPkg.html#licensesUrl">Login Sitemap</a> dalam file manifestasi <code>package.json</code> paket Anda.</p> </li> 
+        <li> <p> <a href="cus-document.html">Document</a> paket Anda.</p> <p> <strong>Tip</strong>: Anda dapat menyediakan tautan ke halaman web eksternal di mana Anda menghosting dokumentasi paket ini menggunakan properti <a href="upm-manifestPkg.html#documentationUrl">Sitemap Sitemap</a> dalam file manifestasi <code>package.json</code> paket Anda.</p> </li> 
+        <li><p> <a href="cus-share.html">Share</a> paket Anda.</p></li> 
+       </ol> 
+       <p><a name="EmbedMe"></a></p> 
+       <h2>Membuat paket tertanam baru</h2> 
+       <p>Ikuti petunjuk ini jika Anda ingin membuat paket kustom <a href="upm-embed.html">di dalam folder proyek Anda</a>.</p> 
+       <ol> 
+        <li> <p>Buka Hub Unity, dan di komputer Anda.</p> <p>Anda juga dapat menggunakan proyek yang ada di komputer Anda, dan <a href="upm-embed.html">mengkonfigurasi paket di bawah proyek Anda</a> atau <a href="upm-ui-local.html">instal paket dari folder lokal</a>. Namun, mulai dengan proyek baru membuat konten paket kurang rentan terhadap kesalahan.</p> </li> 
+        <li><p>Menggunakan manajer file komputer Anda (misalnya Windows File Explorer atau MacOS Finder), arahkan ke folder proyek Anda dan cari subfolder <code>Packages</code>.</p></li> 
+        <li> <p>Buat subfolder baru untuk paket Anda di dalam folder <code>Packages</code> menggunakan nama yang cocok dengan <a href="upm-manifestPkg.html#name">Nama paket</a>. Misalnya, jika paket Anda disebut <code>com.example.mypackage</code>, subfolder juga harus disebut <code>com.example.mypackage</code>.</p> <p> <strong>Note</strong>: Ini sangat penting jika paket Anda mengandung aset, karena <a href="../ScriptReference/AssetDatabase.LoadAssetAtPath.html">AsetDatabase mencari jalur aset</a> yang cocok <code>Packages/&lt;your-package-name&gt;/Assets</code>, terlepas dari apa folder sebenarnya disebut.</p> </li> 
+        <li><p>Buka editor teks pilihan Anda dan buat file JSON yang disebut <code>package.json</code>.</p></li> 
+        <li><p>Simpan di bawah folder akar paket baru yang Anda buat.</p></li> 
+        <li><p>Isi semua bidang yang diperlukan dan direkomendasikan dalam file <a href="upm-manifestPkg.html">paket manifest</a> (<code>package.json</code>).</p></li> 
+       </ol> 
+       <p>Ketika Anda membuka kembali Unity, paket baru muncul di jendela <a class="tooltipMoreInfoLink" href="Packages.html">Package Manager</a> dan di <span class="tooltip"><strong>Project window</strong><span class="tooltiptext">Jendela yang menunjukkan isi folder <code>Assets</code> (Project tab) <a href="ProjectView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Projectwindow">Glossary</a></span></span></span>, di mana Anda dapat melihat dan memodifikasi konten paket. Jika Anda memilih file <code>package.json</code> di jendela Proyek, Anda juga dapat memodifikasi kontennya langsung di jendela <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>.</p> 
+       <p><a name="LocalMe"></a></p> 
+       <h2>Membuat paket lokal baru</h2> 
+       <p>Ikuti petunjuk ini jika Anda ingin membuat paket kustom di luar folder proyek Anda:</p> 
+       <ol> 
+        <li> <p>Menggunakan manajer file komputer Anda (misalnya Windows File Explorer atau MacOS Finder), buat folder untuk paket Anda.</p> <p>Anda juga dapat menggunakan lokasi yang ada jika Anda sudah membuat beberapa konten untuk paket Anda.</p> </li> 
+        <li><p>Pastikan tata letak struktur folder Anda mengikuti <a href="cus-layout.html">paket tata letak konvensi</a> untuk paket Unity. Misalnya, jika Anda memiliki perpustakaan Editor dan Runtime, pastikan mereka disimpan di bawah folder <code>Editor</code> dan <code>Runtime</code>.</p></li> 
+        <li><p>Buka editor teks pilihan Anda dan buat file JSON yang disebut <code>package.json</code>.</p></li> 
+        <li><p>Simpan di bawah folder akar paket.</p></li> 
+        <li><p>Isi semua bidang yang diperlukan dan direkomendasikan dalam file <a href="upm-manifestPkg.html">paket manifest</a> (<code>package.json</code>).</p></li> 
+        <li><p>Dalam Unity, membuat proyek baru atau membuka proyek yang ada.</p></li> 
+        <li><p>Buka jendela <a href="Packages.html">Paket</a> dan ikuti petunjuk untuk <a href="upm-ui-local.html">menginstal paket lokal</a>, gunakan file <code>package.json</code> yang Anda buat.</p></li> 
+       </ol> 
+       <p>Paket baru muncul di jendela Manajer Paket dan di jendela Proyek, di mana Anda dapat melihat dan memodifikasi konten paket. Jika Anda memilih paket. file json di jendela Proyek, Anda juga dapat memodifikasi kontennya langsung di jendela Inspektur.</p> 
+       <hr> 
+       <ul> 
+        <li><span class="page-history">Paket Khusus ditambahkan dalam Unity <span class="search-words">NewIn20191</span></span></li> 
+       </ul> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="upm-network.html"></a></span> 
+         <div class="tip">
+           Masalah jaringan 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="cus-naming.html"></a></span> 
+         <div class="tip">
+           Mengajarkan paket Anda 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

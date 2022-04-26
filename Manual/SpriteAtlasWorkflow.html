@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Sprite Atlas alur kerja</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Unity2D.html">2D</a></li> 
+         <li><a href="Sprites.html">Sprites</a></li> 
+         <li><a href="class-SpriteAtlas.html">Atlas Asni</a></li> 
+         <li>Louis Martinus</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="VariantSpriteAtlas.html"></a></span> 
+          <div class="tip">
+            Atlas Asni 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="SpriteAtlasDistribution.html"></a></span> 
+          <div class="tip">
+            WordPress.org Atlas untuk distribusi 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Louis Martinus</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Ikuti langkah di bawah ini untuk membuat Atlas <span class="tooltip"><strong>Sprite</strong><span class="tooltiptext">Objek grafis 2D. Jika Anda digunakan untuk bekerja di 3D, Sprites pada dasarnya hanya tekstur standar tetapi ada teknik khusus untuk menggabungkan dan mengelola tekstur sprite untuk efisiensi dan kenyamanan selama perkembangan. <a class="tooltipMoreInfoLink" href="Sprites.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Sprite">Glossary</a></span></span></span>:</p> 
+       <ol> 
+        <li>Buat Aset <span class="tooltip"><a class="tooltipMoreInfoLink" href="#createAtlas">Atlas Asni</a><span class="tooltiptext">Tekstur yang terdiri dari beberapa tekstur yang lebih kecil. Juga disebut sebagai atlas tekstur, sprite gambar, sprite sheet atau tekstur dikemas. <a href="class-SpriteAtlas.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#spriteatlas">Glossary</a></span></span></span>.</li> 
+        <li>Pilih daftar <a href="#objectlist">Objek untuk Packing</a> ke dalam Sprite Atlas.</li> 
+        <li>Aktifkan <a href="#inclbuild">Sertakan dalam membangun</a> pada Sprite Atlass untuk memasukkan mereka dengan proyek.</li> 
+        <li>(Opsional) Membuat <a href="VariantSpriteAtlas.html">Atlas Asni</a>.</li> 
+        <li>(Opsional) Siapkan Atlas Sprite untuk <a href="SpriteAtlasDistribution.html">distribution</a>. 
+         <ul> 
+          <li>Sprites disiapkan untuk distribusi perlu dimuat melalui <a href="LateBinding.html">Late Binding</a> dengan skrip.</li> 
+         </ul> </li> 
+        <li>(Opsional) <a href="#Optimized">Optimize</a> Sprite Atlas penggunaan dan ukuran dalam Proyek Anda untuk meningkatkan kinerja.</li> 
+       </ol> 
+       <h2>Buat a Sprite Atlas Asset<a name="createAtlas"></a> </h2> 
+       <p>Untuk membuat Aset <strong>Sprite Atlas</strong>, pergi ke <strong>Asset &gt; Create &gt; Sprite Atlas</strong>. Unity menciptakan Atlas Sprite di folder Aset, dengan ekstensi file * .spriteatlas.</p> 
+       <h2>Pilih item untuk objek untuk daftar kemasan<a name="objectlist"></a> </h2> 
+       <p>Daftar <strong>Objects for Packing</strong> menampilkan item yang dipilih saat ini yang berada di Atlas Sprite. Anda dapat menempatkan Aset Tekstur2D dan Sprite dalam daftar ini. Seret dan lepas folder langsung ke daftar untuk secara otomatis menambahkan semua konten yang valid dalam folder ke daftar (hanya folder muncul di daftar).</p> 
+       <p>Untuk memilih item tertentu untuk daftar:</p> 
+       <ol> 
+        <li> <p>Pilih Sprite Atlas Asset dan temukan objek untuk daftar kemasan di jendela <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>. Ini menampilkan daftar item untuk Unity untuk mengemas ketika membangun Atlas Sprite.</p> 
+         <figure> 
+          <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ObjectsList.png" alt=""> 
+         </figure> </li> 
+        <li> <p>Untuk menambahkan item, pilih ikon plus (<strong>+</strong>) di sebelah kanan bawah daftar untuk membuat baris baru. Seret Aset yang valid ke baris kosong untuk menambahkannya ke daftar, atau pilih ikon lingkaran ke kanan baris untuk membuka jendela <strong>Select Object</strong>. Pilih Aset dari jendela Object Picker untuk menambahkannya ke daftar:</p> 
+         <figure> 
+          <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TexturePicker.png" alt=""> 
+         </figure> <p>Untuk menghapus item dari daftar, klik ikon minus (<strong>-</strong>) di sebelah kanan bawah daftar <strong>Objects For Packing</strong>. Untuk mengganti item, tarik item lain ke baris itu menempatinya di daftar.</p> </li> 
+        <li> <p>Pilih <strong>Pack Preview</strong> untuk Pratinjau Tekstur Atlas gabungan di jendela <strong>Asset Preview</strong>.</p> 
+         <figure> 
+          <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PackPreview.png" alt=""> 
+         </figure> </li> 
+       </ol> 
+       <h2>Termasuk di Build<a name="inclbuild"></a> </h2> 
+       <p>Semua Sprit Atlass memiliki <strong>Include in Build</strong> diaktifkan secara default ketika dibuat. Ini berarti bahwa Unity mencakup Atlas Sprite dengan <span class="tooltip"><a class="tooltipMoreInfoLink" href="PublishingBuilds.html">build</a><span class="tooltiptext">Proses menyusun proyek Anda ke dalam format yang siap dijalankan pada platform atau platform tertentu. <a href="BuildSettings.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#build">Glossary</a></span></span></span> Proyek dan secara otomatis memuatnya pada waktu lari build. Aktifkan atau menonaktifkan properti 'Termasuk dalam Membangun' untuk mengontrol yang Sprite Atlas disertakan dalam membangun Proyek.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/IncludeInBuild.png" alt=""> 
+       </figure> 
+       <p>Jelaskan 'Termasuk dalam Build' <a href="SpriteAtlasDistribution.html#Dontinclbuild">disables</a> perilaku ini, dan dilakukan ketika menyiapkan Atlas Sprite untuk <a href="SpriteAtlasDistribution.html">distribution</a>.</p> 
+       <h2>Mengoptimalkan penggunaan dan ukuran Sprite Atlas untuk meningkatkan kinerja<a name="Optimized"></a>%</h2> 
+       <p>Ketika Sprite aktif dalam <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>, Unity memuat Sprite Atlas itu milik dan semua Tekstur yang mengandung. Hal ini dapat menyebabkan overhead kinerja yang berlebihan jika Unity memuat Atlas Sprite dengan Tekstur yang sangat besar ketika tidak ada di Adegan menggunakan sebagian besar tekstur tersebut.</p> 
+       <p>Untuk mengoptimalkan penggunaan Sprite Atlas, idealnya semua atau sebagian besar Sprites yang aktif di Adegan harus milik Atlas yang sama. Ini adalah praktik yang baik untuk membagi Tekstur Sprite menjadi beberapa Atlas yang lebih kecil sesuai dengan penggunaan umum mereka.</p> 
+       <p>Cara lain untuk mengurangi kinerja overhead adalah untuk mengurangi ruang kosong antara Tekstur dikemas dalam Atlas Sprite. Ini mengurangi ukuran Sprite Atlas. Untuk melakukan ini, pilih Sprite Atlas dan memeriksa Tekstur Atlas dikemas di jendela Pack Preview di bagian bawah pengaturan Inspekturnya. Jika tidak ada Pratinjau yang tersedia, pilih tombol <strong>Pack Preview</strong> di bawah daftar <strong>Objects for Packing</strong> untuk menghasilkan Tekstur dikemas.</p> 
+       <p> <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/2D_ExcessSpace.png" alt="Sprite Atlas with excess empty space."><br>Sprite Atlas dengan ruang kosong berlebih.</p> 
+       <p>Jika ada ruang kosong berlebih yang terlihat, Anda dapat secara manual mengurangi ukuran Tekstur dikemas untuk mengurangi jumlah ruang kosong dan mengoptimalkan ukuran Atlas. Untuk melakukannya, pergi ke panel <strong>Platform-specific overrides</strong> di bagian bawah jendela Inspektur. Pilih nilai yang lebih rendah dari menu drop-down dari pengaturan <strong>Max Texture Size</strong>, kemudian pilih <strong>Pack Preview</strong> untuk menggenerasi Tekstur dikemas.</p> 
+       <p> <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/2DSpriteAtlas_MaxTexSize.png" alt="Set the Max Texture Size."><br> Mengatur Ukuran Tekstur Maks.</p> 
+       <p>Ketika nilai <strong>Max Texture Size</strong> lebih rendah dari dimensi saat ini Tekstur Sprite Atlas, Unity mengurangi dimensi Tekstur dikemas untuk mencocokkan set <strong>Max Texture Size</strong> sedekat mungkin, dan secara otomatis memotong ruang kosong tambahan. Jika ada Tekstur Sprite yang dipilih yang melebihi pengaturan <strong>Max Texture Size</strong> dari Atlas Sprite, maka Atlas Sprite mengabaikan pengaturan <strong>Max Texture Size</strong> dan tetap pada ukuran minimum yang diperlukan untuk mengandung Tekstur Sprite pada dimensi aslinya.</p> 
+       <p> <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/2DSpriteAtlas_MinTexSize.png" alt="Textures in a Sprite Atlas remain in their original dimensions."><br>Textures dalam Sprite Atlas tetap dalam dimensi aslinya.</p> 
+       <p>Sitemap Saat menggunakan <strong>Note:</strong>, pilih nilai skala yang sangat rendah (kecuali dari 0,25) dapat mengakibatkan artefak visual, tergantung pada format <a href="VariantSpriteAtlas.html">Atlassian Variant</a> yang digunakan dan resolusi asli Sprite. Disarankan untuk menggunakan nilai padding tinggi dan format kompresi yang lebih baik ketika menggunakan Atlas Variant.<span class="tooltip"><strong>compression</strong><span class="tooltiptext">Metode menyimpan data yang mengurangi jumlah ruang penyimpanan yang dibutuhkan. <a href="class-TextureImporterOverride.html">Kompresi Tekstur</a>, <a href="class-AnimationClip.html#AssetProperties">Kompresi Animasi</a>, <a href="class-AudioClip.html">Kompresi Audio</a>, <a href="ReducingFilesize.html">Membangun Kompresi</a>.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#compression">Glossary</a></span></span></span> format used and original resolution of the Sprite. It is recommended to use high padding values and better compression formats when using Variant Atlases.</p> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="VariantSpriteAtlas.html"></a></span> 
+         <div class="tip">
+           Atlas Asni 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="SpriteAtlasDistribution.html"></a></span> 
+         <div class="tip">
+           WordPress.org Atlas untuk distribusi 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Post-processing dan efek layar penuh</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="visual-effects.html">Efek visual</a></li> 
+         <li>Post-processing dan efek layar penuh</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="visual-effects.html"></a></span> 
+          <div class="tip">
+            Efek visual 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="ParticleSystems.html"></a></span> 
+          <div class="tip">
+            Sistem partikel 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Post-processing dan efek layar penuh</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Unity menyediakan sejumlah efek <strong><strong>post-processing</strong></strong> dan efek layar penuh yang dapat sangat meningkatkan tampilan aplikasi Anda dengan sedikit waktu set-up. Anda dapat menggunakan efek ini untuk mensimulasikan sifat fisik <span class="tooltip"><strong>camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span> dan film, atau untuk membuat visual stylised.</p> 
+       <p>Halaman ini berisi informasi berikut:</p> 
+       <ul> 
+        <li><a href="#render-pipeline-compatibility">Kompatibilitas pipa Render</a></li> 
+        <li><a href="#effect-availability-and-location">Ketersediaan efek dan lokasi</a></li> 
+       </ul> 
+       <p>Gambar di bawah ini menunjukkan <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> dengan dan tanpa proses pasca.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PostProcessing-0.jpg" alt="Scene with no post-processing"> 
+        <figcaption>
+          Adegan tanpa proses pasca 
+        </figcaption> 
+       </figure> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PostProcessing-1.jpg" alt="Scene with post-processing"> 
+        <figcaption>
+          Adegan dengan proses pasca 
+        </figcaption> 
+       </figure> 
+       <p><a name="render-pipeline-compatbility"></a></p> 
+       <h2>Kompatibilitas pipa Render</h2> 
+       <p>Efek pasca proses apa yang tersedia dan bagaimana Anda menerapkannya tergantung pada <span class="tooltip"><a class="tooltipMoreInfoLink" href="render-pipelines.html">render pipa</a><span class="tooltiptext">Rangkaian operasi yang mengambil isi dari Adegan, dan menampilkannya di layar. Unity memungkinkan Anda memilih dari pipa render yang dibangun sebelumnya, atau menulis sendiri. <a href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span> yang Anda gunakan. Solusi pasca proses dari satu pipa render tidak kompatibel dengan pipa render lainnya.</p> 
+       <p>Meja ini berisi informasi tentang solusi pemrosesan pasca Unity kompatibel dengan setiap pipa render Unity.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Render pipeline</strong></th> 
+          <th style="text-align:left;"><strong>Post-processing support</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><a href="SL-RenderPipeline.html"><strong>Built-in Render Pipeline</strong></a></td> 
+          <td style="text-align:left;">Render Terpasang Pipeline tidak termasuk solusi pasca proses secara default. Untuk menggunakan efek pasca proses dengan Pipeline Render Built-in, unduh paket. Untuk informasi tentang menggunakan efek pasca-olahan di Pipa Render Built-in, lihat dokumentasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong></strong></td> 
+          <td style="text-align:left;">URP termasuk solusi pasca proses sendiri, yang memasang Unity ketika Anda membuat Proyek menggunakan Template URP. Untuk informasi tentang menggunakan efek pasca-olahan di URP, lihat .</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong></strong></td> 
+          <td style="text-align:left;">HDRP termasuk solusi pasca proses sendiri, yang memasang Unity ketika Anda membuat Proyek menggunakan Template HDRP. Untuk informasi tentang menggunakan efek pasca-olahan di HDRP, lihat.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Sitemap Posting memproses versi stack 1 sekarang diuraikan dan tidak boleh digunakan.<strong>Note:</strong> Post processing stack version 1 is now deprecated and should not be used.</p> 
+       <p><a name="effect-availability-and-location"></a></p> 
+       <h2>Ketersediaan efek dan lokasi</h2> 
+       <p>Meja ini berisi informasi tentang efek pasca-olahan dan efek layar penuh tersedia dalam solusi pasca-olahan yang berbeda Unity, bagaimana menemukan efek tersebut, dan efek lain yang dapat Anda gunakan untuk mencapai hasil yang sama.</p> 
+       <p>Dalam versi sebelumnya Unity, Anda menerapkan semua efek pasca-olahan dan efek layar penuh dengan cara yang sama; dengan menambahkan komponen ke Kamera. Dalam versi Unity yang lebih baru, Anda dapat menerapkan efek ini dengan cara yang berbeda.</p> 
+       <p>Perhatikan bahwa Unity menerapkan efek berbeda tergantung pada paket yang Anda gunakan. Ini berarti bahwa efek bervariasi dalam hal kinerja, penampilan, dan konfigurasi antara paket.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Effect Name</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+          <th style="text-align:left;"><strong>Available in URP integrated solution?</strong></th> 
+          <th style="text-align:left;"><strong>Available in HDRP integrated solution?</strong></th> 
+          <th style="text-align:left;"><strong>Available in PPv2 package?</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Ambient Occlusion</td> 
+          <td style="text-align:left;">Efek <strong>Ambient Occlusion</strong> gelap daerah di tempat kejadian Anda yang tidak terkena pencahayaan ambient.</td> 
+          <td style="text-align:left;">Sitemap <br><br> Anda juga dapat menerapkan Occlusion Ambient sebagai bagian dari pencahayaan panggang Anda. Untuk informasi lebih lanjut, lihat<br><br> You can also apply Ambient Occlusion as part of your baked lighting. For more information, see </td> 
+          <td style="text-align:left;">Sitemap Pilih dari menggunakan Override Volume, atau <br><br> Anda juga dapat menerapkan <br><br> Anda juga dapat menerapkan Occlusion Ambient sebagai bagian dari pencahayaan panggang Anda. Untuk informasi lebih lanjut, lihat<br><br> You can also apply Ambient Occlusion as part of your baked lighting. For more information, see </td> 
+          <td style="text-align:left;">Sitemap Sitemap Anda juga dapat menerapkan Occlusion Ambient sebagai bagian dari pencahayaan panggang Anda. Untuk informasi lebih lanjut, lihat<br><br>See <br> You can also apply Ambient Occlusion as part of your baked lighting. For more information, see </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Anti-aliasing</td> 
+          <td style="text-align:left;">Efek <strong>Anti-aliasing</strong> melunakkan penampilan tepi di tempat kejadian Anda. <br>Depending pada pipa render Anda, Anda dapat menggunakan MSAA (keras anti-aliasing), atau FXAA, SMAA, atau TAA (efek pemrosesan pos anti-aliasing)</td> 
+          <td style="text-align:left;">Ya <br><br>FXAA dan SMAA dapat diaktifkan dalam komponen <br><br> Anda juga dapat mengkonfigurasi MSAA (hardware anti-aliasing) di</td> 
+          <td style="text-align:left;">Ya <br><br>FXAA, SMAA, dan TAA diterapkan pada <strong>Project Settings &gt; Frame Settings &gt; HDRP Default Settings</strong>; lihat <br><br> Anda juga dapat mengkonfigurasi MSAA (hardware anti-aliasing) di Aset HDRP - lihat.</td> 
+          <td style="text-align:left;">Ya <br><br>Untuk FXAA, SMAA, dan TAA, lihat <br><br> Anda juga dapat mengkonfigurasi MSAA (hardware anti-aliasing) di</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Mobil</td> 
+          <td style="text-align:left;">Efek <strong>Auto Exposure</strong> secara dinamis menyesuaikan paparan gambar agar sesuai dengan mid-tone.</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Sitemap Pada saat <br><br><strong>Mode</strong> is set to <strong>Automatic</strong> </td> 
+          <td style="text-align:left;">Sitemap Sitemap<br><br>See </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Bloom</td> 
+          <td style="text-align:left;">Efek <strong>Bloom</strong> membuat area terang dalam cahaya gambar Anda. Perhatikan bahwa Bloom bekerja berbeda dalam setiap paket, dan memerlukan pengaturan yang berbeda; baca dokumentasi untuk paket yang diberikan untuk informasi lebih lanjut.</td> 
+          <td style="text-align:left;">Sitemap Sitemap<br><br>See </td> 
+          <td style="text-align:left;">Sitemap Sitemap<br><br> See </td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Saluran Mixer</td> 
+          <td style="text-align:left;"><strong>Channel mixer</strong> memungkinkan Anda menyesuaikan keseimbangan setiap warna input.</td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+          <td style="text-align:left;">Sitemap Sitemap<br><br>See <strong>Channel Mixer</strong> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Aberrasi Chromatic</td> 
+          <td style="text-align:left;">Efek <strong>Chromatic Aberration</strong> menyebar warna di sepanjang batas antara area gelap dan terang gambar.</td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Penyesuaian warna</td> 
+          <td style="text-align:left;">Efek <strong>Color Adjustments</strong> memungkinkan Anda mengubah nada keseluruhan, kecerahan, dan kontras gambar rendering akhir.</td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+          <td style="text-align:left;">Sitemap Lihat <br><br>See <strong>Tone</strong> in </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Kurva warna</td> 
+          <td style="text-align:left;">Efek <strong>Color Curves</strong> memungkinkan Anda menyesuaikan rentang spesifik dalam hue, saturasi, atau luminositas.</td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+          <td style="text-align:left;">Sitemap Lihat <br><br>See <strong>Grading Curves</strong> in </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Fog</td> 
+          <td style="text-align:left;">Efek <strong>Fog</strong> mensimulasikan tampilan kabut atau kabut di lingkungan luar ruangan.</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Ya<br><br>See (memasukkan bahwa ini tidak diterapkan sebagai efek layar penuh atau efek pasca-olahan)</td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Kedalaman Lapangan</td> 
+          <td style="text-align:left;">Efek <strong>Depth of Field</strong> blur latar belakang gambar Anda sementara benda-benda di latar belakang tetap fokus.</td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Grain</td> 
+          <td style="text-align:left;">Efek <strong>Grain</strong> overlays film kebisingan ke gambar Anda.</td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Distorsi lensa</td> 
+          <td style="text-align:left;">Efek <strong>Lens Distortion</strong> mensimulasikan distorsi yang disebabkan oleh bentuk lensa kamera dunia nyata.</td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+          <td style="text-align:left;">Sitemap Sitemap<br><br>See </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Angkat, Gamma, Mendapatkan</td> 
+          <td style="text-align:left;">Efek <strong>Lift, Gamma, Gain</strong> memungkinkan Anda untuk melakukan grading warna tiga arah.</td> 
+          <td style="text-align:left;">Sitemap Sitemap<br><br>See </td> 
+          <td style="text-align:left;">Sitemap Sitemap<br><br>See </td> 
+          <td style="text-align:left;">Sitemap Lihat <br><br>See <strong>Trackballs</strong> in </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Gerak Blur</td> 
+          <td style="text-align:left;">Efek <strong>Motion Blur</strong> blur gambar dalam arah gerakan <strong>camera’s</strong> movement</td> 
+          <td style="text-align:left;">Sitemap Sitemap<br><br>See </td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Proyeksi Panini</td> 
+          <td style="text-align:left;">Efek <strong>Panini Projection</strong> memperbaiki distorsi di tepi gambar yang disebabkan oleh bidang pandang yang luas.</td> 
+          <td style="text-align:left;">Sitemap Sitemap<br><br>See </td> 
+          <td style="text-align:left;">Sitemap Sitemap<br><br>See </td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Ruang Layar Refleksi</td> 
+          <td style="text-align:left;">Efek <strong>Screen Space Reflection</strong> menciptakan refleksi halus yang mensimulasikan permukaan lantai basah atau pudel.</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Sitemap Sitemap<br><br>See </td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Bayangan Midtones Highlights</td> 
+          <td style="text-align:left;">Efek <strong>Shadows Midtones Highlights</strong> secara terpisah mengontrol kaleng dan kecerahan bayangan, midtones, dan menyoroti gambar Anda</td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Split Toning</td> 
+          <td style="text-align:left;">Efek <strong>Split Toning</strong> memetakan dua nada yang berbeda dalam gambar Anda ke dua warna tertentu.</td> 
+          <td style="text-align:left;">Sitemap Sitemap<br><br>See </td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Tonemapping</td> 
+          <td style="text-align:left;">Efek <strong>Tonemapping</strong> remaps nilai gambar ke kisaran dinamis tinggi (HDR) warna</td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+          <td style="text-align:left;">Sitemap Lihat <br><br>See <strong>Tonemapping</strong> in </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Vignette</td> 
+          <td style="text-align:left;">Efek <strong>Vignette</strong> gelap tepi gambar</td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Saldo Putih</td> 
+          <td style="text-align:left;">Efek <strong>White Balance</strong> melestarikan area putih dalam gambar dan keseimbangan nada lain di sekitar area putih</td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+          <td style="text-align:left;">Yes<br><br>See </td> 
+          <td style="text-align:left;">Hepatitis C Virus (HCV)<br><br><strong>See White balance</strong> in </td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="visual-effects.html"></a></span> 
+         <div class="tip">
+           Efek visual 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="ParticleSystems.html"></a></span> 
+         <div class="tip">
+           Sistem partikel 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

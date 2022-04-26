@@ -1,0 +1,1342 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Pengaturan Pemain Android</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="platforms" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="PlatformSpecific.html">Pengembangan platform</a></li> 
+         <li><a href="android.html">Android</a></li> 
+         <li><a href="android-getting-started.html">Mulai dengan Android</a></li> 
+         <li>Pengaturan Pemain Android</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="android-sdksetup.html"></a></span> 
+          <div class="tip">
+            Pengaturan lingkungan Android 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="android-keystore.html"></a></span> 
+          <div class="tip">
+            Android SDK 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Pengaturan Pemain Android</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Halaman ini rincian Pengaturan Pemain untuk platform Android. Untuk deskripsi pengaturan Pemain Umum, lihat <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-PlayerSettings.html">Pengaturan Pemain</a><span class="tooltiptext">Pengaturan yang memungkinkan Anda mengatur berbagai pilihan khusus pemain untuk permainan akhir yang dibangun oleh Unity. <a href="class-PlayerSettings.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#PlayerSettings">Glossary</a></span></span></span>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/class-PlayerSettingsAndroid.png" alt="Player Settings for Android."> 
+        <figcaption>
+          Pengaturan Pemain untuk Android. 
+        </figcaption> 
+       </figure> 
+       <p>Dokumentasi untuk properti dikelompokkan sesuai dengan bagian masing-masing di Player <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span>:</p> 
+       <ul> 
+        <li><a href="#Icon">Icon</a></li> 
+        <li><a href="#Resolution">Resolusi dan Presentasi</a></li> 
+        <li><a href="#Splash">Gambar Splash</a></li> 
+        <li><a href="#Other">Pengaturan lain</a></li> 
+        <li><a href="#Publishing">Pengaturan Penerbitan</a></li> 
+       </ul> 
+       <p><a name="Icon"></a></p> 
+       <h2>Icon</h2> 
+       <p>Gunakan bagian <strong>Icon</strong> untuk menentukan ikon untuk mewakili aplikasi Anda di perangkat.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PlayerSetAndroidIcon.png" alt="Icon settings for Android."> 
+        <figcaption>
+          Pengaturan ikon untuk Android. 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Setting</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Adaptive</strong></td> 
+          <td style="text-align:left;">Tentukan tekstur berbagai ukuran untuk mewakili aplikasi Anda pada perangkat yang menjalankan Android 8.0 (tingkat API 26) atau lebih tinggi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Round</strong></td> 
+          <td style="text-align:left;">Tentukan tekstur berbagai ukuran untuk mewakili aplikasi Anda pada perangkat yang menjalankan Android 7.1 (tingkat API 25) atau lebih tinggi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Legacy</strong></td> 
+          <td style="text-align:left;">Tentukan tekstur berbagai ukuran untuk mewakili aplikasi Anda pada perangkat yang menjalankan versi lebih awal dari Android 7.1 (tingkat API 25).</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="Resolution"></a></p> 
+       <h2>Resolusi dan Presentasi</h2> 
+       <p>Gunakan bagian <strong>Resolution and Presentation</strong> untuk menyesuaikan aspek tampilan layar.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PlayerSetAndroidResPres.png" alt="Resolution and Presentation settings for Android."> 
+        <figcaption>
+          Pengaturan resolusi dan presentasi untuk Android. 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Setting</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"> <a name="fullscreen"></a><strong>Fullscreen Mode</strong> </td> 
+          <td style="text-align:left;">Tentukan bagaimana jendela muncul di perangkat. Ini mengatur mode jendela default di startup.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>jendela layar penuh</em></td> 
+          <td style="text-align:left;">Jendela aplikasi mengisi resolusi asli layar penuh perangkat. Untuk mengisi jendela layar penuh, skala Unity konten aplikasi. <strong>Resolution Scaling Mode</strong> mengontrol bagaimana skala Unity konten. Dalam mode ini, bilah navigasi selalu tersembunyi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Windowed</em></td> 
+          <td style="text-align:left;">Aplikasi ini menggunakan jendela standar, non-full-screen, bergerak. Ukuran jendela tergantung pada resolusi aplikasi. Dalam mode ini, jendela dapat diubah secara default. Untuk menonaktifkan ini, menonaktifkan <a href="#resizable">Resizable Window</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"> <a name="resizable"></a><strong>Resizable Window</strong> </td> 
+          <td style="text-align:left;">Menunjukkan apakah pengguna dapat mengubah ukuran jendela aplikasi. Login Pengaturan ini memungkinkan kemampuan multi-window dalam aplikasi Anda di ponsel Android dan tablet. Untuk informasi lebih lanjut, lihat <br>.<a href="https://developer.android.com/guide/topics/ui/multi-window">Dokumentasi pengembang Google</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Default Window Width</strong></td> 
+          <td style="text-align:left;">Lebar default dari jendela aplikasi di <span class="tooltip"><strong>pixels</strong><span class="tooltiptext">Unit terkecil dalam gambar komputer. Ukuran piksel tergantung pada resolusi layar Anda. Pencahayaan pixel dihitung pada setiap piksel layar. <a class="tooltipMoreInfoLink" href="ShadowPerformance.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#pixel">Glossary</a></span></span></span>. Opsi ini hanya tersedia jika <strong>Fullscreen Mode</strong> diatur ke <strong>Windowed</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Default Window Height</strong></td> 
+          <td style="text-align:left;">Tinggi default dari jendela aplikasi dalam piksel. Opsi ini hanya tersedia jika <strong>Fullscreen Mode</strong> diatur ke <strong>Windowed</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Minimum Window Width</strong></td> 
+          <td style="text-align:left;">Lebar minimum jendela aplikasi dalam piksel. Opsi ini hanya tersedia jika <strong>Fullscreen Mode</strong> diatur ke <strong>Windowed</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Minimum Window Height</strong></td> 
+          <td style="text-align:left;">Tinggi minimum jendela aplikasi dalam piksel. Opsi ini hanya tersedia jika <strong>Fullscreen Mode</strong> diatur ke <strong>Windowed</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Hide Navigation Bar</strong></td> 
+          <td style="text-align:left;">Menunjukkan apakah untuk menyembunyikan bilah navigasi yang muncul di bagian atas jendela.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Render outside safe area</strong></td> 
+          <td style="text-align:left;">Menunjukkan apakah aplikasi harus menggunakan semua ruang layar yang tersedia untuk render, termasuk area tampilan yang dipotong (bukan). Untuk informasi lebih lanjut, lihat dokumentasi <a href="https://developer.android.com/guide/topics/display-cutout">dukungan cutout tampilan</a> Android.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Optimized Frame Pacing</strong></td> 
+          <td style="text-align:left;">Menunjukkan apakah Unity bahkan harus mendistribusikan bingkai untuk lebih sedikit varian dalam framerate. Aktifkan opsi ini untuk menciptakan pengalaman yang lebih halus.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Pengaturan <strong>Resolution and Presentation</strong> lainnya dikelompokkan di bawah bagian berikut:</p> 
+       <ul> 
+        <li><a href="#Scaling">Resolusi Scaling</a></li> 
+        <li><a href="#Aspect">Rasio Aspect yang Didukung</a></li> 
+        <li><a href="#Orientation">Orientation</a></li> 
+        <li><a href="#supportedOris">Orientasi yang diizinkan untuk Rotasi Otomatis</a></li> 
+        <li><a href="#OtherRes">Other</a></li> 
+       </ul> 
+       <p><a name="Scaling"></a></p> 
+       <h3>Resolusi Scaling</h3> 
+       <p>Gunakan bagian <strong>Resolution Scaling</strong> untuk menyesuaikan pengaturan yang berkaitan dengan penambah resolusi layar. Menggunakan resolusi lebih rendah dari resolusi asli perangkat dapat meningkatkan kinerja dan masa pakai baterai.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PlayerSetAndroidResPres-Scaling.png" alt="Resolution Scaling settings for Android."> 
+        <figcaption>
+          Pengaturan resolusi Scaling untuk Android. 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Setting</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Resolution Scaling Mode</strong></td> 
+          <td style="text-align:left;">Menentukan apakah dan bagaimana skala aplikasi resolusinya. Anda dapat mengatur scaling sama dengan atau lebih rendah dari resolusi layar asli. Menggunakan resolusi yang lebih rendah dapat meningkatkan kinerja dan masa pakai baterai.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Disabled</em></td> 
+          <td style="text-align:left;">Tidak menerapkan skala resolusi dan render aplikasi ke resolusi layar asli perangkat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>FixedDPI</em></td> 
+          <td style="text-align:left;">Penskalaan resolusi yang tepat menggunakan API target. Gunakan ini untuk mengoptimalkan kinerja dan masa pakai baterai atau menargetkan pengaturan DPI tertentu.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Letterboxed</em></td> 
+          <td style="text-align:left;">Menambahkan bar hitam ke output yang diberikan sehingga konten tidak meregangkan. Proses ini disebut <a href="https://en.wikipedia.org/wiki/Letterboxing_(filming)">letterboxing</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Target DPI</strong></td> 
+          <td style="text-align:left;">Resolusi aplikasi. Jika layar asli perangkat DPI lebih tinggi dari nilai ini, Unity downscales resolusi aplikasi untuk mencocokkan pengaturan ini. Untuk menghitung skala, Unity menggunakan berikut:<br><code>min(Target DPI * Factor / Screen DPI, 1)</code><br> Di mana <strong>Factor</strong> adalah <strong>Resolution Scaling Fixed DPI Factor</strong> dari <a href="class-QualitySettings.html">Pengaturan kualitas</a>.<strong>Note:</strong> Opsi ini hanya muncul ketika Anda mengatur <strong>Resolution Scaling Mode</strong> ke <strong>Fixed DPI</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong><span class="tooltip"><strong>Blit</strong><span class="tooltiptext">A shorthand term for “bit block transfer”. A blit operation is the process of transferring blocks of data from one place in memory to another.<br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#blit">Glossary</a></span></span></span> Type</strong></td> 
+          <td style="text-align:left;">Kontrol apakah untuk menggunakan celah untuk membuat gambar akhir ke layar. Menggunakan blit kompatibel dengan sebagian besar perangkat tetapi biasanya lebih lambat daripada tidak menggunakan blit.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Always</em></td> 
+          <td style="text-align:left;">Satuan render ke penyangga layar lepas dan kemudian menggunakan celah untuk menyalin konten penyangga ke kerangka perangkat. Ini kompatibel dengan sebagian besar perangkat tetapi biasanya lebih lambat daripada tidak menggunakan celah.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Never</em></td> 
+          <td style="text-align:left;">Unity render ke framebuffer yang disediakan oleh sistem operasi perangkat. Jika ini gagal, aplikasi mencetak peringatan satu kali ke log perangkat. Ini biasanya lebih cepat daripada menggunakan blit, tetapi tidak kompatibel dengan semua perangkat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Auto</em></td> 
+          <td style="text-align:left;">Unity render ke framebuffer yang disediakan oleh sistem operasi perangkat jika memungkinkan. Jika ini gagal, Unity mencetak peringatan ke konsol perangkat dan menggunakan celah untuk membuat gambar akhir ke layar.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="Aspect"></a></p> 
+       <h3>Rasio Aspect yang Didukung</h3> 
+       <p>Gunakan bagian <strong>Supported <span class="tooltip"><strong>Aspect Ratio</strong><span class="tooltiptext">The relationship of an image’s proportional dimensions, such as its width and height.<br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#AspectRatio">Glossary</a></span></span></span></strong> untuk menyesuaikan pengaturan yang berkaitan dengan rasio aspek perangkat yang mendukung.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PlayerSetAndroidResPres-Aspect.png" alt="Resolution Scaling settings for Android."> 
+        <figcaption>
+          Pengaturan resolusi Scaling untuk Android. 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Setting</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Aspect Ratio Mode</strong></td> 
+          <td style="text-align:left;">Menentukan rasio aspek terbesar dukungan aplikasi. Jika rasio aspek perangkat lebih besar dari rasio aspek ini, Unity menggunakan rasio aspek ini untuk aplikasi dan menambahkan bar hitam sehingga aplikasi tidak membentang.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Layar Lebar Legacy (1.86)</em></td> 
+          <td style="text-align:left;">Aplikasi ini mendukung rasio aspek hingga rasio aspek layar lebar warisan Android.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Rasio Aspek Asli</em></td> 
+          <td style="text-align:left;">Aplikasi ini mendukung rasio aspek hingga rasio aspek asli Android.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Custom</em></td> 
+          <td style="text-align:left;">Aplikasi ini mendukung rasio aspek hingga rasio aspek yang Anda set di <strong>Up To</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Up To</strong> </td> 
+          <td style="text-align:left;">Rasio aspek maksimum kustom.<br><br> Pengaturan ini hanya muncul ketika Anda mengatur <strong>Aspect Ratio Mode</strong> ke <strong>Custom</strong>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="Orientation"></a></p> 
+       <h3>Orientation</h3> 
+       <p>Gunakan bagian <strong>Orientation</strong> untuk menyesuaikan pengaturan yang berkaitan dengan orientasi aplikasi pada perangkat.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PlayerSetAndroidResPresOri.png" alt="Orientation settings for Android."> 
+        <figcaption>
+          Pengaturan orientasi untuk Android. 
+        </figcaption> 
+       </figure> 
+       <p>Pilih orientasi layar game dari menu drop-down <strong>Default Orientation</strong>:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Setting</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Default Orientation</strong></td> 
+          <td style="text-align:left;">Tentukan orientasi layar penggunaan aplikasi.<br><br><strong>Note</strong>: Unity berbagi nilai yang Anda set untuk pengaturan ini antara Android dan iOS.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Portrait</em></td> 
+          <td style="text-align:left;">Aplikasi ini menggunakan orientasi layar potret di mana bagian bawah align jendela aplikasi dengan bagian bawah layar perangkat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Potret terbalik</em></td> 
+          <td style="text-align:left;">Aplikasi ini menggunakan orientasi layar potret di mana bagian bawah align jendela aplikasi dengan bagian atas layar perangkat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Lansekap kanan</em></td> 
+          <td style="text-align:left;">Aplikasi ini menggunakan orientasi layar lansekap di mana sisi kanan jendela aplikasi menyelaraskan dengan bagian bawah layar perangkat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Lansekap Kiri</em></td> 
+          <td style="text-align:left;">Aplikasi ini menggunakan orientasi layar lansekap di mana sisi kanan jendela aplikasi menyelaraskan dengan bagian atas layar perangkat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Rotasi Otomatis</em></td> 
+          <td style="text-align:left;">Layar dapat berputar ke salah satu orientasi yang Anda tentukan di bagian <a href="#supportedOris">Orientasi yang diizinkan untuk Rotasi Otomatis</a>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="supportedOris"></a></p> 
+       <h3>Orientasi yang diizinkan untuk Rotasi Otomatis</h3> 
+       <p>Gunakan bagian <strong>Allowed Orientations for Auto Rotation</strong> untuk menentukan orientasi aplikasi yang mendukung ketika Anda mengatur <strong>Default Orientation</strong> ke <strong>Auto Rotation</strong>. Ini berguna, misalnya, untuk mengunci aplikasi untuk orientasi lansekap tetapi memungkinkan pengguna untuk beralih antara lansekap kiri dan kanan lansekap.</p> 
+       <p>Bagian ini hanya muncul ketika Anda mengatur <strong>Default Orientation</strong> ke <strong>Auto Rotation</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PlayerSetiOSResPresOriSupp.png" alt="Allowed Orientations for Auto Rotation settings for Android."> 
+        <figcaption>
+          Orientasi yang diizinkan untuk pengaturan Rotasi Otomatis untuk Android. 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Setting</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Portrait</strong></td> 
+          <td style="text-align:left;">Menunjukkan apakah aplikasi mendukung orientasi layar potret di mana bagian bawah align jendela aplikasi dengan bagian bawah layar perangkat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Portrait Upside Down</strong></td> 
+          <td style="text-align:left;">Menunjukkan apakah aplikasi mendukung orientasi layar potret di mana bagian bawah align jendela aplikasi dengan bagian atas layar perangkat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Landscape Right</strong></td> 
+          <td style="text-align:left;">Menunjukkan apakah aplikasi mendukung orientasi layar lansekap di mana sisi kanan align jendela aplikasi dengan bagian bawah layar perangkat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Landscape Left</strong></td> 
+          <td style="text-align:left;">Menunjukkan apakah aplikasi mendukung orientasi layar lansekap di mana sisi kanan align jendela aplikasi dengan bagian atas layar perangkat.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="OtherRes"></a></p> 
+       <h3>Other</h3> 
+       <p>Bagian Resolusi dan Presentasi juga mengandung pengaturan umum berikut.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PlayerSettingAndroidResPres-Other.png" alt="Other resolution and presentation settings for Android."> 
+        <figcaption>
+          Pengaturan resolusi dan presentasi lainnya untuk Android. 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Setting</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Use 32-bit Display Buffer</strong></td> 
+          <td style="text-align:left;">Menunjukkan apakah penyangga tampilan memegang nilai warna 32-bit bukan nilai warna 16-bit. Aktifkan pengaturan ini jika Anda melihat banding, atau perlu nilai alfa dalam <a class="tooltipMoreInfoLink" href="PostProcessingOverview.html">efek pasca proses</a>. Beberapa efek <span class="tooltip"><strong>post-processing</strong><span class="tooltiptext">Proses yang meningkatkan visual produk dengan menerapkan filter dan efek sebelum gambar muncul di layar. Anda dapat menggunakan efek pasca proses untuk mensimulasikan kamera fisik dan sifat film, misalnya Bloom dan Kedalaman Lapangan. <a href="PostProcessingOverview.html">More info</a> <span class="search-words">pemrosesan pos, pasca proses, pasca proses</span><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#post-processing">Glossary</a></span></span></span> membutuhkan ini karena mereka menciptakan <span class="tooltip"><a href="class-RenderTexture.html">Tekstur Render</a><span class="tooltiptext">Jenis Tekstur khusus yang diciptakan dan diperbarui pada runtime. Untuk menggunakannya, pertama membuat Tekstur Render baru dan menunjuk salah satu Kamera Anda untuk membuatnya. Kemudian Anda dapat menggunakan Tekstur Render dalam Bahan seperti Tekstur biasa. <a href="class-RenderTexture.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#RenderTexture">Glossary</a></span></span></span> dalam format yang sama sebagai penyangga tampilan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Disable Depth and Stencil</strong></td> 
+          <td style="text-align:left;">Menindikasikan apakah kedalaman yang dapat dinonaktifkan dan <span class="tooltip"><strong>stencil buffers</strong><span class="tooltiptext">Sebuah toko memori yang memegang nilai per-piksel 8-bit. Dalam Unity, Anda dapat menggunakan penyangga stensil untuk piksel bendera, dan kemudian hanya render ke piksel yang melewati operasi stensil. <a class="tooltipMoreInfoLink" href="class-RenderTexture.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#stencilbuffer">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Render Over Native UI</strong></td> 
+          <td style="text-align:left;">Mengindikasikan apakah untuk meng-render UI asli di Android atau iOS. Untuk pengaturan ini untuk mengambil efek, set <span class="tooltip"><strong>Camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span> <strong>Clear Flags</strong> Anda untuk menggunakan warna padat dengan nilai alfa lebih rendah dari 1.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Show Loading Indicator</strong></td> 
+          <td style="text-align:left;">Tentukan apakah dan bagaimana indikator pemuatan muncul.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Don’t Show</em></td> 
+          <td style="text-align:left;">Indikator pemuatan tidak muncul.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Large</em></td> 
+          <td style="text-align:left;">Indikator pemuatan besar muncul.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Terbalik Besar</em></td> 
+          <td style="text-align:left;">Indikator pemuatan besar muncul dengan warna yang beragam.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Small</em></td> 
+          <td style="text-align:left;">Indikator pemuatan kecil muncul.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Dibalik Kecil</em></td> 
+          <td style="text-align:left;">Indikator pemuatan kecil muncul dengan warna terbalik.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="Splash"></a></p> 
+       <h2>Gambar Splash</h2> 
+       <p>Gunakan pengaturan <strong>Virtual Reality Splash Image</strong> untuk memilih gambar percikan kustom untuk tampilan <a href="XR.html">Realita</a>. Untuk informasi pada pengaturan Layar Splash yang umum, lihat <a href="class-PlayerSettingsSplashScreen.html">Layar Splash</a>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PlayerSetAndroidSplash.png" alt="Splash screen settings for virtual reality."> 
+        <figcaption>
+          Pengaturan layar Splash untuk realitas virtual. 
+        </figcaption> 
+       </figure> 
+       <p>Di bawah pengaturan Layar Splash yang umum, Anda dapat mengatur <strong>Static Splash Image</strong> yang spesifik Android.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PlayerSetAndroidSplashStory.png" alt="Splash screen settings for Android."> 
+        <figcaption>
+          Pengaturan layar Splash untuk Android. 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Setting</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Image</strong></td> 
+          <td style="text-align:left;">Tentukan tekstur yang digunakan aplikasi untuk layar percikan Android. Ukuran standar untuk gambar layar percikan adalah 320x480.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Scaling</strong></td> 
+          <td style="text-align:left;">Tentukan cara mengukur gambar percikan agar sesuai dengan layar devic.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Pusat (sebagai skala turun</em></td> 
+          <td style="text-align:left;">Menggambar gambar pada ukuran aslinya kecuali terlalu besar, di mana kasus Unity mengukur gambar menjadi pas.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Timbangan untuk Fit (letter-boxed)</em></td> 
+          <td style="text-align:left;">Timbangan gambar sehingga dimensi yang lebih panjang sesuai ukuran layar persis. Isi unity di ruang kosong di sekitar sisi dalam dimensi yang lebih pendek dalam warna hitam.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Skala Isi (cropped)</em></td> 
+          <td style="text-align:left;">Timbangan gambar sehingga dimensi yang lebih pendek sesuai ukuran layar persis. Unity merajut gambar dalam dimensi yang lebih panjang.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="Other"></a></p> 
+       <h2>Pengaturan lain</h2> 
+       <p>Bagian ini memungkinkan Anda untuk menyesuaikan berbagai pilihan yang diatur dalam kelompok berikut:</p> 
+       <ul> 
+        <li><a href="#Rendering">Rendering</a></li> 
+        <li><a href="#Vulkan">Pengaturan Vulkan</a></li> 
+        <li><a href="#Identification">Identification</a></li> 
+        <li><a href="#Configuration">Configuration</a></li> 
+        <li><a href="#ScriptCompilation">Joomla</a></li> 
+        <li><a href="#Optimization">Optimization</a></li> 
+        <li><a href="#Logging">Logging</a></li> 
+        <li><a href="#Legacy">Legacy</a></li> 
+       </ul> 
+       <p><a name="Rendering"></a></p> 
+       <h3>Rendering</h3> 
+       <p>Gunakan pengaturan ini untuk menyesuaikan bagaimana render Unity permainan Anda untuk platform Android.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PlayerSetAndroidRender.png" alt="Rendering settings for the Android platform"> 
+        <figcaption>
+          Pengaturan rendering untuk platform Android 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Setting</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Color Space</strong></td> 
+          <td style="text-align:left;">Pilih ruang warna yang harus digunakan untuk rendering: <em>Gamma</em> atau <em>Linear</em>. Login Lihat <br> untuk penjelasan perbedaan antara kedua.<a href="LinearLighting.html">Gambaran keseluruhan rendering linier</a> for an explanation of the difference between the two.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"> <a name="auto-graphics-api"></a><strong>Auto Graphics API</strong> </td> 
+          <td style="text-align:left;">Gunakan opsi ini untuk mengatur API grafis secara manual. Opsi ini diaktifkan secara default, dan termasuk <strong>Metal</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Color Gamut</strong></td> 
+          <td style="text-align:left;">Anda dapat menambahkan atau menghapus <a href="https://en.wikipedia.org/wiki/Gamut">warna gamuts</a> untuk platform iOS untuk digunakan untuk rendering. Klik ikon plus (+) untuk melihat daftar gamut yang tersedia. Gamut warna mendefinisikan berbagai warna yang mungkin tersedia untuk perangkat yang diberikan (seperti monitor atau layar). sRGB gamut adalah default (dan diperlukan) gamut.<br> Ketika menargetkan perangkat tvOS baru-baru ini dengan tampilan gamut warna yang luas, gunakan <em>DisplayP3</em> untuk memanfaatkan kemampuan tampilan penuh. Gunakan <em>Dukungan Editor Logam</em> sebagai fallback untuk perangkat yang lebih tua.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Multithreaded Rendering</strong></td> 
+          <td style="text-align:left;">Aktifkan opsi ini untuk menggunakan rendering multithreaded. Ini hanya didukung pada Logam.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><span class="tooltip"><strong>Static Batching</strong><span class="tooltiptext">Teknik Unity menggunakan untuk menggambar GameObjects di layar yang menggabungkan static (non-moving) GameObjects ke Big Meshes, dan render mereka dengan cara yang lebih cepat. <a class="tooltipMoreInfoLink" href="DrawCallBatching.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#StaticBatching">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Aktifkan opsi ini untuk menggunakan batching Statis.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><span class="tooltip"><strong>Dynamic Batching</strong><span class="tooltiptext">Proses Unity otomatis yang mencoba untuk membuat beberapa jala seolah-olah mereka adalah satu mesh untuk kinerja grafis yang dioptimalkan. Teknik mengubah semua simpul GameObject pada CPU dan kelompok banyak simpul serupa bersama. <a class="tooltipMoreInfoLink" href="DrawCallBatching.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#DynamicBatching">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Periksa kotak ini untuk menggunakan <a href="DrawCallBatching.html">Batching dinamis</a> pada build Anda (diaktifkan secara default).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Compute Skinning</strong></td> 
+          <td style="text-align:left;">Aktifkan opsi ini untuk menggunakan DX11/ES3 GPU compute <span class="tooltip"><strong>skinning</strong><span class="tooltiptext">Proses mengikat sendi tulang ke vertices mesh karakter atau ‘skin’. Dilakukan dengan alat eksternal, seperti Blender atau Autodesk Maya. <a class="tooltipMoreInfoLink" href="UsingHumanoidChars.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Skinning">Glossary</a></span></span></span>, yang membebaskan up sumber CPU.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Graphics Jobs (Experimental)</strong></td> 
+          <td style="text-align:left;">Aktifkan opsi ini untuk menginstruksikan tugas grafis Unity to offload (perulangan render) ke benang pekerja yang berjalan pada inti CPU lainnya. Ini dimaksudkan untuk mengurangi waktu yang dihabiskan dalam <code>Camera.Render</code> pada benang utama, yang seringkali kemacetan. <br><strong>Note:</strong> Fitur ini eksperimental. Ini mungkin tidak memberikan peningkatan kinerja untuk proyek Anda, dan dapat memperkenalkan crash baru.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Texture compression format</strong></td> 
+          <td style="text-align:left;">Pilih antara ASTC, ETC2 dan ETC (ETC1 untuk RGB, ETC2 untuk RGBA). Lihat <a href="class-TextureImporterOverride.html#android">ikhtisar format kompresi tekstur</a> untuk informasi lebih lanjut tentang cara memilih format yang tepat. Login Lihat <br> untuk rincian lebih lanjut tentang bagaimana berinteraksi ini dengan pengaturan kompresi tekstur di <a href="android-requirements-and-compatibility.html#texture-compression">Pengaturan kompresi tekstur</a>.<a href="android-build-settings.html">Membangun Pengaturan</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Normal Map Encoding</strong></td> 
+          <td style="text-align:left;">Pilih <em>XYZ</em> atau <em>DXT5nm-gaya</em> untuk mengatur pengkodean <span class="tooltip"><strong>normal map</strong><span class="tooltiptext">Jenis tekstur Peta Bump yang memungkinkan Anda untuk menambahkan detail permukaan seperti benjolan, alur, dan goresan ke model yang menangkap cahaya seolah-olah mereka diwakili oleh geometri nyata.<br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Normalmap">Glossary</a></span></span></span>. Pengaturan ini mempengaruhi skema pengkodean dan format <span class="tooltip"><strong>compression</strong><span class="tooltiptext">Metode menyimpan data yang mengurangi jumlah ruang penyimpanan yang dibutuhkan. <a href="class-TextureImporterOverride.html">Kompresi Tekstur</a>, <a href="class-AnimationClip.html#AssetProperties">Kompresi Animasi</a>, <a href="class-AudioClip.html">Kompresi Audio</a>, <a href="ReducingFilesize.html">Membangun Kompresi</a>.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#compression">Glossary</a></span></span></span> yang digunakan untuk peta normal. Peta normal <em>DXT5nm-gaya</em> berkualitas tinggi, tetapi lebih mahal untuk decode di <span class="tooltip"><strong>shaders</strong><span class="tooltiptext">Program yang berjalan di GPU. <a href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Lightmap Encoding</strong></td> 
+          <td style="text-align:left;">Pilih <em>Kualitas Rendah</em>, <em>Kualitas normal</em>, atau <em>Kualitas tinggi</em> untuk mengatur pengkodean <span class="tooltip"><strong>lightmap</strong><span class="tooltiptext">Tekstur pra-render yang mengandung efek sumber cahaya pada objek statis di tempat kejadian. Lightmaps dilalui atas geometri adegan untuk menciptakan efek pencahayaan. <a class="tooltipMoreInfoLink" href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Lightmap">Glossary</a></span></span></span>. Pengaturan ini mempengaruhi skema pengkodean dan format kompresi lightmaps.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong><span class="tooltip"><strong>HDR</strong><span class="tooltiptext">high dynamic range<br><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#HDR">Glossary</a></span></span></span> <span class="tooltip"><strong>Cubemap</strong><span class="tooltiptext">A collection of six square textures that can represent the reflections in an environment or the skybox drawn behind your geometry. The six squares form the faces of an imaginary cube that surrounds an object; each face represents the view along the directions of the world axes (up, down, left, right, forward and back). <a href="class-Cubemap.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Cubemap">Glossary</a></span></span></span> Encoding</strong></td> 
+          <td style="text-align:left;">Pilih <em>Kualitas Rendah</em>, <em>Kualitas normal</em>, atau <em>Kualitas tinggi</em> untuk mengatur pengkodean kubus HDR. Pengaturan ini mempengaruhi skema pengkodean dan format kompresi HDR Cubemaps.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Lightmap Streaming Enabled</strong></td> 
+          <td style="text-align:left;">Apakah untuk menggunakan <a href="TextureStreaming.html">Joomla</a> untuk lightmaps. Unity menerapkan pengaturan ini untuk semua peta ringan ketika menghasilkannya.<br><strong>Note:</strong> Untuk menggunakan pengaturan ini, Anda harus mengaktifkan pengaturan <a href="class-QualitySettings.html#texStream">Tekstur Streaming Kualitas</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Streaming Priority</strong></td> 
+          <td style="text-align:left;">Mengatur prioritas untuk semua peta ringan di <a href="TextureStreaming.html">Sistem Streaming Mipmap</a>. Unity menerapkan pengaturan ini untuk semua peta ringan ketika menghasilkannya.% nomor teknis memberikan prioritas yang lebih tinggi. Nilai valid berkisar dari –128 hingga 127.<br>Positive numbers give higher priority. Valid values range from –128 to 127.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Enable Frame Timing Stats</strong></td> 
+          <td style="text-align:left;">Aktifkan opsi ini untuk mengumpulkan statistik waktu bingkai CPU / GPU.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Virtual Texturing</strong></td> 
+          <td style="text-align:left;">Menunjukkan apakah untuk mengaktifkan <a href="svt-streaming-virtual-texturing.html">Tekstur Virtual</a>.<br><strong>Note</strong>: Virtual Texturing tidak kompatibel dengan Android.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Shader precision model</strong></td> 
+          <td style="text-align:left;">Mengontrol ketepatan default dari sampler yang digunakan dalam naungan. Lihat <a href="SL-DataTypesAndPrecision.html#samplertypes">Jenis data dan presisi Shader</a> untuk rincian lebih lanjut.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="Vulkan"></a></p> 
+       <h3>Pengaturan Vulkan</h3> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/player-settings-other-vulkan-settings-android.png" alt="Vulkan Player settings for the Android platform"> 
+        <figcaption>
+          Login Pengaturan pemain untuk platform Android 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <thead> 
+         <tr> 
+          <th><strong>Property</strong></th> 
+          <th><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td colspan="1"><strong>SRGB Write Mode</strong></td> 
+          <td>Aktifkan opsi ini untuk memungkinkan renderer <code>Graphics.SetSRGBWrite()</code> untuk mengalihkan mode menulis sRGB selama runtime. Itu, jika Anda ingin sementara mematikan konversi warna menulis Linear-to-sRGB, Anda dapat menggunakan properti ini untuk mencapai itu. Mengaktifkan ini memiliki dampak negatif pada kinerja pada GPU berbasis ubin seluler; oleh karena itu, TIDAK mengaktifkan ini untuk ponsel.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="1"><strong>Number of swapchain buffers</strong></td> 
+          <td>Tetapkan opsi ini ke 2 untuk dua-buffering, atau 3 untuk triple-buffering untuk digunakan dengan renderer Vulkan. Pengaturan ini dapat membantu dengan latency pada beberapa platform, tetapi dalam kebanyakan kasus Anda tidak boleh mengubah ini dari nilai default 3. Double-buffering mungkin memiliki dampak negatif pada kinerja. Jangan gunakan pengaturan ini di Android.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="1"> <strong>Acquire swapchain image late as possible</strong> </td> 
+          <td>Jika diaktifkan, penundaan Vulkan memperoleh backbuffer sampai setelah render bingkai ke gambar layar. Vulkan menggunakan gambar staging untuk mencapai ini. Mengaktifkan pengaturan ini menyebabkan celah ekstra ketika menyajikan backbuffer. Pengaturan ini, dalam kombinasi dengan penyumbatan ganda, dapat meningkatkan kinerja. Namun, itu juga dapat menyebabkan masalah kinerja karena blit tambahan mengambil bandwidth.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="1"><strong>Recycle command buffers</strong></td> 
+          <td>Menunjukkan apakah untuk mendaur ulang atau <a href="../ScriptReference/Rendering.CommandBuffer.html">CommandBuffers</a> gratis setelah Unity mengeksekusi mereka.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="1"> <strong>Apply display rotation during rendering</strong> </td> 
+          <td>Aktifkan ini untuk melakukan semua rendering dalam orientasi asli dari tampilan. Ini memiliki manfaat kinerja pada banyak perangkat. Untuk informasi lebih lanjut, lihat dokumentasi pada <a href="vulkan-swapchain-pre-rotation.html">orientasi framebuffer</a>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="Identification"></a></p> 
+       <h3>Identification</h3> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PlayerSetAndroidIdentification.png" alt="Identification settings for the Android platform"> 
+        <figcaption>
+          Identifikasi pengaturan untuk platform Android 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Override <span class="tooltip"><strong>Default Package</strong><span class="tooltiptext">Unity automatically pre-installs a select number of <em>default</em> packages (for example, the Analytics Library, Unity Timeline, etc.) when you create a new project. This differs from a <strong>bundled package</strong> because you don’t need to install it and it differs from a <strong>built-in package</strong> because it extends Unity’s features rather than being able to enable or disable them.<br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Defaultpackage">Glossary</a></span></span></span> Name</strong></td> 
+          <td style="text-align:left;">Menunjukkan apakah untuk menimpa nama paket default untuk aplikasi Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Package Name</strong> </td> 
+          <td style="text-align:left;">Mengatur ID aplikasi, yang secara unik mengidentifikasi aplikasi Anda di perangkat dan di Google Play Store. Struktur dasar pengidentifikasi adalah <strong>com.CompanyName.AppName</strong>, dan dapat dipilih secara sewenang-wenang. Pengaturan ini dibagi antara iOS dan Android.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Version</strong></td> 
+          <td style="text-align:left;">Masukkan jumlah versi build dari bundel, yang mengidentifikasi iterasi (released atau unreleased) dari bundel. Versi ditentukan dalam format umum string yang mengandung angka dipisahkan oleh titik (misalnya, 4.3.2). (Terlibatkan antara iOS dan Android.)</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Bundle Version Code</strong></td> 
+          <td style="text-align:left;">Nomor versi internal. Jumlah ini hanya digunakan untuk menentukan apakah satu versi lebih terbaru dari yang lain, dengan angka yang lebih tinggi menunjukkan versi terbaru. Ini bukan nomor versi yang ditunjukkan kepada pengguna; nomor itu ditetapkan oleh atribut <code>versionName</code>. Nilai harus ditetapkan sebagai bilangan bulat, seperti “100”. Anda dapat mendefinisikannya namun Anda ingin, selama setiap versi berturut-turut memiliki nomor yang lebih tinggi. <br><br> Misalnya, itu bisa menjadi nomor build. Atau Anda dapat menerjemahkan nomor versi dalam format "x.y" ke integer dengan mengkodekan "x" dan "y" secara terpisah di bawah dan atas 16 bit. Atau Anda hanya dapat meningkatkan jumlah dengan satu kali versi baru dirilis. <br><br> Simpan nomor ini di bawah 100000 jika <strong>Split APKs by target architecture</strong> diaktifkan. Setiap APK harus memiliki kode versi unik sehingga Unity menambahkan 100000 ke nomor ARMv7, dan 200000 untuk ARM64.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <a name="minAPIlevel"></a><strong>Minimum API Level</strong> </td> 
+          <td style="text-align:left;">Minimum Android version (API level) yang diperlukan untuk menjalankan aplikasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Target API Level</strong></td> 
+          <td style="text-align:left;">Targetkan versi Android (tingkat API) dari mana untuk mengkompilasi aplikasi.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="Configuration"></a></p> 
+       <h3>Configuration</h3> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PlayerSetAndroidConfiguration.png" alt="Configuration settings for the Android platform"> 
+        <figcaption>
+          Pengaturan konfigurasi untuk platform Android 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <thead> 
+         <tr> 
+          <th colspan="2"><strong>Property</strong></th> 
+          <th><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td colspan="2"> <a name="backend"></a><span class="tooltip"><strong>Scripting Backend</strong><span class="tooltiptext">Kerangka kerja yang skrip di Unity. Unity mendukung tiga backend scripting yang berbeda tergantung pada platform target: Mono, .NET dan IL2CPP. Platform Windows Universal, namun hanya mendukung dua: .NET dan IL2CPP. <a class="tooltipMoreInfoLink" href="windowsstore-il2cpp.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ScriptingBackend">Glossary</a></span></span></span> </td> 
+          <td>Pilih backend scripting yang ingin Anda gunakan. Backend scripting menentukan bagaimana kompila Unity dan mengeksekusi kode C# di Proyek Anda.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><em>Mono</em></td> 
+          <td>Compiles C# kode menjadi .NET Common Intermediate Language (CIL) dan mengeksekusi bahwa CIL menggunakan Common Language Runtime. Untuk informasi lebih lanjut, lihat <span class="tooltip"><a class="tooltipMoreInfoLink" href="Mono.html">Mono</a><span class="tooltiptext">Backend scripting digunakan dalam Unity. <a href="IL2CPP.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mono">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><em>IL2CPP</em></td> 
+          <td>Kompiles C# kode ke CIL, mengubah CIL ke C++ dan kemudian mengkompilasi bahwa C++ menjadi kode mesin asli, yang mengeksekusi langsung pada waktu yang berjalan. Lihat <span class="tooltip"><a class="tooltipMoreInfoLink" href="IL2CPP.html">IL2CPP</a><span class="tooltiptext">Back-end scripting bersatu yang dapat Anda gunakan sebagai alternatif untuk Mono ketika proyek bangunan untuk beberapa platform. <a href="IL2CPP.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#IL2CPP">Glossary</a></span></span></span> untuk informasi lebih lanjut.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"> <strong>API Compatibility Level</strong> </td> 
+          <td>Pilih API .NET yang dapat Anda gunakan dalam proyek Anda. Pengaturan ini dapat mempengaruhi kompatibilitas dengan perpustakaan pihak ketiga. Namun, tidak berpengaruh pada kode khusus Editor (kode dalam direktori Editor, atau dalam Definisi Perakitan Khusus Editor).<br><strong>Tip:</strong> Jika Anda memiliki masalah dengan perakitan pihak ketiga, Anda dapat mencoba saran di bagian <a href="#apiComp">Tingkat Kompatibilitas API</a> di bawah ini.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><em>.Net 2.0</em></td> 
+          <td>.Net 2.0 pustaka. Kompatibilitas .net maksimum, ukuran file terbesar. Bagian dari runtime .NET 3,5.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><em>.Net 2.0 Subset</em></td> 
+          <td>Subset kompatibilitas .net penuh, ukuran file yang lebih kecil. Bagian dari runtime .NET 3,5.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><em>.Net Standar 2.0</em></td> 
+          <td>Kompatibel dengan <a href="https://docs.microsoft.com/en-us/dotnet/standard/net-standard">.NET Standar 2.0</a>. Menghasilkan bangunan yang lebih kecil dan memiliki dukungan lintas platform penuh.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><em>.Net 4.x</em></td> 
+          <td>Kompatibel dengan .NET Framework 4 (yang mencakup segalanya dalam profil .NET Standard 2.0 serta API tambahan). Pilih opsi ini ketika menggunakan pustaka yang mengakses API tidak disertakan dalam . NET Standar 2.0. Menghasilkan build yang lebih besar dan API tambahan yang tersedia tidak selalu didukung pada semua platform. Lihat <a href="dotnetProfileAssemblies.html">Mengacu perakitan perpustakaan kelas tambahan</a> untuk informasi lebih lanjut.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"> <strong>C++ Compiler Configuration</strong> </td> 
+          <td>Pilih konfigurasi kompiler C++ yang digunakan ketika membandingkan kode yang dihasilkan IL2CPP.<br><strong>Note:</strong> Properti ini dinonaktifkan kecuali <strong>Scripting Backend</strong> diatur ke <em>IL2CPP</em>.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"><strong>Use incremental GC</strong></td> 
+          <td>Aktifkan ini untuk menggunakan kolektor garbage inkremental, yang menyebar koleksi sampah selama beberapa bingkai untuk mengurangi lonjakan terkait gc dalam durasi bingkai.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"><strong>Assembly Version Validation</strong></td> 
+          <td>Menunjukkan apakah mono memvalidasi jenis dari perakitan <a href="https://docs.microsoft.com/en-us/dotnet/standard/assembly/strong-named">strongly-named</a>.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"><strong>Allow downloads over HTTP</strong></td> 
+          <td>Pilih dari opsi di bawah ini untuk memungkinkan mengunduh konten melalui HTTP. Pilihan <strong>Not allowed</strong>, <strong>Allowed in Development builds only</strong>, dan <strong>Always allowed</strong>. Opsi default adalah <strong>not allowed</strong> karena protokol yang disarankan menjadi HTTPS, yang lebih aman.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"> <strong>Mute Other Audio Sources</strong> </td> 
+          <td>Aktifkan opsi ini jika Anda ingin aplikasi Unity Anda untuk menghentikan Audio dari aplikasi yang berjalan di latar belakang. Jika tidak, Audio dari aplikasi latar belakang terus bermain bersama aplikasi Unity Anda.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"> <strong>Target Architectures</strong> </td> 
+          <td>Pilih CPU yang ingin Anda ijinkan aplikasi untuk menjalankan pada (32-bit ARM, 64-bit ARM, 32-bit x86, dan 64-bit x86-64). <br><strong>Note</strong>: Menjalankan aplikasi Android di lingkungan 64-bit memiliki manfaat kinerja dan aplikasi 64-bit dapat mengatasi lebih dari 4 GB ruang memori.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"> <strong>Split APKs by target architecture (Experimental)</strong> </td> 
+          <td>Aktifkan opsi ini untuk membuat APK terpisah untuk setiap arsitektur CPU yang dipilih dalam <strong>Target Architectures</strong>. Ini membuat ukuran download lebih kecil untuk pengguna Google Play Store. Ini terutama fitur Google Play Store dan mungkin tidak bekerja di toko lain. Untuk rincian lebih lanjut, merujuk ke <a href="https://developer.android.com/google/play/publishing/multiple-apks.html">Unduh APK Sitemap</a>.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"> <strong>Target Devices</strong> </td> 
+          <td>Menentukan perangkat target di mana APK diperbolehkan untuk dijalankan.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td> <em>Semua Perangkat</em> </td> 
+          <td>APK ini diperbolehkan untuk menjalankan semua perangkat Android dan Chrome OS.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td> <em>Telepon dan Tablet Sitemap</em> </td> 
+          <td>APK ini diperbolehkan untuk menjalankan ponsel Android dan tablet, tetapi tidak pada perangkat OS Chrome.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td> <em>Perangkat OS Chrome Hanya</em> </td> 
+          <td>APK ini diperbolehkan untuk menjalankan perangkat Chrome OS, tetapi tidak di ponsel Android atau tablet.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"> <strong>Install Location</strong> </td> 
+          <td>Menentukan lokasi instalasi aplikasi pada perangkat (untuk informasi rinci, merujuk ke <a href="http://developer.android.com/guide/appendix/install-location.html">Dokumentasi Pengembang Android di lokasi instalasi</a>.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td> <em>Automatic</em> </td> 
+          <td>Biarkan sistem operasi memutuskan. Pengguna akan dapat memindahkan aplikasi kembali dan ke depan.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td> <em>Lebih suka eksternal</em> </td> 
+          <td>Instal aplikasi ke penyimpanan eksternal (kartu SD) jika mungkin. Sistem operasi tidak menjaminnya; jika tidak mungkin, aplikasi akan dipasang ke memori internal.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td> <em>Kekuatan Internal</em> </td> 
+          <td>memaksa aplikasi dipasang ke memori internal. Pengguna tidak akan bisa memindahkan aplikasi ke penyimpanan eksternal.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"> <strong>Internet Access</strong> </td> 
+          <td>Pilih apakah untuk selalu menambahkan izin jaringan (<code>INTERNET</code>) ke <a href="android-manifest.html">Android SDK</a>, bahkan jika Anda tidak menggunakan API jaringan. Set ke <em>Require</em> secara default untuk membangun pembangunan.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><em>Auto</em></td> 
+          <td>Hanya menambahkan izin akses internet jika Anda menggunakan API jaringan.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><em>Require</em></td> 
+          <td>Selalu tambahkan izin akses internet.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"> <strong>Write Permission</strong> </td> 
+          <td>Pilih apakah untuk mengaktifkan akses menulis ke penyimpanan eksternal (seperti kartu SD) dan tambahkan izin yang sesuai untuk Android App Manifest. Set ke <em>Eksternal(SDCard)</em> secara default untuk membangun pembangunan.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><em>Internal</em></td> 
+          <td>Hanya memberikan izin menulis ke penyimpanan internal.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><em>Eksternal(SDCard)</em></td> 
+          <td>Aktifkan izin menulis ke penyimpanan eksternal.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"><strong>Filter Touches When Obscured</strong></td> 
+          <td>Aktifkan opsi ini untuk membuang sentuhan yang diterima ketika jendela yang terlihat lain mencakup aplikasi Unity. Ini adalah untuk mencegah keran.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"><strong>Sustained Performance Mode</strong></td> 
+          <td>Aktifkan opsi ini untuk mengatur tingkat kinerja perangkat yang dapat diprediksi dan konsisten selama periode waktu yang lebih lama, tanpa throttling termal. Kinerja keseluruhan mungkin lebih rendah ketika pengaturan ini diaktifkan. Berdasarkan <a href="https://developer.android.com/about/versions/nougat/android-7.0.html#sustained_performance_api">Android API</a>.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"> <strong>Maximum Java Heap Size</strong> </td> 
+          <td>Tetapkan ukuran Java maksimum kepada pengguna untuk membangun (dalam megabyte). Standar ke 4096.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"> <strong>Low Accuracy Location</strong> </td> 
+          <td>Aktifkan opsi ini untuk menggunakan nilai akurasi rendah dengan API lokasi Android.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"> <strong>Chrome OS Input Emulation</strong> </td> 
+          <td>Perilaku default Chrome OS adalah untuk mengubah acara input mouse dan touchpad menjadi acara input layar sentuh. Un-check pengaturan ini untuk menonaktifkan perilaku default.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"> <strong>Android TV Compatibility</strong> </td> 
+          <td>Aktifkan opsi ini untuk menandai aplikasi sebagai Android TV kompatibel.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"><strong>Android Game</strong> </td> 
+          <td>Aktifkan opsi ini untuk menandai paket output (APK) sebagai permainan daripada aplikasi biasa.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"><strong>Android Gamepad Support Level</strong> </td> 
+          <td>Pilih tingkat dukungan penawaran aplikasi Anda untuk gamepad. Pilihan <strong>Works with D-Pad</strong>, <strong>Supports Gamepad</strong>, dan <strong>Requires Gamepad</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"><strong>Warn about App Bundle size</strong></td> 
+          <td>Aktifkan opsi ini untuk menerima peringatan ketika ukuran <a href="https://developer.android.com/platform/technology/app-bundle">Android AppStore</a> melebihi ambang tertentu. Pilihan ini dipilih secara default dan Anda hanya dapat mengkonfigurasinya jika Anda mengaktifkan opsi <strong>Build App Bundle (Google Play)</strong> di <a href="android-build-settings.html">Membangun pengaturan</a>.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"><strong>App Bundle size threshold</strong> </td> 
+          <td>Masukkan ukuran di Mb. Ketika App Bundle Anda melebihi ukuran ini, Unity akan menampilkan peringatan.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"><strong>Active Input Handling</strong></td> 
+          <td>Pilih bagaimana Anda ingin menangani masukan dari pengguna.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><em>Datasheet (old)</em></td> 
+          <td>Gunakan jendela <a href="class-InputManager.html">Input</a> default.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><em>Sistem Input (Preview)</em></td> 
+          <td>Gunakan sistem <a href="../ScriptReference/Input.html">Input</a> yang lebih baru. Sistem Input disediakan sebagai paket pratinjau untuk rilis ini. Untuk mencoba pratinjau Sistem Input, instal <a href="https://github.com/Unity-Technologies/InputSystem">InputSystem package</a>.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><em>Both</em></td> 
+          <td>Gunakan kedua sisi sistem dengan sisi.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="apiComp"></a></p> 
+       <h4>Tingkat Kompatibilitas API</h4> 
+       <p>Anda dapat memilih tingkat kompatibilitas mono API Anda untuk semua target. Kadang-kadang pihak ketiga. NET library menggunakan fungsi yang berada di luar . Tingkat kompatibilitas NET. Untuk memahami apa yang terjadi dalam kasus seperti itu, dan bagaimana cara memperbaikinya terbaik, coba mengikuti saran ini:</p> 
+       <ol> 
+        <li>Install <a href="https://www.microsoft.com/en-us/p/ilspy/9mxfbkfvsq13?cid=msft_web_chart&amp;activetab=pivot:overviewtab">ILSpy</a> untuk Windows.</li> 
+        <li>Login Rakitan NET untuk tingkat kompatibilitas API yang Anda memiliki masalah dengan ke ILSpy. Anda dapat menemukan ini di bawah <code>Frameworks/Mono/lib/mono/YOURSUBSET/</code>.</li> 
+        <li>Seret dalam perakitan pihak ketiga Anda.</li> 
+        <li>Klik kanan perakitan pihak ketiga Anda dan pilih <strong>Analyze</strong>.</li> 
+        <li>Dalam laporan analisis, memeriksa bagian <strong>Depends on</strong>. Laporan menyoroti apa pun yang perakitan pihak ketiga tergantung, tetapi itu tidak tersedia di . Tingkat kompatibilitas NET pilihan Anda di merah.</li> 
+       </ol> 
+       <p><a name="ScriptCompilation"></a></p> 
+       <h3>Joomla</h3> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ProjectSettingsScriptCompilation.png" alt="Script compilation settings for the Android platform"> 
+        <figcaption>
+          Pengaturan kompilasi Script untuk platform Android 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Setting</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Scripting Define Symbols</strong></td> 
+          <td style="text-align:left;">Mengatur bendera kompilasi kustom. Untuk rincian lebih lanjut, lihat dokumentasi pada <a href="PlatformDependentCompilation.html">kompilasi Platform</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Additional Compiler Arguments</strong></td> 
+          <td style="text-align:left;">Tambahkan entri ke daftar ini untuk lulus argumen tambahan ke kompiler Roslyn. Gunakan satu entri baru untuk setiap argumen tambahan. Login Untuk membuat entri baru, tekan tombol '+'. Untuk menghapus entri, tekan tombol '-'. Login Ketika Anda telah menambahkan semua argumen yang diinginkan, klik tombol <br> untuk menyertakan argumen tambahan Anda dalam kompilasi masa depan. Tombol <br> mengatur ulang daftar ini ke state yang paling baru diterapkan.<strong>Apply</strong> button to include your additional arguments in future compilations.The <strong>Revert</strong> button resets this list to the most recent applied state.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Suppress Common Warnings</strong></td> 
+          <td style="text-align:left;">Cacat pengaturan ini untuk menampilkan peringatan C# <a href="https://docs.microsoft.com/en-us/dotnet/csharp/misc/cs0169">SmadAV 11</a> dan <a href="https://docs.microsoft.com/en-us/dotnet/csharp/misc/CS0649">CS0649</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Allow ‘unsafe’ Code</strong></td> 
+          <td style="text-align:left;">Dukungan yang dapat diaktifkan untuk membandingkan <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/unsafe">'unsafe' C# kode</a> dalam perakitan yang telah ditentukan (misalnya, <code>Assembly-CSharp.dll</code>). <br>For Assembly Definition File (<code>.asmdef</code>), klik pada salah satu file <code>.asmdef</code> Anda dan mengaktifkan opsi di jendela Inspektur yang muncul.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Use Deterministic Compilation</strong></td> 
+          <td style="text-align:left;">Nonaktifkan pengaturan ini untuk mencegah kompilasi dengan bendera C #-deterministik. Dengan pengaturan ini diaktifkan, rakitan disusun adalah byte-for-byte identik setiap kali mereka dikompilasi. Login Untuk informasi lebih lanjut, lihat <br> Microsoft.<a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/deterministic-compiler-option">API documentation</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Enable Roslyn Analyzers</strong></td> 
+          <td style="text-align:left;">Disable pengaturan ini untuk mengkompilasi user-written <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> tanpa Roslyn analyzer DLLs yang mungkin hadir dalam proyek Anda.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="Optimization"></a></p> 
+       <h3>Optimization</h3> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PlayerSetAndroidOptimization.png" alt="Optimization settings for the Android platform"> 
+        <figcaption>
+          Pengaturan optimal untuk platform Android 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <thead> 
+         <tr> 
+          <th colspan="2"><strong>Property</strong></th> 
+          <th><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td colspan="2"><strong>Prebake Collision Meshes</strong></td> 
+          <td>Aktifkan opsi ini untuk menambahkan data tabrakan ke <a href="class-Mesh.html">Meshes</a> pada waktu build.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"><strong>Keep Loaded Shaders Alive</strong></td> 
+          <td>Ketika diaktifkan, Anda tidak dapat membongkar naungan. Lihat <a href="shader-loading.html">Pemuatan Shader</a> untuk informasi lebih lanjut.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"><strong>Preloaded Assets</strong></td> 
+          <td>Mengatur array aset untuk pemain untuk memuat startup. Login Untuk menambahkan Aset baru, meningkatkan nilai properti <br>, kemudian atur referensi ke Aset untuk memuat dalam kotak <strong>Size</strong> baru yang muncul.<strong>Element</strong> box that appears.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"> <strong>AOT compilation options</strong> </td> 
+          <td>Pilihan tambahan untuk Ahead of Time (AOT) kompilasi. Ini membantu <a href="iphone-playerSizeOptimization.html">mengoptimalkan ukuran pemain iOS yang dibangun</a>.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"> <strong>Strip Engine Code</strong> </td> 
+          <td>Aktifkan opsi ini jika Anda ingin alat Unity Linker untuk menghapus kode untuk fitur Unity Engine yang tidak Anda gunakan. Pengaturan ini hanya tersedia dengan backend IL2CPP scripting.<br><br>Most aplikasi tidak menggunakan setiap DLL yang tersedia. Pilihan ini menonjolkan DLL bahwa aplikasi Anda tidak digunakan untuk mengurangi ukuran pemain yang dibangun. Jika aplikasi Anda menggunakan satu atau lebih kelas yang biasanya akan dilucuti di bawah pengaturan Anda saat ini, Unity menampilkan pesan debug ketika Anda mencoba untuk membangun aplikasi.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"><strong>Managed Stripping Level</strong></td> 
+          <td>Pilih bagaimana Strip Unity tidak digunakan berhasil (C#) kode. Pilihan <strong>Disabled</strong> <strong>Low</strong>, <strong>Medium</strong>, dan <strong>High</strong>.<br> <br> Ketika Unity membangun aplikasi Anda, proses Unity Linker dapat menggariskan kode yang tidak digunakan dari DLL yang dikelola penggunaan Proyek Anda. Kode pengupasan dapat membuat executable secara signifikan lebih kecil, tetapi kadang-kadang kadang-kadang tidak sengaja menghapus kode yang digunakan. Untuk informasi lebih lanjut tentang opsi ini, lihat dokumentasi pada <a href="ManagedCodeStripping.html">Dikelola kode pengupasan</a>.<br><br> Untuk informasi tentang pengupasan bytecode dengan IL2CPP, lihat dokumentasi pada <a href="ManagedCodeStripping.html">Dikelola bytecode stripping dengan IL2CPP</a>.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"><strong>Enable Internal profiler (Deprecated)</strong></td> 
+          <td>Aktifkan opsi ini untuk mendapatkan data profiler dari perangkat Anda dalam output <a href="https://developer.android.com/studio/command-line/logcat.html">adblogcat</a> SDK Android sambil menguji proyek Anda. Ini hanya tersedia dalam membangun pembangunan.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"><strong>Vertex Compression</strong></td> 
+          <td>Pilih saluran yang ingin Anda set untuk mengompreskan mesh di bawah metode kompresi simpul, yang secara default, diatur ke Mixed. Ini mempengaruhi semua jala dalam proyek Anda. Biasanya, Kompresi Vertex digunakan untuk mengurangi ukuran data mesh dalam memori, mengurangi ukuran file, dan meningkatkan kinerja GPU. Untuk informasi tentang cara mengkonfigurasi kompresi simpul dan batasan pengaturan ini, lihat [kompresi meshes].</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"><strong>Optimize Mesh Data</strong></td> 
+          <td>Memilih opsi ini memungkinkan pengupasan atribut vertex yang tidak digunakan dari mesh yang digunakan dalam membangun. Login Ini mengurangi jumlah data di jala, yang mungkin membantu mengurangi ukuran build, waktu pemuatan, dan penggunaan memori runtime. Namun, Anda harus ingat untuk tidak mengubah materi atau pengaturan naungan pada runtime, jika Anda memiliki pengaturan ini diaktifkan. Lihat <br> untuk informasi lebih lanjut.<a href="../ScriptReference/PlayerSettings-stripUnusedMeshComponents.html">WordPress.org</a> for more information.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"><strong>Texture MipMap Stripping</strong></td> 
+          <td>Aktifkan opsi ini untuk mengaktifkan mipmap stripping untuk semua platform, yang strip mipmap yang tidak digunakan dari Tekstur pada waktu membangun. Unity menentukan mipmap yang tidak digunakan dengan membandingkan nilai mipmap terhadap Pengaturan Kualitas untuk platform saat ini. Jika nilai mipmap dikecualikan dari setiap Pengaturan Kualitas untuk platform saat ini, maka Unity strip mipmaps dari build pada waktu build. Jika KualitasSettings.masterTextureLimit diatur ke nilai mipmap yang telah dilucuti, Unity akan menetapkan nilai untuk nilai mipmap terdekat yang belum dilucuti.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="Logging"></a></p> 
+       <h3>Logging</h3> 
+       <p>Pilih jenis penebangan untuk memungkinkan dalam konteks tertentu.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PlayerSetPCOther-Logging.png" alt="Logging settings for Android platform"> 
+        <figcaption>
+          Pengaturan logging untuk platform Android 
+        </figcaption> 
+       </figure> 
+       <ul> 
+        <li><p>Pilih metode penebangan pilihan Anda dari opsi yang tersedia.</p></li> 
+        <li>Periksa kotak yang sesuai dengan setiap Jenis Log (<strong>Error</strong>, <strong>Assert</strong>, <strong>Warning</strong>, <strong>Log</strong>, dan <strong>Exception</strong>) berdasarkan jenis penebangan yang Anda butuhkan. Contoh: 
+         <ul> 
+          <li> <strong>ScriptOnly</strong>: Log hanya ketika menjalankan skrip.</li> 
+          <li> <strong>Full</strong>: Login</li> 
+          <li> <strong>None</strong>: Tidak ada log yang pernah direkam.</li> 
+         </ul> <p>Lihat <a href="StackTrace.html">stack trace logging</a> untuk informasi lebih lanjut.</p> </li> 
+       </ul> 
+       <p><a name="Legacy"></a></p> 
+       <h3>Legacy</h3> 
+       <p>Aktifkan opsi <strong>Clamp BlendShapes (Deprecated)</strong> untuk menjepit kisaran campuran berat bentuk dalam <a href="class-SkinnedMeshRenderer.html">SkinnedMeshRenderers</a>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PlayerSetPCOther-Legacy.png" alt="Legacy settings for the Android platform"> 
+        <figcaption>
+          Pengaturan warisan untuk platform Android 
+        </figcaption> 
+       </figure> 
+       <p><a name="Publishing"></a></p> 
+       <h2>Pengaturan Penerbitan</h2> 
+       <p>Gunakan Pengaturan Penerbitan untuk mengkonfigurasi bagaimana Unity membangun aplikasi Android Anda. Untuk membuka Pengaturan Penerbitan, buka <strong>Edit</strong> &gt; <strong>Project Settings</strong>, pilih <strong>Player</strong>, pilih ikon <strong>Android</strong>, dan buka panel <strong>Publishing Settings</strong>.</p> 
+       <p>Bagian ini menjelaskan bagian yang berbeda dari panel Pengaturan Penerbitan dan apa yang mereka lakukan. Ini termasuk:</p> 
+       <ul> 
+        <li><a href="#projectkeystore">Project Keystore</a></li> 
+        <li><a href="#projectkey">Kunci Proyek</a></li> 
+        <li><span class="tooltip"><a class="tooltipMoreInfoLink" href="#build">Build</a><span class="tooltiptext">Proses menyusun proyek Anda ke dalam format yang siap dijalankan pada platform atau platform tertentu. <a href="BuildSettings.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#build">Glossary</a></span></span></span></li> 
+        <li><a href="#minify">Minify</a></li> 
+        <li><a href="#splitapplicationbinary">Aplikasi Split Login</a></li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Android-publishing-page.png" alt="Android publishing panel"> 
+        <figcaption>
+          Panel penerbitan Android 
+        </figcaption> 
+       </figure> 
+       <p> <strong>Note</strong>: Untuk alasan keamanan, Unity tidak menyimpan password Keystore atau Project Key.</p> 
+       <p>Gunakan jendela Keystore Manager untuk membuat, mengkonfigurasi dan memuat kunci dan keystore Anda. Anda dapat memuat keystore dan kunci yang ada dari Keystore Manager atau panel Penerbit Android utama. Jika Anda memilih untuk memuat ini dari dalam Manajer Keystore, Unity secara otomatis mengisi bidang Keystore Proyek dan Kunci Proyek. Login Untuk informasi lebih lanjut lihat dokumentasi pada <br>.<a href="android-keystore-manager.html">Keystore Manager</a>.<br> <a name="projectkeystore"></a> </p> 
+       <h3>Project Keystore</h3> 
+       <p>Sebuah keystore adalah wadah yang memegang kunci penandaan untuk keamanan aplikasi. Untuk rincian, lihat dokumentasi pengembang Android: <a href="https://developer.android.com/training/articles/keystore">Sistem keystore Android.</a> </p> 
+       <p>Gunakan pengaturan <strong>Project Keystore</strong> untuk memilih toko kunci mana yang digunakan untuk proyek terbuka. Ketika Anda memuat keystore, Unity memuat semua kunci di keystore tersebut. Untuk memuat dan menggunakan keystore yang ada di proyek terbuka Anda:</p> 
+       <ol> 
+        <li>Diaktifkan <strong>Custom Keystore</strong>.</li> 
+        <li>Buka dropdown <strong>Select</strong>, pilih <strong>Browse</strong>, dan pilih keystore dari sistem file Anda.</li> 
+        <li>Masukkan <strong>Keystore password</strong> Anda.</li> 
+       </ol> 
+       <p>Jika Anda tidak memiliki keystore yang ada, biarkan dinonaktifkan <strong>Custom Keystore</strong>.</p> 
+       <p>Unity menggunakan keystore debug untuk menandatangani aplikasi Anda. Toko kunci debug adalah toko kunci kerja. Ini memungkinkan Anda untuk menandatangani aplikasi dan mengujinya secara lokal. Namun, toko aplikasi akan menolak aplikasi yang ditandatangani dengan cara ini. Ini karena toko aplikasi tidak dapat memverifikasi validitas dan kepemilikan aplikasi menggunakan keystore debug.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Custom Keystore</strong></td> 
+          <td style="text-align:left;">Aktifkan <strong>Custom Keystore</strong> untuk memuat dan menggunakan Keystore yang ada.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Select</strong></td> 
+          <td style="text-align:left;">Ketika <strong>Custom Keystore</strong> diaktifkan, gunakan ini untuk memilih toko kunci yang ingin Anda gunakan. Toko utama di bawah partisi di dropdown <strong>Select</strong> disimpan di lokasi khusus yang telah ditentukan. Untuk rincian lebih lanjut, lihat <a href="android-keystore-manager.html#keystorelocation">Memilih lokasi keystore Anda.</a> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Path</strong></td> 
+          <td style="text-align:left;">Anda tidak perlu memasukkan jalur keystore Anda. Unity menyediakan ini berdasarkan keystore yang Anda pilih.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Password</strong></td> 
+          <td style="text-align:left;">Masukkan kata sandi keystore Anda untuk memuat keystore yang Anda pilih.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="projectkey"></a></p> 
+       <h3>Kunci Proyek</h3> 
+       <p>Ketika Anda memuat keystore, Unity memuat semua kunci di keystore tersebut. Gunakan pengaturan <strong>Project Key</strong> untuk memilih satu kunci dari keystore yang digunakan sebagai kunci aktif untuk proyek terbuka.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Alias</strong></td> 
+          <td style="text-align:left;">Pilih kunci yang ingin Anda gunakan untuk proyek terbuka.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Password</strong></td> 
+          <td style="text-align:left;">Masukkan kata sandi utama Anda.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="build"></a></p> 
+       <h3>Build</h3> 
+       <p>Secara default, Unity membangun aplikasi Anda dengan file manifestasi, template <span class="tooltip"><strong>Gradle</strong><span class="tooltiptext">Sistem build Android yang mengotomatiskan beberapa proses build. Otomasi ini berarti bahwa banyak kesalahan build umum cenderung terjadi. <a class="tooltipMoreInfoLink" href="android-gradle-overview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Gradle">Glossary</a></span></span></span> dan file Proguard yang disediakan dengan instalasi Unity. Gunakan bagian <strong>Build</strong> dari Pengaturan Penerbitan Android untuk mengubah ini.</p> 
+       <p>Untuk menggunakan file manifestasi kustom, template Gradle atau file Proguard:</p> 
+       <ol> 
+        <li>Aktifkan kotak centang yang tepat. Unity membuat file default di proyek Anda, dan lokasi file muncul di bawah kotak centang.</li> 
+        <li>Buka file baru dan buat perubahan Anda.</li> 
+        <li>Simpan perubahan Anda ke file ini. Unity secara otomatis menggunakan perubahan yang disimpan ke file ini berikutnya itu membangun aplikasi.</li> 
+       </ol> 
+       <p>Pengaturan di bagian Build hanya berlaku untuk proses build untuk proyek saat ini.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Custom Main Manifest</strong></td> 
+          <td style="text-align:left;">Versi yang dapat disesuaikan dari file Android <code>LibraryManifest.xml</code>. File ini berisi metadata penting tentang aplikasi Android Anda. Untuk informasi lebih lanjut tentang tanggung jawab Manifest Perpustakaan Utama / Unity melihat <a href="android-library-manifest.html">Manifest Perpustakaan Unity</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Custom Unity Launcher Manifest</strong></td> 
+          <td style="text-align:left;">Versi yang dapat disesuaikan dari file Android <code>LauncherManifest.xml</code>. File ini berisi metadata penting tentang peluncur aplikasi Android Anda. Untuk informasi lebih lanjut tentang tanggung jawab Manifest Peluncur Unity melihat <a href="android-launcher-manifest.html">Unity Peluncur Manifest</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Custom Main Gradle Template</strong></td> 
+          <td style="text-align:left;">Versi yang dapat disesuaikan dari file <code>mainTemplate.gradle</code>. File ini berisi informasi tentang cara membangun aplikasi Android Anda sebagai perpustakaan. Untuk informasi lebih lanjut lihat dokumentasi pada <a href="android-gradle-overview.html#providingacustomgradlebuildtemple">Menyediakan Template Gradle kustom</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Custom Launcher Gradle Template</strong></td> 
+          <td style="text-align:left;">Versi yang dapat disesuaikan dari file <code>launcherTemplate.gradle_</code>. File ini berisi instruksi tentang cara membangun aplikasi Android Anda. Untuk informasi lebih lanjut lihat dokumentasi pada <a href="android-gradle-overview.html">Login template gradle</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Custom Base Gradle Template</strong></td> 
+          <td style="text-align:left;">Versi yang dapat disesuaikan dari file <code>baseProjectTemplate.gradle</code>. File ini berisi konfigurasi yang dibagikan antara semua template dan proyek Gradle lainnya. Untuk informasi lebih lanjut lihat dokumentasi pada <a href="android-gradle-overview.html">Login template gradle</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Custom Gradle Properties Template</strong></td> 
+          <td style="text-align:left;">Versi yang dapat disesuaikan dari file <code>gradle.properties</code>. File ini berisi pengaturan konfigurasi untuk lingkungan pembangunan Gradle. Ini termasuk: <br> - Konfigurasi memori JVM (Java Virtual Machine). <br>- Sebuah properti untuk memungkinkan Gradle untuk membangun menggunakan beberapa JVMs.<br>- Properti untuk memilih alat untuk melakukan minifikasi. <br>- Properti untuk tidak mengompreskan lib asli ketika membangun bundel aplikasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Custom Proguard File</strong></td> 
+          <td style="text-align:left;">Versi yang dapat disesuaikan dari file proguard.txt. File ini berisi pengaturan konfigurasi untuk proses minifikasi. Jika minifikasi menghapus beberapa kode Java yang harus disimpan, Anda harus menambahkan aturan untuk menyimpan kode itu dalam file ini. Untuk informasi lebih lanjut lihat dokumentasi pada <a href="#minify">Minification</a>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="minify"></a></p> 
+       <h3>Minify</h3> 
+       <p>Minifikasi adalah proses yang menyusut, obfuscates dan mengoptimalkan kode dalam aplikasi Anda. Ini dapat mengurangi ukuran kode dan membuat kode lebih keras untuk membongkar. Gunakan pengaturan Minify untuk menentukan kapan dan bagaimana Unity harus menerapkan minifikasi untuk membangun Anda.</p> 
+       <p>Dalam kebanyakan kasus, praktik yang baik hanya menerapkan minifikasi untuk melepaskan build, dan tidak debug builds. Ini karena minifikasi membutuhkan waktu, dan dapat membuat build lebih lambat. Hal ini juga dapat membuat debugging lebih rumit karena optimasi bahwa kode mengalami.</p> 
+       <p>Pengaturan di bagian Minify hanya berlaku untuk proses build untuk proyek saat ini.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Use R8</strong></td> 
+          <td style="text-align:left;">Secara default, Unity menggunakan Proguard untuk minifikasi. Aktifkan kotak centang ini untuk menggunakan R8 bukan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Release</strong></td> 
+          <td style="text-align:left;">Aktifkan kotak centang ini jika Anda ingin menyatukan kode aplikasi Anda dalam rilis builds.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Debug</strong></td> 
+          <td style="text-align:left;">Aktifkan kotak centang ini jika Anda ingin menyatukan kode aplikasi Anda dalam pembuatan debug.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="splitapplicationbinary"></a></p> 
+       <h3>Aplikasi Split Login</h3> 
+       <p>Aktifkan opsi <strong>Split Application Binary</strong> untuk membagi paket output Anda menjadi paket utama (APK) dan ekspansi (OBB). Google Play Store memerlukan ini jika Anda ingin mempublikasikan aplikasi lebih besar dari 100 MB.</p> 
+       <p><br></p> 
+       <hr> 
+       <ul> 
+        <li><span class="page-history">Fitur diperbarui di 5.5</span></li> 
+        <li><span class="page-history"><strong>Sustained Performance Mode</strong> ditambahkan pada 2017.3</span></li> 
+        <li><span class="page-history">.NET 4.x runtime ditambahkan pada 2018. 1 Artikel</span></li> 
+        <li><span class="page-history">Fitur Android <strong>Multiple APK</strong> ditambahkan pada 2018.2</span></li> 
+        <li><span class="page-history">Dukungan OpenGL ES 3.2 untuk Android ditambahkan dalam <span class="search-words">NewIn20191</span></span></li> 
+        <li><span class="page-history">Pratinjau Sistem Masukan ditambahkan pada Unity 2019. 1 Artikel</span></li> 
+        <li><span class="page-history"><strong>Render outside safe area</strong> ditambahkan dalam Unity 2019.1</span></li> 
+        <li><span class="page-history">Warn tentang opsi ukuran Bundel Aplikasi ditambahkan pada Unity 2019. 1 Artikel</span></li> 
+        <li><span class="page-history">Login Skinning berganti nama untuk Compute Skinning di Unity 2019. Sitemap</span></li> 
+        <li><span class="page-history">Vuforia dihapus dalam Unity <a href="../Manual/30_search.html?q=newin20193">2019.3</a></span></li> 
+        <li><span class="page-history">Dukungan untuk built-in XR SDK yang diuraikan dalam Unity <a href="../Manual/30_search.html?q=newin20193">2019.3</a>.<span class="search-words">NewIn20193</span></span></li> 
+        <li><span class="page-history">Diperbarui untuk format kompresi Tekstur</span></li> 
+       </ul> 
+       <!-- area:platforms --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="android-sdksetup.html"></a></span> 
+         <div class="tip">
+           Pengaturan lingkungan Android 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="android-keystore.html"></a></span> 
+         <div class="tip">
+           Android SDK 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: GPU Database</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="core" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="analysis.html">Analysis</a></li> 
+         <li><a href="Profiler.html">Profiler</a></li> 
+         <li><a href="ProfilerWindow.html">WordPress.org</a></li> 
+         <li>Login Database</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="ProfilerGI.html"></a></span> 
+          <div class="tip">
+            Modul Profiler Penerangan Global 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="ProfilerMemory.html"></a></span> 
+          <div class="tip">
+            Modul Profiler Memori 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Login Database</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>GPU Penggunaan modul <span class="tooltip"><strong>Profiler</strong><span class="tooltiptext">Jendela yang membantu Anda untuk mengoptimalkan permainan Anda. Ini menunjukkan berapa banyak waktu yang dihabiskan di berbagai bidang permainan Anda. Sebagai contoh, dapat melaporkan persentase waktu yang dihabiskan <strong>rendering</strong>, aimating, atau dalam logika permainan Anda. <a class="tooltipMoreInfoLink" href="Profiler.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profiler">Glossary</a></span></span></span> menampilkan di mana aplikasi Anda menghabiskan waktu di GPU. Anda hanya dapat menggunakan Profiler GPU di Playmode, atau untuk membangun aplikasi Anda. Anda tidak dapat menggunakannya untuk profil Editor.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/gpu-profiler-module.png" alt="The GPU Usage Profiler in the Profiler Window"> 
+        <figcaption>
+          Profiler Penggunaan GPU di Jendela Profiler 
+        </figcaption> 
+       </figure> 
+       <p>Sitemap Jika Anda memiliki <strong>Note:</strong> diaktifkan dalam profil <strong>Graphics Jobs</strong>, GPU tidak didukung. Untuk informasi lebih lanjut, lihat dokumentasi pada <span class="tooltip"><strong>Player Settings</strong><span class="tooltiptext">Pengaturan yang memungkinkan Anda mengatur berbagai pilihan khusus pemain untuk permainan akhir yang dibangun oleh Unity. <a class="tooltipMoreInfoLink" href="class-PlayerSettings.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#PlayerSettings">Glossary</a></span></span></span>. Selain itu, di macOS, Anda hanya dapat menprofilkan GPU di Mavericks 10.9 atau nanti.<a href="class-PlayerSettingsStandalone.html">Pengaturan Pemain Standalone</a>. Additionally, on macOS, you can only profile the GPU on Mavericks 10.9 or later.</p> 
+       <h2>Dukungan profil GPU</h2> 
+       <p>Daftar tabel berikut platform yang mendukung modul GPU Pemakaian Profiler:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Platform</strong></th> 
+          <th style="text-align:left;"><strong>Graphics API</strong></th> 
+          <th style="text-align:left;"><strong>Status</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Windows</strong></td> 
+          <td style="text-align:left;">DirectX 11, DirectX 12, OpenGL</td> 
+          <td style="text-align:left;">Supported</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Vulkan</td> 
+          <td style="text-align:left;">Tidak didukung</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>macOS</strong></td> 
+          <td style="text-align:left;">OpenGL</td> 
+          <td style="text-align:left;">Sitemap <strong>Note:</strong> Apple memiliki dukungan yang telah ditentukan dari OpenGL.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Metal</td> 
+          <td style="text-align:left;">Tidak didukung. Gunakan Bingkai GPU XCode Debugger <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span> bukan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Linux</strong></td> 
+          <td style="text-align:left;">Inti OpenGL</td> 
+          <td style="text-align:left;">Supported</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Vulkan</td> 
+          <td style="text-align:left;">Tidak didukung</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>PlayStation 4</strong></td> 
+          <td style="text-align:left;">libgnm</td> 
+          <td style="text-align:left;">Supported.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Switch</strong></td> 
+          <td style="text-align:left;">API</td> 
+          <td style="text-align:left;">Supported</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><span class="tooltip"><strong>WebGL</strong><span class="tooltiptext">A JavaScript API that renders 2D and 3D graphics in a web browser. The Unity WebGL build option allows Unity to publish content as JavaScript programs which use HTML5 technologies and the WebGL rendering API to run Unity content in a web browser. <a class="tooltipMoreInfoLink" href="webgl-gettingstarted.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#WebGL">Glossary</a></span></span></span></strong></td> 
+          <td style="text-align:left;">All WebGL</td> 
+          <td style="text-align:left;">Tidak didukung</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Android</strong></td> 
+          <td style="text-align:left;">OpenGL</td> 
+          <td style="text-align:left;">Didukung pada perangkat yang menjalankan NVIDIA atau Intel GPU.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Vulkan</td> 
+          <td style="text-align:left;">Tidak didukung</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>iOS, tvOS</strong></td> 
+          <td style="text-align:left;">Metal</td> 
+          <td style="text-align:left;">Tidak didukung. Gunakan GPU Frame Debugger UI XCode bukan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Tizen</strong></td> 
+          <td style="text-align:left;">OpenGL</td> 
+          <td style="text-align:left;">Tidak didukung.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Pada Windows, dukungan Unity Playmode profiling di Editor dengan Direct3D 9 dan Direct3D 11 API. Ini nyaman untuk profil cepat, karena itu berarti Anda tidak perlu membangun Pemain; namun, overhead menjalankan Editor Unity mempengaruhi Profiler, yang mungkin membuat hasil profil kurang akurat.</p> 
+       <h2>Kategori grafik</h2> 
+       <p>GPU Pemakaian Grafik modul Profiler memiliki beberapa kategori yang berbeda yang dapat Anda gunakan untuk menyelidiki waktu GPU. Untuk mengubah urutan kategori di grafik, Anda dapat menyeret dan menjatuhkannya di legenda grafik. Anda juga dapat mengklik legenda berwarna kategori untuk memotong tampilannya.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Chart category</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Opaque</strong></td> 
+          <td style="text-align:left;">Built-in rendering waktu pipa untuk membuat benda buram</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Transparent</strong></td> 
+          <td style="text-align:left;">Built-in rendering waktu pipa untuk membuat benda transparan</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Shadows/Depth</strong></td> 
+          <td style="text-align:left;">Built-in rendering waktu pipa untuk membuat peta bayangan</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Deferred PrePass</strong></td> 
+          <td style="text-align:left;">Built-in waktu rendering pipa untuk membuat umpan awal <span class="tooltip"><strong>depth buffer</strong><span class="tooltiptext">Sebuah toko memori yang memegang kedalaman nilai z setiap pixel dalam gambar, di mana nilai z adalah kedalaman untuk setiap piksel yang diberikan dari pesawat proyeksi. <a class="tooltipMoreInfoLink" href="class-RenderTexture.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#depthbuffer">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Deferred Lighting</strong></td> 
+          <td style="text-align:left;">Built-in waktu rendering pipa untuk melakukan pencahayaan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>PostProcess</strong></td> 
+          <td style="text-align:left;">Built-in rendering waktu pipa untuk memproses efek pemrosesan pasca.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Other</strong></td> 
+          <td style="text-align:left;">Waktu rendering untuk memproses hal-hal lain seperti Pipa Pengirim Scriptable</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Detail modul pane</h2> 
+       <p>Ketika Anda memilih modul Penggunaan GPU, pane rincian di bawah ini menampilkan rincian di mana aplikasi menghabiskan waktu dalam bingkai yang dipilih. Anda dapat menampilkan data waktu sebagai tabel hirarkis. Untuk mengubah tampilan tabel, gunakan dropdown kiri atas di pane rincian (set ke Hierarchy secara default). Tampilan yang tersedia adalah:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>View</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Hierarchy</strong></td> 
+          <td style="text-align:left;">Kelompok data waktu oleh struktur hirarkis internal. Pilihan ini menampilkan elemen-elemen yang disebut dalam format daftar turun, dipesan oleh waktu yang dihabiskan secara default. Anda juga dapat memesan informasi dengan jumlah total waktu GPU, atau jumlah panggilan. Untuk mengubah kolom yang memesan tabel, klik header kolom tabel.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Raw Hierarchy</strong></td> 
+          <td style="text-align:left;">Menampilkan data waktu dalam struktur hirarkis yang mirip dengan tumpukan panggilan di mana waktu terjadi. Daftar persatuan setiap tumpukan panggilan secara terpisah dalam mode ini daripada merging mereka, karena itu tidak dalam tampilan Hierarchy.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Ketika Anda memilih modul Profiler Penggunaan GPU, pane yang lebih rendah dari Profiler menampilkan data waktu hirarkis untuk bingkai yang dipilih. Pilih item dari Hierarchy untuk melihat kerusakan kontribusi di panel kanan. Lihat dokumentasi tentang <a href="ProfilerWindow.html">WordPress.org</a> untuk mempelajari lebih lanjut tentang fungsionalitas jendela Profiler.</p> 
+       <p>Tampilan meja memiliki kolom berikut:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Column</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Total</strong></td> 
+          <td style="text-align:left;">Jumlah total waktu Unity yang dihabiskan pada fungsi tertentu, sebagai persentase.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>DrawCalls</strong></td> 
+          <td style="text-align:left;">Jumlah panggilan yang dibuat untuk fungsi ini dalam bingkai ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>GPU ms</strong></td> 
+          <td style="text-align:left;">Jumlah total waktu Unity yang dihabiskan pada fungsi tertentu, dalam mili detik.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <!-- area:core --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="ProfilerGI.html"></a></span> 
+         <div class="tip">
+           Modul Profiler Penerangan Global 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="ProfilerMemory.html"></a></span> 
+         <div class="tip">
+           Modul Profiler Memori 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

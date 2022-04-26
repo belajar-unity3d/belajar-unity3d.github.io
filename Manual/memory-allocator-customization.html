@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: kustomisasi allokator memori</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="analysis.html">Analysis</a></li> 
+         <li><a href="performance-memory-overview.html">Memori dalam Unity</a></li> 
+         <li>kustomisasi allokator memori</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="performance-managed-memory.html"></a></span> 
+          <div class="tip">
+            Memori terkelola 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="performance-garbage-collector.html"></a></span> 
+          <div class="tip">
+            Gambaran keseluruhan kolektor sampah 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>kustomisasi allokator memori</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Ketika Anda mengoptimalkan kinerja aplikasi Anda, satu faktor penting untuk dipertimbangkan adalah alokasi memori. Dokumentasi ini memberikan informasi pada tipe allokator memori asli Unity, dan menjelaskan skenario di mana Anda dapat menyesuaikan alokasi untuk meningkatkan kinerja. Hal ini dimaksudkan untuk pengguna dengan pemahaman umum tentang allokator.</p> 
+       <p>Untuk referensi penuh dari jenis allokator dan nilai default mereka, lihat <a href="#customizingAllocators">Kustomisasi allokators</a>.</p> 
+       <p>Aplikasi menggunakan aokator memori untuk menyeimbangkan kinerja dan ruang memori yang tersedia. Jika aplikasi memiliki banyak memori cadangan, itu dapat mendukung alokasi yang lebih cepat, berat memori ketika memuat <span class="tooltip"><strong>scenes</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> dan bingkai. Namun, jika aplikasi memiliki memori terbatas, perlu menggunakan memori secara efisien, bahkan jika itu berarti menggunakan aokator yang lebih lambat. Untuk membantu Anda mendapatkan kinerja terbaik untuk proyek yang berbeda, Anda dapat menyesuaikan alokasi Unity agar sesuai dengan ukuran dan persyaratan setiap aplikasi.</p> 
+       <p>Unity memiliki lima jenis allokator. Setiap jenis memiliki algoritma yang berbeda untuk alokasi pas ke blok memori, dan karena itu berguna untuk alokasi yang berbeda. Perbedaan penting antara alokasi biasanya bertahan, atau umur alokasi, yang menentukan di mana alokasi harus pergi. Misalnya, alokasi panjang hidup (persistent) pergi ke alokasi heap dan ember, sementara alokasi berumur pendek pergi ke alokasi benang yang aman linier dan TLS.</p> 
+       <p>Tabel ini mencantumkan algoritma dan penggunaan masing-masing jenis allokator:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Allocator type</strong></th> 
+          <th style="text-align:left;"><strong>Algorithm</strong></th> 
+          <th style="text-align:left;"><strong>Used for</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Heap dinamis</td> 
+          <td style="text-align:left;">Dua Tingkat Segregated Fit (TLSF)</td> 
+          <td style="text-align:left;">• Allocator utama<br>• Gfx allocator<br>• Hepatitis C Virus (HCV) File cache allocator<br>• Profiler allocator<br>• Editor Profiler allocator (hanya Editor)<br>• Editor Profiler allocator (on Editor only)</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Bucket</td> 
+          <td style="text-align:left;">Tetap ukuran lorong bebas kunci</td> 
+          <td style="text-align:left;">Sebagai alokasi bersama untuk alokasi kecil untuk:<br><br>• Allocator utama<br>• Gfx allocator<br>• Hepatitis C Virus (HCV) Home &gt; Sitemap<br>• File cache allocator</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Benang ganda</td> 
+          <td style="text-align:left;">Redirects alokasi berdasarkan ukuran dan benang ID</td> 
+          <td style="text-align:left;">• Allocator utama<br>• Gfx allocator<br>• Hepatitis C Virus (HCV) Home &gt; Sitemap<br>• File cache allocator</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Thread Penyimpanan Lokal (TLS) stack</td> 
+          <td style="text-align:left;">LIFO stack</td> 
+          <td style="text-align:left;">Alokasi sementara</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Threadsafe linear</td> 
+          <td style="text-align:left;">Login Login</td> 
+          <td style="text-align:left;">Buffer untuk melewati data ke pekerjaan</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p> <strong>Note</strong>: Contoh dalam dokumentasi ini menggunakan laporan penggunaan memori yang ditulis ke log ketika Anda menutup pemain atau Editor. Untuk menemukan file log Anda, ikuti petunjuk pada <a href="LogFiles.html">the log files page</a>.</p> 
+       <h2>heap dinamis, ember, dan pirator benang ganda</h2> 
+       <p>Bagian ini meninjau skenario fungsi dan kustomisasi untuk heap dinamis, ember dan alokasi benang ganda.</p> 
+       <h3>Overview</h3> 
+       <p><strong>dual thread allocator</strong> adalah pembungkus yang menggabungkan allokator <strong>dynamic</strong> dan <strong>bucket</strong>. Lebih khusus, menggabungkan:</p> 
+       <ul> 
+        <li><p>Dua allokator heap dinamis: Insokator bebas kunci untuk benang utama, dan aokator yang dibagikan oleh semua benang lainnya, yang mengunci alokasi dan alokasi. Unity menggunakan alokasi ini untuk alokasi yang terlalu besar untuk alokasi ember. Allocator heap dinamis menggunakan blok memori. Alokasi yang sama dengan atau lebih dari setengah blok pergi ke sistem memori virtual bukan alokasi heap dinamis.</p></li> 
+        <li><p>A ember allokator untuk alokasi kecil. Jika ember allokator penuh, tumpahan alokasi ke alokasi dinamis allokator.</p></li> 
+       </ul> 
+       <h3>Allocator heap dinamis</h3> 
+       <p>Allocator heap utama adalah allokator heap dinamis. Ini menerapkan algoritma Dua Tingkat Segregated Fit (TLSF) untuk memblokir memori.</p> 
+       <p>Setiap platform memiliki ukuran blok default, <a href="#customizingAllocators">yang dapat Anda sesuaikan</a>. Alokasi harus lebih kecil dari setengah blok. Jika alokasi sama dengan atau lebih besar dari setengah blok, terlalu besar untuk alokasi heap dinamis; bukan, Unity menggunakan API memori virtual untuk membuat alokasi.</p> 
+       <p>Contoh laporan penggunaan untuk allokator heap dinamis:</p> 
+       <pre><code>[ALLOC_DEFAULT_MAIN]
+Peak usage frame count: [16.0 MB-32.0 MB]: 497 frames, [32.0 MB-64.0 MB]: 1 frames
+Requested Block Size 16.0 MB
+Peak Block count 2
+Peak Allocated memory 54.2 MB
+Peak Large allocation bytes 40.2 MB
+</code></pre> 
+       <p>Dalam contoh ini, ukuran blok TLSF diatur ke 16 MB, dan Unity telah mengalokasikan dua blok. Penggunaan puncak dari allokator adalah 54.2MB. Dari 52.4MB, 40.2MB tidak dialokasikan di blok TLSF, dan bukannya kembali ke memori virtual. Sebagian besar bingkai memiliki 16-32MB memori yang dialokasikan, sementara satu bingkai - kemungkinan bingkai pemuatan - di puncak pada 32-64MB memori.</p> 
+       <p>Jika Anda meningkatkan ukuran blok alokasi besar akan tinggal di landak dinamis daripada jatuh kembali ke memori virtual. Namun, ukuran blok dapat menyebabkan limbah memori, karena blok mungkin tidak sepenuhnya digunakan.</p> 
+       <p>Untuk menghindari menggunakan aokator tipe dan cache, set ukurannya ke 0. Alokasi yang akan menggunakan tipetree dan cache akan jatuh kembali ke alokasi utama. Hal ini dapat menyebabkan lebih banyak fragmentasi, tetapi menyimpan memori blok memori allokators.</p> 
+       <h3>Sitemap Home &gt; Sitemap<a name="bucketAllocator"></a> Bucket allocator</h3> 
+       <p>Allocator bucket adalah aokator bebas kunci cepat yang melakukan alokasi kecil. Biasanya, ember allocator digunakan sebagai langkah pertama untuk mempercepat alokasi kecil, sebelum mereka pergi ke alokasi heap.</p> 
+       <p>Allocator berhak untuk alokasi. Setiap blok dibagi menjadi <strong>subsections</strong> 16KB. Ini tidak dapat dikonfigurasi, dan tidak muncul di antarmuka pengguna. Setiap bagian dibagi menjadi <strong>allocations</strong>. Ukuran alokasi adalah beberapa ukuran tetap yang dikonfigurasi, yang disebut <strong>granularity</strong>.</p> 
+       <p>Pengaturan contoh berikut menunjukkan proses mengamati blok untuk alokasi:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Shared_Bucket.png" alt="Shared Bucket Allocator for the Windows, Mac and Linux player"> 
+        <figcaption>
+          Allocator Bucket Bersama untuk pemain Windows, Mac dan Linux 
+        </figcaption> 
+       </figure> 
+       <p>Dalam pengaturan ini, total ukuran <strong>block</strong> (<strong>Bucket Allocator Block Size</strong>) adalah 4MB, dan granularitas alokasi (<strong>Bucket Allocator Granularity</strong>) adalah 16B. Alokasi pertama adalah 16B, yang kedua adalah 32B (2 * 17), maka 48B, 64B, 80B, 96B, 112B, dan 128B, untuk total delapan ember (<strong>Bucket Allocator BucketCount</strong>).</p> 
+       <p>Setiap bagian mengandung sejumlah ember yang berbeda. Untuk menghitung jumlah ember di bagian bawah, membagi ukuran penampang (16KB) dengan ukuran granularitas. Contoh:</p> 
+       <ul> 
+        <li>Ketika granularitas alokasi adalah 64B, ember 256 cocok di bagian bawah.</li> 
+        <li>Ketika granularitas alokasi adalah 16B, 1,024 ember cocok di bagian bawah.</li> 
+       </ul> 
+       <p>Bucket allocators menghasilkan laporan penggunaan yang berbeda untuk build <span class="tooltip"><strong>development build</strong><span class="tooltiptext">Membangun pengembangan termasuk simbol debug dan memungkinkan Profiler. <a class="tooltipMoreInfoLink" href="UnityCloudBuildDevelopmentBuilds.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#DevelopmentBuild">Glossary</a></span></span></span> dan rilis, karena pembangunan build, setiap alokasi memiliki header 40B tambahan. Diagram berikut menunjukkan perbedaan antara pembangunan dan rilis build untuk alokasi 16B dan 64B:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/memory_allocation.png" alt="Development and Release builds comparison"> 
+        <figcaption>
+          Pengembangan dan Rilis membangun perbandingan 
+        </figcaption> 
+       </figure> 
+       <p>Judul juga merupakan alasan laporan allokator penuh setelah mengalokasikan hanya 2MB dari 4MBnya:</p> 
+       <pre><code>[ALLOC_BUCKET]
+      Large Block size 4.0 MB
+      Used Block count 1
+      Peak Allocated bytes 2.0 MB
+      Failed Allocations. Bucket layout:
+        16B: 64 Subsections = 18724 buckets. Failed count: 3889
+        32B: 17 Subsections = 3868 buckets. Failed count: 169583
+        48B: 31 Subsections = 5771 buckets. Failed count: 39674
+        64B: 28 Subsections = 4411 buckets. Failed count: 9981
+        80B: 17 Subsections = 2321 buckets. Failed count: 14299
+        96B: 6 Subsections = 722 buckets. Failed count: 9384
+        112B: 44 Subsections = 4742 buckets. Failed count: 5909
+        128B: 49 Subsections = 4778 buckets. Failed count: 8715
+</code></pre> 
+       <p>Dalam rilis build untuk proyek yang sama, ukuran blok allocator cukup:</p> 
+       <pre><code>[ALLOC_BUCKET]
+      Large Block size 4.0 MB
+      Used Block count 1
+      Peak Allocated bytes 3.3 MB
+</code></pre> 
+       <p>Jika ember allokator penuh, alokasi jatuh kembali ke alokasi lain. Laporan penggunaan menampilkan statistik penggunaan, termasuk berapa banyak alokasi gagal. Jika laporan menampilkan jumlah gagal yang meningkatkan linear, kemungkinan alokasi gagal terjadi ketika menghitung bingkai, bukan beban. Alokasi Fallback bukan masalah untuk beban adegan, tetapi mereka dapat mempengaruhi kinerja jika mereka terjadi ketika menghitung bingkai.</p> 
+       <p>Untuk mencegah alokasi fallback ini, meningkatkan ukuran blok, dan membatasi ukuran blok baru untuk mencocokkan penggunaan puncak bingkai, daripada penggunaan puncak beban adegan. Hal ini mencegah blok menjadi begitu besar yang cadangan banyak memori yang kemudian tidak tersedia pada waktu runtime.</p> 
+       <p> <strong>Tip</strong>: Allocators <span class="tooltip"><strong>Profiler</strong><span class="tooltiptext">Jendela yang membantu Anda untuk mengoptimalkan permainan Anda. Ini menunjukkan berapa banyak waktu yang dihabiskan di berbagai bidang permainan Anda. Sebagai contoh, dapat melaporkan persentase waktu yang dihabiskan <strong>rendering</strong>, aimating, atau dalam logika permainan Anda. <a class="tooltipMoreInfoLink" href="Profiler.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profiler">Glossary</a></span></span></span> berbagi contoh a ember allokator. Anda dapat menyesuaikan instance bersama ini di <a href="#bucketAllocator">Allocator Bucket Profiler</a>.</p> 
+       <h3>Dual benang allokator</h3> 
+       <p>Allocator benang ganda membungkus alokasi ember bersama untuk alokasi kecil, dan dua kasus allokator heap dinamis: alokasi bebas kunci untuk benang utama, dan alokasi yang dibagikan oleh semua benang lainnya, tetapi kunci di alokasi dan alokasi.</p> 
+       <p>Anda dapat menyesuaikan ukuran blok dari dua allokator heap dinamis:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Main_Allocator.png" alt="Main Allocator, with a custom value for Shared Thread Block Size"> 
+        <figcaption>
+          Allocator Utama, dengan nilai kustom untuk Ukuran Blok Thread Bersama 
+        </figcaption> 
+       </figure> 
+       <p>Laporan penggunaan berisi informasi untuk semua tiga bagian dari allokator. Contoh:</p> 
+       <pre><code>[ALLOC_DEFAULT] Dual Thread Allocator
+  Peak main deferred allocation count 135
+    [ALLOC_BUCKET]
+      Large Block size 4.0 MB
+      Used Block count 1
+      Peak Allocated bytes 3.3 MB
+    [ALLOC_DEFAULT_MAIN]
+      Peak usage frame count: [16.0 MB-32.0 MB]: 8283 frames, [32.0 MB-64.0 MB]: 1 frames
+      Requested Block Size 16.0 MB
+      Peak Block count 2
+      Peak Allocated memory 53.3 MB
+      Peak Large allocation bytes 40.2 MB
+    [ALLOC_DEFAULT_THREAD]
+      Peak usage frame count: [64.0 MB-128.0 MB]: 8284 frames
+      Requested Block Size 16.0 MB
+      Peak Block count 2
+      Peak Allocated memory 78.3 MB
+      Peak Large allocation bytes 47.3 MB
+</code></pre> 
+       <p> <strong>Note</strong>: <strong>Peak main deferred allocation count</strong> adalah jumlah item dalam antrian penghapusan. Benang utama harus menghapus alokasi yang dibuat. Jika benang lain menghapus alokasi, alokasi ditambahkan ke antrian. Alokasi menunggu di antrian untuk benang utama untuk menghapusnya. Kemudian dihitung sebagai alokasi deferred.</p> 
+       <h2> <a name="threadsafe"></a> TLS dan threadsafe linear allokators</h2> 
+       <p>Bagian ini menjelaskan skenario fungsi dan kustomisasi untuk Thread Local Storage (TLS) dan allokator linier threadsafe.</p> 
+       <h3>Overview</h3> 
+       <p>Unity memiliki dua allokators yang bekerja di luar alokasi benang ganda:</p> 
+       <ul> 
+        <li><p>Thread Penyimpanan Lokal (TLS): Allocator berbasis stack untuk alokasi sementara yang cepat. Ini adalah aokator tercepat karena memiliki hampir tidak ada overhead. Hal ini juga mencegah fragmentasi. Ini terakhir di, pertama di luar (LIFO) berbasis.</p></li> 
+        <li><p>Threadsafe linier: Pertama In, Pertama Out (FIFO) bulat-robin allokator yang sementara alokasi pekerjaan untuk melewati memori berumur pendek antara benang pekerja).</p></li> 
+       </ul> 
+       <h3>Thread Penyimpanan Lokal (TLS) stack allocator</h3> 
+       <p>Setiap benang menggunakan alokasi tumpukan cepat sendiri untuk alokasi sementara. Alokasi ini sangat cepat, dengan umur kurang dari bingkai.</p> 
+       <p>Ukuran blok default untuk aokator sementara adalah 4MB untuk platform dan 16MB untuk Editor Unity. Anda dapat menyesuaikan nilai-nilai ini.</p> 
+       <p> <strong>Note</strong>: Jika penggunaan allokator melebihi ukuran blok yang dikonfigurasi, Unity meningkatkan ukuran blok. Batas kenaikan ini dua kali ukuran aslinya.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Per_Thread.png" alt="Main Thread Block Size custom value in the Fast Per Thread Temporary Allocators"> 
+        <figcaption>
+          Ukuran Blok Thread Utama nilai kustom dalam Fast Per Thread Temporary Allocators 
+        </figcaption> 
+       </figure> 
+       <p>Jika alokasi tumpukan benang penuh, alokasi jatuh kembali ke <a href="#threadsafe">threadsafe linear pekerjaan allokator</a>. Beberapa alokasi overflow halus: 1 hingga 10 dalam bingkai, atau beberapa ratus selama beban. Namun, jika angka tumbuh pada setiap bingkai, Anda dapat meningkatkan ukuran blok.</p> 
+       <p>Informasi dalam laporan penggunaan dapat membantu Anda memilih ukuran blok yang sesuai untuk aplikasi Anda. Misalnya, dalam laporan penggunaan benang utama berikut, puncak beban di 2.7MB, tetapi bingkai yang tersisa di bawah 64KB. Anda dapat mengurangi ukuran blok dari 4MB ke 64KB dan memungkinkan bingkai pemuatan untuk tumpahkan di atas alokasi:</p> 
+       <pre><code>[ALLOC_TEMP_TLS] TLS Allocator
+  StackAllocators :
+    [ALLOC_TEMP_MAIN]
+      Peak usage frame count: [16.0 KB-32.0 KB]: 802 frames, [32.0 KB-64.0 KB]: 424 frames, [2.0 MB-4.0 MB]: 1 frames
+      Initial Block Size 4.0 MB
+      Current Block Size 4.0 MB
+      Peak Allocated Bytes 2.7 MB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 18]
+</code></pre> 
+       <p>Dalam contoh kedua ini, benang pekerja tidak digunakan untuk alokasi sementara besar. Untuk menghemat memori, Anda dapat mengurangi ukuran blok pekerja ke 32KB. Ini terutama berguna pada mesin multi-core, di mana setiap benang pekerja memiliki tumpukan sendiri:</p> 
+       <pre><code>[ALLOC_TEMP_Job.Worker 14]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 18.6 KB
+      Overflow Count 0
+</code></pre> 
+       <h3>Threadsafe linear allocator</h3> 
+       <p>Benang pekerja di Unity menggunakan algoritma pertama-in-first-out (FIFO) untuk cepat, alokasi bebas kunci dari buffer kerja untuk pekerjaan. Pekerjaan membuang penyangga saat dilakukan.</p> 
+       <p>Blok allokator allokates memori ini, kemudian linear mengalokasikan memori dalam blok tersebut. Blok yang tersedia diadakan di kolam renang. Ketika satu blok penuh, allocator mengambil blok baru dari kolam renang. Ketika allokator tidak perlu lagi memori di blok, membersihkan blok, dan blok kembali ke kolam blok yang tersedia. Penting untuk membersihkan alokasi dengan cepat untuk membuat blok yang tersedia lagi, jadi pekerjaan tidak harus tinggal dialokasikan untuk lebih dari beberapa bingkai.</p> 
+       <p>Anda dapat menyesuaikan ukuran blok. Allocator mengalokasikan hingga 64 blok, sesuai kebutuhan.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Fast_Thread.png" alt="Default value for Fast Thread Shared Temporary Allocators for the Editor"> 
+        <figcaption>
+          Nilai default untuk Fast Thread Shared Temporary Allocators untuk Editor 
+        </figcaption> 
+       </figure> 
+       <p>Jika semua blok digunakan, atau alokasi terlalu besar untuk blok, alokasi jatuh kembali ke alokasi utama, yang jauh lebih lambat daripada alokasi pekerjaan. Beberapa alokasi aliran halus: 1 hingga 10 dalam bingkai, atau beberapa ratus, terutama selama beban. Jika hitungan overflow tumbuh dengan setiap bingkai, Anda dapat meningkatkan ukuran blok untuk menghindari alokasi fallback. Namun, jika Anda meningkatkan ukuran blok terlalu banyak (misalnya, untuk mencocokkan penggunaan puncak dalam acara seperti pemuatan adegan), Anda mungkin meninggalkan banyak memori yang tidak tersedia selama bermain.</p> 
+       <p>Contoh:</p> 
+       <pre><code>[ALLOC_TEMP_JOB_4_FRAMES (JobTemp)]
+  Initial Block Size 0.5 MB
+  Used Block Count 64
+  Overflow Count (too large) 0
+  Overflow Count (full) 50408
+</code></pre> 
+       <p>Dalam laporan penggunaan ini, ukuran blok 0,5MB terlalu kecil untuk mengakomodasi memori pekerjaan yang diperlukan aplikasi, dan alokasi penuh menyebabkan sejumlah besar alokasi untuk meluap.</p> 
+       <p>Untuk memeriksa apakah alur bingkai build Anda cukup, jalankan untuk waktu singkat dan kemudian untuk waktu yang lebih lama. Jika jumlah overflow tetap stabil, overflow adalah tanda air tinggi yang terjadi selama beban. Jika jumlah overflow meningkat dengan jangka panjang, build memproses overflow per-frame. Dalam kedua kasus, Anda dapat meningkatkan blokisasi untuk mengurangi overflow, tetapi overflow kurang penting selama beban dari per bingkai.</p> 
+       <h2>Sitemap Kustomisasi allokators<a name="customizingAllocators"></a> Customizing allocators</h2> 
+       <p>Untuk menyesuaikan pengaturan allokator, lakukan salah satu berikut:</p> 
+       <ul> 
+        <li>Gunakan Editor: 
+         <ol> 
+          <li>Pilih <em>Pengaturan Proyek</em> &gt; <em>Pengaturan Memori</em>.</li> 
+          <li>Pilih ikon kunci di sebelah nilai yang ingin Anda edit.</li> 
+         </ol> </li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Memory_Settings.png" alt="Project Settings > Memory Settings, showing a selection of Player memory settings"> 
+        <figcaption>
+          Pengaturan Proyek &gt; Pengaturan Memori, menunjukkan pilihan pengaturan memori Pemain 
+        </figcaption> 
+       </figure> 
+       <ul> 
+        <li>Gunakan argumen baris perintah. Untuk menemukan nama parameter allokator yang ingin Anda ubah, periksa daftar pengaturan allokator Editor dan pemain cetak ketika mereka memulai. Sebagai contoh, untuk mengubah ukuran blok alokasi heap utama, gunakan <code>-memorysetup-main-allocator-block-size=&lt;new_value&gt;</code> </li> 
+       </ul> 
+       <p>Nama parameter allokator dan nilai default mereka:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="3"><strong>Allocator</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+          <th style="text-align:left;"><strong>Parameter name</strong></th> 
+          <th style="text-align:left;"><strong>Default value</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="3">Alokator Utama</td> 
+          <td style="text-align:left;">Penggunaan allokators Unity untuk sebagian besar alokasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2">Alokator Utama</td> 
+          <td style="text-align:left;">Penggunaan Unity allokator utama untuk sebagian besar alokasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Ukuran Blok Thread Utama</td> 
+          <td style="text-align:left;">Ukuran blok dari alokasi benang utama khusus.</td> 
+          <td style="text-align:left;"><code>memorysetup-main-allocator-block-size</code></td> 
+          <td style="text-align:left;"><code>16777216</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Ukuran Blok Thread Bersama</td> 
+          <td style="text-align:left;">Ukuran blok dari allokator benang bersama.</td> 
+          <td style="text-align:left;"><code>memorysetup-thread-allocator-block-size</code></td> 
+          <td style="text-align:left;"><code>16777216</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2">Gfx Allocator</td> 
+          <td style="text-align:left;">Penggunaan Unity allocator untuk alokasi CPU yang terkait dengan sistem Gfx.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Ukuran Blok Thread Utama</td> 
+          <td style="text-align:left;">Ukuran blok dari benang utama khusus gfx allocator.</td> 
+          <td style="text-align:left;"><code>memorysetup-gfx-main-allocator-block-size</code></td> 
+          <td style="text-align:left;"><code>16777216</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Ukuran Blok Thread Bersama</td> 
+          <td style="text-align:left;">Ukuran blok dari allocator benang bersama.</td> 
+          <td style="text-align:left;"><code>memorysetup-gfx-thread-allocator-block-size</code></td> 
+          <td style="text-align:left;"><code>16777216</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="3">Other Allocators</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Ukuran Blok Cache File</td> 
+          <td style="text-align:left;">Cache file memiliki aokator sendiri untuk menghindari fragmentasi. Ini adalah ukuran bloknya.</td> 
+          <td style="text-align:left;"><code>memorysetup-cache-allocator-block-size</code></td> 
+          <td style="text-align:left;"><code>4194304</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Jenis Ukuran Blok Pohon</td> 
+          <td style="text-align:left;">Jenis pohon memiliki aokator mereka sendiri untuk menghindari fragmentasi karena banyak alokasi kecil. Ini adalah ukuran bloknya.</td> 
+          <td style="text-align:left;"><code>memorysetup-typetree-allocator-block-size</code></td> 
+          <td style="text-align:left;"><code>2097152</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2">Allocator Bucket Bersama</td> 
+          <td style="text-align:left;">Alokator bucket yang dibagikan antara aokator utama.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Home &gt; Sitemap</td> 
+          <td style="text-align:left;">Ukuran langkah untuk bucket di allokator bersama.</td> 
+          <td style="text-align:left;"><code>memorysetup-bucket-allocator-granularity</code></td> 
+          <td style="text-align:left;"><code>16</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Home &gt; Sitemap</td> 
+          <td style="text-align:left;">Jumlah ukuran bucket.</td> 
+          <td style="text-align:left;"><code>memorysetup-bucket-allocator-bucket-count</code></td> 
+          <td style="text-align:left;"><code>8</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Ukuran Blok Allocator Bucket</td> 
+          <td style="text-align:left;">Ukuran blok memori yang digunakan untuk ember.</td> 
+          <td style="text-align:left;"><code>memorysetup-bucket-allocator-block-size</code></td> 
+          <td style="text-align:left;"> <code>Editor: 8388608</code><br><code>Player: 4194304</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Bucket Allocator Blok Count</td> 
+          <td style="text-align:left;">Jumlah blok maksimum untuk dialokasikan.</td> 
+          <td style="text-align:left;"><code>memorysetup-bucket-allocator-block-count</code></td> 
+          <td style="text-align:left;"> <code>Editor: 8</code><br><code>Player: 1</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3">Cepat Per Thread Sementara Allocators</td> 
+          <td style="text-align:left;">The Thread Local Storage (TLS) allocator yang menangani alokasi yang sangat berumur pendek.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2">Ukuran Blok Thread Utama</td> 
+          <td style="text-align:left;">Ukuran awal untuk tumpukan benang utama.</td> 
+          <td style="text-align:left;"><code>memorysetup-temp-allocator-size-main</code></td> 
+          <td style="text-align:left;"> <code>Editor: 16777216</code><br><code>Player: 4194304</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2">Ukuran Blok Pekerja Pekerjaan</td> 
+          <td style="text-align:left;">Ukuran setiap pekerja pekerjaan di sistem kerja Unity.</td> 
+          <td style="text-align:left;"><code>memorysetup-temp-allocator-size-job-worker</code></td> 
+          <td style="text-align:left;"><code>E262144</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2">Ukuran Blok Pekerja Latar Belakang</td> 
+          <td style="text-align:left;">Ukuran untuk setiap pekerja latar belakang.</td> 
+          <td style="text-align:left;"><code>memorysetup-temp-allocator-size-background-worker</code></td> 
+          <td style="text-align:left;"><code>32768</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2">Ukuran Blok Preload</td> 
+          <td style="text-align:left;">Ukuran tumpukan manajer preload.</td> 
+          <td style="text-align:left;"><code>memorysetup-temp-allocator-size-preload-manager</code></td> 
+          <td style="text-align:left;"> <code>Editor: 33554432</code><br><code>Player: 262144</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2">Ukuran Blok Pekerja Audio</td> 
+          <td style="text-align:left;">Setiap ukuran tumpukan benang pekerja audio.</td> 
+          <td style="text-align:left;"><code>memorysetup-temp-allocator-size-audio-worker</code></td> 
+          <td style="text-align:left;"><code>65536</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2">Ukuran Blok Worker Cloud</td> 
+          <td style="text-align:left;">Benang pekerja cloud ukuran tumpukan.</td> 
+          <td style="text-align:left;"><code>memorysetup-temp-allocator-size-cloud-worker</code></td> 
+          <td style="text-align:left;"><code>32768</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2">Gfx Thread Blocksize</td> 
+          <td style="text-align:left;">Ukuran tumpukan benang render utama.</td> 
+          <td style="text-align:left;"><code>memorysetup-temp-allocator-size-gfx</code></td> 
+          <td style="text-align:left;"><code>262144</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2">GI Baking Blocksize</td> 
+          <td style="text-align:left;">Setiap ukuran tumpukan benang pekerja GI.</td> 
+          <td style="text-align:left;"><code>memorysetup-temp-allocator-size-gi-baking-worker</code></td> 
+          <td style="text-align:left;"><code>262144</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2"><span class="tooltip"><strong>NavMesh</strong><span class="tooltiptext">Sebuah mesh yang Unity menghasilkan perkiraan daerah dan hambatan yang dapat berjalan di lingkungan Anda untuk mencari jalan dan navigasi yang dikendalikan AI. <a class="tooltipMoreInfoLink" href="nav-BuildingNavMesh.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#NavMesh">Glossary</a></span></span></span> Worker Block Size</td> 
+          <td style="text-align:left;">Nav <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a class="tooltipMoreInfoLink" href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mesh">Glossary</a></span></span></span> lembar kerja ukuran tumpukan.</td> 
+          <td style="text-align:left;"><code>memorysetup-temp-allocator-size-nav-mesh-worker</code></td> 
+          <td style="text-align:left;"><code>65536</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3">Cepat Thread Bersama Sementara Allocators</td> 
+          <td style="text-align:left;">Alokator linier cepat untuk alokasi hidup pendek dibagi antara benang.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2">Ukuran Blok Allocator Pekerjaan</td> 
+          <td style="text-align:left;">Round robin linear thread allocator Unity terutama digunakan untuk pekerjaan pekerja benang.</td> 
+          <td style="text-align:left;"><code>memorysetup-job-temp-allocator-block-size</code></td> 
+          <td style="text-align:left;"><code>2097152</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2">Latar Belakang Job Allocator Block Ukuran</td> 
+          <td style="text-align:left;">Alokator linier untuk pekerja latar belakang yang memungkinkan alokasi hidup lebih lama.</td> 
+          <td style="text-align:left;"><code>memorysetup-job-temp-allocator-block-size-background</code></td> 
+          <td style="text-align:left;"><code>21048576</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2">Ukuran Blok Allocator Job pada platform memori rendah</td> 
+          <td style="text-align:left;">Platform dengan kurang dari memori 2GB menggunakan ukuran ini untuk pekerja kerja dan pekerjaan latar belakang.</td> 
+          <td style="text-align:left;"><code>memorysetup-job-temp-allocator-reduction-small-platforms</code></td> 
+          <td style="text-align:left;"><code>262144</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3">Profiler Allocators</td> 
+          <td style="text-align:left;">Allocators yang Unity menggunakan secara eksklusif untuk Profiler sehingga mereka tidak mengganggu pola alokasi aplikasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2">Profiler Blok Ukuran</td> 
+          <td style="text-align:left;">Ukuran blok untuk bagian utama dari Profiler.</td> 
+          <td style="text-align:left;"><code>memorysetup-profiler-allocator-block-size</code></td> 
+          <td style="text-align:left;"><code>16777216</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2">Editor Profiler Blok Ukuran</td> 
+          <td style="text-align:left;">Ukuran blok untuk bagian Editor dari Profiler. Ini tidak hadir pada pemain.</td> 
+          <td style="text-align:left;"><code>memorysetup-profiler-editor-allocator-block-size</code></td> 
+          <td style="text-align:left;"><code>1048576</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2">Allocator Bucket Profiler</td> 
+          <td style="text-align:left;" colspan="3">Allocator bucket bersama untuk Profiler dan editor Profiler allocators.<br><br> Tidak ada di platform memori rendah.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Home &gt; Sitemap</td> 
+          <td style="text-align:left;">Ukuran langkah untuk bucket di allokator bersama.</td> 
+          <td style="text-align:left;"><code>memorysetup-profiler-bucket-allocator-granularity</code></td> 
+          <td style="text-align:left;"><code>16</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Home &gt; Sitemap</td> 
+          <td style="text-align:left;">Jumlah ukuran bucket. Misalnya, jika nilainya 4, ukurannya 16, 32, 48 dan 64.</td> 
+          <td style="text-align:left;"><code>memorysetup-profiler-bucket-allocator-bucket-count</code></td> 
+          <td style="text-align:left;"><code>8</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Ukuran Blok Allocator Bucket</td> 
+          <td style="text-align:left;">Ukuran blok memori yang digunakan untuk ember.</td> 
+          <td style="text-align:left;"><code>memorysetup-profiler-bucket-allocator-block-size</code></td> 
+          <td style="text-align:left;"> <code>Editor: 33554432</code><br><code>Player: 4194304</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Bucket Allocator Blok Count</td> 
+          <td style="text-align:left;">Jumlah blok maksimum untuk dialokasikan.</td> 
+          <td style="text-align:left;"><code>memorysetup-profiler-bucket-allocator-block-count</code></td> 
+          <td style="text-align:left;"> <code>Editor: 8</code><br><code>Player: 1</code> </td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p> <strong>Tip</strong>: Untuk memastikan pengaturan Anda meningkatkan kinerja, profil aplikasi sebelum dan sesudah membuat perubahan. Lihat <a href="Profiler.html">Profiler overview page</a> untuk informasi lebih lanjut. Anda juga dapat memeriksa laporan penggunaan memori. Mereka tersedia dalam log ketika Anda menutup pemain atau Editor. Untuk menemukan file log Anda, ikuti petunjuk pada <a href="LogFiles.html">log files page</a>.</p> 
+       <h2>Menyimpan dan membaca pengaturan</h2> 
+       <p>Pengaturan allokator toko unity di <code>MemorySettings.asset</code>, yang mengisi file <code>boot.config</code> dengan pengaturan yang dimodifikasi pada waktu build. Ini berarti pengaturan baru mengambil efek pada setiap build.</p> 
+       <p>Di Editor, <code>boot.config</code> berada di folder <code>ProjectSettings</code>. Ini diperbarui setiap kali impor Unity atau perubahan <code>MemorySettings.asset</code>. Nilai baru untuk Editor hanya mengambil efek pada startup Editor berikutnya.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="performance-managed-memory.html"></a></span> 
+         <div class="tip">
+           Memori terkelola 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="performance-garbage-collector.html"></a></span> 
+         <div class="tip">
+           Gambaran keseluruhan kolektor sampah 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

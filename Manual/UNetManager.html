@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Menggunakan Manajer Jaringan</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="cloud" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UNet.html">Multiplayer dan Jaringan</a></li> 
+         <li>Menggunakan Manajer Jaringan</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UNetGettingStarted.html"></a></span> 
+          <div class="tip">
+            Menyiapkan proyek multiplayer 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UNetManagerHUD.html"></a></span> 
+          <div class="tip">
+            Menggunakan Manajer Jaringan HUD 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Menggunakan Manajer Jaringan</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Important</strong>: UNet adalah solusi yang diuraikan, dan Solusi Multiplayer baru dan <span class="tooltip"><strong>Networking</strong><span class="tooltiptext">Sistem Unity yang memungkinkan game multiplayer di jaringan komputer. <a class="tooltipMoreInfoLink" href="UNetOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Networking">Glossary</a></span></span></span> (Netcode untuk GameObjects) sedang berkembang. Untuk informasi lebih lanjut dan langkah selanjutnya melihat informasi di .</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><strong><strong>Network Manager</strong></strong> adalah komponen untuk mengelola aspek jaringan dari permainan multiplayer.</p> 
+       <p>Fitur Network Manager meliputi:</p> 
+       <ul> 
+        <li>Manajemen negara permainan</li> 
+        <li>Spawn management</li> 
+        <li><span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span></li> 
+        <li>Informasi debugging</li> 
+        <li>Matchmaking</li> 
+        <li>Customization</li> 
+       </ul> 
+       <h2>Memulai dengan Manajer Jaringan</h2> 
+       <p>Jaringan Manager adalah komponen kontrol inti dari permainan multiplayer. Untuk memulai, buat <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> kosong di adegan awal Anda, dan tambahkan komponen NetworkManager. Komponen Network Manager baru ditambahkan seperti ini:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/NetworkManagerInspector.png" alt="The Network Manager as seen in the inspector window"> 
+        <figcaption>
+          Jaringan Manager terlihat di jendela inspektur 
+        </figcaption> 
+       </figure> 
+       <p><span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span> untuk Manajer Jaringan di Editor memungkinkan Anda untuk mengkonfigurasi dan mengontrol banyak hal yang berkaitan dengan jaringan.</p> 
+       <p> <strong>Note</strong>: Anda hanya harus memiliki satu Manajer Jaringan aktif di setiap Adegan. Jangan menempatkan komponen Network Manager pada GameObject jaringan (satu yang memiliki komponen <a href="class-NetworkIdentity.html">Identitas Jaringan</a>), karena Unity menonaktifkan ini ketika beban Adegan.</p> 
+       <p>Jika Anda sudah akrab dengan perkembangan game multiplayer, Anda mungkin merasa berguna untuk mengetahui bahwa komponen Network Manager diimplementasikan sepenuhnya menggunakan <a href="UNetUsingHLAPI.html">API</a> (HLAPI), sehingga segalanya juga tersedia bagi Anda melalui scripting. Untuk pengguna lanjutan, jika Anda menemukan bahwa Anda perlu memperluas fitur komponen Network Manager, Anda dapat menggunakan skrip ke derive kelas Anda sendiri dari NetworkManager dan menyesuaikan perilakunya dengan mengintimidasi kait fungsi virtual yang disediakan. Namun, komponen Network Manager membungkus banyak fungsi yang berguna ke dalam satu tempat, dan membuat, berjalan dan debugging multiplayer game sesederhana mungkin.</p> 
+       <h2>Manajemen negara permainan</h2> 
+       <p>Game multiplayer Jaringan dapat berjalan dalam tiga mode - sebagai klien, sebagai server khusus, atau sebagai “Host” yang merupakan klien dan server pada saat yang sama.</p> 
+       <p>Jika Anda menggunakan <a class="tooltipMoreInfoLink" href="class-NetworkManagerHUD.html">Jaringan Manajer HUD</a>, secara otomatis memberi tahu Network Manager yang mode untuk memulai, berdasarkan opsi mana pemain memilih. Jika Anda menulis <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span> Anda sendiri yang memungkinkan pemain untuk memulai permainan, Anda harus memanggil ini dari kode Anda sendiri. Metode ini adalah:</p> 
+       <ul> 
+        <li><p><a href="../ScriptReference/Networking.NetworkManager.StartClient.html">WordPress.org</a></p></li> 
+        <li><p><a href="../ScriptReference/Networking.NetworkManager.StartServer.html">WordPress.org</a></p></li> 
+        <li><p><a href="../ScriptReference/Networking.NetworkManager.StartHost.html">WordPress.org</a></p></li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/NetworkAddressAndPortSettings.png" alt="The network address and port settings in the Network Manager component"> 
+        <figcaption>
+          Alamat jaringan dan pengaturan port di komponen Manajer Jaringan 
+        </figcaption> 
+       </figure> 
+       <p>Apapun mode permainan dimulai di (klien, server, atau host), sifat <strong>Network Address</strong> dan <strong>Network Port</strong> digunakan. Dalam mode klien, upaya permainan untuk terhubung ke alamat dan port yang ditentukan. Dalam mode server atau host, permainan mendengarkan koneksi masuk pada port yang ditentukan.</p> 
+       <p>Selama perkembangan permainan Anda, hal ini dapat berguna untuk menempatkan alamat tetap dan pengaturan port ke properti ini. Namun, akhirnya Anda mungkin ingin pemain Anda dapat memilih host yang ingin mereka hubungkan. Ketika Anda sampai ke tahap itu, komponen <a href="class-NetworkDiscovery.html">Jaringan Discovery</a> (lihat <a href="UNetDiscovery.html">Penemuan Lokal</a>) dapat digunakan untuk penyiaran dan menemukan alamat dan pelabuhan di jaringan daerah setempat (LAN), dan layanan Matchmaker dapat digunakan untuk pemain untuk menemukan internet pertandingan untuk terhubung ke (lihat <a href="UnityMultiplayerService.html">Layanan Multiplayer</a>).</p> 
+       <h2>Spawn management</h2> 
+       <p>Gunakan Manajer Jaringan untuk mengelola pemijatan (selajaran yang didukung) GameObjects jaringan dari <span class="tooltip"><strong>Prefabs</strong><span class="tooltiptext">Jenis aset yang memungkinkan Anda untuk menyimpan GameObject lengkap dengan komponen dan properti. Prefab bertindak sebagai template dari mana Anda dapat membuat instance objek baru di tempat kejadian. <a class="tooltipMoreInfoLink" href="Prefabs.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Prefab">Glossary</a></span></span></span>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/NetworkManagerSpawnInfo.png" alt="The Spawn Info section of the Network Manager component"> 
+        <figcaption>
+          Bagian "Spawn Info" dari komponen Network Manager 
+        </figcaption> 
+       </figure> 
+       <p>Kebanyakan game memiliki Prefab yang mewakili pemain, sehingga Network Manager memiliki slot <strong>Player Prefab</strong>. Anda harus menetapkan slot ini dengan memimpin pemain Anda. Ketika Anda memiliki set pemain Prefab, pemain GameObject secara otomatis ditidur dari yang Prefab untuk setiap pengguna dalam permainan. Ini berlaku untuk pemain lokal pada server yang dihosting, dan pemain jarak jauh pada klien jarak jauh. Anda harus melampirkan komponen <a href="class-NetworkIdentity.html">Identitas Jaringan</a> ke Player Prefab.</p> 
+       <p>Setelah Anda ditugaskan seorang pemain Prefab, Anda dapat memulai permainan sebagai tuan rumah dan melihat pemain GameObject spawn. Menghentikan permainan menghancurkan pemain GameObject. Jika Anda membangun dan menjalankan salinan lain dari permainan dan menghubungkannya sebagai klien ke <em>localhost</em>, Network Manager membuat pemain lain GameObject muncul. Ketika Anda berhenti bahwa klien, itu menghancurkan GameObject pemain.</p> 
+       <p>Selain pemain Prefab, Anda juga harus mendaftarkan Prefab lain yang ingin Anda spawn secara dinamis selama gameplay dengan Jaringan Manager.</p> 
+       <p>Anda dapat menambahkan Prefab ke daftar yang ditunjukkan dalam inspektur label <strong>Registered Spawnable Prefabs</strong>. Anda juga dapat mendaftarkan prefab melalui kode, dengan metode <a href="../ScriptReference/Networking.ClientScene.RegisterPrefab.html">ClientScene.RegisterPrefab()</a>.</p> 
+       <p>Jika Anda hanya memiliki satu Manajer Jaringan, Anda perlu mendaftar ke semua prefab yang mungkin ditidur di setiap Adegan. Jika Anda memiliki Manajer Jaringan yang terpisah di setiap Adegan, Anda hanya perlu mendaftarkan prefab yang relevan untuk Adegan itu.</p> 
+       <h3>Kustomisasi Pemain Instantiation</h3> 
+       <p>Jaringan Manajer spawns pemain GameObjects menggunakan implementasi <a href="../ScriptReference/Networking.NetworkManager.OnServerAddPlayer.html">WordPress.org</a>. Jika Anda ingin menyesuaikan cara pemain GameObjects diciptakan, Anda dapat menimpa fungsi virtual. Kode ini menunjukkan contoh implementasi default:</p> 
+       <pre><code>public virtual void OnServerAddPlayer(NetworkConnection conn, short playerControllerId)
+{
+    var player = (GameObject)GameObject.Instantiate(playerPrefab, playerSpawnPos, Quaternion.identity);
+    NetworkServer.AddPlayerForConnection(conn, player, playerControllerId);
+}
+</code></pre> 
+       <p>Sitemap Jika Anda menerapkan versi kustom dari OnServerAddPlayer, metode <strong>Note: </strong> harus disebut untuk pemain baru diciptakan GameObject, sehingga ditidur dan terkait dengan koneksi klien. AddPlayerForConnection memijat GameObject, jadi Anda tidak perlu menggunakan <a href="../ScriptReference/Networking.NetworkServer.AddPlayerForConnection.html">NetworkServer.AddPlayerForConnection()</a>.<a href="../ScriptReference/Networking.NetworkServer.Spawn.html">JaringanServer.Spawn()</a>.</p> 
+       <h2>Mulai posisi</h2> 
+       <p>Untuk mengontrol di mana pemain ditidur, Anda dapat menggunakan komponen <a href="class-NetworkStartPosition.html">Posisi Mulai Jaringan</a>. Untuk menggunakan ini, melampirkan komponen Jaringan Start Position ke GameObject di Adegan, dan posisi GameObject di mana Anda ingin salah satu pemain untuk memulai. Anda dapat menambahkan banyak posisi mulai ke Adegan Anda seperti yang Anda sukai. Manajer Jaringan mendeteksi semua posisi awal di Adegan Anda, dan ketika memijat setiap instance pemain, itu menggunakan posisi dan orientasi salah satu dari mereka.</p> 
+       <p>Jaringan Manager memiliki properti <strong>Player Spawn Method</strong>, yang memungkinkan Anda untuk mengkonfigurasi bagaimana posisi awal dipilih.</p> 
+       <ul> 
+        <li><p>Pilih <strong>Random</strong> untuk memijat pemain pada pilihan awal yang dipilih secara acak.</p></li> 
+        <li><p>Pilih <strong>Round Robin</strong> untuk siklus melalui opsi startPosition dalam daftar set.</p></li> 
+       </ul> 
+       <p>Jika mode Random atau Round Robin tidak sesuai dengan permainan Anda, Anda dapat menyesuaikan bagaimana posisi awal dipilih dengan menggunakan kode. Anda dapat mengakses komponen Network Start Position yang tersedia oleh daftar <a href="../ScriptReference/Networking.NetworkManager-startPositions.html">WordPress.org</a>, dan Anda dapat menggunakan metode helper <a href="../ScriptReference/Networking.NetworkManager.GetStartPosition.html">GetStartPosition()</a> pada Network Manager yang dapat digunakan dalam implementasi OnServerAddPlayer untuk menemukan posisi awal.</p> 
+       <h2>Manajemen adegan</h2> 
+       <p>Sebagian besar permainan memiliki lebih dari satu adegan. Paling tidak, biasanya ada layar judul atau mulai menu Adegan selain Adegan di mana permainan sebenarnya dimainkan. Jaringan Manager dirancang untuk mengelola secara otomatis Adegan state dan Adegan transisi dengan cara yang bekerja untuk permainan multiplayer.</p> 
+       <p>Ada dua slot di NetworkManager Inspector untuk adegan: adegan Offline dan adegan online. Menyeret aset adegan ke dalam slot ini mengaktifkan manajemen adegan jaringan.</p> 
+       <p>Ketika server atau host dimulai, Adegan Online dimuat. Ini kemudian menjadi adegan jaringan saat ini. Setiap klien yang terhubung ke server yang diinstruksikan juga memuat Adegan itu. Nama Adegan ini disimpan di properti <a href="../ScriptReference/Networking.NetworkManager-networkSceneName.html">networkSceneName</a>.</p> 
+       <p>Ketika jaringan dihentikan, dengan menghentikan server atau host atau oleh klien memutuskan, adegan offline dimuat. Ini memungkinkan permainan untuk secara otomatis kembali ke tempat kejadian menu saat terputus dari permainan multiplayer.</p> 
+       <p>Anda juga dapat mengubah Adegan sementara permainan aktif dengan memanggil <a href="../ScriptReference/Networking.NetworkManager.ServerChangeScene.html">WordPress.org</a>. Ini membuat semua klien yang terhubung saat ini berubah Adegan juga, dan update <code>networkSceneName</code> sehingga klien baru juga memuat Adegan baru.</p> 
+       <p>Walaupun jaringan Manajemen adegan aktif, panggilan apa pun ke fungsi manajemen negara game seperti <code>NetworkManager.StartHost()</code> atau <code>NetworkManager.StopClient()</code> dapat menyebabkan perubahan adegan. Ini berlaku untuk UI kontrol runtime. Dengan mengatur adegan dan memanggil metode ini, Anda dapat mengontrol aliran permainan multiplayer Anda.</p> 
+       <p>Perhatikan bahwa perubahan adegan menyebabkan semua GameObjects di adegan sebelumnya untuk hancur.</p> 
+       <p>Anda biasanya harus memastikan Manajer Jaringan berlanjut antara Adegan, jika koneksi jaringan rusak pada perubahan Adegan. Untuk melakukan ini, pastikan kotak <strong>Don’t Destroy On Load</strong> diperiksa di Inspektur. Namun dimungkinkan untuk memiliki Manajer Jaringan yang terpisah di setiap Adegan dengan pengaturan yang berbeda, yang dapat membantu jika Anda ingin mengontrol pemuatan Prefab inkremental, atau transisi Adegan yang berbeda.</p> 
+       <h2>Customization</h2> 
+       <p>Ada fungsi virtual pada kelas NetworkManager yang dapat Anda sesuaikan dengan membuat kelas yang Anda alami dari <code>NetworkManager</code>. Ketika mengimplementasikan fungsi ini, pastikan untuk mengurus fungsi yang disediakan implementasi default. Sebagai contoh, dalam <code>OnServerAddPlayer()</code>, fungsi <code>NetworkServer.AddPlayer</code> harus disebut untuk mengaktifkan pemain GameObject untuk koneksi.</p> 
+       <p>Ini adalah semua callback yang dapat terjadi untuk host/server dan klien, dalam beberapa kasus penting untuk memprovokasi fungsi kelas dasar untuk menjaga perilaku default. Untuk melihat implementasi itu sendiri Anda dapat melihatnya di <a href="https://bitbucket.org/Unity-Technologies/networking">jaringan repositori bitbucket</a>.</p> 
+       <pre><code>using UnityEngine;
+using UnityEngine.Networking;
+using UnityEngine.Networking.Match;
+
+public class CustomManager : NetworkManager {
+    // Server callbacks
+    public override void OnServerConnect(NetworkConnection conn) {
+        Debug.Log("A client connected to the server: " + conn);
+    }
+
+    public override void OnServerDisconnect(NetworkConnection conn) {
+        NetworkServer.DestroyPlayersForConnection(conn);
+        if (conn.lastError != NetworkError.Ok) {
+            if (LogFilter.logError) { Debug.LogError("ServerDisconnected due to error: " + conn.lastError); }
+        }
+        Debug.Log("A client disconnected from the server: " + conn);
+    }
+    public override void OnServerReady(NetworkConnection conn) {
+        NetworkServer.SetClientReady(conn);
+        Debug.Log("Client is set to the ready state (ready to receive state updates): " + conn);
+    }
+    public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId) {
+        var player = (GameObject)GameObject.Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
+        NetworkServer.AddPlayerForConnection(conn, player, playerControllerId);
+        Debug.Log("Client has requested to get his player added to the game");
+    }
+
+    public override void OnServerRemovePlayer(NetworkConnection conn, PlayerController player) {
+        if (player.gameObject != null)
+            NetworkServer.Destroy(player.gameObject);
+    }
+
+    public override void OnServerError(NetworkConnection conn, int errorCode) {
+        Debug.Log("Server network error occurred: " + (NetworkError)errorCode);
+    }
+
+    public override void OnStartHost() {
+        Debug.Log("Host has started");
+    }
+
+    public override void OnStartServer() {
+        Debug.Log("Server has started");
+    }
+
+    public override void OnStopServer() {
+        Debug.Log("Server has stopped");
+    }
+
+    public override void OnStopHost() {
+        Debug.Log("Host has stopped");
+    }
+
+    // Client callbacks
+    public override void OnClientConnect(NetworkConnection conn)
+    {
+        base.OnClientConnect(conn);
+        Debug.Log("Connected successfully to server, now to set up other stuff for the client...");
+    }
+
+    public override void OnClientDisconnect(NetworkConnection conn) {
+        StopClient();
+        if (conn.lastError != NetworkError.Ok)
+        {
+            if (LogFilter.logError) { Debug.LogError("ClientDisconnected due to error: " + conn.lastError); }
+        }
+        Debug.Log("Client disconnected from server: " + conn);
+    }
+
+    public override void OnClientError(NetworkConnection conn, int errorCode) {
+        Debug.Log("Client network error occurred: " + (NetworkError)errorCode);
+    }
+
+    public override void OnClientNotReady(NetworkConnection conn) {
+        Debug.Log("Server has set client to be not-ready (stop getting state updates)");
+    }
+
+    public override void OnStartClient(NetworkClient client) {
+        Debug.Log("Client has started");
+    }
+
+    public override void OnStopClient() {
+        Debug.Log("Client has stopped");
+    }
+
+    public override void OnClientSceneChanged(NetworkConnection conn) {
+        base.OnClientSceneChanged(conn);
+        Debug.Log("Server triggered scene change and we've done the same, do any extra work here for the client...");
+    }
+}
+</code></pre> 
+       <p>Inspektur untuk NetworkManager menyediakan kemampuan untuk mengubah beberapa parameter koneksi dan waktu. Beberapa parameter tidak terpapar di sini tetapi dapat diubah melalui kode.</p> 
+       <pre><code>using UnityEngine;
+using UnityEngine.Networking;
+
+public class CustomManager : NetworkManager {
+    // Set custom connection parameters early, so they are not too late to be enforced
+    void Start()
+    {
+        customConfig = true;
+        connectionConfig.MaxCombinedReliableMessageCount = 40;
+        connectionConfig.MaxCombinedReliableMessageSize = 800;
+        connectionConfig.MaxSentMessageQueueSize = 2048;
+        connectionConfig.IsAcksLong = true;
+        globalConfig.ThreadAwakeTimeout = 1;
+    }
+}
+</code></pre> 
+       <!-- area:cloud --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UNetGettingStarted.html"></a></span> 
+         <div class="tip">
+           Menyiapkan proyek multiplayer 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UNetManagerHUD.html"></a></span> 
+         <div class="tip">
+           Menggunakan Manajer Jaringan HUD 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy"> 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

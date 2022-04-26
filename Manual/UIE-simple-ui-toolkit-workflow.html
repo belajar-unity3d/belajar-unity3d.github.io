@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Sederhana UI Toolkit alur kerja</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UIToolkits.html"></a></li> 
+         <li><a href="UIElements.html"></a></li> 
+         <li><a href="UIE-Getting-Started.html">Mulai dengan UI Toolkit</a></li> 
+         <li>Sederhana UI Toolkit alur kerja</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UIE-Getting-Started.html"></a></span> 
+          <div class="tip">
+            Mulai dengan UI Toolkit 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UIE-HowTo-CreateCustomInspector.html"></a></span> 
+          <div class="tip">
+            Buat Inspektur Kustom 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Sederhana UI Toolkit alur kerja</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Jika Anda melakukan tugas tertentu sering, Anda dapat menggunakan <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span> Toolkit untuk membuat UI khusus untuk itu. Misalnya Anda dapat membuat jendela editor kustom.</p> 
+       <p>Panduan ini menjelaskan alur kerja UI Toolkit dasar menggunakan jendela editor kustom sebagai contoh. Contohnya menunjukkan bagaimana membuat jendela editor kustom dan menambahkan kontrol UI ke jendela editor kustom Anda menggunakan <a href="UIBuilder.html">Pembuat UI</a>, <a href="UIE-UXML.html">UXML</a>, dan skrip C#.</p> 
+       <p>Anda dapat menemukan file yang lengkap yang contoh ini menciptakan di <a href="https://github.com/Unity-Technologies/ui-toolkit-manual-code-examples/tree/master/simple-ui-toolkit-workflow">Repositori GitHub</a> ini.</p> 
+       <h2>Prerequisites</h2> 
+       <p>Panduan ini adalah untuk pengembang yang akrab dengan Editor Unity dan skrip C #, tetapi baru untuk UI Toolkit. Unity merekomendasikan bahwa Anda memiliki pemahaman dasar tentang konsep berikut:</p> 
+       <ul> 
+        <li><a href="UIBuilder.html">Pembuat UI</a></li> 
+        <li><a href="UIE-UXML.html">UXML</a></li> 
+        <li><a href="UIE-VisualTree.html">Pohon Visual</a></li> 
+        <li> <a href="UIE-Controls.html">Controls</a>: 
+         <ul> 
+          <li><a href="../ScriptReference/UIElements.Label.html">Label</a></li> 
+          <li><a href="../ScriptReference/UIElements.button.html">Button</a></li> 
+          <li><span class="tooltip"><a class="tooltipMoreInfoLink" href="../ScriptReference/UIElements.toggle.html">Toggle</a><span class="tooltiptext">Sebuah kotak centang yang memungkinkan pengguna untuk mengganti opsi atau menonaktifkan. <a href="script-Toggle.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Toggle">Glossary</a></span></span></span></li> 
+         </ul> </li> 
+       </ul> 
+       <h2>Buat jendela editor kustom</h2> 
+       <ol> 
+        <li>Dari jendela Proyek, klik kanan dan pilih <strong>Create</strong> &gt; <strong>UI Toolkit</strong> &gt; <strong>Editor Window</strong>.</li> 
+        <li>Pada <strong>UI Toolkit Editor Window Creator</strong>, masukkan <code>MyCustomEditor</code> dan disable <strong>USS</strong>.</li> 
+        <li>Klik <strong>Confirm</strong>.</li> 
+       </ol> 
+       <p>Ini menciptakan jendela editor kustom dengan dua label. Anda dapat membuka jendela Editor dari menu (<strong>Window</strong> &gt; <strong>UI Toolkit</strong> &gt; <strong>MyCustomEditor</strong>). Anda dapat menemukan file sumber untuk di folder <code>Asset/Editor</code>.</p> 
+       <h2>Tambahkan kontrol UI ke jendela</h2> 
+       <p>Anda dapat menambahkan kontrol UI ke jendela Anda dengan cara berikut:</p> 
+       <ul> 
+        <li><a href="#use-ui-builder">Gunakan UI Builder untuk secara visual menambahkan kontrol UI</a></li> 
+        <li><a href="#use-uxml">Gunakan file teks seperti XML (UXML) untuk menambahkan kontrol UI</a></li> 
+        <li><a href="#use-c#-script">Gunakan skrip C# untuk menambahkan kontrol UI</a></li> 
+       </ul> 
+       <p>Anda dapat menggunakan metode ini secara individual, atau menggabungkan. Contoh berikut membuat tiga set label, tombol, dan toggles menggunakan kombinasi metode ini.</p> 
+       <h3>Sitemap Gunakan UI Builder untuk menambahkan kontrol UI<a name="use-ui-builder"></a>Use UI Builder to add UI controls</h3> 
+       <p>Untuk menambahkan kontrol UI secara visual ke jendela Anda, gunakan <a href="UIBuilder.html">Pembuat UI</a>. Contoh berikut menunjukkan cara menambahkan tombol dan beralih ke jendela editor kustom Anda selain label default.</p> 
+       <ol> 
+        <li><p>Dalam folder <code>Editor</code>, klik dua <code>MyCustomEditor.uxml</code> untuk membuka UI Builder.</p></li> 
+        <li><p>Dalam UI Builder, drag <strong>Button</strong> dan <strong>Toggle</strong> dari <strong>Library</strong> &gt; <strong>Controls</strong> ke dalam <strong>Hierarchy</strong> atau jendela Pratinjau di <strong>Viewport</strong>.</p></li> 
+        <li> <p>Pada <strong>Hierarchy</strong>, tambahkan beberapa atribut untuk kontrol Anda:</p> 
+         <ul> 
+          <li>Klik label, lalu di bidang <strong>Text</strong> <strong><span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, asset or project settings, allowing you to inspect and edit the values. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span></strong>, ubah teks default ke <code>These controls were created in UI Builder</code>.</li> 
+          <li>Klik tombol, dan kemudian di bidang <strong>Text</strong> <strong>Inspector</strong>, masukkan <code>This is button1</code>. Di bidang <strong>Name</strong> <strong>Inspector</strong>, masukkan <code>button1</code>.</li> 
+          <li>Klik toggle, dan kemudian di bidang <strong>Label</strong> dari <strong>Inspector</strong>, masukkan <code>Number?</code>. Di bidang <strong>Name</strong> <strong>Inspector</strong>, masukkan <code>toggle1</code>.</li> 
+         </ul> </li> 
+        <li><p> <a href="UIB-getting-started-documents.html">Save</a> dan menutup jendela UI Builder.</p></li> 
+        <li><p>Buka jendela editor kustom Anda. Anda harus melihat tombol dan toggle Anda hanya ditambahkan di jendela Anda.</p></li> 
+       </ol> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UIBuilder/CustomEditorWithUIControls1.png" alt="Custom Editor Window with one set UI Controls"> 
+        <figcaption>
+          Jendela Editor Kustom dengan satu set Kontrol UI 
+        </figcaption> 
+       </figure> 
+       <h3>Sitemap Gunakan UXML untuk menambahkan kontrol UI<a name="use-uxml"></a>Use UXML to add UI controls</h3> 
+       <p>Jika Anda lebih memilih mendefinisikan UI Anda dalam file teks, Anda dapat mengedit <a href="UIE-UXML.html">UXML</a> untuk menambahkan kontrol UI. Contoh menambahkan satu set label, tombol, dan beralih ke jendela Anda.</p> 
+       <ol> 
+        <li><p>Dalam folder <code>Editor</code>, klik <strong>Assets</strong> &gt; <strong>Create</strong> &gt; <strong>UI Toolkit</strong> &gt; <strong>UI Document</strong> untuk membuat file UXML yang disebut <code>MyCustomEditor_UXML.uxml</code>.</p></li> 
+        <li> <p>Buka <code>MyCustomEditor_UXML.uxml</code> pada editor teks.</p> <p> <strong>Tip</strong>: Anda dapat melakukannya dengan mengklik panah pada <code>MyCustomEditor_UXML.uxml</code> di <span class="tooltip"><strong>Project window</strong><span class="tooltiptext">Jendela yang menunjukkan isi folder <code>Assets</code> (Project tab) <a class="tooltipMoreInfoLink" href="ProjectView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Projectwindow">Glossary</a></span></span></span>, dan kemudian klik dua <code>inlineStyle</code>.</p> </li> 
+        <li> <p>Secara default, dokumen UXML menampilkan elemen tunggal dengan tag <code>engine:UXML</code>. Ini adalah elemen akar dari pohon XML. Dalam elemen ini, Anda dapat menambahkan kontrol UI dengan atribut mereka.</p> <p>File <code>MyCustomEditor_UXML.uxml</code> selesai Anda harus terlihat seperti berikut:</p> <pre><code class="lang-xml">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;engine:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:engine="UnityEngine.UIElements"
+    xmlns:editor="UnityEditor.UIElements"
+    xsi:noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd"
+&gt;
+    &lt;engine:Label text="These controls were created with UXML." /&gt;
+    &lt;engine:Button text="This is button2." name="button2"/&gt;
+    &lt;engine:Toggle label="Number?" name="toggle2"/&gt;
+&lt;/engine:UXML&gt;
+</code></pre> </li> 
+        <li><p>Buka <code>MyCustomEditor.cs</code>.</p></li> 
+        <li> <p>Tambahkan bidang <code>VisualTreeAsset</code> pribadi yang disebut <code>m_UXMLTree</code> ke kelas <code>MyCustomEditor</code>. Masukkan atribut <code>[SerializeField]</code> di atasnya:</p> <pre><code class="lang-cs">[SerializeField]
+private VisualTreeAsset m_UXMLTree;
+</code></pre> </li> 
+        <li> <p>Tambahkan garis berikut kode ke akhir <code>CreateGUI()</code>.</p> <pre><code class="lang-cs">rootVisualElement.Add(m_UXMLTree.Instantiate());
+</code></pre> </li> 
+        <li><p>Di jendela Proyek, pilih <code>MyCustomEditor.cs</code>.</p></li> 
+        <li><p>Seret <code>MyCustomEditor_UXML.uxml</code> dari jendela Proyek ke bidang <strong>UXML Tree</strong> di <strong>Inspector</strong>. Ini menetapkan UXML Anda ke pohon visual.</p></li> 
+        <li><p>Buka jendela editor kustom Anda. Anda harus melihat tiga label, dua tombol, dan dua sakelar di jendela Anda.</p></li> 
+       </ol> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UIBuilder/CustomEditorWithUIControls2.png" alt="Custom Editor Window with two sets UI Controls"> 
+        <figcaption>
+          Jendela Editor Kustom dengan dua set Kontrol UI 
+        </figcaption> 
+       </figure> 
+       <h3>Sitemap Gunakan skrip C# untuk menambahkan kontrol UI<a name="use-c#-script"></a>Use C# script to add UI controls</h3> 
+       <p>Jika Anda lebih suka pengkodean, Anda dapat menambahkan Kontrol UI ke jendela Anda menggunakan skrip C #. Contoh berikut menambahkan satu set label, tombol, dan beralih ke jendela Anda.</p> 
+       <ol> 
+        <li><p>Buka <code>MyCustomEditor.cs</code>.</p></li> 
+        <li> <p>Unity menggunakan <code>UnityEngine.UIElements</code> untuk kontrol UI dasar seperti label, tombol, dan toggle. Untuk bekerja dengan kontrol UI, Anda harus menambahkan deklarasi berikut jika belum hadir.</p> <pre><code class="lang-cs">using UnityEngine.UIElements;
+</code></pre> </li> 
+        <li><p>Ubah teks label yang ada dari <code>"Hello World! From C#"</code> ke <code>"These controls were created using C# code."</code>.</p></li> 
+        <li> <p>Kelas <a href="../ScriptReference/EditorWindow.html">EditorWindow</a> memiliki properti yang disebut <code>rootVisualElement</code>. Untuk menambahkan kontrol UI ke jendela Anda, meluruskan kelas elemen dengan beberapa atribut, dan kemudian gunakan metode <code>Add</code> dari <code>rootVisualElement</code>.</p> <p>Metode <code>CreateGUI()</code> selesai Anda harus terlihat seperti berikut:</p> <pre><code class="lang-cs">public void CreateGUI()
+{
+    // Each editor window contains a root VisualElement object
+    VisualElement root = rootVisualElement;
+
+    // VisualElements objects can contain other VisualElements following a tree hierarchy.
+    Label label = new Label("These controls were created using C# code.");
+    root.Add(label);
+
+    Button button = new Button();
+    button.name = "button3";
+    button.text = "This is button3.";
+    rootVisualElement.Add(button);
+
+    Toggle toggle = new Toggle();
+    toggle.name = "toggle3";
+    toggle.label = "Number?";
+    rootVisualElement.Add(toggle);
+
+    // Import UXML
+    var visualTree = AssetDatabase.LoadAssetAtPath&lt;VisualTreeAsset&gt;("Assets/Editor/MyCustomEditor.uxml");
+    VisualElement labelFromUXML = visualTree.Instantiate();
+    root.Add(labelFromUXML);
+
+    rootVisualElement.Add(m_UXMLTree.Instantiate());
+}
+</code></pre> </li> 
+        <li><p>Pergi ke Editor dan buka jendela editor kustom Anda. Anda harus melihat tiga label, tiga tombol, dan tiga toggles di jendela Anda.</p></li> 
+       </ol> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UIBuilder/CustomEditorWithUIControls.png" alt="Custom Editor Window with three Controls"> 
+        <figcaption>
+          Jendela Editor Kustom dengan tiga Kontrol 
+        </figcaption> 
+       </figure> 
+       <h2>Sitemap Tentukan perilaku kontrol UI Anda<a name="define-the-behavior"></a>Define the behavior of your UI controls</h2> 
+       <p>Anda dapat mengatur handler acara untuk kontrol UI Anda sehingga ketika Anda mengklik tombol, dan pilih atau menghapus toggle, kontrol UI Anda melakukan beberapa tugas.</p> 
+       <p>Kode di bawah menunjukkan contoh event handler yang melakukan berikut:</p> 
+       <ul> 
+        <li>Ketika tombol diklik, Konsol Editor menampilkan pesan.</li> 
+        <li>Ketika toggle dipilih, Konsol menunjukkan berapa kali tombol telah diklik.</li> 
+       </ul> 
+       <pre><code class="lang-cs">using UnityEditor;
+using UnityEngine;
+using UnityEngine.UIElements;
+
+public class MyCustomEditor : EditorWindow
+{
+    [MenuItem("Window/UI Toolkit/MyCustomEditor")]
+    public static void ShowExample()
+    {
+        MyCustomEditor wnd = GetWindow&lt;MyCustomEditor&gt;();
+        wnd.titleContent = new GUIContent("MyCustomEditor");
+    }
+
+    [SerializeField]
+    private VisualTreeAsset m_UXMLTree;
+
+    private int m_ClickCount = 0;
+
+    private const string m_ButtonPrefix = "button";
+
+    public void CreateGUI()
+    {
+        // Each editor window contains a root VisualElement object
+        VisualElement root = rootVisualElement;
+
+        // VisualElements objects can contain other VisualElements following a tree hierarchy.
+        Label label = new Label("These controls were created using C# code.");
+        root.Add(label);
+
+        Button button = new Button();
+        button.name = "button3";
+        button.text = "This is button3.";
+        rootVisualElement.Add(button);
+
+        Toggle toggle = new Toggle();
+        toggle.name = "toggle3";
+        toggle.label = "Number?";
+        rootVisualElement.Add(toggle);
+
+        // Import UXML
+        var visualTree = AssetDatabase.LoadAssetAtPath&lt;VisualTreeAsset&gt;("Assets/Editor/MyCustomEditor.uxml");
+        VisualElement labelFromUXML = visualTree.Instantiate();
+        root.Add(labelFromUXML);
+
+        rootVisualElement.Add(m_UXMLTree.Instantiate());
+
+        //Call the event handler
+        SetupButtonHandler();
+    }
+
+    //Functions as the event handlers for your button click and number counts 
+    private void SetupButtonHandler()
+    {
+        var buttons = rootVisualElement.Query&lt;Button&gt;();
+        buttons.ForEach(RegisterHandler);
+    }
+
+    private void RegisterHandler(Button button)
+    {
+        button.RegisterCallback&lt;ClickEvent&gt;(PrintClickMessage);
+    }
+
+    private void PrintClickMessage(ClickEvent evt)
+    {
+        ++m_ClickCount;
+
+        //Because of the names we gave the buttons and toggles, we can use the
+        //button name to find the toggle name.
+        Button button = evt.currentTarget as Button;
+        string buttonNumber = button.name.Substring(m_ButtonPrefix.Length);
+        string toggleName = "toggle" + buttonNumber;
+        Toggle toggle = rootVisualElement.Q&lt;Toggle&gt;(toggleName);
+
+        Debug.Log("Button was clicked!" +
+            (toggle.value ? " Count: " + m_ClickCount : ""));
+    }
+}
+</code></pre> 
+       <hr> 
+       <h2>Sumber daya tambahan</h2> 
+       <ul> 
+        <li><p><a href="UIE-HowTo-CreateEditorWindow.html">Buat jendela editor kustom</a></p></li> 
+        <li><p><span class="page-history">UI Toolkit alur kerja sederhana ditambahkan dalam Unity <span class="search-words">Panties20212</span></span></p></li> 
+       </ul> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UIE-Getting-Started.html"></a></span> 
+         <div class="tip">
+           Mulai dengan UI Toolkit 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UIE-HowTo-CreateCustomInspector.html"></a></span> 
+         <div class="tip">
+           Buat Inspektur Kustom 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy"> 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

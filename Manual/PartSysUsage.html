@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Menggunakan Sistem Partikel Built-in</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="visual-effects.html">Efek visual</a></li> 
+         <li><a href="ParticleSystems.html">Sistem partikel</a></li> 
+         <li><a href="Built-inParticleSystem.html">Sistem Partikel Built-in</a></li> 
+         <li>Menggunakan Sistem Partikel Built-in</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="Built-inParticleSystem.html"></a></span> 
+          <div class="tip">
+            Sistem Partikel Built-in 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="PartSysVertexStreams.html"></a></span> 
+          <div class="tip">
+            Sistem Partikel aliran simpul dan dukungan Shader Standar 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Menggunakan Sistem Partikel Built-in</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Sistem Partikel Built-in menggunakan komponen, sehingga menempatkan Sistem Partikel di Adegan adalah masalah menambahkan GameObject yang sudah dibuat sebelumnya (menu: <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#GameObject">Glossary</a></span></span></span> &gt; <strong>Effects</strong> &gt; <span class="tooltip"><strong>Particle System</strong><span class="tooltiptext">Komponen yang mensimulasikan entitas fluida seperti cairan, awan dan nyala dengan menghasilkan dan memikat sejumlah besar gambar 2D kecil di tempat kejadian. <a href="class-ParticleSystem.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#particlesystem">Glossary</a></span></span></span>&gt; <span class="tooltip"><strong>Component</strong><span class="tooltiptext">Bagian fungsional dari GameObject. GameObject dapat mengandung sejumlah komponen. Unity memiliki banyak komponen built-in, dan Anda dapat membuat Anda sendiri dengan menulis skrip yang berwarisi dari MonoBehaviour. <a href="UsingComponents.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#component">Glossary</a></span></span></span>) atau menambahkan komponen ke GameObject yang ada (menu: <strong>Effects</strong> &gt; <strong>Particle System</strong> &gt; <strong>modules</strong>). Karena komponennya cukup rumit, Inspektur dibagi menjadi sejumlah sub-bagian yang dapat dilipat atau <strong>Open Editor</strong> yang masing-masing mengandung sekelompok properti terkait. Selain itu, Anda dapat mengedit satu atau lebih sistem pada saat yang sama menggunakan jendela editor terpisah yang diakses melalui tombol <a href="class-ParticleSystem.html">Komponen Sistem Partikel</a> di Inspector. Lihat dokumentasi tentang <a href="ParticleSystemModules.html">Modul Sistem Partikel</a> dan individu untuk mempelajari lebih lanjut.</p> 
+       <p>Ketika GameObject dengan Sistem Partikel dipilih, tampilan <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> mengandung panel <strong>Particle Effect</strong> kecil, dengan beberapa kontrol sederhana yang berguna untuk memvisualisasikan perubahan yang Anda buat pada pengaturan sistem.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PartSysEffectPanel.png" alt=""> 
+       </figure> 
+       <p><strong>Playback Speed</strong> memungkinkan Anda untuk mempercepat atau memperlambat simulasi partikel, sehingga Anda dapat dengan cepat melihat bagaimana terlihat di negara maju. <strong>Playback Time</strong> menunjukkan waktu berlalu karena sistem dimulai; ini mungkin lebih cepat atau lebih lambat dari waktu nyata tergantung pada kecepatan pemutaran. <strong>Particle Count</strong> menunjukkan berapa banyak partikel saat ini dalam sistem. Waktu pemutaran dapat dipindahkan ke belakang dan ke depan dengan mengklik label <strong>Playback Time</strong> dan menyeret kiri mouse dan kanan. Tombol di bagian atas panel dapat digunakan untuk menghentikan dan melanjutkan simulasi, atau untuk menghentikannya dan mengatur ulang ke keadaan awal.</p> 
+       <p><a name="VaryOverTime"></a></p> 
+       <h2>Memanfaatkan sifat seiring waktu</h2> 
+       <p>Banyak sifat numerik partikel atau bahkan seluruh sistem partikel dapat bervariasi seiring waktu. Unity menyediakan beberapa metode yang berbeda untuk menentukan bagaimana variasi ini terjadi:</p> 
+       <ul> 
+        <li>Sitemap Nilai properti tetap sepanjang masa hidupnya.<strong>Constant:</strong> The property’s value is fixed throughout its lifetime.</li> 
+        <li>Sitemap Nilai ditentukan oleh kurva/graf.<strong>Curve:</strong> The value is specified by a curve/graph.</li> 
+        <li>Sitemap Dua nilai konstan mendefinisikan batas atas dan bawah untuk nilai; nilai sebenarnya bervariasi secara acak seiring waktu antara orang-orang yang terikat.<strong>Random Between Two Constants:</strong> Two constant values define the upper and lower bounds for the value; the actual value varies randomly over time between those bounds.</li> 
+        <li>Sitemap Dua kurva mendefinisikan batas atas dan bawah nilai pada titik tertentu dalam masa hidupnya; nilai saat ini bervariasi secara acak antara batas-batas tersebut.<strong>Random Between Two Curves:</strong> Two curves define the upper and lower bounds of the value at a given point in its lifetime; the current value varies randomly between those bounds.</li> 
+       </ul> 
+       <p>Ketika Anda mengatur properti ke <strong>Curve</strong> atau <strong>Random Between Two Curves</strong>, editor Sistem Partikel Curves muncul di bagian bawah Inspektur:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ParticleSystemCurve.png" alt=""> 
+       </figure> 
+       <p>Untuk mengedit kurva, klik dan tarik titik akhir atau kunci untuk membentuk kurva:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ParticleSystemCurveKeys.png" alt=""> 
+       </figure> 
+       <p>Kurva sistem partikel mirip dengan <span class="tooltip"><a class="tooltipMoreInfoLink" href="animeditor-AnimationCurves.html">Animasi kurva</a><span class="tooltiptext">Memungkinkan Anda untuk menambahkan data ke klip impor sehingga Anda dapat menghidupkan waktu item lain berdasarkan keadaan animator. Misalnya, untuk set permainan dalam kondisi icy, Anda dapat menggunakan kurva animasi ekstra untuk mengontrol tingkat emisi sistem partikel untuk menunjukkan napas kondensor pemain di udara dingin. <a href="AnimationCurvesOnImportedClips.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnimationCurves">Glossary</a></span></span></span>. Untuk informasi tentang menggunakan kurva, lihat dokumentasi pada <a href="EditingCurves.html">Mengedit Kurva</a>.</p> 
+       <p>Partikel System Curves editor memiliki tombol berikut:</p> 
+       <ul> 
+        <li> <strong>Optimize</strong>: Sesuai kurva menjadi empat atau lebih sedikit kunci untuk membangun evaluator cepat yang disebut Polynomial, yang lebih efisien daripada membaca kurva yang tidak dioptimalkan.</li> 
+        <li> <strong>Remove</strong>: Menghapus kurva yang dipilih.</li> 
+       </ul> 
+       <p>Untuk mengedit cara di mana Sistem Partikel memainkan kurva, klik cog di sebelah kunci yang dipilih dan pilih salah satu opsi berikut:</p> 
+       <ul> 
+        <li> <strong>Loop</strong>: Memainkan kurva jumlah yang ditentukan selama masa pakai partikel. Misalnya, jika Anda membuat kurva yang mengukur ukuran partikel naik dan turun, Anda dapat memberi tahunya untuk memutar beberapa kali, yang menyebabkan animasi “up dan turun” terjadi beberapa kali sebelum partikel mati, bukan hanya sekali.</li> 
+        <li><span class="tooltip"><strong>Ping Pong</strong><span class="tooltiptext">Untuk berulang kali memainkan animasi ke ujung, lalu terbalik kembali ke awal, dalam lingkaran.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#PingPong">Glossary</a></span></span></span><strong>Loop</strong>, tetapi memainkan ke depan kurva kemudian mundur dalam osiilasi terus menerus.</li> 
+        <li> <strong>Clamp</strong>: Batasi pertanyaan partikel yang jatuh di luar rentang waktu kurva ke nilai pertama atau terakhir kurva.</li> 
+       </ul> 
+       <p>Properti <strong>Start Color</strong> dalam modul utama memiliki opsi berikut:</p> 
+       <ul> 
+        <li>Sitemap Semua partikel dimulai dengan warna ini sepanjang masa pakai Sistem Partikel. Partikel masih bisa berubah warna selama masa hidup mereka.<strong>Color:</strong> All particles start with this color throughout the lifetime of the Particle System. Particles can still change color during their lifetime.</li> 
+        <li>Sitemap Sistem Partikel memancarkan partikel yang dimulai dengan warna pada awal gradien, dan berakhir pada warna pada akhir gradien. Garis gradien mewakili seumur hidup Sistem Partikel; Sistem Partikel memilih warna dari gradien pada titik yang sesuai dengan usia saat ini Sistem Partikel.<strong>Gradient:</strong> The Particle System emits particles which start with the colour at the beginning of the gradient, and end at the colour at the end of the gradient. The gradient line represents the lifetime of the Particle System; the Particle System picks a color from the gradient at the point corresponding to the current age of the Particle System.</li> 
+        <li>Sitemap Sistem Partikel memilih warna partikel awal dari interpolasi linier acak antara dua warna tertentu.<strong>Random Between Two Colors:</strong> The Particle System chooses a starting particle color from a random linear interpolation between the two given colors.</li> 
+        <li>Sitemap Sistem Partikel memilih warna dari setiap gradien yang diberikan pada titik yang sesuai dengan usia saat ini sistem. Warna partikel awal dipilih sebagai interpolasi linier acak antara dua warna yang dipilih.<strong>Random Between Two Gradients:</strong> The Particle System chooses a color from each of the given gradients at the point corresponding to the current age of the system. The starting particle color is chosen as a random linear interpolation between the two chosen colors.</li> 
+        <li>Sitemap Mirip dengan mode <strong>Random Color:</strong>, di mana partikel mengambil warna awal mereka dari <strong>Gradient</strong> yang ditentukan. Namun, dalam mode ini, Sistem Partikel tidak memilih sampel berdasarkan usia Sistem Partikel, tetapi alih-alih memilihnya secara acak. Mode ini juga bekerja dengan baik dengan <strong>Gradient</strong>, yang berada di dalam Editor Gradient. Ketika diaktifkan, Anda dapat memilih daftar warna awal yang telah ditentukan, dan menerapkan kemungkinan untuk setiap warna.<strong>Fixed Gradient Mode</strong>, which is inside the Gradient Editor. When enabled, you can select a predefined list of precise starting colors, and apply a probability to each color.</li> 
+       </ul> 
+       <p>Sifat warna lain, seperti <strong>Color over Lifetime</strong>, dapat menggunakan mode <strong>Gradient</strong> atau <strong>Random Between Two Gradients</strong>.</p> 
+       <p>Untuk menghitung hasil warna partikel akhir, Sistem Partikel menyisipkan sifat warna dalam berbagai modul bersama per saluran.</p> 
+       <p>Ketika Anda mengatur warna <strong>Gradient</strong> untuk partikel, Editor Gradien muncul:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PartSysGradientEditor.png" alt=""> 
+       </figure> 
+       <ul> 
+        <li>Sitemap Menentukan apakah pengaturan warna partikel dicampur atau tidak.<strong>Mode:</strong> Determines whether the particle color settings are blended or not.</li> 
+        <li>Sitemap Menampilkan warna kunci yang dipilih saat ini dalam Gradien. Gunakan ini untuk mengedit warna pada posisi Gradien.<strong>Color:</strong> Displays the color of the currently selected key in the Gradient. Use this to edit the color at that position of the Gradient.</li> 
+        <li>Sitemap Tampilkan sejauh ini di sepanjang Gradien kunci yang dipilih saat ini.<strong>Location:</strong> Shows how far along on the Gradient the currently selected key is.</li> 
+        <li>Sitemap Memungkinkan Anda untuk menyimpan pengaturan Gradien. Sitemap Baru untuk membuat set nilai-nilai saat ini preset Gradient.<strong>Presets:</strong> Allows you to save Gradient settings. Click New to make the current set of values a Gradient preset.</li> 
+       </ul> 
+       <p>Sifat warna dalam berbagai modul dikalikan bersama per saluran untuk menghitung hasil warna partikel akhir.</p> 
+       <h2>Animasi mengikat</h2> 
+       <p>Semua sifat partikel dapat diakses oleh sistem Animasi, yang berarti Anda dapat mempercepat dan mengendalikannya dari animasi Anda.<span class="tooltip"><strong>keyframe</strong><span class="tooltiptext">Bingkai yang menandai titik awal atau akhir transisi dalam animasi. Bingkai di antara bingkai kunci disebut inbetweens.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#keyframe">Glossary</a></span></span></span> them in and control them from your animations.</p> 
+       <p>Untuk mengakses properti Sistem Partikel, harus ada <span class="tooltip"><strong>Animator component</strong><span class="tooltiptext">Komponen pada model yang merupakan model yang menggunakan sistem Animasi. Komponen ini memiliki referensi aset Animator Controller yang mengontrol animasi. <a class="tooltipMoreInfoLink" href="class-AnimatorController.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnimatorComponent">Glossary</a></span></span></span> yang melekat pada GameObject Sistem Partikel. Pengawal Animasi dan Animasi juga diperlukan.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ParticleSystemAnimatorComponent.png" alt="To animate a Particle System, add an Animator Component, and assign an Animation Controller with an Animation."> 
+        <figcaption>
+          Untuk menghidupkan Sistem Partikel, tambahkan Komponen Animator, dan menetapkan Pengontrol Animasi dengan Animasi. 
+        </figcaption> 
+       </figure> 
+       <p>Untuk menghidupkan properti Sistem Partikel, buka <strong>Animation Window</strong> dengan GameObject yang mengandung Animator dan Sistem Partikel yang dipilih. Klik <strong>Add Property</strong> untuk menambahkan properti.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ParticleSystemAnimationWindow.png" alt="Add properties to the animation in the Animation Window."> 
+        <figcaption>
+          Tambahkan properti ke animasi di jendela Animasi. 
+        </figcaption> 
+       </figure> 
+       <p>Gulir ke kanan untuk mengungkapkan <strong>add controls</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ParticleSystemAnimationScrollRight.png" alt=""> 
+       </figure> 
+       <p>Perhatikan bahwa untuk kurva, Anda hanya dapat keyframe keseluruhan <strong>curve multiplier</strong>, yang dapat ditemukan di sebelah editor kurva di <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>.</p> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2019–04–16 Login</span></p></li> 
+        <li><p><span class="page-history">Login Menu objek berubah dalam Unity 4.6</span></p></li> 
+        <li><p><span class="page-history">Partikel Sistem loop / kurva pingpong ditambahkan dalam <span class="search-words">NewIn20183</span></span></p></li> 
+       </ul> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="Built-inParticleSystem.html"></a></span> 
+         <div class="tip">
+           Sistem Partikel Built-in 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="PartSysVertexStreams.html"></a></span> 
+         <div class="tip">
+           Sistem Partikel aliran simpul dan dukungan Shader Standar 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

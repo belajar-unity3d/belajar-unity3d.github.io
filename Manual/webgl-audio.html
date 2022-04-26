@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Audio di WebGL</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="platforms" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Unity User Manual 2022.1 (beta)</a></li> 
+         <li><a href="PlatformSpecific.html">Pengembangan platform</a></li> 
+         <li><a href="webgl.html">WebGL</a></li> 
+         <li><a href="webgl-intro.html">WebGL</a></li> 
+         <li>WebGL</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="webgl-graphics.html"></a></span> 
+          <div class="tip">
+            WebGL Grafik 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="webgl-embeddedresources.html"></a></span> 
+          <div class="tip">
+            Sumber Daya Tertanam di WebGL 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>WebGL</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Halaman ini hanya memberikan informasi tentang kemampuan audio di <span class="tooltip"><strong>WebGL</strong><span class="tooltiptext">Login API yang membuat grafis 2D dan 3D di browser web. Opsi build Unity WebGL memungkinkan Unity untuk mempublikasikan konten sebagai program JavaScript yang menggunakan teknologi HTML5 dan WebGL rendering API untuk menjalankan konten Unity di browser web. <a class="tooltipMoreInfoLink" href="webgl-gettingstarted.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#WebGL">Glossary</a></span></span></span>. Untuk mempelajari cara menggunakan audio di proyek Unity Anda, lihat <a href="AudioOverview.html">Gambaran Keseluruhan Audio</a>.</p> 
+       <p>Karena Unity menggunakan <span class="tooltip"><a href="https://www.fmod.com">FMOD</a><span class="tooltiptext">Audio di Unity dibangun di atas perantara yang disebut FMOD. FMOD terintegrasi dengan mesin Unity untuk membuat dan bermain kembali audio interaktif.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#FMOD">Glossary</a></span></span></span> untuk mengelola audio untuk platform, Unity WebGL mendukung fungsionalitas audio terbatas, yang hanya mencakup fitur dasar. FMOD bergantung pada benang, yang WebGL tidak mendukung. Untuk alasan ini, Unity menggunakan implementasi berdasarkan API Web Audio internal, yang memungkinkan browser untuk menangani pemutaran audio dan pencampuran.</p> 
+       <p>Sitemap Kebijakan Autoplay baru Google Chrome mencegah autoplay audio dan video dalam kondisi tertentu. Misalnya, sementara permainan Anda mungkin diatur untuk autoplay beberapa musik latar belakang segera setelah beban permainan, itu tidak akan bermain secara otomatis kecuali Anda klik atau ketuk di situs web. Untuk informasi lebih lanjut tentang cara mengaktifkan atau menonaktifkan kebijakan ini, lihat dokumentasi Google Chrome pada <strong>Note:</strong>.<a href="https://developer.chrome.com/blog/autoplay/">Kebijakan Autoplay di Chrome</a>.</p> 
+       <h2>Kelas yang didukung</h2> 
+       <p>Unity WebGL mendukung kelas API berikut:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Class</strong></th> 
+          <th style="text-align:left;"><strong>WebGL Support status</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioSource.html">AudioSource</a></strong></td> 
+          <td style="text-align:left;">WebGL mendukung beberapa API. Lihat <a href="anchor">AudioSource</a> untuk rincian dukungan spesifik.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioListener.html">AudioListener</a></strong></td> 
+          <td style="text-align:left;">Semua API didukung.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioClip.html">AudioClip</a></strong></td> 
+          <td style="text-align:left;">WebGL mendukung beberapa API. Lihat <a href="#audioclip">AudioClip</a> untuk rincian dukungan spesifik.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/SystemInfo-supportsAudio.html">SystemInfo.supportsAudio</a></strong></td> 
+          <td style="text-align:left;">Browser menyediakan dukungan audio untuk WebGL. Untuk alasan ini, <code>SystemInfo.supportsAudio</code> selalu benar.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/Microphone.html">Microphone</a></strong></td> 
+          <td style="text-align:left;">Tidak didukung.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>AudioSource</h2> 
+       <p>API <a href="../ScriptReference/AudioSource.html">AudioSource</a> mendukung pemutaran audio posisi dasar, termasuk:</p> 
+       <ul> 
+        <li>Jeda dan asumsi</li> 
+        <li>Panning</li> 
+        <li>Rolloff</li> 
+        <li>Pengaturan pitch</li> 
+        <li>Dukungan efek Doppler</li> 
+       </ul> 
+       <p>Unity WebGL mendukung API AudioSource berikut:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Properties</strong></th> 
+          <th style="text-align:left;"><strong>Summary</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioSource-clip.html">Clip</a></strong></td> 
+          <td style="text-align:left;">Menentukan <span class="tooltip"><strong>audio clip</strong><span class="tooltiptext">Sebuah wadah untuk data audio dalam Unity. Unity mendukung aset audio mono, stereo dan multichannel (hingga delapan saluran). Unity dapat mengimpor .aif, .wav, .mp3, dan format file audio .ogg, dan .xm, .mod, .it, dan format modul pelacak .s3m. <a class="tooltipMoreInfoLink" href="class-AudioClip.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AudioClip">Glossary</a></span></span></span> yang bermain berikutnya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioSource-dopplerLevel.html">dopplerLevel</a></strong></td> 
+          <td style="text-align:left;">Mengatur skala Doppler untuk AudioSource.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioSource-ignoreListenerPause.html">ignoreListenerPause</a></strong></td> 
+          <td style="text-align:left;">Memungkinkan AudioSource untuk mengabaikan <code>AudioListener.pause</code> dan terus bermain audio.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioSource-ignoreListenerVolume.html">ignoreListenerVolume</a></strong></td> 
+          <td style="text-align:left;">Mengabaikan volume AudioSource pengguna akhir.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioSource-isPlaying.html">isPlaying</a></strong></td> 
+          <td style="text-align:left;">Kembali benar jika <code>AudioSource.clip</code> bermain.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioSource-loop.html">loop</a></strong></td> 
+          <td style="text-align:left;">Memungkinkan aplikasi untuk memutar <code>AudioSource.clip</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioSource-maxDistance.html">maxDistance</a></strong></td> 
+          <td style="text-align:left;">Mengatur jarak maksimum di mana <code>AudioSource.clip</code> berhenti makan atau menjadi inaudible.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioSource-minDistance.html">minDistance</a></strong></td> 
+          <td style="text-align:left;">Mengatur jarak minimum di mana AudioSource. klip tidak lagi naik dalam volume. Suara mulai memperhatikan jarak minimum.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="SciptRef:AudioSource-mute">mute</a></strong></td> 
+          <td style="text-align:left;">AudioSource</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioSource-pitch.html">pitch</a></strong></td> 
+          <td style="text-align:left;">Mengatur pitch dari <code>AudioSource.clip</code>. WebGL hanya mendukung nilai pitch positif.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioSource-playOnAwake.html">playOnAwake</a></strong></td> 
+          <td style="text-align:left;">Memainkan AudioSource di Awake.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioSource-rollofMode.html">rolloffMode</a></strong></td> 
+          <td style="text-align:left;">Mengatur atenuasi AudioSource jarak jauh.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioSource-time.html">time</a></strong></td> 
+          <td style="text-align:left;">Mengatur posisi pemutaran dalam detik.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioSource-timeSamples.html">timeSamples</a></strong></td> 
+          <td style="text-align:left;">Mengatur posisi pemutaran dalam sampel modulasi kode pulsa (PCM).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioSource-velocityUpdateMode.html">velocityUpdateMode</a></strong></td> 
+          <td style="text-align:left;">Mengatur apakah pembaruan AudioSource di loop pembaruan tetap atau dinamis.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioSource-volume.html">volume</a></strong></td> 
+          <td style="text-align:left;">Mengatur volume AudioSource (0.0 hingga 1.0).</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Methods</strong></th> 
+          <th style="text-align:left;"><strong>Summary</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioSource.Pause.html">Pause</a></strong></td> 
+          <td style="text-align:left;">Pauses the <code>AudioSource.clip</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioSource.Play.html">Play</a></strong></td> 
+          <td style="text-align:left;">Memainkan <code>AudioSource.clip</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioSource.PlayDelayed.html">PlayDelayed</a></strong></td> 
+          <td style="text-align:left;">Memainkan <code>AudioSource.clip</code> dengan penundaan yang Anda tentukan dalam hitungan detik.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioSource.PlayOneShot.html">PlayOneShot</a></strong></td> 
+          <td style="text-align:left;">Memainkan volume <a href="../ScriptReference/AudioSource-clip.html">AudioClip</a> dan skala AudioSource dengan volumeScale.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioSource.PlayScheduled.html">PlayScheduled</a></strong></td> 
+          <td style="text-align:left;">Memainkan AudioSource pada waktu yang Anda tentukan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioSource.SetScheduledEndTime.html">SetScheduledEndTime</a></strong></td> 
+          <td style="text-align:left;">Mengatur waktu yang dijadwalkan <code>AudioSource.clip</code> berakhir.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioSource.SetScheduledStartTime.html">SetScheduledStartTime</a></strong></td> 
+          <td style="text-align:left;">Mengatur waktu yang dijadwalkan <code>AudioSource.clip</code> dimulai.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioSource.Stop.html">Stop</a></strong></td> 
+          <td style="text-align:left;">Berhenti bermain <code>AudioSource.clip</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioSource.UnPause.html">UnPause</a></strong></td> 
+          <td style="text-align:left;">Unpauses a jeda <code>AudioSource.clip</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioSource.PlayClipAtPoint.html">PlayClipAtPoint</a></strong></td> 
+          <td style="text-align:left;">Memainkan <code>AudioSource.clip</code> pada posisi tertentu di dunia.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>AudioClip <a name="audioclip"></a> </h2> 
+       <p>Unity WebGL mengimpor file dalam Format AAC, yang secara luas browser didukung. Unity WebGL mendukung API AudioClip berikut:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Properties</strong></th> 
+          <th style="text-align:left;"><strong>Summary</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioClip-length.html">length</a></strong></td> 
+          <td style="text-align:left;">Panjang AudioClip dalam detik.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioClip-loadState.html">loadState</a></strong></td> 
+          <td style="text-align:left;">Mengembalikan keadaan beban saat ini dari data audio yang terkait dengan AudioClip.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioClip-samples.html">samples</a></strong></td> 
+          <td style="text-align:left;">Panjang AudioClip dalam sampel.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioClip-loadType.html">loadType</a></strong></td> 
+          <td style="text-align:left;">Jenis beban klip. Anda dapat mengatur jenis beban AudioClip di <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Method</strong></th> 
+          <th style="text-align:left;"><strong>Summary</strong></th> 
+          <th style="text-align:left;"><strong>Additional information</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioClip.Create.html">AudioClip.Create</a></strong></td> 
+          <td style="text-align:left;">Buat AudioClip dengan nama dan panjang yang Anda tentukan.</td> 
+          <td style="text-align:left;">Unity WebGL sebagian mendukung <code>AudioClip.Create</code>. Browser tidak mendukung streaming dinamis, sehingga menggunakan <code>AudioClip.Create</code>, set Stream ke false.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/AudioClip.SetData.html">AudioClip.SetData</a></strong></td> 
+          <td style="text-align:left;">Mengatur data sampel dalam AudioSource.clip.</td> 
+          <td style="text-align:left;">Unity WebGL sebagian mendukung <code>AudioClip.SetData</code>. Anda hanya dapat menggunakan metode ini untuk mengganti konten AudioClip. Di WebGL, Unity mengabaikan parameter <code>offsetSample</code>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Audio Terkompresi</h2> 
+       <p>Untuk menggunakan audio terkompresi dengan WebGL di Unity, atur AudioClip ke salah satu opsi berikut:</p> 
+       <ul> 
+        <li></li> 
+        <li></li> 
+       </ul> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong><span class="tooltip"><strong>Compression</strong><span class="tooltiptext">A method of storing data that reduces the amount of storage space it requires. See <a href="class-TextureImporterOverride.html">Texture Compression</a>, <a href="class-AnimationClip.html#AssetProperties">Animation Compression</a>, <a href="class-AudioClip.html">Audio Compression</a>, <a href="ReducingFilesize.html">Build Compression</a>.<br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#compression">Glossary</a></span></span></span> method</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+          <th style="text-align:left;"><strong>Considerations</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>CompressedInMemory</strong></td> 
+          <td style="text-align:left;">Gunakan ini untuk mengompresi audio pada disk dan tetap terkompresi setelah dimuat ke dalam memori aplikasi Anda.</td> 
+          <td style="text-align:left;">Audio terkompresi dapat menyebabkan latensi dan kurang tepat ketika datang ke pemutaran audio. Namun, audio terkompresi menggunakan memori kurang dalam aplikasi Anda daripada audio yang terdepresi. Ini adalah praktik terbaik untuk menggunakan <code>CompressedInMemory</code> untuk audio yang tidak terpengaruh oleh presisi misalnya, musik latar belakang.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>DecompressOnLoad</strong></td> 
+          <td style="text-align:left;">Gunakan ini untuk mengompresi audio pada disk, mirip dengan CompressedInMemory, dan depresi ketika dimuat ke memori aplikasi Anda.</td> 
+          <td style="text-align:left;">Audio yang terdepresi menggunakan sejumlah memori yang signifikan dibandingkan dengan audio terkompresi tetapi memiliki latensi yang lebih rendah dan lebih fleksibilitas audio. Gunakan <code>DecompressedOnLoad</code> untuk audio yang dipengaruhi oleh presisi (misalnya, dialog karakter atau efek suara).</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Audio Playback dan Keamanan Browser</h2> 
+       <p>Untuk alasan keamanan, browser tidak memungkinkan pemutaran audio sampai pengguna akhir berinteraksi dengan halaman web aplikasi Anda melalui klik mouse, acara sentuh atau tekan kunci. Gunakan layar pemuatan untuk memungkinkan pengguna akhir untuk berinteraksi dengan aplikasi Anda dan mulai pemutaran audio sebelum konten utama Anda dimulai.</p> 
+       <!-- area:platforms --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="webgl-graphics.html"></a></span> 
+         <div class="tip">
+           WebGL Grafik 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="webgl-embeddedresources.html"></a></span> 
+         <div class="tip">
+           Sumber Daya Tertanam di WebGL 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

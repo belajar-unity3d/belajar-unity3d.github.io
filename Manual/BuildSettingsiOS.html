@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: pengaturan build iOS</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="platforms" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="PlatformSpecific.html">Pengembangan platform</a></li> 
+         <li><a href="iphone.html">iOS</a></li> 
+         <li>pengaturan build iOS</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="StructureOfXcodeProject.html"></a></span> 
+          <div class="tip">
+            Struktur Proyek Xcode Unity 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="class-PlayerSettingsiOS.html"></a></span> 
+          <div class="tip">
+            Login Pengaturan pemain 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>pengaturan build iOS</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Untuk membuat build untuk iOS, pergi ke <strong>Build Settings (</strong>menu: <strong>File &gt; Build Settings</strong>). Dalam daftar <strong>Platform</strong>, pilih <strong>iOS</strong>, lalu pilih tombol <strong>Switch Platform</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/iOSbuildsettings.png" alt="iOS build settings in Unity"> 
+        <figcaption>
+          pengaturan build iOS di Unity 
+        </figcaption> 
+       </figure> 
+       <p>Membangun aplikasi Anda ke perangkat iOS melibatkan dua langkah:</p> 
+       <ol> 
+        <li><p>Unity membangun <a href="StructureOfXcodeProject.html">Proyek Xcode</a>.</p></li> 
+        <li><p>Xcode membangun proyek ke perangkat Anda.</p></li> 
+       </ol> 
+       <p>Untuk memilih perangkat yang dibuat Xcode, ikuti langkah-langkah ini:</p> 
+       <ol> 
+        <li><p>Hubungkan perangkat ke komputer Anda.</p></li> 
+        <li><p>Dari menu utama Xcode, pergi ke <strong>Product &gt; Destination</strong>, dan pilih perangkat Anda dari daftar <strong>Devices</strong>.</p></li> 
+       </ol> 
+       <p>Anda dapat mengkonfigurasi pengaturan ini untuk membangun Anda:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Setting</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Run in Xcode</strong></td> 
+          <td style="text-align:left;">Opsi ini hanya menunjukkan ketika Anda menjalankan Unity di macOS. Pilih versi Xcode untuk membuka proyek Anda. Anda dapat memilih <strong>Latest version</strong>, atau memilih versi tertentu dari daftar drop-down.<br><br> Jika Anda memiliki versi Xcode tertentu yang diinstal pada mesin Anda, tetapi tidak muncul dalam daftar ini, pilih <strong>Other</strong>, lalu temukan dan pilih versi spesifik di jendela <strong>Applications</strong> yang muncul dan pilih <strong>Open</strong>.<br><br> Sitemap Unity tidak dapat menemukan instalasi Xcode di komputer Anda, itu menampilkan tombol <strong>Browse</strong> yang dapat Anda pilih untuk menemukan direktori instalasi Xcode di komputer Anda, jika ada.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Run in Xcode as</strong></td> 
+          <td style="text-align:left;">Pilih apakah Xcode menjalankan Proyek Anda sebagai bangunan <strong>Release</strong> atau <strong>Debug</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Release</em></td> 
+          <td style="text-align:left;">Membangun versi aplikasi Anda yang dioptimalkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Debug</em></td> 
+          <td style="text-align:left;">Membangun versi pengujian dari aplikasi Anda yang berisi kode tambahan yang membantu dengan debugging.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Symlink Unity libraries</strong></td> 
+          <td style="text-align:left;">Perpustakaan Unity Referensi bukan menyalinnya ke proyek Xcode. Opsi ini mengurangi ukuran proyek Xcode dan membuat waktu iterasi lebih cepat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><span class="tooltip"><strong>Development Build</strong><span class="tooltiptext">Membangun pengembangan termasuk simbol debug dan memungkinkan Profiler. <a class="tooltipMoreInfoLink" href="UnityCloudBuildDevelopmentBuilds.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#DevelopmentBuild">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Pengembangan build termasuk scripting debug simbol. Ketika Anda memilih pengaturan <strong>Development Build</strong>, Anda dapat memilih pengaturan <strong>Autoconnect Profiler</strong>, <strong>Script Debugging</strong>, dan <strong>Scripts Only Build</strong>. Hal ini juga memungkinkan DEVELOPMENT_BUILD #define.<br><br> Untuk informasi lebih lanjut tentang #define directives, lihat dokumentasi pada <a href="PlatformDependentCompilation.html">kompilasi Platform</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Autoconnect Profiler</strong></td> 
+          <td style="text-align:left;">Secara otomatis menghubungkan Profiler ke build. Hanya tersedia jika Anda mengaktifkan pengaturan <strong>Development Build</strong>. Untuk informasi lebih lanjut tentang Profiler, lihat dokumentasi di <span class="tooltip"><a class="tooltipMoreInfoLink" href="Profiler.html">Profiler</a><span class="tooltiptext">Jendela yang membantu Anda untuk mengoptimalkan permainan Anda. Ini menunjukkan berapa banyak waktu yang dihabiskan di berbagai bidang permainan Anda. Sebagai contoh, dapat melaporkan persentase waktu yang dihabiskan <strong>rendering</strong>, aimating, atau dalam logika permainan Anda. <a href="Profiler.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profiler">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Deep Profiling</strong></td> 
+          <td style="text-align:left;">Ketika Anda mengaktifkan <strong>Deep Profiling</strong>, profil Unity semua kode skrip Anda dan mencatat semua panggilan fungsi. Ini berguna untuk pinpoint kode permainan yang menyebabkan masalah kinerja. Namun, ia menggunakan banyak memori dan mungkin tidak bekerja dengan <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> yang sangat kompleks. Untuk informasi lebih lanjut, lihat dokumentasi pada <a href="ProfilerWindow.html#deep-profiling">profil dalam</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Script Debugging</strong></td> 
+          <td style="text-align:left;">Pasang skrip debuggers ke pemain jauh. Hanya tersedia jika Anda mengaktifkan pengaturan <strong>Development Build</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Scripts Only Build</strong></td> 
+          <td style="text-align:left;">Aktifkan pengaturan ini untuk membangun skrip di Proyek saat ini. Hanya tersedia jika Anda mengaktifkan pengaturan <strong>Development Build</strong>.<br><br> Ketika Anda mengaktifkan pengaturan ini, Unity membangun kembali skrip dalam aplikasi Anda, dan meninggalkan file data dari sebelumnya dieksekusi builds utuh. Ini secara signifikan meningkatkan waktu iterasi jika Anda hanya mengubah kode dalam aplikasi Anda.<br><br><strong>Note: </strong> Anda perlu membangun seluruh Proyek sekali sebelum Anda dapat menggunakan pengaturan ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Compression Method</strong></td> 
+          <td style="text-align:left;">Mengkompresi data dalam Proyek Anda pada waktu membangun. Ini termasuk Aset, <span class="tooltip"><strong>Scenes</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Scene">Glossary</a></span></span></span>, <span class="tooltip"><strong>Player settings</strong><span class="tooltiptext">Pengaturan yang memungkinkan Anda mengatur berbagai pilihan khusus pemain untuk permainan akhir yang dibangun oleh Unity. <a href="class-PlayerSettings.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#PlayerSettings">Glossary</a></span></span></span>, dan data <span class="tooltip"><strong>global illumination</strong><span class="tooltiptext">Kelompok teknik yang model pencahayaan langsung dan tidak langsung untuk memberikan hasil pencahayaan yang realistis.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#globalillumination">Glossary</a></span></span></span>. Pilih antara metode berikut:</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>Default</em></td> 
+          <td style="text-align:left;">Default <span class="tooltip"><strong>compression</strong><span class="tooltiptext">Metode menyimpan data yang mengurangi jumlah ruang penyimpanan yang dibutuhkan. <a href="class-TextureImporterOverride.html">Kompresi Tekstur</a>, <a href="class-AnimationClip.html#AssetProperties">Kompresi Animasi</a>, <a href="class-AudioClip.html">Kompresi Audio</a>, <a href="ReducingFilesize.html">Membangun Kompresi</a>.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#compression">Glossary</a></span></span></span> adalah None.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>LZ4</em></td> 
+          <td style="text-align:left;">Format kompresi cepat yang berguna untuk membangun perkembangan. Kompresi LZ4 dapat secara signifikan meningkatkan waktu pemuatan aplikasi Anda. Untuk informasi lebih lanjut, lihat dokumentasi pada <a href="../ScriptReference/BuildOptions.CompressWithLz4.html#.html">WordPress.org</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><em>LZ4HC</em></td> 
+          <td style="text-align:left;">Varietas kompresi tinggi LZ4 yang lebih lambat untuk membangun tetapi menghasilkan hasil yang lebih baik untuk membangun rilis. Kompresi LZ4HC dapat secara signifikan meningkatkan waktu pemuatan aplikasi Anda. Untuk informasi lebih lanjut, lihat dokumentasi pada <a href="../ScriptReference/BuildOptions.CompressWithLz4HC.html">WordPress.org</a>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <hr> 
+       <ul> 
+        <li><span class="page-edit">2019–09–26 Sitemap</span></li> 
+       </ul> 
+       <!-- area:platforms --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="StructureOfXcodeProject.html"></a></span> 
+         <div class="tip">
+           Struktur Proyek Xcode Unity 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="class-PlayerSettingsiOS.html"></a></span> 
+         <div class="tip">
+           Login Pengaturan pemain 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

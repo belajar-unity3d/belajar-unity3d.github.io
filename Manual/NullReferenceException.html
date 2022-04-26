@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Pengecualian Referensi Null</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="core" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="ScriptingSection.html">Scripting</a></li> 
+         <li><a href="ScriptingConcepts.html">Konsep Scripting</a></li> 
+         <li>Pengecualian Referensi Null</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UnityEvents.html"></a></span> 
+          <div class="tip">
+            UnityEvents 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="ScriptingImportantClasses.html"></a></span> 
+          <div class="tip">
+            Kelas Penting 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Pengecualian Referensi Null</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Sebuah <code>NullReferenceException</code> terjadi ketika Anda mencoba untuk mengakses variabel referensi yang tidak merujuk pada objek apa pun. Jika variabel referensi tidak merujuk objek, maka akan diperlakukan sebagai <code>null</code>. Waktu berjalan akan memberi tahu Anda bahwa Anda mencoba mengakses objek, ketika variabel adalah <code>null</code> dengan mengeluarkan <code>NullReferenceException</code>.</p> 
+       <p>variabel referensi dalam c # dan JavaScript mirip dengan konsep untuk pointer di C dan C++. Jenis referensi default untuk <code>null</code> untuk menunjukkan bahwa mereka tidak merujuk objek apa pun. Oleh karena itu, jika Anda mencoba dan mengakses objek yang direferensikan dan tidak ada satu, Anda akan mendapatkan <code>NullReferenceException</code>.</p> 
+       <p>Ketika Anda mendapatkan <code>NullReferenceException</code> dalam kode Anda berarti bahwa Anda telah lupa untuk mengatur variabel sebelum menggunakannya. Pesan kesalahan akan terlihat seperti:</p> 
+       <pre><code>NullReferenceException: Object reference not set to an instance of an object
+  at Example.Start () [0x0000b] in /Unity/projects/nre/Assets/Example.cs:10 
+</code></pre> 
+       <p>Pesan kesalahan ini mengatakan bahwa <code>NullReferenceException</code> terjadi pada baris 10 dari file script <code>Example.cs</code>. Juga, pesan mengatakan bahwa pengecualian terjadi di dalam fungsi <code>Start()</code>. Ini membuat Pengecualian Referensi Null mudah ditemukan dan diperbaiki. Dalam contoh ini, kode adalah:</p> 
+       <pre><code>//c# example
+using UnityEngine;
+using System.Collections;
+
+public class Example : MonoBehaviour {
+
+    // Use this for initialization
+    void Start () {
+        <span class="tooltip">__GameObject__<span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject's functionality is defined by the Components attached to it. [More info](class-GameObject.html)&lt;span class="tooltipGlossaryLink"&gt;See in [Glossary](Glossary.html#GameObject)&lt;/span&gt;</span></span> go = GameObject.Find("wibble");
+        Debug.Log(go.name);
+    }
+
+}
+</code></pre> 
+       <p>Kode hanya terlihat untuk objek permainan yang disebut “wibble”. Dalam contoh ini tidak ada objek permainan dengan nama itu, sehingga fungsi <code>Find()</code> kembali <code>null</code>. Di garis berikutnya (line 9) kami menggunakan variabel <code>go</code> dan mencoba dan mencetak nama objek permainan itu referensi. Karena kita mengakses objek permainan yang tidak ada run-time memberi kita ruang <code>NullReferenceException</code>%</p> 
+       <h2>Cek Null</h2> 
+       <p>Meskipun dapat frustrasi ketika ini terjadi hanya berarti script perlu lebih berhati-hati. Solusi dalam contoh sederhana ini adalah untuk mengubah kode seperti ini:</p> 
+       <pre><code>using UnityEngine;
+using System.Collections;
+
+public class Example : MonoBehaviour {
+
+    void Start () {
+        GameObject go = GameObject.Find("wibble");
+        if (go) {
+            Debug.Log(go.name);
+        } else {
+            Debug.Log("No game object called wibble found");
+        }
+    }
+
+}
+</code></pre> 
+       <p>Sekarang, sebelum kami mencoba dan melakukan apa pun dengan variabel <code>go</code>, kami memeriksa untuk melihat bahwa itu tidak <code>null</code>. Jika <code>null</code>, maka kita menampilkan pesan.</p> 
+       <h2>Try/Catch Blocks</h2> 
+       <p>Penyebab lain untuk <code>NullReferenceException</code> adalah untuk menggunakan variabel yang harus diinisialisasi dalam <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>. Jika Anda lupa melakukan ini, maka variabel akan <code>null</code>. Cara yang berbeda untuk berurusan dengan <code>NullReferenceException</code> adalah menggunakan blok coba/catch. Sebagai contoh, kode ini:</p> 
+       <pre><code>using UnityEngine;
+using System;
+using System.Collections;
+
+public class Example2 : MonoBehaviour {
+
+    public Light myLight; // set in the inspector
+
+    void Start () {
+        try {
+            myLight.color = Color.yellow;
+        }       
+        catch (NullReferenceException ex) {
+            Debug.Log("myLight was not set in the inspector");
+        }
+    }
+
+}
+</code></pre> 
+       <p>Dalam contoh kode ini, variabel yang disebut <code>myLight</code> adalah <code>Light</code> yang harus diatur di jendela Inspektur. Jika variabel ini tidak diatur, maka akan default ke <code>null</code>. Tempting untuk mengubah warna cahaya dalam blok <code>try</code> menyebabkan <code>NullReferenceException</code> yang diambil oleh blok <code>catch</code>. Blok <code>catch</code> menampilkan pesan yang mungkin lebih membantu seniman dan desainer game, dan mengingatkan mereka untuk mengatur cahaya dalam inspektur.</p> 
+       <h2>Summary</h2> 
+       <ul> 
+        <li> <code>NullReferenceException</code> terjadi ketika kode skrip Anda mencoba untuk menggunakan variabel yang tidak diatur (referencing) dan objek.</li> 
+        <li>Pesan kesalahan yang muncul memberi tahu Anda banyak tentang di mana dalam kode masalah terjadi.</li> 
+        <li> <code>NullReferenceException</code> dapat dihindari dengan menulis kode yang memeriksa untuk <code>null</code> sebelum mengakses objek, atau menggunakan blok mencoba/catch.</li> 
+       </ul> 
+       <!-- area:core --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UnityEvents.html"></a></span> 
+         <div class="tip">
+           UnityEvents 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="ScriptingImportantClasses.html"></a></span> 
+         <div class="tip">
+           Kelas Penting 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

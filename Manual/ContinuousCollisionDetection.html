@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Deteksi tabrakan terus menerus (CCD)</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="PhysicsSection.html">Physics</a></li> 
+         <li><a href="PhysicsOverview.html">Fisika 3D untuk proyek berorientasi objek</a></li> 
+         <li>Deteksi tabrakan terus menerus (CCD)</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="CharacterControllers.html"></a></span> 
+          <div class="tip">
+            Pengontrol Karakter 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="physics-multi-scene.html"></a></span> 
+          <div class="tip">
+            Multi-scene fisika 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Deteksi tabrakan terus menerus (CCD)</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>CCD memastikan bahwa tubuh bergerak cepat bertabrakan dengan benda-benda yang lewat, atau terowongan, melalui benda-benda tersebut. Unity menyediakan metode CCD berikut:</p> 
+       <ul> 
+        <li><a href="#sweep">CCD berbasis sapuan</a></li> 
+        <li><a href="#speculative">CCD spekulatif</a></li> 
+       </ul> 
+       <p>Untuk menggunakan CCD berbasis menyapu, pilih <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-Rigidbody.html">RigidBody</a><span class="tooltiptext">Komponen yang memungkinkan GameObject untuk dipengaruhi oleh gravitasi simulasi dan kekuatan lainnya. <a href="class-Rigidbody.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Rigidbody">Glossary</a></span></span></span> di jendela <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Inspector">Glossary</a></span></span></span> dan set <span class="tooltip"><strong>Collision Detection</strong><span class="tooltiptext">Proses otomatis yang dilakukan oleh Unity yang menentukan apakah yang bergerak GameObject dengan komponen kaku dan collider telah masuk ke kontak dengan sari lainnya. <a href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#CollisionDetection">Glossary</a></span></span></span> ke <strong>Continuous</strong> atau <strong>Continuous Dynamic</strong>. Untuk CCD spekulatif, set <strong>Collision Detection</strong> ke <strong>Continuous Speculative</strong>.</p> 
+       <p><a name="sweep"></a></p> 
+       <h2>CCD berbasis sapuan</h2> 
+       <p>CCD berbasis sapuan menggunakan algoritma Time Of Impact (TOI) untuk menghitung potensi <span class="tooltip"><strong>collisions</strong><span class="tooltiptext">tabrakan terjadi ketika mesin fisika mendeteksi bahwa tabrakan dari dua GameObjects membuat kontak atau tumpang tindih, ketika setidaknya satu memiliki komponen kaku dan bergerak. <a class="tooltipMoreInfoLink" href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Collision">Glossary</a></span></span></span> untuk objek dengan menyapukan trajectory majunya menggunakan kecepatan saat ini. Jika ada kontak di sepanjang arah bergerak objek, algoritma menghitung waktu dampak dan memindahkan objek sampai saat itu. Algoritme dapat melakukan sub langkah dari waktu itu ke depan, mengkomputasikan kecepatan setelah TOI kemudian menangis kembali, dengan biaya siklus CPU lebih.</p> 
+       <p>Namun, karena metode ini bergantung pada menyapu linier, diabaikan gerakan sudut tubuh, yang dapat menyebabkan efek terowongan saat benda berputar pada kecepatan. Misalnya, mesin flipper dalam mesin pinball tetap pada satu ujung dan berputar di sekitar titik tetap. flipper hanya memiliki gerakan sudut dan tidak ada gerakan linier. Oleh karena itu, dapat dengan mudah melewatkan tabrakan dengan pinball:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SpeculativeCCD1.gif" alt="A thin stick GameObject with its Continuous Dynamic property enabled. When rotating quickly around the pivot point, the stick doesn’t make contact with the sphere."> 
+        <figcaption>
+          Sebuah tongkat tipis GameObject dengan properti dinamis terus menerus diaktifkan. Ketika berputar cepat di sekitar titik pivot, tongkat tidak membuat kontak dengan bola. 
+        </figcaption> 
+       </figure> 
+       <p>Masalah lain dengan metode ini adalah kinerja. Jika Anda memiliki sejumlah besar benda berkecepatan tinggi dengan CCD di dekat kedekatan, overhead CCD meningkat cepat karena penyapu ekstra, dan <span class="tooltip"><strong>physics engine</strong><span class="tooltiptext">Sebuah sistem yang mensimulasikan aspek sistem fisik sehingga benda dapat mempercepat dengan benar dan dipengaruhi oleh tabrakan, gravitasi dan kekuatan lainnya. <a class="tooltipMoreInfoLink" href="PhysicsSection.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#PhysicsEngine">Glossary</a></span></span></span> harus melakukan lebih banyak sub-langkah CCD.</p> 
+       <p><a name="speculative"></a></p> 
+       <h2>CCD spekulatif</h2> 
+       <p>CCD spektif bekerja dengan meningkatkan sumbu sumbu fase lebar objek yang menyelaraskan kotak pengikat minimum (AABB), berdasarkan gerakan linier dan sudut objek. Algoritme spekulatif karena memilih semua kontak potensial selama langkah fisika berikutnya. Semua kontak kemudian dimasukkan ke dalam pemecahan, yang memastikan bahwa semua kendala kontak puas sehingga objek tidak terowongan melalui tabrakan.</p> 
+       <p>Diagram berikut menunjukkan bagaimana bidang bergerak dari <strong>t0</strong> bisa memiliki posisi yang diharapkan pada <strong>t1</strong> jika tidak ada dinding di jalannya. Dengan meningkatkan AABB dengan targetnya, algoritma spekulatif mengambil dua kontak dengan normal <strong>n1</strong> dan <strong>n2</strong>. Algoritme kemudian memberitahu pemecahan untuk menghormati kontak tersebut sehingga bidang tidak terowongan melalui dinding.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SpeculativeCCD2.png" alt=""> 
+       </figure> 
+       <p>ABB yang digemukan berdasarkan kecepatan saat ini membantu mendeteksi semua kontak potensial di sepanjang lintas bergerak, yang memungkinkan pemecahan untuk mencegah terowongan.</p> 
+       <p>CCD spekulatif umumnya lebih murah daripada metode berbasis menyapu karena kontak hanya sebanding selama fase deteksi tabrakan, tidak selama fase pemecahan dan mengintegrasikan. Juga, karena CCD spekulatif memperluas AABB fase luas berdasarkan gerakan linear dan sudut objek, menemukan kontak yang berbasis CCD dapat melewatkan.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SpeculativeCCD3.gif" alt="A thin stick GameObject with the Speculative CCD enabled. When rotating quickly around the pivot point, the stick makes contact with the sphere and a collision occurs."> 
+        <figcaption>
+          Sebuah tongkat tipis GameObject dengan CCD Speculative diaktifkan. Ketika berputar cepat di sekitar titik pivot, tongkat membuat kontak dengan bidang dan tabrakan terjadi. 
+        </figcaption> 
+       </figure> 
+       <p>Namun, CCD spekulatif dapat menyebabkan tabrakan, di mana gerakan objek dipengaruhi oleh titik kontak spekulatif ketika seharusnya tidak. Ini karena CCD spekulatif mengumpulkan semua kontak potensial berdasarkan algoritma titik terdekat, sehingga kontak normal kurang akurat. Hal ini sering dapat membuat objek kecepatan tinggi slide di sepanjang fitur tabrakan dan melompat, meskipun mereka seharusnya tidak. Sebagai contoh, dalam diagram berikut, sphere dimulai pada <strong>t0</strong> dan bergerak secara horizontal ke arah kanan, dengan posisi yang diprediksi pada <strong>t1</strong> setelah integrasi. AABB yang berkelok-kelok sepanjang kotak <strong>b0</strong> dan <strong>b1</strong>, dan CCD menghasilkan dua kontak spekulatif pada <strong>c0</strong> dan <strong>c1</strong>. Karena CCD spekulatif menghasilkan kontak menggunakan algoritma titik terdekat, <strong>c0</strong> memiliki normal yang sangat cenderung, yang tampaknya menjadi jalan ke pemecahan.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SpeculativeCCD4.png" alt="The solver assumes that the contact point at c0 is a ramp because the closest point algorithm generated an inaccurate contact normal"> 
+        <figcaption>
+          Pemecah menganggap bahwa titik kontak pada 
+         <strong>c0</strong> adalah jalan karena algoritma titik terdekat yang dihasilkan kontak tidak akurat normal 
+        </figcaption> 
+       </figure> 
+       <p>Penyebab normal yang sangat cenderung <strong>t1</strong> untuk melompat ke atas setelah integrasi, daripada bergerak ke depan lurus:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SpeculativeCCD5.gif" alt="A ghost collision generated at c0 causes the sphere to erroneously jump up instead of move straight forward"> 
+        <figcaption>
+          tabrakan yang dihasilkan pada c0 menyebabkan sphere ke erroneously melompat daripada bergerak maju lurus 
+        </figcaption> 
+       </figure> 
+       <p>CCD spekulatif juga dapat menyebabkan tunneling karena kontak spekulatif hanya sebanding selama fase deteksi tabrakan. Selama pemecahan kontak, jika objek mendapatkan terlalu banyak energi dari pemecahan, itu mungkin berakhir di luar AABB yang digemukan awal setelah integrasi. Jika ada tabrakan di luar AABB, objek akan terowongan segera.</p> 
+       <p>Misalnya, diagram berikut menunjukkan bidang bergerak kiri dari <strong>t0</strong> sementara tongkat berputar searah jarum jam. Jika sphere mendapatkan terlalu banyak energi dari dampak, itu mungkin berakhir keluar dari AABB yang berkembang (merah persegi panjang) pada <strong>t1</strong>. Jika ada tabrakan di luar AABB, seperti yang ditunjukkan oleh kotak biru di bawah ini, sphere dapat berakhir tunneling tepat melalui itu. Ini karena pemecahan hanya mengimbangi kontak di dalam AABB yang meningkat, dan deteksi tabrakan tidak dilakukan selama pemecahan dan mengintegrasikan fase.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SpeculativeCCD6.png" alt="The sphere with inflated AABB using speculative CCD, which only computes contacts during the collision detection phase, so tunnelling may occur"> 
+        <figcaption>
+          Bola dengan AABB yang meningkat menggunakan CCD spekulatif, yang hanya mengimbangi kontak selama fase deteksi tabrakan, sehingga terowongan dapat terjadi 
+        </figcaption> 
+       </figure> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2018-10-12 Sitemap</span></p></li> 
+        <li><p><span class="page-history">Deteksi tabrakan spekulatif ditambahkan dalam <span class="search-words">NewIn20183</span></span></p></li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="CharacterControllers.html"></a></span> 
+         <div class="tip">
+           Pengontrol Karakter 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="physics-multi-scene.html"></a></span> 
+         <div class="tip">
+           Multi-scene fisika 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

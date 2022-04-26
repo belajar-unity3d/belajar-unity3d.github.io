@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: API plug-in profiler tingkat rendah</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="analysis.html">Analysis</a></li> 
+         <li><a href="Profiler.html">Profiler</a></li> 
+         <li>rendah-level asli plug-in Profiler API</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="Profiler-customizing-details-view.html"></a></span> 
+          <div class="tip">
+            Membuat panel detail modul kustom 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="performance-profiling-tools.html"></a></span> 
+          <div class="tip">
+            Profiling tools 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>rendah-level asli plug-in Profiler API</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Ini adalah alat yang dapat Anda gunakan untuk menganalisis dan meningkatkan kinerja aplikasi Anda. <span class="tooltip"><strong>Profiler</strong><span class="tooltiptext">Jendela yang membantu Anda untuk mengoptimalkan permainan Anda. Ini menunjukkan berapa banyak waktu yang dihabiskan di berbagai bidang permainan Anda. Sebagai contoh, dapat melaporkan persentase waktu yang dihabiskan <strong>rendering</strong>, aimating, atau dalam logika permainan Anda. <a href="Profiler.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profiler">Glossary</a></span></span></span> melakukan panggilan fungsi dalam kode Unity asli dan kode yang dikelola dalam aplikasi Anda. Anda dapat menggunakan penanda untuk memasukkan penanda waktu ke kode Anda sendiri untuk mendapatkan pemahaman yang lebih baik tentang kinerja area spesifik aplikasi Anda.</p> 
+       <p>Anda dapat menggunakan API <span class="tooltip"><span class="tooltiptext">Perpustakaan kode asli spesifik platform yang diciptakan di luar Unity untuk digunakan di Unity. Memungkinkan Anda dapat mengakses fitur seperti panggilan OS dan perpustakaan kode pihak ketiga yang tidak akan tersedia untuk Unity. <a href="Plugins.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Nativeplug-in">Glossary</a></span></span></span> tingkat rendah untuk memperluas Profiler dan profil kinerja kode <span class="tooltip"><strong>plug-in</strong><span class="tooltiptext">Satu set kode yang dibuat di luar Unity yang menciptakan fungsi dalam Unity. Ada dua jenis plug-ins yang dapat Anda gunakan di Unity: Managed plug-ins (diproduksi. Rakitan NET dibuat dengan alat-alat seperti Studio Visual) dan plug-ins asli (pustaka kode asli yang spesifik platform). <a href="Plugins.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Plug-in">Glossary</a></span></span></span> asli, atau mempersiapkan data profil untuk mengirim ke alat profil pihak ketiga seperti Razor (PS4), PIX (Xbox, Windows), Chrome Tracing, ETW, ITT, Vtune, atau Telemetri. API plug-in Profiler tingkat rendah menyediakan antarmuka berikut untuk komunikasi antara Unity Profileer dan perkakas eksternal:</p> 
+       <ul> 
+        <li> <strong>IUnityProfiler</strong>: Gunakan antarmuka ini untuk menambahkan acara instrumentasi ke Unity Profileer dari kode plug-in asli C / C++.</li> 
+        <li> <strong>IUnityProfilerCallbacks</strong>: Gunakan antarmuka ini untuk mencegat acara Unity Profiler dan menyimpan atau mengarahkan mereka ke alat lain.</li> 
+       </ul> 
+       <h2>Profil Login</h2> 
+       <p>Gunakan API plug-in IUnityProfiler untuk menambahkan instrumentasi ke kode C / C++ dari plug-ins asli Anda.</p> 
+       <p>API plug-in diwakili oleh antarmuka IUnityProfiler, yang dinyatakan dalam header <code>IUnityProfiler.h</code>. Unity menyimpan header di folder <code>&lt;UnityInstallPath&gt;\Editor\Data\PluginAPI</code> instalasi Unity Anda. (On macOS, klik kanan pada aplikasi Unity, dan pilih <strong>Show Package Contents</strong>. header di <code>Contents\PluginAPI</code>.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Method</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>CreateMarker</code></td> 
+          <td style="text-align:left;">Membuat <span class="tooltip"><strong>Profiler marker</strong><span class="tooltiptext">Ditempatkan dalam kode untuk menggambarkan acara CPU atau GPU yang kemudian ditampilkan di jendela Unity Profileer. Ditambahkan ke kode Unity secara default, atau Anda dapat menggunakan untuk menambahkan penanda kustom Anda sendiri. <a href="profiler-markers.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profilermarker">Glossary</a></span></span></span> yang mewakili ruang lingkup instrumentasi bernama, yang kemudian Anda gunakan untuk menghasilkan sampel instrumentasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>SetMarkerMetadataName</code></td> 
+          <td style="text-align:left;">Menentukan nama parameter kustom yang dapat dilewati bersama dengan sampel instrumentasi untuk penanda Profiler.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>BeginSample</code></td> 
+          <td style="text-align:left;">Memulai bagian instrumentasi dari kode yang dinamakan setelah penanda Profiler.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>EndSample</code></td> 
+          <td style="text-align:left;">Mengakhiri bagian instrumentasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>EmitEvent</code></td> 
+          <td style="text-align:left;">Emits peristiwa generik dengan metadata.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>IsEnabled</code></td> 
+          <td style="text-align:left;">Kembali 1 jika Profiler menangkap data.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>IsAvailable</code></td> 
+          <td style="text-align:left;">Kembali 1 untuk Editor atau Pemain Pembangunan di mana Profiler tersedia, dan 0 untuk Pemain Rilis.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>RegisterThread</code></td> 
+          <td style="text-align:left;">Daftarkan benang saat ini di bawah nama yang ditentukan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>UnregisterThread</code></td> 
+          <td style="text-align:left;">Unregisters benang saat ini dari Profiler.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>Contoh penggunaan</h3> 
+       <p>Contoh ini menghasilkan Peristiwa profiler yang kemudian ditampilkan di jendela Profiler.</p> 
+       <pre><code class="lang-csharp">#include &lt;IUnityInterface.h&gt;
+#include &lt;IUnityProfiler.h&gt;
+
+static IUnityProfiler* s_UnityProfiler = NULL;
+static const UnityProfilerMarkerDesc* s_MyPluginMarker = NULL;
+static bool s_IsDevelopmentBuild = false;
+
+static void MyPluginWorkMethod()
+{
+    if (s_IsDevelopmentBuild)
+        s_UnityProfiler-&gt;BeginSample(s_MyPluginMarker);
+
+    // Code I want to see in Unity Profiler as "MyPluginMethod".
+    // ...
+
+    if (s_IsDevelopmentBuild)
+        s_UnityProfiler-&gt;EndSample(s_MyPluginMarker);
+}
+
+extern "C" void UNITY_INTERFACE_EXPORT UNITY_INTERFACE_API UnityPluginLoad(IUnityInterfaces* unityInterfaces)
+{
+    s_UnityProfiler = unityInterfaces-&gt;Get&lt;IUnityProfiler&gt;();
+    if (s_UnityProfiler == NULL)
+        return;
+    s_IsDevelopmentBuild = s_UnityProfiler-&gt;IsAvailable() != 0;
+    s_UnityProfiler-&gt;CreateMarker(&amp;s_MyPluginMarker, "MyPluginMethod", kUnityProfilerCategoryOther, kUnityProfilerMarkerFlagDefault, 0);
+}
+
+extern "C" void UNITY_INTERFACE_EXPORT UNITY_INTERFACE_API UnityPluginUnload()
+{
+    s_UnityProfiler  = NULL;
+}
+</code></pre> 
+       <h2>Profil API callback</h2> 
+       <p>API plug-in Profiler asli menyediakan antarmuka antara subsistem Unity dan API profil pihak ketiga sehingga Anda dapat menggunakan alat profil eksternal untuk memberi profil aplikasi Unity Anda. Profil IUnity Callbacks header mengekspos API, yang menyimpan Unity di folder <code>&lt;UnityInstallPath&gt;\Editor\Data\PluginAPI</code> instalasi Unity Anda. (On macOS, klik kanan pada aplikasi Unity, dan pilih <strong>Show Package Contents</strong>. header di <code>Contents\PluginAPI</code>.</p> 
+       <p>Fitur Unity Profiler berikut membantu menangkap data instrumentasi sehingga Anda dapat menganalisis kinerja aplikasi Anda.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Profiler feature</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Categories</strong></td> 
+          <td style="text-align:left;">Unity kelompok data profil ke dalam kategori (seperti rendering, Scripting dan Animasi), dan menetapkan warna untuk setiap kategori. Kategori berkode warna membantu Anda secara visual membedakan jenis data di jendela Profiler. API plug-in asli Profiler mengambil warna-warna ini sehingga Anda dapat menggunakannya dalam alat profil eksternal.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Usage flags</strong></td> 
+          <td style="text-align:left;">Penggunaan bendera bertindak sebagai filter yang mengurangi jumlah data yang disatukan mengirim ke alat profil eksternal. Anda dapat menggunakan bendera penggunaan untuk menghapus informasi yang tidak perlu dari data profil sebelum Unity mengirimkannya ke alat eksternal. Profiler menerapkan bendera penggunaan berikut untuk penanda acara sehingga Anda dapat menyaring data:<br><br><strong>Availability flags</strong>that bendera apakah penanda tersedia di Editor Unity, pemain pengembangan, atau pemain rilis.<br><br><strong>Verbosity levels</strong> yang mengekor ke jenis tugas yang Anda lakukan di Editor, dan tingkat informasi yang dibutuhkan tugas (misalnya, internal, debug, atau tingkat pengguna).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Frame events</strong></td> 
+          <td style="text-align:left;">Anda dapat menggunakan API plug-in asli Profiler untuk melakukan analisis kerangka waktu dalam alat profil eksternal.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Thread profiling</strong></td> 
+          <td style="text-align:left;">Unity melakukan sejumlah besar pekerjaan pada benang (misalnya, benang utama, render benang dan sistem kerja benang). Anda dapat menggunakan API plug-in asli Profiler untuk mengaktifkan profil pada setiap benang.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Untuk menggunakan data instrumentasi yang Unity Profileer menghasilkan profiler eksternal, Anda dapat menggunakan set minimal callback di C / C++ Anda kode plug-in yang mengintegrasikan profiler pihak ketiga:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Callback</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>RegisterCreateCategoryCallback</code></td> 
+          <td style="text-align:left;">Daftar panggilan <code>IUnityProfilerCreateCategoryCallback</code> untuk mendapatkan nama <span class="tooltip"><strong>Profiler category</strong><span class="tooltiptext">Mengidentifikasi data beban kerja untuk subsistem Unity (misalnya, rendering, Scripting dan kategori Animasi). Unity menerapkan pengkodean warna untuk kategori untuk secara visual membedakan antara jenis data di jendela <strong>Profiler</strong>.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profilercategory">Glossary</a></span></span></span> dan warna setiap Unity menciptakan kategori.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>RegisterCreateMarkerCallback</code></td> 
+          <td style="text-align:left;">Daftar callback <code>IUnityProfilerCreateMarkerCallback</code> yang disebut setiap Unity membuat penanda. Gunakan untuk mendapatkan nama, kategori Profiler, dan bendera penggunaan penanda. Parameter const <code>UnityProfilerMarkerDesc* markerDesc</code> dari fungsi callback mewakili pointer terus-menerus untuk deskripsi penanda yang dapat Anda gunakan untuk menyaring penanda dalam <code>RegisterMarkerEventCallback</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>RegisterMarkerEventCallback</code></td> 
+          <td style="text-align:left;">Daftar panggilan IUnityProfilerMarkerEventCallback yang disatukan invokes ketika single-shot, ruang lingkup, alokasi memori, atau acara pengumpulan sampah terjadi. Anda kemudian dapat menggunakan callback ini untuk membatalkan fungsi yang relevan dalam alat profil eksternal. <strong>Note:</strong> Unity mewakili peristiwa alokasi memori dengan GC. Alloc marker, dan acara koleksi sampah dengan GC. Collectie</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>RegisterFrameCallback</code></td> 
+          <td style="text-align:left;">Memungkinkan sampel ke dalam bingkai logis sehingga alat profil eksternal yang tidak menggunakan bingkai dapat menggunakan sampel ini. Juga mendaftarkan panggilan bahwa Unity Profiler berjalan ketika Unity memulai bingkai CPU logis berikutnya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>RegisterCreateThreadCallback</code></td> 
+          <td style="text-align:left;">Daftarkan callback untuk mendapatkan nama benang internal setiap Unity mendaftarkan benang untuk profil.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>Contoh penggunaan</h3> 
+       <p>Contoh ini menunjukkan bagaimana untuk lulus acara Unity Profileer ke profiler lain yang telah mendorong/pop semantik. Ini menyediakan dua fungsi:</p> 
+       <ul> 
+        <li> <code>void MyProfilerPushMarker(const char* name)</code> - mendorong penanda nama.</li> 
+        <li> <code>void MyProfilerPopMarker()</code> - pops instrumentasi marker.</li> 
+       </ul> 
+       <p>Contoh berikut memberikan implementasi minimal yang diperlukan untuk lulus mulai dan mengakhiri acara instrumentasi dari Unity Profileer ke profiler eksternal:</p> 
+       <pre><code class="lang-csharp">#include &lt;IUnityInterface.h&gt;
+#include &lt;IUnityProfilerCallbacks.h&gt;
+
+static IUnityProfilerCallbacks* s_UnityProfilerCallbacks = NULL;
+
+static void UNITY_INTERFACE_API MyProfilerEventCallback(const UnityProfilerMarkerDesc* markerDesc, UnityProfilerMarkerEventType eventType, unsigned short eventDataCount, const UnityProfilerMarkerData* eventData, void* userData)
+{
+    switch (eventType)
+    {
+        case kUnityProfilerMarkerEventTypeBegin:
+        {
+            MyProfilerPushMarker(markerDesc-&gt;name);
+            break;
+        }
+        case kUnityProfilerMarkerEventTypeEnd:
+        {
+            MyProfilerPopMarker();
+            break;
+        }
+    }
+}
+
+static void UNITY_INTERFACE_API MyProfilerCreateMarkerCallback(const UnityProfilerMarkerDesc* markerDesc, void* userData)
+{
+    s_UnityProfilerCallbacks-&gt;RegisterMarkerEventCallback(markerDesc, MyProfilerEventCallback, NULL);
+}
+
+extern "C" void UNITY_INTERFACE_EXPORT UNITY_INTERFACE_API UnityPluginLoad(IUnityInterfaces* unityInterfaces)
+{
+    s_UnityProfilerCallbacks = unityInterfaces-&gt;Get&lt;IUnityProfilerCallbacks&gt;();
+    s_UnityProfilerCallbacks-&gt;RegisterCreateMarkerCallback(&amp;MyProfilerCreateMarkerCallback, NULL);
+}
+
+extern "C" void UNITY_INTERFACE_EXPORT UNITY_INTERFACE_API UnityPluginUnload()
+{
+    s_UnityProfilerCallbacks-&gt;UnregisterCreateMarkerCallback(&amp;MyProfilerCreateMarkerCallback, NULL);
+    s_UnityProfilerCallbacks-&gt;UnregisterMarkerEventCallback(NULL, &amp;MyProfilerEventCallback, NULL);
+}
+</code></pre> 
+       <p>Sitemap Untuk membongkar panggilan yang diberikan dari semua penanda, menjalankan <strong>Note:</strong> dengan parameter pertama yang ditetapkan ke <code>UnregisterEventCallback</code>.<code>null</code>.</p> 
+       <h4>UnitySystracePlugin contoh</h4> 
+       <p>Anda dapat mendaftar dan panggilan penanda yang tidak terdaftar secara dinamis, setelah setiap bingkai. Contoh berikut meminimalkan profil overhead dengan mengaktifkan dan menonaktifkan callback, tergantung pada keadaan profil pihak ketiga.</p> 
+       <pre><code class="lang-csharp">| static void UNITY_INTERFACE_API SystraceFrameCallback(void* userData)
+{
+    bool isCapturing = ATrace_isEnabled();
+    if (isCapturing != s_isCapturing)
+    {
+        s_isCapturing = isCapturing;
+        if (isCapturing)
+        {
+            s_UnityProfilerCallbacks-&gt;
+              RegisterCreateMarkerCallback(SystraceCreateEventCallback, NULL);
+        }
+        else
+        {
+            s_UnityProfilerCallbacks-&gt;
+              UnregisterCreateMarkerCallback(SystraceCreateEventCallback, NULL);
+            s_UnityProfilerCallbacks-&gt;
+              UnregisterMarkerEventCallback(NULL, SystraceEventCallback, NULL);
+        }
+    }
+}
+</code></pre> 
+       <p>Sitemap Untuk membongkar panggilan yang diberikan dari semua penanda, menjalankan <strong>Note:</strong> dengan parameter pertama yang ditetapkan ke <code>UnregisterEventCallback</code>.<code>null</code>.</p> 
+       <h3>penanda khusus</h3> 
+       <p>Unity memiliki penanda khusus berikut yang mengandung metadata yang berguna:</p> 
+       <ul> 
+        <li>Profiler.DefaultMarker</li> 
+        <li>GC.Alloc</li> 
+       </ul> 
+       <h4>Profiler.DefaultMarker</h4> 
+       <p><code>Profiler.DefaultMarker</code> adalah penanda yang dimiliki Unity untuk dan acara.</p> 
+       <p>Dalam contoh di atas, <code>kUnityProfilerMarkerEventTypeBegin eventType</code> sesuai dengan peristiwa <code>Profiler.BeginSample</code> dan memiliki data berikut:</p> 
+       <ul> 
+        <li>Int32: ID instance <code>UnityEngine.Object</code>. Ini adalah 0 jika objek tidak ditentukan.</li> 
+        <li>UInt16 array: UTF16 string yang dilewatkan ke <code>Profiler.BeginSample</code>. Ukurannya ditekan.</li> 
+        <li>UInt32: Indeks kategori.</li> 
+       </ul> 
+       <h4>GC.Alloc</h4> 
+       <p> <code>GC.Alloc</code> adalah penanda yang sesuai dengan alokasi pengumpulan sampah. Memiliki data berikut:</p> 
+       <ul> 
+        <li>Int64: Ukuran alokasi.</li> 
+       </ul> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="Profiler-customizing-details-view.html"></a></span> 
+         <div class="tip">
+           Membuat panel detail modul kustom 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="performance-profiling-tools.html"></a></span> 
+         <div class="tip">
+           Profiling tools 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

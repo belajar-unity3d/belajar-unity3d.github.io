@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Audio di Unity 5.0</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="UpgradeGuides.html">Unity upgrade</a></li> 
+         <li><a href="UpgradeGuideLegacy.html">Panduan Peningkatan Warisan</a></li> 
+         <li><a href="UpgradeGuide5.html">Peningkatan ke Unity 5.0</a></li> 
+         <li>Audio di Unity 5.0</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UpgradeGuide5-Animation.html"></a></span> 
+          <div class="tip">
+            Animasi di Unity 5.0 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UpgradeGuide5-BakedDataFormats.html"></a></span> 
+          <div class="tip">
+            Data di Unity 5.0 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h2>Audio di Unity 5.0</h2> 
+       <p>Catatan ini menyadari ketika proyek-proyek upgrade dari Unity 4 ke Unity 5, jika proyek Anda menggunakan fitur audio.</p> 
+       <h3>AudioClips</h3> 
+       <p>Jumlah hal yang telah berubah dalam AudioClip. Pertama, tidak ada lagi bendera 3D pada aset. Bendera ini telah dipindahkan ke AudioSource dalam bentuk slider Blend Spatial memungkinkan Anda untuk, pada runtime, suara morfing dari 2D ke 3D. Proyek-proyek lama akan mendapatkan impor dengan cara seperti AudioSource pada <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#GameObject">Glossary</a></span></span></span> di <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Scene">Glossary</a></span></span></span> yang memiliki klip yang ditugaskan akan mendapatkan parameter Spatial Blend mereka yang ditetapkan sesuai dengan bendera 3D lama AudioClip. Untuk alasan yang jelas ini tidak mungkin untuk <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> yang secara dinamis menetapkan klip ke sumber, sehingga ini membutuhkan perbaikan manual.</p> 
+       <p>Sementara pengaturan default untuk properti 3D lama benar, secara default dalam sistem baru, default dari parameter Spatial Blend diatur ke 2D.</p> 
+       <p>Akhirnya, AudioClips sekarang bisa diedit.</p> 
+       <h3>Format</h3> 
+       <p>Penipuan properti Format telah berubah sehingga mencerminkan metode dimana data disimpan daripada format file tertentu yang menyimpang dari platform ke platform. Jadi dari sekarang di Uncompressed mengacu pada data sampel mentah, terkompresi mengacu pada metode <span class="tooltip"><strong>compression</strong><span class="tooltiptext">Metode menyimpan data yang mengurangi jumlah ruang penyimpanan yang dibutuhkan. <a href="class-TextureImporterOverride.html">Kompresi Tekstur</a>, <a href="class-AnimationClip.html#AssetProperties">Kompresi Animasi</a>, <a href="class-AudioClip.html">Kompresi Audio</a>, <a href="ReducingFilesize.html">Membangun Kompresi</a>.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#compression">Glossary</a></span></span></span> yang paling cocok untuk platform dan ADPCM mengacu pada metode kompresi ringan (dalam hal metode kompresi CPU) yang paling cocok untuk sinyal audio alami yang mengandung sejumlah suara yang adil (kaki, dampak, senjata dll) dan akan dimainkan dalam jumlah besar.</p> 
+       <h3>Membongkar dan memuat data audio di latar belakang</h3> 
+       <p>Fitur baru AudioClips adalah bahwa mereka memberikan dukungan untuk pilihan untuk menentukan apakah untuk memuat data audio atau tidak. Setiap properti AudioClip terlepas dari keadaan pemuatan data audio yang sebenarnya dan dapat ditanya kapan saja, sehingga memiliki kemungkinan untuk memuat permintaan sekarang membantu menjaga penggunaan memori AudioClips rendah. Selain AudioClips ini dapat memuat data audio mereka di latar belakang tanpa menghalangi benang permainan utama dan menyebabkan penurunan bingkai. Proses beban tentu saja dapat dikontrol melalui API scripting.</p> 
+       <h3>Multi-editing</h3> 
+       <p>Semua AudioClips sekarang mendukung multi-editing.</p> 
+       <h3>Kekuatan ke Mono</h3> 
+       <p>Force To Mono option sekarang melakukan pengnormalan puncak pada hasil campuran turun.</p> 
+       <h3>GetData/SetData</h3> 
+       <p>Panggilan API ini hanya didukung oleh klip yang menyimpan data audio yang tidak terkompresi sebagai PCM atau melakukan dekompresi pada beban. Dalam semakin banyak klip yang didukung ini, tetapi polanya tidak sangat jelas karena tergantung pada platform target dan memiliki perilaku yang berbeda dalam editor dan pemain mandiri. Sebagai hal baru, file pelacak dapat didekompresi sebagai data PCM ke dalam memori juga, sehingga GetData/SetData juga dapat digunakan pada ini.</p> 
+       <h3>perilaku jeda AudioSource</h3> 
+       <p>Jeda di Unity5 sekarang konsisten antara panggilan Play dan panggilan PlayOneShots. Jeda AudioSource jeda suara yang dimainkan dengan cara, dan memanggil Play atau PlayOneShot tidak menggunakan AudioSource untuk suara yang dimainkan juga.</p> 
+       <p>Untuk membantu dengan tidak menggunakan AudioSource tanpa bermain klip yang ditugaskan, (penggunaan untuk ketika ada suara satushot bermain), kami telah menambahkan AudioSource fungsi baru. Login</p> 
+       <h3>Photogallery</h3> 
+       <p>AudioMixer adalah fitur baru dari Unity 5 yang memungkinkan routing data audio yang kompleks dari kelompok AudioSource untuk mencampur di mana efek dapat diterapkan. Salah satu perbedaan utama dari komponen <span class="tooltip"><strong>Audio Filter</strong><span class="tooltiptext">Setiap filter audio yang mendistorsi suara dari Sumber Audio atau suara mencapai Audio Listener. <a class="tooltipMoreInfoLink" href="class-AudioEffect.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AudioFilter">Glossary</a></span></span></span> adalah bahwa filter audio mendapatkan sesaat per AudioSource dan oleh karena itu lebih mahal dalam hal CPU jika permainan memiliki sejumlah besar AudioSources dengan filter atau jika script hanya membuat banyak kasus GameObject yang mengandung. Dengan mixer sekarang dimungkinkan untuk mengatur kelompok dengan efek yang sama dan hanya memutar audio dari AudioSource melalui efek bersama yang menghasilkan penggunaan CPU yang lebih rendah.</p> 
+       <p>Mixer tidak saat ini mendukung efek berbasis skrip, tetapi memiliki API plugin audio asli baru yang memungkinkan pengembang untuk menulis efek kinerja tinggi yang mengintegrasikan mulus dengan efek bawaan lainnya.</p> 
+       <h3>AudioSettings</h3> 
+       <p>Cara sistem audio dikonfigurasi telah berubah. Pengaturan keseluruhan untuk mengatur mode speaker dan ukuran buffer DSP (yaitu latency) masih harus dikonfigurasi dalam audio <span class="tooltip"><strong>project settings</strong><span class="tooltiptext">Pengumpulan yang luas dari pengaturan yang memungkinkan Anda untuk mengkonfigurasi bagaimana Fisika, Audio, Jaringan, Grafik, Input dan banyak bidang lain dari jangkauan proyek Anda. <a class="tooltipMoreInfoLink" href="comp-ManagerGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span>, dan tambahan untuk ini sekarang juga memungkinkan untuk mengkonfigurasi jumlah suara nyata dan virtual. Jumlah suara nyata menentukan berapa banyak suara yang dapat didengar secara bersamaan dan oleh karena itu memiliki dampak yang kuat pada keseluruhan konsumsi CPU dari permainan. Sebelumnya ini sulit dikodekan ke 32 dengan beberapa pengecualian spesifik platform. Ketika jumlah suara bermain melebihi jumlah ini, mereka yang setidaknya audible akan diletakkan pada tahan sampai suara ini menjadi dominan atau beberapa suara dominan berhenti bermain. Suara ini hanya dilewati dari bermain. Mereka tidak berhenti, hanya dibuat tidak aktif sampai ada bandwidth lagi. Jumlah suara virtual mendefinisikan berapa banyak suara dapat dikelola secara total, jadi jika jumlah suara bermain melebihi ini, suara yang paling audible akan dihentikan.</p> 
+       <p>AudioSettings.outputSampleRate dan AudioSettings. Login Mode masih bisa dibaca dari, tetapi setters sekarang dideprediksi, seperti fungsi SetDSPBufferSize. Sebagai pengganti ini untuk perubahan konfigurasi audio yang perlu terjadi pada runtime sekarang ada struktur yang disebut AudioConfiguration. Ini dapat diperoleh melalui AudioSettings. GetConfiguration() yang akan mengembalikan pengaturan aktif pada perangkat output audio. Perubahan dapat dilakukan pada struktur ini dan diterapkan melalui AudioSettings. Reset() yang akan mengembalikan hasil boolean tergantung pada upaya sukses atau gagal menerapkan perubahan.</p> 
+       <p>Setiap kali perubahan pada konfigurasi audio terjadi, baik yang disebabkan oleh skrip melalui AudioSettings. Reset() atau karena peristiwa eksternal seperti plugging di monitor HDMI dengan dukungan audio, kartu suara eksternal atau headset USB, penegasan callback yang ditentukan pengguna.OnAudioConfigurationChanged(bool deviceChanged) akan divoked. Perangkat argumennyaDiubah akan salah jika perubahan itu disebabkan oleh AudioSettings. Reset() panggilan, dan benar jika disebabkan oleh perubahan perangkat eksternal (ini juga dapat mengubah tingkat sampel perangkat audio dalam penggunaan). Callback memungkinkan Anda untuk menciptakan suara yang mudah menguap seperti klip PCM yang dihasilkan, mengembalikan keadaan audio, atau lebih menyesuaikan pengaturan audio melalui panggilan ke AudioSettings. Sitemap</p> 
+       <!-- area:none --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UpgradeGuide5-Animation.html"></a></span> 
+         <div class="tip">
+           Animasi di Unity 5.0 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UpgradeGuide5-BakedDataFormats.html"></a></span> 
+         <div class="tip">
+           Data di Unity 5.0 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

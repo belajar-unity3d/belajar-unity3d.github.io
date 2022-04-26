@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Scripting API untuk paket</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="PackagesList.html">Paket dan set fitur</a></li> 
+         <li><a href="Packages.html">Manajer Paket Unity</a></li> 
+         <li>Scripting API untuk paket</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="class-PackageManifestImporter.html"></a></span> 
+          <div class="tip">
+            Paket jendela Manifest 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="upm-assets.html"></a></span> 
+          <div class="tip">
+            Aset paket akses 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Scripting API untuk paket</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Anda dapat menggunakan Paket Manager scripting API untuk berinteraksi dengan Paket Manager menggunakan C# <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span>. Misalnya, Anda mungkin ingin menginstal paket atau versi tertentu tergantung pada platform mesin target.</p> 
+       <p>Sistem bergantung pada kelas <a href="../ScriptReference/PackageManager.Client.html">PaketManager.Client</a>, yang dapat Anda gunakan untuk menemukan paket, menelusuri daftar paket, dan menginstal dan menghapus paket melalui scripting.</p> 
+       <p>Kelas penting lainnya adalah <a class="tooltipMoreInfoLink" href="../ScriptReference/PackageManager.PackageInfo.html">WordPress.org</a>, yang mengandung keadaan paket, termasuk metadata yang diperoleh dari <span class="tooltip"><strong>package manifest</strong><span class="tooltiptext">Setiap paket memiliki <em>manifest</em>, yang menyediakan informasi tentang paket ke Manajer Paket. Manifest mengandung informasi seperti nama paket, versinya, deskripsi untuk pengguna, ketergantungan pada paket lain (jika ada), dan rincian lainnya. <a href="upm-manifestPkg.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Packagemanifest">Glossary</a></span></span></span> dan registry. Misalnya, Anda bisa mendapatkan <a href="../ScriptReference/PackageManager.VersionsInfo.html">Daftar versi</a> yang tersedia untuk paket, atau <a href="../ScriptReference/PackageManager.PackageInfo-errors.html">daftar kesalahan</a> yang mungkin terjadi saat mencari atau menginstal paket.</p> 
+       <p><a name="Install"></a></p> 
+       <h2>Menambahkan paket ke proyek</h2> 
+       <p>Contoh ini menunjukkan cara menggunakan kelas <a href="../ScriptReference/PackageManager.Client.html">Client</a> untuk menginstal atau menambahkan paket ke proyek.</p> 
+       <p>Anda dapat menggunakan <a href="../ScriptReference/PackageManager.Client.Add.html">Login Login</a> untuk menambahkan paket. Ketika Anda memanggil metode <code>Client.Add</code>, Anda dapat menentukan hanya nama paket, atau nama dengan versi tertentu. Misalnya, menggunakan instalasi <code>Client.Add("com.unity.textmeshpro")</code> (atau pembaruan) versi terbaru dari paket TextMesh Pro; menggunakan versi <code>Client.Add("com.unity.textmeshpro@1.3.0")</code> 1.3.0 dari paket TextMesh Pro.</p> 
+       <p>Metode <code>Client.Add</code> mengembalikan instance <a href="../ScriptReference/PackageManager.Requests.AddRequest.html">AddRequest</a>, yang dapat Anda gunakan untuk mendapatkan status, kesalahan, atau respons <a href="../ScriptReference/PackageManager.Requests.Request_1.Result.html">Request</a> yang mengandung informasi <a href="../ScriptReference/PackageManager.PackageInfo.html">PackageInfo</a> untuk paket baru ditambahkan.</p> 
+       <pre><code class="lang-csharp">using System;
+using UnityEditor;
+using UnityEditor.PackageManager.Requests;
+using UnityEditor.PackageManager;
+using UnityEngine;
+
+namespace Unity.Editor.Example {
+   static class AddPackageExample
+   {
+       static AddRequest Request;
+
+       [MenuItem("Window/Add Package Example")]
+       static void Add()
+       {
+           // Add a package to the project
+           Request = Client.Add("com.unity.textmeshpro");
+           EditorApplication.update += Progress;
+       }
+
+       static void Progress()
+       {
+           if (Request.IsCompleted)
+           {
+               if (Request.Status == StatusCode.Success)
+                   Debug.Log("Installed: " + Request.Result.packageId);
+               else if (Request.Status &gt;= StatusCode.Failure)
+                   Debug.Log(Request.Error.message);
+
+               EditorApplication.update -= Progress;
+           }
+       }
+   }
+}
+</code></pre> 
+       <p><a name="Find"></a></p> 
+       <h2>Menjelajahi daftar paket dalam proyek</h2> 
+       <p>Contoh ini menunjukkan bagaimana cara menggunakan kelas <a href="../ScriptReference/PackageManager.Client.html">Client</a> untuk menjauhkan paket dalam proyek.</p> 
+       <p>Metode <a href="../ScriptReference/PackageManager.Client.List.html">Login Login</a> mengembalikan instance <a href="../ScriptReference/PackageManager.Requests.ListRequest.html">ListRequest</a>, yang dapat Anda gunakan untuk mendapatkan status operasi Daftar, kesalahan, atau respons <a href="../ScriptReference/PackageManager.Requests.Request_1.Result.html">Request</a> yang mengandung <a href="../ScriptReference/PackageManager.PackageCollection.html">PaketCollection</a> yang dapat Anda iterate.</p> 
+       <pre><code class="lang-csharp">using System;
+using UnityEditor;
+using UnityEditor.PackageManager.Requests;
+using UnityEditor.PackageManager;
+using UnityEngine;
+
+namespace Unity.Editor.Example {
+   static class ListPackageExample
+   {
+       static ListRequest Request;
+
+       [MenuItem("Window/List Package Example")]
+       static void List()
+       {
+           Request = Client.List();    // List packages installed for the project
+           EditorApplication.update += Progress;
+       }
+
+       static void Progress()
+       {
+           if (Request.IsCompleted)
+           {
+               if (Request.Status == StatusCode.Success)
+                   foreach (var package in Request.Result)
+                       Debug.Log("Package name: " + package.name);
+               else if (Request.Status &gt;= StatusCode.Failure)
+                   Debug.Log(Request.Error.message);
+
+               EditorApplication.update -= Progress;
+           }
+       }
+   }
+}
+</code></pre> 
+       <p><a name="Embed"></a></p> 
+       <h2>Menyiapkan paket dalam proyek</h2> 
+       <p>Contoh ini menunjukkan cara menggunakan kelas <a href="../ScriptReference/PackageManager.Client.html">Client</a> ke <a href="upm-embed.html">embed</a> salah satu paket yang telah diinstal dalam proyek Anda. Metode utama adalah metode <a href="../ScriptReference/PackageManager.Client.Embed.html">Login Login</a>, yang membuat salinan paket dan menyimpannya di bawah folder <code>Packages</code> proyek Anda.</p> 
+       <p>Metode <a class="tooltipMoreInfoLink" href="../ScriptReference/PackageManager.Client.Embed.html">Login Login</a> mengembalikan instance <a href="../ScriptReference/PackageManager.Requests.EmbedRequest.html">EmbedRequest</a>, yang dapat Anda gunakan untuk mendapatkan status operasi Embed, kesalahan, atau respons <a href="../ScriptReference/PackageManager.Requests.Request_1.Result.html">Request</a> yang mengandung informasi <a href="../ScriptReference/PackageManager.PackageInfo.html">PackageInfo</a> untuk <span class="tooltip"><strong>embedded package</strong><span class="tooltiptext">Paket <em>embedded</em> adalah paket yang Anda simpan di bawah direktori <code>Packages</code> di akar proyek Unity. Ini berbeda dari sebagian besar paket yang Anda unduh dari server paket. <a href="upm-concepts.html#Embedded">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Embeddedpackage">Glossary</a></span></span></span> baru.</p> 
+       <p>Contoh ini juga menggunakan metode <a href="../ScriptReference/PackageManager.Client.List.html">Login Login</a> untuk mengakses koleksi paket saat ini dipasang di proyek Anda dan memilih yang pertama yang tidak tertanam atau dibangun.</p> 
+       <p>Metode <a href="../ScriptReference/PackageManager.Client.List.html">Login Login</a> mengembalikan instance <a href="../ScriptReference/PackageManager.Requests.ListRequest.html">ListRequest</a>, yang dapat Anda gunakan untuk mendapatkan status operasi Daftar, kesalahan, atau respons <a href="../ScriptReference/PackageManager.Requests.Request_1.Result.html">Request</a> yang mengandung <a href="../ScriptReference/PackageManager.PackageCollection.html">PaketCollection</a> yang dapat Anda iterate.</p> 
+       <pre><code class="lang-csharp">using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEditor;
+using UnityEditor.PackageManager.Requests;
+using UnityEditor.PackageManager;
+using UnityEngine;
+
+namespace Unity.Editor.Example
+{
+    static class EmbedPackageExample
+    {
+        static String targetPackage;
+        static EmbedRequest Request;
+        static ListRequest LRequest;
+
+        [MenuItem("Window/Embed Package Example")]
+        static void GetPackageName()
+        {
+            // First get the name of an installed package
+            LRequest = Client.List();
+            EditorApplication.update += LProgress;
+        }
+
+        static void LProgress()
+        {
+            if (LRequest.IsCompleted)
+            {
+                if (LRequest.Status == StatusCode.Success)
+                {
+                    foreach (var package in LRequest.Result)
+                    {
+                        // Only retrieve packages that are currently installed in the
+                        // project (and are neither Built-In nor already Embedded)
+                        if (package.isDirectDependency &amp;&amp; package.source
+                            != PackageSource.BuiltIn &amp;&amp; package.source
+                            != PackageSource.Embedded)
+                        {
+                            targetPackage = package.name;
+                            break;
+                        }
+                    }
+
+                }
+                else
+                    Debug.Log(LRequest.Error.message);
+
+                EditorApplication.update -= LProgress;
+
+                Embed(targetPackage);
+
+            }
+        }
+
+        static void Embed(string inTarget)
+        {
+            // Embed a package in the project
+            Debug.Log("Embed('" + inTarget + "') called");
+            Request = Client.Embed(inTarget);
+            EditorApplication.update += Progress;
+
+        }
+
+        static void Progress()
+        {
+            if (Request.IsCompleted)
+            {
+                if (Request.Status == StatusCode.Success)
+                    Debug.Log("Embedded: " + Request.Result.packageId);
+                else if (Request.Status &gt;= StatusCode.Failure)
+                    Debug.Log(Request.Error.message);
+
+                EditorApplication.update -= Progress;
+            }
+        }
+    }
+}
+</code></pre> 
+       <p><br></p> 
+       <p><a name="events"></a></p> 
+       <h2>Program Manager Paket</h2> 
+       <p>Gunakan kelas <a href="../ScriptReference/PackageManager.Events.html">Events</a> untuk mendaftarkan pegangan acara dengan Manajer Paket. Kelas <a href="../ScriptReference/PackageManager.Events.html">Events</a> berisi dua peristiwa yang dapat Anda berlangganan, yang Manajer Paket menaikkan poin-poin ini:</p> 
+       <ul> 
+        <li>Segera sebelum Manajer Paket mengubah daftar dependensi (<a href="../ScriptReference/PackageManager.Events-registeringPackages.html">registeringPackages</a>)</li> 
+        <li>Setelah paket Manajer impor dan menyusun daftar perubahan dependensi paket (<a href="../ScriptReference/PackageManager.Events-registeredPackages.html">registeredPackages</a>)</li> 
+       </ul> 
+       <p>Contoh berikut menunjukkan cara menggunakan kedua peristiwa ini.</p> 
+       <h3>Contoh menggunakan register Paket</h3> 
+       <pre><code class="lang-csharp">using UnityEditor.PackageManager;
+using UnityEngine;
+
+namespace Unity.Editor.Example
+{
+    public class EventSubscribingExample_RegisteringPackages
+    {
+        public EventSubscribingExample_RegisteringPackages()
+        {
+            // Subscribe to the event using the addition assignment operator (+=).
+            // This executes the code in the handler whenever the event is fired.
+            Events.registeringPackages += RegisteringPackagesEventHandler;
+        }
+
+        // The method is expected to receive a PackageRegistrationEventArgs event argument.
+        void RegisteringPackagesEventHandler(PackageRegistrationEventArgs packageRegistrationEventArgs)
+        {
+            Debug.Log("The list of registered packages is about to change!");
+
+           foreach (var addedPackage in packageRegistrationEventArgs.added)
+            {
+                Debug.Log($"Adding {addedPackage.displayName}");
+            }
+
+            foreach (var removedPackage in packageRegistrationEventArgs.removed)
+            {
+                Debug.Log($"Removing {removedPackage.displayName}");
+            }
+
+            // The changedFrom and changedTo collections contain the packages that are about to be updated.
+            // Both collections are guaranteed to be the same size with indices matching the same package name.
+            for (int i = 0; i &lt;= packageRegistrationEventArgs.changedFrom.Count; i++)
+            {
+                var oldPackage = packageRegistrationEventArgs.changedFrom[i];
+                var newPackage = packageRegistrationEventArgs.changedTo[i];
+
+                Debug.Log($"Changing ${oldPackage.displayName} version from ${oldPackage.version} to ${newPackage.version}");
+            }
+        }
+    }
+}
+</code></pre> 
+       <h3>Contoh menggunakan terdaftar Paket</h3> 
+       <pre><code class="lang-csharp">using UnityEditor;
+using UnityEditor.PackageManager;
+using UnityEngine;
+
+namespace Unity.Editor.Example
+{
+    public class EventSubscribingExample_RegisteredPackages
+    {
+        // You must use '[InitializeOnLoadMethod]' or '[InitializeOnLoad]' to subscribe to this event.
+        [InitializeOnLoadMethod]
+        static void SubscribeToEvent()
+        {
+            // This causes the method to be invoked after the Editor registers the new list of packages.
+            Events.registeredPackages += RegisteredPackagesEventHandler;
+        }
+
+        static void RegisteredPackagesEventHandler(PackageRegistrationEventArgs packageRegistrationEventArgs)
+        {
+            // Code executed here can safely assume that the Editor has finished compiling the new list of packages
+            Debug.Log("The list of registered packages has changed!");
+        }
+    }
+}
+</code></pre> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="class-PackageManifestImporter.html"></a></span> 
+         <div class="tip">
+           Paket jendela Manifest 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="upm-assets.html"></a></span> 
+         <div class="tip">
+           Aset paket akses 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

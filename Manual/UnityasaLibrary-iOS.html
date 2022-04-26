@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Mengintegrasikan Unity ke aplikasi iOS asli</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="platforms" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="PlatformSpecific.html">Pengembangan platform</a></li> 
+         <li><a href="iphone.html">iOS</a></li> 
+         <li>Mengintegrasikan Unity ke aplikasi iOS asli</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="iphone.html"></a></span> 
+          <div class="tip">
+            iOS 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="iphone-GettingStarted.html"></a></span> 
+          <div class="tip">
+            Memulai perkembangan iOS 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Mengintegrasikan Unity ke aplikasi iOS asli</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Halaman ini menjelaskan bagaimana untuk mengintegrasikan Perpustakaan Ketertiban Unity ke aplikasi asli iOS dengan Unity sebagai fitur Perpustakaan.</p> 
+       <p>Anda dapat menggunakan fitur ini untuk menyertakan fitur berkekuatan Unity, seperti 3D / 2D Real-Time Rendering, AR Experience, interaksi model 3D, atau 2D mini-games, dalam aplikasi asli Anda. Perpustakaan Runtime Unity mengekspos kontrol untuk mengelola kapan dan bagaimana memuat, mengaktifkan, dan membongkar konten dalam aplikasi asli Anda.</p> 
+       <h2>How it works</h2> 
+       <p>Untuk menggunakan Unity sebagai Perpustakaan untuk iOS, pertama membangun proyek Xcode Anda seperti biasa dari Unity (untuk informasi lebih lanjut, lihat <a href="BuildSettingsiOS.html">Membangun pengaturan untuk iOS</a>).</p> 
+       <p>Setiap Unity Login Proyek Xcode memiliki <a href="StructureOfXcodeProject.html">Struktur</a> berikut:</p> 
+       <ul> 
+        <li>Bagian perpustakaan dalam target <strong>UnityFramework</strong> yang mencakup sumber, <span class="tooltip"><strong>plug-ins</strong><span class="tooltiptext">Satu set kode yang dibuat di luar Unity yang menciptakan fungsi dalam Unity. Ada dua jenis plug-ins yang dapat Anda gunakan di Unity: Managed plug-ins (diproduksi. Rakitan NET dibuat dengan alat-alat seperti Studio Visual) dan plug-ins asli (pustaka kode asli yang spesifik platform). <a class="tooltipMoreInfoLink" href="Plugins.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Plug-in">Glossary</a></span></span></span>, dan kerangka tergantung. Ini juga menghasilkan file <em>UnityFramework.framework</em>.</li> 
+        <li>Bagian peluncur tipis dalam target <strong>Unity-iPhone </strong> yang mencakup data representasi aplikasi dan menjalankan perpustakaan. Target <strong>Unity-iPhone</strong> memiliki ketergantungan tunggal pada target <strong>UnityFramework</strong>.</li> 
+       </ul> 
+       <p>Untuk mengintegrasikan Unity ke proyek Xcode lain, Anda perlu menggabungkan proyek Xcode (yang asli dan satu Unity menghasilkan) ke dalam ruang kerja Xcode tunggal, dan tambahkan file <em>UnityFramework.framework</em> ke bagian <strong>Embedded Binaries</strong> dari target <strong>Application</strong> untuk proyek Xcode asli. Setelah Anda melakukan ini, Anda dapat menggunakan kelas <code>UnityFramework</code> untuk mengontrol runtime Unity.</p> 
+       <p><a href="https://github.com/Unity-Technologies/uaal-example/blob/master/docs/ios.md">repository</a> ini berisi proyek contoh dan plug-in yang menunjukkan cara mengintegrasikan Unity ke proyek Xcode, bersama dengan dokumentasi lebih lanjut.</p> 
+       <h2>UnityFramework kelas</h2> 
+       <p>Anda dapat mengontrol runtime Unity melalui contoh kelas <code>UnityFramework</code> Objective-C, yang merupakan kelas utama dari <em>UnityFramework.framework</em>:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Method</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>+ (UnityFramework*)getInstance;</code></td> 
+          <td style="text-align:left;">Metode kelas tunggal yang mengembalikan instance ke <code>UnityFramework</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>- (UnityAppController*)appController;</code></td> 
+          <td style="text-align:left;">Mengembalikan subclass <code>UnityAppController</code>. Ini adalah kelas Unity akar di sisi asli, dan dapat mengakses objek terkait tampilan aplikasi, seperti <code>UIApplicationDelegate</code>, <code>UIView</code>, <code>UIViewControllers</code>, atau <code>CADisplayLink</code>.<code>DisplayConnection</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>- (void)setDataBundleId:(const char*)bundleId;</code></td> 
+          <td style="text-align:left;">Mengatur Bundel di mana runtime Unity harus mencari folder <em>Data</em>. Untuk informasi lebih lanjut, lihat dokumentasi pada <a href="StructureOfXcodeProject.html">Data folder</a>. Hubungi metode ini sebelum memanggil <code>runUIApplicationMainWithArgc</code> atau <code>runEmbeddedWithArgc</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>- (void)runUIApplicationMainWithArgc:(int)argc argv:(char*[])argv;</code></td> 
+          <td style="text-align:left;">Cara default untuk menjalankan Unity dari metode utama di mana tidak ada pandangan lain.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>- (void)runEmbeddedWithArgc:(int)argc argv:(char*[])argv appLaunchOpts:(NSDictionary*)appLaunchOpts;</code></td> 
+          <td style="text-align:left;">Hubungi metode ini ketika Anda perlu menjalankan Unity ketika Pandangan lain ada.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>- (void)unloadApplication;</code></td> 
+          <td style="text-align:left;">Hubungi ini untuk membongkar Unity dan menerima callback ke <code>UnityFrameworkListener</code> setelah pembongkaran selesai. Unity akan melepaskan sebagian besar memori itu menempati, tetapi tidak semua itu. Anda akan dapat menjalankan Unity lagi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>- (void)registerFrameworkListener:(id&lt;UnityFrameworkListener&gt;)obj;</code></td> 
+          <td style="text-align:left;">Daftarkan objek pendengar yang menerima penelepon acara terkait lifecycle UnityFramework.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>- (void)unregisterFrameworkListener:(id&lt;UnityFrameworkListener&gt;)obj;</code></td> 
+          <td style="text-align:left;">Unregister objek pendengar.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>- (void)showUnityWindow;</code></td> 
+          <td style="text-align:left;">Panggilan metode ini sementara tampilan non-Unity ditampilkan juga menunjukkan Tampilan Unity yang sudah berjalan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>- (void)pause:(bool)pause;</code></td> 
+          <td style="text-align:left;">Pause Unity.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>- (void)setExecuteHeader:(const MachHeader*)header;</code></td> 
+          <td style="text-align:left;">Anda harus memanggil ini sebelum menjalankan Unity untuk CrashReporter untuk bekerja dengan benar.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>- (void)sendMessageToGOWithName:(const char*)goName functionName:(const char*)name message:(const char*)msg;</code></td> 
+          <td style="text-align:left;">Metode ini adalah proxy untuk <a href="PluginsForIOS.html">UnitySendMessage</a>. Ini menemukan objek permainan dengan nama dan fungsi panggilanName dengan parameter pesan tali tunggal.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>(void)quitApplication:(int)exitCode;</code></td> 
+          <td style="text-align:left;">Hubungi ini untuk membongkar Unity sepenuhnya dan menerima panggilan ke <code>UnityFrameworkListener</code> ketika Unity berhenti. Unity akan melepaskan semua memori.<br><br><strong>Note:</strong> Anda tidak akan dapat menjalankan Unity lagi dalam proses yang sama setelah panggilan ini. Anda dapat mengatur <code>quitHandler</code> pada <code>AppController</code> untuk menimpa pembunuh proses default.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Limitations</h2> 
+       <p>Unity tidak mengontrol siklus hidup runtime, sehingga Unity sebagai Perpustakaan mungkin tidak bekerja untuk semua kasus penggunaan yang mungkin. Batasan yang diketahui termasuk:</p> 
+       <ul> 
+        <li>Unity sebagai Perpustakaan hanya mendukung rendering layar penuh, dan tidak mendukung rendering pada bagian layar.</li> 
+        <li>Anda tidak dapat memuat lebih dari satu kasus runtime Unity.</li> 
+        <li>Anda mungkin perlu untuk menyesuaikan plug-in pihak ketiga (baik <a href="NativePlugins.html">native</a> dan <a href="UsingDLL.html">managed</a>) untuk bekerja dengan runtime Unity.</li> 
+       </ul> 
+       <hr> 
+       <ul> 
+        <li> <span class="page-history">Unity sebagai Perpustakaan untuk iOS ditambahkan di .</span><span class="search-words">NewIn20193</span> </li> 
+       </ul> 
+       <!-- area:platforms --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="iphone.html"></a></span> 
+         <div class="tip">
+           iOS 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="iphone-GettingStarted.html"></a></span> 
+         <div class="tip">
+           Memulai perkembangan iOS 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

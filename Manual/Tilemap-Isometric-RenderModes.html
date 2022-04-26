@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Mode Renderer Tilemap</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Unity2D.html">2D</a></li> 
+         <li><a href="class-Tilemap.html">Tilemap</a></li> 
+         <li><a href="Tilemap-Isometric.html">Isometric Tilemaps</a></li> 
+         <li>Mode Renderer Tilemap</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="Tilemap-Isometric-Palette.html"></a></span> 
+          <div class="tip">
+            Membuat palet ubin untuk Isometric Tilemap 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="Tilemap-Isometric-ScriptableBrushes.html"></a></span> 
+          <div class="tip">
+            Sikat Alkitab 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Mode Renderer Tilemap</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Komponen <strong>Tilemap Renderer</strong> menghasilkan <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-Tilemap.html">Tilemap</a><span class="tooltiptext">GameObject yang memungkinkan Anda untuk dengan cepat membuat tingkat 2D menggunakan ubin dan overlay grid. <a href="class-Tilemap.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Tilemap">Glossary</a></span></span></span> di <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>. Unity membuat Tilemaps dengan Tilemap Renderer terpasang secara default. The Tilemap Renderer dapat:</p> 
+       <ul> 
+        <li><a href="#batch">Render dalam batch dengan <strong>Chunk Mode</strong></a></li> 
+        <li><a href="#individual">Render secara individual dengan <strong>Individual Mode</strong></a></li> 
+       </ul> 
+       <p>Mode Render mempengaruhi bagaimana Tilemap <span class="tooltip"><strong>Sprites</strong><span class="tooltiptext">Objek grafis 2D. Jika Anda digunakan untuk bekerja di 3D, Sprites pada dasarnya hanya tekstur standar tetapi ada teknik khusus untuk menggabungkan dan mengelola tekstur sprite untuk efisiensi dan kenyamanan selama perkembangan. <a class="tooltipMoreInfoLink" href="Sprites.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Sprite">Glossary</a></span></span></span> diurutkan ketika diberikan.</p> 
+       <p><a name="batch"></a></p> 
+       <h2>Pengirim dalam batch dengan Mode Chunk</h2> 
+       <p> <a name="Chunk"></a><strong>Chunk Mode</strong> adalah mode rendering default dari Tilemap Renderer:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/2D_IsoTilemap_9.png" alt=""> 
+       </figure> 
+       <p>Ketika set ke <strong>Chunk Mode</strong>, Pegangan Renderer Tilemap di sebuah Tilemap dalam batch dan render bersama-sama. Mereka diperlakukan sebagai item semacam tunggal ketika diurutkan dalam <a href="2DSorting.html">Queue Transparan 2D</a>. Ini mengurangi jumlah penarikan panggilan untuk meningkatkan kinerja keseluruhan, namun Renderer lain tidak dapat diberikan di antara bagian mana pun dari Tilemap yang mencegah Sprites render lainnya dapat bercampur dengan Sprites Tilemap.</p> 
+       <h3>Menggunakan Atlas Sprite untuk Sorting (Chunk Mode saja)</h3> 
+       <p>Pada <strong>Chunk Mode</strong>, Renderer Tilemap tidak dapat memilah ubin dari beberapa tekstur secara individual dan tidak membuat Sprit ubin secara konsisten (lihat <a href="#chunkExample">example below</a>).</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/2D_IsoTilemap_10.png" alt=""> 
+       </figure> 
+       <p>Paket semua Sprit individu yang membuat Tilemap menjadi satu untuk memecahkan masalah ini. Untuk melakukan ini:</p> 
+       <ol> 
+        <li><p>Buat <span class="tooltip"><strong>Sprite Atlas</strong><span class="tooltiptext">Tekstur yang terdiri dari beberapa tekstur yang lebih kecil. Juga disebut sebagai atlas tekstur, sprite gambar, sprite sheet atau tekstur dikemas. <a class="tooltipMoreInfoLink" href="class-SpriteAtlas.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#spriteatlas">Glossary</a></span></span></span> dari menu Aset (ke: <strong>Atlas &gt; Create &gt; Sprite Atlas</strong>).</p></li> 
+        <li><p>Tambahkan Sprites ke Sprite Atlas dengan menyeret daftar <strong>Objects for Packing</strong> di jendela Atlas' <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>. <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/2D_IsoTilemap_11.png" alt=""> </p></li> 
+        <li><p>Klik <strong>Pack Preview</strong>. Paket unity Sprites ke dalam Sprite Atlas selama mode Bermain, dan mengurutkan dengan benar dan membuat mereka. Ini hanya terlihat di Editor selama mode Play. <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/2D_IsoTilemap_12.png" alt="label"> </p></li> 
+       </ol> 
+       <p><a name="individual"></a></p> 
+       <h3>Pengirim secara individual dengan Mode Individu</h3> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/2D_IsoTilemap_13.png" alt=""> 
+       </figure> 
+       <p>Pada <strong>Individual Mode</strong>, Tilemap Renderer menyortir dan membuat Sprites pada Tilemap dengan pertimbangan Renderer lain di Adegani, seperti <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-SpriteRenderer.html">Sprite Renderers</a><span class="tooltiptext">Komponen yang memungkinkan Anda menampilkan gambar sebagai Sprites untuk digunakan di kedua adegan 2D dan 3D. <a href="class-SpriteRenderer.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#SpriteRenderer">Glossary</a></span></span></span> dan <span class="tooltip"><a href="class-MeshRenderer.html">Mesh Renderers</a><span class="tooltiptext">Komponen mesh yang mengambil geometri dari Filter Mesh dan render di posisi yang ditentukan oleh komponen Transform objek. <a href="class-MeshRenderer.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#MeshRenderer">Glossary</a></span></span></span>. Gunakan mode ini jika Renderers lain berinteraksi dengan Sprites dan objek di Tilemap.</p> 
+       <p>Dalam mode ini, penyortiran Renderer Tilemap berdasarkan posisi mereka di Tilemap dan sifat penyortiran yang ditetapkan dalam Renderer Tilemap. Sebagai contoh, hal ini memungkinkan Sprite karakter untuk pergi ke rintangan Sprites (lihat contoh di bawah).</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/2D_IsoTilemap_14.png" alt="In Individual Mode, the character can be rendered behind the tower Sprites, and also appear above the ground Sprites."> 
+        <figcaption>
+          Dalam Mode Individu, karakter dapat diberikan di balik menara Sprit, dan juga muncul di atas tanah Sprit. 
+        </figcaption> 
+       </figure> 
+       <p>Sitemap Menggunakan contoh yang sama dalam <a name="chunkExample"></a>, Sprites karakter dapat disembunyikan di belakang kecambah tanah:<strong>Chunk Mode</strong>, character Sprites may get hidden behind ground sprites:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/2D_IsoTilemap_15.png" alt="The same Scene rendered in Chunk Mode."> 
+        <figcaption>
+          Adegan yang sama diberikan pada 
+         <strong>Chunk Mode</strong>. 
+        </figcaption> 
+       </figure> 
+       <p>Menggunakan <strong>Individual Mode</strong> dapat mengurangi kinerja karena ada lebih banyak overhead ketika rendering setiap Sprite secara individual di Tilemap.</p> 
+       <h3>Custom Axis Sorting Mode untuk Z sebagai Y Tilemap dalam Mode Individu <a name="CustomAxis"></a>%</h3> 
+       <p>Untuk mengurutkan dan render ubin Sprites pada <strong>Isometric Z as Y</strong> Tilemap, Transparency Sort Axis harus diatur ke <strong>Custom Axis</strong>. Set pertama <strong>Renderer Mode</strong> untuk 'Modus Individu' dan pergi ke <strong>Edit &gt; Settings &gt; Graphics</strong>.</p> 
+       <p>Mengatur <strong>Transparency Sort Mode</strong> ke <strong>Custom Axis</strong>, dan atur nilai Y-nya menjadi -0.26. Lihat halaman pada <a href="Tilemap-Isometric-CreateIso.html">Membuat Isometric Tilemap</a> untuk informasi lebih lanjut tentang pengaturan <strong>Transparency Sort Axis</strong>.</p> 
+       <hr> 
+       <ul> 
+        <li><span class="page-history">Isometric Tilemaps ditambahkan dalam <span class="search-words">NewIn20183</span></span></li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="Tilemap-Isometric-Palette.html"></a></span> 
+         <div class="tip">
+           Membuat palet ubin untuk Isometric Tilemap 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="Tilemap-Isometric-ScriptableBrushes.html"></a></span> 
+         <div class="tip">
+           Sikat Alkitab 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Bekerja dengan Heightmaps</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="CreatingEnvironments.html">Bangunan dunia</a></li> 
+         <li><a href="script-Terrain.html">Terrain</a></li> 
+         <li>Bekerja dengan Heightmaps</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="terrain-Grass.html"></a></span> 
+          <div class="tip">
+            Rumput dan rincian lainnya 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="terrain-OtherSettings.html"></a></span> 
+          <div class="tip">
+            Pengaturan Terrain 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Bekerja dengan Heightmaps</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Alat Terrain yang mempengaruhi tinggi, seperti <a class="tooltipMoreInfoLink" href="terrain-RaiseLowerTerrain.html">Raise atau Lower Terrain</a> dan <a href="terrain-SetHeight.html">Set Tinggi</a>, gunakan tekstur abu-abu yang disebut heightmap. Unity mewakili ketinggian setiap titik pada <span class="tooltip"><strong>Terrain</strong><span class="tooltiptext">Pemandangan di tempat kejadian Anda. Terrain GameObject menambahkan pesawat datar besar untuk adegan Anda dan Anda dapat menggunakan jendela Inspektur Terrain untuk menciptakan lanskap rinci. <a href="terrain-UsingTerrains.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Terrain">Glossary</a></span></span></span> sebagai nilai dalam array persegi panjang. Ini mewakili array ini menggunakan <span class="tooltip"><a href="Textures.html#TerrainHeightmaps">heightmap</a><span class="tooltiptext">Tekstur abu-abu yang menyimpan data tinggi untuk objek. Setiap pixel menyimpan perbedaan tinggi tegak lurus dengan wajah yang pixel mewakili.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Heightmap">Glossary</a></span></span></span> skala abu-abu. Heightmaps dibangun ke Terrain, dan nilai-nilai yang disimpan dalam heightmap mendefinisikan ketinggian setiap titik atau simpul di Terrain.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/1.9-ExampleHeightmap.png" alt="Example heightmap"> 
+        <figcaption>
+          Contoh heightmap 
+        </figcaption> 
+       </figure> 
+       <h2>Mengimpor dan mengekspor peta tinggi</h2> 
+       <p>Anda dapat mengimpor dan mengekspor heightmap ke dalam Editor Unity. Ini berguna ketika Anda ingin menggunakan data ketinggian dunia nyata untuk meniru landmark seperti Gunung Everest, atau bekerja pada gambar heightmap dalam editor eksternal seperti Photoshop. Anda juga dapat menggunakan aplikasi model 3D, seperti Houdini dan Mesin Dunia, untuk menghasilkan Terrain, kemudian mengimpor Terrain Anda ke Unity sebagai peta tinggi.</p> 
+       <p>Praktik bagus untuk menyimpan heightmaps sebagai file RAW. File RAW menggunakan format abu-abu 16-bit yang kompatibel dengan sebagian besar editor gambar dan lansekap. Editor Unity memungkinkan Anda untuk mengimpor dan mengekspor file peta tinggi RAW untuk Terrain.</p> 
+       <p>Untuk mengakses pengaturan impor dan ekspor ke dalam Editor, pilih komponen Terrain di <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>, dan klik tombol <strong>Terrain Settings</strong> ( ikon gigi di toolbar).</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/1.9-TerrainSettings_TextureResolutions.png" alt="Import Raw and Export Raw buttons in the Terrain Settings Inspector"> 
+        <figcaption>
+          Impor Tombol Baku dan Ekspor di Inspektur Pengaturan Terrain 
+        </figcaption> 
+       </figure> 
+       <p>Di bawah <strong>Texture Resolutions (On Terrain Data)</strong>, ada dua tombol yang dilabeli <strong>Import Raw</strong> dan <strong>Export Raw</strong>.</p> 
+       <ul> 
+        <li><p> <strong>Import Raw</strong> memungkinkan Unity untuk membaca peta tinggi dari format file RAW, dan menghasilkannya di Editor.<br><br><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/1.9-ImportRaw.png" alt="Import Heightmap window"> </p></li> 
+        <li><p> <strong>Export Raw</strong> memungkinkan Unity untuk menulis peta tinggi dari Editor ke format file RAW.<br><br><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/1.9-ExportRaw.png" alt="Export Heightmap window"> </p></li> 
+       </ul> 
+       <h3>Opsi impor dan ekspor</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Depth</strong></td> 
+          <td style="text-align:left;">Menentukan berapa banyak bit Penggunaan Unity per piksel di peta tinggi yang diimpor atau diekspor. Login Bit 16: Menggunakan 16 bit (2 byte)<br>• Bit 8: Menggunakan 8 bit (1 byte)<br>• Bit 8: Uses 8 bits (1 byte)</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Resolution</strong></td> 
+          <td style="text-align:left;">Resolusi tekstur (lebar dan tinggi) dari peta tinggi impor.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Byte Order</strong></td> 
+          <td style="text-align:left;">Menentukan bagaimana perintah Unity byte untuk setiap <span class="tooltip"><strong>pixel</strong><span class="tooltiptext">Unit terkecil dalam gambar komputer. Ukuran piksel tergantung pada resolusi layar Anda. Pencahayaan pixel dihitung pada setiap piksel layar. <a class="tooltipMoreInfoLink" href="ShadowPerformance.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#pixel">Glossary</a></span></span></span> di peta tinggi yang diimpor atau diekspor. Ini terutama berlaku untuk bit-16 heightmaps kedalaman, dan tergantung platform.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Flip Vertically</strong></td> 
+          <td style="text-align:left;">Menentukan apakah Unity membalikkan heightmap yang diekspor secara vertikal di seluruh sumbu x.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Terrain Size</strong></td> 
+          <td style="text-align:left;">Ukuran Terrain yang Unity akan menerapkan peta tinggi impor.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2020–06–30 Login</span></p></li> 
+        <li><p><span class="page-history">Konten yang diperbarui untuk mencerminkan UI dan opsi baru</span></p></li> 
+       </ul> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="terrain-Grass.html"></a></span> 
+         <div class="tip">
+           Rumput dan rincian lainnya 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="terrain-OtherSettings.html"></a></span> 
+         <div class="tip">
+           Pengaturan Terrain 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

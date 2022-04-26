@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Komponen Trail Renderer</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="visual-effects.html">Efek visual</a></li> 
+         <li><a href="visual-effects-lines-trails-billboards.html">Garis, jalur, dan papan iklan</a></li> 
+         <li>Komponen Renderer Trail</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="class-LineRenderer.html"></a></span> 
+          <div class="tip">
+            Komponen Renderer Line 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="class-BillboardRenderer.html"></a></span> 
+          <div class="tip">
+            Komponen Renderer Billboard 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Komponen Renderer Trail</h1> 
+       <!--BeginSwitchLink--> 
+       <a href="../ScriptReference/TrailRenderer.html" title="Go to TrailRenderer page in the Scripting Reference" class="switch-link gray-btn sbtn left">Switch to Scripting</a> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Komponen <strong>Trail Renderer</strong> membuat jejak poligon di balik <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> bergerak, seiring waktu. Ini dapat digunakan untuk memberikan perasaan yang ditekan untuk objek bergerak, atau untuk menyoroti jalan atau posisi benda bergerak.</p> 
+       <p>Trail Renderer menggunakan algoritma yang sama untuk rendering jejak sebagai <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-LineRenderer.html">Jalur Renderer</a><span class="tooltiptext">Komponen yang mengambil array dari dua atau lebih poin di ruang 3D dan menarik garis lurus antara masing-masing. Anda dapat menggunakan komponen Renderer Baris tunggal untuk menggambar apa pun dari garis lurus sederhana ke spiral yang kompleks. <a href="class-LineRenderer.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#LineRenderer">Glossary</a></span></span></span>.</p> 
+       <h2>Getting started</h2> 
+       <p>Untuk membuat Renderer Trail:</p> 
+       <ol> 
+        <li>Di bar menu Unity, pergi ke <strong>GameObject</strong> &gt; <strong>Effects</strong> &gt; <strong>Trail</strong>.</li> 
+        <li>Pilih Trail Renderer GameObject, dan orang tua ke GameObject yang Anda inginkan untuk menghasilkan jejak untuk.</li> 
+        <li>Gunakan jendela <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span> untuk mengkonfigurasi warna, lebar, dan pengaturan tampilan lainnya dari jalur.</li> 
+        <li>Pratinjau jejak dalam Edit Mode dengan memindahkan GameObject dan mengamati efek dalam tampilan <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>.</li> 
+       </ol> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TrailRenderer-example2.jpg" alt="An example Trail Renderer configuration, and the resulting trail."> 
+        <figcaption>
+          Contoh konfigurasi Renderer Trail, dan jalur yang dihasilkan. 
+        </figcaption> 
+       </figure> 
+       <h2>Bahan Renderer Trail</h2> 
+       <p>Secara default, Renderer Trail menggunakan Bahan bawaan, <strong>Default-Line</strong>. Anda dapat membuat banyak perubahan pada munculnya jejak tanpa mengubah Bahan ini, seperti mengedit gradien warna atau lebar jejak.</p> 
+       <p>Untuk efek lain, seperti menerapkan tekstur ke jalur, Anda harus menggunakan Bahan yang berbeda. Jika Anda tidak ingin menulis <span class="tooltip"><strong>Shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> Anda sendiri untuk Bahan Baru, pekerjaan Unity built-in <a href="shader-StandardParticleShaders.html">Mobiele Website index. Sitemap</a> dengan baik dengan Trail Renderers. Jika Anda menerapkan Tekstur ke Renderer Trail, Tekstur harus dimensi persegi (misalnya 256x256, atau 512x512).</p> 
+       <p>Jika Anda menerapkan lebih dari satu Bahan ke Renderer Trail, jejak diberikan sekali untuk setiap Bahan.</p> 
+       <p>Lihat <a href="Materials.html">Membuat dan menggunakan Bahan</a> untuk informasi lebih lanjut.</p> 
+       <h2>Jarak antara poin</h2> 
+       <p>Nilai <strong>Min Vertex Distance</strong> menentukan seberapa jauh dalam unit dunia GameObject dimana jejak berlaku harus melakukan perjalanan sebelum segmen baru ditambahkan ke jalur. Nilai rendah seperti 0,1 menciptakan segmen jejak lebih sering, menciptakan jalur yang lebih halus. Nilai-nilai yang lebih tinggi seperti 1,5 segmen yang lebih giok dalam penampilan. Selain itu, jalur lebar dapat menunjukkan artefak visual ketika simpul sangat dekat bersama dan arah perubahan jejak secara signifikan lebih dari jarak pendek.</p> 
+       <p>Untuk alasan kinerja, yang terbaik adalah menggunakan nilai kemungkinan terbesar yang mencapai efek yang Anda coba buat.</p> 
+       <h2>Login Referensi inspektur</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Inspector-TrailRenderer.png" alt=""> 
+       </figure> 
+       <p>Bagian ini berisi bagian berikut:</p> 
+       <ul> 
+        <li><a href="#trail-settings">Pengaturan Trail</a></li> 
+        <li><span class="tooltip"><a class="tooltipMoreInfoLink" href="#materials">Materials</a><span class="tooltiptext">Aset yang menentukan bagaimana permukaan harus diberikan. <a href="class-Material.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Material">Glossary</a></span></span></span></li> 
+        <li><a href="#lighting">Lighting</a></li> 
+        <li><a href="#probes">Probes</a></li> 
+        <li><a href="#additional-settings">Pengaturan Tambahan</a></li> 
+       </ul> 
+       <p><a name="trail-settings"></a></p> 
+       <h3>Pengaturan Trail</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Width</strong></td> 
+          <td style="text-align:left;">Tentukan nilai lebar, dan nilai kurva untuk mengontrol lebar jejak Anda sepanjang panjangnya.<br><br> Kurva dipesan pada setiap simpul, sehingga akurasinya dibatasi oleh jumlah simpul di jalan Anda. Lebar keseluruhan jejak dikendalikan oleh nilai lebar.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Time</strong></td> 
+          <td style="text-align:left;">Tentukan seumur hidup suatu titik di jalur, dalam hitungan detik.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Min Vertex Distance</strong></td> 
+          <td style="text-align:left;">Jarak minimum antara poin di jalur, di unit dunia.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>AutoDestruct</strong></td> 
+          <td style="text-align:left;">Aktifkan ini untuk menghancurkan GameObject ke mana komponen Trail Renderer terpasang setelah tidak pindah selama detik <strong>Time</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Emitting</strong></td> 
+          <td style="text-align:left;">Ketika ini diaktifkan, Unity menambahkan poin baru di jalan. Ketika ini dinonaktifkan, Unity tidak menambahkan poin baru ke jalan. Gunakan ini untuk menghentikan dan tidak menggunakan generasi trail.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Color</strong></td> 
+          <td style="text-align:left;">Tentukan gradien untuk mengontrol warna jejak sepanjang panjangnya.<br><br>Unity sampel warna dari gradien warna pada setiap simpul. Antara setiap simpul, Unity menerapkan interpolasi linier untuk warna. Menambahkan lebih banyak simpul ke jejak Anda mungkin memberikan perkiraan lebih dekat dari gradien rinci.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Corner Vertices</strong></td> 
+          <td style="text-align:left;">Properti ini menentukan berapa banyak simpul tambahan yang digunakan ketika sudut menggambar di jalan. Meningkatkan nilai ini untuk membuat sudut jejak tampak bulat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>End Cap Vertices</strong></td> 
+          <td style="text-align:left;">Properti ini menentukan berapa banyak simpul tambahan digunakan untuk membuat topi akhir di jalan. Meningkatkan nilai ini untuk membuat topi jejak muncul rounder.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Alignment</strong></td> 
+          <td style="text-align:left;">Mengatur arah yang menghadap jalan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>View</strong></td> 
+          <td style="text-align:left;">Jejak menghadapi <span class="tooltip"><strong>Camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>TransformZ</strong></td> 
+          <td style="text-align:left;">Jejak menghadapi sumbu Z dari <span class="tooltip"><strong>Transform component</strong><span class="tooltiptext">Komponen Transform menentukan Posisi, Rotasi, dan Skala setiap objek di tempat kejadian. Setiap GameObject memiliki Transform. <a class="tooltipMoreInfoLink" href="class-Transform.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#TransformComponent">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Texture Mode</strong></td> 
+          <td style="text-align:left;">Kontrol bagaimana Tekstur diterapkan pada jalur.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Stretch</strong></td> 
+          <td style="text-align:left;">Peta tekstur setelah sepanjang seluruh panjang jejak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Tile</strong></td> 
+          <td style="text-align:left;">Ulangi tekstur di sepanjang jalan, berdasarkan panjangnya di unit dunia. Untuk mengatur tingkat tiling, gunakan <a href="../ScriptReference/Material.SetTextureScale.html">Bahan.SetTextureScale</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>DistributePerSegment</strong></td> 
+          <td style="text-align:left;">Peta tekstur setelah sepanjang seluruh panjang jejak, asumsikan semua simpul merata.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>RepeatPerSegment</strong></td> 
+          <td style="text-align:left;">Mengulangi tekstur di sepanjang jalan, mengulangi tingkat satu kali per segmen trail. Untuk menyesuaikan tingkat tiling, gunakan <a href="../ScriptReference/Material.SetTextureScale.html">Bahan.SetTextureScale</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Shadow Bias</strong></td> 
+          <td style="text-align:left;">Mengatur jumlah untuk memindahkan bayangan dari Cahaya untuk menghapus artefak bayangan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Generate Lighting Data</strong></td> 
+          <td style="text-align:left;">Jika diaktifkan, Unity membangun geometri jejak dengan normal dan tangents disertakan. Ini memungkinkan untuk menggunakan Bahan yang menggunakan pencahayaan Adegan.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="materials"></a></p> 
+       <h3>Materials</h3> 
+       <p>Bagian <strong>Materials</strong> daftar semua <a href="class-Material.html">materials</a> yang digunakan komponen ini.</p> 
+       <table> 
+        <thead> 
+         <tr> 
+          <th><strong>Property</strong></th> 
+          <th><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td><strong>Size</strong></td> 
+          <td>Jumlah elemen dalam daftar materi.<br><br> Jika Anda menurunkan jumlah elemen, Unity menghapus elemen di akhir daftar. Jika Anda meningkatkan jumlah elemen, Unity menambahkan elemen baru ke akhir daftar. Unity mengisi unsur baru dengan bahan yang sama yang elemen pada akhir penggunaan daftar.</td> 
+         </tr> 
+         <tr> 
+          <td><strong>Element</strong></td> 
+          <td>Bahan dalam daftar. Anda dapat menetapkan aset material untuk setiap elemen.<br><br> Secara default, Order Unity daftar alfabet berdasarkan nama bahan. Daftar ini dapat dipesan ulang, dan pembaruan Unity jumlah elemen secara otomatis saat Anda mengubah pesanan mereka.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="lighting"></a></p> 
+       <h2>Lighting</h2> 
+       <p>Bagian <strong>Lighting</strong> mengandung sifat yang berkaitan dengan pencahayaan.</p> 
+       <table> 
+        <thead> 
+         <tr> 
+          <th colspan="2"><strong>Property</strong></th> 
+          <th><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td colspan="2"><strong>Cast Shadows</strong></td> 
+          <td>Tentukan jika dan bagaimana Renderer ini melemparkan bayangan ketika cocok <a href="class-Light.html">Light</a> bersinar di atasnya.<br><br> Properti ini sesuai dengan API <a href="../ScriptReference/Renderer.shadowCastingMode.html">Renderer.shadowCastingMode</a>.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><strong>On</strong></td> 
+          <td>Renderer ini melemparkan bayangan ketika lampu bayangan-casting bersinar di atasnya.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><strong>Off</strong></td> 
+          <td>Renderer ini tidak melemparkan bayangan.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><strong>Two-sided</strong></td> 
+          <td>Renderer ini melemparkan bayangan dua sisi. Ini berarti bahwa benda-benda satu sisi seperti pesawat atau quad dapat melemparkan bayangan, bahkan jika sumber cahaya berada di belakang jala.<br><br> Untuk <a href="class-LightingSettings.html#MixedLighting">Iluminasi Global Baked</a> atau Enlighten <a href="class-LightingSettings.html#RealtimeLighting">Penerangan Global Realtime</a> untuk mendukung bayangan dua sisi, bahan harus mendukung.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><strong>Shadows Only</strong></td> 
+          <td>Renderer ini melemparkan bayangan, tetapi Renderer itu sendiri tidak terlihat.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"><strong>Receive Shadows</strong></td> 
+          <td>Tentukan jika Tampilan Unity bayangan melemparkan ke Renderer ini.<br><br> Properti ini hanya memiliki efek jika Anda mengaktifkan <a href="class-LightingSettings.html#MixedLighting">Iluminasi Global Baked</a> atau Enlighten <a href="class-LightingSettings.html#RealtimeLighting">Penerangan Global Realtime</a> untuk adegan ini.<br><br> Properti ini sesuai dengan API <a href="../ScriptReference/Renderer-receiveShadows.html">Renderer.receiveShadows</a>.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"><strong>Contribute Global Illumination</strong></td> 
+          <td>Sertakan Renderer ini dalam perhitungan pencahayaan global, yang terjadi pada waktu bake.<br><br> Properti ini hanya memiliki efek jika Anda mengaktifkan <a href="class-LightingSettings.html#MixedLighting">Iluminasi Global Baked</a> atau Enlighten <a href="class-LightingSettings.html#RealtimeLighting">Penerangan Global Realtime</a> untuk adegan ini.<br><br>Enabling properti ini memungkinkan bendera Contribute GI di GameObject's <a href="StaticObjects.html">Bendera Editor Statis</a>. API <a href="../ScriptReference/StaticEditorFlags.ContributeGI.html">RealEditorFlags.ContributeGI</a>.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"><strong>Receive Global Illumination</strong></td> 
+          <td>Baik Unity menyediakan data pencahayaan global ke Renderer ini dari peta lampu panggang, atau dari Probe Cahaya runtime.<br><br> Properti ini hanya dapat diedit jika Anda mengaktifkan <strong>Contribute Global Illumination</strong>. Ini hanya memiliki efek jika Anda mengaktifkan <a href="class-LightingSettings.html#MixedLighting">Iluminasi Global Baked</a> atau Enlighten <a href="class-LightingSettings.html#RealtimeLighting">Penerangan Global Realtime</a> untuk adegan ini.<br><br> Properti ini sesuai dengan API <a href="../ScriptReference/MeshRenderer-receiveGI.html">MeshRenderer.receiveGI</a>.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><strong>Lightmaps</strong></td> 
+          <td>Unity menyediakan data pencahayaan global untuk Renderer ini dari lightmaps.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><strong>Light Probes</strong></td> 
+          <td>Unity menyediakan data pencahayaan global ke Renderer ini dari <span class="tooltip"><a class="tooltipMoreInfoLink" href="LightProbes.html">Probe Cahaya</a><span class="tooltiptext">probe cahaya menyimpan informasi tentang bagaimana cahaya melewati ruang di tempat kejadian Anda. Koleksi probe cahaya yang diatur dalam ruang tertentu dapat meningkatkan pencahayaan pada objek bergerak dan pemandangan LOD statis dalam ruang itu. <a href="LightProbes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#LightProbe">Glossary</a></span></span></span> di tempat kejadian.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"><strong>Prioritize Illumination</strong></td> 
+          <td>Aktifkan properti ini untuk selalu mencakup Renderer ini dalam perhitungan Iluminasi Realtime Global. Ini memastikan bahwa Renderer dipengaruhi oleh tumis yang jauh, bahkan mereka yang biasanya dikecualikan dari perhitungan Penerangan Global untuk alasan kinerja.<br><br> Properti ini terlihat hanya jika <strong>Contribute GI</strong> diaktifkan dalam <a href="StaticObjects.html">Bendera Editor Statis</a> GameObject, proyek Anda menggunakan Pipeline Render Built-in, dan Enlighten <a href="class-LightingSettings.html#RealtimeLighting">Penerangan Global Realtime</a> diaktifkan di tempat kejadian Anda.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="probes"></a></p> 
+       <h3>Probes</h3> 
+       <p>Bagian <strong>Probes</strong> mengandung sifat yang berkaitan dengan <a class="tooltipMoreInfoLink" href="LightProbes.html">Probe Cahaya</a> dan <span class="tooltip"><a href="class-ReflectionProbe.html">Refleksi Probe</a><span class="tooltiptext">Komponen rendering yang menangkap pandangan bulat dari sekitarnya di semua arah, seperti kamera. Gambar yang ditangkap kemudian disimpan sebagai kubus yang dapat digunakan oleh benda dengan bahan reflektif. <a href="class-ReflectionProbe.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ReflectionProbe">Glossary</a></span></span></span>.</p> 
+       <table> 
+        <thead> 
+         <tr> 
+          <th colspan="2"><strong>Property</strong></th> 
+          <th><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td colspan="2"><strong>Light Probes</strong></td> 
+          <td>Mengatur bagaimana Renderer ini menerima cahaya dari sistem <a href="LightProbes.html">Probe Cahaya</a>.<br><br> Properti ini sesuai dengan API <a href="../ScriptReference/Renderer.lightProbeUsage.html">Renderer.lightProbeUsage</a>.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><strong>Off</strong></td> 
+          <td>Renderer tidak menggunakan probe cahaya yang diserbuki.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><strong>Blend Probes</strong></td> 
+          <td>Renderer menggunakan satu Probe Cahaya yang diserbuki. Ini adalah nilai default.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><strong>Use Proxy Volume</strong></td> 
+          <td>Renderer menggunakan grid 3D dari Probe Cahaya yang diserbuki.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><strong>Custom Provided</strong></td> 
+          <td>Renderer mengekstrak nilai seragam naungan probe cahaya dari <a href="../ScriptReference/MaterialPropertyBlock.html">BahanPropertyBlock</a>.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"><strong>Proxy Volume Override</strong></td> 
+          <td>Mengatur referensi ke GameObject lain yang memiliki komponen Volume Proxy Light Probe.<br><br> Properti ini hanya terlihat ketika <strong>Light Probes</strong> diatur ke <strong>Use Proxy Volume</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"><strong>Reflection Probes</strong></td> 
+          <td>Mengatur bagaimana Renderer menerima refleksi dari sistem <a href="class-ReflectionProbe.html">Refleksi Probe</a>.<br><br> Properti ini sesuai dengan API <a href="../ScriptReference/Renderer.probeAnchor.html">Renderer.probeAnchor</a>.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><strong>Off</strong></td> 
+          <td>Diaktifkan Probe Refleksi. Unity menggunakan skybox untuk refleksi.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><strong>Blend Probes</strong></td> 
+          <td>Probe Refleksi yang Dapat Diaktifkan. Blending hanya terjadi antara Probe Reflection. Ini berguna di lingkungan dalam ruangan di mana karakter dapat transisi antara daerah dengan pengaturan pencahayaan yang berbeda.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><strong>Blend Probes and Skybox</strong></td> 
+          <td>Probe Refleksi yang Dapat Diaktifkan. Blending terjadi antara Probe Reflection, atau antara Probe Reflection dan refleksi default. Ini berguna untuk lingkungan luar ruangan.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><strong>Simple</strong></td> 
+          <td>Enables Reflection Probe, tetapi tidak ada campuran terjadi antara Probe Reflection ketika ada dua volume tumpang tindih.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"><strong>Anchor Override</strong></td> 
+          <td>Mengatur Transformasi yang menggunakan Unity untuk menentukan posisi interpolasi saat menggunakan sistem <a href="LightProbes.html">Probe Cahaya</a> atau <a href="class-ReflectionProbe.html">Refleksi Probe</a>. Secara default, ini adalah pusat kotak terikat geometri Renderer.<br><br> Properti ini sesuai dengan API <a href="../ScriptReference/Renderer-probeAnchor.html">Renderer.probeAnchor</a>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="additional-settings"></a></p> 
+       <h3>Pengaturan Tambahan</h3> 
+       <p>Bagian <strong>Additional Settings</strong> mengandung sifat tambahan.</p> 
+       <table> 
+        <thead> 
+         <tr> 
+          <th colspan="2"><strong>Property</strong></th> 
+          <th><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td colspan="2"><strong>Motion Vectors</strong></td> 
+          <td>Mengatur apakah menggunakan vektor gerak untuk melacak per-piksel Renderer ini, gerakan ruang layar dari satu bingkai ke depan. Anda dapat menggunakan informasi ini untuk menerapkan efek pasca-olahan seperti blur gerak.<br><br><strong>Note:</strong> tidak semua platform mendukung vektor gerak. Lihat <a href="../ScriptReference/SystemInfo.supportsMotionVectors.html">SystemInfo.supportsMotionVectors</a> untuk informasi lebih lanjut.<br><br> Properti ini sesuai dengan API <a href="../ScriptReference/Renderer.motionVectorGenerationMode.html">Renderer.motionVectorGenerationMode</a>.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><strong>Camera Motion Only</strong></td> 
+          <td>Gunakan hanya gerakan kamera untuk melacak gerakan.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><strong>Per Object Motion</strong></td> 
+          <td>Gunakan umpan tertentu untuk melacak gerakan untuk Renderer ini.</td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><strong>Force No Motion</strong></td> 
+          <td>Jangan melacak gerakan.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"><strong>Dynamic Occlusion</strong></td> 
+          <td>Ketika <strong>Dynamic Occlusion</strong> diaktifkan, sistem Unity <span class="tooltip"><a class="tooltipMoreInfoLink" href="OcclusionCulling.html">occlusion culling</a><span class="tooltiptext">A yang menonaktifkan rendering objek ketika mereka tidak saat ini dilihat oleh kamera karena mereka dikabur (disebutkan) oleh benda lain. <a href="OcclusionCulling.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Occlusionculling">Glossary</a></span></span></span> kusam Renderer ini ketika diblokir dari tampilan Kamera oleh Occluder Statis. Jika tidak, sistem tidak kusam Renderer ini ketika diblokir dari tampilan Kamera oleh Occluder Statis.<br><br>Dynamic Occlusion diaktifkan secara default. Dinonaktifkan untuk efek seperti menggambar garis besar karakter di belakang dinding.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"><strong>Sorting Layer</strong></td> 
+          <td>Nama <a href="class-TagManager.html">Lapisan Sortasi</a> Renderer ini.</td> 
+         </tr> 
+         <tr> 
+          <td colspan="2"><strong>Order in Layer</strong></td> 
+          <td>Order Renderer ini dalam <a href="class-TagManager.html">Lapisan Sortasi</a>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="class-LineRenderer.html"></a></span> 
+         <div class="tip">
+           Komponen Renderer Line 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="class-BillboardRenderer.html"></a></span> 
+         <div class="tip">
+           Komponen Renderer Billboard 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

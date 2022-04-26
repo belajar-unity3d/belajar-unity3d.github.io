@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Membuat model untuk animasi</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="models.html">Models</a></li> 
+         <li><a href="CreatingDCCAssets.html">Membuat model di luar Unity</a></li> 
+         <li>Membuat model untuk animasi</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="ModelingOptimizedCharacters.html"></a></span> 
+          <div class="tip">
+            Membuat model untuk kinerja optimal 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="models-importing.html"></a></span> 
+          <div class="tip">
+            Mengimpor model ke Unity 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Membuat model untuk animasi</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Halaman ini berisi panduan untuk membuat model untuk digunakan dengan Unity <a href="AnimationOverview.html">Sistem Animasi</a>.</p> 
+       <p>Untuk panduan praktik terbaik umum untuk menciptakan semua jenis model, lihat <a href="ModelingOptimizedCharacters.html">Membuat model untuk kinerja optimal</a>. Untuk informasi tentang mengimpor model dengan animasi ke Unity, lihat <a href="ConfiguringTheAvatar.html">Mengimpor model dengan animasi humanoid</a> atau <a href="GenericAnimations.html">Mengimpor model dengan animasi non-humanoid (generic)</a>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Char200.png" alt="Stages for preparing a character (modeling, rigging, and skinning)"> 
+        <figcaption>
+          Tahapan untuk menyiapkan karakter (model, rigging, dan skinning) 
+        </figcaption> 
+       </figure> 
+       <p>Ada dua jenis model yang dapat Anda gunakan dengan Sistem Animasi Unity:</p> 
+       <ul> 
+        <li>Model <strong>Humanoid</strong> adalah struktur tertentu, yang mengandung setidaknya 15 tulang yang diatur dalam cara yang longgar sesuai dengan kerangka manusia yang sebenarnya.</li> 
+        <li>Model <strong>Generic</strong> adalah segalanya. Ini mungkin apa pun dari teakettle ke naga.</li> 
+       </ul> 
+       <p>Keduanya membutuhkan model yang matang, dikupas. Tahap menciptakan model seperti itu:</p> 
+       <ol> 
+        <li> <strong>Modeling</strong>: Membuat model. Model mengandung <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a class="tooltipMoreInfoLink" href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mesh">Glossary</a></span></span></span>, tekstur, dan sebagainya.</li> 
+        <li> <strong><strong>Rigging</strong></strong>: Membuat kerangka, juga disebut rig atau hierarki <span class="tooltip"><strong>joint</strong><span class="tooltiptext">Komponen fisika yang memungkinkan koneksi dinamis antara komponen Rigidbody, biasanya memungkinkan beberapa tingkat pergerakan seperti engsel. <a class="tooltipMoreInfoLink" href="Joints.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#joint">Glossary</a></span></span></span>. Ini mendefinisikan tulang di dalam jala, dan gerakan mereka dalam kaitannya satu sama lain.</li> 
+        <li> <strong><strong>Skinning</strong></strong>: Bergabung dengan jala ke kerangka. Ini mendefinisikan bagian-bagian yang bergerak jala karakter ketika sendi yang diberikan adalah animasi.</li> 
+       </ol> 
+       <p>Biasanya Anda melakukan semua langkah-langkah ini di perangkat lunak pemodelan 3D (seperti Autodesk® 3ds Max®, Autodesk® Maya®, atau Blender), mengekspor model yang dihasilkan, dan mengimpornya ke Unity.</p> 
+       <p><a name="Modeling"></a></p> 
+       <h2>Modeling</h2> 
+       <p>Ada beberapa panduan yang dapat Anda ikuti untuk memastikan model bekerja dengan baik dengan animasi dalam Proyek Unity:</p> 
+       <ul> 
+        <li>Gunakan topologi dengan <strong>well-formed structure</strong>. Umumnya, Anda harus mempertimbangkan bagaimana simpul dan segitiga model distort seperti itu. Topologi yang baik memungkinkan model bergerak tanpa mendistorsi mesh. Studi mesh karakter yang ada untuk melihat bagaimana topologi diatur dan mengapa.</li> 
+        <li>Periksa <strong>scale</strong> mesh Anda. Lakukan impor uji dan bandingkan ukuran Model impor Anda dengan kubus "meter". Standar Unity cube primitive memiliki panjang satu unit, sehingga dapat diambil sebagai kubus 1m untuk sebagian besar tujuan. Periksa unit perangkat lunak model 3D Anda menggunakan dan menyesuaikan pengaturan ekspor sehingga ukuran Model berada dalam proporsi yang benar ke kubus.</li> 
+        <li>Saat Anda sedang membangun, <strong>clean up your model</strong>. Bila memungkinkan, tutup lubang, las simpul, dan menghapus wajah tersembunyi. Ini membantu dengan memutihkan kulit, terutama proses pemutihan otomatis.</li> 
+        <li>Jika karakter Anda memiliki kaki, atur jala sehingga mereka berdiri pada asal lokal atau "tiap akhir" model. Ini membuat berjalan jauh lebih mudah untuk menangani jika titik jangkar karakter (yaitu, posisi transformasi) langsung di lantai.</li> 
+        <li>Jika karakter Anda terpesona, model dalam <span class="tooltip"><strong>T-pose</strong><span class="tooltiptext">Tentang di mana karakter memiliki lengan mereka langsung ke sisi, membentuk "T". pose yang diperlukan untuk karakter yang akan ada, untuk membuat Avatar.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#T-pose">Glossary</a></span></span></span>. Ini memberi Anda ruang untuk memperbaiki detail poligon di mana Anda membutuhkannya (seperti ketiak). Ini juga memudahkan untuk memposisikan rig Anda di dalam Mesh.</li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SkinMesh256.png" alt="Skin Mesh, textured and triangulated"> 
+        <figcaption>
+          Kulit Mesh, bertekstur dan segitiga 
+        </figcaption> 
+       </figure> 
+       <p><a name="Rigging"></a></p> 
+       <h2>Rigging</h2> 
+       <p>Perangkat lunak pemodelan 3D menyediakan sejumlah cara untuk membuat sambungan untuk rig Anda.</p> 
+       <p>Untuk model <strong>Humanoid</strong>, ada persyaratan khusus untuk kerangka sehingga Unity dapat mencocokkannya ke <a href="class-Avatar.html">Humanoid Avatar</a>:</p> 
+       <ul> 
+        <li>Minimal 15 tulang. Kerangka Anda harus memiliki setidaknya tulang yang diperlukan di tempat.</li> 
+        <li>Untuk meningkatkan peluang Anda untuk menemukan pertandingan ke <span class="tooltip"><strong>Avatar</strong><span class="tooltiptext">Antarmuka untuk penargetan ulang animasi dari satu rig ke yang lain. <a class="tooltipMoreInfoLink" href="ConfiguringtheAvatar.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Avatar">Glossary</a></span></span></span>, nama tulang Anda dengan cara yang mencerminkan bagian tubuh yang mereka wakili. Misalnya, “LeftArm” dan “RightForearm” membuatnya jelas apa kontrol tulang ini.</li> 
+        <li>Hilang sendi / tulang harus mengikuti struktur alami untuk karakter yang Anda buat. Mengingat bahwa lengan dan kaki datang dalam pasangan, Anda harus menggunakan konvensi konsisten untuk mencerahkan mereka (misalnya, “arm_L” untuk lengan kiri, “arm_R” untuk lengan kanan). Struktur yang mungkin untuk hirarki termasuk: 
+         <ul> 
+          <li>HIPS - tulang belakang - bahu - lengan - lengan - lengan - tangan</li> 
+          <li>HIPS - spine - dada - leher - kepala</li> 
+          <li>HIPS - UpLeg - Leg - foot - toe - toe_end</li> 
+         </ul> </li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Skeleton256.png" alt="Biped Skeleton, positioned in T-pose"> 
+        <figcaption>
+          Biped Skeleton, diposisikan dalam T-pose 
+        </figcaption> 
+       </figure> 
+       <p>Untuk model <strong>Generic</strong>, satu-satunya persyaratan adalah kerangka berisi tulang yang dapat Anda tunjukkan sebagai <span class="tooltip"><strong>Root node</strong><span class="tooltiptext">Perubahan hierarki animasi yang memungkinkan Unity untuk menetapkan konsistensi antara klip Animasi untuk model generik. Hal ini juga memungkinkan Unity untuk benar campuran antara Animasi yang belum diberi wewenang “di tempat” (yang ada, di mana seluruh Model bergerak posisi dunia sambil memikat). <a class="tooltipMoreInfoLink" href="AnimationRootMotionNodeOnImportedClips.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Rootnode">Glossary</a></span></span></span> ketika Anda mengimpor model. Ini secara efektif mendefinisikan <span class="tooltip"><strong>center of mass</strong><span class="tooltiptext">Mewakili posisi rata-rata dari semua massa dalam kaku untuk tujuan perhitungan fisika. Secara default dikomputasikan dari semua sari yang dimiliki oleh orang kaku, tetapi dapat dimodifikasi melalui skrip. <a href="../ScriptReference/Rigidbody-centerOfMass.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#CenterofMass">Glossary</a></span></span></span> model.</p> 
+       <p><a name="Skinning"></a></p> 
+       <h2>Skinning</h2> 
+       <p>Pengaturan awal biasanya otomatis. Permen kulit biasanya membutuhkan sejumlah pekerjaan dan pengujian yang adil dengan animasi untuk memastikan hasil yang memuaskan untuk deformasi kulit.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Skinning256.png" alt="Interactive Skin Bind, one of many skinning methods"> 
+        <figcaption>
+          Kulit Interaktif Bind, salah satu dari banyak metode skinning 
+        </figcaption> 
+       </figure> 
+       <p>Beberapa panduan umum untuk proses ini meliputi:</p> 
+       <ul> 
+        <li>Gunakan proses otomatis awalnya untuk mengatur beberapa kulit (lihat tutorial kulit yang tersedia untuk perangkat lunak pemodelan 3D Anda).</li> 
+        <li>Buat animasi sederhana untuk rig Anda atau impor beberapa data animasi untuk bertindak sebagai tes untuk kulit. Ini harus memberi Anda cara cepat untuk mengevaluasi apakah atau tidak kulit terlihat baik dalam gerakan.</li> 
+        <li>Secara bertahap mengedit dan memperbaiki solusi kulit Anda.</li> 
+        <li>Untuk alasan kinerja, pertimbangkan membatasi jumlah pengaruh ketika menggunakan mengikat lembut hingga maksimal empat. Ini adalah jumlah maksimum yang mendukung Unity secara default. Jika Mesh Anda menggunakan lebih dari empat pengaruh, Anda dapat memilih salah satu pilihan ini: 
+         <ul> 
+          <li>Meningkatkan jumlah pengaruh maksimum menggunakan <a href="FBXImporter-Rig.html#SkinWeights">Properti Berat Kulit</a>.</li> 
+          <li>Bake deformasi sendi sebelum mengekspor Model Anda dari Maya, menggunakan alat <em>Bake Deformer</em> (dari menu top Maya: <strong>Skin</strong> &gt; <strong>Bake Deformers to Skin Weights</strong>). Untuk informasi lebih lanjut, lihat <a href="http://help.autodesk.com/view/MAYAUL/2018/ENU/?guid=GUID-8B68FF4A-E9BC-44E9-B0D9-53CFE0C008FC">Bake deformer pada karakter</a> dalam dokumentasi Autodesk.</li> 
+         </ul> </li> 
+       </ul> 
+       <h2>Mengekspor dan memverifikasi model Anda</h2> 
+       <p>Unity mengimpor sejumlah format file 3D generik dan asli, tetapi format file yang disarankan adalah .fbx. Untuk informasi lebih lanjut, lihat <a href="3D-formats.html">Format file model</a>.</p> 
+       <p>Ketika Anda menggunakan .fbx, Anda dapat:</p> 
+       <ul> 
+        <li>Ekspor Mesh dengan hirarki kerangka, normal, tekstur dan animasi.</li> 
+        <li>Re-import Mesh ke perangkat lunak model 3D Anda untuk memverifikasi model animasi Anda terlihat seperti yang diharapkan.</li> 
+        <li>Animasi ekspor tanpa Mesh.</li> 
+       </ul> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="ModelingOptimizedCharacters.html"></a></span> 
+         <div class="tip">
+           Membuat model untuk kinerja optimal 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="models-importing.html"></a></span> 
+         <div class="tip">
+           Mengimpor model ke Unity 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

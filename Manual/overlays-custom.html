@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Buat Overlay kustom</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="UsingTheEditor.html">Antarmuka unity</a></li> 
+         <li><a href="UsingTheSceneView.html">Tampilan adegan</a></li> 
+         <li><a href="overlays.html">Overlays</a></li> 
+         <li>Buat kustom Login</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="overlays.html"></a></span> 
+          <div class="tip">
+            Overlays 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="PositioningGameObjects.html"></a></span> 
+          <div class="tip">
+            Posisi GameObjects 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Buat kustom Login</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Anda dapat membuat panel kustom Overlays dan Overlays <span class="tooltip"><strong>toolbar</strong><span class="tooltiptext">Se baris tombol dan kontrol dasar di bagian atas Editor Unity yang memungkinkan Anda untuk berinteraksi dengan Editor dengan berbagai cara (misalnya scaling, terjemahan). <a class="tooltipMoreInfoLink" href="Toolbar.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Toolbar">Glossary</a></span></span></span> untuk jendela <strong><span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> view</strong> Anda.</p> 
+       <ul> 
+        <li><a href="#panel-overlays">Panel Overlays</a></li> 
+        <li><a href="#toolbar-overlays">Overlay Toolbar</a></li> 
+       </ul> 
+       <p>Sitemap Untuk informasi tentang membuat UIElements, lihat .<strong>Tip:</strong> For information about creating UIElements, see the .</p> 
+       <h2>The EditorToolbarElement</h2> 
+       <p>Elemen toolbar dapat berisi teks, ikon, atau kombinasi keduanya.</p> 
+       <p>Gunakan [<code>EditorToolbarElement(Identifier, EditorWindowType)</code>] untuk mendaftarkan elemen toolbar untuk digunakan dalam implementasi <code>ToolbarOverlay</code>.</p> 
+       <p>Anda mungkin mengherankan jenis VisualElement dan memberikan styling sendiri, tetapi elemen toolbar memerlukan styling khusus, sehingga lebih disukai untuk menginherit salah satu jenis <code>EditorToolbar</code> yang ditentukan:</p> 
+       <ul> 
+        <li>EditorToolbarButton - berdasarkan <code>UnityEditor.UIElements.ToolbarButton</code> </li> 
+        <li>EditorToolbarDropdown - berdasarkan <code>EditorToolbarButton</code> </li> 
+        <li>EditorToolbarDropdownToggle - berdasarkan <code>UnityEngine.UIElements.BaseField&amp;lt;bool&gt;</code> </li> 
+        <li>EditorToolbarToggle - berdasarkan <code>UnityEditor.UIElements.ToolbarToggle</code> </li> 
+       </ul> 
+       <p>Sitemap Jika sebuah toolbar didermaga secara horizontal atau secara vertikal teks akan dip clipped atau tidak terlihat, jadi tentukan ikon untuk masing-masing.<strong>Tip:</strong> If a toolbar is docked horizontally or vertically the text will be clipped or not visible, so specify an icon for each.</p> 
+       <p><a name="panel-overlays"></a></p> 
+       <h2>Panel Overlays</h2> 
+       <p>Semua Overlays harus mewarisi kelas dasar Overlay dan menerapkan metode CreatPanelContent(). Ini menciptakan panel dasar yang dapat Anda gunakan sebagai-is atau menambahkan elemen toolbar.</p> 
+       <ol> 
+        <li>Buat folder dan nama baru.</li> 
+        <li>Buka skrip baru Anda.</li> 
+        <li>Hapus konten boilerplate antara kurung curly utama dan menerapkan kelas <code>Overlay</code> di namespace <code>UnityEditor.Overlays</code>.</li> 
+        <li>Override fungsi <code>CreatePanelContent</code> dan tambahkan konten Anda ke elemen visual.</li> 
+        <li>Tambahkan <code>Overlay</code>attribute ke kelas dan tentukan jenis jendela Overlay ini akan tersedia. Tentukan <code>EditorWindow</code> sebagai jenis, akan membuat Overlay tersedia di semua jendela Editor, menentukan <code>SceneView</code> akan membuat Overlay tersedia dalam <span class="tooltip"><strong>Scene view</strong><span class="tooltiptext">Tampilan interaktif ke dunia yang Anda buat. Anda menggunakan Adegan Lihat untuk memilih dan posisi pemandangan, karakter, kamera, lampu, dan semua jenis lain dari Game Object. <a class="tooltipMoreInfoLink" href="UsingTheSceneView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SceneView">Glossary</a></span></span></span> hanya.</li> 
+        <li>Tambahkan nama, ID, dan nama tampilan.</li> 
+        <li>Opsional: Tambahkan <code>Icon</code>attribute ke kelas <code>Overlay</code> untuk menentukan ikon mana yang digunakan dalam mode terkondensasi. Jika tidak ada ikon yang ditentukan, maka secara default sistem menggunakan dua huruf pertama dari nama Overlay (atau dua huruf awal pertama dari dua kata pertama).</li> 
+       </ol> 
+       <h3>Example</h3> 
+       <pre><code>using UnityEditor;
+using UnityEditor.Overlays;
+using UnityEngine.UIElements;
+[Overlay(typeof(SceneView), "My Custom Toolbar", true)]
+public class MyToolButtonOverlay : Overlay
+{
+    public override VisualElement CreatePanelContent()
+    {
+        var root = new VisualElement() { name = "My Toolbar Root" };
+        root.Add(new Label() { text = "Hello" });
+        return root;
+
+    }
+}
+</code></pre> 
+       <p><a name="toolbar-overlays"></a></p> 
+       <h2>Overlay Toolbar</h2> 
+       <p>Login Overlays adalah wadah yang memegang item toolbar dan terdiri dari koleksi <code>EditorToolbarElement</code>.</p> 
+       <p>Login Overlays memiliki tata letak horisontal, vertikal, dan panel built-in. ToolbarOverlay menerapkan konstruktor tanpa parameter, melewati ID EditorToolbarElementAttribute. Tidak seperti panel Overlays, konten didefinisikan sebagai potongan mandiri yang dikumpulkan untuk membentuk garis elemen.</p> 
+       <ol> 
+        <li>Seperti dengan panel Overlays, mulailah dengan membuat skrip C# dan menyimpannya di folder Editor Anda, lalu buka dan edit skrip Anda.</li> 
+        <li>Tambahkan elemen toolbar.</li> 
+        <li>Tambahkan elemen toolbar ke konstruktor Overlay.</li> 
+        <li>Tambahkan panel Overlay dan menerapkan dengan elemen toolbar.</li> 
+       </ol> 
+       <p>Saat membuat toolbar Sitemap</p> 
+       <ul> 
+        <li>Gunakan elemen toolbar <code>[EditorToolbarElement(Identifier, EditorWindowType)]</code> untuk digunakan dalam implementasi <code>ToolbarOverlay</code>.</li> 
+        <li>Semua Overlays harus ditandai dengan <code>OverlayAttribute</code> </li> 
+        <li>Overlay Toolbar harus mewarisi <code>ToolbarOverlay</code> dan menerapkan konstruktor tanpa parameter.</li> 
+        <li>Isi bilah alat diisi dengan ID string, yang dilewatkan ke konstruk dasar.</li> 
+        <li>ID didefinisikan oleh <code>EditorToolbarElementAttribute</code>.</li> 
+        <li>atribut <code>Icon</code> mendefinisikan ikon yang terlihat ketika Overlay runtuh. Jika tidak disediakan, dua huruf pertama dari nama Overlay (atau dua huruf awal pertama dari dua kata pertama) digunakan.</li> 
+       </ul> 
+       <p>Ketika menerapkan elemen ToolbarOverlay-specific dalam Overlay:</p> 
+       <ul> 
+        <li>Antarmuka IAccessContainerWindow adalah untuk toolbar hanya, oleh karena itu, elemen tidak akan menyadari konteksnya. Dalam DropdownToggleExample, memperbesar elemen tidak akan melakukan apa pun.</li> 
+        <li>Elemen toolbar tidak akan membawa styling di Overlay. Gunakan styling UIElement untuk visual.</li> 
+       </ul> 
+       <h3>Example</h3> 
+       <p>Contoh ini menunjukkan Overlay bernama <em>Elemen Toolbar Contoh</em> yang menunjukkan elemen toolbar:</p> 
+       <ul> 
+        <li>EditorToolbarButton</li> 
+        <li>EditorToolbarToggle</li> 
+        <li>EditorToolbarDropdown</li> 
+        <li>Login Login</li> 
+       </ul> 
+       <p>Setiap elemen toolbar dibuat sebagai kelas mandiri dan kemudian ditambahkan ke panel Overlay.</p> 
+       <ul> 
+        <li>Dapat diatur sebagai panel, horisontal, dan vertikal.</li> 
+        <li>Tombol termasuk teks dan tooltips.</li> 
+        <li>Toolbar memiliki ikon yang ditentukan oleh <code>Icon</code>attribute yang akan terlihat ketika toolbar runtuh.</li> 
+       </ul> 
+       <pre><code>    using System.Collections;
+    using System.Collections.Generic;
+    using System.Text;
+    using UnityEngine;
+    using UnityEditor.EditorTools;
+    using UnityEditor.Toolbars;
+    using UnityEditor.Overlays;
+    using UnityEngine.UIElements;
+    using UnityEditor;
+
+    // Use [EditorToolbarElement(Identifier, EditorWindowType)] to register toolbar elements for use in ToolbarOverlay implementation.
+
+    [EditorToolbarElement(id, typeof(SceneView))]
+    class DropdownExample : EditorToolbarDropdown
+    {
+        public const string id = "ExampleToolbar/Dropdown";
+
+        static string dropChoice = null;
+
+        public DropdownExample()
+        {
+            text = "Axis";
+            clicked += ShowDropdown;
+        }
+
+        void ShowDropdown()
+        {
+            var menu = new GenericMenu();
+            menu.AddItem(new GUIContent("X"), dropChoice == "X", () =&gt; { text = "X"; dropChoice = "X"; });
+            menu.AddItem(new GUIContent("Y"), dropChoice == "Y", () =&gt; { text = "Y"; dropChoice = "Y"; });
+            menu.AddItem(new GUIContent("Z"), dropChoice == "Z", () =&gt; { text = "Z"; dropChoice = "Z"; });
+            menu.ShowAsContext();
+        }
+    }
+    [EditorToolbarElement(id, typeof(SceneView))]
+    class ToggleExample : EditorToolbarToggle
+    {
+        public const string id = "ExampleToolbar/Toggle";
+        public ToggleExample()
+        {
+            text = "Toggle OFF";
+            this.RegisterValueChangedCallback(Test);
+        }
+
+        void Test(ChangeEvent&lt;bool&gt; evt)
+        {
+            if (evt.newValue)
+            {
+                Debug.Log("ON");
+                text = "Toggle ON";
+            }
+            else
+            {
+                Debug.Log("OFF");
+                text = "Toggle OFF";
+            }
+        }
+    }
+
+    [EditorToolbarElement(id, typeof(SceneView))]
+    class DropdownToggleExample : EditorToolbarDropdownToggle, IAccessContainerWindow
+    {
+        public const string id = "ExampleToolbar/DropdownToggle";
+
+        // This property is specified by IAccessContainerWindow and is used to access the Overlay's EditorWindow.
+
+        public EditorWindow containerWindow { get; set; }
+        static int colorIndex = 0;
+        static readonly Color[] colors = new Color[] { Color.red, Color.green, Color.cyan };
+        public DropdownToggleExample()
+        {
+            text = "Color Bar";
+            tooltip = "Display a color rectangle in the top left of the Scene view. Toggle on or off, and open the dropdown" +
+                      "to change the color.";
+
+        // When the dropdown is opened, ShowColorMenu is invoked and we can create a popup menu.
+
+            dropdownClicked += ShowColorMenu;
+
+        // Subscribe to the Scene view OnGUI callback so that we can draw our color swatch.
+
+            SceneView.duringSceneGui += DrawColorSwatch;
+        }
+
+        void DrawColorSwatch(SceneView view)
+        {
+
+         // Test that this callback is for the Scene View that we're interested in, and also check if the toggle is on
+        // or off (value).
+
+            if (view != containerWindow || !value)
+            {
+                return;
+            }
+
+            Handles.BeginGUI();
+            GUI.color = colors[colorIndex];
+            GUI.DrawTexture(new Rect(8, 8, 120, 24), Texture2D.whiteTexture);
+            GUI.color = Color.white;
+            Handles.EndGUI();
+        }
+
+        // When the dropdown button is clicked, this method will create a popup menu at the mouse cursor position.
+
+        void ShowColorMenu()
+        {
+            var menu = new GenericMenu();
+            menu.AddItem(new GUIContent("Red"), colorIndex == 0, () =&gt; colorIndex = 0);
+            menu.AddItem(new GUIContent("Green"), colorIndex == 1, () =&gt; colorIndex = 1);
+            menu.AddItem(new GUIContent("Blue"), colorIndex == 2, () =&gt; colorIndex = 2);
+            menu.ShowAsContext();
+        }
+    }
+
+    [EditorToolbarElement(id, typeof(SceneView))]
+    class CreateCube : EditorToolbarButton//, IAccessContainerWindow
+    {
+        // This ID is used to populate toolbar elements.
+
+        public const string id = "ExampleToolbar/Button";
+
+        // IAccessContainerWindow provides a way for toolbar elements to access the `EditorWindow` in which they exist.
+        // Here we use `containerWindow` to focus the camera on our newly instantiated objects after creation.
+        //public EditorWindow containerWindow { get; set; }
+
+        // Because this is a VisualElement, it is appropriate to place initialization logic in the constructor.
+        // In this method you can also register to any additional events as required. In this example there is a tooltip, an icon, and an action.
+
+        public CreateCube()
+        {
+
+    // A toolbar element can be either text, icon, or a combination of the two. Keep in mind that if a toolbar is
+        // docked horizontally the text will be clipped, so usually it's a good idea to specify an icon.
+
+            text = "Create Cube";
+            icon = AssetDatabase.LoadAssetAtPath&lt;Texture2D&gt;("Assets/CreateCubeIcon.png");
+            tooltip = "Instantiate a cube in the scene.";
+            clicked += OnClick;
+        }
+
+        // This method will be invoked when the `Create Cube` button is clicked.
+
+        void OnClick()
+        {
+            var newObj = GameObject.CreatePrimitive(PrimitiveType.Cube).transform;
+
+        // When writing editor tools don't forget to be a good citizen and implement Undo!
+
+            Undo.RegisterCreatedObjectUndo(newObj.gameObject, "Create Cube");
+
+        //if (containerWindow is SceneView view)
+        //    view.FrameSelected();
+
+        }
+
+    }
+
+    // All Overlays must be tagged with the OverlayAttribute
+
+    [Overlay(typeof(SceneView), "ElementToolbars Example")]
+
+        // IconAttribute provides a way to define an icon for when an Overlay is in collapsed form. If not provided, the name initials are used.
+
+    [Icon("Assets/unity.png")]
+
+    // Toolbar Overlays must inherit `ToolbarOverlay` and implement a parameter-less constructor. The contents of a toolbar are populated with string IDs, which are passed to the base constructor. IDs are defined by EditorToolbarElementAttribute.
+
+    public class EditorToolbarExample : ToolbarOverlay
+    {
+
+     // ToolbarOverlay implements a parameterless constructor, passing the EditorToolbarElementAttribute ID.
+    // This is the only code required to implement a toolbar Overlay. Unlike panel Overlays, the contents are defined
+    // as standalone pieces that will be collected to form a strip of elements.
+
+        EditorToolbarExample() : base(
+            CreateCube.id,
+            ToggleExample.id,
+            DropdownExample.id,
+            DropdownToggleExample.id
+            )
+        { }
+    }
+
+
+</code></pre> 
+       <h3>Implementasi elemen Toolbar</h3> 
+       <ul> 
+        <li><a href="#creating-custom-overlays">Membuat kustom Login</a></li> 
+        <li><a href="#using-editortoolbarelement">Menggunakan EditorToolbar Login</a></li> 
+        <li> <a href="#panel-overlays">Panel Overlays</a> 
+         <ul> 
+          <li><a href="#example">Example</a></li> 
+         </ul> </li> 
+        <li> <a href="#toolbar-overlays">Overlay Toolbar</a> 
+         <ul> 
+          <li><a href="#example-1">Example</a></li> 
+          <li><a href="#toolbar-elements-implementation">Implementasi elemen Toolbar</a></li> 
+          <li><a href="#editortoolbarbutton">EditorToolbarButton</a></li> 
+          <li><a href="#editortoolbartoggle">EditorToolbarToggle</a></li> 
+          <li><a href="#editortoolbardropdown">EditorToolbarDropdown</a></li> 
+          <li><a href="#editortoolbardropdowntoggle">Login Login</a></li> 
+          <li><a href="#panel-overlay">Panel Overlay</a></li> 
+         </ul> </li> 
+       </ul> 
+       <p>Setelah menambahkan elemen toolbar, menerapkan panel <a href="add-elements-to-panel">Overlay</a>.</p> 
+       <p>Kontrolnya sama dengan setaranya di UIToolkit tetapi mengherankan beberapa fungsi toolbar (seperti keadaan runtuh, orientasi, dan panel) dan styling khusus.</p> 
+       <p><a name="editor-toolbar-button"></a></p> 
+       <h4>EditorToolbarButton</h4> 
+       <p>Kelas mandiri yang akan berisi semua logika elemen. Berikut adalah contoh tombol yang membuat kubus saat diklik.</p> 
+       <pre><code>[EditorToolbarElement(id, typeof(SceneView))]
+class CreateCube : EditorToolbarButton
+{
+// This ID is used to populate toolbar elements.
+
+public const string id = "ExampleToolbar/Button";   
+
+// Because this is a VisualElement, it is appropriate to place initialization logic in the constructor.
+
+// In this method you can also register to any additional events as required. In this example there is a tooltip, an icon, and an action.
+
+    public CreateCube()
+       {
+
+// A toolbar element can be either text, icon, or a combination of the two. Keep in mind that if a toolbar is docked horizontally the text will be clipped, so it's a good idea to specify an icon.
+
+            text = "Create Cube";
+            icon = AssetDatabase.LoadAssetAtPath&lt;Texture2D&gt;("Assets/CreateCubeIcon.png");
+            tooltip = "Instantiate a cube in the scene.";
+            clicked += OnClick;
+}
+
+void OnClick()
+{
+    var newObj = GameObject.CreatePrimitive(PrimitiveType.Cube).transform;
+
+    // When writing editor tools, don't forget to be a good citizen and implement Undo.
+
+    Undo.RegisterCreatedObjectUndo(newObj.gameObject, "Create Cube");
+
+// Note: Using ObjectFactory class instead of GameObject(like in this example) will register the undo entry automatically removing the need to register manually.
+
+}
+}
+</code></pre> 
+       <p>Tambahkan ID elemen ke konstruktor Overlay:</p> 
+       <pre><code>[Overlay(typeof(SceneView), "ElementToolbar Example")]
+[Icon("Assets/unity.png")]
+public class EditorToolbarExample : ToolbarOverlay
+{
+    EditorToolbarExample() : base(CreateCube.id) { }
+
+}
+</code></pre> 
+       <p><a name="editor-toolbar-toggle"></a></p> 
+       <h4>EditorToolbarToggle</h4> 
+       <p>Buat kelas mandiri yang berisi semua logika elemen. Berikut adalah contoh sederhana dari toggle yang mencetak keadaan di konsol dan memperbarui teksnya dalam elemen.</p> 
+       <pre><code>[EditorToolbarElement(id, typeof(SceneView))]
+class ToggleExample : EditorToolbarToggle
+{
+    public const string id = "ExampleToolbar/Toggle";
+    public ToggleExample()
+    {
+        text = "Toggle OFF";
+
+    // Register the class to a callback for when the toggle’s state changes
+
+        this.RegisterValueChangedCallback(OnStateChange);
+    }
+
+    void OnStateChange(ChangeEvent&lt;bool&gt; evt)
+    {
+        if (evt.newValue)
+        {
+
+    // Put logic for when the state is ON here
+
+                Debug.Log("Toggle State -&gt; ON");
+        text = "Toggle ON";
+        }
+        else
+        {
+
+    // Put logic for when the state is OFF here
+
+                Debug.Log("Toggle State -&gt; OFF");
+        text = "Toggle OFF";
+        }
+    }
+}
+</code></pre> 
+       <p>Tambahkan ID elemen ke konstruktor Overlay:</p> 
+       <pre><code>[[Overlay(typeof(SceneView), "ElementToolbar Example")]
+[Icon("Assets/unity.png")]
+public class EditorToolbarExample : ToolbarOverlay
+{
+    EditorToolbarExample() : base(
+ToggleExample.id
+) { }
+
+}
+
+</code></pre> 
+       <p><a name="editor-toolbar-dropdown"></a></p> 
+       <h4>EditorToolbarDropdown</h4> 
+       <p>Buat kelas mandiri yang berisi semua logika elemen. Berikut adalah contoh sederhana dari drop-down yang menyesuaikan teks dengan pilihan drop-down.</p> 
+       <pre><code>[EditorToolbarElement(id, typeof(SceneView))]
+class DropdownExample : EditorToolbarDropdown
+{
+    public const string id = "ExampleToolbar/Dropdown";
+
+    static string dropChoice = null;
+
+    public DropdownExample()
+    {
+        text = "Axis";
+        clicked += ShowDropdown;
+    }
+
+    void ShowDropdown()
+    {
+
+// A simple GenericMenu to populate the dropdown content
+
+        var menu = new GenericMenu();
+        menu.AddItem(new GUIContent("X"), dropChoice == "X", () =&gt; { text = "X"; dropChoice = "X"; });
+        menu.AddItem(new GUIContent("Y"), dropChoice == "Y", () =&gt; { text = "Y"; dropChoice = "Y"; });
+        menu.AddItem(new GUIContent("Z"), dropChoice == "Z", () =&gt; { text = "Z"; dropChoice = "Z"; });
+        menu.ShowAsContext();
+    }
+}
+</code></pre> 
+       <p>Tambahkan ID elemen ke konstruktor Overlay:</p> 
+       <pre><code>[Overlay(typeof(SceneView), "ElementToolbar Example")]
+[Icon("Assets/unity.png")]
+public class EditorToolbarExample : ToolbarOverlay
+{
+    EditorToolbarExample() : base(
+DropdownExample.id
+) { }
+
+}
+</code></pre> 
+       <p><a name="editor-toolbar-dropdown-toggle"></a></p> 
+       <h4>Login Login</h4> 
+       <p>Buat kelas mandiri yang berisi semua logika elemen. Sebuah toggle drop-down adalah dropdown yang juga dapat ditoggled (Seperti menu Gizmo dalam pandangan Adegan). Contoh ini menciptakan persegi panjang berwarna di sudut pandang Adegan ketika beralih dengan warna yang dipilih dari dropdown.</p> 
+       <pre><code>[EditorToolbarElement(id, typeof(SceneView))]
+class DropdownToggleExample : EditorToolbarDropdownToggle, IAccessContainerWindow
+{
+    public const string id = "ExampleToolbar/DropdownToggle";
+
+
+    // This property is specified by IAccessContainerWindow and is used to access the Overlay's EditorWindow.
+
+    public EditorWindow containerWindow { get; set; }
+    static int colorIndex = 0;
+    static readonly Color[] colors = new Color[] { Color.red, Color.green, Color.cyan };
+    public DropdownToggleExample()
+    {
+        text = "Color Bar";
+        tooltip = "Display a color rectangle in the top left of the Scene view. Toggle on or off, and open the dropdown" +
+                "to change the color.";
+
+
+   // When the dropdown is opened, ShowColorMenu is invoked and you can create a pop-up menu.
+
+        dropdownClicked += ShowColorMenu;
+
+
+    // Subscribe to the Scene view OnGUI callback to draw a color swatch.
+
+        SceneView.duringSceneGui += DrawColorSwatch;
+    }
+
+
+    void DrawColorSwatch(SceneView view)
+    {
+
+        // Test that this callback is for the correct Scene view, and check if the toggle is on
+     // or off (value).
+
+        if (view != containerWindow || !value)
+        {
+            return;
+        }
+
+
+        Handles.BeginGUI();
+            GUI.color = colors[colorIndex];
+        GUI.DrawTexture(new Rect(8, 8, 120, 24), Texture2D.whiteTexture);
+        GUI.color = Color.white;
+        Handles.EndGUI();
+    }
+
+
+    // When the drop-down button is clicked, this method creates a pop-up menu at the mouse cursor position.
+
+    void ShowColorMenu()
+    {
+        var menu = new GenericMenu();
+        menu.AddItem(new GUIContent("Red"), colorIndex == 0, () =&gt; colorIndex = 0);
+        menu.AddItem(new GUIContent("Green"), colorIndex == 1, () =&gt; colorIndex = 1);
+        menu.AddItem(new GUIContent("Blue"), colorIndex == 2, () =&gt; colorIndex = 2);
+        menu.ShowAsContext();
+    }
+}
+</code></pre> 
+       <p>Tambahkan ID elemen ke konstruktor Overlay:</p> 
+       <pre><code>[Overlay(typeof(SceneView), "ElementToolbar Example")]
+[Icon("Assets/unity.png")]
+public class EditorToolbarExample : ToolbarOverlay
+{
+    EditorToolbarExample() : base(
+DropdownToggleExample.id
+) { }
+
+
+}
+</code></pre> 
+       <p><a name="add-elements-to-panel"></a></p> 
+       <h4>Panel Overlay</h4> 
+       <p>Menerapkan Overlay Panel dan tambahkan elemen toolbar kelas mandiri. Dalam contoh di bawah ini, semua elemen toolbar disertakan untuk menunjukkan cara menambahkan beberapa elemen ke toolbar. Elemen Toolbar harus disertakan dalam Overlay Panel untuk terlihat.</p> 
+       <pre><code>[Overlay(typeof(SceneView), "ElementToolbar Example")]
+[Icon("Assets/unity.png")]
+public class EditorToolbarExample : Overlay
+{
+    public override VisualElement CreatePanelContent()
+    {
+        var root = new VisualElement() { name = "My Tool Root" };
+        root.Add(new CreateCube());
+        root.Add(new ToggleExample());
+        root.Add(new DropdownExample());
+        root.Add(new DropdownToggleExample());
+        return root;
+    }
+}
+</code></pre> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="overlays.html"></a></span> 
+         <div class="tip">
+           Overlays 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="PositioningGameObjects.html"></a></span> 
+         <div class="tip">
+           Posisi GameObjects 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

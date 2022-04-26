@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Properti AS sintaks</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UIToolkits.html"></a></li> 
+         <li><a href="UIElements.html"></a></li> 
+         <li><a href="UIE-USS.html">UI gaya dengan USS</a></li> 
+         <li><a href="UIE-USS-Properties-Reference.html">Referensi properti ASS</a></li> 
+         <li>Properti AS sintaks</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UIE-USS-Properties-Reference.html"></a></span> 
+          <div class="tip">
+            Referensi properti ASS 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UIE-Transform.html"></a></span> 
+          <div class="tip">
+            USS mengubah 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Properti AS sintaks</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Halaman ini memperkenalkan sifat ASS umum, sintaks dan nilai yang diterima, dan perbedaan dari CSS. Untuk daftar lengkap properti ASS, lihat <a href="UIE-USS-Properties-Reference.html">Referensi properti ASS</a>.</p> 
+       <p>Properti AS menggunakan sintaks tata bahasa yang sama seperti dokumen CSS W3C:</p> 
+       <ul> 
+        <li>Nilai kata kunci muncul sebagai. Contoh: <code>auto</code>, <code>baseline</code>.</li> 
+        <li>Jenis data dasar muncul antara braket sudut ( <code>&lt;</code> dan <code>&gt;</code>). Contoh: <code>&lt;length&gt;</code>, <code>&lt;color&gt;</code>.</li> 
+        <li>Non-terminal yang berbagi nama yang sama dengan properti muncul antara kurung sudut dan kutipan lurus tunggal (<code>&lt;'</code> dan <code>'&gt;</code>). Sebagai contoh, <code>&lt;'width'&gt;</code>.</li> 
+       </ul> 
+       <p>Jika nilai properti memiliki lebih dari satu komponen:</p> 
+       <ul> 
+        <li>Kata-kata samping berarti bahwa semua dari mereka harus terjadi dalam urutan yang diberikan.</li> 
+        <li>Sebuah bar (<code>|</code>) memisahkan dua atau lebih alternatif: persis yang harus terjadi.</li> 
+        <li>Sebuah bar ganda (<code>||</code>) memisahkan dua atau lebih pilihan: satu atau lebih harus terjadi, dalam urutan apa pun.</li> 
+        <li>Ampersand ganda (<code>&amp;&amp;</code>) memisahkan dua atau lebih komponen, yang harus terjadi, dalam urutan apa pun.</li> 
+        <li>Braket persegi (<code>[</code> <code>]</code>) kelompok menunjukkan.</li> 
+       </ul> 
+       <p>Setiap jenis, kata kunci, atau kelompok bercak sudut dapat diikuti dengan pengubah:</p> 
+       <ul> 
+        <li>asterisk (<code>*</code>) menunjukkan bahwa jenis preceding, kata, atau kelompok terjadi nol atau lebih kali.</li> 
+        <li>ditambah (<code>+</code>) menunjukkan bahwa jenis preceding, kata, atau kelompok terjadi satu atau lebih kali.</li> 
+        <li>tanda pertanyaan (<code>?</code>) menunjukkan bahwa jenis preceding, kata, atau kelompok adalah opsional.</li> 
+        <li>sepasang angka di kawat gigi keriting (<code>{A,B}</code>) menunjukkan bahwa jenis preceding, kata, atau kelompok terjadi setidaknya <code>A</code> dan pada waktu yang paling <code>B</code>.</li> 
+       </ul> 
+       <h2>Model kotak</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/style-box-model.png" alt="Box model"> 
+        <figcaption>
+          Model kotak 
+        </figcaption> 
+       </figure> 
+       <h3>Dimensions</h3> 
+       <pre><code class="lang-css">width: &lt;length&gt; | auto
+height: &lt;length&gt; | auto
+min-width: &lt;length&gt; | auto
+min-height: &lt;length&gt; | auto
+max-width: &lt;length&gt; | none
+max-height: &lt;length&gt; | none
+</code></pre> 
+       <p><code>width</code> dan <code>height</code> menentukan ukuran elemen. Jika <code>width</code> tidak ditentukan, lebar didasarkan pada lebar konten elemen. Jika <code>height</code> tidak ditentukan, tinggi didasarkan pada ketinggian konten elemen.</p> 
+       <h3>Margins</h3> 
+       <pre><code class="lang-css">margin-left: &lt;length&gt; | auto;
+margin-top: &lt;length&gt; | auto
+margin-right: &lt;length&gt; | auto
+margin-bottom: &lt;length&gt; | auto
+/* Shorthand */
+margin: [&lt;length&gt; | auto]{1,4}
+</code></pre> 
+       <h3>Borders</h3> 
+       <pre><code class="lang-css">border-left-width: &lt;length&gt;
+border-top-width: &lt;length&gt;
+border-right-width: &lt;length&gt;
+border-bottom-width: &lt;length&gt;
+/* Shorthand */
+border-width: &lt;length&gt;{1,4}
+</code></pre> 
+       <h3>Padding</h3> 
+       <pre><code class="lang-css">padding-left: &lt;length&gt;
+padding-top: &lt;length&gt;
+padding-right: &lt;length&gt;
+padding-bottom: &lt;length&gt;
+/* Shorthand */
+padding: &lt;length&gt;{1,4}
+</code></pre> 
+       <h3>Perbedaan dari CSS</h3> 
+       <p>Model kotak alternatif yang digunakan AS berbeda dari <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model#What_is_the_CSS_box_model">model kotak CSS standar</a>. Dalam model kotak CSS standar, <code>width</code> dan <code>height</code> menentukan ukuran kotak konten. Ukuran rendered elemen adalah jumlah <code>padding</code>, <code>border-width</code>, dan nilai <code>width</code> / <code>height</code>.</p> 
+       <p>Model Unity setara dengan mengatur properti CSS <code>box-sizing</code> ke <code>border-box</code>. Lihat <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing">Dokumentasi MDN</a> untuk rincian.</p> 
+       <h2>Flex tata letak</h2> 
+       <p>UI Toolkit termasuk elemen visual <a href="UIE-LayoutEngine.html">mesin tata letak</a> yang didasarkan pada tata letak dan sifat styling. Mesin tata letak menerapkan subset Flexbox, sistem tata letak HTML / CSS.</p> 
+       <p>Secara default, semua item ditempatkan secara vertikal dalam wadah mereka.</p> 
+       <pre><code class="lang-css">/* Items */
+flex-grow: &lt;number&gt;
+flex-shrink: &lt;number&gt;
+flex-basis: &lt;length&gt; | auto
+flex: none | [ &lt;'flex-grow'&gt; &lt;'flex-shrink'&gt;? || &lt;'flex-basis'&gt; ]
+align-self: auto | flex-start | flex-end | center | stretch
+
+/* Containers */
+flex-direction: row | row-reverse | column | column-reverse
+flex-wrap: nowrap | wrap | wrap-reverse
+align-content: flex-start | flex-end | center | stretch
+align-items: flex-start | flex-end | center | stretch
+justify-content: flex-start | flex-end | center | space-between | space-around
+</code></pre> 
+       <h2>Positioning</h2> 
+       <pre><code class="lang-css">/* The default value is `relative` which positions the element based on its parent. 
+If sets to `absolute`, the element leaves its parent layout and values are specified based on the parent bounds.*/
+position: absolute | relative
+
+/* The distance from the parent edge or the original position of the element. */
+left: &lt;length&gt; | auto
+top: &lt;length&gt; | auto
+right: &lt;length&gt; | auto
+bottom: &lt;length&gt; | auto
+</code></pre> 
+       <div id="unity-background"></div> 
+       <h2>Background</h2> 
+       <pre><code class="lang-css">background-color: &lt;color&gt;
+background-image: &lt;resource&gt; | &lt;url&gt; | none
+-unity-background-scale-mode: stretch-to-fill | scale-and-crop | scale-to-fit
+-unity-background-image-tint-color: &lt;color&gt;
+</code></pre> 
+       <div id="unity-slice"></div> 
+       <h2>Slicing</h2> 
+       <p>Ketika menetapkan gambar latar belakang, Anda menariknya sehubungan dengan spesifikasi 9 silinder yang disederhanakan:</p> 
+       <pre><code class="lang-css">-unity-slice-left: &lt;integer&gt;
+-unity-slice-top: &lt;integer&gt;
+-unity-slice-right: &lt;integer&gt;
+-unity-slice-bottom: &lt;integer&gt;
+-unity-slice-scale: &lt;length&gt;
+</code></pre> 
+       <h2>Warna perbatasan</h2> 
+       <pre><code class="lang-css">border-color: &lt;color&gt;
+</code></pre> 
+       <div id="drawing-borders"></div> 
+       <h2>Radius perbatasan</h2> 
+       <pre><code class="lang-css">border-top-left-radius: &lt;length&gt;
+border-top-right-radius: &lt;length&gt;
+border-bottom-left-radius: &lt;length&gt;
+border-bottom-right-radius: &lt;length&gt;
+/* Shorthand */
+border-radius: &lt;length&gt;{1,4}
+</code></pre> 
+       <h3>Perbedaan dari CSS</h3> 
+       <p>Properti radius perbatasan bekerja hampir sama di USS dan CSS. Untuk informasi terperinci tentang <code>border-radius</code>, lihat <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius">Dokumentasi MDN</a>.</p> 
+       <p>Namun, ada dua perbedaan utama:</p> 
+       <ul> 
+        <li>Unity tidak mendukung shorthand kedua-radius (<code>border-radius: (first radius values) / (second radius values);</code>) digunakan untuk membuat sudut elips.</li> 
+        <li>Unity mengurangi nilai radius perbatasan menjadi setengah dari ukuran elemen pada <span class="tooltip"><strong>pixels</strong><span class="tooltiptext">Unit terkecil dalam gambar komputer. Ukuran piksel tergantung pada resolusi layar Anda. Pencahayaan pixel dihitung pada setiap piksel layar. <a class="tooltipMoreInfoLink" href="ShadowPerformance.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#pixel">Glossary</a></span></span></span>. Misalnya, untuk elemen 100px x 100px, nilai <code>border-radius</code> lebih besar dari 50px berkurang menjadi 50px. Jika Anda menggunakan nilai persentase (<code>%</code>) untuk sifat radius perbatasan, Unity pertama menyelesaikan persentase piksel dan kemudian mengurangi nilai <code>border-radius</code> menjadi setengah dari nilai piksel yang diselesaikan. Jika Anda memiliki nilai radius yang berbeda untuk dua sudut atau lebih, Unity mengurangi nilai yang lebih besar dari setengah ukuran elemen hingga setengah dari ukuran elemen.</li> 
+       </ul> 
+       <div id="unity-overflow-clip-box"></div> 
+       <div id="unity-paragraph-spacing"></div> 
+       <h2>Appearance</h2> 
+       <pre><code class="lang-css">overflow: hidden | visible
+-unity-overflow-clip-box: padding-box | content-box
+-unity-paragraph-spacing: &lt;length&gt;
+opacity: &lt;number&gt;
+visibility: visible | hidden
+display: flex | none
+</code></pre> 
+       <p><code>-unity-overflow-clip-box</code> mendefinisikan persegi panjang klip untuk konten elemen. Defaultnya adalah <code>padding-box</code>, persegi panjang di luar area padding (sudut hijau dalam gambar model kotak di atas); <code>content-box</code> mewakili nilai di dalam area padding (sudut biru dalam gambar model kotak di atas).</p> 
+       <div id="display"></div> 
+       <p>Nilai default <code>display</code> adalah <code>flex</code>. Menyiapkan <code>display</code> ke <code>none</code> menghapus elemen. Menyiapkan <code>visibility</code> untuk <code>hidden</code> menyembunyikan elemen, tetapi elemen masih menempati ruang dalam tata letak.</p> 
+       <h3>Perbedaan dari CSS</h3> 
+       <p>Properti USS <code>display</code> hanya mendukung subset kecil CSS <code>display</code> properti yang tersedia nilai kata kunci. Versi ASS mendukung kata kunci yang bekerja dengan mesin tata letak Yoga.</p> 
+       <ul> 
+        <li>Untuk informasi lebih lanjut tentang Yoga, lihat <a href="XREF.md">Layout</a>.</li> 
+        <li>Untuk informasi lebih lanjut tentang properti CSS <code>display</code>, lihat <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">Dokumentasi MDN</a>.</li> 
+       </ul> 
+       <div id="unity-font"></div> 
+       <div id="unity-text"></div> 
+       <h2>Sifat teks</h2> 
+       <p>Sifat teks mengatur warna, font, ukuran font, dan sifat khusus Unity untuk sumber daya font, gaya font, penyelarasan, bungkus kata, dan kliping.</p> 
+       <pre><code class="lang-css">color: &lt;color&gt;
+-unity-font: &lt;resource&gt; | &lt;url&gt;
+-unity-font-definition: &lt;resource&gt; | &lt;url&gt;
+font-size: &lt;number&gt;
+-unity-font-style: normal | italic | bold | bold-and-italic
+-unity-text-align: upper-left | middle-left | lower-left | upper-center | middle-center | lower-center | upper-right | middle-right | lower-right
+-unity-text-overflow-position: start | middle | end
+white-space: normal | nowrap
+
+-unity-text-outline-width: &lt;length&gt;
+-unity-text-outline-color: &lt;color&gt;
+/* Shorthand */
+-unity-text-outline: &lt;length&gt; | &lt;color&gt;
+</code></pre> 
+       <p> <strong>Note</strong>: Saat menyiapkan font di <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#UI">Glossary</a></span></span></span> Builder, kontrol <strong>Font</strong> pada set <strong><span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, asset or project settings, allowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span></strong>, dan set kontrol <code>-unity-font</code> <strong>Font Asset</strong>. Karena <code>-unity-font-definition</code> mengambil precedence lebih dari <code>-unity-font-definition</code>, jika Anda ingin menggunakan font dari daftar <code>-unity-font</code>, Anda harus memilih <strong>Font</strong> dari <strong>None</strong>. Jika tidak, font yang Anda pilih tidak akan mengambil efek.<strong>Font Asset</strong>. Otherwise, the font you selected won’t take effect.</p> 
+       <div id="cursor"></div> 
+       <h2>Cursor</h2> 
+       <p>Gunakan tipe tekstur default <code>cursor</code> untuk mengimpor tekstur kustom untuk kursor.</p> 
+       <pre><code class="lang-css">cursor: [ [ &lt;resource&gt; | &lt;url&gt; ] [ &lt;integer&gt; &lt;integer&gt;]? , ] [ arrow | text | resize-vertical | resize-horizontal | link | slide-arrow | resize-up-right | resize-up-left | move-arrow | rotate-arrow | scale-arrow | arrow-plus | arrow-minus | pan | orbit | zoom | fps | split-resize-up-down | split-resize-left-right ]
+</code></pre> 
+       <h3>Perbedaan dari CSS</h3> 
+       <p>Dalam CSS, Anda dapat menentukan beberapa kurs khusus opsional dan kata kunci wajib dalam deklarasi gaya <code>cursor</code> tunggal. Ketika Anda menentukan beberapa kurs, mereka membentuk rantai fallback. Jika browser tidak dapat memuat kursor kustom pertama, itu mencoba masing-masing orang lain dalam urutan sampai salah satu dari mereka beban atau tidak ada lagi obat kustom untuk mencoba. Jika browser tidak dapat memuat obat kustom, itu menggunakan kata kunci.</p> 
+       <p>Di AS, kurs khusus dan kata kunci saling eksklusif. deklarasi gaya <code>cursor</code> hanya dapat memiliki satu kursor kustom atau satu kata kunci.</p> 
+       <p>Untuk informasi terperinci tentang properti CSS <code>cursor</code>, lihat <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/cursor">Dokumentasi MDN</a>.</p> 
+       <div id="opacity"></div> 
+       <h2>Opacity</h2> 
+       <pre><code class="lang-css">opacity: &lt;number&gt;
+</code></pre> 
+       <h3>Perbedaan dari CSS</h3> 
+       <p>USS opacity mirip dengan <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/opacity">CSS opacity</a>. Tingkat opacity unsur induk mempengaruhi <strong>perceived opacity</strong> elemen anak. Perceivability berbeda antara opacity ASS dan opacity CSS.</p> 
+       <p>Dalam contoh USS berikut, kotak biru adalah anak kotak merah. Persegi merah memiliki <code>opacity</code> <code>0.5</code>.</p> 
+       <pre><code class="lang-css">.red {
+    background-color: red;
+    opacity: 0.5;
+}
+
+.blue {
+    background-color: blue;
+    left: 20px;
+    top: 20px;
+}
+</code></pre> 
+       <p>Meskipun kotak biru tidak memiliki nilai opacity, memiliki opacity yang dirasakan dari <code>0.5</code> dari kotak merah. Anda dapat melihat kotak merah melalui kotak biru.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/opacity-ui-builder.png" alt="USS opacity example"> 
+        <figcaption>
+          Contoh opacity AS 
+        </figcaption> 
+       </figure> 
+       <p>Di CSS, jika Anda menerapkan gaya yang sama, kedua kotak merah dan biru 50% transparan. Namun, Anda tidak dapat melihat kotak merah melalui kotak biru, kecuali Anda juga mengatur <code>opacity</code> biru menjadi kurang dari <code>1</code>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/opacity-css.png" alt="CSS opacity example"> 
+        <figcaption>
+          CSS Info 
+        </figcaption> 
+       </figure> 
+       <h2>Sumber daya tambahan</h2> 
+       <ul> 
+        <li><a href="UIE-Transform.html">USS mengubah</a></li> 
+        <li><a href="UIE-Transition">USS transisi</a></li> 
+       </ul> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UIE-USS-Properties-Reference.html"></a></span> 
+         <div class="tip">
+           Referensi properti ASS 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UIE-Transform.html"></a></span> 
+         <div class="tip">
+           USS mengubah 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy"> 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

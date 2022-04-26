@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Progresif GPU Lightmapper (preview)</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="LightingOverview.html">Lighting</a></li> 
+         <li><a href="Lightmappers.html">Lightmapping</a></li> 
+         <li><a href="progressive-lightmapper.html">Progresif Lightmapper</a></li> 
+         <li>Progresif GPU Lightmapper (preview)</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="progressive-lightmapper.html"></a></span> 
+          <div class="tip">
+            Progresif Lightmapper 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="GI-Enlighten.html"></a></span> 
+          <div class="tip">
+            Lightmapping menggunakan Enlighten Baked Global Illumination 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Progresif GPU Lightmapper (preview)</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Sitemap Ini adalah fitur pratinjau dan tunduk pada perubahan. Jika Anda memiliki <strong>Note:</strong> yang menggunakan fitur ini, Anda mungkin perlu memperbaruinya dalam rilis masa depan. Jangan bergantung pada fitur ini untuk produksi skala penuh sampai dirilis secara resmi.<span class="tooltip"><strong>Scenes</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> that use this feature, you might need to update them in a future release. Do not rely on this feature for full-scale production until it is officially released.</p> 
+       <p><strong>Progressive GPU <span class="tooltip"><strong>Lightmapper</strong><span class="tooltiptext">A tool in Unity that bakes lightmaps according to the arrangement of lights and geometry in your scene. <a class="tooltipMoreInfoLink" href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#Lightmapper">Glossary</a></span></span></span></strong> adalah backend untuk <a href="progressive-lightmapper.html">Progres Lightmapper</a> yang menggunakan GPU komputer dan Dedicated Video Ram (VRAM) untuk menghasilkan baked <span class="tooltip"><strong>lightmaps</strong><span class="tooltiptext">Tekstur pra-render yang mengandung efek sumber cahaya pada objek statis di tempat kejadian. Lightmaps dilalui atas geometri adegan untuk menciptakan efek pencahayaan. <a href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Lightmap">Glossary</a></span></span></span> dan <span class="tooltip"><strong>Light Probes</strong><span class="tooltiptext">probe cahaya menyimpan informasi tentang bagaimana cahaya melewati ruang di tempat kejadian Anda. Koleksi probe cahaya yang diatur dalam ruang tertentu dapat meningkatkan pencahayaan pada objek bergerak dan pemandangan LOD statis dalam ruang itu. <a href="LightProbes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#LightProbe">Glossary</a></span></span></span>.</p> 
+       <h2>Persyaratan perangkat keras dan perangkat lunak</h2> 
+       <p>Untuk menggunakan Progressive GPU Lightmapper, komputer Anda harus memenuhi spesifikasi minimum ini:</p> 
+       <ul> 
+        <li>setidaknya satu GPU dengan dukungan OpenCL 1.2</li> 
+        <li>setidaknya 4GB VRAM didedikasikan untuk GPU</li> 
+        <li>CPU yang mendukung instruksi SSE4.1</li> 
+       </ul> 
+       <p>Jika adegan Anda baking membutuhkan lebih banyak VRAM daripada tersedia di GPU yang ditunjuk, waktu bake dapat secara signifikan meningkatkan. Lihat Kinerja untuk informasi untuk membantu Anda mengurangi waktu yang dibutuhkan untuk memanggang Adegan Anda.</p> 
+       <p>Progresif GPU Lightmapper tidak mendukung perangkat OpenCL CPU.</p> 
+       <h2>Performance</h2> 
+       <p>Progresif GPU Lightmapper bakes lebih cepat daripada Progresif CPU Lightmapper, kecuali tiling lightmapper aktif.</p> 
+       <p>Namun, spesifikasi GPU yang Anda gunakan untuk bake dan jumlah VRAM yang didedikasikan untuk GPU keduanya mempengaruhi pengalaman Anda dari kinerja lightmapper.</p> 
+       <p>Aplikasi lain bersaing untuk sumber daya GPU juga memiliki dampak pada kinerja baking. Tergantung pada vendor perangkat keras Anda, pengurangan dalam jumlah VRAM tersedia untuk Unity dapat memperlambat bake, menyebabkannya gagal, atau bahkan mengakibatkan Progressive GPU Lightmapper turun ke CPU jika GPU tidak dapat memenuhi persyaratan memori minimum. Menutup aplikasi lain saat Anda bekerja dengan fungsi ini dapat meningkatkan stabilitas dan kinerja.</p> 
+       <p>Untuk mencapai hasil kualitas yang sama dengan Progressive CPU Lightmapper, Progressive GPU Lightmapper perlu hingga empat kali sampel cahaya tidak langsung. Progresif CPU Lightmapper menggunakan pendekatan yang disebut penyimpangan jalan bercabang, yang meluncurkan sinar yang lebih ringan pada setiap bouncing. Pendekatan tracing jalan bercabang tidak cocok untuk GPU.</p> 
+       <p>Unity menyediakan spreadsheet untuk membantu Anda menentukan berapa banyak memori Progressive GPU Lightmapper perlu untuk memanggang adegan Anda. Untuk informasi lebih lanjut lihat <a href="https://docs.unity3d.com/2022.1/Documentation/uploads/Examples/GPULightmapperMemoryTool.zip">Progres GPU Lightmapper Memory Spreadsheet</a> .</p> 
+       <h2>Mencegah perlambatan kecepatan baking yang disebabkan oleh penetes lightmapper</h2> 
+       <p>Progresif GPU Lightmapper termasuk fitur yang disebut lightmapper tiling. Lightmapper tiling mencegah Progresif GPU Lightmapper dari jatuh kembali ke Progresif CPU Lightmapper ketika Unity telah menggunakan alokasi memori GPU. Sebaliknya, Unity mengalokasikan beberapa memori sementara pada CPU, kemudian bak pencahayaan Anda dalam ubin yang ukuran untuk mencocokkan jumlah memori GPU yang tersedia. Lightmapper tiling aktif hanya ketika Unity tidak dapat mengakses cukup memori GPU untuk memanggang seluruh lightmap. Progresif CPU Lightmapper tidak termasuk fitur tiling.</p> 
+       <p>Ketika tiling lightmapper aktif, pembaruan progresif berhenti di <span class="tooltip"><strong>Scene view</strong><span class="tooltiptext">Tampilan interaktif ke dunia yang Anda buat. Anda menggunakan Adegan Lihat untuk memilih dan posisi pemandangan, karakter, kamera, lampu, dan semua jenis lain dari Game Object. <a class="tooltipMoreInfoLink" href="UsingTheSceneView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SceneView">Glossary</a></span></span></span> dan proses baking. Namun, pengaturan <strong>Progressive updates</strong> di jendela Pencahayaan tidak terlihat. Baking sebuah adegan ketika lightmapper tiling aktif lebih lambat daripada baking yang sama adegan tanpa tiling.</p> 
+       <p>Hal ini tidak mungkin untuk menonaktifkan tiling. Namun, Anda dapat mengurangi kemungkinan aktivasinya dengan menggunakan strategi berikut:</p> 
+       <ul> 
+        <li><p>Meningkatkan jumlah memori GPU yang tersedia untuk Unity untuk digunakan.</p></li> 
+        <li><p>Diaktifkan <span class="tooltip"><a href="LightingBakedAmbientOcclusion.html">ambient occlusion</a><span class="tooltiptext">Metode perkiraan berapa banyak cahaya ambient (cahaya tidak datang dari arah tertentu) dapat memukul titik di permukaan.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Ambientocclusion">Glossary</a></span></span></span>. Buka jendela Pencahayaan (menu: <strong>Window &gt; Rendering &gt; Lighting</strong>). Dalam antarmuka Pengaturan Lightmapping, disable <strong>Ambient Occlusion</strong>.</p></li> 
+        <li><p>Bake hanya cahaya tidak langsung. Mengatur semua sumber cahaya Anda ke <strong>Realtime</strong> atau <strong>Mixed</strong>. Pastikan bahwa tidak ada sumber cahaya diatur ke <strong>Baked</strong>. Jika Anda menggunakan pendekatan campuran, set <strong>Lighting &gt; Mixed Lighting &gt; Lighting mode</strong> ke <strong>Baked Indirect</strong>.</p></li> 
+        <li><p>Mengurangi tingkat proyek Anda. Navigasi ke <strong>Project Settings</strong> &gt; <strong></strong> dan pilih opsi yang membutuhkan sampel yang lebih sedikit. Misalnya, Anda mungkin beralih dari <strong>8x Multi Sampling</strong> ke <strong>2x Multi Sampling</strong>.</p></li> 
+        <li><p>Kurangi kualitas peta lampu Anda. Buka, kembangkan <strong>Lightmapping settings</strong>, dan pilih opsi resolusi lebih rendah untuk <strong>Lightmap parameters</strong>.</p></li> 
+        <li><p>Kurangi resolusi lightmap Anda.</p></li> 
+        <li><p>Gunakan denoiser berbasis CPU. Untuk memilih denoiser, buka, memperluas <strong>Lightmapping settings</strong>, set <strong>Filtering</strong> ke <strong>Advanced</strong> dan kemudian pilih denoiser untuk setiap jenis target lightmap (<strong>Direct</strong> dan <strong>Indirect</strong>). Hanya <strong>OpenImageDenoise</strong> berbasis CPU. <strong>RadeonPro</strong> dan <strong>Optix</strong> adalah GPU berbasis, tetapi <strong>RadeonPro</strong> menggunakan lebih banyak memori GPU.</p></li> 
+       </ul> 
+       <h2>Batasan spesifik platform</h2> 
+       <p>Di macOS lebih sulit untuk menentukan berapa banyak memori yang tersedia. Sebagai hasilnya, fallback ke CPU lebih mungkin di platform ini dan merupakan praktik terbaik untuk mengikuti instruksi untuk mengoptimalkan kecepatan bake Anda.</p> 
+       <h2>Cara mengoptimalkan kecepatan bake Anda</h2> 
+       <p>Ada beberapa cara Anda dapat mengurangi waktu bake dan menghindari situasi di mana roti melebihi VRAM tersedia untuk GPU yang ditunjuk untuk dipanggang.</p> 
+       <ul> 
+        <li><p>Tutup aplikasi GPU-accelerated lainnya. GPU-accelerated 2D pengeditan gambar dan perangkat lunak pemodelan 3D menggunakan VRAM. Matikan fungsi grafis yang dipercepat atau berhenti aplikasi ini.</p></li> 
+        <li><p>Beralih ke denoiser berbasis CPU. Denoisers berbasis GPU juga menggunakan kapasitas VRAM. Beralih ke opsi berbasis CPU, seperti <a href="https://www.openimagedenoise.org/">Gambar Terbuka Intel</a>, yang menggunakan RAM sistem.</p></li> 
+        <li><p>Gunakan Probe Cahaya untuk lebih kecil <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span>. GameObjects seperti puing-puing atau props kecil menggunakan ruang di lightmaps tetapi mungkin tidak berkontribusi signifikan pada tampilan adegan. Untuk mengoptimalkan kecepatan bake, dan menyalakannya dengan bukan.</p></li> 
+        <li><p>Merancang GPU terpisah untuk rendering dan baking. Jika komputer Anda memiliki lebih dari satu GPU, Anda dapat menunjuk satu untuk rendering dan satu untuk memanggang. Lihat pilihan GPU Konfigurasi di bawah ini.</p></li> 
+        <li><p>Gunakan jumlah yang lebih rendah dari <strong>Anti-aliasing samples</strong>. Nilai default untuk pengaturan ini di 8. Ketika Anda meningkatkannya, Unity menggunakan lebih banyak VRAM. Ketika Anda menggunakan ukuran lightmap 4096 atau di atas, ini dapat dengan cepat melebihi memori banyak konsumen GPU.</p></li> 
+       </ul> 
+       <h2>Mengkonfigurasi pemilihan GPU <a name="configgpu"></a> </h2> 
+       <p>Jika Anda memiliki setidaknya dua GPU, Anda dapat menentukan satu GPU untuk rendering Adegan dan yang lain untuk pencahayaan baking. Ini mungkin diinginkan dalam kasus di mana tidak ada VRAM yang tidak memadai tersedia untuk GPU default untuk kedua render adegan Anda dan bake itu menggunakan Progressive GPU Lightmapper. Login Untuk mengubah penggunaan Unity GPU untuk baking: <br> 1. Buka jendela <br> (menu: <strong>Lighting</strong>).<strong>Window &gt; Rendering &gt; Lighting</strong> 2. Navigasi ke bagian <br>.<strong>Workflow Settings</strong> 3. Gunakan menu drop-down <br> untuk memilih GPU.<strong>GPU Baking Device</strong>%<br> </p> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="progressive-lightmapper.html"></a></span> 
+         <div class="tip">
+           Progresif Lightmapper 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="GI-Enlighten.html"></a></span> 
+         <div class="tip">
+           Lightmapping menggunakan Enlighten Baked Global Illumination 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

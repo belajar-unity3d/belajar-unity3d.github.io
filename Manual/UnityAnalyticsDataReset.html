@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Database</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="monetization" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UnityServices.html">Layanan Unity</a></li> 
+         <li><a href="UnityAnalytics.html">Analisis Unity</a></li> 
+         <li>Data reset</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UnityAnalyticsRawDataExport.html"></a></span> 
+          <div class="tip">
+            Home &gt; Sitemap 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UnityAnalyticsUpgrading.html"></a></span> 
+          <div class="tip">
+            Analisis Unity 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Data reset</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Unity <span class="tooltip"><strong>Analytics</strong><span class="tooltiptext"><strong>Unity Analytics</strong><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Analytics">Glossary</a></span></span></span> memungkinkan Anda untuk menghapus semua data secara permanen dari dashboard Analytics Anda dengan melakukan reset data. Tindakan ini <strong>cannot be undone</strong>, jadi baca dokumentasi ini dan pesan konfirmasi di dasbor Analytics dengan cermat sebelum melakukan tindakan ini.</p> 
+       <p>Halaman ini menjelaskan ketika reset data mungkin berguna, dan dampak apa yang dimiliki pada data dalam proyek Analytics Anda.</p> 
+       <h2>Ketika melakukan reset data</h2> 
+       <p>skenario utama yang menyerukan untuk mengatur ulang data dalam proyek Analytics adalah menghapus data dari dasbor Anda segera sebelum meluncurkan (atau melepaskan kembali) permainan Anda. Ini memastikan bahwa data yang Anda kumpulkan setelah ulang bersih dan tidak dicampur dengan data yang dikumpulkan sebelumnya, yang dapat mengubah analisis Anda.</p> 
+       <p>skenario umum lainnya:</p> 
+       <ul> 
+        <li><p>Memacu data yang dikumpulkan selama pengembangan dan pengujian sebelum meluncurkan permainan Anda.</p></li> 
+        <li><p>Data Wiping dari versi pra-release atau beta.</p></li> 
+        <li><p>Memutar data sebelum meluncurkan permainan Anda di toko.</p></li> 
+        <li><p>Memancarkan data sebelum kembali produk.</p></li> 
+       </ul> 
+       <p>Harap dicatat bahwa melakukan reset data adalah opsional - Anda mungkin tidak perlu menggunakan fitur ini.</p> 
+       <h2>Bagaimana dampak ini data Anda</h2> 
+       <p>Karena siklus pemrosesan data Unity Technologies, semua reset data terjadi pada 00:00 UTC hari berikutnya. Lihat halaman Konfigurasi untuk waktu yang tepat (dalam zona waktu Anda) data Anda disebabkan untuk diatur ulang.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AnalyticsDataReset1.jpg" alt=""> 
+       </figure> 
+       <p>Data dikumpulkan dari waktu reset terjadi, tetapi mungkin memakan waktu hingga 4 jam untuk mengisi dasbor Anda. Anda tidak dapat menentukan tanggal lain untuk mengatur ulang data Anda.</p> 
+       <p>Mengatur ulang data Anda mempengaruhi elemen Analytics ini sebagai berikut:</p> 
+       <ul> 
+        <li><p>Sitemap Ini secara permanen dihapus dari semua data yang terlihat, termasuk data dalam grafik.<strong>Dashboard:</strong> This is permanently wiped of all visible data, including data in charts.</p></li> 
+        <li><p>Sitemap Ini secara permanen dihapus dari dashboard. Perhatikan bahwa peristiwa kustom yang telah Anda instrumentasi dalam proyek Anda tidak perlu divalidasi kembali.<strong>Custom event data:</strong> This is permanently wiped from the dashboard. Note that custom events you have instrumented in your project don’t need to be re-validated.</p></li> 
+        <li><p>Sitemap Semua data yang terkait dengan konfigurasi ini (yang telah Anda buat di proyek Anda) secara permanen dihapus dari dashboard. Namun, konfigurasi itu sendiri tidak dihapus. Misalnya, jika Anda membuat saluran tiga langkah, mengisinya dengan data, dan kemudian melakukan reset data, saluran tiga langkah masih ada di dasbor Anda tetapi tidak lagi diisi dengan data.<strong>Reports, Funnels, Segments:</strong> All data associated with these configurations (that you have created in your project) is permanently wiped from the dashboard. However, the configurations themselves are not deleted. For example, if you create a three-step funnel, populate it with data, and then perform a data reset, the three-step funnel is still present in your dashboard but is no longer populated with the data.</p></li> 
+        <li><p>Sitemap Ini tidak terpengaruh dengan melakukan reset data. Anda masih dapat melakukan ekspor untuk mengakses data historis, dan semua ekspor sebelumnya yang Anda jalankan masih ada di tabel Aktivitas di halaman Ekspor Data Raw.<strong>Raw Data Export:</strong> This is not affected by performing a data reset. You can still perform an export to access historical data, and all previous exports you have run are still present in the Activity table on the Raw Data Export page.</p></li> 
+       </ul> 
+       <h2>Cara melakukan reset data</h2> 
+       <p>Untuk melakukan reset data, buka Dasbor Layanan Unity untuk proyek Analytics yang ingin Anda reset, pergi ke <strong>Configure</strong>, dan klik pada <strong>Reset Data</strong>. Pastikan membaca pesan konfirmasi dengan hati-hati. Ketik nama proyek Anda ke dalam kotak teks dan klik <strong>Reset</strong>. Reset data terjadi segera.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UnityAnalyticsDataReset55.jpg" alt=""> 
+       </figure> 
+       <p>Ketika data direset, rincian berikut disediakan tentang ulang terakhir di halaman <strong>Configure</strong>:</p> 
+       <ul> 
+        <li><p>Tanggal dan waktu reset terjadi.</p></li> 
+        <li><p>Pengguna yang melakukan reset.</p></li> 
+       </ul> 
+       <p>Sitemap Hanya Pemilik Proyek dan Manajer dapat melakukan tindakan ini. Pengguna Proyek tidak memiliki izin untuk melakukan reset.<strong>Note:</strong> Only Project Owners and Managers can perform this action. Project Users do not have permission to perform a reset.</p> 
+       <!-- area:monetization --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UnityAnalyticsRawDataExport.html"></a></span> 
+         <div class="tip">
+           Home &gt; Sitemap 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UnityAnalyticsUpgrading.html"></a></span> 
+         <div class="tip">
+           Analisis Unity 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy"> 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

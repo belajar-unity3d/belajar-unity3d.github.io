@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Tekstur Render Kustom</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="Textures.html">Textures</a></li> 
+         <li>Tekstur Render Kustom</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="class-RenderTexture.html"></a></span> 
+          <div class="tip">
+            Render Tekstur 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="class-MovieTexture.html"></a></span> 
+          <div class="tip">
+            Tekstur Film 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Tekstur Render Kustom</h1> 
+       <!--BeginSwitchLink--> 
+       <a href="../ScriptReference/CustomRenderTexture.html" title="Go to CustomRenderTexture page in the Scripting Reference" class="switch-link gray-btn sbtn left">Switch to Scripting</a> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p> <strong>Custom Render Textures</strong> adalah jenis tekstur khusus yang memungkinkan Anda untuk memperbarui tekstur dengan <span class="tooltip"><strong>shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Shader">Glossary</a></span></span></span>. Mereka adalah ekstensi untuk <span class="tooltip"><a href="class-RenderTexture.html">Tekstur Render</a><span class="tooltiptext">Jenis Tekstur khusus yang diciptakan dan diperbarui pada runtime. Untuk menggunakannya, pertama membuat Tekstur Render baru dan menunjuk salah satu Kamera Anda untuk membuatnya. Kemudian Anda dapat menggunakan Tekstur Render dalam Bahan seperti Tekstur biasa. <a href="class-RenderTexture.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#RenderTexture">Glossary</a></span></span></span>. Anda dapat menggunakan Tekstur Render Kustom untuk membuat simulasi kompleks seperti caustik, simulasi riak untuk efek hujan, dan splatters cair.</p> 
+       <p>Fitur Tekstur Render Kustom menyediakan kerangka skrip dan Shader untuk membantu dengan konfigurasi yang rumit seperti frekuensi pembaruan yang bervariasi, pembaruan sebagian atau multi-pass.</p> 
+       <p>Untuk menggunakan kerangka ini Anda perlu menetapkan Bahan untuk aset Tekstur Render Kustom. Tekstur Render Kustom memerlukan Bahan yang kompatibel. Untuk informasi lebih lanjut, lihat <a href="#writing-a-shader-for-a-custom-render-texture">Menulis naungan untuk Tekstur Render Kustom</a>.</p> 
+       <p>Untuk menetapkan bahan yang kompatibel dengan aset Tekstur Render Kustom:</p> 
+       <ol> 
+        <li>Buat aset Tekstur Render Kustom baru.</li> 
+        <li>Menetapkan Bahan yang kompatibel dengan properti <strong>Material</strong> dalam aset <strong>Custom Render Texture</strong>.</li> 
+       </ol> 
+       <p>Bahan ini memperbarui konten tekstur sesuai dengan parameternya.</p> 
+       <p>Halaman ini berisi informasi berikut:</p> 
+       <ul> 
+        <li><p><a href="#render-pipeline-compatibility">Kompatibilitas Pipa Render</a></p></li> 
+        <li> <p><a href="#properties">Properties</a></p> 
+         <ul> 
+          <li><a href="#render-texture">Render Tekstur</a></li> 
+          <li><a href="#custom-render-texture">Tekstur Render Kustom</a></li> 
+         </ul> </li> 
+        <li><p><a href="#exporting-custom-render-texture-to-a-file">Mengekspor Tekstur Render Kustom ke file</a></p></li> 
+        <li><p><a href="#update-zones">Update Zones</a></p></li> 
+        <li><p><a href="#controlling-custom-render-texture-from-script">Mengontrol Tekstur Render Kustom dari Script</a></p></li> 
+        <li><p><a href="#double-buffered-custom-render-textures">Tekstur Render Kustom Buffer Ganda</a></p></li> 
+        <li><p><a href="#chaining-custom-render-textures">Rantai Tekstur Render Kustom</a></p></li> 
+        <li><p><a href="#writing-a-shader-for-a-custom-render-texture">Menulis naungan untuk Tekstur Render Kustom</a></p></li> 
+       </ul> 
+       <p><a name="render-pipeline-compatibility"></a></p> 
+       <h2>Kompatibilitas Pipa Render</h2> 
+       <p>Tabel berikut menjelaskan kompatibilitas antara fitur <strong>Custom Render Textures</strong> dan setiap <span class="tooltip"><strong>render pipeline</strong><span class="tooltiptext">Rangkaian operasi yang mengambil isi dari Adegan, dan menampilkannya di layar. Unity memungkinkan Anda memilih dari pipa render yang dibangun sebelumnya, atau menulis sendiri. <a class="tooltipMoreInfoLink" href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span>:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Feature</th> 
+          <th style="text-align:left;">Pipa Render Built-in</th> 
+          <th style="text-align:left;">Pipa Render Universal (URP)</th> 
+          <th style="text-align:left;">Definisi Tinggi Render Pipeline (HDRP)</th> 
+          <th style="text-align:left;">Custom Scriptable Render Pipeline (SRP)</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Tekstur Render Kustom</td> 
+          <td style="text-align:left;">G (1)</td> 
+          <td style="text-align:left;">G (1)</td> 
+          <td style="text-align:left;">G (1)</td> 
+          <td style="text-align:left;">G (1)</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p> <strong>Note:</strong> </p> 
+       <ol> 
+        <li>Saat ini, Anda tidak dapat membuat Materi yang memperbarui dan meminisialisasikan <strong>Custom Render Textures</strong> di . Anda hanya dapat membuat naungan yang beroperasi pada Tekstur Render Khusus dengan menulis kode <span class="tooltip"><a href="SL-Shader.html">ShaderLab</a><span class="tooltiptext">Bahasa Unity untuk mendefinisikan struktur benda-benda Shader. <a href="SL-Shader.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ShaderLab">Glossary</a></span></span></span>.</li> 
+       </ol> 
+       <p><a name="properties"></a></p> 
+       <h2>Properties</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/CustomRenderTextures-0.png" alt=""> 
+       </figure> 
+       <p>Jendela <strong>Custom Render Textures</strong> <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span> menampilkan banyak sifat yang sama dengan Inspektur Tekstur Render, dan beberapa sifat spesifik untuk <strong>Custom Render Textures</strong>.</p> 
+       <p><a name="render-texture"></a></p> 
+       <h3>Tekstur render:</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Property:</th> 
+          <th style="text-align:left;">Fungsi:</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Dimension</strong></td> 
+          <td style="text-align:left;">Dimensi Tekstur Render.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp; 2D</td> 
+          <td style="text-align:left;">Membuat Tekstur Render dua dimensi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp; Cube</td> 
+          <td style="text-align:left;">Membuat Tekstur Render peta kubus.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp; 3D</td> 
+          <td style="text-align:left;">Membuat Tekstur Render tiga dimensi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Size</strong></td> 
+          <td style="text-align:left;">Ukuran Tekstur Render dalam <span class="tooltip"><strong>pixels</strong><span class="tooltiptext">Unit terkecil dalam gambar komputer. Ukuran piksel tergantung pada resolusi layar Anda. Pencahayaan pixel dihitung pada setiap piksel layar. <a class="tooltipMoreInfoLink" href="ShadowPerformance.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#pixel">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Color Format</strong></td> 
+          <td style="text-align:left;">Format Tekstur Render.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>sRGB (Color Render Texture)</strong></td> 
+          <td style="text-align:left;">Aktifkan untuk memungkinkan Render Tekstur untuk menggunakan sRGB membaca / menulis konversi (Baca Hanya).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Enable Mip Maps</strong></td> 
+          <td style="text-align:left;">Aktifkan properti ini untuk memungkinkan Tekstur Render untuk menggunakan mipmaps.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Auto generate Mip Maps</strong></td> 
+          <td style="text-align:left;">Aktifkan properti ini untuk secara otomatis menghasilkan mipmaps.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Wrap Mode</strong></td> 
+          <td style="text-align:left;">Tentukan bagaimana Tekstur berperilaku ketika ubin.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp; Repeat</td> 
+          <td style="text-align:left;">Tekstur mengulangi dirinya sebagai ubin.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp; Clamp</td> 
+          <td style="text-align:left;">Unity meregangkan tepi Tekstur.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Filter Mode</strong></td> 
+          <td style="text-align:left;">Tentukan bagaimana filter Unity Tekstur ketika diregangkan oleh transformasi 3D.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp; Point</td> 
+          <td style="text-align:left;">Tekstur menjadi terblokir dekat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp; Bilinear</td> 
+          <td style="text-align:left;">Tekstur menjadi kabur dekat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp; Trilinear</td> 
+          <td style="text-align:left;">Seperti Bilinear, tetapi Tekstur juga kabur antara tingkat mip yang berbeda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Aniso Level</strong><span class="tooltiptext">Tingkat penyaringan anisotropic (AF) tekstur. Memungkinkan Anda untuk meningkatkan kualitas tekstur saat melihat tekstur pada sudut curam. Baik untuk tekstur lantai dan tanah. <a class="tooltipMoreInfoLink" href="class-TextureImporter.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnisoLevel">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Meningkatkan kualitas tekstur saat melihat tekstur pada sudut curam. Baik untuk tekstur lantai dan tanah.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="custom-render-texture"></a></p> 
+       <h3>Tekstur kustom:</h3> 
+       <p>Properti ini eksklusif untuk Tekstur Render Kustom. Parameter Tekstur khusus dipisahkan menjadi tiga kategori:</p> 
+       <ul> 
+        <li><p> <strong>Material</strong>: Tentukan warna apa yang digunakan untuk memperbarui tekstur.</p></li> 
+        <li><p> <strong>Initialization</strong>: Mengontrol bagaimana tekstur diinisialisasi sebelum naungan melakukan pembaruan apa pun.</p></li> 
+        <li><p> <strong>Update</strong>: Mengontrol bagaimana naungan memperbarui tekstur.</p></li> 
+       </ul> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Property:</th> 
+          <th style="text-align:left;">Fungsi:</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Material</strong><span class="tooltiptext">Aset yang menentukan bagaimana permukaan harus diberikan. <a class="tooltipMoreInfoLink" href="class-Material.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Material">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Bahan yang digunakan Unity untuk memperbarui Tekstur Render Kustom.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp; Shader Pass</td> 
+          <td style="text-align:left;">Shader Pass yang menggunakan Unity untuk memperbarui Tekstur Render Kustom. Drop-down menunjukkan semua umpan yang tersedia dalam Bahan Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Initialization Mode</strong></td> 
+          <td style="text-align:left;">Tingkat di mana Unity menginisialisasi tekstur.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp; OnLoad</td> 
+          <td style="text-align:left;">Meminimalkan tekstur setelah penciptaan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp; Realtime</td> 
+          <td style="text-align:left;">Meminimalkan tekstur setiap bingkai.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp; OnDemand</td> 
+          <td style="text-align:left;">Meminimalkan tekstur atas permintaan dari script.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Source</strong></td> 
+          <td style="text-align:left;">Bagaimana tekstur Unity menginisialisasi tekstur.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Tekstur dan warna</td> 
+          <td style="text-align:left;">Unity menggunakan tekstur yang dikalikan dengan warna untuk menginisialisasi tekstur.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Warna Awalisasi</td> 
+          <td style="text-align:left;">Mendefinisikan warna yang menggunakan Unity untuk menginisialisasi Tekstur Render Kustom. Jika Anda juga menyediakan <strong>Initialization Texture</strong>, Unity menggunakan multiplikasi warna dan tekstur untuk menginisialisasi Tekstur Render Kustom.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Tekstur Awalisasi</td> 
+          <td style="text-align:left;">Tentukan tekstur yang digunakan Unity untuk menginisialisasi Tekstur Render Kustom. Jika Anda juga menyediakan <strong>Initialization Color</strong>, Unity menggunakan multiplikasi warna dan tekstur untuk menginisialisasi Tekstur Render Kustom.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp; Material</td> 
+          <td style="text-align:left;">Unity menggunakan Bahan untuk menginisialisasi tekstur.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Bahan Awalisasi</td> 
+          <td style="text-align:left;">Mendefinisikan Bahan yang digunakan Unity untuk menginisialisasi Tekstur Render Kustom.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Update Mode</strong></td> 
+          <td style="text-align:left;">Tingkat di mana naungan memperbarui Tekstur Render Kustom.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp; OnLoad</td> 
+          <td style="text-align:left;">Naungan memperbarui tekstur setelah penciptaan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp; Realtime</td> 
+          <td style="text-align:left;">Naungan memperbarui tekstur setiap bingkai.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp; OnDemand</td> 
+          <td style="text-align:left;">Naungan memperbarui tekstur atas permintaan dari skrip.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Period</strong></td> 
+          <td style="text-align:left;">Jumlah waktu dalam hitungan detik di mana Unity memperbarui tekstur real-time. Nilai 0,0 pembaruan setiap bingkai. Properti ini hanya tersedia ketika properti <strong>Update Mode</strong> diatur ke Realtime.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Double Buffered</strong></td> 
+          <td style="text-align:left;">Dua-buffers tekstur. Setiap pembaruan swaps dua penyangga. Hal ini memungkinkan Anda untuk membaca hasil pembaruan awal di naungan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Wrap Update Zones</strong></td> 
+          <td style="text-align:left;">Aktifkan untuk memungkinkan zona pembaruan parsial untuk membungkus batas tekstur.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Cubemap Faces</strong></td> 
+          <td style="text-align:left;">(Cubemap hanya) Seri toggle memungkinkan pengguna untuk mengaktifkan / menonaktifkan pembaruan pada setiap wajah peta kubus.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Update Zone Space</strong></td> 
+          <td style="text-align:left;">Sistem koordinat di mana Unity mendefinisikan zona pembaruan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp; Normalized</td> 
+          <td style="text-align:left;">Semua koordinat dan ukuran antara 0 dan 1 dengan sudut kiri atas dimulai pada (0, 0).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp; Pixel</td> 
+          <td style="text-align:left;">Semua koordinat dan ukuran dinyatakan dalam piksel terbatas oleh lebar dan tinggi tekstur. Sudut kiri atas dimulai pada (0, 0).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Update Zone List</strong></td> 
+          <td style="text-align:left;">Daftar zona pembaruan untuk tekstur. Untuk informasi lebih lanjut, lihat <a href="#update-zones">Update Zones</a>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="exporting-custom-render-texture-to-a-file"></a></p> 
+       <h2>Mengekspor Tekstur Render Kustom ke file:</h2> 
+       <p>Anda dapat mengekspor Tekstur Render Kustom ke file PNG atau EXR (tergantung pada format tekstur) dalam menu <strong>Export</strong>.</p> 
+       <p><a name="update-zones"></a></p> 
+       <h2>Zona pembaruan:</h2> 
+       <p>Ketika Unity memperbarui Tekstur Render Kustom, menggunakan Bahan untuk memperbarui seluruh tekstur sekaligus secara default. Tekstur Render Kustom memungkinkan Anda untuk menentukan zona pembaruan parsial. Anda dapat menggunakan ini untuk menentukan banyak zona yang Anda inginkan dan pesanan di mana zona diproses.</p> 
+       <p>Anda dapat menggunakan zona pembaruan untuk berbagai tujuan. Misalnya, Anda bisa memiliki beberapa zona kecil untuk menyisipkan air pada tekstur dan kemudian melakukan umpan penuh untuk mensimulasikan riak. Ini juga dapat digunakan sebagai optimasi ketika Anda tahu bahwa Anda tidak perlu untuk memperbarui tekstur penuh.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/CustomRenderTextures-1.png" alt=""> 
+       </figure> 
+       <p>Memperbarui zona memiliki set properti mereka sendiri. <strong>Update Zone Space</strong> terlihat dalam tampilan. Koordinat tergantung pada <strong>Dimension</strong> tekstur: 2D untuk tekstur 2D dan Cube, atau 3D untuk tekstur 3D.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Property:</th> 
+          <th style="text-align:left;">Fungsi:</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Center</td> 
+          <td style="text-align:left;">Koordinat pusat zona pembaruan..</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Size</td> 
+          <td style="text-align:left;">Ukuran zona pembaruan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Rotation</td> 
+          <td style="text-align:left;">Orientasi zona pembaruan dalam derajat (tidak tersedia untuk tekstur 3D).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Shader Pass</td> 
+          <td style="text-align:left;">Tentukan Shader Pass untuk digunakan untuk zona pembaruan ini. Jika Anda mengatur properti ini sebagai default, zona pembaruan ini menggunakan Shader Pass yang Anda didefinisikan dalam bagian utama dari inspektur. Jika tidak akan menggunakan Shader Pass yang Anda berikan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Swap (Double Buffer)</td> 
+          <td style="text-align:left;">(Hanya untuk tekstur Buffer Ganda) Ketika Anda mengaktifkan properti ini, Unity swap penyangga sebelum memproses zona pembaruan ini.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="controlling-custom-render-texture-from-script"></a></p> 
+       <h2>Mengontrol Tekstur Render Kustom dari Script</h2> 
+       <p>Anda dapat mengakses sebagian besar fungsi Tekstur Render Khusus di API Scripting. Anda juga dapat mengubah parameter Material, memperbarui frekuensi, memperbarui zona, meminta pembaruan, dan lebih menggunakan skrip.</p> 
+       <p>Ketika pembaruan Unity atau menginisialisasi Tekstur Render Kustom, menggunakan sifat saat ini untuk membuat bingkai berikutnya. Ini menjamin bahwa setiap Bahan yang menggunakan tekstur ini memiliki hasil terkini. Misalnya, dalam script Unity berikut melakukan dua pembaruan menggunakan array <a href="#update-zones">Update Zone</a> kedua:</p> 
+       <p><code>customRenderTexture.updateZones = updateZones1;</code></p> 
+       <p><code>customRenderTexture.Update();</code></p> 
+       <p><code>customRenderTexture.updateZones = updateZones2;</code></p> 
+       <p><code>customRenderTexture.Update();</code></p> 
+       <p>Sitemap Unity tidak memperbarui atau menginisialisasi Tekstur Render Khusus pada saat yang sama Anda menyebut <strong>Note:</strong> atau <code>Update()</code>. Ini karena Unity selalu memperbarui dan menginisialisasi Tekstur Render Kustom pada awal bingkai berikutnya.<code>Initialize()</code>. This is because Unity always updates and initializes a Custom Render Texture at the start of the next frame.</p> 
+       <p><a name="double-buffered-custom-render-textures"></a></p> 
+       <h2>Tekstur Kustom Buffer Ganda</h2> 
+       <p>Anda dapat Tekstur Render Kustom dua-buffer. Untuk melakukan ini, aktifkan <strong>Double Buffered</strong> di <a href="#properties">Komponen Tekstur Render Kustom</a>, atau gunakan.</p> 
+       <p>Double-buffering berarti bahwa dalam satu Tekstur Render Kustom ada dua tekstur yang Unity dapat swap setelah setiap pembaruan. Ini memungkinkan Anda membaca hasil pembaruan terakhir sambil menulis hasil baru dalam Tekstur Render Kustom.</p> 
+       <p>Double-buffering sangat berguna jika naungan perlu menggunakan konten Unity telah ditulis dalam tekstur tetapi tidak dapat mencampur nilai dengan mode campuran klasik. Ini juga diperlukan jika naungan harus mencicipi piksel yang berbeda dari hasil yang sebelumnya.</p> 
+       <p> <strong>Performance warning</strong>: Saat ini dua-buffering melibatkan salinan tekstur pada setiap swap yang dapat menyebabkan penurunan kinerja tergantung pada frekuensi yang dilakukan dan resolusi tekstur.</p> 
+       <p><a name="chaining-custom-render-textures"></a></p> 
+       <h2>Rantai Tekstur Render Kustom</h2> 
+       <p>Anda dapat rantai Tekstur Render Kustom bersama-sama. Untuk melakukan ini, gunakan Tekstur Render Khusus sebagai masukan untuk materi yang telah Anda berikan kepada <strong>Material</strong> atau <strong>Initialization Mode &gt; Texture</strong> dalam Tekstur Render Kustom lainnya.</p> 
+       <p>Anda dapat menggunakan Tekstur Render Khusus yang dichain untuk menghasilkan simulasi dengan beberapa langkah.</p> 
+       <p>Tekstur Render Khusus Berrantai tergantung pada satu sama lain. Unity menghitung ketergantungan ini secara otomatis sehingga setiap pembaruan terjadi dalam urutan yang tepat. Ini melakukan ini dengan melihat bahan yang ditugaskan untuk sifat <strong>Material</strong> dan <strong>Initialization Mode &gt; Texture</strong> di jendela inspektur <strong>Custom Render Textures</strong>.</p> 
+       <p><a name="writing-a-shader-for-a-custom-render-texture"></a></p> 
+       <h2>Menulis naungan untuk Tekstur Render Kustom</h2> 
+       <p>Untuk memperbarui Tekstur Render Kustom secara manual, Anda dapat menulis naungan Tekstur Render Kustom khusus.</p> 
+       <p>Untuk membantu Anda menulis warna Tekstur Render Kustom Anda, berikut adalah dua kerangka contoh yang mengandung fungsi utilitas dan variabel pendukung bawaan.</p> 
+       <p>Contoh warna berikut mengisi tekstur dengan warna yang dikalikan dengan warna. Ketika Anda menulis naungan untuk Tekstur Render Kustom, Anda harus melakukan berikut:</p> 
+       <ul> 
+        <li> <code>#include "UnityCustomRenderTexture.cginc"</code>.</li> 
+        <li>Gunakan <span class="tooltip"><strong>Vertex Shader</strong><span class="tooltiptext">Program yang berjalan pada setiap simpul model 3D ketika model sedang diberikan. <a class="tooltipMoreInfoLink" href="SL-ShaderPrograms.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#vertexshader">Glossary</a></span></span></span> <code>CustomRenderTextureVertexShader</code>.</li> 
+        <li>Gunakan struktur input yang disediakan <code>v2f_customrendertexture</code> untuk naungan pixel.</li> 
+       </ul> 
+       <pre><code>Shader "CustomRenderTexture/Simple"
+{
+    Properties
+    {
+        _Color ("Color", Color) = (1,1,1,1)
+        _Tex("InputTex", 2D) = "white" {}
+     }
+
+     SubShader
+     {
+        Lighting Off
+        Blend One Zero
+
+        Pass
+        {
+            CGPROGRAM
+            #include "UnityCustomRenderTexture.cginc"
+            #pragma vertex CustomRenderTextureVertexShader
+            #pragma fragment frag
+            #pragma target 3.0
+
+            float4      _Color;
+            sampler2D   _Tex;
+
+            float4 frag(v2f_customrendertexture IN) : COLOR
+            {
+                return _Color * tex2D(_Tex, IN.localTexcoord.xy);
+            }
+            ENDCG
+            }
+    }
+}
+</code></pre> 
+       <p>Contoh berikut adalah naungan untuk bahan yang dapat Anda gunakan untuk menginisialisasi Tekstur Render Kustom. Ketika Anda menulis naungan untuk bahan awalisasi, langkah-langkah berikut wajib:</p> 
+       <ul> 
+        <li><p><code>#include "UnityCustomRenderTexture.cginc"</code></p></li> 
+        <li><p>Gunakan Vertex Shader <code>CustomRenderTextureVertexShader</code> yang disediakan</p></li> 
+        <li><p>Gunakan struktur input yang disediakan <code>v2f_customrendertexture</code> untuk naungan pixel.</p></li> 
+       </ul> 
+       <pre><code>Shader "CustomRenderTexture/CustomTextureInit"
+{
+    Properties
+    {
+        _Color ("Color", Color) = (1,1,1,1)
+        _Tex("InputTex", 2D) = "white" {}
+    }
+
+    SubShader
+    {
+        Lighting Off
+        Blend One Zero
+
+        Pass
+        {
+            CGPROGRAM
+            #include "UnityCustomRenderTexture.cginc"
+
+            #pragma vertex InitCustomRenderTextureVertexShader
+            #pragma fragment frag
+            #pragma target 3.0
+
+            float4      _Color;
+            sampler2D   _Tex;
+
+            float4 frag(v2f_init_customrendertexture IN) : COLOR
+            {
+                return _Color * tex2D(_Tex, IN.texcoord.xy);
+            }
+            ENDCG
+        }
+    }
+}
+</code></pre> 
+       <p> <code>#include "UnityCustomRenderTexture.cginc"</code> memberi Anda akses ke set nilai bawaan. Ini termasuk nilai global, nilai dari struktur <code>v2f_customrendertexture</code> dan nilai dari struktur <code>v2f_init_customrendertexture</code>.</p> 
+       <p>Struktur <code>v2f_customrendertexture</code> menerima input berikut:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Name</th> 
+          <th style="text-align:left;">Type</th> 
+          <th style="text-align:left;">Value</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>localTexcoord</code></td> 
+          <td style="text-align:left;"><code>float3</code></td> 
+          <td style="text-align:left;">Tekstur koordinat relatif terhadap zona pembaruan saat ini diproses.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>globalTexcoord</code></td> 
+          <td style="text-align:left;"><code>float3</code></td> 
+          <td style="text-align:left;">Tekstur koordinat relatif terhadap Tekstur Render Kustom itu sendiri</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>primitiveID</code></td> 
+          <td style="text-align:left;"><code>uint</code></td> 
+          <td style="text-align:left;">Indeks zona pembaruan saat ini diproses.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>direction</code></td> 
+          <td style="text-align:left;"><code>float3</code></td> 
+          <td style="text-align:left;">Untuk Tekstur Render Kustom Cube, arah piksel saat ini di dalam <span class="tooltip"><strong>cubemap</strong><span class="tooltiptext">Koleksi enam tekstur persegi yang dapat mewakili refleksi di lingkungan atau skybox yang digambar di balik geometri Anda. Enam kotak membentuk wajah kubus imajiner yang mengelilingi objek; setiap wajah mewakili pandangan di sepanjang arah sumbu dunia (hingga, kiri, kanan, ke depan dan belakang). <a class="tooltipMoreInfoLink" href="class-Cubemap.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Cubemap">Glossary</a></span></span></span>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Struktur <code>v2f_init_customrendertexture</code> menerima input berikut:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Name</th> 
+          <th style="text-align:left;">Type</th> 
+          <th style="text-align:left;">Value</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>texcoord</code></td> 
+          <td style="text-align:left;">float3</td> 
+          <td style="text-align:left;">Tekstur koordinat relatif terhadap Tekstur Render Kustom itu sendiri.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Struktur berikut adalah nilai global:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Name</th> 
+          <th style="text-align:left;">Type</th> 
+          <th style="text-align:left;">Value</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>_CustomRenderTextureWidth</code></td> 
+          <td style="text-align:left;"><code>float</code></td> 
+          <td style="text-align:left;">Lebar Tekstur Kustom dalam piksel</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>_CustomRenderTextureHeight</code></td> 
+          <td style="text-align:left;"><code>float</code></td> 
+          <td style="text-align:left;">Tinggi Tekstur Kustom dalam piksel</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>_CustomRenderTextureDepth</code></td> 
+          <td style="text-align:left;"><code>float</code></td> 
+          <td style="text-align:left;">Kedalaman Tekstur Kustom dalam piksel (hanya untuk tekstur 3D, jika tidak akan selalu sama dengan 1).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>_CustomRenderTextureCubeFace</code></td> 
+          <td style="text-align:left;"><code>float</code></td> 
+          <td style="text-align:left;">Indeks kubus saat ini menghadapi proses Unity (-X, + X, -Y, +Y, -Z, + Z). Ini hanya berlaku untuk peta kubus.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>_CustomRenderTexture3DSlice</code></td> 
+          <td style="text-align:left;"><code>float</code></td> 
+          <td style="text-align:left;">Indeks irisan 3D saat ini diproses. Ini hanya berlaku untuk tekstur 3D.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>_SelfTexture2D</code></td> 
+          <td style="text-align:left;"><code>Sampler2D</code></td> 
+          <td style="text-align:left;">Untuk tekstur penyangga ganda: Tekstur yang mengandung hasil pembaruan terakhir sebelum swap terakhir.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>_SelfTextureCube</code></td> 
+          <td style="text-align:left;"><code>SamplerCUBE</code></td> 
+          <td style="text-align:left;">Untuk tekstur penyangga ganda: Tekstur yang mengandung hasil pembaruan terakhir sebelum swap terakhir.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>_SelfTexture3D</code></td> 
+          <td style="text-align:left;"><code>Sampler3D</code></td> 
+          <td style="text-align:left;">Untuk tekstur penyangga ganda: Tekstur yang mengandung hasil pembaruan terakhir sebelum swap terakhir.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <hr> 
+       <ul> 
+        <li><p> <span class="page-edit">2017–05–18 Sitemap</span> </p></li> 
+        <li><p><span class="page-history">Fitur baru dalam Unity <a href="../Manual/30_search.html?q=newin20171">2017.1</a> <span class="search-words">NewIn20171</span></span></p></li> 
+       </ul> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="class-RenderTexture.html"></a></span> 
+         <div class="tip">
+           Render Tekstur 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="class-MovieTexture.html"></a></span> 
+         <div class="tip">
+           Tekstur Film 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Membuat permainan 3D</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="QuickstartGuides.html">Panduan Quickstart</a></li> 
+         <li><a href="Quickstart3D.html">3D permainan pengembangan panduan cepatstart</a></li> 
+         <li>Membuat permainan 3D</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="Quickstart3D.html"></a></span> 
+          <div class="tip">
+            3D permainan pengembangan panduan cepatstart 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="CreatingGameplay.html"></a></span> 
+          <div class="tip">
+            Membuat Gameplay 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Membuat permainan 3D</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p><a name="TopOfPage"></a></p> 
+       <p>Untuk membuat game 3D, <a href="Quickstart3D.html#3DInitialSetup">mendirikan proyek Unity Anda</a> dan kemudian membiasakan diri dengan konsep yang relevan dalam urutan berikut:</p> 
+       <ul> 
+        <li><a href="#Fundamentals">Fundamentals</a></li> 
+        <li><a href="#Scripting">Scripting</a></li> 
+        <li><a href="#3Dassets">Aset 3D</a></li> 
+        <li><a href="#Environments">Membangun lingkungan dalam game</a></li> 
+        <li><a href="#Animation">Animation</a></li> 
+        <li><a href="#Graphics">Graphics</a></li> 
+        <li><a href="#Audio">Audio</a></li> 
+        <li><a href="#Physics">Physics</a></li> 
+        <li><a href="#UI">Antarmuka pengguna</a></li> 
+       </ul> 
+       <p><a name="Fundamentals"></a></p> 
+       <h2>Fundamentals</h2> 
+       <p><span class="tooltip"><a class="tooltipMoreInfoLink" href="class-GameObject.html">GameObjects</a><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> adalah objek mendasar dalam Unity yang mewakili karakter, props, pemandangan, dan banyak lagi. Setiap objek dalam permainan Anda adalah GameObject.</p> 
+       <p>GameObjects live di lingkungan 3D yang disebut <span class="tooltip"><a class="tooltipMoreInfoLink" href="CreatingScenes.html">scenes</a><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>. Anda dapat memikirkan adegan sebagai tingkat permainan, tetapi mungkin juga mewakili menu, kredit di akhir permainan atau sesuatu yang sama sekali.</p> 
+       <p>Perilaku GameObjects didefinisikan oleh blok fungsi yang disebut komponen. Anda dapat melampirkan beberapa komponen untuk GameObjects. Komponen berikut adalah fundamental untuk game 3D:</p> 
+       <ul> 
+        <li> <a class="tooltipMoreInfoLink" href="class-Transform.html">Transform</a>: <span class="tooltip"><strong>Transform component</strong><span class="tooltiptext">Komponen Transform menentukan Posisi, Rotasi, dan Skala setiap objek di tempat kejadian. Setiap GameObject memiliki Transform. <a href="class-Transform.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#TransformComponent">Glossary</a></span></span></span> menentukan Posisi, Rotasi, dan Timbangan setiap GameObject di tempat kejadian. Setiap GameObject memiliki komponen Transform.</li> 
+        <li><span class="tooltip"><a class="tooltipMoreInfoLink" href="class-MeshFilter.html">Filter Mesh</a><span class="tooltiptext">Komponen jala yang mengambil mesh dari aset Anda dan melewatinya ke Mesh Renderer untuk rendering di layar. <a href="class-MeshFilter.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#MeshFilter">Glossary</a></span></span></span>: komponen ini mendefinisikan bentuk GameObject 3D.</li> 
+        <li><span class="tooltip"><a class="tooltipMoreInfoLink" href="class-MeshRenderer.html">Mesh Renderer</a><span class="tooltiptext">Komponen mesh yang mengambil geometri dari Filter Mesh dan render di posisi yang ditentukan oleh komponen Transform objek. <a href="class-MeshRenderer.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#MeshRenderer">Glossary</a></span></span></span>: komponen ini mendefinisikan bagaimana bentuk 3D didefinisikan oleh tampilan Filter <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mesh">Glossary</a></span></span></span>.</li> 
+        <li><span class="tooltip"><a class="tooltipMoreInfoLink" href="class-Camera.html">Kamera</a><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span>: GameObjects yang dikonfigurasi khusus yang menangkap dan menampilkan dunia ke pemain.</li> 
+        <li><span class="tooltip"><a class="tooltipMoreInfoLink" href="class-Rigidbody.html">Rigidbody</a><span class="tooltiptext">Komponen yang memungkinkan GameObject untuk dipengaruhi oleh gravitasi simulasi dan kekuatan lainnya. <a href="class-Rigidbody.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Rigidbody">Glossary</a></span></span></span><span class="tooltip"><strong>collisions</strong><span class="tooltiptext">tabrakan terjadi ketika mesin fisika mendeteksi bahwa tabrakan dari dua GameObjects membuat kontak atau tumpang tindih, ketika setidaknya satu memiliki komponen kaku dan bergerak. <a href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Collision">Glossary</a></span></span></span>. Lihat bagian <a href="#Physics">Physics</a> dari panduan ini.</li> 
+        <li><span class="tooltip"><a class="tooltipMoreInfoLink" href="CollidersOverview.html">Colliders</a><span class="tooltiptext">Bentuk tak terlihat yang digunakan untuk menangani tabrakan fisik untuk objek. Seorang sari tidak perlu menjadi bentuk yang sama dengan jala objek - perkiraan kasar sering lebih efisien dan tidak dapat dibedakan dalam gameplay. <a href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Collider">Glossary</a></span></span></span>: komponen ini mendefinisikan bentuk GameObject 3D untuk tujuan tabrakan fisik.</li> 
+       </ul> 
+       <p><a href="#TopOfPage">Kembali ke Atas</a></p> 
+       <p><a name="Scripting"></a></p> 
+       <h2>Scripting</h2> 
+       <p>Unity memungkinkan Anda untuk membuat Komponen Anda sendiri menggunakan <strong><span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span></strong>. Script memungkinkan Anda memicu peristiwa permainan, memodifikasi sifat Komponen seiring waktu dan menanggapi input pengguna. Unity mendukung bahasa pemrograman C # secara asli. Berikut beberapa contoh bagaimana Anda dapat menggunakan skrip dalam permainan Anda:</p> 
+       <ul> 
+        <li>Untuk menerima masukan dari pemain dan memiliki gerakan GameObject atau bertindak berdasarkan input tersebut.</li> 
+        <li>Untuk mengatur win dan kehilangan state yang terbuka menang relevan atau kehilangan adegan untuk membuat loop permainan penuh.</li> 
+        <li>Untuk mempengaruhi komponen GameObjects, seperti transformasi, animasi, atau renderer, berdasarkan variabel lainnya.</li> 
+       </ul> 
+       <p>Untuk detail tentang cara menggunakan skrip di Unity, lihat <a href="ScriptingSection.html">Scripting Overview</a>. Untuk mempelajari dasar-dasar scripting, ikuti . Untuk panduan yang lebih mendalam, lihat proyek contoh dan .</p> 
+       <p> <a href="#TopOfPage">Kembali ke Atas</a> <a name="3Dassets"></a> </p> 
+       <h2>Aset 3D</h2> 
+       <p>Model adalah representasi 3D dari objek. Mayoritas visual untuk game 3D terdiri dari model, seperti karakter, benda yang dapat berinteraksi, dan dunia di sekitar pemain.</p> 
+       <p>Anda dapat menggunakan alat-alat seperti untuk membuat model di Unity. Namun, pekerjaan ini terbaik untuk prototyping, daripada untuk produk akhir.</p> 
+       <p>Untuk menambahkan aset 3D yang lebih dipoles untuk produk akhir Anda, buat Model 3D, Bahan dan Tekstur dalam perangkat lunak pemodelan 3D dan kemudian mengimpornya menjadi Unity.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/quickstart-3D-Graphics.png" alt="Left: A 3D polygon mesh for a player character. Right: The player mesh rendered in Unity with materials"> 
+        <figcaption>
+          Kiri: Mesh poligon 3D untuk karakter pemain. Sitemap Pemain mesh dibuat dalam Unity dengan bahan 
+        </figcaption> 
+       </figure> 
+       <h3>Mengimpor File Model 3D</h3> 
+       <p>Unity menggunakan format model .fbx. Anda juga dapat menggunakan <a href="3D-formats.html">format model</a> asli lainnya (misalnya, .max, .blend, .mb, .ma), dan Unity mengubahnya menjadi .fbx setelah mereka diimpor.</p> 
+       <p> <a href="ImportingModelFiles.html">Model impor</a> menjadi Unity untuk menggunakannya dalam proyek Anda.</p> 
+       <h3>Rendering Meshes</h3> 
+       <p>Mesh 3D adalah bangunan struktural dari model 3D. Ini terdiri dari beberapa bentuk poligon. Untuk menambahkan model 3D ke GameObject, tambahkan <a href="MeshFilter">Filter Mesh</a> ke GameObject. Komponen <a href="class-MeshRenderer.html">Mesh Renderer</a> membuat jala di tempat kejadian Anda; untuk memastikan model muncul dalam permainan Anda, tambahkan Renderer Mesh ke GameObject yang memiliki komponen Filter Mesh.</p> 
+       <h3>Materials</h3> 
+       <p><span class="tooltip"><a class="tooltipMoreInfoLink" href="Materials.html">Materials</a><span class="tooltiptext">Aset yang menentukan bagaimana permukaan harus diberikan. <a href="class-Material.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Material">Glossary</a></span></span></span> menggabungkan informasi tentang penampilan visual permukaan, seperti <span class="tooltip"><a href="Textures.html">Textures</a><span class="tooltiptext">Gambar yang digunakan ketika membuat elemen GameObject, Sprite, atau UI. Tekstur sering diterapkan pada permukaan mesh untuk memberikan detail visual. <a href="class-TextureImporter.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#texture">Glossary</a></span></span></span>, warna kaleng, dan <span class="tooltip"><a href="ShadersOverview.html">Shaders</a><span class="tooltiptext">Program yang berjalan di GPU. <a href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span>. Gunakan Bahan untuk menentukan cara membuat permukaan.</p> 
+       <ul> 
+        <li>Tekstur adalah file gambar 2D yang Anda impor ke Unity. Gunakan <a href="Textures.html">Textures</a> untuk membungkus mesh dan tambahkan detail halus ke model.</li> 
+        <li>Gunakan warna kaleng untuk mengubah warna tekstur.</li> 
+        <li>Shaders adalah serangkaian instruksi yang menentukan bagaimana Tampilan Unity GameObjects di layar. Gunakan <a class="tooltipMoreInfoLink" href="ShadersOverview.html">Shaders</a> untuk mempengaruhi bagaimana render Unity setiap <span class="tooltip"><strong>pixel</strong><span class="tooltiptext">Unit terkecil dalam gambar komputer. Ukuran piksel tergantung pada resolusi layar Anda. Pencahayaan pixel dihitung pada setiap piksel layar. <a href="ShadowPerformance.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#pixel">Glossary</a></span></span></span> berdasarkan input pencahayaan dan konfigurasi Material.</li> 
+       </ul> 
+       <p>Pelajari Tutorial di .</p> 
+       <p> <a href="#TopOfPage">Kembali ke Atas</a> <a name="Environments"></a> </p> 
+       <h2>Membangun lingkungan dalam game</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/quickstart-3D-environment.png" alt="An environment has been created by adding models and other assets to the scene."> 
+        <figcaption>
+          Lingkungan telah diciptakan dengan menambahkan model dan aset lain ke tempat kejadian. 
+        </figcaption> 
+       </figure> 
+       <p>Desain lingkungan adalah proses menciptakan lingkungan untuk gameplay untuk berlangsung. Anda mungkin merancang dan membangun lingkungan Anda pada saat yang sama di Editor Unity, atau Anda mungkin merancang lingkungan di luar Unity dan kemudian membangunnya di Unity.</p> 
+       <p>Untuk membangun lingkungan dalam game, Anda menambahkan GameObjects ke tempat kejadian dan memposisikan mereka sesuai dengan preferensi dan desain Anda. Selain menangani model Anda di tempat kejadian, Editor Unity mencakup serangkaian fitur <span class="tooltip"><strong>Terrain</strong><span class="tooltiptext">Pemandangan di tempat kejadian Anda. Terrain GameObject menambahkan pesawat datar besar untuk adegan Anda dan Anda dapat menggunakan jendela Inspektur Terrain untuk menciptakan lanskap rinci. <a class="tooltipMoreInfoLink" href="terrain-UsingTerrains.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Terrain">Glossary</a></span></span></span> built-in yang memungkinkan Anda untuk menambahkan lansekap ke permainan Anda. Di Editor, Anda dapat membuat beberapa ubin Terrain, menyesuaikan ketinggian atau penampilan lansekap Anda, dan tambahkan pohon atau rumput ke dalamnya. Baca lebih lanjut tentang <a href="terrain-UsingTerrains.html">Membuat dan Menggunakan Terrains</a>.</p> 
+       <p> <a href="#TopOfPage">Kembali ke Atas</a> <a name="Animation"></a> </p> 
+       <h2>Animation</h2> 
+       <p>Anda dapat mengimpor animasi yang dibuat dalam program lain, atau mengubah aset Anda langsung di Editor. Untuk informasi lebih lanjut tentang animasi 3D, lihat Kursus Belajar Unity.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/quickstart-3D-animation.png" alt="The player is standing still so the idle animation is playing."> 
+        <figcaption>
+          Pemain berdiri masih begitu animasi idle bermain. 
+        </figcaption> 
+       </figure> 
+       <h3>Animasi Penting</h3> 
+       <p>Unity dapat <a href="class-AnimationClip.html">klip animasi impor</a> ketika Anda mengimpor model dengan animasi. Ini berarti Anda dapat menghidupkan model dalam program lain dan kemudian mengakses dan memanipulasi klip di Unity.</p> 
+       <h3>Animating Model dalam Unity</h3> 
+       <p>Gunakan <a href="AnimationEditorGuide.html">Jendela Animasi</a> untuk membuat dan memodifikasi Klip Animasi langsung di dalam Unity. Gunakan animasi <span class="tooltip"><strong>Keyframe</strong><span class="tooltiptext">Bingkai yang menandai titik awal atau akhir transisi dalam animasi. Bingkai di antara bingkai kunci disebut inbetweens.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#keyframe">Glossary</a></span></span></span> untuk menambahkan animasi sederhana ke GameObject dalam adegan Anda, seperti mengubah posisi, ukuran, atau rotasi.</p> 
+       <h3>Mengontrol animasi</h3> 
+       <p>Untuk mengontrol pemutaran <span class="tooltip"><a class="tooltipMoreInfoLink" href="AnimationClips.html">Animasi Klip</a><span class="tooltiptext">Animasi data yang dapat digunakan untuk karakter animasi atau animasi sederhana. Ini adalah bagian "unit" sederhana dari gerakan, seperti (salah satu contoh spesifik) "Idle", "Walk" atau "Run". <a href="class-AnimationClip.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#AnimationClip">Glossary</a></span></span></span>, Anda dapat memanggilnya langsung dalam skrip dengan Kelas, atau membuat dan memodifikasi <span class="tooltip"><a href="AnimatorController">Pengontrol Animator</a><span class="tooltiptext">Kontrol animasi melalui Lapisan Animasi dengan Mesin Negara Animasi dan Pohon Animasi Blend, dikendalikan oleh Parameter Animasi. Pengontrol Animator yang sama dapat direferensikan oleh beberapa model dengan komponen Animator. <a href="class-AnimatorController.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#AnimatorController">Glossary</a></span></span></span> di <span class="tooltip"><a href="AnimatorWindow.html">Jendela Animator</a><span class="tooltiptext">Jendela di mana Animator Controller divisualkan dan diedit. <a href="AnimatorWindow.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnimatorWindow">Glossary</a></span></span></span>.</p> 
+       <p>Anda dapat menggunakan <a href="AnimatorWindow.html">Jendela Animator</a> untuk:</p> 
+       <ul> 
+        <li>Membuat dan mengatur ruang <a href="AnimatorController">Pengontrol Animasi</a>%</li> 
+        <li>Buat <a href="class-State.html">Animator</a> dengan <a href="AnimationClips.html">Animasi Klip</a> </li> 
+        <li>Buat <a href="AnimationParameters.html">Parameter Animator</a>, script mana yang dapat mengakses atau menetapkan nilai untuk</li> 
+        <li>Buat <a href="class-Transition.html">Animator Transitions</a> yang menentukan kondisi (berdasarkan parameter) untuk ketika suatu Negara harus berubah dan berapa lama campuran antara negara harus mengambil</li> 
+       </ul> 
+       <p> <a href="#TopOfPage">Kembali ke Atas</a> <a name="Graphics"></a> </p> 
+       <h2>Graphics</h2> 
+       <h3>Lighting</h3> 
+       <p>Login Adegan untuk menambah kedalaman dan suasana hati untuk lingkungan Anda dan untuk membantu pemain mengalami dunia permainan yang telah Anda buat. Untuk mengatur pencahayaan:</p> 
+       <ol> 
+        <li>Buat Cahaya. Klik kanan di jendela Hierarchy untuk membuka menu GameObject, pilih <strong>Light</strong>, dan pilih jenis Light untuk menambah adegan Anda. Sitemap<a href="Lighting.html">Jenis Cahaya</a>.</li> 
+        <li>Tempatkan Lampu Anda di Adegan. Sesuaikan warna, intensitas, dan penempatan Lampu Anda sampai Anda mencapai efek yang diinginkan. Sitemap<a href="UsingLights.html">Menggunakan Lampu</a>.</li> 
+        <li>Sempurnakan pencahayaan Anda. Misalnya, Anda dapat memilih <span class="tooltip"><a class="tooltipMoreInfoLink" href="LightModes.html">Mode cahaya</a><span class="tooltiptext">Sifat ringan yang menentukan penggunaan Cahaya. Bisa diatur ke Realtime, Baked dan Campuran. <a href="LightModes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#LightMode">Glossary</a></span></span></span> yang berbeda, atau menambahkan masker <a href="Cookies.html">cookie</a> untuk membuat bayangan.</li> 
+       </ol> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/quickstart-3D-lights.png" alt="A spotlight Light creates atmospheric lighting in this scene"> 
+        <figcaption>
+          Cahaya sorot menciptakan pencahayaan atmosfer di adegan ini 
+        </figcaption> 
+       </figure> 
+       <p>Lihat tutorial Unity Learn.</p> 
+       <p> <a href="#TopOfPage">Kembali ke Atas</a> <a name="Audio"></a> </p> 
+       <h2>Audio</h2> 
+       <p>Anda dapat menambahkan musik latar belakang dan efek suara untuk permainan Anda di Unity; lihat <a href="AudioOverview.html">Gambaran Keseluruhan Audio</a>. Gunakan perangkat lunak pihak ketiga untuk membuat audio dan impor Anda menjadi Unity dengan pengaturan yang disarankan.</p> 
+       <p> <a href="#TopOfPage">Kembali ke Atas</a> <a name="Physics"></a> </p> 
+       <h2>Physics</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/quickstart-3D-physics.png" alt="The Player character has a capsule collider component which uses the Physics system to allow the character to collide with the walls. "> 
+        <figcaption>
+          Karakter Pemain memiliki komponen kolider kapsul yang menggunakan sistem Fisika untuk memungkinkan karakter untuk tabrakan dengan dinding. 
+        </figcaption> 
+       </figure> 
+       <p>Gunakan Unity's <span class="tooltip"><strong>physics engine</strong><span class="tooltiptext">Sebuah sistem yang mensimulasikan aspek sistem fisik sehingga benda dapat mempercepat dengan benar dan dipengaruhi oleh tabrakan, gravitasi dan kekuatan lainnya. <a class="tooltipMoreInfoLink" href="PhysicsSection.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#PhysicsEngine">Glossary</a></span></span></span> untuk mengontrol bagaimana GameObjects berinteraksi. Anda dapat menggunakan ini untuk meniru kekuatan seperti gravitasi dan mekanik, yang menentukan bagaimana GameObjects berperilaku pada tabrakan di dunia nyata. Anda juga dapat mengkonfigurasi pengaturan fisika untuk membuat fisika kustom agar sesuai dengan desain permainan Anda, yang mungkin tidak menjadi simulasi yang akurat dari dunia nyata. Untuk mempelajari cara menggunakan mesin fisika Unity, lihat Unity Learn . Lihat <a href="PhysicsSection.html">Physics section</a> dari Panduan Pengguna untuk informasi lebih lanjut.</p> 
+       <p>Untuk mengatur Fisika untuk GameObjects Anda:</p> 
+       <ol> 
+        <li>Untuk memungkinkan GameObject Anda untuk dipengaruhi oleh sistem Fisika, dan bereaksi terhadap hal-hal seperti gravitasi dan tabrakan, tambahkan komponen <a href="RigidbodiesOverview.html">Rigidbody</a>.</li> 
+        <li>Gunakan <a href="CollidersOverview.html">Colliders</a> untuk mengaktifkan GameObjects untuk berinteraksi dengan GameObjects lain di tempat kejadian. Misalnya, GameObjects dengan tabrakan dapat bergerak atau dipindahkan oleh GameObject lain dengan tabrakan.</li> 
+        <li>Untuk dapat memanggil fungsi dalam kode ketika dua GameObjects mengganggu, tambahkan <a href="CollidersOverview.html">Collider</a> dan membuatnya menjadi <a href="CollidersOverview.html#triggers">trigger</a>.</li> 
+       </ol> 
+       <p> <a href="#TopOfPage">Kembali ke Atas</a> <a name="UI"></a> </p> 
+       <h2>Antarmuka Pengguna</h2> 
+       <p>Jika Anda ingin menambahkan menu atau membantu permainan Anda, Anda perlu mengatur <a href="UIToolkits.html">antarmuka pengguna</a>. Untuk mengatur antarmuka pengguna, gunakan <a href="UIToolkits.html">WordPress.org</a>.</p> 
+       <p><a href="#TopOfPage">Kembali ke Atas</a></p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="Quickstart3D.html"></a></span> 
+         <div class="tip">
+           3D permainan pengembangan panduan cepatstart 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="CreatingGameplay.html"></a></span> 
+         <div class="tip">
+           Membuat Gameplay 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

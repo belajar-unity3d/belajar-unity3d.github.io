@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Scriptable Render Pipeline Batcher</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="graphics-performance-profiling.html">Kinerja grafis dan profil</a></li> 
+         <li><a href="optimizing-draw-calls.html">Mengoptimalkan panggilan menggambar</a></li> 
+         <li>Scriptable Render Pipa Batcher</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="combining-meshes.html"></a></span> 
+          <div class="tip">
+            Manual menggabungkan jala 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="batch-renderer-group.html"></a></span> 
+          <div class="tip">
+            BatchRendererGroup 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Scriptable Render Pipa Batcher</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>The Scriptable <span class="tooltip"><strong>Render Pipeline</strong><span class="tooltiptext">Rangkaian operasi yang mengambil isi dari Adegan, dan menampilkannya di layar. Unity memungkinkan Anda memilih dari pipa render yang dibangun sebelumnya, atau menulis sendiri. <a class="tooltipMoreInfoLink" href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Renderpipeline">Glossary</a></span></span></span> (SRP) Batcher adalah <a href="optimizing-draw-calls.html">draw call optimization</a> yang secara signifikan meningkatkan kinerja untuk aplikasi yang menggunakan SRP. The SRP Batcher mengurangi waktu CPU Unity perlu mempersiapkan dan mengirimkan panggilan untuk bahan yang menggunakan varian <span class="tooltip"><strong>shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> yang sama.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SRPBatcher.png" alt="The Scriptable Render Pipeline (SRP) Batcher reduces the CPU time Unity requires to render scenes with many materials that use the same shader variant."> 
+        <figcaption>
+          The Scriptable Render Pipeline (SRP) Batcher mengurangi waktu CPU Unity memerlukan untuk membuat adegan dengan banyak bahan yang menggunakan varian naungan yang sama. 
+        </figcaption> 
+       </figure> 
+       <h2>Persyaratan dan kompatibilitas</h2> 
+       <p>Bagian ini mencakup informasi tentang kompatibilitas pipa render dari SRP Batcher.</p> 
+       <h3>Kompatibilitas pipa Render</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature</strong></th> 
+          <th style="text-align:left;"><strong>Built-in Render Pipeline</strong></th> 
+          <th style="text-align:left;"><strong>Universal Render Pipeline (URP)</strong></th> 
+          <th style="text-align:left;"><strong>High Definition Render Pipeline (HDRP)</strong></th> 
+          <th style="text-align:left;"><strong>Custom Scriptable Render Pipeline (SRP)</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>SRP Batcher</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="gameobject-compatibility"></a></p> 
+       <h3>GameObject kompatibilitas</h3> 
+       <p>Dalam setiap <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Scene">Glossary</a></span></span></span> tertentu, beberapa <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> kompatibel dengan SRP Batcher, dan beberapa tidak. GameObjects Kompatibel menggunakan jalur kode SRP Batcher, dan GameObjects yang tidak kompatibel menggunakan jalur kode SRP standar. Untuk informasi lebih lanjut, lihat <a href="#how-the-srp-batcher-works">Bagaimana SRP Batcher bekerja</a>.</p> 
+       <p>GameObject harus memenuhi persyaratan berikut untuk kompatibel dengan jalur kode SRP Batcher:</p> 
+       <ul> 
+        <li>GameObject harus mengandung kedua <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a class="tooltipMoreInfoLink" href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mesh">Glossary</a></span></span></span> atau jaring berkelok-kelok. Ini tidak bisa menjadi partikel.</li> 
+        <li>GameObject tidak boleh menggunakan <a href="../ScriptReference/MaterialPropertyBlock.html">MaterialPropertyBlocks</a>.</li> 
+        <li>Naungan yang menggunakan GameObject harus kompatibel dengan SRP Batcher. Untuk informasi lebih lanjut, lihat <a href="#shader-compatibility">Kompatibilitas Shader</a>.</li> 
+       </ul> 
+       <p><a name="shader-compatibility"></a></p> 
+       <h3>Kompatibilitas Shader</h3> 
+       <p>Semua warna yang menyala dan tidak menyala dalam Pipa Render Definisi Tinggi (HDRP) dan Pipa Render Universal (URP) sesuai dengan persyaratan ini (kecuali untuk versi partikel dari naungan ini).</p> 
+       <p>Untuk naungan kustom kompatibel dengan SRP Batcher harus memenuhi persyaratan berikut:</p> 
+       <ul> 
+        <li>Naungan harus menyatakan semua sifat mesin bawaan dalam penyangga konstan tunggal bernama <code>UnityPerDraw</code>. Sebagai contoh, <code>unity_ObjectToWorld</code>, atau <code>unity_SHAr</code>.</li> 
+        <li>Naungan harus menyatakan semua sifat material dalam penyangga konstan tunggal bernama <code>UnityPerMaterial</code>.</li> 
+       </ul> 
+       <p>Anda dapat memeriksa status kompatibilitas naungan di panel <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SRP_batcher_shader_compatibility.png" alt="You can check the compatibility of your shaders in the Inspector panel for the specific shader."> 
+        <figcaption>
+          Anda dapat memeriksa kompatibilitas naungan Anda di panel Inspektur untuk naungan tertentu. 
+        </figcaption> 
+       </figure> 
+       <p><a name="using-the-srp-batcher"></a></p> 
+       <h2>Menggunakan SRP Batcher</h2> 
+       <p>Bagian ini berisi informasi tentang cara menggunakan SRP Batcher di Pipelines Render yang telah dibangun sebelumnya Unity.</p> 
+       <h3>Menggunakan Batcher SRP di URP</h3> 
+       <p>Untuk mengaktifkan SRP Batcher di URP:</p> 
+       <ol> 
+        <li>Pada <span class="tooltip"><strong>Project window</strong><span class="tooltiptext">Jendela yang menunjukkan isi folder <code>Assets</code> (Project tab) <a class="tooltipMoreInfoLink" href="ProjectView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Projectwindow">Glossary</a></span></span></span>, pilih .</li> 
+        <li>Inspektur untuk aset URP, pergi ke <strong>Advanced</strong>, dan mengaktifkan <strong>SRP Batcher</strong>.</li> 
+       </ol> 
+       <h3>Menggunakan SRP Batcher di HDRP</h3> 
+       <p>Ketika Anda menggunakan HDRP, Unity memungkinkan SRP Batcher secara default. Mengaktifkan SRP Batcher tidak dianjurkan. Namun, Anda dapat sementara menonaktifkan SRP Batcher untuk tujuan debugging.</p> 
+       <p>Untuk mengaktifkan dan menonaktifkan SRP Batcher pada waktu build menggunakan Editor:</p> 
+       <ol> 
+        <li>Di jendela Proyek, pilih .</li> 
+        <li>Dalam Inspektur untuk aset, masukkan <a href="InspectorOptions.html">Mode debug</a>. Dalam mode Debug, Anda dapat melihat sifat dari Aset HDRP, termasuk properti SRP Batcher.</li> 
+        <li>Pilih <strong>Enable</strong> <strong>SRP Batcher</strong> untuk mengaktifkan atau menonaktifkan SRP Batcher.</li> 
+       </ol> 
+       <p>Untuk mengaktifkan atau menonaktifkan SRP Batcher pada runtime, toggle variabel global berikut dalam kode C # Anda:</p> 
+       <pre><code>GraphicsSettings.useScriptableRenderPipelineBatching = true;
+</code></pre> 
+       <p><a name="how-the-srp-batcher-works"></a></p> 
+       <h2>Bagaimana SRP Batcher bekerja</h2> 
+       <p>Cara tradisional untuk mengoptimalkan panggilan menggambar adalah untuk mengurangi jumlah dari mereka. Sebagai gantinya, SRP Batcher mengurangi perubahan render-state antara panggilan menggambar. Untuk melakukan ini, SRP Batcher menggabungkan urutan perintah <code>bind</code> dan <code>draw</code> GPU. Setiap urutan perintah disebut batch SRP.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SROShaderPass.png" alt="The batching of bind and draw commands reduces the GPU setup between draw calls."> 
+        <figcaption>
+          Penetapan perintah mengikat dan menggambar mengurangi pengaturan GPU antara panggilan menggambar. 
+        </figcaption> 
+       </figure> 
+       <p>Untuk mencapai kinerja optimal untuk rendering Anda, setiap batch SRP harus mengandung banyak perintah <code>bind</code> dan <code>draw</code> mungkin. Untuk mencapai ini, gunakan beberapa varian warna mungkin. Anda masih dapat menggunakan berbagai bahan dengan warna yang sama seperti yang Anda inginkan.</p> 
+       <p>Ketika Unity mendeteksi bahan baru selama render loop, CPU mengumpulkan semua properti dan mengikat mereka ke GPU dalam buffer konstan. Jumlah penyangga GPU tergantung pada bagaimana naungan menyatakan penyangga konstan.</p> 
+       <p>Login Batcher adalah loop render tingkat rendah yang membuat data material tetap dalam memori GPU. Jika konten materi tidak berubah, Batcher SRP tidak membuat perubahan render-state. Sebagai gantinya, SRP Batcher menggunakan jalur kode khusus untuk memperbarui properti Unity Engine dalam buffer GPU besar, seperti ini:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SRP_Batcher_loop.png" alt="The SRP Batcher rendering workflow. The SRP Batcher uses a dedicated code path to update the Unity Engine properties in a large GPU buffer."> 
+        <figcaption>
+          SRP Batcher rendering alur kerja. Batcher SRP menggunakan jalur kode khusus untuk memperbarui properti Mesin Unity dalam buffer GPU besar. 
+        </figcaption> 
+       </figure> 
+       <p>Di sini, CPU hanya menangani sifat Mesin Unity, label <strong>Per Object large buffer</strong> di diagram di atas. Semua bahan memiliki penyangga terus-menerus yang terletak di memori GPU, yang siap digunakan. Ini mempercepat rendering karena:</p> 
+       <ul> 
+        <li>Semua konten material sekarang di memori GPU.</li> 
+        <li>Kode khusus mengelola penyangga konstan GPU besar untuk semua properti per-object.</li> 
+       </ul> 
+       <p><a name="intentionally-removing-compatibility"></a></p> 
+       <h3>Secara aktif menghilangkan kompatibilitas SRP Batcher untuk GameObjects</h3> 
+       <p>Dalam beberapa kasus langka, Anda mungkin ingin secara sengaja membuat GameObjects tertentu tidak kompatibel dengan SRP Batcher. Misalnya, jika Anda ingin menggunakan <a href="GPUInstancing.html">GPU instancing</a>, yang tidak kompatibel dengan SRP Batcher. Jika Anda ingin membuat banyak jaring identik dengan bahan yang sama persis, GPUjahcing dapat lebih efisien daripada SRP Batcher. Untuk menggunakan gangguan GPU, Anda harus:</p> 
+       <ul> 
+        <li>Gunakan <a href="../ScriptReference/Graphics.DrawMeshInstanced.html">Grafik.DrawMeshInstanced</a>.</li> 
+        <li>Manual menghapus SRP Kompatibilitas batching dan mengaktifkan GPU Suspensioncing untuk material.</li> 
+       </ul> 
+       <p>Ada dua cara untuk menghapus kompatibilitas dengan SRP Batcher dari GameObject:</p> 
+       <ul> 
+        <li>Membuat warna tidak kompatibel.</li> 
+        <li>Membuat inkompatibel renderer.</li> 
+       </ul> 
+       <p> <strong>Tip</strong>: Jika Anda menggunakan GPU tenggelam bukan SRP Batcher, gunakan <span class="tooltip"><a class="tooltipMoreInfoLink" href="#Profiler">Profiler</a><span class="tooltiptext">Jendela yang membantu Anda untuk mengoptimalkan permainan Anda. Ini menunjukkan berapa banyak waktu yang dihabiskan di berbagai bidang permainan Anda. Sebagai contoh, dapat melaporkan persentase waktu yang dihabiskan <strong>rendering</strong>, aimating, atau dalam logika permainan Anda. <a href="Profiler.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profiler">Glossary</a></span></span></span> untuk memastikan bahwa GPUSicing lebih efisien untuk aplikasi Anda daripada SRP Batcher.</p> 
+       <h4>Menghapus kompatibilitas naungan</h4> 
+       <p>Anda dapat membuat teduh hand-written dan Shader Graph yang tidak kompatibel dengan SRP Batcher. Namun, untuk naungan Shader Graph, jika Anda mengubah dan mengulangi Shader Graph sering, lebih sederhana untuk membuat <a href="#removing-renderer-compatibility">renderer incompatible</a> bukan.</p> 
+       <p>Untuk membuat kantung Unity tidak kompatibel dengan SRP Batcher, Anda perlu membuat perubahan pada file sumber naungan:</p> 
+       <ol> 
+        <li>Untuk naungan tulisan tangan, buka file sumber naungan. Untuk shader Graph shader, salin Shader Graph disusun kode sumber naungan ke dalam file sumber naungan baru. Gunakan file sumber naungan baru dalam aplikasi Anda bukan Shader Graph.</li> 
+        <li>Tambahkan deklarasi <a href="SL-Properties.html">bahan properti</a> baru ke blok <code>Properties</code> naungan. Jangan mendeklarasikan properti material baru dalam buffer konstan <code>UnityPerMaterial</code>.</li> 
+       </ol> 
+       <p>Properti material tidak perlu melakukan apa pun; hanya memiliki properti material yang tidak ada dalam penyangga konstan <code>UnityPerMaterial</code> membuat warna yang tidak kompatibel dengan SRP Batcher.</p> 
+       <p> <strong>Warning</strong>: Jika Anda menggunakan Shader Graph, menyadari bahwa setiap kali Anda mengedit dan mengulangi Shader Graph, Anda harus mengulangi proses ini.</p> 
+       <p><a name="removing-renderer-compatibility"></a></p> 
+       <h4>Menghapus kompatibilitas renderer</h4> 
+       <p>Anda dapat membuat renderer individu yang tidak kompatibel dengan SRP Batcher. Untuk melakukan ini, tambahkan <code>MaterialPropertyBlock</code> ke renderer.</p> 
+       <h2>Profil SRP Batcher di Debugger Bingkai Unity</h2> 
+       <p>Anda dapat memeriksa status batch SRP di jendela <a href="FrameDebugger.html">Bingkai Debugger</a>. SRP Batch menampilkan berapa banyak panggilan menarik Unity digunakan, yang kata kunci Unity melekat pada naungan, dan alasan mengapa Unity tidak batch yang menarik panggilan dengan yang sebelumnya.</p> 
+       <p>Untuk memeriksa status batch SRP Batcher:</p> 
+       <ol> 
+        <li>Di Editor, buka Debugger Bingkai (menu: <strong>Window</strong> &gt; <strong>Analysis</strong> &gt; <strong>Frame Debugger</strong>).</li> 
+        <li>Dalam Bingkai Debugger, pergi ke <strong>Render Camera</strong> &gt; <strong>Render Opaques</strong>.</li> 
+        <li>Memperluas daftar <strong>RenderLoopNewBatcher.Draw</strong>.</li> 
+        <li>Pilih pada <strong>SRP Batch</strong> yang ingin Anda periksa.</li> 
+       </ol> 
+       <p>Dalam contoh di bawah ini, alasannya adalah: <strong>Nodes have different shaders</strong>. Ini berarti bahwa naungan untuk batch SRP berbeda dengan satu dalam batch SRP sebelumnya. Karena SRP Batcher menggunakan naungan yang berbeda, SRP Batcher menciptakan batch baru. Jika beberapa batch SRP memiliki jumlah panggilan menggambar rendah, sering berarti proyek menggunakan terlalu banyak varian warna.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SRP_Batcher_batch_information.png" alt="In the Frame Debugger window, you can find details about individual SRP batches, including why the SRP Batcher created a new SRP batch instead of continuing the existing one."> 
+        <figcaption>
+          Di jendela Frame Dustgger, Anda dapat menemukan rincian tentang batch SRP individu, termasuk mengapa SRP Batcher menciptakan batch SRP baru bukan melanjutkan yang ada. 
+        </figcaption> 
+       </figure> 
+       <p>Jika Anda menulis Render Pipeline Alkitab Anda sendiri, bukan menggunakan Render Pipeline Universal atau Pipa Render Definisi Tinggi, coba tulis naungan multi-tujuan generik dengan sejumlah kata kunci minimal. Ini optimal karena Anda dapat menggunakan banyak properti material yang Anda inginkan.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="combining-meshes.html"></a></span> 
+         <div class="tip">
+           Manual menggabungkan jala 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="batch-renderer-group.html"></a></span> 
+         <div class="tip">
+           BatchRendererGroup 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

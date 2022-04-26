@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Mode rendering</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="Shaders.html">Shaders</a></li> 
+         <li><a href="shader-built-in.html">Reflektor built-in</a></li> 
+         <li><a href="shader-StandardShader.html">Standar Shader</a></li> 
+         <li><a href="StandardShaderMaterialParameters.html">Standard Shader Bahan Inspektur</a></li> 
+         <li>Mode rendering</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="StandardShaderMaterialParameters.html"></a></span> 
+          <div class="tip">
+            Standard Shader Bahan Inspektur 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="StandardShaderMaterialParameterAlbedoColor.html"></a></span> 
+          <div class="tip">
+            Albedo Warna dan Transparansi 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Mode rendering</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/StandardShaderParameterRenderMode.png" alt="A Standard Shader material with default Properties and no values or textures assigned. The Rendering Mode Property is highlighted."> 
+        <figcaption>
+          Bahan Shader Standar dengan Properti default dan tidak ada nilai atau tekstur yang ditugaskan. Kekayaan Mode rendering disorot. 
+        </figcaption> 
+       </figure> 
+       <p>Parameter Bahan pertama dalam Standar <span class="tooltip"><strong>Shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> adalah <strong>Rendering Mode</strong>. Hal ini memungkinkan Anda untuk memilih apakah objek menggunakan transparansi, dan jika demikian, jenis blending mode untuk digunakan.</p> 
+       <ul> 
+        <li><p> <strong>Opaque</strong> - Adalah default, dan cocok untuk objek padat normal tanpa area transparan.</p></li> 
+        <li><p> <strong>Cutout</strong> - Memungkinkan Anda untuk menciptakan efek transparan yang memiliki tepi keras antara daerah buram dan transparan. Dalam mode ini, tidak ada daerah semi transparan, teksturnya adalah 100% buram, atau tak terlihat. Hal ini berguna ketika menggunakan transparansi untuk membuat bentuk bahan seperti daun, atau kain dengan lubang dan kutu.</p></li> 
+        <li><p> <strong>Transparent</strong> - Cocok untuk rendering bahan transparan realistis seperti plastik atau kaca yang jelas. Dalam mode ini, materi itu sendiri akan mengambil nilai transparansi (berdasarkan saluran alfa tekstur dan alfa warna tint), namun refleksi dan menyoroti pencahayaan akan tetap terlihat pada kejernihan penuh seperti adalah kasus dengan bahan transparan nyata.</p></li> 
+        <li><p> <strong>Fade</strong> - Memungkinkan nilai transparansi untuk sepenuhnya memudar objek keluar, termasuk sorotan atau refleksi spekulasi yang mungkin dimiliki. Mode ini berguna jika Anda ingin mengambil objek yang memudar atau keluar. Tidak cocok untuk rendering bahan transparan realistis seperti plastik atau kaca yang jelas karena refleksi dan highlights juga akan memudar.</p></li> 
+       </ul> 
+       <h2>Mengubah Mode rendering menggunakan script</h2> 
+       <p>Ketika Anda mengubah <strong>Rendering Mode</strong>, Unity menerapkan sejumlah perubahan Material. Tidak ada C# API tunggal untuk mengubah Mode rendering Bahan, tetapi Anda dapat membuat perubahan yang sama dalam kode Anda.</p> 
+       <p>Untuk melihat perubahan yang dilakukan Unity ketika Anda mengubah <strong>Rendering Mode</strong>:</p> 
+       <ol> 
+        <li>Unduh kode sumber untuk naungan bawaan Unity. Lihat petunjuk.</li> 
+        <li>Buka file <em>StandarShaderGUI.cs</em>.</li> 
+        <li>Temukan area file yang terlihat seperti ini, dan amati perubahan untuk setiap <strong>Rendering Mode</strong>.</li> 
+       </ol> 
+       <pre><code class="C#">switch (blendMode)
+        {
+            case BlendMode.Opaque:
+               // Changes associated with Opaque Rendering Mode are here
+                break;
+            case BlendMode.Cutout:
+                // Changes associated with Cutout Rendering Mode are here
+                break;
+            case BlendMode.Fade:
+                // Changes associated with Fade Rendering Mode are here
+                break;
+            case BlendMode.Transparent:
+                // Changes associated with Transparent Rendering Mode are here
+                break;
+        }
+
+</code></pre> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/StandardShaderTransparencySkyBoxReflection.jpg" alt="The helmet visor in this image is rendered using the Transparent mode, because it is supposed to represent a real physical object that has transparent properties. Here the visor is reflecting the skybox in the scene. "> 
+        <figcaption>
+          Helm visor dalam gambar ini dirender menggunakan mode Transparan, karena seharusnya mewakili objek fisik nyata yang memiliki sifat transparan. Di sini visor adalah mencerminkan skybox di tempat kejadian. 
+        </figcaption> 
+       </figure> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/StandardShaderTransparentWindow.jpg" alt="These windows use Transparent mode, but have some fully opaque areas defined in the texture (the window frames). The Specular reflection from the light sources reflects off the transparent areas and the opaque areas."> 
+        <figcaption>
+          Jendela ini menggunakan mode Transparan, tetapi memiliki beberapa area buram penuh yang didefinisikan dalam tekstur (kusen jendela). Refleksi spektral dari sumber cahaya mencerminkan daerah transparan dan daerah buram. 
+        </figcaption> 
+       </figure> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/StandardShaderFadeHologram.jpg" alt="The hologram in this image is rendered using the Fade mode, because it is supposed to represent an opaque object that is partially faded out."> 
+        <figcaption>
+          hologram dalam gambar ini dirender menggunakan mode Fade, karena seharusnya mewakili objek buram yang sebagian memudar. 
+        </figcaption> 
+       </figure> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/StandardShaderCutoutGrassExample.jpg" alt="The grass in this image is rendered using the Cutout mode. This gives clear sharp edges to objects which is defined by specifying a cut-off threshold. All parts of the image with the alpha value above this threshold are 100% opaque, and all parts below the threshold are invisible. To the right in the image you can see the material settings and the alpha channel of the texture used."> 
+        <figcaption>
+          Rumput dalam gambar ini dirender menggunakan mode Cutout. Ini memberikan tepi tajam yang jelas untuk benda-benda yang didefinisikan dengan menentukan ambang cut-off. Semua bagian gambar dengan nilai alfa di atas ambang ini 100% buram, dan semua bagian di bawah ambang tidak terlihat. Ke kanan dalam gambar Anda dapat melihat pengaturan material dan saluran alfa tekstur yang digunakan. 
+        </figcaption> 
+       </figure> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="StandardShaderMaterialParameters.html"></a></span> 
+         <div class="tip">
+           Standard Shader Bahan Inspektur 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="StandardShaderMaterialParameterAlbedoColor.html"></a></span> 
+         <div class="tip">
+           Albedo Warna dan Transparansi 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Mengakses sifat naungan di Cg / HLSL</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="Shaders.html">Shaders</a></li> 
+         <li><a href="shader-writing.html">Menu Menu</a></li> 
+         <li><a href="SL-ShaderPrograms.html">HLSL di Unity</a></li> 
+         <li>Mengakses sifat naungan di Cg / HLSL</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="SL-ShaderSemantics.html"></a></span> 
+          <div class="tip">
+            Shader semantics 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="SL-VertexProgramInputs.html"></a></span> 
+          <div class="tip">
+            Menyediakan data simpul untuk program vertex 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Mengakses sifat naungan di Cg / HLSL</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Shader menyatakan sifat Material dalam blok <a href="SL-Properties.html">Properties</a>. Jika Anda ingin mengakses beberapa properti dalam <a href="SL-ShaderPrograms.html">program warna</a>, Anda perlu untuk menyatakan variabel Cg / HLSL dengan nama yang sama dan jenis pencocokan.</p> 
+       <p>Contoh sifat <span class="tooltip"><strong>shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> ini:</p> 
+       <pre><code>_MyColor ("Some Color", Color) = (1,1,1,1) 
+_MyVector ("Some Vector", Vector) = (0,0,0,0) 
+_MyFloat ("My float", Float) = 0.5 
+_MyTexture ("Texture", 2D) = "white" {} 
+_MyCubemap ("Cubemap", CUBE) = "" {} 
+</code></pre> 
+       <p>akan dinyatakan untuk akses dalam kode Cg / HLSL sebagai:</p> 
+       <pre><code>fixed4 _MyColor; // low precision type is usually enough for colors
+float4 _MyVector;
+float _MyFloat; 
+sampler2D _MyTexture;
+samplerCUBE _MyCubemap;
+</code></pre> 
+       <p>Cg / HLSL juga dapat menerima kata kunci <strong>uniform</strong>, tetapi tidak perlu:</p> 
+       <pre><code>uniform float4 _MyColor;
+</code></pre> 
+       <p>Jenis properti dalam peta <span class="tooltip"><strong>ShaderLab</strong><span class="tooltiptext">Bahasa Unity untuk mendefinisikan struktur benda-benda Shader. <a class="tooltipMoreInfoLink" href="SL-Shader.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ShaderLab">Glossary</a></span></span></span> ke Cg / HLSL variabel jenis cara ini:</p> 
+       <ul> 
+        <li>Warna dan vektor properti peta ke <strong>float4</strong>, <strong>half4</strong> atau variabel <strong>fixed4</strong>.</li> 
+        <li>Rentang dan Float properti peta ke variabel <strong>float</strong>, <strong>half</strong> atau <strong>fixed</strong>.</li> 
+        <li>Tekstur properti peta ke variabel <strong>sampler2D</strong> untuk tekstur (2D) biasa; peta <span class="tooltip"><strong>Cubemaps</strong><span class="tooltiptext">Koleksi enam tekstur persegi yang dapat mewakili refleksi di lingkungan atau skybox yang digambar di balik geometri Anda. Enam kotak membentuk wajah kubus imajiner yang mengelilingi objek; setiap wajah mewakili pandangan di sepanjang arah sumbu dunia (hingga, kiri, kanan, ke depan dan belakang). <a class="tooltipMoreInfoLink" href="class-Cubemap.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Cubemap">Glossary</a></span></span></span> ke <strong>samplerCUBE</strong>; dan 3D tekstur peta ke <strong>sampler3D</strong>.</li> 
+       </ul> 
+       <h2>Bagaimana nilai properti disediakan untuk naungan</h2> 
+       <p>Nilai properti Shader ditemukan dan diberikan kepada naungan dari tempat-tempat ini:</p> 
+       <ul> 
+        <li>Nilai per-Renderer ditetapkan dalam <a href="../ScriptReference/MaterialPropertyBlock.html">BahanPropertyBlock</a>. Ini biasanya "per-instance" data (misalnya warna kaleng yang disesuaikan untuk banyak objek yang semuanya berbagi bahan yang sama).</li> 
+        <li>Nilai yang ditetapkan dalam <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-Material.html">Material</a><span class="tooltiptext">Aset yang menentukan bagaimana permukaan harus diberikan. <a href="class-Material.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Material">Glossary</a></span></span></span> yang digunakan pada objek yang diberikan.</li> 
+        <li>Sifat naungan global, set baik oleh kode rendering Unity sendiri (lihat <a class="tooltipMoreInfoLink" href="SL-UnityShaderVariables.html">variabel naungan built-in</a>), atau dari <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> Anda sendiri (misalnya <a href="../ScriptReference/Shader.SetGlobalTexture.html">Shader.SetGlobalTexture</a>).</li> 
+       </ul> 
+       <p>Urutan precedence seperti di atas: data per-instance menimpa segalanya; maka data Material digunakan; dan akhirnya jika properti naungan tidak ada di dua tempat ini maka nilai properti global digunakan. Akhirnya, jika tidak ada nilai properti naungan yang didefinisikan di mana saja, maka “default” (zero untuk mengapung, hitam untuk warna, tekstur putih kosong untuk tekstur) nilai akan disediakan.</p> 
+       <h2>Properti Bahan Serialisasi dan Runtime</h2> 
+       <p> <a href="class-Material.html">Materials</a> dapat mengandung nilai properti serial dan runtime-set.</p> 
+       <p>Data serialisasi adalah semua sifat yang didefinisikan dalam blok <a class="tooltipMoreInfoLink" href="SL-Properties.html">Properties</a> warna. Biasanya ini adalah nilai-nilai yang perlu disimpan dalam materi, dan dapat dilipat oleh pengguna dalam Bahan <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>.</p> 
+       <p>Bahan juga dapat memiliki beberapa sifat yang digunakan oleh naungan, tetapi tidak dinyatakan dalam blok <a href="SL-Properties.html">Properties</a> naungan. Biasanya ini adalah untuk sifat yang ditetapkan dari kode skrip pada runtime, misalnya melalui <a href="../ScriptReference/Material.SetColor.html">Bahan.SetColor</a>. Perhatikan bahwa matriks dan array hanya dapat ada sebagai sifat runtime non-serialized (karena tidak ada cara untuk mendefinisikannya dalam blok Properti).</p> 
+       <h2>Sifat Tekstur khusus</h2> 
+       <p>Untuk setiap tekstur yang setup sebagai properti naungan / bahan, Unity juga menetapkan beberapa informasi tambahan dalam sifat vektor tambahan.</p> 
+       <h4>Tekstur tiling &amp; offset</h4> 
+       <p> <a href="class-Material.html">Materials</a> sering memiliki bidang Tiling dan Offset untuk sifat tekstur mereka. Informasi ini dilewatkan ke naungan di properti float4 <em>{TextureName}</em><code>_ST</code>:</p> 
+       <ul> 
+        <li> <code>x</code> mengandung Nilai tiling X</li> 
+        <li> <code>y</code> mengandung Nilai tiling Y</li> 
+        <li> <code>z</code> mengandung Nilai offset X</li> 
+        <li> <code>w</code> mengandung Nilai offset Y</li> 
+       </ul> 
+       <p>Misalnya, jika naungan mengandung tekstur bernama <code>_MainTex</code>, informasi tiling akan berada dalam vektor <code>_MainTex_ST</code>.</p> 
+       <h4>Ukuran tekstur</h4> 
+       <p> <em>{TextureName}</em><code>_TexelSize</code> - properti float4 mengandung informasi ukuran tekstur:</p> 
+       <ul> 
+        <li> <code>x</code> mengandung 1.0 / lebar</li> 
+        <li> <code>y</code> mengandung 1.0 / tinggi</li> 
+        <li> <code>z</code> mengandung lebar</li> 
+        <li> <code>w</code> mengandung tinggi</li> 
+       </ul> 
+       <h4>Tekstur parameter HDR</h4> 
+       <p> <em>{TextureName}</em><code>_HDR</code> - properti float4 dengan informasi tentang cara mendekode potensi <span class="tooltip"><strong>HDR</strong><span class="tooltiptext">kisaran dinamis tinggi<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#HDR">Glossary</a></span></span></span> (misalnya RGBM-encoded) tekstur tergantung pada <a href="LinearLighting.html">ruang warna</a> digunakan. Lihat fungsi <code>DecodeHDR</code> dalam naungan <a href="SL-BuiltinIncludes.html">UnityCG.cginc</a> termasuk file.</p> 
+       <h2>Ruang warna dan data warna / pelindung</h2> 
+       <p>Ketika menggunakan <a href="LinearLighting.html">Ruang warna linier</a>, semua sifat warna material disediakan sebagai warna sRGB, tetapi diubah menjadi nilai linier ketika dilewatkan ke naungan.</p> 
+       <p>Misalnya, jika blok naungan <a href="SL-Properties.html">Properties</a> Anda mengandung properti <code>Color</code> yang disebut “<em>MyColor“, kemudian yang sesuai ”</em>MyColor” HLSL variabel akan mendapatkan nilai warna linier.</p> 
+       <p>Untuk properti yang ditandai sebagai tipe <code>Float</code> atau <code>Vector</code>, tidak ada konversi ruang warna dilakukan secara default; diasumsikan bahwa mereka mengandung data non-warna. Hal ini dimungkinkan untuk menambahkan atribut <code>[Gamma]</code> untuk sifat float/vector untuk menunjukkan bahwa mereka ditentukan di ruang sRGB, seperti warna (lihat <a href="SL-Properties.html">Properties</a>).</p> 
+       <h2>Lihat Juga</h2> 
+       <ul> 
+        <li> <a href="SL-Properties.html">Blok Properti ShaderLab</a>.</li> 
+        <li> <a href="SL-ShaderPrograms.html">Program Shader Menulis</a>.</li> 
+       </ul> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="SL-ShaderSemantics.html"></a></span> 
+         <div class="tip">
+           Shader semantics 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="SL-VertexProgramInputs.html"></a></span> 
+         <div class="tip">
+           Menyediakan data simpul untuk program vertex 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

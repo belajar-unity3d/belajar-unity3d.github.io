@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Contoh pencahayaan Shader permukaan</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="Shaders.html">Shaders</a></li> 
+         <li><a href="shader-writing.html">Menu Menu</a></li> 
+         <li><a href="SL-SurfaceShaders.html">Menulis Permukaan Shaders</a></li> 
+         <li>Contoh pencahayaan Shader permukaan</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="SL-SurfaceShaderLighting.html"></a></span> 
+          <div class="tip">
+            Model pencahayaan khusus di Permukaan Shaders 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="SL-SurfaceShaderTessellation.html"></a></span> 
+          <div class="tip">
+            Permukaan Shader dengan DX11 / OpenGL Inti Tesselasi 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Contoh pencahayaan Shader permukaan</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Halaman ini memberikan contoh <a class="tooltipMoreInfoLink" href="SL-SurfaceShaderLighting.html">Model pencahayaan Shader permukaan</a> kustom dalam <span class="tooltip"><a href="SL-SurfaceShaders.html">Permukaan Shader</a><span class="tooltiptext">Cara merampingkan naungan menulis untuk Pipeline Render Built-in. <a href="SL-SurfaceShaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#SurfaceShader">Glossary</a></span></span></span>. Untuk panduan permukaan lebih umum <span class="tooltip"><strong>Shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span>, lihat <a href="SL-SurfaceShaderExamples.html">Contoh Shader Permukaan</a>.</p> 
+       <p>Karena <strong>Deferred Lighting</strong> tidak bermain dengan baik dengan beberapa model pencahayaan per-bahan kustom, sebagian besar contoh di bawah membuat naungan disusun menjadi <span class="tooltip"><strong>Forward Rendering</strong><span class="tooltiptext">Sebuah jalur rendering yang membuat setiap objek dalam satu atau lebih melewati, tergantung pada lampu yang mempengaruhi objek. Lampu sendiri juga diperlakukan berbeda dengan Rendering Maju, tergantung pada pengaturan dan intensitas mereka. <a class="tooltipMoreInfoLink" href="RenderTech-ForwardRendering.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ForwardRendering">Glossary</a></span></span></span> hanya.</p> 
+       <h2>Kompatibilitas pipa Render</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature name</strong></th> 
+          <th style="text-align:left;"><strong>Built-in <span class="tooltip"><strong>Render Pipeline</strong><span class="tooltiptext">A series of operations that take the contents of a Scene, and displays them on a screen. Unity lets you choose from pre-built render pipelines, or write your own. <a class="tooltipMoreInfoLink" href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span></strong></th> 
+          <th style="text-align:left;"><strong>Universal Render Pipeline (URP)</strong></th> 
+          <th style="text-align:left;"><strong>High Definition Render Pipeline (HDRP)</strong></th> 
+          <th style="text-align:left;"><strong>Custom SRP</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Surface Shaders</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">No<br><br> Untuk cara merampingkan menciptakan benda-benda Shader di URP, lihat <a href="shader-graph.html">Shader Graph</a>.</td> 
+          <td style="text-align:left;">No<br><br> Untuk cara ramping menciptakan benda-benda Shader di HDRP, lihat <a href="shader-graph.html">Shader Graph</a>.</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Diffuse</h2> 
+       <p>Berikut adalah contoh warna yang menggunakan model pencahayaan Domba built-in:</p> 
+       <pre><code>  Shader "Example/Diffuse Texture" {
+    Properties {
+      _MainTex ("Texture", 2D) = "white" {}
+    }
+    SubShader {
+      Tags { "RenderType" = "Opaque" }
+      CGPROGRAM
+      #pragma surface surf Lambert
+      
+      struct Input {
+          float2 uv_MainTex;
+      };
+      
+      sampler2D _MainTex;
+      
+      void surf (Input IN, inout SurfaceOutput o) {
+          o.Albedo = tex2D (_MainTex, IN.uv_MainTex).rgb;
+      }
+      ENDCG
+    }
+    Fallback "Diffuse"
+  }
+</code></pre> 
+       <p>Berikut ini bagaimana terlihat seperti Tekstur dan tanpa Tekstur, dengan satu arah Cahaya di <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>:</p> 
+       <p> <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SurfaceShaderDiffuseTexture.jpg" alt=""> <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SurfaceShaderDiffuseNoTex.png" alt=""> </p> 
+       <p>Contoh berikut menunjukkan cara mencapai hasil yang sama dengan menulis model pencahayaan kustom daripada menggunakan model Domba built-in.</p> 
+       <p>Untuk melakukan ini, Anda perlu menggunakan sejumlah fungsi model pencahayaan Shader Permukaan. Berikut adalah satu Lambert sederhana. Perhatikan bahwa hanya perubahan bagian <code>CGPROGRAM</code>; kode Shader sekitarnya persis sama:</p> 
+       <pre><code>    Shader "Example/Diffuse Texture" {
+        Properties {
+            _MainTex ("Texture", 2D) = "white" {}
+        }
+        SubShader {
+        Tags { "RenderType" = "Opaque" }
+        CGPROGRAM
+          #pragma surface surf SimpleLambert
+  
+          half4 LightingSimpleLambert (SurfaceOutput s, half3 lightDir, half atten) {
+              half NdotL = dot (s.Normal, lightDir);
+              half4 c;
+              c.rgb = s.Albedo * _LightColor0.rgb * (NdotL * atten);
+              c.a = s.Alpha;
+              return c;
+          }
+  
+        struct Input {
+            float2 uv_MainTex;
+        };
+        
+        sampler2D _MainTex;
+        
+        void surf (Input IN, inout SurfaceOutput o) {
+            o.Albedo = tex2D (_MainTex, IN.uv_MainTex).rgb;
+        }
+        ENDCG
+        }
+        Fallback "Diffuse"
+    }
+</code></pre> 
+       <p>Model pencahayaan Diffuse sederhana ini menggunakan fungsi <code>LightingSimpleLambert</code>. Pencahayaan computes dengan menghitung produk dot antara permukaan arah normal dan ringan, dan kemudian menerapkan ringan dan warna.</p> 
+       <h2>Diffuse Wrap</h2> 
+       <p>Contoh berikut menunjukkan <strong>Wrapped Diffuse</strong>, modifikasi pencahayaan <strong>Diffuse</strong> di mana iluminasi “wraps sekitar” tepi benda. Ini berguna untuk mensimulasikan efek penskalaan permukaan. Hanya perubahan bagian <code>CGPROGRAM</code>, jadi sekali lagi, kode Shader sekitarnya dihilangkan:</p> 
+       <pre><code>    ...ShaderLab code...
+    CGPROGRAM
+    #pragma surface surf WrapLambert
+
+    half4 LightingWrapLambert (SurfaceOutput s, half3 lightDir, half atten) {
+        half NdotL = dot (s.Normal, lightDir);
+        half diff = NdotL * 0.5 + 0.5;
+        half4 c;
+        c.rgb = s.Albedo * _LightColor0.rgb * (diff * atten);
+        c.a = s.Alpha;
+        return c;
+    }
+
+    struct Input {
+        float2 uv_MainTex;
+    };
+    
+    sampler2D _MainTex;
+        void surf (Input IN, inout SurfaceOutput o) {
+        o.Albedo = tex2D (_MainTex, IN.uv_MainTex).rgb;
+    }
+    ENDCG
+    ...ShaderLab code...
+</code></pre> 
+       <p>Inilah cara yang terlihat seperti Tekstur dan tanpa Tekstur, dengan satu arah Cahaya di Adegan:</p> 
+       <p> <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SurfaceShaderDiffuseWrap.jpg" alt=""> <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SurfaceShaderDiffuseWrapNoTex.png" alt=""> </p> 
+       <h2>Toon Ramp</h2> 
+       <p>Contoh berikut menunjukkan model pencahayaan "Ramp" yang menggunakan jalan Tekstur untuk menentukan bagaimana permukaan menanggapi sudut antara cahaya dan normal. Ini dapat digunakan untuk berbagai efek, dan sangat efektif ketika digunakan dengan pencahayaan <strong>Toon</strong>.</p> 
+       <pre><code>    ...ShaderLab code...
+    CGPROGRAM
+    #pragma surface surf Ramp
+
+    sampler2D _Ramp;
+
+    half4 LightingRamp (SurfaceOutput s, half3 lightDir, half atten) {
+        half NdotL = dot (s.Normal, lightDir);
+        half diff = NdotL * 0.5 + 0.5;
+        half3 ramp = tex2D (_Ramp, float2(diff)).rgb;
+        half4 c;
+        c.rgb = s.Albedo * _LightColor0.rgb * ramp * atten;
+        c.a = s.Alpha;
+        return c;
+    }
+
+    struct Input {
+        float2 uv_MainTex;
+    };
+    
+    sampler2D _MainTex;
+    
+    void surf (Input IN, inout SurfaceOutput o) {
+        o.Albedo = tex2D (_MainTex, IN.uv_MainTex).rgb;
+    }
+    ENDCG
+    ...ShaderLab code...
+</code></pre> 
+       <p>Inilah cara yang terlihat seperti Tekstur dan tanpa Tekstur, dengan satu arah Cahaya di Adegan:</p> 
+       <p> <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SurfaceShaderToonRamp.jpg" alt=""> <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SurfaceShaderToonRampNoTex.jpg" alt=""> </p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SurfaceShaderToonRampItself.png" alt=""> 
+       </figure> 
+       <h2>Spesifikasi Sederhana</h2> 
+       <p>Contoh berikut menunjukkan model pencahayaan specular sederhana, mirip dengan model pencahayaan BlinnPhong built-in.</p> 
+       <pre><code>    ...ShaderLab code...
+    CGPROGRAM
+    #pragma surface surf SimpleSpecular
+
+    half4 LightingSimpleSpecular (SurfaceOutput s, half3 lightDir, half3 viewDir, half atten) {
+        half3 h = normalize (lightDir + viewDir);
+
+        half diff = max (0, dot (s.Normal, lightDir));
+
+        float nh = max (0, dot (s.Normal, h));
+        float spec = pow (nh, 48.0);
+
+        half4 c;
+        c.rgb = (s.Albedo * _LightColor0.rgb * diff + _LightColor0.rgb * spec) * atten;
+        c.a = s.Alpha;
+        return c;
+    }
+
+    struct Input {
+        float2 uv_MainTex;
+    };
+    
+    sampler2D _MainTex;
+    
+    void surf (Input IN, inout SurfaceOutput o) {
+        o.Albedo = tex2D (_MainTex, IN.uv_MainTex).rgb;
+    }
+    ENDCG
+    ...ShaderLab code...
+</code></pre> 
+       <p>Inilah cara yang terlihat seperti Tekstur dan tanpa Tekstur, dengan satu arah Cahaya di Adegan:</p> 
+       <p> <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SurfaceShaderSimpleSpecular.jpg" alt=""> <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SurfaceShaderSimpleSpecularNoTex.png" alt=""> </p> 
+       <h2>Kustom GI</h2> 
+       <p>Kita akan mulai dengan Shader yang bermimis Unity’s built-in GI:</p> 
+       <pre><code>    Shader "Example/CustomGI_ToneMapped" {
+        Properties {
+            _MainTex ("Albedo (RGB)", 2D) = "white" {}
+        }
+        SubShader {
+            Tags { "RenderType"="Opaque" }
+            
+            CGPROGRAM
+            #pragma surface surf StandardDefaultGI
+    
+            #include "UnityPBSLighting.cginc"
+    
+            sampler2D _MainTex;
+    
+            inline half4 LightingStandardDefaultGI(SurfaceOutputStandard s, half3 viewDir, UnityGI gi)
+            {
+                return LightingStandard(s, viewDir, gi);
+            }
+    
+            inline void LightingStandardDefaultGI_GI(
+                SurfaceOutputStandard s,
+                UnityGIInput data,
+                inout UnityGI gi)
+            {
+                LightingStandard_GI(s, data, gi);
+            }
+    
+            struct Input {
+                float2 uv_MainTex;
+            };
+    
+            void surf (Input IN, inout SurfaceOutputStandard o) {
+                o.Albedo = tex2D(_MainTex, IN.uv_MainTex);
+            }
+            ENDCG
+        }
+        FallBack "Diffuse"
+    }
+</code></pre> 
+       <p>Sekarang, mari kita tambahkan beberapa pemetaan nada di atas GI:</p> 
+       <pre><code>    Shader "Example/CustomGI_ToneMapped" {
+        Properties {
+            _MainTex ("Albedo (RGB)", 2D) = "white" {}
+            _Gain("Lightmap tone-mapping Gain", Float) = 1
+            _Knee("Lightmap tone-mapping Knee", Float) = 0.5
+            _Compress("Lightmap tone-mapping Compress", Float) = 0.33
+        }
+        SubShader {
+            Tags { "RenderType"="Opaque" }
+            
+            CGPROGRAM
+            #pragma surface surf StandardToneMappedGI
+    
+            #include "UnityPBSLighting.cginc"
+    
+            half _Gain;
+            half _Knee;
+            half _Compress;
+            sampler2D _MainTex;
+    
+            inline half3 TonemapLight(half3 i) {
+                i *= _Gain;
+                return (i &gt; _Knee) ? (((i - _Knee)*_Compress) + _Knee) : i;
+            }
+    
+            inline half4 LightingStandardToneMappedGI(SurfaceOutputStandard s, half3 viewDir, UnityGI gi)
+            {
+                return LightingStandard(s, viewDir, gi);
+            }
+    
+            inline void LightingStandardToneMappedGI_GI(
+                SurfaceOutputStandard s,
+                UnityGIInput data,
+                inout UnityGI gi)
+            {
+                LightingStandard_GI(s, data, gi);
+    
+                gi.light.color = TonemapLight(gi.light.color);
+                #ifdef DIRLIGHTMAP_SEPARATE
+                    #ifdef LIGHTMAP_ON
+                        gi.light2.color = TonemapLight(gi.light2.color);
+                    #endif
+                    #ifdef DYNAMICLIGHTMAP_ON
+                        gi.light3.color = TonemapLight(gi.light3.color);
+                    #endif
+                #endif
+                gi.indirect.diffuse = TonemapLight(gi.indirect.diffuse);
+                gi.indirect.specular = TonemapLight(gi.indirect.specular);
+            }
+    
+            struct Input {
+                float2 uv_MainTex;
+            };
+    
+            void surf (Input IN, inout SurfaceOutputStandard o) {
+                o.Albedo = tex2D(_MainTex, IN.uv_MainTex);
+            }
+            ENDCG
+        }
+        FallBack "Diffuse"
+    }
+</code></pre> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="SL-SurfaceShaderLighting.html"></a></span> 
+         <div class="tip">
+           Model pencahayaan khusus di Permukaan Shaders 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="SL-SurfaceShaderTessellation.html"></a></span> 
+         <div class="tip">
+           Permukaan Shader dengan DX11 / OpenGL Inti Tesselasi 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

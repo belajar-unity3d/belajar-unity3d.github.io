@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Manajer Input</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="platforms" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Input.html">Input</a></li> 
+         <li>Input Manager</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="Input.html"></a></span> 
+          <div class="tip">
+            Input 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="MobileInput.html"></a></span> 
+          <div class="tip">
+            Masukan perangkat seluler 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Input Manager</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Jendela <strong>Input Manager</strong> memungkinkan Anda untuk menentukan sumbu input dan tindakan terkait mereka untuk Proyek Anda. Untuk mengaksesnya, dari menu utama Unity, pergi ke <strong>Edit &gt; Project Settings</strong>, lalu pilih <strong>Input Manager</strong> dari navigasi di sebelah kanan.</p> 
+       <p><strong>Input Manager</strong> menggunakan jenis kontrol berikut:</p> 
+       <ul> 
+        <li> <strong>Key</strong> mengacu pada setiap kunci pada keyboard fisik, seperti W, Pergeseran, atau bar ruang.</li> 
+        <li> <strong>Button</strong> mengacu pada tombol pada pengontrol fisik (misalnya, gamepads), seperti tombol X pada remote control.</li> 
+        <li>A <strong>virtual axis</strong> (plural: <strong>axes</strong>) dipetakan ke kontrol, seperti tombol atau kunci. Ketika pengguna mengaktifkan kontrol, sumbu menerima nilai dalam kisaran [–1.1]. Anda dapat menggunakan nilai ini dalam <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> Anda.</li> 
+       </ul> 
+       <h2>Kunci fisik</h2> 
+       <p>Opsi kunci fisik memungkinkan Anda untuk memetakan kode kunci ke tata letak keyboard fisik, daripada tata letak spesifik bahasa yang dapat bervariasi antara pengguna di daerah yang berbeda.</p> 
+       <p>Misalnya, pada beberapa keyboard baris pertama huruf membaca "QWERTY", dan pada orang lain membaca "AZERTY". Ini berarti jika Anda skrip kontrol khusus untuk menggunakan tombol “WASD” terkenal untuk gerakan, mereka tidak akan berada dalam pengaturan fisik yang benar (seperti pengaturan panah-key) pada keyboard AZERTY-layout.</p> 
+       <p>Dengan Fisik Kunci diaktifkan, Unity menggunakan tata letak umum ANSI / ISO “Qwerty” untuk mewakili <strong>physical location</strong> dari kunci terlepas dari tata letak aktual pengguna. Ini berarti jika Anda menentukan kunci "Q", itu akan selalu menjadi huruf paling kiri pada baris pertama dari tombol surat, bahkan jika keyboard pengguna memiliki surat yang berbeda dalam posisi itu.</p> 
+       <p>Catatan, Anda tidak boleh membaca input kunci untuk input teks dalam game, karena ini tidak akan memungkinkan pengguna untuk memasukkan karakter non-Latin. Sebagai gantinya, gunakan <a href="../ScriptReference/Input-compositionString.html"><code>Input.compositionString</code></a>.</p> 
+       <h2>Virtual axes</h2> 
+       <p>Setiap Proyek yang Anda buat memiliki sejumlah sumbu input yang dibuat secara default. Axes ini memungkinkan Anda untuk menggunakan keyboard, mouse, dan input joystick di Proyek Anda langsung.</p> 
+       <p>Untuk melihat lebih banyak tentang sumbu ini, buka jendela <strong>Input Manager</strong>, dan klik panah di sebelah nama sumbu untuk memperluas sifatnya.</p> 
+       <p>Setiap sumbu input memiliki sifat berikut:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Name</strong></td> 
+          <td style="text-align:left;">Nama Axis. Anda dapat menggunakan ini untuk mengakses sumbu dari skrip.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Descriptive Name, Descriptive Negative Name</strong></td> 
+          <td style="text-align:left;">Nilai-nilai ini diuraikan dan tidak bekerja. Sebelumnya, mereka ditampilkan untuk pengguna di layar Kontrol Rebind di startup, tetapi layar ini juga telah diuraikan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Negative Button, Positive Button</strong></td> 
+          <td style="text-align:left;">Kontrol untuk mendorong sumbu dalam arah negatif dan positif masing-masing. Ini bisa menjadi kunci pada keyboard, atau tombol pada joystick atau mouse.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Alt Negative Button, Alt Positive Button</strong></td> 
+          <td style="text-align:left;">Kontrol alternatif untuk mendorong sumbu dalam arah negatif dan positif masing-masing.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Gravity</strong></td> 
+          <td style="text-align:left;">Kecepatan dalam unit per detik bahwa sumbu jatuh ke arah netral ketika tidak ada input hadir.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Dead</strong></td> 
+          <td style="text-align:left;">Sejauh ini pengguna perlu memindahkan tongkat analog sebelum aplikasi Anda mendaftarkan gerakan. Pada runtime, masukan dari semua perangkat analog yang jatuh dalam kisaran ini akan dianggap null.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Sensitivity</strong></td> 
+          <td style="text-align:left;">Kecepatan dalam unit per detik bahwa sumbu akan bergerak menuju nilai target. Ini hanya untuk perangkat digital.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Snap</strong></td> 
+          <td style="text-align:left;">Jika diaktifkan, nilai sumbu akan ulang ke nol ketika menekan tombol yang sesuai dengan arah yang berlawanan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Type</strong></td> 
+          <td style="text-align:left;">Jenis input yang mengontrol sumbu. <br><br>- Kunci atau Mouse button<br>- Mouse Gerakan<br>- Joystick Axis</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Axis</strong></td> 
+          <td style="text-align:left;">Sumbu perangkat yang terhubung yang mengontrol sumbu ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>JoyNum</strong></td> 
+          <td style="text-align:left;">Joystick yang terhubung yang mengontrol sumbu ini. Anda dapat memilih joystick khusus, atau input kueri dari semua joysticks.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Nilai sumbu dapat:</p> 
+       <ul> 
+        <li>Antara -1 dan 1 untuk joystick dan input keyboard. Posisi netral untuk sumbu ini adalah 0. Beberapa jenis kontrol, seperti tombol pada keyboard, tidak sensitif terhadap intensitas input, sehingga mereka tidak dapat menghasilkan nilai selain -1, 0, atau 1.</li> 
+        <li>Mouse delta (bagaimana mouse telah pindah selama bingkai terakhir) untuk input mouse. Nilai untuk sumbu input mouse dapat lebih besar dari 1 atau lebih kecil dari -1 ketika pengguna bergerak mouse dengan cepat.</li> 
+       </ul> 
+       <h3>Menambahkan, menghapus, dan menyalin virtual axes</h3> 
+       <p>Untuk menambahkan sumbu virtual, meningkatkan jumlah di bidang <strong>Size</strong>. Ini menciptakan sumbu baru di bagian bawah daftar. Sumbu baru menyalin sifat sumbu sebelumnya dalam daftar.</p> 
+       <p>Untuk menghapus sumbu virtual, Anda dapat:</p> 
+       <ul> 
+        <li>Mengurangi jumlah di bidang <strong>Size</strong>. Ini menghilangkan sumbu terakhir dalam daftar.</li> 
+        <li>Klik kanan setiap sumbu, dan pilih <strong>Delete Array Element</strong>.<br> <strong>Note:</strong> Anda tidak bisa membatalkan tindakan ini.</li> 
+       </ul> 
+       <p>Untuk menyalin sumbu virtual, klik kanan dan pilih <strong>Duplicate Array Element</strong>.</p> 
+       <h3>Pemetaan kapak virtual untuk mengontrol</h3> 
+       <p>Untuk memetakan kunci atau tombol ke sumbu, masukkan namanya di properti <strong>Positive Button</strong> atau <strong>Negative Button</strong> di Manajer Input.</p> 
+       <p>Nama kunci mengikuti konvensi naming ini:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Key family</strong></th> 
+          <th style="text-align:left;"><strong>Naming convention</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Letter keys</td> 
+          <td style="text-align:left;"><code>a</code> <code>b</code>, <code>c</code>, ...</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Nomor kunci</td> 
+          <td style="text-align:left;"><code>1</code> <code>2</code>, <code>3</code>, ...</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Tombol panah</td> 
+          <td style="text-align:left;"><code>up</code>, <code>down</code>, <code>left</code>, <code>right</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Kunci Numpad</td> 
+          <td style="text-align:left;"><code>[1]</code>, <code>[2]</code>, <code>[3]</code>, <code>[+]</code>, <code>[equals]</code>, ...</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Kunci pengubah</td> 
+          <td style="text-align:left;"><code>right shift</code>, <code>left shift</code>, <code>right ctrl</code>, <code>left ctrl</code>, <code>right alt</code>, <code>left alt</code>, <code>right cmd</code>, <code>left cmd</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Kunci khusus</td> 
+          <td style="text-align:left;"><code>backspace</code>, <code>tab</code>, <code>return</code>, <code>escape</code>, <code>space</code>, <code>delete</code>, <code>enter</code>, <code>insert</code>, <code>home</code>, <code>end</code>, <code>page up</code>, <code>page down</code>, </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Kunci fungsi</td> 
+          <td style="text-align:left;"><code>f1</code> <code>f2</code>, <code>f3</code>, ...</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Tombol Mouse dinamakan <code>mouse 0, mouse 1, mouse 2,</code> dan sebagainya.</p> 
+       <p>Tombol joystick mengikuti konvensi naming ini:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Button origin</strong></th> 
+          <th style="text-align:left;"><strong>Naming convention</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Tombol khusus pada joystick apa pun</td> 
+          <td style="text-align:left;"><code>joystick button 0</code> <code>joystick button 1</code>, <code>joystick button 2</code>, ...</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Tombol tertentu pada joystick tertentu</td> 
+          <td style="text-align:left;"><code>joystick 1 button 0</code> <code>joystick 1 button 1</code>, <code>joystick 2 button 0</code>, ...</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Anda juga dapat meminta masukan untuk kunci atau tombol tertentu dengan <a href="../ScriptReference/Input.GetKey.html"><code>Input.GetKey</code></a> dan konvensi naming yang ditentukan di atas. Contoh:</p> 
+       <pre><code class="csharp">Input.GetKey("a");
+</code></pre> 
+       <p>Cara lain untuk mengakses kunci adalah menggunakan numerasi <a href="../ScriptReference/KeyCode.html"><code>KeyCode</code></a>.</p> 
+       <h3>Menggunakan kapak virtual dalam skrip</h3> 
+       <p>Untuk mengakses kapak virtual dari skrip, Anda dapat menggunakan nama sumbu.</p> 
+       <p>Misalnya, untuk mengukur nilai arus sumbu horisontal dan menyimpannya dalam variabel, Anda dapat menggunakan <a href="../ScriptReference/Input.GetAxis.html"><code>Input.GetAxis</code></a> seperti ini:</p> 
+       <pre><code class="csharp">float horizontalInput = Input.GetAxis ("Horizontal"); 
+</code></pre> 
+       <p>Untuk axes yang menggambarkan peristiwa daripada gerakan (misalnya, menembak senjata dalam permainan), gunakan <a href="../ScriptReference/Input.GetButtonDown.html"><code>Input.GetButtonDown</code></a> bukan.</p> 
+       <p>Jika dua atau lebih kapak memiliki nama yang sama, permintaan mengembalikan sumbu dengan nilai absolut terbesar. Ini memungkinkan untuk menetapkan lebih dari satu perangkat input ke nama sumbu.</p> 
+       <p>Misalnya, Anda dapat membuat dua sumbu bernama Horizontal dan menetapkan satu ke input keyboard dan yang lain untuk input joystick. Jika pengguna menggunakan joystick, masukan berasal dari joystick dan input keyboard adalah null. Jika tidak, masukan berasal dari input keyboard dan joystick adalah null. Ini memungkinkan Anda untuk menulis skrip tunggal yang mencakup masukan dari beberapa pengontrol.</p> 
+       <p><strong>Example</strong></p> 
+       <p>Anda dapat menggunakan input dari sumbu <strong>Horizontal</strong> dan <strong>Vertical</strong> dan metode <a class="tooltipMoreInfoLink" href="../ScriptReference/Transform.Translate.html"><code>transform.Translate</code></a> untuk memindahkan <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> di ruang XZ (untuk, kembali, kiri, atau kanan). Tambahkan kode berikut ke metode <code>update()</code> pada script yang melekat pada GameObject Anda ingin bergerak:</p> 
+       <pre><code>float moveSpeed = 10;
+//Define the speed at which the object moves.
+
+float horizontalInput = Input.GetAxis("Horizontal");
+//Get the value of the Horizontal input axis.
+
+float verticalInput = Input.GetAxis("Vertical");
+//Get the value of the Vertical input axis.
+
+transform.Translate(new Vector3(horizontalInput, verticalInput, 0) * moveSpeed * Time.deltaTime);
+//Move the object to XYZ coordinates defined as horizontalInput, 0, and verticalInput respectively.
+</code></pre> 
+       <p> <a href="../ScriptReference/Time-deltaTime.html"><code>Time.deltaTime</code></a> mewakili waktu yang berlalu sejak bingkai terakhir. Menyediakan variabel <code>moveSpeed</code> oleh <code>Time.deltaTime</code> memastikan bahwa pergerakan GameObject pada kecepatan konstan setiap bingkai.</p> 
+       <!-- area:platforms --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="Input.html"></a></span> 
+         <div class="tip">
+           Input 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="MobileInput.html"></a></span> 
+         <div class="tip">
+           Masukan perangkat seluler 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

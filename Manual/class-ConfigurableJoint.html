@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Sendi yang dapat dikonfigurasi</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="PhysicsSection.html">Physics</a></li> 
+         <li><a href="Physics3DReference.html">Referensi Fisika 3D</a></li> 
+         <li>Sendi yang dapat dikonfigurasi</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="class-CharacterJoint.html"></a></span> 
+          <div class="tip">
+            Karakter Bersama 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="class-ConstantForce.html"></a></span> 
+          <div class="tip">
+            Kekuatan Konstan 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Sendi yang dapat dikonfigurasi</h1> 
+       <!--BeginSwitchLink--> 
+       <a href="../ScriptReference/ConfigurableJoint.html" title="Go to ConfigurableJoint page in the Scripting Reference" class="switch-link gray-btn sbtn left">Switch to Scripting</a> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p> <strong>Configurable Joints</strong> menggabungkan semua fungsi <a class="tooltipMoreInfoLink" href="Joints.html">jenis sendi</a> lain dan memberikan kontrol pergerakan karakter yang lebih besar. Mereka sangat berguna ketika Anda ingin menyesuaikan pergerakan ragdoll dan menegakkan pos tertentu pada karakter Anda. Anda juga dapat menggunakannya untuk menyesuaikan <span class="tooltip"><strong>joints</strong><span class="tooltiptext">Komponen fisika yang memungkinkan koneksi dinamis antara komponen Rigidbody, biasanya memungkinkan beberapa tingkat pergerakan seperti engsel. <a href="Joints.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#joint">Glossary</a></span></span></span> menjadi sendi yang sangat khusus dari desain Anda sendiri.</p> 
+       <h2>Properties</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ConfigurableJointProps.png" alt=""> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong><em>Property:</em></strong></th> 
+          <th style="text-align:left;"><strong><em>Function:</em></strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Edit Joint Angular Limits</strong></td> 
+          <td style="text-align:left;">Tambahkan visual <span class="tooltip"><strong>gizmo</strong><span class="tooltiptext">Overlay grafis yang terkait dengan GameObject di Adegani, dan ditampilkan di Tampilan Adegan. Alat adegan internal seperti alat bergerak adalah Gizmos, dan Anda dapat membuat Gizmos kustom menggunakan tekstur atau scripting. Beberapa Gizmos hanya ditarik ketika GameObject dipilih, sementara Gizmos lainnya ditarik oleh Editor terlepas dari GameObjects mana yang dipilih. <a class="tooltipMoreInfoLink" href="GizmosMenu.html#GizmosIcons">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Gizmo">Glossary</a></span></span></span> ke tampilan <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> yang membantu Anda mengedit batas sudut sendi. Untuk menggunakan gizmo ini, set <strong>Angular X, Y, Z Motion</strong> ke <strong>Limited</strong> dan kemudian pegangan muncul untuk Anda untuk menyeret dan menyesuaikan ruang rotasi sendi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Connected Body</strong></td> 
+          <td style="text-align:left;">Objek <span class="tooltip"><strong>Rigidbody</strong><span class="tooltiptext">Komponen yang memungkinkan GameObject untuk dipengaruhi oleh gravitasi simulasi dan kekuatan lainnya. <a class="tooltipMoreInfoLink" href="class-Rigidbody.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Rigidbody">Glossary</a></span></span></span> yang menghubungkan sambungan. Anda dapat mengatur ini ke <em>None</em> untuk menunjukkan bahwa sendi melampirkan ke posisi tetap di ruang daripada yang lain.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><span class="tooltip"><strong>Anchor</strong><span class="tooltiptext">Alat tata letak UI yang memperbaiki elemen UI ke elemen induk. Jangkar ditampilkan sebagai empat pegangan segitiga kecil di Tampilan Adegan dan informasi jangkar juga ditampilkan dalam Inspektur. <a class="tooltipMoreInfoLink" href="UIBasicLayout.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Anchor">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Titik yang mendefinisikan pusat sendi. Semua simulasi berbasis fisika menggunakan titik ini sebagai pusat perhitungan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Axis</strong></td> 
+          <td style="text-align:left;">Sumbu lokal yang menentukan rotasi alami objek berdasarkan simulasi fisika.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Auto Configure Connected Anchor</strong></td> 
+          <td style="text-align:left;">Aktifkan pengaturan ini untuk secara otomatis menghitung posisi Anchor Tersambung untuk mencocokkan posisi global properti jangkar. Ini adalah pengaturan default. Dinonaktifkan untuk mengkonfigurasi posisi jangkar yang terhubung secara manual.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Connected Anchor</strong></td> 
+          <td style="text-align:left;">Konfigurasikan posisi jangkar yang terhubung secara manual.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Secondary Axis</strong></td> 
+          <td style="text-align:left;"><strong>Axis</strong> dan <strong>Secondary Axis</strong> mendefinisikan sistem koordinat lokal sendi. Sumbu ketiga adalah ortogonal ke dua lainnya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>X, Y, Z Motion</strong></td> 
+          <td style="text-align:left;">Mengatur gerakan di sepanjang sumbu X, Y atau Z menjadi <em>Gratis</em>, sepenuhnya <em>Locked</em>, atau <em>Limited</em> sesuai dengan sifat batas yang dijelaskan di bawah ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Angular X, Y, Z Motion</strong></td> 
+          <td style="text-align:left;">Mengatur rotasi di sekitar sumbu X, Y atau Z menjadi <em>Gratis</em>, sepenuhnya <em>Locked</em>, atau <em>Limited</em> sesuai dengan sifat batas yang dijelaskan di bawah ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Linear Limit Spring</strong></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Menerapkan gaya pegas untuk menarik objek kembali ketika melewati posisi batas.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Spring</strong></td> 
+          <td style="text-align:left;">Gaya pegas. Mengatur nilai ini ke nol untuk membuat batas tidak dapat dipersiapkan. Nilai selain nol membuat batas elastis.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Damper</strong></td> 
+          <td style="text-align:left;">Pengurangan kekuatan pegas sesuai dengan kecepatan gerakan sendi. Mengatur nilai di atas nol untuk memungkinkan sambungan ke "dampen" osilasi yang akan membawa jika tidak terbatas.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Linear Limit</strong></td> 
+          <td style="text-align:left;">Mengatur batas pada gerakan linier bersama (yaitu, pergerakan jarak jauh daripada rotasi), ditentukan sebagai jarak dari asal sendi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Limit</strong></td> 
+          <td style="text-align:left;">Jarak di unit dunia dari asal ke batas.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Bounciness</strong></td> 
+          <td style="text-align:left;">Mengatur gaya bouncing untuk menerapkan objek untuk mendorong kembali ketika mencapai jarak batas.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Contact Distance</strong><span class="tooltiptext">Properti batas sendi yang menetapkan toleransi jarak minimum antara posisi bersama dan batas di mana batas akan diberlakukan. <a class="tooltipMoreInfoLink" href="class-CharacterJoint.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ContactDistance">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Toleransi jarak minimum antara posisi bersama dan batas untuk menegakkan batas. Toleransi tinggi berarti batasnya lebih cenderung melanggar ketika objek bergerak cepat. Namun, ini mengharuskan batas yang akan dipertimbangkan oleh simulasi fisika lebih sering dan mengurangi kinerja sedikit.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Angular X Limit Spring</strong></td> 
+          <td style="text-align:left;">Menerapkan torsi pegas untuk memutar objek kembali ketika melewati sudut batas sendi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Spring</strong></td> 
+          <td style="text-align:left;">Torsi pegas. Mengatur nilai ini ke nol untuk membuat batas tidak dapat dipersiapkan. Mengatur nilai selain nol untuk membuat batas elastis.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Damper</strong></td> 
+          <td style="text-align:left;">Pengurangan torsi pegas sesuai dengan kecepatan rotasi sendi. Mengatur nilai di atas nol untuk memungkinkan sambungan ke "dampen" osilasi yang akan membawa jika tidak terbatas.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Low Angular X Limit</strong></td> 
+          <td style="text-align:left;">Batas bawah pada rotasi sendi di sekitar sumbu x, ditentukan sebagai sudut dari rotasi asli sendi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Limit</strong></td> 
+          <td style="text-align:left;">Sudut batas.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Bounciness</strong></td> 
+          <td style="text-align:left;">Mengatur torsi bouncing untuk menerapkan objek ketika rotasi mencapai sudut batas.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Contact Distance</strong></td> 
+          <td style="text-align:left;">Toleransi sudut minimum (mengantara sudut sendi dan batas) di mana batas akan diberlakukan. Toleransi tinggi melanggar batas kurang sering ketika objek bergerak cepat. Namun, ini membutuhkan simulasi fisika untuk memperhitungkan batas lebih sering dan mengurangi kinerja sedikit.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>High Angular XLimit</strong></td> 
+          <td style="text-align:left;">Ini mirip dengan properti <em>Batasan X Angular Rendah</em> yang dijelaskan di atas tetapi menentukan batas sudut atas rotasi sendi daripada batas bawah.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Angular YZ Limit Spring</strong></td> 
+          <td style="text-align:left;">Ini mirip dengan <em>Angular X Batas Musim Semi</em> yang dijelaskan di atas tetapi berlaku untuk rotasi di sekitar sumbu Y dan Z.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Angular Y Limit</strong></td> 
+          <td style="text-align:left;">Ini mirip dengan properti <em>Batasan X Angular</em> yang dijelaskan di atas tetapi berlaku batas sumbu y dan menganggap batas sudut atas dan bawah sama.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Angular Z Limit</strong></td> 
+          <td style="text-align:left;">Ini mirip dengan properti <em>Batasan X Angular</em> yang dijelaskan di atas tetapi berlaku batas sumbu z dan menganggap batas sudut atas dan bawah sama.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Target Position</strong></td> 
+          <td style="text-align:left;">Posisi target bahwa kekuatan penggerak sendi bergerak ke.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Target Velocity</strong></td> 
+          <td style="text-align:left;">Kecepatan yang diinginkan bahwa sendi bergerak ke <em>Posisi Target</em> di bawah gaya penggerak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>XDrive</strong></td> 
+          <td style="text-align:left;">Mengatur kekuatan yang digunakan Unity untuk memutar sendi di sekitar sumbu x lokal oleh torsi penggerak <em>Posisi Spring</em> dan <em>Posisi Damper</em>. Parameter <em>Kekuatan Maksimum</em> membatasi kekuatan. Properti ini hanya tersedia jika properti <em>Mode Drive Rotasi</em> diatur menjadi <em>X &amp; YZ</em>. Untuk informasi lebih lanjut, lihat bagian <a href="#drive">Kekuatan penggerak</a> di bawah ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Position Spring</strong></td> 
+          <td style="text-align:left;">Torsi pegas yang digunakan Unity untuk memutar sendi dari posisi saat ini menuju posisi targetnya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Position Damper</strong></td> 
+          <td style="text-align:left;">Mengurangi jumlah torsi pegas secara proporsional antara kecepatan arus sendi dan kecepatan targetnya. Ini mengurangi kecepatan gerakan sendi. Mengatur nilai di atas nol untuk memungkinkan sendi untuk meredam osilasi yang akan membawa jika tidak terbatas.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Maximum Force</strong></td> 
+          <td style="text-align:left;">Batasi jumlah kekuatan yang dapat diterapkan. Untuk membuat drive menerapkan kekuatan yang dihitung, set ini ke nilai tinggi bahwa drive tidak mungkin dihitung.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>YDrive</strong></td> 
+          <td style="text-align:left;">Ini mirip dengan <em>X Drive</em> yang dijelaskan di atas tetapi berlaku untuk sumbu y sendi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>ZDrive</strong></td> 
+          <td style="text-align:left;">Ini mirip dengan <em>X Drive</em> yang dijelaskan di atas tetapi berlaku untuk sumbu z sendi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Target Rotation</strong></td> 
+          <td style="text-align:left;">Orientasi bahwa drive rotasi sendi berputar ke arah, ditentukan sebagai <span class="tooltip"><a class="tooltipMoreInfoLink" href="../ScriptReference/Quaternion.html">quaternion</a><span class="tooltiptext">Cara standar Unity mewakili rotasi sebagai data. Ketika menulis kode yang berhubungan dengan rotasi, Anda biasanya harus menggunakan kelas Quaternion dan metodenya. <a href="QuaternionAndEulerRotationsInUnity.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Quaternion">Glossary</a></span></span></span>. Rotasi target relatif terhadap tubuh bahwa Sendi melekat pada, kecuali parameter Swap Bodies diatur, dalam hal itu relatif terhadap jangkar tubuh yang terhubung.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Target Angular Velocity</strong></td> 
+          <td style="text-align:left;">Kecepatan sudut yang menggerakkan rotasi sendi bertujuan untuk mencapai. Properti ditentukan sebagai vektor. Panjang vektor menentukan kecepatan rotasi dan arahnya menentukan sumbu rotasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Rotation Drive Mode</strong></td> 
+          <td style="text-align:left;">Mengatur bagaimana Unity menerapkan kekuatan penggerak ke objek untuk memutarnya ke orientasi target. Mengatur mode ke <em>X dan YZ</em>, untuk menerapkan torsi di sekitar sumbu sebagaimana ditentukan oleh sifat <em></em> yang dijelaskan di bawah ini. Jika Anda menggunakan mode <strong>Slerp</strong> maka sifat <em>Slerp Drive</em> menentukan torsi drive.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Angular X Drive</strong></td> 
+          <td style="text-align:left;">Ini menentukan bagaimana torsi drive berputar sendi di sekitar sumbu x lokal. Properti ini hanya tersedia jika properti <em>Mode Drive Rotasi</em> yang dijelaskan di atas diatur ke <em>X &amp; YZ</em>. Untuk informasi lebih lanjut, lihat bagian <a href="#drive">Kekuatan penggerak</a> di bawah ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Position Spring</strong></td> 
+          <td style="text-align:left;">Torsi pegas yang digunakan Unity untuk memutar sendi dari posisi saat ini menuju posisi targetnya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Position Damper</strong></td> 
+          <td style="text-align:left;">Mengurangi jumlah torsi pegas secara proporsional antara kecepatan arus sendi dan kecepatan targetnya. Ini mengurangi kecepatan gerakan sendi. Mengatur nilai di atas nol untuk memungkinkan sendi untuk meredam osilasi yang akan membawa jika tidak terbatas.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Maximum Force</strong></td> 
+          <td style="text-align:left;">Batasi jumlah kekuatan yang dapat diterapkan. Untuk membuat drive menerapkan kekuatan yang dihitung, set ini ke nilai tinggi bahwa drive tidak mungkin dihitung.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Angular YZDrive</strong></td> 
+          <td style="text-align:left;">Ini mirip dengan <em>Angular X Drive</em> yang dijelaskan di atas tetapi berlaku untuk kedua sumbu Y dan Z sendi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Slerp Drive</strong></td> 
+          <td style="text-align:left;">Ini menentukan bagaimana torsi drive berputar sendi di sekitar semua sumbu lokal. Properti ini hanya tersedia jika properti <em>Mode Drive Rotasi</em> yang dijelaskan di atas diatur ke <em>Slerp</em>. Untuk informasi lebih lanjut, lihat bagian <a href="#slerp">Slerp Drive</a> di bawah ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Position Spring</strong></td> 
+          <td style="text-align:left;">Torsi pegas yang digunakan Unity untuk memutar sendi dari posisi saat ini menuju posisi targetnya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Position Damper</strong></td> 
+          <td style="text-align:left;">Mengurangi jumlah torsi pegas secara proporsional antara kecepatan arus sendi dan kecepatan targetnya. Ini mengurangi kecepatan gerakan sendi. Mengatur nilai di atas nol untuk memungkinkan sendi untuk meredam osilasi yang akan membawa jika tidak terbatas.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Maximum Force</strong></td> 
+          <td style="text-align:left;">Batasi jumlah kekuatan yang dapat diterapkan. Untuk membuat drive menerapkan kekuatan yang dihitung, set ini ke nilai tinggi bahwa drive tidak mungkin dihitung.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Projection Mode</strong></td> 
+          <td style="text-align:left;">Ini mendefinisikan bagaimana jepret sendi kembali kendalanya ketika tiba-tiba bergerak di luar mereka, karena <span class="tooltip"><strong>physics engine</strong><span class="tooltiptext">Sebuah sistem yang mensimulasikan aspek sistem fisik sehingga benda dapat mempercepat dengan benar dan dipengaruhi oleh tabrakan, gravitasi dan kekuatan lainnya. <a class="tooltipMoreInfoLink" href="PhysicsSection.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#PhysicsEngine">Glossary</a></span></span></span> tidak dapat mendamaikan kombinasi kekuatan saat ini dalam simulasi. Pilihan <em>None</em> dan <em>Posisi dan Rotasi</em>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Projection Distance</strong></td> 
+          <td style="text-align:left;">Jarak sendi harus bergerak di luar kendalanya sebelum upaya mesin fisika untuk merebut kembali ke posisi yang dapat diterima.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Projection Angle</strong></td> 
+          <td style="text-align:left;">Sudut sendi harus berputar di luar batasannya sebelum upaya mesin fisika untuk merebut kembali ke posisi yang dapat diterima.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Configured in World Space</strong></td> 
+          <td style="text-align:left;">Aktifkan properti ini untuk menghitung nilai yang ditetapkan oleh berbagai properti target dan drive di ruang dunia bukan ruang lokal objek.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Swap Bodies</strong></td> 
+          <td style="text-align:left;">Aktifkan properti ini untuk menukar urutan di mana mesin fisika memproses kakubodies yang terlibat dalam sendi. Hasil ini dalam gerakan bersama yang berbeda tetapi tidak memiliki dampak pada kakubodies dan jangkar.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Break Force</strong></td> 
+          <td style="text-align:left;">Jika kekuatan lebih besar dari nilai ini mendorong sendi di luar kendalanya maka sendi secara permanen “broken” dan dihapus. Login Torsi hanya melanggar sendi ketika sumbunya adalah <strong>Limited</strong> atau <strong>Locked</strong> (lihat bagian <a href="#constraints">Memperkenalkan gerakan</a> di bawah).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Break Torque</strong></td> 
+          <td style="text-align:left;">Jika torsi yang lebih besar dari nilai ini berputar sendi di luar kendalanya maka sambungannya permanen “broken” dan dihapus. Break Force dapat melanggar sendi terlepas dari apakah kapaknya adalah <strong>Free</strong>, <strong>Limited</strong> atau <strong>Locked</strong> (lihat bagian <a href="#constraints">Memperkenalkan gerakan</a> di bawah).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Enable Collision</strong></td> 
+          <td style="text-align:left;">Aktifkan properti ini untuk membiarkan objek dengan kolida bersama dengan objek yang terhubung. Jika ini dinonaktifkan, sambungan dan objek akan melewati satu sama lain.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Enable Preprocessing</strong></td> 
+          <td style="text-align:left;">Jika preprocessing dinonaktifkan maka konfigurasi “mungkinan” tertentu dari sendi disimpan lebih stabil daripada melayang liar keluar dari kontrol.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Mass Scale</strong></td> 
+          <td style="text-align:left;">Timbangan untuk diterapkan pada massa terbalik dan puluhan inersia dari orang kaku, mulai dari 0.00001 hingga infinity. Ini berguna ketika sendi menghubungkan dua kaku massa yang sangat bervariasi. Pemecah fisika menghasilkan hasil yang lebih baik ketika kaku yang terhubung memiliki massa yang sama. Ketika kakubodie terhubung Anda bervariasi dalam massa, gunakan properti ini dengan properti <strong>Connect Mass Scale</strong> untuk menerapkan massa palsu untuk membuat mereka kira sama satu sama lain. Ini menghasilkan simulasi berkualitas tinggi dan stabil, tetapi mengurangi perilaku fisik kaku.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Connected Mass Scale</strong></td> 
+          <td style="text-align:left;">Skala berlaku untuk massa terbalik dan puluhan inersia dari kaku yang terhubung, mulai dari 0.00001 hingga infinity.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Details</h2> 
+       <p>Seperti sendi lain, Anda dapat menggunakan Sendi yang Dapat Dikonfigurasi untuk membatasi pergerakan objek tetapi Anda juga dapat menggunakannya untuk menggerakkannya ke kecepatan target atau posisi dengan kekuatan. Karena ada banyak opsi konfigurasi, Anda mungkin perlu bereksperimen dengan mereka untuk mendapatkan sendi untuk berperilaku persis cara yang Anda inginkan.</p> 
+       <p><a name="contraints"></a></p> 
+       <h3>Memperkenalkan gerakan</h3> 
+       <p>Anda dapat membatasi pergerakan terjemahan dan rotasi pada setiap sumbu sendi secara independen menggunakan sifat <em>X, Y, Z Gerak</em> dan <em>X, Y, Rotasi Z</em>. Diaktifkan <em>Dikonfigurasi Di Ruang Dunia</em> untuk melatih pergerakan ke kapak dunia daripada sumbu lokal objek. Setiap properti ini dapat diatur ke <em>Locked</em>, <em>Limited</em> atau <em>Gratis</em>:</p> 
+       <ul> 
+        <li>Sumbu <strong>Locked</strong> membatasi semua gerakan, sehingga sambungan tidak dapat bergerak sama sekali. Sebagai contoh, objek yang terkunci dalam sumbu y dunia tidak dapat bergerak atau turun.</li> 
+        <li>Sumbu <strong>Limited</strong> memungkinkan pergerakan bebas antara batas yang ditentukan, seperti yang dijelaskan di bawah ini. Misalnya, turret senjata mungkin diberikan busur api yang dibatasi dengan membatasi rotasi Y ke kisaran sudut tertentu.</li> 
+        <li>Sumbu <strong>Free</strong> memungkinkan pergerakan.</li> 
+       </ul> 
+       <p>Anda dapat membatasi pergerakan terjemahan menggunakan properti <em>Batasan Linear</em>, yang menentukan jarak maksimum sendi dapat bergerak dari titik asalnya (diukur sepanjang setiap sumbu secara terpisah). Misalnya, Anda dapat membatasi puck untuk meja hoki udara dengan mengunci sendi di sumbu y (di ruang dunia), meninggalkannya bebas dalam sumbu z dan mengatur batas untuk sumbu x untuk menyesuaikan lebar meja; puck kemudian ditrainingkan untuk tinggal di daerah bermain.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/XZLimit.svg" alt=""> 
+       </figure> 
+       <p>Anda juga dapat membatasi rotasi menggunakan sifat <em>Batas Angular</em>. Tidak seperti batas linier, Anda dapat menentukan nilai batas yang berbeda untuk setiap sumbu dengan properti ini. Anda juga dapat menentukan batas atas dan bawah yang terpisah pada sudut rotasi untuk sumbu x; dua sumbu lainnya menggunakan sudut yang sama baik dari rotasi asli. Misalnya, Anda dapat membangun “teeter table” dengan menggunakan pesawat datar dengan hambatan bersama untuk memungkinkan sedikit miring di arah X dan Z sambil meninggalkan rotasi Y terkunci.</p> 
+       <h4>Bounciness and springs</h4> 
+       <p>Secara default, stop bersama bergerak ketika berjalan ke batasnya. Namun, <span class="tooltip"><strong>collision</strong><span class="tooltiptext">tabrakan terjadi ketika mesin fisika mendeteksi bahwa tabrakan dari dua GameObjects membuat kontak atau tumpang tindih, ketika setidaknya satu memiliki komponen kaku dan bergerak. <a class="tooltipMoreInfoLink" href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Collision">Glossary</a></span></span></span> inelastic seperti ini jarang terjadi di dunia nyata dan sehingga berguna untuk menambahkan beberapa perasaan bouncing ke sendi yang terlatih. Untuk membuat objek yang dibatasi kembali setelah melewati batasnya, gunakan properti <em>Bounciness</em> dari batas linier dan sudut. Kebanyakan tabrakan terlihat lebih alami dengan sedikitnya kekeringan tetapi Anda juga dapat mengatur properti ini lebih tinggi untuk mensimulasikan batas-batas yang tidak biasa seperti bantal dari meja kolam.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/CJointBounciness.svg" alt="Bouncy joint does not cross the limit"> 
+        <figcaption>
+          sendi Bouncy tidak melintasi batas 
+        </figcaption> 
+       </figure> 
+       <p>Untuk melunakkan batas sendi lebih, gunakan properti pegas: <em>Batas Linear Spring</em> untuk terjemahan dan <em>Angular X / YZ Batas Musim Semi</em> untuk rotasi. Jika Anda mengatur properti <em>Spring</em> untuk nilai di atas nol, sendi tidak berhenti tiba-tiba bergerak ketika memukul batas, tetapi ditarik kembali ke posisi batas oleh gaya pegas. Kekuatan kekuatan ditentukan oleh nilai <em>Spring</em>. Secara default, musim semi sangat elastis dan akan menumbuhkan sendi kembali ke arah berlawanan dengan tabrakan.</p> 
+       <p>Anda dapat menggunakan properti <em>Damper</em> untuk mengurangi elastisitas dan mengembalikan sendi ke batas lebih lembut. Misalnya, Anda dapat menggunakan <span class="tooltip"><strong>spring joint</strong><span class="tooltiptext">Jenis sendi yang menghubungkan dua komponen kaku bersama tetapi memungkinkan jarak antara mereka untuk berubah seolah-olah mereka terhubung oleh pegas. <a class="tooltipMoreInfoLink" href="class-SpringJoint.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SpringJoint">Glossary</a></span></span></span> untuk membuat tuas yang dapat Anda tarik ke kiri atau kanan, tetapi kemudian musim semi kembali ke posisi tegak. Jika musim semi sangat elastis maka tuas akan mengossi kembali dan ke depan di sekitar titik pusat setelah dirilis. Namun, jika Anda menambahkan cukup redaman maka pegas akan dengan cepat menyelesaikan posisi netral.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/CJointSpring.svg" alt="Spring joint crosses the limit but is pulled back to it"> 
+        <figcaption>
+          Sambungan musim semi melintasi batas tetapi ditarik kembali ke dalamnya 
+        </figcaption> 
+       </figure> 
+       <p><a name="drive"></a></p> 
+       <h3>Kekuatan penggerak</h3> 
+       <p>Tidak hanya dapat bersama bereaksi terhadap pergerakan objek yang melekat pada, tetapi juga dapat secara aktif menerapkan <em>kekuatan drive</em> untuk mengatur objek dalam gerakan. Beberapa sendi perlu menjaga objek bergerak pada kecepatan konstan, seperti motor putar mengubah pisau kipas. Gunakan sifat <em>Target Velocity</em> dan <em>Target Angular Velocity</em> untuk mengatur kecepatan yang diinginkan untuk sendi tersebut.</p> 
+       <p>Anda mungkin perlu menggunakan sendi yang memindahkan objek mereka ke posisi tertentu di ruang, atau orientasi tertentu. Gunakan sifat <em>Posisi Target</em> dan <em>Rotasi Target</em> untuk mengatur fungsi ini. Misalnya, untuk menerapkan forklift, memasang garpu pada sendi yang dapat dikonfigurasi dan kemudian mengatur ketinggian target untuk meningkatkan mereka dari skrip.</p> 
+       <p>Dengan set target, sifat <em>X, Y, Z Drive</em> dan <em></em> (atau alternatif <em>Slerp Drive</em>) menentukan kekuatan untuk digunakan untuk mendorong sendi ke arah itu. Properti <em>Mode</em> Drive memilih apakah sambungan harus mencari posisi target, kecepatan atau keduanya. Pekerjaan <em>Posisi Spring</em> dan <em>Posisi Damper</em> dengan cara yang sama untuk batas sendi ketika mereka mencari posisi target. Dalam mode kecepatan, gaya musim semi tergantung pada "peningkatan" antara kecepatan saat ini dan kecepatan target; peredam membantu kecepatan untuk menyelesaikan nilai yang dipilih daripada oscillating tanpa henti di sekitar itu. Misalnya, rumus untuk kekuatan <em>XDrive</em> adalah:</p> 
+       <pre><code>force = PositionSpring * (target position - position) + PositionDamper * (targetVelocity - velocity)
+</code></pre> 
+       <p>Jadi, kekuatan tumbuh proporsional pada perbedaan antara nilai saat ini dan nilai target, dan mengurangi oleh proporsional damper ke perbedaan antara kecepatan saat ini dan target satu. Unity menerapkan kekuatan untuk penggerak posisi dan rotasi.</p> 
+       <p>Properti <em>Kekuatan Maksimum</em> adalah perataan akhir yang mencegah gaya yang diterapkan oleh pegas dari melebihi nilai batas terlepas dari seberapa jauh sendi berasal dari targetnya. Hal ini mencegah sendi yang Anda peregangan jauh dari targetnya dengan cepat menangkap objek kembali dengan cara yang tidak terkendali.</p> 
+       <p>Ketika Anda menggunakan kekuatan drive (kecuali untuk <em>Slerp Drive</em>, dijelaskan di bawah), sendi berlaku kekuatan untuk objek secara terpisah di setiap sumbu. Misalnya, Anda dapat menerapkan pesawat ruang yang memiliki kecepatan terbang maju tinggi tetapi kecepatan yang relatif rendah dalam gerakan kemudi samping.</p> 
+       <p><a name="slerp"></a></p> 
+       <h4>Slerp Drive</h4> 
+       <p>Tidak seperti mode drive lain yang menerapkan kekuatan dalam sumbu terpisah, <em>Slerp Drive</em> menggunakan interpolasi bulat quaternion atau fungsi "slerp" untuk mengorientasikan sendi. Dari mengisolasi aksi individu, proses slerp menemukan rotasi total minimum yang mengambil objek dari orientasi saat ini ke target, dan menerapkannya pada semua sumbu yang diperlukan. Slerp drive sedikit lebih mudah dikonfigurasi tetapi Anda tidak dapat menentukan kekuatan drive yang berbeda untuk sumbu X dan Y / Z.</p> 
+       <p>Untuk mengaktifkan Slerp drive, mengubah properti <em>Mode Drive Rotasi</em> dari <em>X dan YZ</em> ke <em>Slerp</em>. Sendi dapat menggunakan nilai <em></em> atau nilai <em>Slerp Drive</em>, tetapi tidak keduanya.</p> 
+       <hr> 
+       <ul> 
+        <li><span class="page-edit">2019–05–23 Login</span></li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="class-CharacterJoint.html"></a></span> 
+         <div class="tip">
+           Karakter Bersama 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="class-ConstantForce.html"></a></span> 
+         <div class="tip">
+           Kekuatan Konstan 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

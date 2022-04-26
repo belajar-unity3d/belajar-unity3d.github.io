@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: JAR plug-in</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="platforms" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="PlatformSpecific.html">Pengembangan platform</a></li> 
+         <li><a href="android.html">Android</a></li> 
+         <li><a href="android-developing.html">Mengembangkan untuk Android</a></li> 
+         <li><a href="PluginsForAndroid.html">Membangun dan menggunakan plug-ins untuk Android</a></li> 
+         <li>JAR plug-ins</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="AndroidAARPlugins.html"></a></span> 
+          <div class="tip">
+            AAR plug-ins dan Android Perpustakaan 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="AndroidUnityPlayerActivity.html"></a></span> 
+          <div class="tip">
+            Memperpanjang UnityPlayerActivity Kode Java 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>JAR plug-ins</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>JAR (Java Archive) <span class="tooltip"><strong>plug-ins</strong><span class="tooltiptext">Satu set kode yang dibuat di luar Unity yang menciptakan fungsi dalam Unity. Ada dua jenis plug-ins yang dapat Anda gunakan di Unity: Managed plug-ins (diproduksi. Rakitan NET dibuat dengan alat-alat seperti Studio Visual) dan plug-ins asli (pustaka kode asli yang spesifik platform). <a class="tooltipMoreInfoLink" href="Plugins.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Plug-in">Glossary</a></span></span></span> terutama digunakan untuk mengaktifkan interaksi dengan OS Android atau untuk memanggil metode yang ditulis di Java dari dalam C # <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> Anda.</p> 
+       <p>Mereka hanya dapat berisi kode Java (misalnya, mereka tidak dapat mengandung sumber daya Android), yang membuat penggunaannya sangat terbatas. Untuk menambahkan plug-in JAR ke proyek Anda, salin file .jar ke folder proyek Anda, lalu pilih di Unity untuk membuka Pengaturan Impor di jendela <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>. Tick kotak centang Android untuk menandai file .jar ini sesuai dengan Android:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AndroidJARPlugins.png" alt="JAR plug-in import settings as displayed in the Inspector window"> 
+        <figcaption>
+          Pengaturan impor JAR plug-in seperti yang ditampilkan di jendela Inspector 
+        </figcaption> 
+       </figure> 
+       <h2>Menggunakan plug-in Java</h2> 
+       <p>Unity menggunakan <a href="http://en.wikipedia.org/wiki/Java_Native_Interface">Antarmuka asli Java (JNI)</a> baik ketika memanggil kode dari Java dan ketika berinteraksi dengan Java atau Java VM (Mesin Virtual) dari kode asli atau skrip C#.</p> 
+       <h3>File sumber Java sebagai plug-ins</h3> 
+       <p>Saat menggunakan sistem build Gradle, Anda dapat menghindari membuat file JAR. Untuk melakukan ini:</p> 
+       <ol> 
+        <li>Drop file .java ke proyek Unity Anda sebagai plug-in.</li> 
+        <li>Pada <a href="PluginInspector.html">Plugin Inspector</a>, tanda plug-in untuk platform Android.</li> 
+        <li>Ketika bangunan untuk Android, pastikan <span class="tooltip"><strong>Gradle</strong><span class="tooltiptext">Sistem build Android yang mengotomatiskan beberapa proses build. Otomasi ini berarti bahwa banyak kesalahan build umum cenderung terjadi. <a class="tooltipMoreInfoLink" href="android-gradle-overview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Gradle">Glossary</a></span></span></span> ditetapkan sebagai <strong>Build System</strong> Anda di <a href="BuildSettings.html">Membangun Pengaturan</a>.</li> 
+       </ol> 
+       <p>Unity menyalin file java ke proyek Gradle dan membangun dengan itu.</p> 
+       <h2>Menggunakan plug-in Java Anda dari kode asli (C/C++)</h2> 
+       <p>Catatan: Informasi ini di bagian ini membutuhkan pengetahuan lanjutan dari Android Java Native Interface (JNI).</p> 
+       <p>Untuk mengakses kode Java dari C atau C++ plug-ins, Anda perlu akses ke Java VM. Tambahkan metode berikut ke kode C / C++ Anda untuk mengakses Java VM.</p> 
+       <pre><code>jint JNI_OnLoad(JavaVM* vm, void* reserved) {
+  JNIEnv* jni_env = 0;
+  vm-&gt;AttachCurrentThread(&amp;jni_env, 0);
+  return JNI_VERSION_1_6;
+}
+</code></pre> 
+       <p>Di luar ruang lingkup dokumen ini untuk menjelaskan JNI sepenuhnya, tetapi metode ini biasanya melibatkan menemukan definisi kelas, menyelesaikan metode konstror (&lt;init&gt;) dan membuat instance objek baru, seperti yang ditunjukkan dalam contoh ini:</p> 
+       <pre><code>jobject createJavaObject(JNIEnv* jni_env) {
+  jclass cls_JavaClass = jni_env-&gt;FindClass("com/your/java/Class");         // find class definition
+  jmethodID mid_JavaClass = jni_env-&gt;GetMethodID (cls_JavaClass, "&lt;init&gt;", "()V");      // find constructor method
+  jobject obj_JavaClass = jni_env-&gt;NewObject(cls_JavaClass, mid_JavaClass);     // create object instance
+  return jni_env-&gt;NewGlobalRef(obj_JavaClass);                      // return object with a global reference
+}
+</code></pre> 
+       <p>Untuk informasi lebih lanjut tentang JNI, lihat <a href="https://developer.android.com/training/articles/perf-jni.html">Android Developer API</a> </p> 
+       <p><a name="javawithhelper"></a></p> 
+       <h2>Menggunakan plug-in Java Anda dari skrip C# dengan kelas pembantu</h2> 
+       <p>Catatan: Informasi ini di bagian ini membutuhkan pengetahuan lanjutan dari Android Java Native Interface (JNI).</p> 
+       <p>Kelas API Unity <a href="../ScriptReference/AndroidJNIHelper.html"><code>AndroidJNIHelper</code></a> dan <a href="../ScriptReference/AndroidJNI.html"><code>AndroidJNI</code></a> digunakan sebagai pembungkus di sekitar antarmuka JNI.</p> 
+       <p>The AndroidJavaObject and AndroidJavaClass Unity API kelas automate banyak tugas ketika menggunakan panggilan JNI, dan mereka juga menggunakan caching untuk membuat panggilan ke Java lebih cepat. Kombinasi <code>AndroidJavaObject</code> dan <code>AndroidJavaClass</code> dibangun di atas <code>AndroidJNI</code> dan <code>AndroidJNIHelper</code>, tetapi juga memiliki beberapa fungsi tambahan. Kelas-kelas ini juga memiliki metode statis yang digunakan untuk mengakses anggota statis kelas Java.</p> 
+       <p>Ada tiga cara untuk membuat panggilan Java JNI dari skrip C# Anda:</p> 
+       <ul> 
+        <li>mentah JNI melalui metode <code>AndroidJNI</code>;</li> 
+        <li> <code>AndroidJNIHelper</code> kelas bersama dengan <code>AndroidJNI</code>;</li> 
+        <li> <code>AndroidJavaObject</code> dan kelas <code>AndroidJavaClass</code> sebagai API tingkat tinggi yang paling nyaman.</li> 
+       </ul> 
+       <p> <a href="../ScriptReference/AndroidJNI.html">WordPress.org</a> adalah pembungkus untuk panggilan JNI tersedia di C (seperti yang dijelaskan di atas). Semua metode di kelas ini statis dan memiliki 1: 1 pemetaan ke Java Native Interface.</p> 
+       <p> <a href="../ScriptReference/AndroidJNIHelper.html">WordPress.org</a> menyediakan fungsi pembantu yang digunakan oleh tingkat berikutnya, yang terkena metode publik dan mungkin berguna dalam kasus khusus.</p> 
+       <p>Instances dari <a href="../ScriptReference/AndroidJavaObject.html">WordPress.org</a> dan <a href="../ScriptReference/AndroidJavaClass.html">WordPress.org</a> memiliki satu-untuk-satu pemetaan untuk contoh java.lang. WordPress.org Kelas (atau subklasitas mereka) di sisi Jawa, masing-masing. Mereka pada dasarnya menyediakan 3 jenis interaksi dengan sisi Jawa:</p> 
+       <ul> 
+        <li><p>Hubungi metode</p></li> 
+        <li><p>Dapatkan nilai lapangan</p></li> 
+        <li><p>Mengatur nilai lapangan</p></li> 
+       </ul> 
+       <p>Panggilan dipisahkan menjadi dua kategori: Sebuah panggilan ke metode 'hindari', dan panggilan ke metode dengan jenis pengembalian non-hindari. Jenis generik digunakan untuk mewakili jenis kembali metode-metode yang mengembalikan tipe non-void. Mendapatkan dan Set selalu mengambil jenis generik mewakili jenis lapangan.</p> 
+       <h2>Examples</h2> 
+       <h3>Contoh 1</h3> 
+       <pre><code> AndroidJavaObject jo = new AndroidJavaObject("java.lang.String", "some_string"); 
+ // jni.FindClass("java.lang.String"); 
+ // jni.GetMethodID(classID, "&lt;init&gt;", "(Ljava/lang/String;)V"); 
+ // jni.NewStringUTF("some_string"); 
+ // jni.NewObject(classID, methodID, javaString); 
+ int hash = jo.Call&lt;int&gt;("hashCode"); 
+ // jni.GetMethodID(classID, "hashCode", "()I"); 
+ // jni.CallIntMethod(objectID, methodID);
+</code></pre> 
+       <p>Contoh ini menciptakan contoh <a href="http://developer.android.com/reference/java/lang/String.html">Login Login</a> diinisialisasikan dengan <a href="http://developer.android.com/reference/java/lang/String.html#String(java.lang.StringBuilder)">string</a>, dan mengambil <a href="http://developer.android.com/reference/java/lang/String.html#hashCode()">nilai hash</a> untuk string itu.</p> 
+       <p>Konstruktor <code>AndroidJavaObject</code> membutuhkan setidaknya satu parameter - nama kelas untuk membangun contoh. Setiap parameter setelah nama kelas adalah untuk panggilan konstror pada objek, dalam hal ini string “some_string”. Panggilan berikutnya untuk hashCode() kembali 'int' yang digunakan sebagai parameter tipe generik ke metode panggilan dalam contoh ini.</p> 
+       <p> <strong>Note</strong>: Kelas Jawa yang bersarang tidak dapat disaat menggunakan notasi yang tertidur. Kelas dalam harus menggunakan pemisah $. Gunakan <code>android.view.ViewGroup$LayoutParams</code> atau <code>android/view/ViewGroup$LayoutParams</code>, di mana kelas LayoutParams bersarang dalam kelas ViewGroup.</p> 
+       <h3>Contoh 2</h3> 
+       <p>Contoh ini menunjukkan bagaimana untuk mendapatkan direktori cache untuk aplikasi saat ini di C # tanpa menggunakan plug-ins:</p> 
+       <pre><code>AndroidJavaClass jc = new AndroidJavaClass("com.unity3d.player.UnityPlayer"); 
+ // jni.FindClass("com.unity3d.player.UnityPlayer"); 
+ AndroidJavaObject jo = jc.GetStatic &lt;AndroidJavaObject&gt;("currentActivity"); 
+ // jni.GetStaticFieldID(classID, "Ljava/lang/Object;");  
+ // jni.GetStaticObjectField(classID, fieldID); 
+ // jni.FindClass("java.lang.Object"); 
+
+ Debug.Log(jo.Call &lt;AndroidJavaObject&gt;("getCacheDir").Call&lt;string&gt;("getCanonicalPath")); 
+ // jni.GetMethodID(classID, "getCacheDir", "()Ljava/io/File;"); // or any baseclass thereof! 
+ // jni.CallObjectMethod(objectID, methodID); 
+ // jni.FindClass("java.io.File"); 
+ // jni.GetMethodID(classID, "getCanonicalPath", "()Ljava/lang/String;"); 
+ // jni.CallObjectMethod(objectID, methodID); 
+ // jni.GetStringUTFChars(javaString);
+</code></pre> 
+       <p>Contoh ini dimulai dengan <code>AndroidJavaClass</code> bukan <code>AndroidJavaObject</code> untuk mengakses anggota statis <code>com.unity3d.player.UnityPlayer</code> daripada menciptakan objek baru. Kemudian kolom statis “currentActivity” diakses tetapi kali ini <code>AndroidJavaObject</code> digunakan sebagai parameter generik. Ini karena tipe lapangan yang sebenarnya <a href="http://developer.android.com/reference/android/app/Activity.html">WordPress.org</a> adalah subkelas <a href="http://developer.android.com/reference/java/lang/Object.html"><code>java.lang.Object</code></a>, dan setiap <a href="http://developer.android.com/reference/java/lang/Class.html">tipe non-primitive</a> harus diakses sebagai <code>AndroidJavaObject</code>. Pengecualian untuk aturan ini adalah string, yang diakses secara langsung meskipun mereka tidak mewakili jenis primitif di Jawa.</p> 
+       <p> <a href="http://developer.android.com/reference/android/content/Context.html#getCacheDir()"><code>getCacheDir()</code></a> kemudian dapat disebut pada objek Aktivitas untuk mendapatkan objek File mewakili direktori cache, <a href="http://developer.android.com/reference/java/io/File.html#getCanonicalPath()"><code>getCanonicalPath()</code></a> kemudian dapat disebut untuk mendapatkan representasi string.</p> 
+       <p>Unity menyediakan akses ke direktori cache dan file aplikasi dengan dan API.</p> 
+       <h3>Contoh 3</h3> 
+       <p>Contoh ini menunjukkan cara melewati data dari Java ke Unity menggunakan <code>UnitySendMessage</code>.</p> 
+       <pre><code>using UnityEngine;
+
+public class NewBehaviourScript : MonoBehaviour { 
+
+    void Start () { 
+        AndroidJNIHelper.debug = true; 
+        using (AndroidJavaClass jc = new AndroidJavaClass("com.unity3d.player.UnityPlayer")) { 
+        jc.CallStatic("UnitySendMessage", "Main Camera", "JavaMessage", "NewMessage");
+        } 
+    } 
+
+    void JavaMessage(string message) { 
+        Debug.Log("message from java: " + message); 
+    }
+} 
+</code></pre> 
+       <p>Kelas Java <code>com.unity3d.player.UnityPlayer</code> memiliki metode statis, setara dengan metode iOS: <code>UnitySendMessage</code>. Ini digunakan di Java untuk lulus data ke Unity.</p> 
+       <p>Meskipun <code>UnitySendMessage</code> disebut dari dalam Unity, ia menyampaikan pesan menggunakan Java, kemudian Java memanggil kembali ke kode asli/Unity untuk memberikan pesan ke objek bernama “Main <span class="tooltip"><strong>Camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span>”. Objek ini memiliki skrip yang melekat yang mengandung metode yang disebut <code>JavaMessage</code>.</p> 
+       <h2>Praktik terbaik saat menggunakan plug-ins Java dengan Unity</h2> 
+       <p> <code>AndroidJavaObject</code> dan <code>AndroidJavaClass</code> adalah metode yang sebanding (sebagai metode yang menggunakan JNI mentah). Menjaga jumlah transisi antara kode yang dikelola dan asli/Java untuk minimal, untuk kinerja yang lebih baik dan juga kejernihan kode.</p> 
+       <pre><code>//The first time you call a Java method like 
+AndroidJavaObject jo = new AndroidJavaObject("java.lang.String", "some_string"); // somewhat expensive
+int hash = jo.Call&lt;int&gt;("hashCode"); // first time - expensive
+int hash = jo.Call&lt;int&gt;("hashCode"); // second time - not as expensive as we already know the java method and can call it directly
+</code></pre> 
+       <p>Pengumpul garbage Mono harus melepaskan semua contoh yang dibuat dari <code>AndroidJavaObject</code> dan <code>AndroidJavaClass</code> setelah digunakan, tetapi disarankan untuk menyimpannya dalam pernyataan <code>using(){}</code> untuk memastikan mereka dihapus sesegera mungkin. Tanpa ini, Anda tidak dapat yakin ketika mereka hancur. Jika Anda mengatur <code>AndroidJNIHelper.debug</code> untuk benar, Anda akan melihat catatan aktivitas kolektor sampah dalam output debug.</p> 
+       <pre><code>//Getting the system language safely
+void Start () { 
+    using (AndroidJavaClass cls = new AndroidJavaClass("java.util.Locale")) { 
+        using(AndroidJavaObject locale = cls.CallStatic&lt;AndroidJavaObject&gt;("getDefault")) { 
+            Debug.Log("current lang = " + locale.Call&lt;string&gt;("getDisplayLanguage")); 
+
+        } 
+    } 
+}
+</code></pre> 
+       <p><br></p> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2018–03–20 Sitemap</span></p></li> 
+        <li><p><span class="page-history">Fitur diperbarui di 5.5</span></p></li> 
+        <li><p><span class="page-history">Mendukung plug-ins file sumber Java ditambahkan untuk pemain Android di <span class="search-words">NewIn20182</span></span></p></li> 
+       </ul> 
+       <!-- area:platforms --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="AndroidAARPlugins.html"></a></span> 
+         <div class="tip">
+           AAR plug-ins dan Android Perpustakaan 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="AndroidUnityPlayerActivity.html"></a></span> 
+         <div class="tip">
+           Memperpanjang UnityPlayerActivity Kode Java 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

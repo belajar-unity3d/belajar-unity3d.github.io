@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Kelas Penting - GameObject</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="ScriptingSection.html">Scripting</a></li> 
+         <li><a href="ScriptingImportantClasses.html">Kelas Penting</a></li> 
+         <li>Kelas Penting - GameObject</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="ScriptingImportantClasses.html"></a></span> 
+          <div class="tip">
+            Kelas Penting 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="class-MonoBehaviour.html"></a></span> 
+          <div class="tip">
+            Kelas Penting - MonoBehaviour 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Kelas Penting - GameObject</h1> 
+       <!--BeginSwitchLink--> 
+       <a href="../ScriptReference/GameObject.html" title="Go to GameObject page in the Scripting Reference" class="switch-link gray-btn sbtn left">Switch to Scripting</a> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Kelas <strong>GameObject</strong> Unity digunakan untuk mewakili apa pun yang dapat ada dalam <strong><span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span></strong>.</p> 
+       <p>Halaman ini berkaitan dengan kelas GameObject Unity. Untuk belajar tentang menggunakan GameObjects di Adegan dan Hierarchy di Editor Unity, lihat <strong>scripting</strong>. Untuk referensi knalpot dari setiap anggota kelas GameObject, lihat <a href="GameObjects.html">Bagian GameObjects dari manual pengguna</a>.<a href="../ScriptReference/GameObject.html">Login Referensi skrip objek</a>.</p> 
+       <p>GameObjects adalah blok bangunan untuk adegan di Unity, dan bertindak sebagai wadah untuk komponen fungsional yang menentukan bagaimana tampilan GameObject, dan apa yang dilakukan GameObject.</p> 
+       <p>Dalam scripting, <a href="../ScriptReference/GameObject.html">Kelas GameObject</a> menyediakan koleksi metode yang memungkinkan Anda untuk bekerja dengan mereka dalam kode Anda, termasuk menemukan, membuat koneksi dan mengirim pesan antara GameObjects, serta menambahkan atau menghapus komponen yang melekat pada GameObject, dan menetapkan nilai yang berkaitan dengan status mereka dalam adegan.</p> 
+       <h2>Sifat Status Adegan</h2> 
+       <p>Ada sejumlah properti yang dapat Anda ubah melalui script yang berkaitan dengan status GameObject di tempat kejadian. Ini biasanya sesuai dengan kontrol yang terlihat di dekat bagian atas <span class="tooltip"><strong>inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span> ketika Anda memiliki GameObject yang dipilih di Editor.</p> 
+       <p>Mereka tidak berhubungan dengan komponen tertentu, dan terlihat dalam inspektur GameObject di bagian atas, di atas daftar komponen.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/GameObjectSceneStatusProperties.png" alt="A typical GameObject viewed in the Inspector. In this case, a directional light. The Scene status properties are outlined in red."> 
+        <figcaption>
+          Sebuah GameObject khas yang dilihat di Inspektur. Dalam kasus ini, lampu directional. Sifat status adegan diuraikan dalam merah. 
+        </figcaption> 
+       </figure> 
+       <p>Semua GameObjects berbagi satu set kontrol di bagian atas inspektur yang berkaitan dengan status GameObject dalam adegan, dan ini dapat dikontrol melalui API scripting GameObject.</p> 
+       <p>Jika Anda ingin daftar cepat dari semua API yang tersedia untuk kelas GameObject, lihat .</p> 
+       <h2>Status Aktif</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/GOInspectorActiveSetting.png" alt="The Active status of a GameObject"> 
+        <figcaption>
+          Status aktif dari GameObject 
+        </figcaption> 
+       </figure> 
+       <p>GameObjects aktif secara default, tetapi dapat dinonaktifkan, yang mematikan semua komponen yang melekat pada GameObject. Ini umumnya berarti akan menjadi tak terlihat, dan tidak menerima panggilan atau peristiwa normal seperti <a href="../ScriptReference/MonoBehaviour.Update.html"><code>Update</code></a> atau <a href="../ScriptReference/MonoBehaviour.FixedUpdate.html"><code>FixedUpdate</code></a>.</p> 
+       <p>Status <strong>active</strong> GameObject diwakili oleh kotak centang ke kiri nama GameObject. Anda dapat mengontrol ini menggunakan <a href="../ScriptReference/GameObject.SetActive.html"><code>GameObject.SetActive</code></a>.</p> 
+       <p>Anda juga dapat membaca keadaan aktif saat ini menggunakan <a href="../ScriptReference/GameObject-activeSelf.html"><code>GameObject.activeSelf</code></a>, dan apakah atau bukan GameObject sebenarnya aktif dalam adegan menggunakan <a href="../ScriptReference/GameObject-activeInHierarchy.html"><code>GameObject.activeInHierarchy</code></a>. Yang terakhir dari kedua ini diperlukan karena apakah GameObject sebenarnya aktif ditentukan oleh keadaan aktifnya sendiri, ditambah keadaan aktif semua orang tuanya. Jika orang tua tidak aktif, maka tidak akan aktif meskipun pengaturan aktifnya sendiri.</p> 
+       <h2>Status Statis</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/GOInspectorStaticSetting.png" alt="The Static status of a GameObject"> 
+        <figcaption>
+          Status Statis dari GameObject 
+        </figcaption> 
+       </figure> 
+       <p>Beberapa sistem Unity, seperti <span class="tooltip"><strong>Global Illumination</strong><span class="tooltiptext">Kelompok teknik yang model pencahayaan langsung dan tidak langsung untuk memberikan hasil pencahayaan yang realistis.<br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#globalillumination">Glossary</a></span></span></span>, Occlusion, Batching, Navigasi, dan <span class="tooltip"><strong>Reflection Probes</strong><span class="tooltiptext">Komponen rendering yang menangkap pandangan bulat dari sekitarnya di semua arah, seperti kamera. Gambar yang ditangkap kemudian disimpan sebagai kubus yang dapat digunakan oleh benda dengan bahan reflektif. <a href="class-ReflectionProbe.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ReflectionProbe">Glossary</a></span></span></span>, bergantung pada status statis dari GameObject. Anda dapat mengontrol sistem Unity mempertimbangkan GameObject menjadi <strong>static</strong> dengan menggunakan <a href="../ScriptReference/GameObjectUtility.SetStaticEditorFlags.html"><code>GameObjectUtility.SetStaticEditorFlags</code></a>. Baca lebih lanjut tentang .</p> 
+       <h2>Tag dan Lapisan</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/GOInspectorTagsAndLayers.png" alt="The Static status of a GameObject"> 
+        <figcaption>
+          Status Statis dari GameObject 
+        </figcaption> 
+       </figure> 
+       <p> <strong>Tags</strong> menyediakan cara menandai dan mengidentifikasi jenis GameObject dalam adegan Anda dan <strong>Layers</strong> memberikan cara yang mirip tetapi berbeda termasuk atau tidak termasuk kelompok GameObjects dari tindakan bawaan tertentu, seperti <a href="class-MeshRenderer.html">rendering</a> atau <a href="CollidersOverview.html">tabrakan fisika</a>.</p> 
+       <p>Untuk informasi lebih lanjut tentang cara menggunakan Tag dan Lapisan di editor, lihat halaman manual pengguna utama untuk <span class="tooltip"><a class="tooltipMoreInfoLink" href="Tags.html">Tags</a><span class="tooltiptext">Kata referensi yang dapat Anda berikan kepada satu atau lebih GameObjects untuk membantu Anda mengidentifikasi GameObjects untuk tujuan scripting. Misalnya, Anda mungkin mendefinisikan dan “Edible” Tag untuk setiap item pemain dapat makan dalam permainan Anda. <a href="Tags.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Tag">Glossary</a></span></span></span> dan <span class="tooltip"><a href="Layers.html">Layers</a><span class="tooltiptext">Lapisan dalam Unity dapat digunakan untuk memilih kelompok GameObjects secara selektif atau keluar dari proses atau perhitungan tertentu. Ini termasuk rendering kamera, pencahayaan, tabrakan fisika, atau perhitungan kustom dalam kode Anda sendiri. <a href="Layers.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Layer">Glossary</a></span></span></span>.</p> 
+       <p>Anda dapat memodifikasi nilai tag dan layer melalui script menggunakan sifat <a href="../ScriptReference/GameObject-tag.html"><code>GameObject.tag</code></a> dan <a href="../ScriptReference/GameObject-layer.html"><code>GameObject.layer</code></a>. Anda juga dapat memeriksa tag GameObject efisien dengan menggunakan metode <a href="../ScriptReference/GameObject.CompareTag.html"><code>CompareTag</code></a>, yang mencakup validasi apakah tag ada, dan tidak menyebabkan alokasi memori.</p> 
+       <h2>Menambahkan dan Menghapus komponen</h2> 
+       <p>Anda dapat menambahkan atau menghapus komponen pada runtime, yang dapat berguna untuk secara procedurally menciptakan GameObjects, atau memodifikasi bagaimana GameObject berperilaku. Catatan, Anda juga dapat komponen skrip <a href="../ScriptReference/Behaviour-enabled.html"><code>enable</code> atau <code>disable</code></a>, dan beberapa jenis komponen bawaan, melalui skrip tanpa menghancurkannya.</p> 
+       <p>Cara terbaik untuk menambahkan komponen pada runtime adalah menggunakan <a href="../ScriptReference/GameObject.AddComponent.html"><code>AddComponent&lt;Type&gt;</code></a>, menentukan jenis komponen dalam kurung sudut seperti yang ditunjukkan. Untuk menghapus komponen, Anda harus menggunakan metode <a href="../ScriptReference/Object.Destroy.html"><code>Object.Destroy</code></a> pada komponen itu sendiri.</p> 
+       <h2>Komponen akses</h2> 
+       <p>Kasus paling sederhana adalah di mana skrip di GameObject perlu mengakses Komponen lain yang melekat pada GameObject yang sama (anggota, skrip lain melekat pada GameObject juga Komponen sendiri). Untuk melakukan ini, langkah pertama adalah untuk mendapatkan referensi ke instance Komponen yang ingin Anda kerjakan. Ini dilakukan dengan metode <a class="tooltipMoreInfoLink" href="../ScriptReference/Component.GetComponent.html">GetComponent</a>. Biasanya, Anda ingin menetapkan objek Komponen ke variabel, yang dilakukan dalam menggunakan kode berikut. Dalam contoh ini script mendapatkan referensi ke komponen <span class="tooltip"><strong>Rigidbody</strong><span class="tooltiptext">Komponen yang memungkinkan GameObject untuk dipengaruhi oleh gravitasi simulasi dan kekuatan lainnya. <a href="class-Rigidbody.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Rigidbody">Glossary</a></span></span></span> pada GameObject yang sama:</p> 
+       <pre><code>void Start ()
+{
+    Rigidbody rb = GetComponent&lt;Rigidbody&gt;();
+}
+</code></pre> 
+       <p>Setelah Anda memiliki referensi ke instance Komponen, Anda dapat mengatur nilai-nilai sifatnya sebanyak yang Anda inginkan dalam Inspektur:</p> 
+       <pre><code>void Start ()
+{
+    Rigidbody rb = GetComponent&lt;Rigidbody&gt;();
+
+    // Change the mass of the object's Rigidbody.
+    rb.mass = 10f;
+}
+</code></pre> 
+       <p>Anda juga dapat memanggil metode pada referensi Komponen, misalnya:</p> 
+       <pre><code>void Start ()
+{
+    Rigidbody rb = GetComponent&lt;Rigidbody&gt;();
+
+    // Add a force to the Rigidbody.
+    rb.AddForce(Vector3.up * 10f);
+}
+</code></pre> 
+       <p>Catatan: Anda dapat memiliki beberapa <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> kustom yang melekat pada GameObject yang sama. Jika Anda perlu mengakses satu skrip dari yang lain, Anda dapat menggunakan GetComponent seperti biasa dan hanya menggunakan nama kelas skrip (atau nama file) untuk menentukan jenis Komponen yang Anda inginkan.</p> 
+       <p>Jika Anda mencoba untuk mengambil jenis Komponen yang belum benar-benar ditambahkan ke GameObject kemudian GetComponent akan mengembalikan null; Anda akan mendapatkan kesalahan referensi null pada runtime jika Anda mencoba mengubah nilai pada objek null.</p> 
+       <h2>Mengakses komponen di GameObjects lain</h2> 
+       <p>Meskipun kadang-kadang beroperasi dalam isolasi, itu umum untuk skrip untuk melacak GameObjects lain, atau lebih umum, komponen pada GameObjects lainnya. Misalnya, dalam permainan memasak, koki mungkin perlu tahu posisi kompor. Unity menyediakan sejumlah cara yang berbeda untuk mengambil benda lain, masing-masing sesuai dengan situasi tertentu.</p> 
+       <h3>Menghubungkan ke GameObjects dengan variabel dalam inspektur</h3> 
+       <p>Cara paling mudah untuk menemukan GameObject terkait adalah untuk menambahkan variabel GameObject publik ke script:</p> 
+       <pre><code>public class Chef : MonoBehaviour
+{
+    public GameObject stove;
+
+    // Other variables and functions...
+}
+</code></pre> 
+       <p>Variabel ini akan terlihat di Inspektur, sebagai <strong>GameObject field</strong>.</p> 
+       <p>Anda sekarang dapat menyeret objek dari adegan atau panel Hierarchy ke variabel ini untuk menetapkannya.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PrefabDragIntoField.png" alt="Dragging a Prefab from the Project window into a GameObject field in the Inspector window"> 
+        <figcaption>
+          Menyeret Prefab dari jendela Proyek ke lapangan GameObject di jendela Inspektur 
+        </figcaption> 
+       </figure> 
+       <p>Fungsi GetComponent dan variabel akses Komponen tersedia untuk objek ini seperti yang lain, sehingga Anda dapat menggunakan kode seperti berikut:</p> 
+       <pre><code>public class Chef : MonoBehaviour {
+
+    public GameObject stove;
+
+    void Start() {
+        // Start the chef 2 units in front of the stove.
+        transform.position = stove.transform.position + Vector3.forward * 2f;
+    }
+}
+</code></pre> 
+       <p>Selain itu, jika Anda menyatakan variabel publik dari jenis Komponen di script Anda, Anda dapat menyeret GameObject yang memiliki Komponen yang melekat padanya. Ini mengakses Komponen secara langsung daripada GameObject sendiri.</p> 
+       <pre><code>public Transform playerTransform;
+</code></pre> 
+       <p>Menghubungkan objek bersama dengan variabel yang paling berguna ketika Anda berurusan dengan objek individu yang memiliki koneksi permanen. Anda dapat menggunakan variabel array untuk menghubungkan beberapa objek dari jenis yang sama, tetapi koneksi harus tetap dibuat dalam editor Unity daripada saat runtime. Hal ini seringkali nyaman untuk menemukan objek pada runtime dan Unity menyediakan dua cara dasar untuk melakukan ini, seperti yang dijelaskan di bawah ini.</p> 
+       <h3>Mencari anak GameObjects</h3> 
+       <p>Kadang-kadang, adegan permainan menggunakan sejumlah GameObjects dari jenis yang sama, seperti koleksi, waypoints dan rintangan. Ini mungkin perlu dilacak oleh skrip tertentu yang mengawasi atau bereaksi terhadap mereka (misalnya, semua waypoints mungkin perlu tersedia untuk skrip jalan). Menggunakan variabel untuk menghubungkan GameObjects ini adalah kemungkinan tetapi membuat proses desain membosankan jika setiap waypoint baru harus seret ke variabel pada skrip. Demikian juga, jika waypoint dihapus, maka itu adalah nuansa untuk harus menghapus referensi variabel ke GameObject yang hilang. Dalam kasus seperti ini, seringkali lebih baik untuk mengelola satu set GameObjects dengan membuat mereka semua anak-anak dari satu orang tua GameObject. GameObjects anak dapat diambil menggunakan <span class="tooltip"><strong>Transform component</strong><span class="tooltiptext">Komponen Transform menentukan Posisi, Rotasi, dan Skala setiap objek di tempat kejadian. Setiap GameObject memiliki Transform. <a class="tooltipMoreInfoLink" href="class-Transform.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#TransformComponent">Glossary</a></span></span></span> induk (karena semua GameObjects implicitly memiliki Transform):</p> 
+       <pre><code>using UnityEngine;
+
+public class WaypointManager : MonoBehaviour {
+    public Transform[] waypoints;
+
+    void Start()
+    {
+        waypoints = new Transform[transform.childCount];
+        int i = 0;
+
+        foreach (Transform t in transform)
+        {
+            waypoints[i++] = t;
+        }
+    }
+}
+</code></pre> 
+       <p>Anda juga dapat menemukan objek anak tertentu dengan nama menggunakan metode <a href="../ScriptReference/Transform.Find.html">Login Login</a>: <code> transform.Find("Frying Pan"); </code> </p> 
+       <p>Ini dapat berguna ketika GameObject memiliki anak GameObject yang dapat ditambahkan dan dihapus selama gameplay. Alat atau utensil yang dapat diambil dan turun selama gameplay adalah contoh yang baik dari ini.</p> 
+       <h2>Mengirimkan dan Penyiaran pesan</h2> 
+       <p>Meskipun mengedit proyek Anda dapat mengatur referensi antara GameObjects di Inspektur. Namun, kadang-kadang tidak mungkin untuk mengatur ini di muka (misalnya, menemukan item terdekat untuk karakter dalam permainan Anda, atau membuat referensi ke GameObjects yang di sesaat setelah Adegan dimuat). Dalam kasus ini, Anda dapat menemukan referensi dan mengirim pesan antara GameObjects pada runtime.</p> 
+       <p> <a href="../ScriptReference/GameObject.BroadcastMessage.html"><code>BroadcastMessage</code></a> memungkinkan Anda untuk mengirim panggilan ke metode bernama, tanpa spesifik di mana metode itu harus diterapkan. Anda dapat menggunakannya untuk memanggil metode bernama di setiap MonoBehaviour pada GameObject tertentu atau anak-anaknya. Anda dapat memilih untuk menegakkan bahwa harus setidaknya satu penerima (atau kesalahan yang dihasilkan).</p> 
+       <p> <a href="../ScriptReference/GameObject.SendMessage.html"><code>SendMessage</code></a> adalah sedikit lebih spesifik, dan hanya mengirim panggilan ke metode bernama di GameObject sendiri, dan bukan anak-anaknya.</p> 
+       <p> <a href="../ScriptReference/GameObject.SendMessageUpwards.html"><code>SendMessageUpwards</code></a> mirip, tetapi mengirim panggilan ke metode bernama di GameObject dan semua <em>parents</em>.</p> 
+       <h2>Menemukan GameObjects oleh Nama atau Tag</h2> 
+       <p>Selalu mungkin untuk menemukan GameObjects di mana saja di hierarki Adegan selama Anda memiliki beberapa informasi untuk mengidentifikasi mereka. Objek individu dapat diambil berdasarkan nama menggunakan fungsi <a href="../ScriptReference/GameObject.Find.html">Login Login</a>:</p> 
+       <pre><code>GameObject player;
+
+void Start()
+{
+    player = GameObject.Find("MainHeroCharacter");
+}
+</code></pre> 
+       <p>Sebuah objek atau koleksi objek juga dapat terletak dengan tag mereka menggunakan metode <a href="../ScriptReference/GameObject.FindWithTag.html">GameObject.FindWithTag</a> dan <a href="../ScriptReference/GameObject.FindGameObjectsWithTag.html">GameObject.FindGameObjectsWithTag</a>.</p> 
+       <p>Sebagai contoh, dalam permainan memasak dengan satu karakter koki, dan beberapa kompor di dapur (masing-masing tag “Stove”):</p> 
+       <pre><code>GameObject chef;
+GameObject[] stoves;
+
+void Start()
+{
+    chef = GameObject.FindWithTag("Chef");
+    stoves = GameObject.FindGameObjectsWithTag("Stove");
+}
+</code></pre> 
+       <h2>Penciptaan dan Mengerutkan GameObjects</h2> 
+       <p>Anda dapat membuat dan menghancurkan GameObjects sementara proyek Anda berjalan. Pada Unity, GameObject dapat dibuat menggunakan metode <a href="../ScriptReference/Object.Instantiate.html">Instantiate</a> yang membuat salinan baru dari objek yang ada.</p> 
+       <p>Untuk deskripsi dan contoh lengkap tentang cara memutupkan GameObjects, lihat <a href="InstantiatingPrefabs.html">Prefab Instantiating di Runtime</a>.</p> 
+       <p>Ada juga metode <a href="../ScriptReference/Object.Destroy.html">Destroy</a> yang akan menghancurkan objek setelah pembaruan bingkai selesai atau opsional setelah penundaan waktu singkat:</p> 
+       <pre><code>void OnCollisionEnter(Collision otherObj) {
+    if (otherObj.gameObject.tag == "Garbage can") {
+        Destroy(gameObject, 0.5f);
+    }
+}
+
+</code></pre> 
+       <p>Perhatikan bahwa fungsi Destroy dapat menghancurkan komponen individu tanpa mempengaruhi GameObject sendiri. Kesalahan umum adalah menulis ini, asumsi itu akan menghancurkan GameObject script itu melekat pada...</p> 
+       <pre><code> Destroy(this);
+</code></pre> 
+       <p>... Sedangkan, karena “ini” mewakili skrip, dan bukan GameObject, sebenarnya akan menghancurkan komponen skrip yang menyebutnya, meninggalkan GameObject di belakang, dengan komponen skrip dihapus.</p> 
+       <h2>Primitives</h2> 
+       <p>Kelas GameObject menawarkan alternatif berbasis skrip ke opsi yang tersedia dalam menu GameObject Unity yang memungkinkan Anda untuk membuat <a href="PrimitiveObjects.html">objek primitif</a>.</p> 
+       <p>Untuk membuat instance dari primitif bawaan Unity, gunakan <a class="tooltipMoreInfoLink" href="../ScriptReference/GameObject.CreatePrimitive.html">GameObject.CreatePrimitive</a>, yang meluruskan primitif jenis yang Anda tentukan. Jenis primitif yang tersedia adalah <a href="../ScriptReference/PrimitiveType.Sphere.html">Sphere</a>, <a href="../ScriptReference/PrimitiveType.Capsule.html">Capsule</a>, <a href="../ScriptReference/PrimitiveType.Cylinder.html">Cylinder</a>, <a href="../ScriptReference/PrimitiveType.Cube.html">Cube</a>, <a href="../ScriptReference/PrimitiveType.Plane.html">Plane</a> dan <span class="tooltip"><a href="../ScriptReference/PrimitiveType.Quad.html">Quad</a><span class="tooltiptext">Objek primitif yang menyerupai pesawat tetapi tepinya hanya satu unit panjang, hanya menggunakan 4 simpul, dan permukaan berorientasi pada pesawat XY ruang koordinat lokal. <a href="PrimitiveObjects.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Quad">Glossary</a></span></span></span>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AllPrimitives.png" alt="The Primitive shapes available in Unitys GameObject menu"> 
+        <figcaption>
+          Bentuk Primitive yang tersedia dalam menu GameObject Unity 
+        </figcaption> 
+       </figure> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="ScriptingImportantClasses.html"></a></span> 
+         <div class="tip">
+           Kelas Penting 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="class-MonoBehaviour.html"></a></span> 
+         <div class="tip">
+           Kelas Penting - MonoBehaviour 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

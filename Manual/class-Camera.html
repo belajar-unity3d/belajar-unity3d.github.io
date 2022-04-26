@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Komponen kamera</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="CamerasOverview.html">Kamera</a></li> 
+         <li>Komponen kamera</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="MultiDisplay.html"></a></span> 
+          <div class="tip">
+            Multi-display 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="LightingOverview.html"></a></span> 
+          <div class="tip">
+            Lighting 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Komponen kamera</h1> 
+       <!--BeginSwitchLink--> 
+       <a href="../ScriptReference/Camera.html" title="Go to Camera page in the Scripting Reference" class="switch-link gray-btn sbtn left">Switch to Scripting</a> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p><span class="tooltip"><strong>Cameras</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Camera">Glossary</a></span></span></span> adalah perangkat yang menangkap dan menampilkan dunia ke pemain. Dengan menyesuaikan dan memanipulasi kamera, Anda dapat membuat presentasi permainan Anda benar-benar unik. Anda dapat memiliki jumlah kamera yang tak terbatas pada <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>. Mereka dapat diatur dalam urutan apapun, di tempat di layar, atau hanya bagian tertentu dari layar.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/InspectorCamera35.png" alt=""> 
+       </figure> 
+       <h2>Referensi Inspektur Kamera</h2> 
+       <p>Unity menampilkan sifat yang berbeda dalam Camera <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Inspector">Glossary</a></span></span></span> tergantung pada <span class="tooltip"><a href="render-pipelines.html">render pipa</a><span class="tooltiptext">Rangkaian operasi yang mengambil isi dari Adegan, dan menampilkannya di layar. Unity memungkinkan Anda memilih dari pipa render yang dibangun sebelumnya, atau menulis sendiri. <a href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span> yang digunakan Proyek Anda.</p> 
+       <ul> 
+        <li>Jika Proyek Anda menggunakan <a href="universal-render-pipeline.html">Pipa Render Universal (URP)</a>, lihat .</li> 
+        <li>Jika Proyek Anda menggunakan <a href="high-definition-render-pipeline.html">Definisi Tinggi Render Pipeline (HDRP)</a>, lihat .</li> 
+        <li>Jika Proyek Anda menggunakan <a href="built-in-render-pipeline.html">Pipa Render Built-in</a>, Unity menampilkan sifat berikut:</li> 
+       </ul> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong><em>Property:</em></strong></th> 
+          <th style="text-align:left;"><strong><em>Function:</em></strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Clear Flags</strong></td> 
+          <td style="text-align:left;">Menentukan bagian layar akan dibersihkan. Ini berguna ketika menggunakan beberapa Kamera untuk menggambar elemen permainan yang berbeda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Background</strong></td> 
+          <td style="text-align:left;">Warna yang diterapkan pada layar yang tersisa setelah semua elemen dalam pandangan telah ditarik dan tidak ada <span class="tooltip"><strong>skybox</strong><span class="tooltiptext">Jenis khusus Bahan yang digunakan untuk mewakili langit. Biasanya enam sisi. <a class="tooltipMoreInfoLink" href="class-Skybox.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Skybox">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Culling Mask</strong><span class="tooltiptext">Memungkinkan Anda untuk memasukkan atau membatasi objek untuk diberikan oleh Kamera, dengan Layer.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#CullingMask">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Termasuk atau lapisan omits objek yang akan diberikan oleh Kamera. Menetapkan lapisan pada objek Anda di Inspektur.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Projection</strong></td> 
+          <td style="text-align:left;">Mengarahkan kemampuan kamera untuk mensimulasikan perspektif.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>Perspective</em> </td> 
+          <td style="text-align:left;">Kamera akan membuat objek dengan perspektif utuh.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>Orthographic</em> </td> 
+          <td style="text-align:left;">Kamera akan membuat objek seragam, tanpa rasa perspektif. rendering Deferred <strong>NOTE:</strong> tidak didukung dalam mode Orthographic. <span class="tooltip"><strong>Forward rendering</strong><span class="tooltiptext">Sebuah jalur rendering yang membuat setiap objek dalam satu atau lebih melewati, tergantung pada lampu yang mempengaruhi objek. Lampu sendiri juga diperlakukan berbeda dengan Rendering Maju, tergantung pada pengaturan dan intensitas mereka. <a class="tooltipMoreInfoLink" href="RenderTech-ForwardRendering.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ForwardRendering">Glossary</a></span></span></span> selalu digunakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Size</strong> (ketika Orthografi dipilih)</td> 
+          <td style="text-align:left;">Ukuran <span class="tooltip"><strong>viewport</strong><span class="tooltiptext">Area tampilan pengguna aplikasi di layar mereka.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Viewport">Glossary</a></span></span></span> dari Kamera saat diatur ke Orthographic.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>FOV Axis</strong> (when Perspective dipilih)</td> 
+          <td style="text-align:left;">Bidang melihat sumbu.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>Horizontal</em> </td> 
+          <td style="text-align:left;">Kamera menggunakan bidang horizontal sumbu tampilan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>Vertical</em> </td> 
+          <td style="text-align:left;">Kamera menggunakan bidang vertikal sumbu tampilan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Field of view</strong> (when Perspective dipilih)</td> 
+          <td style="text-align:left;">Sudut pandang Kamera, diukur dalam derajat di sepanjang sumbu yang ditentukan dalam penurunan <strong>FOV Axis</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Physical Camera</strong></td> 
+          <td style="text-align:left;">Tick kotak ini untuk mengaktifkan sifat <a href="PhysicalCameras.html">Kamera Fisik</a> untuk kamera ini. <br><br> Ketika sifat Kamera Fisik diaktifkan, Unity menghitung <strong>Field of View</strong> menggunakan sifat yang mensimulasikan atribut kamera dunia nyata: <strong>Focal Length</strong>, <strong>Sensor Size</strong>, dan <strong>Lens Shift</strong>. Sifat Kamera 100<br><br>Physical Camera properties are not visible in the Inspector until you tick this box.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>Panjang Focal</em> </td> 
+          <td style="text-align:left;">Mengatur jarak, dalam milimeter, antara sensor kamera dan lensa kamera.<br><br> Nilai lebih rendah menghasilkan lebih lebar <strong>Field of View</strong>, dan sebaliknya. <br><br> Ketika Anda mengubah nilai ini, Unity secara otomatis memperbarui properti <strong>Field of View</strong> sesuai.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>Jenis Sensor</em> </td> 
+          <td style="text-align:left;">Tentukan format kamera dunia nyata Anda ingin kamera untuk mensimulasikan. Pilih format yang diinginkan dari daftar. <br><br> Ketika Anda memilih format kamera, Unity mengatur sifat <strong>Sensor Size &gt; X</strong> dan <strong>Y</strong> ke nilai yang benar secara otomatis. <br><br> Jika Anda mengubah nilai <strong>Sensor Size</strong> secara manual, Unity secara otomatis mengatur properti ini menjadi <strong>Custom</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>Ukuran Sensor</em> </td> 
+          <td style="text-align:left;">Mengatur ukuran, dalam milimeter, sensor kamera. <br><br>Unity menetapkan nilai <strong>X</strong> dan <strong>Y</strong> secara otomatis ketika Anda memilih <strong>Sensor Type</strong>. Anda dapat memasukkan nilai kustom jika diperlukan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>X</em> </td> 
+          <td style="text-align:left;">Lebar sensor.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>Y</em> </td> 
+          <td style="text-align:left;">Ketinggian sensor.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>Pergeseran lensa</em> </td> 
+          <td style="text-align:left;">Pergeserkan lensa secara horizontal atau vertikal dari pusat. Nilai adalah beberapa ukuran sensor; misalnya, pergeseran 0,5 di sepanjang sumbu X mengimbangi sensor dengan setengah ukuran horizontal. <br><br> Anda dapat menggunakan perubahan lensa untuk distorsi yang benar yang terjadi ketika kamera berada pada sudut ke subjek (misalnya, garis paralel cembung). <br><br> Pergeserkan lensa di sepanjang sumbu untuk membuat kamera frustum <a href="ObliqueFrustum.html">oblique</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>X</em> </td> 
+          <td style="text-align:left;">Sensor horizontal mengimbangi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>Y</em> </td> 
+          <td style="text-align:left;">Sensor vertikal mengimbangi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>Gerbang Fit</em> </td> 
+          <td style="text-align:left;">Pilihan untuk mengubah ukuran dari rasio <strong>resolution gate</strong> (size/aspect dari tampilan permainan) relatif terhadap rasio <strong>film gate</strong> (size/aspect dari sensor Kamera Fisik). <br><br> Untuk informasi lebih lanjut tentang gerbang resolusi dan gerbang film, lihat dokumentasi pada <a href="PhysicalCameras.html">Kamera Fisik</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>Vertical</em> </td> 
+          <td style="text-align:left;">Cocokkan gerbang resolusi ke ketinggian gerbang film. <br><br> Jika rasio aspek sensor lebih besar dari rasio aspek tampilan game, menyatukan gambar yang diberikan di sisi. <br><br> Jika rasio aspek sensor lebih kecil dari rasio aspek tampilan permainan, Unity overscans gambar rendered di sisi. <br><br> Ketika Anda memilih pengaturan ini, mengubah lebar sensor (<strong>Sensor Size &gt; X property</strong>) tidak berpengaruh pada gambar yang diberikan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>Horizontal</em> </td> 
+          <td style="text-align:left;">Cocokkan gerbang resolusi ke lebar gerbang film. <br><br> Jika rasio aspek sensor lebih besar dari rasio aspek tampilan permainan, Unity overscans gambar rendered di bagian atas dan bawah. <br><br> Jika rasio aspek sensor lebih kecil dari rasio aspek tampilan game, menyatukan gambar yang diberikan di bagian atas dan bawah. <br><br> Ketika Anda memilih pengaturan ini, mengubah ketinggian sensor (kaya<strong>Sensor Size &gt; Y</strong>) tidak berpengaruh pada gambar yang diberikan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>Fill</em> </td> 
+          <td style="text-align:left;">Cocokkan gerbang resolusi untuk lebar atau tinggi gerbang film, yang mana pun lebih kecil. Ini merajut gambar yang diberikan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>Overscan</em> </td> 
+          <td style="text-align:left;">Cocokkan gerbang resolusi untuk lebar atau tinggi gerbang film, yang mana pun lebih besar. Ini overscans gambar yang diberikan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>None</em> </td> 
+          <td style="text-align:left;">Mengabaikan gerbang resolusi dan menggunakan gerbang film saja. Ini membentang gambar rendered agar sesuai dengan tampilan game <span class="tooltip"><strong>aspect ratio</strong><span class="tooltiptext">Hubungan dimensi proporsional gambar, seperti lebar dan tingginya.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AspectRatio">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Clipping Planes</strong></td> 
+          <td style="text-align:left;">Jarak dari kamera untuk memulai dan menghentikan rendering.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>Near</em> </td> 
+          <td style="text-align:left;">Titik terdekat relatif terhadap kamera yang akan terjadi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>Far</em> </td> 
+          <td style="text-align:left;">Titik berbulu relatif terhadap kamera yang menggambar akan terjadi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Viewport Rect</strong></td> 
+          <td style="text-align:left;">Empat nilai yang menunjukkan di mana pada tampilan kamera ini akan ditarik. Diukur dalam Koordinat Viewport (nilai 0–1).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>X</em> </td> 
+          <td style="text-align:left;">Posisi horizontal awal yang tampilan kamera akan ditarik.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>Y</em> </td> 
+          <td style="text-align:left;">Posisi vertikal awal bahwa tampilan kamera akan ditarik.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>W</em> (Width)</td> 
+          <td style="text-align:left;">Lebar output kamera di layar.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>H</em> (Height)</td> 
+          <td style="text-align:left;">Tinggi output kamera di layar.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Depth</strong></td> 
+          <td style="text-align:left;">Posisi kamera dalam urutan menggambar. Kamera dengan nilai yang lebih besar akan ditarik di atas kamera dengan nilai yang lebih kecil.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Rendering Path</strong><span class="tooltiptext">Teknik yang menggunakan pipa render untuk membuat grafik. Memilih jalur rendering yang berbeda mempengaruhi bagaimana pencahayaan dan pembentukan dihitung. Beberapa jalur rendering lebih cocok untuk berbagai platform dan perangkat keras daripada yang lain. <a class="tooltipMoreInfoLink" href="RenderingPaths.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#RenderingPath">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Pilihan untuk mendefinisikan metode rendering apa yang akan digunakan oleh kamera.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>Gunakan Pengaturan Pemain</em> </td> 
+          <td style="text-align:left;">Kamera ini akan menggunakan jalur rendering mana pun diatur dalam <span class="tooltip"><strong>Player Settings</strong><span class="tooltiptext">Pengaturan yang memungkinkan Anda mengatur berbagai pilihan khusus pemain untuk permainan akhir yang dibangun oleh Unity. <a class="tooltipMoreInfoLink" href="class-PlayerSettings.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#PlayerSettings">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>Vertex Lit</em> </td> 
+          <td style="text-align:left;">Semua objek yang diberikan oleh kamera ini akan diberikan sebagai objek Vertex-Lit.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>Forward</em> </td> 
+          <td style="text-align:left;">Semua objek akan diberikan satu pass per material.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>Pencahayaan Deferred</em> </td> 
+          <td style="text-align:left;">Semua objek akan ditarik sekali tanpa pencahayaan, maka pencahayaan semua objek akan diberikan bersama pada akhir antrian render. <strong>NOTE:</strong> <em>Jika mode proyeksi kamera diatur ke Orthographic, nilai ini overridden, dan kamera akan selalu menggunakan rendering Forward.</em> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Target Texture</strong></td> 
+          <td style="text-align:left;">Referensi ke <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-RenderTexture.html">Render Tekstur</a><span class="tooltiptext">Jenis Tekstur khusus yang diciptakan dan diperbarui pada runtime. Untuk menggunakannya, pertama membuat Tekstur Render baru dan menunjuk salah satu Kamera Anda untuk membuatnya. Kemudian Anda dapat menggunakan Tekstur Render dalam Bahan seperti Tekstur biasa. <a href="class-RenderTexture.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#RenderTexture">Glossary</a></span></span></span> yang akan mengandung output tampilan Kamera. Menyiapkan referensi ini akan menonaktifkan kemampuan Kamera ini untuk render ke layar.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Occlusion Culling</strong><span class="tooltiptext">A yang menonaktifkan rendering objek ketika mereka tidak saat ini dilihat oleh kamera karena mereka dikabur (disebutkan) oleh benda lain. <a class="tooltipMoreInfoLink" href="OcclusionCulling.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Occlusionculling">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Aktifkan Occlusion Culling untuk kamera ini. Occlusion Culling berarti bahwa benda-benda yang tersembunyi di belakang benda lain tidak diberikan, misalnya jika mereka berada di belakang dinding. Lihat <a href="OcclusionCulling.html">Occlusion Culling</a> untuk rincian.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Allow HDR</strong></td> 
+          <td style="text-align:left;">Aktifkan Dinamis Tinggi Rentang rendering untuk kamera ini. Lihat <a href="HDR.html">Tinggi Dinamis Login</a> untuk rincian.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Allow MSAA</strong></td> 
+          <td style="text-align:left;">Aktifkan multi sampel <span class="tooltip"><strong>antialiasing</strong><span class="tooltiptext">Teknik untuk mengurangi artefak, seperti garis bergerigi (jaggies), dalam gambar untuk membuatnya tampak lebih halus. <a class="tooltipMoreInfoLink" href="PostProcessingOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Antialiasing">Glossary</a></span></span></span> untuk kamera ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Allow Dynamic Resolution</strong></td> 
+          <td style="text-align:left;">Aktifkan rendering Resolusi Dinamis untuk kamera ini. Lihat <span class="tooltip"><a class="tooltipMoreInfoLink" href="DynamicResolution.html">Resolusi Dinamis</a><span class="tooltiptext">Pengaturan kamera yang memungkinkan Anda untuk menargetkan render individu skala dinamis, untuk mengurangi beban kerja pada GPU. <a href="DynamicResolution.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#dynamicresolution">Glossary</a></span></span></span> untuk rincian.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Target Display</strong></td> 
+          <td style="text-align:left;">Tentukan perangkat eksternal untuk membuat. Antara 1 dan 8.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Details</h2> 
+       <p>Kamera sangat penting untuk menampilkan permainan Anda ke pemain. Mereka dapat disesuaikan, diskrip, atau ditukar untuk mencapai hanya tentang jenis efek imaginable. Untuk permainan puzzle, Anda mungkin menyimpan statis Kamera untuk tampilan penuh teka-teki. Untuk penembak orang pertama, Anda akan orang tua Kamera ke karakter pemain, dan letakkan di tingkat mata karakter. Untuk game balap, Anda mungkin memiliki Kamera mengikuti kendaraan pemain Anda.</p> 
+       <p>Anda dapat membuat beberapa Kamera dan menetapkan masing-masing satu ke <strong>Depth</strong> yang berbeda. Kamera ditarik dari <strong>Depth</strong> rendah hingga <strong>Depth</strong> tinggi. Dengan kata lain, kamera dengan <strong>Depth</strong> dari 2 akan ditarik di atas kamera dengan kedalaman 1. Anda dapat menyesuaikan nilai-nilai properti <strong>Normalized View Port Rectangle</strong> untuk mengubah ukuran dan memposisikan tampilan kamera di layar. Ini dapat membuat beberapa tampilan mini seperti cam rudal, pandangan peta, cermin spion, dll.</p> 
+       <h3>Render path</h3> 
+       <p>Unity mendukung jalur rendering yang berbeda. Anda harus memilih mana yang Anda gunakan tergantung pada konten permainan Anda dan platform target / perangkat keras. Jalur rendering yang berbeda memiliki fitur dan karakteristik kinerja yang sebagian besar mempengaruhi lampu dan bayangan. Jalur rendering yang digunakan oleh Proyek Anda dipilih dalam pengaturan <strong>Player</strong>. Selain itu, Anda dapat menimpanya untuk setiap Kamera.</p> 
+       <p>Untuk informasi lebih lanjut tentang jalur rendering, periksa halaman <a href="RenderingPaths.html">jalur rendering</a>.</p> 
+       <h3>Bendera yang jelas</h3> 
+       <p>Setiap kamera menyimpan informasi warna dan kedalaman saat membuat tampilannya. Bagian dari layar yang tidak ditarik dalam kosong, dan akan menampilkan skybox secara default. Ketika Anda menggunakan beberapa Kamera, setiap satu toko informasi warna dan kedalamannya sendiri dalam penyangga, mengumpulkan lebih banyak data sebagai setiap render Kamera. Seperti kamera tertentu dalam adegan Anda renders pandangannya, Anda dapat mengatur <strong>Clear Flags</strong> untuk menghapus koleksi yang berbeda dari informasi penyangga. Untuk melakukan ini, pilih salah satu dari empat pilihan berikut:</p> 
+       <h4>Skybox</h4> 
+       <p>Ini adalah pengaturan default. Setiap bagian kosong dari layar akan menampilkan skybox kamera saat ini. Jika kamera saat ini tidak memiliki set skybox, itu akan default ke skybox yang dipilih dalam <a href="lighting-window.html">jendela pencahayaan</a> (menu: <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting</strong>). Ini kemudian akan jatuh kembali ke <strong>Background Color</strong>. Atau <a href="class-Skybox.html">Komponen Skybox</a> dapat ditambahkan ke kamera.</p> 
+       <h4>Warna padat</h4> 
+       <p>Setiap bagian kosong dari layar akan menampilkan <strong>Background Color</strong> Kamera saat ini.</p> 
+       <h4>Kedalaman hanya</h4> 
+       <p>Jika Anda ingin menggambar senjata pemain tanpa membiarkannya mendapatkan klip di dalam lingkungan, set satu Kamera pada <strong>Depth</strong> 0 untuk menggambar lingkungan, dan kamera lain pada <strong>Depth</strong> 1 untuk menggambar senjata sendiri. Mengatur <strong>Clear Flags</strong> kamera senjata ke <strong>depth only</strong>. Ini akan menjaga tampilan grafis lingkungan di layar, tetapi membuang semua informasi tentang di mana setiap objek ada di ruang 3-D. Ketika pistol ditarik, bagian buram akan benar-benar menutupi apa pun yang ditarik, terlepas dari bagaimana menutup pistol adalah ke dinding.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Camera-ClearFlags.jpg" alt="The gun is drawn last, after clearing the depth buffer of the cameras before it"> 
+        <figcaption>
+          Senapan ditarik terakhir, setelah membersihkan penyangga kedalaman kamera sebelum itu 
+        </figcaption> 
+       </figure> 
+       <h4>Tidak jelas</h4> 
+       <p>Mode ini tidak jelas warna atau <span class="tooltip"><strong>depth buffer</strong><span class="tooltiptext">Sebuah toko memori yang memegang kedalaman nilai z setiap pixel dalam gambar, di mana nilai z adalah kedalaman untuk setiap piksel yang diberikan dari pesawat proyeksi. <a class="tooltipMoreInfoLink" href="class-RenderTexture.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#depthbuffer">Glossary</a></span></span></span>. Hasilnya adalah bahwa setiap bingkai ditarik di bagian berikutnya, menghasilkan efek yang terlihat. Ini tidak biasanya digunakan dalam permainan, dan akan lebih mungkin digunakan dengan <span class="tooltip"><strong>shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> kustom.</p> 
+       <p>Perhatikan bahwa pada beberapa GPU (hanya GPU seluler), tidak membersihkan layar mungkin mengakibatkan konten yang tidak ditentukan dalam bingkai berikutnya. Pada beberapa sistem, layar dapat berisi gambar bingkai sebelumnya, layar hitam padat, atau <span class="tooltip"><strong>pixels</strong><span class="tooltiptext">Unit terkecil dalam gambar komputer. Ukuran piksel tergantung pada resolusi layar Anda. Pencahayaan pixel dihitung pada setiap piksel layar. <a class="tooltipMoreInfoLink" href="ShadowPerformance.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#pixel">Glossary</a></span></span></span> berwarna acak.</p> 
+       <h3>Clip Planes</h3> 
+       <p>Sifat <strong>Near</strong> dan <strong>Far Clip Plane</strong> menentukan di mana tampilan Kamera dimulai dan berakhir. Pesawat diletakkan tegak lurus ke arah Kamera dan diukur dari posisinya. <strong>Near plane</strong> adalah lokasi terdekat yang akan diberikan, dan <strong>Far plane</strong> adalah bulu.</p> 
+       <p>Pesawat klip juga menentukan bagaimana presisi penyangga kedalaman didistribusikan di atas adegan. Secara umum, untuk mendapatkan presisi yang lebih baik Anda harus memindahkan <strong>Near plane</strong> sejauh mungkin.</p> 
+       <p>Perhatikan bahwa pesawat klip dekat dan jauh bersama-sama dengan pesawat yang didefinisikan oleh bidang tampilan kamera menggambarkan apa yang terkenal sebagai kamera <em>frustum</em>. Unity memastikan bahwa ketika rendering objek Anda yang benar-benar berada di luar frustum ini tidak ditampilkan. Ini disebut Frustum Culling. Frustum Culling terjadi terlepas dari apakah Anda menggunakan Occlusion Culling dalam permainan Anda.</p> 
+       <p>Untuk alasan kinerja, Anda mungkin ingin mengaku benda-benda kecil sebelumnya. Misalnya, batu kecil dan puing-puing bisa dibuat tak terlihat pada jarak jauh lebih kecil daripada bangunan besar. Untuk melakukan itu, masukkan benda-benda kecil ke dalam jarak kusam <a href="Layers.html">lapisan terpisah</a> dan mengatur jarak kusam per lapisan menggunakan fungsi skrip <a href="../ScriptReference/Camera-layerCullDistances.html">Kamera.layerCullDistances</a>.</p> 
+       <h3>Culling Mask</h3> 
+       <p><strong>Culling Mask</strong> digunakan untuk kelompok rendering sel yang selektif menggunakan Lapisan. Informasi lebih lanjut tentang menggunakan lapisan dapat ditemukan <a href="Layers.html">here</a>.</p> 
+       <h3>Normalisasi Viewport Rectangles</h3> 
+       <p> <strong>Normalized Viewport Rectangle</strong> secara khusus untuk mendefinisikan bagian tertentu dari layar bahwa tampilan kamera saat ini akan ditarik. Anda dapat menempatkan tampilan peta di sudut tangan kanan bawah layar, atau tampilan ujung rudal di sudut kiri atas. Dengan sedikit pekerjaan desain, Anda dapat menggunakan <strong>Viewport Rectangle</strong> untuk membuat beberapa perilaku unik.</p> 
+       <p>Mudah untuk membuat efek layar split dua pemain menggunakan <strong>Normalized Viewport Rectangle</strong>. Setelah Anda telah membuat dua kamera Anda, mengubah nilai H kamera menjadi 0,5 kemudian set pemain nilai Y ke 0,5, dan pemain nilai Y untuk 0. Ini akan membuat tampilan kamera pemain satu dari setengah arah ke layar ke atas, dan kamera dua pemain dimulai di bagian bawah dan berhenti setengah jalan ke layar.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Camera-Viewport.jpg" alt="Two-player display created with the Normalized Viewport Rectangle property"> 
+        <figcaption>
+          Tampilan dua pemain yang dibuat dengan Properti Rectangle Viewport Normalized 
+        </figcaption> 
+       </figure> 
+       <h3>Orthographic</h3> 
+       <p>Menandai Kamera sebagai <strong>Orthographic</strong> menghilangkan semua perspektif dari tampilan Kamera. Ini sebagian besar berguna untuk membuat isometric atau 2D permainan.</p> 
+       <p>Perhatikan bahwa kabut dirender seragam dalam mode kamera orografi dan mungkin karena itu tidak muncul seperti yang diharapkan. Ini karena koordinat Z dari ruang pasca-perspektif digunakan untuk fog “depth”. Ini tidak benar-benar akurat untuk kamera ortopografi tetapi digunakan untuk manfaat kinerjanya selama rendering.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Camera-Non-Ortho-FPS.jpg" alt="Perspective camera."> 
+        <figcaption>
+          kamera perspective. 
+        </figcaption> 
+       </figure> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Camera-Ortho-FPS.jpg" alt="Orthographic camera. Objects do not get smaller with distance here!"> 
+        <figcaption>
+          Kamera orografi. Objek tidak lebih kecil dengan jarak di sini! 
+        </figcaption> 
+       </figure> 
+       <h3>Render Tekstur</h3> 
+       <p>Ini akan menempatkan pandangan kamera ke <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-RenderTexture.html">Texture</a><span class="tooltiptext">Gambar yang digunakan ketika membuat elemen GameObject, Sprite, atau UI. Tekstur sering diterapkan pada permukaan mesh untuk memberikan detail visual. <a href="class-TextureImporter.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#texture">Glossary</a></span></span></span> yang kemudian dapat diterapkan ke objek lain. Ini memudahkan untuk membuat monitor video arena olahraga, kamera pengintai, refleksi dll.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Camera-RenderTexture.jpg" alt="A Render Texture used to create a live arena-cam"> 
+        <figcaption>
+          Tekstur Render digunakan untuk membuat arena-cam hidup 
+        </figcaption> 
+       </figure> 
+       <h3>Tampilan target</h3> 
+       <p>Kamera memiliki hingga 8 pengaturan tampilan target. Kamera dapat dikontrol untuk membuat satu hingga 8 monitor. Ini didukung hanya pada PC, Mac dan Linux. Dalam Game Lihat tampilan yang dipilih di Inspektur Kamera akan ditampilkan.</p> 
+       <hr> 
+       <ul> 
+        <li><span class="page-edit">2018–10–05 Login</span></li> 
+        <li><span class="page-history">Pilihan Kamera Fisik ditambahkan pada Unity 2018.2</span></li> 
+        <li><span class="page-history">Opsi Gerbang Fit ditambahkan dalam Unity 2018.3</span></li> 
+       </ul> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="MultiDisplay.html"></a></span> 
+         <div class="tip">
+           Multi-display 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="LightingOverview.html"></a></span> 
+         <div class="tip">
+           Lighting 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: jalur rendering Legacy Deferred</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="render-pipelines.html">Pipa render</a></li> 
+         <li><a href="built-in-render-pipeline.html">Menggunakan Pipa Render Built-in</a></li> 
+         <li><a href="RenderingPaths.html">Jalur rendering di Pipa Render Built-in</a></li> 
+         <li>Legacy Deferred rendering path</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="RenderTech-DeferredShading.html"></a></span> 
+          <div class="tip">
+            Mendefinisikan jalur rendering 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="RenderTech-VertexLit.html"></a></span> 
+          <div class="tip">
+            Vertex Lit Rendering Path 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Legacy Deferred rendering path</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Halaman ini mendetail dari Legacy Deferred (light prepass) <span class="tooltip"><a class="tooltipMoreInfoLink" href="RenderingPaths.html">jalur rendering</a><span class="tooltiptext">Teknik yang menggunakan pipa render untuk membuat grafik. Memilih jalur rendering yang berbeda mempengaruhi bagaimana pencahayaan dan pembentukan dihitung. Beberapa jalur rendering lebih cocok untuk berbagai platform dan perangkat keras daripada yang lain. <a href="RenderingPaths.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#RenderingPath">Glossary</a></span></span></span> di Unity’s Built-in <span class="tooltip"><strong>Render Pipeline</strong><span class="tooltiptext">Rangkaian operasi yang mengambil isi dari Adegan, dan menampilkannya di layar. Unity memungkinkan Anda memilih dari pipa render yang dibangun sebelumnya, atau menulis sendiri. <a href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span>. Lihat <a href="http://www.realtimerendering.com/blog/deferred-lighting-approaches/">Artikel</a> untuk gambaran teknis dari pencahayaan yang rusak.</p> 
+       <p> <strong>Note</strong>: Jalur rendering Legacy Deferred dianggap sebagai fitur legacy dimulai dengan Unity 5.0, karena tidak mendukung beberapa fitur rendering (misalnya naungan standar, probe refleksi). Proyek baru harus mempertimbangkan menggunakan jalur rendering <span class="tooltip"><a class="tooltipMoreInfoLink" href="RenderTech-DeferredShading.html">Deferred Shading</a><span class="tooltiptext">Sebuah jalur rendering di Pipa Render Built-in yang tidak membatasi jumlah Lampu yang dapat mempengaruhi GameObject. Semua Lampu dievaluasi per-piksel, yang berarti bahwa mereka semua berinteraksi dengan peta normal dan sebagainya. Selain itu, semua Lampu bisa memiliki cookie dan bayangan. <a href="RenderTech-DeferredShading.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Deferredshading">Glossary</a></span></span></span>.</p> 
+       <p> <strong>NOTE:</strong> <em>rendering yang rusak tidak didukung ketika menggunakan proyeksi orografi. Jika mode proyeksi <span class="tooltip"><strong>camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span> diatur ke Orthographic, kamera akan selalu menggunakan rendering Forward.</em> </p> 
+       <h2>Overview</h2> 
+       <p>Ketika menggunakan Deferred Lighting, tidak ada batasan pada jumlah lampu yang dapat mempengaruhi objek. Semua lampu dievaluasi per-piksel, yang berarti bahwa mereka semua berinteraksi dengan benar dengan <span class="tooltip"><strong>normal maps</strong><span class="tooltiptext">Jenis tekstur Peta Bump yang memungkinkan Anda untuk menambahkan detail permukaan seperti benjolan, alur, dan goresan ke model yang menangkap cahaya seolah-olah mereka diwakili oleh geometri nyata.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Normalmap">Glossary</a></span></span></span>, dll. Selain itu, semua lampu bisa memiliki cookie dan bayangan.</p> 
+       <p>Pencahayaan rusak memiliki keunggulan bahwa overhead pemrosesan pencahayaan proporsional dengan jumlah <span class="tooltip"><strong>pixels</strong><span class="tooltiptext">Unit terkecil dalam gambar komputer. Ukuran piksel tergantung pada resolusi layar Anda. Pencahayaan pixel dihitung pada setiap piksel layar. <a class="tooltipMoreInfoLink" href="ShadowPerformance.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#pixel">Glossary</a></span></span></span> cahaya bersinar. Ini ditentukan oleh ukuran volume cahaya pada <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> terlepas dari berapa banyak objek yang diterangi. Oleh karena itu, kinerja dapat ditingkatkan dengan menjaga lampu kecil. Pencahayaan rusak juga memiliki perilaku yang sangat konsisten dan dapat diprediksi. Efek setiap cahaya dikomputasikan per-piksel, sehingga tidak ada komputasi pencahayaan yang memecah pada segitiga besar.</p> 
+       <p>Di sisi bawah, pencahayaan deferred tidak memiliki dukungan nyata untuk anti-aliasing dan tidak dapat menangani benda semi-transparan (penawaran akan diberikan menggunakan rendering <a class="tooltipMoreInfoLink" href="RenderTech-ForwardRendering.html">forward</a>). Tidak ada dukungan untuk bendera Bayangan Receive <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Mesh">Glossary</a></span></span></span> dan <span class="tooltip"><strong>culling masks</strong><span class="tooltiptext">Memungkinkan Anda untuk memasukkan atau membatasi objek untuk diberikan oleh Kamera, dengan Layer.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#CullingMask">Glossary</a></span></span></span> hanya didukung dengan cara terbatas. Anda hanya dapat menggunakan hingga empat masker. Itu, culling <span class="tooltip"><strong>layer mask</strong><span class="tooltiptext">Nilai yang menentukan lapisan yang termasuk atau dikecualikan dari operasi, seperti rendering, tabrakan atau kode Anda sendiri. <a href="Layers.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#LayerMask">Glossary</a></span></span></span> Anda setidaknya harus mengandung semua lapisan minus empat lapisan sewenang-wenang, jadi 28 dari 32 lapisan harus diatur. Jika Anda akan mendapatkan artefak grafis.</p> 
+       <h2>Requirements</h2> 
+       <p>Ini membutuhkan kartu grafis dengan model <span class="tooltip"><strong>Shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Shader">Glossary</a></span></span></span> 3.0 (atau kemudian), dukungan untuk tekstur render Kedalaman dan <span class="tooltip"><strong>stencil buffers</strong><span class="tooltiptext">Sebuah toko memori yang memegang nilai per-piksel 8-bit. Dalam Unity, Anda dapat menggunakan penyangga stensil untuk piksel bendera, dan kemudian hanya render ke piksel yang melewati operasi stensil. <a href="class-RenderTexture.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#stencilbuffer">Glossary</a></span></span></span> dua sisi. Kebanyakan kartu grafis PC dibuat setelah pencahayaan deferred dukungan 2004, termasuk GeForce FX dan kemudian, Radeon X1300 dan kemudian, Intel 965 / GMA X3100 dan kemudian. Di ponsel, semua OpenGL ES 3.0 mampu GPU mendukung pencahayaan yang rusak, dan beberapa OpenGL ES 2.0 mampu mendukungnya juga (yang melakukan tekstur kedalaman dukungan).</p> 
+       <h2>Pertimbangan Kinerja</h2> 
+       <p>overhead rendering lampu real-time dalam pencahayaan deferred proporsional dengan jumlah piksel yang diterangi oleh cahaya dan <em>not</em> tergantung pada kompleksitas adegan. Jadi titik kecil atau lampu tempat sangat murah untuk render dan jika mereka sepenuhnya atau sebagian dikosongkan oleh objek adegan maka mereka bahkan lebih murah.</p> 
+       <p>Tentu saja, lampu dengan bayangan jauh lebih mahal daripada lampu tanpa bayangan. Dalam pencahayaan yang rusak, benda-benda bayangan-casting masih perlu diberikan sekali atau lebih untuk setiap lampu bayangan-casting. Selanjutnya, naungan pencahayaan yang menerapkan bayangan memiliki overhead rendering yang lebih tinggi daripada yang digunakan ketika bayangan dinonaktifkan.</p> 
+       <h2>Detail Pelaksanaan</h2> 
+       <p>Ketika Deferred Lighting digunakan, proses rendering di Unity terjadi dalam tiga umpan:</p> 
+       <ol> 
+        <li>Base Pass: objek yang diberikan untuk menghasilkan penyangga ruang layar dengan kedalaman, normal, dan kekuatan specular.</li> 
+        <li>Pencahayaan lulus: penyangga yang dihasilkan sebelumnya digunakan untuk membandingkan pencahayaan ke penyangga ruang layar lain.</li> 
+        <li>Akhir berlalu: benda-benda yang diberikan lagi. Mereka mengambil pencahayaan yang sebanding, menggabungkannya dengan tekstur warna dan menambahkan pencahayaan ambient / emissive.</li> 
+       </ol> 
+       <p>Objek dengan naungan yang tidak dapat menangani pencahayaan yang rusak diberikan setelah proses ini selesai, menggunakan jalur <span class="tooltip"><a class="tooltipMoreInfoLink" href="RenderTech-ForwardRendering.html">forward rendering</a><span class="tooltiptext">Sebuah jalur rendering yang membuat setiap objek dalam satu atau lebih melewati, tergantung pada lampu yang mempengaruhi objek. Lampu sendiri juga diperlakukan berbeda dengan Rendering Maju, tergantung pada pengaturan dan intensitas mereka. <a href="RenderTech-ForwardRendering.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ForwardRendering">Glossary</a></span></span></span>.</p> 
+       <h3>Base Pass</h3> 
+       <p>Basis lulus renders setiap objek sekali. Lihat ruang normal dan kekuatan specular diberikan ke ARGB32 <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-RenderTexture.html">Render Tekstur</a><span class="tooltiptext">Jenis Tekstur khusus yang diciptakan dan diperbarui pada runtime. Untuk menggunakannya, pertama membuat Tekstur Render baru dan menunjuk salah satu Kamera Anda untuk membuatnya. Kemudian Anda dapat menggunakan Tekstur Render dalam Bahan seperti Tekstur biasa. <a href="class-RenderTexture.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#RenderTexture">Glossary</a></span></span></span> tunggal (dengan normal di saluran RGB dan daya specular di A). Jika platform dan perangkat keras memungkinkan penyangga Z untuk dibaca sebagai tekstur maka kedalaman tidak diberikan secara eksplisit. Jika penyangga Z tidak dapat diakses sebagai tekstur maka kedalaman diberikan dalam umpan rendering tambahan menggunakan <a href="SL-ShaderReplacement.html">pengganti warna</a>.</p> 
+       <p>Hasil dari lulus dasar adalah penyangga Z yang diisi dengan konten adegan dan Tekstur Render dengan normal dan kekuatan specular.</p> 
+       <h3>Lighting Pass</h3> 
+       <p>Pencahayaan melewati pencahayaan computes berdasarkan kedalaman, normal dan kekuatan specular. Pencahayaan bersaing di ruang layar, sehingga waktu yang diperlukan untuk memproses independen dari kompleksitas adegan. Penyangga pencahayaan adalah Tekstur Render ARGB32 tunggal, dengan pencahayaan diffuse di saluran RGB dan pencahayaan spular monokrom di saluran A. Nilai pencahayaan secara logarithmically dikodekan untuk memberikan jangkauan dinamis yang lebih besar daripada biasanya dimungkinkan dengan tekstur ARGB32. Ketika kamera memiliki rendering <span class="tooltip"><strong>HDR</strong><span class="tooltiptext">kisaran dinamis tinggi<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#HDR">Glossary</a></span></span></span> diaktifkan, maka penyangga pencahayaan adalah format ARGBHalf, dan pengkodean logarimik tidak dilakukan.</p> 
+       <p>Lampu titik dan tempat yang tidak melintasi pesawat dekat kamera dirender sebagai (front faces of) bentuk 3D, dengan uji kedalaman terhadap adegan diaktifkan. Lampu melintasi pesawat dekat juga dirender menggunakan bentuk 3D, tetapi sebagai wajah belakang dengan uji kedalaman terbalik. Ini membuat sebagian atau lampu tertutup sepenuhnya sangat murah untuk membuat. Jika cahaya mengganggu pesawat kamera jauh dan dekat pada saat yang sama, optimasi di atas tidak dapat digunakan, dan cahaya ditarik sebagai <span class="tooltip"><strong>quad</strong><span class="tooltiptext">Objek primitif yang menyerupai pesawat tetapi tepinya hanya satu unit panjang, hanya menggunakan 4 simpul, dan permukaan berorientasi pada pesawat XY ruang koordinat lokal. <a class="tooltipMoreInfoLink" href="PrimitiveObjects.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Quad">Glossary</a></span></span></span> ketat tanpa pengujian kedalaman.</p> 
+       <p>Di atas tidak berlaku untuk lampu arah, yang selalu diberikan sebagai quad layar penuh.</p> 
+       <p>Jika cahaya memiliki bayangan diaktifkan maka mereka juga dirender dan diterapkan di lewat ini. Perhatikan bahwa bayangan tidak datang untuk “bebas”; kasir bayangan perlu diberikan dan warna cahaya yang lebih kompleks harus diterapkan.</p> 
+       <p>Satu-satunya model pencahayaan yang tersedia adalah Blinn-Phong. Jika model yang berbeda ingin Anda dapat memodifikasi lampu melewati naungan, dengan menempatkan versi modifikasi dari Internal-PrePassLighting. file naungan dari ke dalam folder bernama "Resources" di folder "Assets". Kemudian pergi ke Edit-&gt;Project Settings-&gt;Graphics window. Mengubah dropdown “Legacy Deferred” ke “Custom Shader”. Kemudian ubah opsi Shader yang muncul ke naungan pencahayaan yang Anda gunakan.</p> 
+       <h3>Final Pass</h3> 
+       <p>Pass akhir menghasilkan gambar rendering akhir. Di sini semua objek dirender lagi dengan naungan yang mengambil pencahayaan, menggabungkannya dengan tekstur dan menambahkan pencahayaan yang diizinkan. <span class="tooltip"><strong>Lightmaps</strong><span class="tooltiptext">Tekstur pra-render yang mengandung efek sumber cahaya pada objek statis di tempat kejadian. Lightmaps dilalui atas geometri adegan untuk menciptakan efek pencahayaan. <a class="tooltipMoreInfoLink" href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Lightmap">Glossary</a></span></span></span> juga diterapkan dalam umpan akhir. Dekat dengan kamera, pencahayaan real-time digunakan, dan hanya pencahayaan tidak langsung panggang ditambahkan. Persilangan ini menjadi pencahayaan panggang penuh jauh dari kamera.</p> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="RenderTech-DeferredShading.html"></a></span> 
+         <div class="tip">
+           Mendefinisikan jalur rendering 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="RenderTech-VertexLit.html"></a></span> 
+         <div class="tip">
+           Vertex Lit Rendering Path 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

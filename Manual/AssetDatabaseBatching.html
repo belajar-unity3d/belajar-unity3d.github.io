@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Batching dengan AssetDatabase</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="AssetWorkflow.html">Arus kerja aset</a></li> 
+         <li><a href="AssetDatabase.html">The Asset Database</a></li> 
+         <li>Batching dengan AssetDatabase</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="AssetDatabaseRefreshing.html"></a></span> 
+          <div class="tip">
+            Refreshing the Asset Database 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="SpecialFolders.html"></a></span> 
+          <div class="tip">
+            Nama folder khusus 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Batching dengan AssetDatabase</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Anda dapat menggunakan batching untuk mengurangi jumlah waktu dan pemrosesan yang diambil ketika membuat perubahan Aset pada kode Anda.</p> 
+       <p>Jika Anda melakukan perubahan pada beberapa Aset pada kode Anda (misalnya, menyalin atau memindahkan file Aset), perilaku default Aset Database adalah untuk memproses setiap perubahan pada gilirannya, dan melakukan proses Refresh penuh untuk Aset sebelum bergerak ke garis kode berikutnya.</p> 
+       <p>Dalam contoh di bawah ini, tiga aset berubah. Aset1 disalin, Asset2 dipindahkan, dan Asset3 dihapus:</p> 
+       <pre><code>AssetDatabase.CopyAsset("Assets/Asset1.txt", "Assets/Text/Asset1.txt");
+AssetDatabase.MoveAsset("Assets/Asset2.txt", "Assets/Text/Asset2.txt");
+AssetDatabase.DeleteAsset("Assets/Asset3.txt");
+</code></pre> 
+       <p>Tanpa batching, Proses Unity setiap perubahan sebelum bergerak ke garis kode berikutnya. Ini tidak hanya membutuhkan waktu yang tidak perlu, tetapi juga memicu banyak callback yang dapat Anda hindari jika Anda menggunakan batching.</p> 
+       <p>Sebagai gantinya, Anda dapat menentukan bahwa Basis Data Aset harus memproses sekelompok operasi sekaligus. Untuk melakukan ini, Anda perlu memberitahu Basis Data Aset untuk menghentikan perilaku normal sebelum Anda membuat perubahan Anda, kemudian beri tahunya untuk melanjutkan setelah perubahan Anda selesai.</p> 
+       <p>Secara khusus, Anda harus mencoba menggunakan batching jika Anda melakukan lebih dari salah satu operasi berikut:</p> 
+       <ul> 
+        <li>AssetDatabase.ImportAsset</li> 
+        <li>Login Login</li> 
+        <li>AssetDatabase.CopyAsset</li> 
+        <li>AddObjectToAsset</li> 
+       </ul> 
+       <h2>Metode untuk memproses operasi</h2> 
+       <p>Untuk menentukan bahwa Database Aset harus memproses sekelompok operasi sekaligus, Anda dapat menggunakan metode berikut: <a href="../ScriptReference/AssetDatabase.StartAssetEditing.html">AssetDatabase.StartAssetEditing</a> dan <a href="../ScriptReference/AssetDatabase.StopAssetEditing.html">AssetDatabase.StopAssetEditing</a>.</p> 
+       <p><strong>AssetDatabase.StartAssetEditing</strong></p> 
+       <p>Metode ini memberi tahu Database Aset yang Anda mulai membuat edit ke Aset. Aset Database memasuki keadaan jeda, dan tidak memproses perubahan lebih lanjut ke Aset Anda sampai Anda memanggil metode <strong>StopAssetEditing</strong> yang sesuai untuk memberitahu Anda selesai.</p> 
+       <p><strong>AssetDatabase.StopAssetEditing</strong></p> 
+       <p>Setelah Anda melakukan semua Perubahan aset, sebutkan metode ini untuk memberitahu Basis Data Aset untuk memproses perubahan dan melanjutkan perilaku normal dari perubahan pemrosesan otomatis segera. Aset Database kemudian memproses perubahan yang Anda buat antara <code>StartAssetEditing</code> dan <code>StopAssetEditing</code> dalam Batch, yang lebih cepat dari jika mereka telah diproses satu per satu.</p> 
+       <h3>Panggilan bersarang untuk StartAssetEditing dan StopAssetEditing</h3> 
+       <p>Jika Anda membuat lebih dari satu panggilan ke <code>StartAssetEditing</code>, Anda harus membuat jumlah panggilan yang sesuai untuk <code>StopAssetEditing</code> untuk membuat Basis Data Aset melanjutkan perilaku normal dari perubahan pemrosesan otomatis.</p> 
+       <p>Ini karena fungsi-fungsi ini meningkatkan dan mengurangi counter, daripada bertindak sebagai sakelar on / off sederhana. Memanggil <code>StartAssetEditing</code> meningkatkan counter, dan memanggil <code>StopAssetEditing</code> decrements counter. Aset Database melanjutkan perilaku normal ketika counter mencapai nol.</p> 
+       <p>Alasan Unity menggunakan counter daripada boolean on/off sederhana sehingga jika kode Anda mengeksekusi beberapa pasangan “start” dan “stop”, pasangan dalam tidak sengaja menonaktifkan perilaku normal Aset Database terlalu awal. Alih-alih, setiap increments pasangan dan decrements counter oleh satu, dan jika kode Anda benar bersarang, panggilan luar akhir ke <code>StopAssetEditing</code> menetapkan counter ke nol.</p> 
+       <p>Sitemap Kode Anda tidak boleh menyebabkan penghitung ke bawah nol. Melakukan sehingga menghasilkan kesalahan.<strong>Note:</strong> Your code should never cause the counter to go below zero. Doing so generates an error.</p> 
+       <h2>Example</h2> 
+       <p>Contoh berikut menunjukkan cara yang disarankan untuk menggunakan metode ini:</p> 
+       <pre><code class="using UnityEngine;">using UnityEditor;
+public class StartStopAssetEditingExample : MonoBehaviour
+{
+    [MenuItem("APIExamples/StartStopAssetEditing")]
+    static void CallAssetDatabaseAPIsBetweenStartStopAssetEditing()
+    {
+        try
+        {
+            //Place the Asset Database in a state where
+            //importing is suspended for most APIs
+            AssetDatabase.StartAssetEditing();
+            AssetDatabase.CopyAsset("Assets/Asset1.txt", "Assets/Text/Asset1.txt");
+            AssetDatabase.MoveAsset("Assets/Asset2.txt", "Assets/Text/Asset2.txt");
+            AssetDatabase.DeleteAsset("Assets/Asset3.txt");
+        }
+        finally
+        {
+            //Adding a call to StopAssetEditing inside
+            //a "finally" block ensures that the AssetDatabase
+            //state will be reset when leaving this function
+            AssetDatabase.StopAssetEditing();
+        }
+    }
+}
+</code></pre> 
+       <h2>Menggunakan mencoba ... akhirnya untuk Mengedit Aset</h2> 
+       <p>Ketika Anda memanggil <code>AssetDatabase.StartAssetEditing</code>, Unity menempatkan seluruh Aset Editor dalam database keadaan jeda. Seperti itu, jika Anda tidak membuat panggilan yang sesuai ke AssetDatabase. <code>StopAssetEditing</code>, Editor tampaknya tidak responsif ketika datang ke operasi terkait aset (Importing, Refreshing, dll), dan memerlukan restart Editor untuk mengembalikan operasi normal.</p> 
+       <p>Tanpa menggunakan blok <code>try</code> ... <code>finally</code>, jika kode Anda yang memodifikasi Aset menyebabkan kesalahan, itu mungkin mencegah <code>StopAssetEditing</code> dari yang disebut. Untuk menghindari situasi ini, bungkus panggilan di dalam... blok <code>try</code>, dengan <code>finally</code>, dan kode modifikasi Aset Anda di blok <code>StartAssetEditing</code>, dan panggilan <code>try</code> ditempatkan di blok <code>StopAssetEditing</code>. Ini memastikan bahwa jika ada pengecualian terjadi ketika perubahan Anda dibuat di blok <code>finally</code>, masih dijamin bahwa <code>try</code> akan disebut.<code>AssetDatabase.StopAssetEditing</code> will be called.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="AssetDatabaseRefreshing.html"></a></span> 
+         <div class="tip">
+           Refreshing the Asset Database 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="SpecialFolders.html"></a></span> 
+         <div class="tip">
+           Nama folder khusus 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

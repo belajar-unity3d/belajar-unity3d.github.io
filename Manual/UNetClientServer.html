@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Klien jaringan dan server</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="cloud" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UNet.html">Multiplayer dan Jaringan</a></li> 
+         <li><a href="UNetUsingHLAPI.html">Multiplayer API</a></li> 
+         <li><a href="UNetDealingWithClientsServers.html">Berurusan dengan klien dan server</a></li> 
+         <li>Klien dan server jaringan</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UNetDealingWithClientsServers.html"></a></span> 
+          <div class="tip">
+            Berurusan dengan klien dan server 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UNetHostMigration.html"></a></span> 
+          <div class="tip">
+            Migrasi Host 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Klien dan server jaringan</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Important</strong>: UNet adalah solusi yang diuraikan, dan Solusi Multiplayer baru dan <span class="tooltip"><strong>Networking</strong><span class="tooltiptext">Sistem Unity yang memungkinkan game multiplayer di jaringan komputer. <a class="tooltipMoreInfoLink" href="UNetOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Networking">Glossary</a></span></span></span> (Netcode untuk GameObjects) sedang berkembang. Untuk informasi lebih lanjut dan langkah selanjutnya melihat informasi di .</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Banyak permainan multiplayer dapat menggunakan <strong><span class="tooltip"><strong>Network Manager</strong><span class="tooltiptext">A Networking component that manages the network state of a project. <a class="tooltipMoreInfoLink" href="UNetManager.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#NetworkManager">Glossary</a></span></span></span></strong> untuk mengelola koneksi, tetapi Anda juga dapat menggunakan kelas <a href="../ScriptReference/Networking.NetworkServer.html">NetworkServer</a> tingkat rendah dan kelas <a href="../ScriptReference/Networking.NetworkClient.html">NetworkClient</a> langsung.</p> 
+       <p>Saat menggunakan <a href="UNetUsingHLAPI.html">API</a>, setiap pertandingan harus memiliki server host untuk terhubung ke. Setiap peserta dalam permainan multiplayer dapat menjadi klien, server khusus, atau kombinasi server dan klien pada saat yang sama. Peran kombinasi ini adalah kasus umum dari permainan multiplayer tanpa dedicated server.</p> 
+       <p>Untuk game multiplayer tanpa dedicated server, salah satu pemain yang menjalankan permainan bertindak sebagai server untuk permainan itu. Contoh pemain dari permainan berjalan "klien lokal" bukan klien jarak jauh normal. Klien lokal menggunakan Unity <span class="tooltip"><strong>Scenes</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Scene">Glossary</a></span></span></span> yang sama dan <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> sebagai server, dan berkomunikasi secara internal menggunakan antrian pesan bukan mengirim pesan di jaringan. Untuk kode dan sistem HLAPI, klien lokal hanya klien lain, sehingga hampir semua kode pengguna sama, apakah klien lokal atau remote. Ini memudahkan untuk membuat permainan yang bekerja dalam mode multiplayer dan standalone dengan kode yang sama.</p> 
+       <p>Pola umum untuk game multiplayer adalah memiliki GameObject yang mengelola keadaan jaringan permainan. Di bawah ini adalah awal dari skrip NetworkManager. Script ini akan dilampirkan ke GameObject yang ada di adegan awal permainan. Ini memiliki fungsi penanganan <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span> dan keyboard sederhana yang memungkinkan permainan untuk memulai dalam mode jaringan yang berbeda. Sebelum Anda melepaskan permainan Anda, Anda harus membuat menu yang lebih menarik secara visual, dengan opsi seperti "Mulai permainan pemain tunggal" dan "Mulai permainan multiplayer".</p> 
+       <pre><code>
+using UnityEngine;
+using UnityEngine.Networking;
+
+public class MyNetworkManager : MonoBehaviour {
+    public bool isAtStartup = true;
+    NetworkClient myClient;
+    void Update () 
+    {
+        if (isAtStartup)
+        {
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                SetupServer();
+            }
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                SetupClient();
+            }
+            if (Input.GetKeyDown(KeyCode.B))
+            {
+                SetupServer();
+                SetupLocalClient();
+            }
+        }
+    }
+    void OnGUI()
+    {
+        if (isAtStartup)
+        {
+            GUI.Label(new Rect(2, 10, 150, 100), "Press S for server");     
+            GUI.Label(new Rect(2, 30, 150, 100), "Press B for both");       
+            GUI.Label(new Rect(2, 50, 150, 100), "Press C for client");
+        }
+    }   
+}
+
+</code></pre> 
+       <p>Fungsi pengaturan panggilan kode dasar ini untuk mendapatkan hal-hal yang terjadi. Di bawah ini adalah fungsi pengaturan sederhana untuk setiap skenario. Fungsi ini membuat server, atau jenis klien yang tepat untuk setiap skenario. Perhatikan bahwa klien jarak jauh mengasumsikan server pada mesin yang sama (127.0.0.1). Untuk permainan selesai ini akan menjadi alamat internet, atau sesuatu yang disediakan oleh <a href="UnityMultiplayerSettingUp.html">Sistem pencocokan</a>.</p> 
+       <pre><code>
+// Create a server and listen on a port
+    public void SetupServer()
+    {
+        NetworkServer.Listen(4444);
+        isAtStartup = false;
+    }
+    
+    // Create a client and connect to the server port
+    public void SetupClient()
+    {
+        myClient = new NetworkClient();
+        myClient.RegisterHandler(MsgType.Connect, OnConnected);     
+        myClient.Connect("127.0.0.1", 4444);
+        isAtStartup = false;
+    }
+    
+    // Create a local client and connect to the local server
+    public void SetupLocalClient()
+    {
+        myClient = ClientScene.ConnectLocalServer();
+        myClient.RegisterHandler(MsgType.Connect, OnConnected);     
+        isAtStartup = false;
+    }
+</code></pre> 
+       <p>Klien dalam kode ini mendaftarkan fungsi callback untuk acara koneksi <a href="../ScriptReference/Networking.MsgType.Connect.html">MsgType.Connect</a>. Ini adalah pesan bawaan dari HLAPI bahwa skrip membentang ketika klien terhubung ke server. Dalam hal ini, kode untuk handler pada klien adalah:</p> 
+       <pre><code>
+// client function
+    public void OnConnected(NetworkMessage netMsg)
+    {
+        Debug.Log("Connected to server");
+    }
+</code></pre> 
+       <p>Ini cukup untuk mendapatkan aplikasi multiplayer dan berjalan. Dengan skrip ini Anda kemudian dapat mengirim pesan jaringan menggunakan <a href="../ScriptReference/Networking.NetworkClient.Send.html">Login Sitemap</a> dan <a href="../ScriptReference/Networking.NetworkServer.SendToAll.html">JaringanServer.SendToAll</a>. Perhatikan bahwa mengirim pesan adalah cara tingkat rendah berinteraksi dengan sistem.</p> 
+       <!-- area:cloud --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UNetDealingWithClientsServers.html"></a></span> 
+         <div class="tip">
+           Berurusan dengan klien dan server 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UNetHostMigration.html"></a></span> 
+         <div class="tip">
+           Migrasi Host 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy"> 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

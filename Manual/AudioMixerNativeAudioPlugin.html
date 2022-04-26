@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: SDK Plugin Audio Asli</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Audio.html">Audio</a></li> 
+         <li>Android SDK</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="AudioMixerUsage.html"></a></span> 
+          <div class="tip">
+            Ikhtisar Penggunaan dan API 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="AudioSpatializerSDK.html"></a></span> 
+          <div class="tip">
+            Photogallery Login 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Android SDK</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Dokumen ini menjelaskan antarmuka plugin audio asli bawaan Unity 5.0. Kami akan melakukan ini dengan melihat beberapa plugin contoh tertentu yang tumbuh dalam kompleksitas saat kita bergerak. Cara ini, kami mulai dengan konsep yang sangat dasar dan memperkenalkan lebih banyak kasus penggunaan yang kompleks di dekat akhir dokumen.</p> 
+       <h2>Download</h2> 
+       <p>Hal pertama yang perlu Anda lakukan adalah untuk <a href="https://github.com/Unity-Technologies/NativeAudioPlugins">Unduh SDK plugin audio terbaru</a>.</p> 
+       <h2>Overview</h2> 
+       <p>Sistem plugin audio asli terdiri dari dua bagian:</p> 
+       <ol> 
+        <li><p>Plugin DSP (Digital Signal Processing) asli yang harus diimplementasikan sebagai .dll (Windows) atau .dylib (OSX) di C atau C++. Tidak seperti <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> dan karena tuntutan tinggi pada kinerja ini harus dikompilasi untuk setiap platform yang ingin Anda dukungan, mungkin dengan optimasi spesifik platform.</p></li> 
+        <li><p>GUI yang dikembangkan di C#. Perhatikan bahwa GUI adalah opsional, sehingga Anda selalu memulai pengembangan plugin dengan membuat plugin DSP asli dasar, dan biarkan Unity menunjukkan <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span> berbasis slider default untuk deskripsi parameter yang diekspos plugin asli. Kami merekomendasikan pendekatan ini untuk bootstrap setiap proyek.</p></li> 
+       </ol> 
+       <p>Perhatikan bahwa Anda pada awalnya dapat prototipe file C# GUI sebagai file .cs yang Anda hanya turun ke folder Aset / Editor (hanya seperti script editor lainnya). Kemudian pada Anda dapat memindahkan ini menjadi proyek Visual Studio yang tepat sebagai kode Anda mulai tumbuh dan membutuhkan modularisasi yang lebih baik dan dukungan IDE yang lebih baik. Ini memungkinkan Anda untuk menyusunnya ke dalam .dll, membuat lebih mudah bagi pengguna untuk menjatuhkan ke proyek dan juga untuk melindungi kode Anda.</p> 
+       <p>Juga dicatat bahwa kedua DSP asli dan GUI DLLs dapat mengandung beberapa plugin dan mengikat hanya terjadi melalui nama efek dalam plugin terlepas dari apa file DLL disebut.</p> 
+       <h2>Apa semua file ini?</h2> 
+       <p>Sisi asli dari SDK plugin sebenarnya hanya terdiri dari satu file (AudioPluginInterface.h), tetapi untuk memudahkan untuk memiliki beberapa efek plugin dalam DLL yang sama kami telah menambahkan kode pendukung untuk menangani definisi efek dan pendaftaran parameter dengan cara yang sederhana (AudioPluginUtil.h dan AudioPluginUtil.cpp). Perhatikan bahwa proyek NativePluginDemo mengandung sejumlah plugin contoh untuk memulai dan menunjukkan berbagai jenis plugin yang berbeda yang berguna dalam konteks permainan. Kami menempatkan kode ini di domain publik, jadi jangan ragu untuk menggunakan kode ini sebagai titik awal untuk penciptaan Anda sendiri.</p> 
+       <p>Pengembangan plugin dimulai dengan mendefinisikan parameter yang harus dimiliki plugin Anda. Anda tidak perlu memiliki rencana master rinci dari semua parameter yang plugin akan diletakkan sebelum Anda memulai, tetapi membantu untuk kira-kira memiliki ide tentang bagaimana Anda ingin pengalaman pengguna dan komponen apa yang Anda butuhkan.</p> 
+       <p>Plugin contoh yang kami berikan memiliki banyak fungsi utilitas yang membuatnya mudah Mari kita lihat plugin contoh "Ring Modulator". Plugin sederhana ini menggandakan sinyal masuk dengan gelombang sinus, yang memberikan resepsi radio-noise / rusak yang bagus seperti efek, terutama jika beberapa efek modulasi cincin dengan frekuensi yang berbeda dirantai.</p> 
+       <p>Skema dasar untuk berurusan dengan parameter dalam plugin contoh adalah untuk mendefinisikan mereka sebagai nilai-nilai yang kita gunakan sebagai indeks ke dalam array pelampung untuk kenyamanan dan kekeliruan.</p> 
+       <pre><code>enum Param
+{
+    P_FREQ,
+    P_MIX,
+    P_NUM
+};
+
+int InternalRegisterEffectDefinition(UnityAudioEffectDefinition&amp; definition)
+{
+    int numparams = P_NUM;
+    definition.paramdefs = new UnityAudioParameterDefinition [numparams];
+    RegisterParameter(definition, "Frequency", "Hz",
+        0.0f, kMaxSampleRate, 1000.0f,
+        1.0f, 3.0f,
+        P_FREQ);
+    RegisterParameter(definition, "Mix amount", "%",
+        0.0f, 1.0f, 0.5f,
+        100.0f, 1.0f,
+        P_MIX);
+    return numparams;
+}
+</code></pre> 
+       <p>Jumlah dalam panggilan RegisterParameter adalah nilai minimum, maksimum dan default yang diikuti oleh faktor scaling yang digunakan untuk ditampilkan hanya, yaitu dalam kasus nilai persentase dari nilai aktual dari 0 sampai 1 dan disalurkan oleh 100 ketika ditampilkan. Tidak ada kode GUI kustom untuk ini, tetapi seperti yang disebutkan sebelumnya, Unity akan menghasilkan GUI default dari definisi parameter dasar ini. Perhatikan bahwa tidak ada pemeriksaan yang dilakukan untuk parameter yang tidak ditentukan, sehingga sistem AudioPluginUtil mengharapkan bahwa semua nilai enum yang dinyatakan (kecuali <code>P_NUM</code>) cocok dengan definisi parameter yang sesuai.</p> 
+       <p>Di balik fungsi RegisterParameter mengisi entri di array UnityAudioParameterDefinition dari struktur UnityAudioEffectDefinition yang terkait dengan plugin tersebut (lihat "AudioEffectPluginInterface.h"). Sisa yang perlu diatur dalam UnityAudioEffectDefinition adalah callback ke fungsi yang menangani mengulang plugin (CreateCallback), menetapkan parameter (<span class="tooltip"><strong>scenes</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>), melakukan pemrosesan aktual (<code>SetFloatParameterCallback/UnityAudioEffect_GetFloatParameterCallback</code>) dan akhirnya menghancurkan instance plugin saat dilakukan (<code>UnityAudioEffect_ProcessCallback</code>).<code>UnityAudioEffect_ReleaseCallback</code>).</p> 
+       <p>Untuk memudahkan untuk memiliki beberapa plugin di DLL yang sama, setiap plugin direvisi di ruang namanya sendiri, dan konvensi naming khusus untuk fungsi callback digunakan seperti <code>DEFINE_EFFECT</code> dan makro <code>DECLARE_EFFECT</code> dapat mengisi struktur UnityAudioEffectDefinition. Di bawah kap semua definisi efek disimpan dalam array yang pointer dikembalikan oleh satu-satunya titik masuk perpustakaan UnityGetAudioEffectDefinitions.</p> 
+       <p>Ini berguna untuk mengetahui jika Anda ingin mengembangkan plugin jembatan yang peta dari format plugin lain seperti VST atau AudioUnits ke atau dari antarmuka plugin audio Unity, di mana Anda perlu mengembangkan cara yang lebih dinamis untuk mengatur deskripsi parameter pada waktu beban.</p> 
+       <h3>Mengintip plugin</h3> 
+       <p>Hal berikutnya adalah data untuk instance dari plugin. Dalam plugin contoh, kami menempatkan semua ini ke dalam struktur EffectData. Alokasi ini harus terjadi di CreatCallback yang sesuai yang disebut untuk setiap contoh plugin di mixer. Dalam contoh sederhana ini hanya ada satu gelombang sinus yang dikalikan ke semua saluran, plugin lain yang lebih canggih perlu mengalokasikan data tambahan per saluran input.</p> 
+       <pre><code>struct EffectData
+{
+    struct Data
+    {
+        float p[P_NUM]; // Parameters
+        float s;        // Sine output of oscillator
+        float c;        // Cosine output of oscillator
+    };
+    union
+    {
+        Data data;
+        unsigned char pad[(sizeof(Data) + 15) &amp; ~15];
+    };
+};
+</code></pre> 
+       <pre><code>UNITY_AUDIODSP_RESULT UNITY_AUDIODSP_CALLBACK CreateCallback(
+    UnityAudioEffectState* state)
+{
+    EffectData* effectdata = new EffectData;
+    memset(effectdata, 0, sizeof(EffectData));
+    effectdata-&gt;data.c = 1.0f;
+    state-&gt;effectdata = effectdata;
+    InitParametersFromDefinitions(
+        InternalRegisterEffectDefinition, effectdata-&gt;data.p);
+    return UNITY_AUDIODSP_OK;
+}
+</code></pre> 
+       <p>UnityAudioEffectState mengandung berbagai data dari host seperti tingkat pengambilan sampel, jumlah total sampel diproses (untuk waktu), atau apakah plugin dilewati, dan dilewati ke semua fungsi callback.</p> 
+       <p>Dan jelas untuk membebaskan instance plugin ada fungsi yang sesuai juga:</p> 
+       <pre><code>UNITY_AUDIODSP_RESULT UNITY_AUDIODSP_CALLBACK ReleaseCallback(
+    UnityAudioEffectState* state)
+{
+    EffectData::Data* data = &amp;state-&gt;GetEffectData&lt;EffectData&gt;()-&gt;data;
+    delete data;
+    return UNITY_AUDIODSP_OK;
+}
+</code></pre> 
+       <p>Pemrosesan utama audio terjadi di ProsesCallback:</p> 
+       <pre><code>UNITY_AUDIODSP_RESULT UNITY_AUDIODSP_CALLBACK ProcessCallback(
+    UnityAudioEffectState* state,
+    float* inbuffer, float* outbuffer,
+    unsigned int length,
+    int inchannels, int outchannels)
+{
+    EffectData::Data* data = &amp;state-&gt;GetEffectData&lt;EffectData&gt;()-&gt;data;
+
+    float w = 2.0f * sinf(kPI * data-&gt;p[P_FREQ] / state-&gt;samplerate);
+    for(unsigned int n = 0; n &lt; length; n++)
+    {
+        for(int i = 0; i &lt; outchannels; i++)
+        {
+            outbuffer[n * outchannels + i] =
+                inbuffer[n * outchannels + i] *
+                (1.0f - data-&gt;p[P_MIX] + data-&gt;p[P_MIX] * data-&gt;s);
+        }
+        data-&gt;s += data-&gt;c * w; // cheap way to calculate a sine-wave
+        data-&gt;c -= data-&gt;s * w;
+    }
+
+    return UNITY_AUDIODSP_OK;
+}
+</code></pre> 
+       <p>Fungsi GetEffectData di bagian atas hanyalah fungsi helper casting bidang data dari variabel state ke EffectData: Data dalam struktur yang kami deklarasikan di atas.</p> 
+       <p>Plugin sederhana lainnya termasuk adalah plugin NoiseBox, yang menambahkan dan menyisipkan sinyal input dengan kebisingan putih pada frekuensi variabel, atau plugin Lofinator, yang melakukan downsampling sederhana dan permintaan sinyal. Semua ini dapat digunakan dalam kombinasi dan dengan parameter animasi berbasis permainan untuk mensimulasikan apa pun dari ponsel ke penerimaan radio yang buruk pada walkies, pengeras suara yang rusak dll.</p> 
+       <p>StereoWidener, yang menentukan sinyal input stereo ke dalam komponen mono dan samping dengan penundaan variabel dan kemudian rekombines ini untuk meningkatkan efek stereo yang dirasakan.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AudioMixerStereoWidener.jpg" alt="A bunch of simple plugins without custom GUIs to get started with."> 
+        <figcaption>
+          Banyak plugin sederhana tanpa GUI kustom untuk memulai. 
+        </figcaption> 
+       </figure> 
+       <h2>Plugin mana yang memuat platform mana?</h2> 
+       <p>Plugin audio asli menggunakan skema yang sama dengan plugin asli atau dikelola lainnya di dalamnya mereka harus dikaitkan dengan platform masing-masing melalui pengelola plugin <span class="tooltip"><strong>inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>. Anda dapat membaca lebih banyak tentang subfolder di mana untuk menempatkan plugin <a href="PluginsForDesktop.html">here</a>. asosiasi platform diperlukan sehingga sistem tahu plugin mana yang termasuk pada setiap target build di build yang berdiri sendiri, dan dengan pengenalan dukungan 64-bit ini bahkan harus ditentukan dalam platform. Plugin OSX khusus dalam hal ini karena format Biner Universal memungkinkan mereka untuk mengandung varian 32 dan 64 bit dalam bundel yang sama.</p> 
+       <p>Plugin asli di Unity yang disebut dari kode yang berhasil dimuat melalui atribut [DllImport] merujuk fungsi yang diimpor dari DLL asli. Namun, dalam kasus plugin audio asli hal-hal berbeda. Masalah khusus yang muncul di sini adalah bahwa plugin audio perlu dimuat sebelum Unity mulai menciptakan aset mixer yang mungkin memerlukan efek dari plugin. Dalam editor ini tidak ada masalah, karena kita hanya dapat memuat ulang dan membangun kembali mixer yang tergantung pada plugin, tetapi dalam membangun plugin harus dimuat sebelum kami membuat aset mixer. Untuk memecahkan ini, konvensi saat ini adalah untuk memperbaiki DLL dari plugin “audioplugin” (case insensitif) sehingga sistem dapat mendeteksi ini dan menambahkannya ke daftar plugin yang akan secara otomatis dimuat pada awal. Ingat bahwa hanya definisi di dalam plugin yang menentukan nama efek yang muncul di dalam mixer Unity, sehingga DLL dapat disebut apa pun, tetapi perlu memulai dengan string "audioplugin" untuk terdeteksi seperti itu.</p> 
+       <p>Untuk platform seperti IOS kode plugin perlu dihubungkan secara statis ke biner Unity yang diproduksi oleh proyek XCode yang dihasilkan dan ada - seperti perangkat rendering plugin - pendaftaran plugin harus ditambahkan secara eksplisit ke kode startup aplikasi.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AudioMixerPlugins.png" alt=""> 
+       </figure> 
+       <p>Pada OSX satu bundel dapat mengandung versi 32- dan 64 bit dari plugin. Anda juga dapat membaginya untuk menghemat ukuran.</p> 
+       <h3>Plugin dengan GUIs kustom</h3> 
+       <p>Sekarang mari kita lihat sesuatu yang sedikit lebih maju: Efek untuk equalisasi dan multiband <span class="tooltip"><strong>compression</strong><span class="tooltiptext">Metode menyimpan data yang mengurangi jumlah ruang penyimpanan yang dibutuhkan. <a href="class-TextureImporterOverride.html">Kompresi Tekstur</a>, <a href="class-AnimationClip.html#AssetProperties">Kompresi Animasi</a>, <a href="class-AudioClip.html">Kompresi Audio</a>, <a href="ReducingFilesize.html">Membangun Kompresi</a>.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#compression">Glossary</a></span></span></span>. Plugin seperti itu memiliki sejumlah parameter yang jauh lebih tinggi daripada plugin sederhana yang disajikan di bagian sebelumnya dan juga ada beberapa kopling fisik antara parameter yang memerlukan cara yang lebih baik untuk memvisualisasikan parameter daripada hanya banyak slider sederhana. Pertimbangkan equalizer misalnya: Setiap band memiliki 3 filter yang berbeda yang secara kolektif berkontribusi pada kurva equalisasi akhir dan masing-masing filter ini memiliki frekuensi 3 parameter, Q-factor dan gain yang secara fisik terkait dan menentukan bentuk setiap filter. Jadi membantu pengguna banyak, jika plugin equalizer memiliki tampilan besar yang bagus menunjukkan kurva yang dihasilkan, kontribusi filter individu dan dapat dioperasikan dengan cara seperti itu beberapa parameter dapat diatur secara bersamaan dengan operasi seret sederhana pada kontrol daripada mengubah slider satu pada waktu.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AudioMixerCustomGUI.png" alt=""> 
+       </figure> 
+       <p>GUI kustom dari plugin Equalizer. Seret tiga band untuk mengubah keuntungan dan frekuensi kurva filter. Tahan bergeser ke bawah sambil menyeret untuk mengubah bentuk setiap band.</p> 
+       <p>Jadi sekali lagi, definisi, penginisialisasi, deinitialisasi dan penanganan parameter mengikuti metode berbasis um yang sama persis yang digunakan plugin sederhana, dan bahkan kode ProcessCallback agak pendek. Nah, waktu untuk berhenti melihat kode asli dan membuka proyek AudioPluginDemoGUI.sln di Visual Studio. Di sini Anda akan menemukan kelas C# terkait untuk kode GUI. Cara kerjanya sederhana: Setelah Unity telah memuat plugin asli DLLs dan mendaftarkan plugin audio yang terkandung, itu akan mulai mencari GUI yang sesuai dengan nama plugin yang terdaftar. Ini terjadi melalui properti Nama dari kelas EqualizerCustomGUI yang, seperti semua plugin kustom GUIs, harus mengherit dari IAudioEffectPluginGUI. Hanya ada satu fungsi penting di dalam kelas ini yang bool OnGUI (IAudioEffectPlugin plugin) fungsi. Melalui argumen plugin IAudioEffectPlugin fungsi ini mendapat pegangan pada plugin asli yang dapat digunakan untuk membaca dan menulis parameter yang plugin asli telah didefinisikan. Jadi untuk membaca parameter yang panggilannya:</p> 
+       <pre><code>plugin.GetFloatParameter("MasterGain", out masterGain);
+</code></pre> 
+       <p>yang kembali benar jika parameter ditemukan, dan untuk mengaturnya, panggilan:</p> 
+       <pre><code>plugin.SetFloatParameter("MasterGain", masterGain);
+</code></pre> 
+       <p>yang juga kembali benar jika parameter ada. Meme it Dan pada dasarnya mengikat yang paling penting antara kode GUI dan asli. Anda juga dapat menggunakan fungsi</p> 
+       <pre><code>plugin.GetFloatParameterInfo("NAME", out minVal, out maxVal, out defVal);
+</code></pre> 
+       <p>untuk mengukur parameter "NAMA" untuk nilai minimum, maksimum dan default untuk menghindari definisi duplikat ini dalam kode asli dan UI. Perhatikan bahwa jika fungsi OnGUI Anda kembali benar, Inspektur akan menunjukkan slider UI default di bawah GUI kustom. Ini lagi berguna untuk bootstrap perkembangan GUI Anda karena Anda memiliki semua parameter yang tersedia sambil mengembangkan GUI kustom Anda dan memiliki cara mudah untuk memeriksa bahwa tindakan yang tepat dilakukan pada hasil dari perubahan parameter yang diharapkan.</p> 
+       <p>Kami tidak akan membahas rincian tentang pemrosesan DSP yang akan berada di plugin Equalizer dan Multiband di sini, bagi mereka yang tertarik, filter diambil dari Robert Bristow Johnson Audio EQ Cookbook yang sangat baik dan untuk plot kurva Unity menyediakan beberapa fungsi API internal untuk menggambar kurva antialias untuk respons frekuensi.</p> 
+       <p>Satu lagi hal untuk menyebutkan meskipun adalah bahwa kedua plugin Equalizer dan Multiband juga menyediakan kode untuk overlay input dan spektral output untuk memvisualisasikan efek dari plugin, yang membawa titik yang menarik: Kode GUI berjalan pada tingkat pembaruan yang jauh lebih rendah (nilai bingkai) dari pemrosesan audio dan tidak memiliki akses ke aliran audio, sehingga bagaimana kami membaca data ini? Untuk ini, ada fungsi khusus untuk ini dalam kode asli:</p> 
+       <pre><code>UNITY_AUDIODSP_RESULT UNITY_AUDIODSP_CALLBACK GetFloatParameterCallback(
+    UnityAudioEffectState* state,
+    int index,
+    float* value,
+    char *valuestr)
+{
+    EffectData::Data* data = &amp;state-&gt;GetEffectData&lt;EffectData&gt;()-&gt;data;
+    if(index &gt;= P_NUM)
+        return UNITY_AUDIODSP_ERR_UNSUPPORTED;
+    if(value != NULL)
+        *value = data-&gt;p[index];
+    if(valuestr != NULL)
+        valuestr[0] = 0;
+  return UNITY_AUDIODSP_OK;
+}
+</code></pre> 
+       <p>Ini hanya memungkinkan membaca array data floating-point dari plugin asli. Apa pun data itu, sistem plugin tidak peduli, selama permintaan tidak terlalu lambat UI atau kode asli. Untuk kode Equalizer dan Multiband ada kelas utilitas yang disebut FFTAnalyzer yang memudahkan feed dalam input dan output data dari plugin dan mendapatkan spektrum kembali. Data spektrum ini kemudian diampirkan oleh GetFloatBufferCallback dan diserahkan ke kode UI C #. Alasan bahwa data harus diresampled adalah bahwa FFTAnalyzer menjalankan analisis pada resolusi frekuensi tetap sementara GetFloatBufferCallback hanya mengembalikan jumlah sampel yang diminta, yang ditentukan oleh lebar tampilan yang menampilkan data. Untuk plugin yang sangat sederhana yang memiliki sejumlah kode DSP minimal yang mungkin Anda juga melihat plugin CorrelationMeter, yang hanya me plot amplitudo saluran kiri terhadap amplitudo saluran kanan untuk menunjukkan "bagai stereo" sinyal.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AudioMixerDemoCorrelationMeter.png" alt=""> 
+       </figure> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AudioMixerDemoMultiband.jpg" alt=""> 
+       </figure> 
+       <p>Kiri: GUI Khusus Korelasi Login</p> 
+       <p>Kanan: Equalizer GUI dengan analisis spektrum overlaid ( kurva hijau adalah sumber, merah diproses).</p> 
+       <p>Pada titik ini kita juga ingin menunjukkan bahwa efek Equalizer dan Multiband disimpan secara sengaja sederhana dan tidak dioptimalkan, tetapi kami pikir mereka berfungsi sebagai contoh yang baik dari UI yang lebih kompleks yang didukung oleh sistem plugin. Ada banyak pekerjaan masih dalam melakukan optimasi spesifik platform yang relevan, ton parameter tweak untuk membuatnya jatuh benar-benar tepat dan merespon dengan cara yang paling musik dll.... Kami juga dapat menerapkan beberapa efek ini sebagai plugin built-in di Unity pada beberapa titik hanya untuk kenyamanan meningkatkan repertoire standar Unity, tetapi kami dengan tulus berharap bahwa pembaca juga akan mengambil tantangan untuk membuat beberapa plugin yang benar-benar mengagumkan - dan yang tahu, mereka mungkin pada beberapa titik berakhir sebagai plugin built-in.;-)</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AudioMixerDemoConvolutionReverb.png" alt=""> 
+       </figure> 
+       <p>Convolution reverb contoh plugin. Respon impuls adalah menentukan kebisingan acak, didefinisikan oleh parameter. Ini hanya untuk tujuan demonstrasi, sebagai plugin produksi harus memungkinkan pengguna untuk memuat impuls yang direkam sewenang-wenang, algoritma konveksi yang mendasari tetap sama tidak pernah.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AudioMixerDemoLoudnessMeter.png" alt=""> 
+       </figure> 
+       <p>Contoh tingkat pengukuran alat pemantauan kekerasan pada skala 3 waktu yang berbeda. Juga hanya untuk tujuan demonstrasi, tetapi tempat yang baik untuk mulai membangun alat monitor yang sesuai dengan standarisasi kekeringan modern. Kode rendering kurva dibangun menjadi Unity.</p> 
+       <h3>Sinkronisasikan ke jam DSP</h3> 
+       <p>Waktu untuk beberapa latihan menyenangkan. Mengapa tidak menggunakan sistem plugin untuk menghasilkan suara bukan hanya memprosesnya? Mari kita coba untuk melakukan beberapa bassline sederhana dan drum synthesizers yang harus akrab bagi orang-orang yang mendengarkan asam trance - beberapa klon sederhana dari beberapa sintetik utama yang mendefinisikan genre ini. Plugin_TeeBee.cpp Sinst sederhana ini hanya menghasilkan pola dengan catatan acak dan memiliki beberapa parameter untuk mengubah filter, amplop dan sebagainya di mesin sintesis. Sekali lagi, kita tidak akan membahas rincian tersebut di sini, tetapi hanya menunjukkan bahwa state-&gt;dsptick parameter dibaca di ProcessCallback untuk menentukan posisi di "song". Counter ini adalah posisi sampel global, jadi kami hanya membaginya dengan panjang setiap catatan yang ditentukan dalam sampel dan api acara catatan ke mesin sintesis ketika divisi ini memiliki sisa nol. Cara ini, semua efek plugin tetap disinkronkan ke jam berbasis sampel yang sama, dan jika Anda akan misalnya memainkan sepotong musik yang telah ditentukan dengan tempo yang diketahui melalui efek tersebut, Anda dapat menggunakan info waktu untuk menerapkan efek filter tempo-synchronized atau penundaan musik.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AudioMixerDemoTeeBee3o3.png" alt=""> 
+       </figure> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AudioMixerDemoTeeDee9o9.png" alt="Simple bassline and drum synthesizers to demonstrate tempo-synchronized effects."> 
+        <figcaption>
+          Sederhana bassline dan drum synthesizers untuk menunjukkan efek sinkronisasi tempo. 
+        </figcaption> 
+       </figure> 
+       <h2>Spatialization</h2> 
+       <p>SDK plugin audio asli adalah fondasi SDK Spatialization yang memungkinkan mengembangkan efek spasialisasi kustom yang sesaat per <span class="tooltip"><strong>audio source</strong><span class="tooltiptext">Komponen yang memainkan kembali Klip Audio dalam adegan ke pendengaran audio atau melalui mixer audio. <a class="tooltipMoreInfoLink" href="class-AudioSource.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AudioSource">Glossary</a></span></span></span>. Informasi lebih lanjut tentang ini dapat ditemukan <a href="AudioSpatializerSDK.html">here</a>.</p> 
+       <h2>Outlook</h2> 
+       <p>Ini hanya awal upaya untuk membuka bagian sistem suara untuk berkinerja tinggi kode asli. Kami memiliki rencana untuk mengintegrasikan ini di bagian lain dari Unity serta untuk membuat efek yang dapat digunakan di luar mixer serta memperluas SDK untuk mendukung jenis parameter lain daripada mengapung dengan dukungan untuk GUI default yang lebih baik serta penyimpanan data biner.</p> 
+       <p>Memiliki banyak menyenangkan membuat plugin Anda sendiri. Harapan untuk melihat mereka pada <span class="tooltip"><strong>asset store</strong><span class="tooltiptext">Sebuah perpustakaan yang berkembang dari aset gratis dan komersial yang diciptakan oleh Unity dan anggota komunitas. Menawarkan berbagai aset, dari tekstur, model dan animasi ke seluruh contoh proyek, tutorial dan ekstensi Editor. <a class="tooltipMoreInfoLink" href="AssetStore.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AssetStore">Glossary</a></span></span></span>. ;-)</p> 
+       <h2>“Disclaimer”</h2> 
+       <p>Meskipun ada banyak kesamaan dalam desain, SDK audio asli Unity tidak dibangun di atas SDK plugin lain seperti Steinberg VST atau Apple AudioUnit. Perlu disebutkan bahwa itu akan mudah bagi pembaca yang tertarik untuk menerapkan pembungkus dasar untuk ini menggunakan SDK ini yang memungkinkan menggunakan plugin tersebut untuk digunakan dalam Unity. Hal ini bukan salah satu tim Unity yang bertujuan untuk dilakukan. Hosting yang tepat dari setiap plugin dengan cepat mendapatkan sangat kompleks, dan berurusan dengan semua selisih pesanan panggilan yang diharapkan dan menangani jendela GUI kustom yang didasarkan pada kode asli dengan cepat tumbuh dengan lompatan dan batas yang membuatnya kurang berguna sebagai kode contoh.</p> 
+       <p>Meskipun kita memahami bahwa itu berpotensi cukup berguna untuk memuat plugin VST atau AU Anda atau bahkan efek untuk hanya memomunikkan / menguji desain suara, ingatlah bahwa menggunakan VST / AU juga membatasi Anda untuk beberapa platform tertentu. Potensi menulis plugin audio berdasarkan SDK Unity adalah bahwa itu meluas ke semua platform yang mendukung pencampuran perangkat lunak dan kode asli yang dimuat secara dinamis. Yang mengatakan, ada kasus penggunaan yang valid untuk memotivasi desain suara awal dengan alat favorit Anda sebelum memutuskan untuk mencurahkan waktu untuk mengembangkan plugin kustom (atau hanya dapat menggunakan plugin metering di editor yang tidak mengubah suara dengan cara apa pun), jadi jika ada yang ingin membuat solusi yang bagus untuk itu, silakan lakukan.</p> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2018-10-19 Login</span></p></li> 
+        <li><p><span class="page-history">MonoDevelop digantikan oleh Visual Studio dari 2018.1</span></p></li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="AudioMixerUsage.html"></a></span> 
+         <div class="tip">
+           Ikhtisar Penggunaan dan API 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="AudioSpatializerSDK.html"></a></span> 
+         <div class="tip">
+           Photogallery Login 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

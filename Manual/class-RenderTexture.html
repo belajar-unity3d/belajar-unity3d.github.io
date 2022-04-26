@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Tekstur render</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="Textures.html">Textures</a></li> 
+         <li>Render Tekstur</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="class-StreamingController.html"></a></span> 
+          <div class="tip">
+            Web server 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="class-CustomRenderTexture.html"></a></span> 
+          <div class="tip">
+            Tekstur Render Kustom 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Render Tekstur</h1> 
+       <!--BeginSwitchLink--> 
+       <a href="../ScriptReference/RenderTexture.html" title="Go to RenderTexture page in the Scripting Reference" class="switch-link gray-btn sbtn left">Switch to Scripting</a> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>A <strong>Render Texture</strong> adalah jenis <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-TextureImporter.html">Texture</a><span class="tooltiptext">Gambar yang digunakan ketika membuat elemen GameObject, Sprite, atau UI. Tekstur sering diterapkan pada permukaan mesh untuk memberikan detail visual. <a href="class-TextureImporter.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#texture">Glossary</a></span></span></span> yang membuat Unity dan pembaruan pada waktu yang berjalan. Untuk menggunakan Tekstur Render, buat Tekstur Render baru menggunakan <strong>Assets &gt; Create &gt; Render Texture</strong> dan menetapkannya menjadi <strong>Target Texture</strong> dalam komponen <span class="tooltip"><a href="class-Camera.html">Kamera</a><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Camera">Glossary</a></span></span></span> Anda. Kemudian Anda dapat menggunakan Render Tekstur dalam <span class="tooltip"><strong>Material</strong><span class="tooltiptext">Aset yang menentukan bagaimana permukaan harus diberikan. <a href="class-Material.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Material">Glossary</a></span></span></span> seperti Tekstur biasa.</p> 
+       <h2>Properties</h2> 
+       <p><strong>Render Texture</strong> <span class="tooltip"><strong>inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span> mirip dengan <a href="class-TextureImporter.html">Tekstur Inspektur</a>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Inspector-RenderTexture.png" alt="The Render Texture Inspector is almost identical to the Texture Inspector"> 
+        <figcaption>
+          Inspektur Tekstur Render hampir identik dengan Inspektur Tekstur 
+        </figcaption> 
+       </figure> 
+       <p>Inspektur Tekstur Render menampilkan konten saat ini Tekstur Render secara real-time dan dapat menjadi alat debugging yang tak ternilai untuk efek yang menggunakan tekstur render.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong><em>Property:</em></strong></th> 
+          <th style="text-align:left;"><strong><em>Function:</em></strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Dimension</strong></td> 
+          <td style="text-align:left;">Dimensiitas (tipe) dari tekstur render.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>2D</strong></td> 
+          <td style="text-align:left;">Tekstur render adalah dua dimensi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Cube</strong></td> 
+          <td style="text-align:left;">Tekstur render adalah peta kubus.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>3D</strong></td> 
+          <td style="text-align:left;">Tekstur render adalah tiga dimensi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Size</strong></td> 
+          <td style="text-align:left;">Ukuran tekstur render dalam <span class="tooltip"><strong>pixels</strong><span class="tooltiptext">Unit terkecil dalam gambar komputer. Ukuran piksel tergantung pada resolusi layar Anda. Pencahayaan pixel dihitung pada setiap piksel layar. <a class="tooltipMoreInfoLink" href="ShadowPerformance.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#pixel">Glossary</a></span></span></span>. Anda hanya dapat memasukkan nilai power-of-dua, seperti 128 dan 256.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Anti-Aliasing</strong></td> 
+          <td style="text-align:left;">Jumlah sampel anti-aliasing. Anda dapat memilih <strong>None</strong>, <strong>2 samples</strong>, <strong>4 samples</strong>, atau <strong>8 samples</strong>. Jika Anda memilih <strong>None</strong>, Unity tidak menerapkan anti-aliasing.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Enable Compatible Color Format</strong></td> 
+          <td style="text-align:left;">Aktifkan kotak centang ini untuk membuat Unity menerapkan format yang kompatibel dengan tekstur render jika <strong>Color Format</strong> didefinisikan tidak didukung oleh platform.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Color Format</strong></td> 
+          <td style="text-align:left;">Format warna tekstur render.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Depth Buffer</strong></td> 
+          <td style="text-align:left;">Format penyangga kedalaman. Anda dapat memilih <strong>No depth buffer</strong>, <strong>At least 16 bits depth (no stencil)</strong>, atau <strong>At least 24 bits depth (with stencil)</strong>. <strong>stencil buffer</strong> adalah penyangga tujuan umum yang memungkinkan Anda untuk menyimpan integer 8-bit tambahan (0-255) untuk setiap piksel yang ditarik ke layar.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Enable Mip Maps</strong></td> 
+          <td style="text-align:left;">Periksa kotak ini untuk membuat tekstur render menghasilkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Auto generate Mip Maps</strong></td> 
+          <td style="text-align:left;">Periksa kotak ini untuk secara otomatis mengisi <a href="texture-mipmaps-introduction.html">mipmaps</a> yang dihasilkan dengan data yang relevan. Jika Anda tidak mengaktifkan ini, Anda harus menggunakan fungsi untuk mengisi mipmaps secara manual. Atau, pilih yang mip untuk render ke ketika Anda memanggil berbagai fungsi <code>SetRenderTarget</code>. Untuk informasi lebih lanjut tentang fungsi <code>SetRenderTarget</code>, lihat dan .</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Dynamic Scaling</strong></td> 
+          <td style="text-align:left;">Periksa kotak ini untuk membiarkan <a class="tooltipMoreInfoLink" href="DynamicResolution.html">skala resolusi dinamis</a> mengubah ukuran tekstur render. Jika Anda tidak mengaktifkan ini, tekstur render mempertahankan ukuran yang sama terlepas dari pengaturan <span class="tooltip"><strong>Dynamic Resolution</strong><span class="tooltiptext">Pengaturan kamera yang memungkinkan Anda untuk menargetkan render individu skala dinamis, untuk mengurangi beban kerja pada GPU. <a href="DynamicResolution.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#dynamicresolution">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Wrap Mode</strong></td> 
+          <td style="text-align:left;">Kontrol bagaimana tekstur dibungkus:</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Repeat</strong></td> 
+          <td style="text-align:left;">Ubin tekstur untuk membuat pola berulang.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Clamp</strong></td> 
+          <td style="text-align:left;">Peregangan tepi tekstur. Ini berguna untuk mencegah artefak pembungkus ketika Anda memetakan gambar ke objek dan Anda tidak ingin tekstur ubin.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Mirror</strong></td> 
+          <td style="text-align:left;">Ubin tekstur untuk membuat pola pengulangan yang mencerminkan tekstur di setiap batas bilangan bulat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Mirror Once</strong></td> 
+          <td style="text-align:left;">Cermin tekstur sekali, dan kemudian jatuh kembali ke menjepit.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Per-axis</strong></td> 
+          <td style="text-align:left;">Memungkinkan Anda mengatur mode bungkus yang berbeda untuk <strong>U axis</strong> dan <strong>V axis</strong>. Pilihan yang tersedia juga <strong>Repeat</strong>, <strong>Clamp</strong>, <strong>Mirror</strong> dan <strong>Mirror Once</strong>. Misalnya, ketika Anda menggunakan peta lingkungan sepanjang garis untuk <span class="tooltip"><strong>reflection probes</strong><span class="tooltiptext">Komponen rendering yang menangkap pandangan bulat dari sekitarnya di semua arah, seperti kamera. Gambar yang ditangkap kemudian disimpan sebagai kubus yang dapat digunakan oleh benda dengan bahan reflektif. <a class="tooltipMoreInfoLink" href="class-ReflectionProbe.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ReflectionProbe">Glossary</a></span></span></span>, berguna untuk memiliki <strong>Clamp</strong> pada koordinat vertikal (<strong>V axis</strong>), tetapi <strong>Repeat</strong> pada koordinat horisontal (<strong>U axis</strong>).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Filter Mode</strong></td> 
+          <td style="text-align:left;">Mengontrol bagaimana pengambilan tekstur menggunakan piksel terdekat. Pilihannya adalah:</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Point</strong></td> 
+          <td style="text-align:left;">Menggunakan pixel terdekat. Ini membuat tekstur muncul pixelated.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Bilinear</strong></td> 
+          <td style="text-align:left;">Menggunakan rata-rata berbobot empat texels terdekat. Ini membuat tekstur tampak kabur ketika Anda memperbesarnya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Trilinear</strong></td> 
+          <td style="text-align:left;">Menggunakan rata-rata berbobot dua mips terdekat, yang disaring bilinearly. Ini menciptakan transisi lunak antara mips, dengan biaya penampilan sedikit lebih kabur.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><span class="tooltip"><strong>Aniso Level</strong><span class="tooltiptext">Tingkat penyaringan anisotropic (AF) tekstur. Memungkinkan Anda untuk meningkatkan kualitas tekstur saat melihat tekstur pada sudut curam. Baik untuk tekstur lantai dan tanah. <a class="tooltipMoreInfoLink" href="class-TextureImporter.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnisoLevel">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Tingkat penyaringan Anisotropic dari tekstur. Ini meningkatkan kualitas tekstur saat Anda melihat tekstur pada sudut yang curam. Baik untuk lantai, tanah, atau tekstur jalan.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Example</h2> 
+       <p>Untuk membuat kamera arena hidup dalam permainan Anda:</p> 
+       <ol> 
+        <li>Buat aset Tekstur Render baru menggunakan <strong>Assets &gt;Create &gt;Render Texture</strong>.</li> 
+        <li>Buat Kamera baru menggunakan <strong>GameObject &gt; Camera</strong>.</li> 
+        <li>Menetapkan Tekstur Render ke <strong>Target Texture</strong> Kamera baru.</li> 
+        <li>Buat kubus 3D baru menggunakan <strong>GameObject &gt; 3D Object &gt; Cube</strong>.</li> 
+        <li>Seret Tekstur Render ke kubus untuk menciptakan Bahan yang menggunakan tekstur render.</li> 
+        <li>Masukkan Mode Play, dan amati tekstur kubus diperbarui secara real-time berdasarkan output Kamera baru.</li> 
+       </ol> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/RenderTextureLiveCam.jpg" alt="Render Textures are set up as demonstrated above"> 
+        <figcaption>
+          Tekstur Render ditetapkan seperti yang ditunjukkan di atas 
+        </figcaption> 
+       </figure> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2019–04–11 Login</span></p></li> 
+        <li><p><span class="page-history">Inspektur Tekstur Render berubah dalam Unity 2017.2</span></p></li> 
+        <li><p><span class="page-history">Kemampuan untuk menerapkan format GPU ke Tekstur Render ditambahkan pada Unity 2019. 1 Artikel</span></p></li> 
+       </ul> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="class-StreamingController.html"></a></span> 
+         <div class="tip">
+           Web server 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="class-CustomRenderTexture.html"></a></span> 
+         <div class="tip">
+           Tekstur Render Kustom 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

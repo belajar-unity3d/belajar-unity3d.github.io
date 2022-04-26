@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Perakitan Format File Definisi</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="ScriptingSection.html">Scripting</a></li> 
+         <li><a href="unity-architecture.html">Arsitektur persatuan</a></li> 
+         <li><a href="script-compilation.html">Joomla</a></li> 
+         <li><a href="ScriptCompilationAssemblyDefinitionFiles.html">Definisi perakitan</a></li> 
+         <li>Format File Definisi Perakitan</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="class-AssemblyDefinitionReferenceImporter.html"></a></span> 
+          <div class="tip">
+            Komponen Referensi Definisi Perakitan 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="Plugins.html"></a></span> 
+          <div class="tip">
+            Plug-ins 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Format File Definisi Perakitan</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Perakitan Definisi dan Majelis aset Referensi Definisi adalah file JSON. Anda dapat mengedit file aset di dalam Editor Unity menggunakan jendela <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>, tetapi Anda juga dapat memodifikasi konten JSON dengan alat eksternal.</p> 
+       <h2>Definisi Majelis JSON</h2> 
+       <p>Definisi Perakitan adalah objek JSON dengan bidang berikut:</p> 
+       <h4>Login Login</h4> 
+       <p>Opsional. Default untuk palsu. Sitemap<a href="class-AssemblyDefinitionImporter.html#general">Memungkinkan Kode 'tidak aman'</a>.</p> 
+       <pre><code class="yml">"allowUnsafeCode" : true
+</code></pre> 
+       <h4>bool autoReferenced</h4> 
+       <p>Opsional. Default untuk benar. Sitemap<a href="class-AssemblyDefinitionImporter.html#general">Auto Referenced</a>.</p> 
+       <pre><code class="yml">"autoReferenced": false
+</code></pre> 
+       <h4>mendefinisikanConstraints string[]</h4> 
+       <p>Opsional. Simbol yang berfungsi sebagai batasan. Bisa kosong. Sitemap<a href="class-AssemblyDefinitionImporter.html#define-constraints">Define Constraints</a>.</p> 
+       <pre><code class="yml">"defineConstraints": [
+        "UNITY_2019",
+        "UNITY_INCLUDE_TESTS"
+    ]
+</code></pre> 
+       <p><a name="exclude-platforms"></a></p> 
+       <h4>excludePlatforms string[]</h4> 
+       <p>Opsional. Nama platform string untuk mengecualikan atau array kosong. Array pengecualian harus kosong jika <a href="#include-platforms">includePlatforms</a> mengandung nilai. Anda dapat mengambil string nama platform dengan fungsi <a href="ScriptRef:CompilationPipeline.GetAssemblyDefinitionPlatforms.html">KompilasiPipeline.GetAssemblyDefinitionPlatforms</a> (dukungan untuk platform harus dipasang untuk Editor saat memanggil fungsi ini.) Sitemap<a href="class-AssemblyDefinitionImporter.html#platforms">Platforms</a>.</p> 
+       <pre><code class="yml">"includePlatforms": [],
+"excludePlatforms": [
+        "iOS",
+        "macOSStandalone",
+        "tvOS"
+]
+</code></pre> 
+       <p><a name="include-platforms"></a></p> 
+       <h4>termasuk stringPlatforms[]</h4> 
+       <p>Opsional. Nama platform string untuk menyertakan atau array kosong. array termasukPlatforms harus kosong jika <a href="#exclude-platforms">excludePlatforms</a> mengandung nilai. Anda dapat mengambil string nama platform dengan fungsi <a href="ScriptRef:CompilationPipeline.GetAssemblyDefinitionPlatforms.html">KompilasiPipeline.GetAssemblyDefinitionPlatforms</a> (dukungan untuk platform harus dipasang untuk Editor saat memanggil fungsi ini.) Sitemap<a href="class-AssemblyDefinitionImporter.html#platforms">Platforms</a>.</p> 
+       <pre><code class="yml">"includePlatforms": [
+        "Android",
+        "LinuxStandalone64",
+        "WebGL"
+],
+"excludePlatforms": []
+</code></pre> 
+       <h4>nama string</h4> 
+       <p>Sitemap Sitemap<a href="https://docs.microsoft.com/en-us/dotnet/standard/assembly/names">nama perakitan hukum</a>.</p> 
+       <pre><code class="yml">"name" : "MyAssemblyName" 
+</code></pre> 
+       <h4>noEngineReferences bool</h4> 
+       <p>Opsional. Default untuk palsu. Sitemap<a href="class-AssemblyDefinitionImporter.html#general">Tidak ada Referensi Mesin</a>. </p> 
+       <pre><code class="yml">"noEngineReferences": false
+</code></pre> 
+       <h4>opsionalUnityReferences string[]</h4> 
+       <p>Opsional. Dalam versi sebelumnya Unity, bidang ini serialisasi opsi <strong>Unity References : Test Assemblies</strong> yang digunakan untuk menunjuk perakitan sebagai perakitan uji. Sebagai Unity 2019.3, opsi tidak lagi ditampilkan. Bidang ini masih didukung, tetapi jika aset direserialisasi dalam versi baru dari Editor Unity, lapangan diganti oleh referensi perakitan yang setara.</p> 
+       <p>Lihat <a href="ScriptCompilationAssemblyDefinitionFiles.html#create-test-assembly">Membuat perakitan pengujian</a> untuk informasi lebih lanjut tentang rakitan uji.</p> 
+       <pre><code class="yml">"optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+</code></pre> 
+       <p><a name="override-references"></a></p> 
+       <h4>overrideReferences bool</h4> 
+       <p>Opsional. Set untuk benar jika <a href="#precompiled-references">precompiledReferences</a> mengandung nilai. Default untuk palsu.</p> 
+       <p>Lihat [Override Referensi].</p> 
+       <pre><code class="yml">"overrideReferences": true
+</code></pre> 
+       <p><a name="precompiled-references"></a></p> 
+       <h4>precompiledReferences string[]</h4> 
+       <p>Opsional. Nama file perpustakaan DLL referensi termasuk ekstensi, tetapi tanpa elemen jalur lainnya. Bisa kosong. array ini diabaikan kecuali Anda mengatur <a href="#override-references">overrideReferences</a> untuk benar.</p> 
+       <p>See <a href="class-AssemblyDefinitionImporter.html#assembly-references">Referensi Perakitan</a>.</p> 
+       <pre><code class="yml">"overrideReferences": true,
+"precompiledReferences": [
+        "Newtonsoft.Json.dll",
+        "nunit.framework.dll"
+]
+</code></pre> 
+       <h4>string referensi[]</h4> 
+       <p>Opsional. Referensi ke rakitan lain yang dibuat dengan aset Majelis Definisi. Anda dapat menggunakan GUID dari file aset Majelis Definisi atau nama perakitan (sebagai didefinisikan oleh bidang <a href="class-AssemblyDefinitionImporter.html#name">name</a> dari Definisi Perakitan). Anda harus menggunakan formulir yang sama untuk semua referensi dalam daftar. Bisa kosong.</p> 
+       <p>Anda dapat menggunakan fungsi <a href="ScriptRef:AssetDatabase.AssetPathToGUID.html">AssetDatabase.AssetPathToGUID</a> untuk mengambil GUID dari aset. (The GUID juga merupakan bagian dari metadata yang terkait dengan setiap aset.)</p> 
+       <p>Perhatikan bahwa Editor menampilkan opsi <strong>Use GUIDs</strong> dalam Inspektur Definisi Perakitan. Opsi ini tidak serialisasi dalam file JSON yang terkait. Sebagai gantinya, pilihannya diferensikan dari bentuk referensi yang ditemukan di file.</p> 
+       <p>See <a href="ScriptCompilationAssemblyDefinitionFiles.html#reference-another-assembly">Mengacu perakitan lain</a>.</p> 
+       <p>Menggunakan GUID:</p> 
+       <pre><code class="yml">"references": [
+        "GUID:17b36165d09634a48bf5a0e4bb27f4bd",
+        "GUID:b470eee7144904e59a1064b70fa1b086",
+        "GUID:2bafac87e7f4b9b418d9448d219b01ab",
+        "GUID:27619889b8ba8c24980f49ee34dbb44a",
+        "GUID:0acc523941302664db1f4e527237feb3"
+]
+</code></pre> 
+       <p>Menggunakan nama perakitan:</p> 
+       <pre><code class="yml">"references": [
+        "Unity.CollabProxy.Editor",
+        "AssemblyB",
+        "UnityEngine.UI",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner"
+]
+</code></pre> 
+       <h4>objek versiDefines[]</h4> 
+       <p>Opsional. Berisi objek untuk setiap versi mendefinisikan. Objek ini memiliki tiga bidang:</p> 
+       <ul> 
+        <li>nama:string - nama sumber daya</li> 
+        <li>ekspresi:string - ekspresi mendefinisikan versi atau rentang versi sumber daya</li> 
+        <li>mendefinisikan:string - simbol untuk mendefinisikan</li> 
+       </ul> 
+       <p>See <a href="class-AssemblyDefinitionImporter.html#version-defines">Versi Defines</a>.</p> 
+       <pre><code class="yml">"versionDefines": [
+    {
+        "name": "com.unity.ide.vscode",
+        "expression": "[1.7,2.4.1]",
+        "define": "MY_SYMBOL"
+    },
+    {
+        "name": "com.unity.test-framework",
+        "expression": "[2.7.2-preview.8]",
+        "define": "TESTS"
+    }
+]
+</code></pre> 
+       <h3>Contoh Majelis Definisi JSON string</h3> 
+       <p>Menggunakan nama perakitan untuk referensi ke Definisi Perakitan lain dan <em>includePlatforms</em>:</p> 
+       <pre><code class="yml">{
+    "name": "BeeAssembly",
+    "references": [
+        "Unity.CollabProxy.Editor",
+        "AssemblyB",
+        "UnityEngine.UI",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner"
+    ],
+    "includePlatforms": [
+        "Android",
+        "LinuxStandalone64",
+        "WebGL"
+    ],
+    "excludePlatforms": [],
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Newtonsoft.Json.dll",
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_2019",
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.unity.ide.vscode",
+            "expression": "[1.7,2.4.1]",
+            "define": "MY_SYMBOL"
+        },
+        {
+            "name": "com.unity.test-framework",
+            "expression": "[2.7.2-preview.8]",
+            "define": "TESTS"
+        }
+    ],
+    "noEngineReferences": false
+}
+</code></pre> 
+       <p>Menggunakan GUIDS untuk referensi ke Definisi Perakitan lain dan <em>excludePlatforms</em>:</p> 
+       <pre><code class="yml">{
+    "name": "BeeAssembly",
+    "references": [
+        "GUID:17b36165d09634a48bf5a0e4bb27f4bd",
+        "GUID:b470eee7144904e59a1064b70fa1b086",
+        "GUID:2bafac87e7f4b9b418d9448d219b01ab",
+        "GUID:27619889b8ba8c24980f49ee34dbb44a",
+        "GUID:0acc523941302664db1f4e527237feb3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [
+        "iOS",
+        "macOSStandalone",
+        "tvOS"
+    ],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Newtonsoft.Json.dll",
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_2019",
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.unity.ide.vscode",
+            "expression": "[1.7,2.4.1]",
+            "define": "MY_SYMBOL"
+        },
+        {
+            "name": "com.unity.test-framework",
+            "expression": "[2.7.2-preview.8]",
+            "define": "TESTS"
+        }
+    ],
+    "noEngineReferences": false
+}
+</code></pre> 
+       <h2>Majelis Definisi Referensi JSON</h2> 
+       <p>Referensi Definisi Perakitan adalah objek JSON dengan bidang berikut:</p> 
+       <h4>string referensi</h4> 
+       <p>Sitemap Definisi perakitan untuk referensi. Sitemap<a href="class-AssemblyDefinitionReferenceImporter.html">Referensi Definisi Perakitan</a>.</p> 
+       <p>Anda dapat merujuk aset Majelis Definisi menggunakan nama perakitan atau GUID aset. Anda dapat menggunakan fungsi <a href="ScriptRef:AssetDatabase.AssetPathToGUID.html">AssetDatabase.AssetPathToGUID</a> untuk mengambil GUID dari aset. (The GUID juga merupakan bagian dari metadata yang terkait dengan setiap aset.)</p> 
+       <p>Menggunakan nama perakitan:</p> 
+       <pre><code class="yml">{
+    "reference": "AssemblyA"
+}
+</code></pre> 
+       <p>Menggunakan Majelis Definisi aset GUID</p> 
+       <pre><code class="yml">{
+    "reference": "GUID:f4de40948f4904ecb94b59dd38aab8a1"
+}
+</code></pre> 
+       <p>See <a href="ScriptCompilationAssemblyDefinitionFiles.html#create-asmref">Membuat aset acuan Definisi Perakitan</a>.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="class-AssemblyDefinitionReferenceImporter.html"></a></span> 
+         <div class="tip">
+           Komponen Referensi Definisi Perakitan 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="Plugins.html"></a></span> 
+         <div class="tip">
+           Plug-ins 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

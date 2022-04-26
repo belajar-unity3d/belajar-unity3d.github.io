@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Dikelola kode pengupasan</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="ScriptingSection.html">Scripting</a></li> 
+         <li><a href="unity-architecture.html">Arsitektur persatuan</a></li> 
+         <li><a href="scripting-backends.html">Scripting backends</a></li> 
+         <li>Dikelola kode pengupasan</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="ScriptingRestrictions.html"></a></span> 
+          <div class="tip">
+            Batasan Scripting 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="unity-linker.html"></a></span> 
+          <div class="tip">
+            Linker Unity 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Dikelola kode pengupasan</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Selama proses build, Unity menghapus kode yang tidak dapat digunakan atau tidak terjangkau melalui proses yang disebut pengupasan kode yang dikelola, yang secara signifikan dapat menurunkan ukuran akhir aplikasi Anda. Garis kode terkelola menghapus kode dari rakitan yang dikelola, termasuk rak yang dibangun dari C # <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> dalam proyek Anda, perakitan yang merupakan bagian dari paket dan plugin, dan perakitan di .NET Framework.</p> 
+       <p>Unity menggunakan alat yang disebut Unity linker untuk melakukan analisis statis dari kode di rakitan proyek Anda. Analisis statis mengidentifikasi setiap kelas, bagian kelas, fungsi, atau bagian fungsi yang tidak dapat dicapai selama eksekusi. Analisis ini hanya mencakup kode yang ada pada waktu build karena kode yang dihasilkan runtime tidak ada ketika Unity melakukan analisis statis.</p> 
+       <p>Anda dapat mengkonfigurasi tingkat pengupasan kode Unity melakukan untuk proyek Anda menggunakan pengaturan <strong>Managed Stripping Level</strong>. Untuk mencegah Unity menghapus bagian spesifik dari kode Anda, gunakan anotasi untuk menunjukkan bagian mana dari basis kode Anda, linker Unity harus melestarikan. Untuk informasi lebih lanjut, lihat <a href="#unity-linker">WordPress.org</a>.</p> 
+       <h2>Konfigurasikan pengupasan kode yang dikelola</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/managed-code-stripping-level.png" alt="The Managed Stripping Level property"> 
+        <figcaption>
+          Properti Tingkat Stripping yang Dikelola 
+        </figcaption> 
+       </figure> 
+       <p>Properti <strong>Managed Stripping Level</strong> menentukan seperangkat aturan yang disatukan linker berikut ketika menganalisis dan menggariskan kode aplikasi Anda. Ketika Anda meningkatkan pengaturan dari <strong>Minimal</strong> ke <strong>High</strong>, aturan memungkinkan penghubung untuk mencari melalui lebih banyak perakitan untuk kode yang tidak terjangkau. Linker Unity menghapus lebih banyak kode pada pengaturan yang lebih tinggi yang mengurangi ukuran akhir dari build Anda, meskipun pencarian yang diperluas berarti bahwa setiap build membutuhkan lebih lama untuk menghasilkan.</p> 
+       <p>Untuk mengubah properti <strong>Managed Stripping Level</strong>:</p> 
+       <ol> 
+        <li><strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Player</strong>.</li> 
+        <li>Dalam Pengaturan lain, arahkan ke kepala Optimisasi.</li> 
+        <li>Mengatur properti <strong>Managed Stripping Level</strong> dengan nilai yang diinginkan.</li> 
+       </ol> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property:</strong></th> 
+          <th style="text-align:left;"><strong>Function:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Disabled</strong></td> 
+          <td style="text-align:left;">Unity tidak menghapus kode.<br><br> Pengaturan ini hanya terlihat dan merupakan pengaturan default jika Anda menggunakan backend skrip Mono.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Minimal</strong></td> 
+          <td style="text-align:left;">Satuan pencarian hanya UnityEngine dan . Perpustakaan kelas NET untuk kode yang tidak digunakan. Unity tidak menghapus kode user-written. Pengaturan ini adalah kemungkinan besar untuk menyebabkan perilaku runtime yang tidak terduga.<br><br> Pengaturan ini berguna untuk proyek di mana kegunaan adalah prioritas yang lebih tinggi daripada membangun ukuran. Ini adalah pengaturan default jika Anda menggunakan backend IL2CPP scripting.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Low</strong></td> 
+          <td style="text-align:left;">Satuan mencari beberapa rakitan pengguna dan semua UnityEngine dan. Perpustakaan kelas NET untuk kode yang tidak digunakan. Pengaturan ini berlaku seperangkat aturan yang menghapus beberapa kode yang tidak digunakan tetapi meminimalkan kemungkinan konsekuensi yang tidak diinginkan, seperti perubahan perilaku kode runtime yang menggunakan refleksi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Medium</strong></td> 
+          <td style="text-align:left;">Satuan sebagian mencari semua rakitan untuk menemukan kode yang tidak terjangkau. Pengaturan ini berlaku satu set aturan yang strip lebih banyak jenis pola kode untuk mengurangi ukuran build. Meskipun Unity tidak memupuk semua kode yang tidak terjangkau, pengaturan ini meningkatkan risiko perubahan perilaku yang tidak diinginkan atau tak terduga.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>High</strong></td> 
+          <td style="text-align:left;">Unity melakukan pencarian yang luas dari semua rakitan untuk menemukan kode yang tidak terjangkau. Pada pengaturan ini, Unity memprioritaskan pengurangan ukuran lebih dari stabilitas kode dan menghapus sebanyak mungkin kode.<br><br> Pencarian ini dapat memakan waktu lebih lama daripada untuk tingkat pengupasan yang lebih rendah. Gunakan pengaturan ini hanya untuk proyek di mana ukuran build kompak sangat penting. Uji aplikasi Anda secara menyeluruh dan gunakan atribut [Preserve] dan link.xml untuk memastikan bahwa linker Unity tidak strip kode vital.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="PreserveCodeWithAnnotations"></a></p> 
+       <h2>Mempertahankan kode menggunakan annotasi</h2> 
+       <p>Anda dapat menggunakan anotasi untuk mencegah tautan Unity dari pengupasan bagian spesifik kode Anda. Ini membantu jika aplikasi Anda menghasilkan kode runtime yang tidak ada ketika Unity melakukan analisis statis; misalnya, melalui <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/reflection">reflection</a>. Annotations baik memberikan panduan umum untuk linker Unity tentang pola kode mana itu tidak harus strip, atau instruksi untuk tidak strip bagian tertentu yang ditentukan dari kode.</p> 
+       <p>Ada dua pendekatan yang luas yang dapat Anda gunakan untuk mengumumkan kode Anda untuk menjaganya dari proses pengupasan kode yang dikelola:</p> 
+       <ul> 
+        <li>Anotasi akar mengidentifikasi bagian kode Anda sebagai akar. Linker Unity tidak strip kode apa pun yang ditandai sebagai akar. Anotasi akar kurang rumit untuk digunakan tetapi juga dapat menyebabkan tautan Unity melestarikan beberapa kode yang harus strip.</li> 
+        <li>Anotasi ketergantungan menentukan koneksi antara elemen kode. Anotasi ketergantungan dapat mengurangi jumlah over pelestarian kode dibandingkan dengan anotasi akar.</li> 
+       </ul> 
+       <p>Masing-masing teknik ini menyediakan lebih banyak kontrol atas jumlah kode yang disatukan strip linker pada tingkat pengupasan yang lebih tinggi dan mengurangi kemungkinan kode vital dilucuti. Anotasi sangat berguna ketika referensi kode Anda melalui refleksi, karena tautan Unity tidak dapat selalu mendeteksi penggunaan refleksi.</p> 
+       <p>Mempertahankan kode yang menggunakan refleksi atau menghasilkan kode lain pada runtime untuk secara signifikan mengurangi kemungkinan perilaku tak terduga ketika aplikasi Anda dieksekusi. Sebagai contoh pola refleksi yang dapat mengenali tautan Unity, lihat <a href="https://github.com/Unity-Technologies/linker/tree/unity-master/test/Mono.Linker.Tests.Cases/Reflection">Unity Intermediet Bahasa Linker refleksi paket tes</a>.</p> 
+       <p><a name="RootAnnotations"></a></p> 
+       <h2>anotasi akar</h2> 
+       <p>Anotasi akar memaksa penghubung Unity untuk mengobati elemen kode sebagai akar, yang tidak dilucuti dalam proses pengupasan kode. Ada dua jenis anotasi akar yang dapat Anda gunakan, tergantung apakah Anda perlu melestarikan jenis individu dengan konstruktor atau rakitan mereka:</p> 
+       <ul> 
+        <li> <a href="#PreserveAttribute">Preserve Attribute</a>: Annotates jenis individu sebagai akar untuk melestarikan mereka.</li> 
+        <li> <a href="#LinkXMLAnnotation">Link.xml</a>: Perakitan dan jenis atau entitas kode lainnya dalam rakitan tersebut sebagai akar untuk melestarikan mereka.</li> 
+       </ul> 
+       <p><a name="PreserveAttribute"></a></p> 
+       <h3>akar annotate menggunakan atribut Preserve</h3> 
+       <p>Gunakan atribut <a href="Scriptref:Scripting.PreserveAttribute">Preserve</a> untuk secara individual termasuk bagian spesifik dari kode Anda dari analisis statis Unity linker. Untuk mengumumkan sepotong kode dengan atribut ini, tambahkan <code>[Preserve]</code> segera sebelum bagian pertama dari kode yang ingin Anda simpan. Daftar berikut menjelaskan entitas apa yang disimpan tautan Unity ketika Anda mengumumkan elemen kode yang berbeda dengan atribut <code>[Preserve]</code>:</p> 
+       <ul> 
+        <li> <strong>Assembly</strong>: Mengamati semua jenis yang digunakan dan didefinisikan dalam perakitan. Untuk menetapkan atribut <code>[Preserve]</code> ke perakitan, letakkan deklarasi atribut di file C # yang disertakan dalam perakitan, sebelum deklarasi namespace.</li> 
+        <li> <strong>Type</strong>: Mengamati kelas atau tipe dan konstruktor default.</li> 
+        <li> <strong>Method</strong>: Mengamati metode, jenis yang menyatakan metode, jenis metode kembali, dan jenis semua argumennya.</li> 
+        <li> <strong>Property</strong>: Mengamati properti, jenis yang menyatakan properti, jenis nilai properti, dan metode yang mendapatkan dan mengatur nilai properti.</li> 
+        <li> <strong>Field</strong>: Mengamati lapangan, jenis lapangan, dan jenis yang menyatakan lapangan.</li> 
+        <li> <strong>Event</strong>: Mengamati acara, jenis yang menyatakan acara, ketik, jenis pengembalian acara, aksesor <code>[add]</code>, dan aksesor <code>[remove]</code>.</li> 
+        <li> <strong>Delegate</strong>: Mengamati jenis delegasi dan semua metode yang mendelegasikan invokes.</li> 
+       </ul> 
+       <p>Gunakan atribut <code>[Preserve]</code> ketika Anda ingin melestarikan jenis dan konstruktor default. Jika Anda ingin menyimpan satu atau yang lain tetapi tidak keduanya, gunakan file link.xml.</p> 
+       <p>Anda dapat mendefinisikan atribut <code>[Preserve]</code> di setiap perakitan dan di ruang nama. Anda dapat menggunakan UnityEngine. Login Kelas PreserveAttribute, menciptakan subkelas UnityEngine. Login Mengamati, atau membuat kelas Anda sendiri. Contoh:</p> 
+       <pre><code class="csharp">class Foo
+{
+    [Preserve]
+    public void PreservedMethod(){}
+}
+</code></pre> 
+       <p><a name="LinkXMLAnnotation"></a></p> 
+       <h3>Annotate roots menggunakan file Link XML</h3> 
+       <p>Anda dapat menyertakan .xml file link yang berhak.xml dalam proyek Anda untuk melestarikan daftar rakitan atau bagian rakitan tertentu. File link.xml harus ada di folder <code>Assets</code> atau subdirectory dari folder <code>Assets</code> dalam proyek Anda dan harus menyertakan tag <code>&lt;linker&gt;</code> dalam file. Linker Unity memperlakukan perakitan, jenis, atau anggota yang diawetkan dalam file link.xml sebagai jenis akar.</p> 
+       <p>Anda dapat menggunakan sejumlah file link.xml di proyek Anda. Akibatnya, Anda dapat menyediakan deklarasi pelestarian terpisah untuk setiap plugin. Anda tidak dapat menyertakan file link.xml dalam paket, tetapi Anda dapat merujuk paket perakitan dari file non-paket.xml.</p> 
+       <p>Contoh berikut menggambarkan cara yang berbeda yang dapat Anda deklarasikan jenis akar rakitan proyek menggunakan file link.xml:</p> 
+       <pre><code class="xml-doc">&lt;linker&gt;
+  &lt;!--Preserve types and members in an assembly--&gt;
+  &lt;assembly fullname="AssemblyName"&gt;
+    &lt;!--Preserve an entire type--&gt;
+    &lt;type fullname="AssemblyName.MethodName" preserve="all"/&gt;
+
+    &lt;!--No "preserve" attribute and no members specified means preserve all members--&gt;
+    &lt;type fullname="AssemblyName.MethodName"/&gt;
+
+    &lt;!--Preserve all fields on a type--&gt;
+    &lt;type fullname="AssemblyName.MethodName" preserve="fields"/&gt;
+
+    &lt;!--Preserve all fields on a type--&gt;
+    &lt;type fullname="AssemblyName.MethodName" preserve="methods"/&gt;
+
+    &lt;!--Preserve the type only--&gt;
+    &lt;type fullname="AssemblyName.MethodName" preserve="nothing"/&gt;
+
+    &lt;!--Preserving only specific members of a type--&gt;
+    &lt;type fullname="AssemblyName.MethodName"&gt;
+        
+      &lt;!--Fields--&gt;
+      &lt;field signature="System.Int32 FieldName" /&gt;
+
+      &lt;!--Preserve a field by name rather than signature--&gt;
+      &lt;field name="FieldName" /&gt;
+      
+      &lt;!--Methods--&gt;
+      &lt;method signature="System.Void MethodName()" /&gt;
+
+      &lt;!--Preserve a method with parameters--&gt;
+      &lt;method signature="System.Void MethodName(System.Int32,System.String)" /&gt;
+
+      &lt;!--Preserve a method by name rather than signature--&gt;
+      &lt;method name="MethodName" /&gt;
+
+      &lt;!--Properties--&gt;
+
+      &lt;!--Preserve a property, it's backing field (if present), 
+          getter, and setter methods--&gt;
+      &lt;property signature="System.Int32 PropertyName" /&gt;
+
+      &lt;property signature="System.Int32 PropertyName" accessors="all" /&gt;
+
+      &lt;!--Preserve a property, it's backing field (if present), and getter method--&gt;
+      &lt;property signature="System.Int32 PropertyName" accessors="get" /&gt;
+
+      &lt;!--Preserve a property, it's backing field (if present), and setter method--&gt;
+      &lt;property signature="System.Int32 PropertyName" accessors="set" /&gt;
+
+      &lt;!--Preserve a property by name rather than signature--&gt;
+      &lt;property name="PropertyName" /&gt;
+
+      &lt;!--Events--&gt;
+
+      &lt;!--Preserve an event, it's backing field (if present), add, and remove methods--&gt;
+      &lt;event signature="System.EventHandler EventName" /&gt;
+
+      &lt;!--Preserve an event by name rather than signature--&gt;
+      &lt;event name="EventName" /&gt;
+
+    &lt;/type&gt;
+  &lt;/assembly&gt;
+&lt;/linker&gt;
+</code></pre> 
+       <p>Contoh berikutnya menunjukkan bagaimana Anda dapat menyatakan seluruh rakitan:</p> 
+       <pre><code class="xml-doc">&lt;!--Preserve an entire assembly--&gt;
+  &lt;assembly fullname="AssemblyName" preserve="all"/&gt;
+
+  &lt;!--No "preserve" attribute and no types specified means preserve all--&gt;
+  &lt;assembly fullname="AssemblyName"/&gt;
+
+  &lt;!--Fully qualified assembly name--&gt;
+  &lt;assembly fullname="AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"&gt;
+    &lt;type fullname="AssemblyName.Foo" preserve="all"/&gt;
+  &lt;/assembly&gt;
+
+  &lt;!--Force an assembly to be processed for roots but don’t explicitly preserve anything in particular. Useful when the assembly isn't referenced.--&gt;
+  &lt;assembly fullname="AssemblyName" preserve="nothing"/&gt;
+</code></pre> 
+       <p>Contoh ini menunjukkan cara melestarikan jenis bersarang atau generik:</p> 
+       <pre><code class="xml-doc">&lt;!--Examples with generics--&gt;
+    &lt;type fullname="AssemblyName.G`1"&gt;
+
+      &lt;!--Preserve a field with generics in the signature--&gt;
+      &lt;field signature="System.Collections.Generic.List`1&amp;lt;System.Int32&amp;gt; FieldName" /&gt;
+
+      &lt;field signature="System.Collections.Generic.List`1&amp;lt;T&amp;gt; FieldName" /&gt;
+
+      &lt;!--Preserve a method with generics in the signature--&gt;
+      &lt;method signature="System.Void MethodName(System.Collections.Generic.List`1&amp;lt;System.Int32&amp;gt;)" /&gt;
+
+      &lt;!--Preserve an event with generics in the signature--&gt;
+      &lt;event signature="System.EventHandler`1&amp;lt;System.EventArgs&amp;gt; EventName" /&gt;
+
+    &lt;/type&gt;
+
+    &lt;!--Preserve a nested type--&gt;
+    &lt;type fullname="AssemblyName.H/Nested" preserve="all"/&gt;
+
+    &lt;!--Preserve all fields of a type if the type is used.  If the type isn't used, it will be removed--&gt;
+    &lt;type fullname="AssemblyName.I" preserve="fields" required="0"/&gt;
+
+    &lt;!--Preserve all methods of a type if the type is used. If the type isn't used, it will be removed--&gt;
+    &lt;type fullname="AssemblyName.J" preserve="methods" required="0"/&gt;
+
+    &lt;!--Preserve all types in a namespace--&gt;
+    &lt;type fullname="AssemblyName.SomeNamespace*" /&gt;
+
+    &lt;!--Preserve all types with a common prefix in their name--&gt;
+    &lt;type fullname="Prefix*" /&gt;
+</code></pre> 
+       <p><a name="AdditionalAssemblyXMLAttributes"></a></p> 
+       <h3>Tambahan Majelis XML atribut</h3> 
+       <p>Elemen <code>&lt;assembly&gt;</code> dari file link.xml memiliki tiga atribut tujuan khusus yang dapat Anda aktifkan untuk kontrol lebih atas annotasi.</p> 
+       <ul> 
+        <li> <code>ignoreIfMissing</code>: Gunakan atribut ini jika Anda perlu untuk menyatakan pelestarian untuk perakitan yang tidak ada selama semua pemain membangun.</li> 
+       </ul> 
+       <pre><code class="xml-doc">&lt;linker&gt;
+  &lt;assembly fullname="Foo" ignoreIfMissing="1"&gt;
+    &lt;type name="TypeName"/&gt;
+  &lt;/assembly&gt;
+&lt;/linker&gt;
+</code></pre> 
+       <ul> 
+        <li>Sitemap Dalam beberapa kasus, Anda mungkin ingin melestarikan entitas dalam perakitan hanya ketika perakitan itu direferensikan oleh perakitan lain. Gunakan atribut ini untuk melestarikan entitas dalam perakitan hanya ketika setidaknya satu jenis direferensikan dalam perakitan.<code>ignoreIfUnreferenced:</code> In some cases, you might want to preserve entities in an assembly only when that assembly is referenced by another assembly. Use this attribute to preserve the entities in an assembly only when at least one type is referenced in an assembly.</li> 
+       </ul> 
+       <pre><code class="xml-doc">&lt;linker&gt;
+  &lt;assembly fullname="Bar" ignoreIfUnreferenced="1"&gt;
+    &lt;type name="TypeName"/&gt;
+  &lt;/assembly&gt;
+&lt;/linker&gt;
+</code></pre> 
+       <ul> 
+        <li>Sitemap Ketika Anda mendefinisikan pelestarian untuk perakitan Metadata Windows Runtime (.winmd), Anda harus menambahkan atribut <code>windowsruntime:</code> ke elemen <code>windowsruntime</code> dalam file link.xml:<code>&lt;assembly&gt;</code> element in the link.xml file:</li> 
+       </ul> 
+       <pre><code class="xml-doc">&lt;linker&gt;
+  &lt;assembly fullname="Windows" windowsruntime="true"&gt;
+    &lt;type name="TypeName"/&gt;
+ &lt;/assembly&gt;
+&lt;/linker&gt;
+</code></pre> 
+       <p><a name="DependencyAnnotations"></a></p> 
+       <h2>Anotasi ketergantungan</h2> 
+       <p>Anotasi ketergantungan menentukan ketergantungan antara berbagai elemen kode. Anotasi ini berguna untuk menjaga pola kode yang dapat dianalisis secara statis, seperti refleksi. Anotasi ini juga memastikan bahwa elemen kode ini tidak terjaga ketika tidak ada elemen akar menggunakannya. Ada dua metode yang dapat Anda gunakan untuk mengubah bagaimana elemen kode proses tautan Unity:</p> 
+       <ul> 
+        <li> <a href="#AnnotationAttributes">Anotasi atribut</a>: atribut ini menunjukkan bahwa linker Unity harus melestarikan pola kode tertentu, seperti jenis apa pun yang berasal dari jenis annotated.</li> 
+        <li> <a href="#AlwaysLinkAssemblyAttribute">AlwaysLinkAssemblyAttribute</a>: gunakan atribut ini untuk menunjukkan bahwa linker Unity harus memproses perakitan bahkan jika tidak direferensikan oleh rakitan lain di Proyek Anda.</li> 
+       </ul> 
+       <p><a name="AnnotationAttributes"></a></p> 
+       <h3>Anotasi atribut</h3> 
+       <p>Atribut <code>[Preserve]</code> berguna untuk situasi ketika API selalu diperlukan. Atribut lain dapat berguna untuk lebih pelestarian umum. Misalnya, Anda dapat melestarikan semua jenis yang mengimplementasikan antarmuka tertentu dengan mengalokasikan antarmuka dengan <a href="../ScriptReference/Scripting.RequireImplementorsAttribute.html">Login Login</a>.</p> 
+       <p>Untuk mengalokasikan pola pengkodean tertentu, gunakan satu atau lebih atribut berikut:</p> 
+       <ul> 
+        <li> <a href="../ScriptReference/Scripting.RequireImplementorsAttribute.html">Login Login</a>: menandai semua jenis yang menerapkan antarmuka ini sebagai dependensi.</li> 
+        <li> <a href="../ScriptReference/Scriptref:scripting.RequireDerivedAttribute.html">RequireDerivedAttribute</a>: menandai semua jenis yang berasal dari jenis ini sebagai ketergantungan.</li> 
+        <li> <a href="../ScriptReference/Scriptref:scripting.RequiredInterfaceAttribute.html">RequiredInterfaceAttribute</a>: implementasi antarmuka tanda pada jenis sebagai ketergantungan.</li> 
+        <li> <a href="../ScriptReference/Scriptref:scripting.RequiredMemberAttribute.html">RequiredMemberAttribute</a>: menandai semua anggota tipe sebagai dependensi.</li> 
+        <li> <a href="Scriptref:scripting.RequireAttributeUsagesAttribute">RequireAttributeUsagesAttribute</a>: menandai atribut kustom sebagai dependensi.</li> 
+       </ul> 
+       <p>Anda dapat menggabungkan atribut ini dengan berbagai cara untuk mengontrol lebih tepat bagaimana tautan Unity melestarikan kode Anda.</p> 
+       <p><a name="AlwaysLinkAssemblyAttribute"></a></p> 
+       <h3>atribut AlwaysLinkAssembly</h3> 
+       <p>Atribut <code>[assembly: UnityEngine.Scripting.AlwaysLinkAssembly]</code> memaksa penghubung Unity untuk mencari perakitan terlepas dari apakah atau tidak perakitan direferensikan oleh perakitan lain yang disertakan dalam build. Anda dapat menerapkan atribut <a href="../ScriptReference/scripting.AlwaysLinkAssemblyAttribute.html">AlwaysLinkAssembly</a> hanya untuk perakitan.</p> 
+       <p>Atribut tidak langsung melestarikan kode dalam perakitan. Sebagai gantinya, atribut ini menginstruksikan tautan Unity untuk menerapkan aturan penandaan akar ke perakitan. Jika tidak ada elemen kode yang sesuai dengan aturan penandaan akar untuk perakitan, tautan Unity masih menghilangkan perakitan dari build.</p> 
+       <p>Gunakan atribut ini pada rakitan atau paket yang telah ditentukan yang mengandung satu atau lebih metode dengan atribut <code>[RuntimeInitializeOnLoadMethod]</code>, tetapi yang mungkin tidak mengandung jenis yang digunakan secara langsung atau tidak langsung dalam setiap <span class="tooltip"><strong>Scenes</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> dalam proyek.</p> 
+       <p>Jika perakitan mendefinisikan <code>[assembly: AlwaysLinkAssembly]</code> dan juga direferensikan oleh perakitan lain termasuk dalam build, atribut tidak memiliki efek pada output.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="ScriptingRestrictions.html"></a></span> 
+         <div class="tip">
+           Batasan Scripting 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="unity-linker.html"></a></span> 
+         <div class="tip">
+           Linker Unity 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

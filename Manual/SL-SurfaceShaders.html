@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Writing Surface Shaders</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="Shaders.html">Shaders</a></li> 
+         <li><a href="shader-writing.html">Menu Menu</a></li> 
+         <li>Menulis Permukaan Shaders</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="shader-writing-vertex-fragment.html"></a></span> 
+          <div class="tip">
+            Contoh naungan 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="SL-RenderPipeline.html"></a></span> 
+          <div class="tip">
+            Permukaan Shader dan jalur rendering 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Menulis Permukaan Shaders</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Di Pipelne Render Built-in, Surface <span class="tooltip"><strong>Shaders</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> adalah cara merampingkan naungan menulis yang berinteraksi dengan pencahayaan.</p> 
+       <h2>Kompatibilitas pipa Render</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature name</strong></th> 
+          <th style="text-align:left;"><strong>Built-in <span class="tooltip"><strong>Render Pipeline</strong><span class="tooltiptext">A series of operations that take the contents of a Scene, and displays them on a screen. Unity lets you choose from pre-built render pipelines, or write your own. <a class="tooltipMoreInfoLink" href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span></strong></th> 
+          <th style="text-align:left;"><strong>Universal Render Pipeline (URP)</strong></th> 
+          <th style="text-align:left;"><strong>High Definition Render Pipeline (HDRP)</strong></th> 
+          <th style="text-align:left;"><strong>Custom SRP</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Surface Shaders</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">No<br><br> Untuk cara merampingkan menciptakan benda-benda Shader di URP, lihat <a href="shader-graph.html">Shader Graph</a>.</td> 
+          <td style="text-align:left;">No<br><br> Untuk cara ramping menciptakan benda-benda Shader di HDRP, lihat <a href="shader-graph.html">Shader Graph</a>.</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Overview</h2> 
+       <p>Menulis naungan yang berinteraksi dengan pencahayaan kompleks. Ada berbagai jenis cahaya, pilihan bayangan yang berbeda, yang berbeda <span class="tooltip"><strong>rendering paths</strong><span class="tooltiptext">Teknik yang menggunakan pipa render untuk membuat grafik. Memilih jalur rendering yang berbeda mempengaruhi bagaimana pencahayaan dan pembentukan dihitung. Beberapa jalur rendering lebih cocok untuk berbagai platform dan perangkat keras daripada yang lain. <a class="tooltipMoreInfoLink" href="RenderingPaths.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#RenderingPath">Glossary</a></span></span></span> (untuk dan rendering deferred), dan naungan harus entah bagaimana menangani semua kompleksitas itu.</p> 
+       <p>Permukaan Shaders adalah pendekatan generasi kode yang membuatnya jauh lebih mudah untuk menulis lit shaders dari menggunakan tingkat rendah <a href="SL-ShaderPrograms.html">vertex/pixel program naungan</a>.</p> 
+       <p>Sebagai contoh, lihat <a href="SL-SurfaceShaderExamples.html">Contoh Shader Permukaan</a> dan <a href="SL-SurfaceShaderLightingExamples.html">Permukaan Shader Contoh Pencahayaan Kustom</a>.</p> 
+       <h2>How it works</h2> 
+       <p>Anda mendefinisikan “fungsi permukaan” yang mengambil UV atau data yang Anda butuhkan sebagai input, dan mengisi struktur output <code>SurfaceOutput</code>. SurfaceOutput pada dasarnya menggambarkan warna albedo <em>sifat permukaan</em> (warna albedo, normal, emisi, spekulasi dll). Anda menulis kode ini di HLSL.</p> 
+       <p>Surface Shader compiler kemudian mencari input apa yang diperlukan, output apa yang diisi dan sebagainya, dan menghasilkan <a href="SL-ShaderPrograms.html">simpul&amp;piksel</a> yang sebenarnya, serta rendering melewati untuk menangani rendering maju dan deferred.</p> 
+       <p>Struktur output standar <strong>surface shaders</strong> adalah ini:</p> 
+       <pre><code>struct SurfaceOutput
+{
+    fixed3 Albedo;  // diffuse color
+    fixed3 Normal;  // tangent space normal, if written
+    fixed3 Emission;
+    half Specular;  // specular power in 0..1 range
+    fixed Gloss;    // specular intensity
+    fixed Alpha;    // alpha for transparencies
+};
+</code></pre> 
+       <p>Dalam Unity 5, penanam permukaan juga dapat menggunakan model pencahayaan berbasis fisik. Model pencahayaan Standard dan StandardSpecular built-in (lihat di bawah) menggunakan struktur output ini masing-masing:</p> 
+       <pre><code>struct SurfaceOutputStandard
+{
+    fixed3 Albedo;      // base (diffuse or specular) color
+    fixed3 Normal;      // tangent space normal, if written
+    half3 Emission;
+    half Metallic;      // 0=non-metal, 1=metal
+    half Smoothness;    // 0=rough, 1=smooth
+    half Occlusion;     // occlusion (default 1)
+    fixed Alpha;        // alpha for transparencies
+};
+struct SurfaceOutputStandardSpecular
+{
+    fixed3 Albedo;      // diffuse color
+    fixed3 Specular;    // specular color
+    fixed3 Normal;      // tangent space normal, if written
+    half3 Emission;
+    half Smoothness;    // 0=rough, 1=smooth
+    half Occlusion;     // occlusion (default 1)
+    fixed Alpha;        // alpha for transparencies
+};
+</code></pre> 
+       <h2>Samples</h2> 
+       <p>Lihat halaman <a href="SL-SurfaceShaderExamples.html">Contoh Shader Permukaan</a>, <a href="SL-SurfaceShaderLightingExamples.html">Permukaan Shader Contoh Pencahayaan Kustom</a> dan <a href="SL-SurfaceShaderTessellation.html">Permukaan Shader Tesselasi</a>.</p> 
+       <h2>Permukaan Shader kompilasi directives</h2> 
+       <p>Permukaan naungan ditempatkan di dalam blok <code>CGPROGRAM..ENDCG</code>, seperti naungan lainnya. Perbedaannya adalah:</p> 
+       <ul> 
+        <li>Itu harus ditempatkan di dalam blok <a href="SL-SubShader.html">SubShader</a>, tidak dalam <a href="SL-Pass.html">Pass</a>. Permukaan naungan akan dikompilasi ke beberapa melewati dirinya sendiri.</li> 
+        <li>Ini menggunakan selektif <code>#pragma surface ...</code> untuk menunjukkan itu warna permukaan.</li> 
+       </ul> 
+       <p>Perpanjangan <code>#pragma surface</code> adalah:</p> 
+       <pre><code>#pragma surface surfaceFunction lightModel [optionalparams]
+</code></pre> 
+       <h3>Parameter yang diperlukan</h3> 
+       <ul> 
+        <li> <code>surfaceFunction</code> - yang Fungsi Cg memiliki kode naungan permukaan. Fungsi harus memiliki bentuk <code>void surf (Input IN, inout SurfaceOutput o)</code>, di mana Input adalah struktur yang telah Anda tentukan. Input harus mengandung koordinat tekstur dan variabel otomatis tambahan yang diperlukan oleh fungsi permukaan.</li> 
+        <li> <code>lightModel</code> - model pencahayaan untuk digunakan. Yang built-in adalah <code>Standard</code> berbasis fisik dan <code>StandardSpecular</code>, serta <code>Lambert</code> berbasis non-fisik sederhana (diffuse) dan <code>BlinnPhong</code> (specular). Lihat halaman <a href="SL-SurfaceShaderLighting.html">Model Pencahayaan Kustom</a> untuk cara menulis sendiri. 
+         <ul> 
+          <li>Model pencahayaan <code>Standard</code><code>SurfaceOutputStandard</code> menggunakan struct output , dan sesuai dengan warna standard (metallic workflow) dalam Unity.</li> 
+          <li>Model pencahayaan <code>StandardSpecular</code><code>SurfaceOutputStandardSpecular</code> menggunakan struct output , dan mencocokkan warna Standard (specular setup) dalam Unity.</li> 
+          <li> <code>Lambert</code> dan model pencahayaan <code>BlinnPhong</code> tidak didasarkan secara fisik (meningkat dari Unity 4.x), tetapi naungan menggunakannya dapat lebih cepat untuk membuat perangkat keras low-end.</li> 
+         </ul> </li> 
+       </ul> 
+       <h3>Parameter opsional</h3> 
+       <p> <strong>Transparency and alpha testing</strong> dikendalikan oleh <code>alpha</code> dan verifikasi <code>alphatest</code>. Transparansi biasanya bisa dari dua jenis: campuran alfa tradisional (digunakan untuk memudar benda keluar) atau lebih plausible secara fisik “pencampuran ganda” (yang memungkinkan permukaan semitransparan untuk mempertahankan refleksi specular yang tepat). Mengaktifkan semitransparency membuat kode naungan permukaan yang dihasilkan mengandung perintah <a class="tooltipMoreInfoLink" href="SL-Blend.html">blending</a>; sedangkan memungkinkan cutout alfa akan melakukan pembuangan fragmen di naungan <span class="tooltip"><strong>pixel</strong><span class="tooltiptext">Unit terkecil dalam gambar komputer. Ukuran piksel tergantung pada resolusi layar Anda. Pencahayaan pixel dihitung pada setiap piksel layar. <a href="ShadowPerformance.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#pixel">Glossary</a></span></span></span> yang dihasilkan, berdasarkan variabel yang diberikan.</p> 
+       <ul> 
+        <li> <code>alpha</code> atau <code>alpha:auto</code> - Akan memilih fade-transparency (same as <code>alpha:fade</code>) untuk fungsi pencahayaan sederhana, dan transparansi pramultiplied (same as <code>alpha:premul</code>) untuk fungsi pencahayaan berbasis fisik.</li> 
+        <li> <code>alpha:blend</code> - Campuran alfa yang dapat diaktifkan.</li> 
+        <li> <code>alpha:fade</code> - Aktifkan fade-transparan tradisional.</li> 
+        <li> <code>alpha:premul</code> - Enable premultiplied alpha transparansi.</li> 
+        <li> <code>alphatest:VariableName</code> - Transparansi cutout alfa yang dapat diaktifkan. Nilai cutoff adalah dalam variabel float dengan VariableName. Anda mungkin juga ingin menggunakan petunjuk <code>addshadow</code> untuk menghasilkan umpan kasang yang tepat.</li> 
+        <li> <code>keepalpha</code> - Secara default opaque permukaan naungan menulis 1.0 (putih) ke saluran alfa, tidak peduli apa output dalam Alpha output struct atau apa yang dikembalikan oleh fungsi pencahayaan. Menggunakan opsi ini memungkinkan menjaga nilai alfa fungsi pencahayaan bahkan untuk naungan permukaan buram.</li> 
+        <li> <code>decal:add</code> - Tambahan decal shader (misalnya terrain AddPass). Ini dimaksudkan untuk benda-benda yang berbaring permukaan lain, dan gunakan campuran aditif. Sitemap<a href="SL-SurfaceShaderExamples.html">Contoh Shader Permukaan</a> </li> 
+        <li> <code>decal:blend</code> - Semitransparent decal shader. Ini dimaksudkan untuk objek yang terletak di permukaan lain, dan gunakan campuran alfa. Sitemap<a href="SL-SurfaceShaderExamples.html">Contoh Shader Permukaan</a> </li> 
+       </ul> 
+       <p> <strong>Custom modifier functions</strong> dapat digunakan untuk mengubah atau menghitung data simpul masuk, atau mengubah warna fragmen computed akhir.</p> 
+       <ul> 
+        <li> <code>vertex:VertexFunction</code> - Fungsi modifikasi vertex khusus. Fungsi ini diinvokasi pada awal <span class="tooltip"><strong>vertex shader</strong><span class="tooltiptext">Program yang berjalan pada setiap simpul model 3D ketika model sedang diberikan. <a class="tooltipMoreInfoLink" href="SL-ShaderPrograms.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#vertexshader">Glossary</a></span></span></span> yang dihasilkan, dan dapat memodifikasi atau menghitung data per-vertex. Sitemap<a href="SL-SurfaceShaderExamples.html">Contoh Shader Permukaan</a>.</li> 
+        <li> <code>finalcolor:ColorFunction</code> - Fungsi modifikasi warna akhir kustom. Sitemap<a href="SL-SurfaceShaderExamples.html">Contoh Shader Permukaan</a>.</li> 
+        <li> <code>finalgbuffer:ColorFunction</code> - jalur deferred khusus untuk mengubah konten G-buffer.</li> 
+        <li> <code>finalprepass:ColorFunction</code> - jalur dasar prapass khusus.</li> 
+       </ul> 
+       <p> <strong>Shadows and Tessellation</strong> - directives tambahan dapat diberikan untuk mengontrol bagaimana bayangan dan tesselilasi ditangani.</p> 
+       <ul> 
+        <li> <code>addshadow</code> - Hasilkan wabah kasir. Biasa digunakan dengan modifikasi simpul kustom, sehingga pengecoran bayangan juga mendapatkan animasi simpul prosedural. Sering bayangan tidak perlu penanganan bayangan khusus, karena mereka hanya dapat menggunakan kasir bayangan dari fallback mereka.</li> 
+        <li> <code>fullforwardshadows</code> - Mendukung semua jenis bayangan cahaya di jalur rendering <a class="tooltipMoreInfoLink" href="RenderTech-ForwardRendering.html">Forward</a>. Dengan naungan default hanya mendukung bayangan dari satu lampu directional di <span class="tooltip"><strong>forward rendering</strong><span class="tooltiptext">Sebuah jalur rendering yang membuat setiap objek dalam satu atau lebih melewati, tergantung pada lampu yang mempengaruhi objek. Lampu sendiri juga diperlakukan berbeda dengan Rendering Maju, tergantung pada pengaturan dan intensitas mereka. <a href="RenderTech-ForwardRendering.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ForwardRendering">Glossary</a></span></span></span> (untuk menghemat jumlah varian naungan internal). Jika Anda membutuhkan titik atau bayangan cahaya spot dalam rendering ke depan, gunakan arahan ini.</li> 
+        <li> <code>tessellate:TessFunction</code> - gunakan tesselasi DX11 GPU; fungsi menginduksi faktor ujiselasi. Lihat <a href="SL-SurfaceShaderTessellation.html">Permukaan Shader Tesselasi</a> untuk rincian.</li> 
+       </ul> 
+       <p> <strong>Code generation options</strong> - secara default dihasilkan kode naungan permukaan mencoba untuk menangani semua kemungkinan skenario pencahayaan / kapdowing /<span class="tooltip"><strong>lightmap</strong><span class="tooltiptext">Tekstur pra-render yang mengandung efek sumber cahaya pada objek statis di tempat kejadian. Lightmaps dilalui atas geometri adegan untuk menciptakan efek pencahayaan. <a class="tooltipMoreInfoLink" href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Lightmap">Glossary</a></span></span></span>. Namun dalam beberapa kasus Anda tahu Anda tidak perlu beberapa dari mereka, dan dimungkinkan untuk menyesuaikan kode yang dihasilkan untuk melewatkannya. Ini dapat mengakibatkan naungan yang lebih kecil yang lebih cepat dimuat.</p> 
+       <ul> 
+        <li><code>exclude_path:deferred</code>, <code>exclude_path:forward</code>, <code>exclude_path:prepass</code> - Jangan menghasilkan melewati jalur rendering yang diberikan (<span class="tooltip"><a class="tooltipMoreInfoLink" href="RenderTech-DeferredShading.html">Deferred Shading</a><span class="tooltiptext">Sebuah jalur rendering di Pipa Render Built-in yang tidak membatasi jumlah Lampu yang dapat mempengaruhi GameObject. Semua Lampu dievaluasi per-piksel, yang berarti bahwa mereka semua berinteraksi dengan peta normal dan sebagainya. Selain itu, semua Lampu bisa memiliki cookie dan bayangan. <a href="RenderTech-DeferredShading.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Deferredshading">Glossary</a></span></span></span>, <a href="RenderTech-ForwardRendering.html">Forward</a> dan <a href="RenderTech-DeferredLighting.html">Legacy Deferred</a> masing-masing).</li> 
+        <li> <code>noshadow</code> - Nonaktifkan semua dukungan bayangan dalam naungan ini.</li> 
+        <li> <code>noambient</code> - Jangan menerapkan pencahayaan ambient atau <span class="tooltip"><strong>light probes</strong><span class="tooltiptext">probe cahaya menyimpan informasi tentang bagaimana cahaya melewati ruang di tempat kejadian Anda. Koleksi probe cahaya yang diatur dalam ruang tertentu dapat meningkatkan pencahayaan pada objek bergerak dan pemandangan LOD statis dalam ruang itu. <a class="tooltipMoreInfoLink" href="LightProbes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#LightProbe">Glossary</a></span></span></span>.</li> 
+        <li> <code>novertexlights</code> - Jangan menerapkan probe cahaya atau lampu per-vertex dalam rendering Forward.</li> 
+        <li> <code>nolightmap</code> - Nonaktifkan semua dukungan ringan di naungan ini.</li> 
+        <li> <code>nodynlightmap</code> - Cacat runtime dinamis <span class="tooltip"><strong>global illumination</strong><span class="tooltiptext">Kelompok teknik yang model pencahayaan langsung dan tidak langsung untuk memberikan hasil pencahayaan yang realistis.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#globalillumination">Glossary</a></span></span></span> dukungan dalam naungan ini.</li> 
+        <li> <code>nodirlightmap</code> - Cacat dukungan peta lampu arah dalam naungan ini.</li> 
+        <li> <code>nofog</code> - Nonaktifkan semua dukungan Fog built-in.</li> 
+        <li> <code>nometa</code> - Tidak menghasilkan umpan "meta" (yang digunakan oleh penerangan global yang ringan &amp; dinamis untuk mengekstrak informasi permukaan).</li> 
+        <li> <code>noforwardadd</code> - Disables <a href="RenderTech-ForwardRendering.html">Forward</a> rendering aditif lulus. Ini membuat naungan mendukung satu lampu directional penuh, dengan semua lampu lain yang computed per-vertex / SH. Membuat naungan lebih kecil juga.</li> 
+        <li> <code>nolppv</code> - Disables <span class="tooltip"><strong>Light Probe Proxy Volume</strong><span class="tooltiptext">Komponen yang memungkinkan Anda untuk menggunakan informasi lebih banyak pencahayaan untuk GameObjects dinamis besar yang tidak dapat menggunakan peta cahaya panggang (misalnya, Sistem Partikel besar atau Mesh Berwarna). <a class="tooltipMoreInfoLink" href="class-LightProbeProxyVolume.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#LightProbeProxyVolume">Glossary</a></span></span></span> dukungan dalam naungan ini.</li> 
+        <li> <code>noshadowmask</code> - Disables Shadowmask dukungan untuk naungan ini (baik <span class="tooltip"><a class="tooltipMoreInfoLink" href="LightMode-Mixed-Shadowmask.html">Shadowmask</a><span class="tooltiptext">Tekstur yang berbagi tata letak UV yang sama dan resolusi dengan peta cahaya yang sesuai. <a href="LightMode-Mixed-Shadowmask.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Shadowmask">Glossary</a></span></span></span> dan <span class="tooltip"><a href="LightMode-Mixed-Shadowmask.html">Jarak Shadowmask</a><span class="tooltiptext">Versi mode pencahayaan Shadowmask yang mencakup bayangan berkualitas tinggi yang dilemparkan dari GameObjects statis ke GameObject dinamis. <a href="LightMode-Mixed-Shadowmask.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#DistanceShadowmask">Glossary</a></span></span></span>).</li> 
+       </ul> 
+       <p><strong>Miscellaneous options</strong></p> 
+       <ul> 
+        <li> <code>softvegetation</code> - Membuat naungan permukaan hanya diberikan ketika Vegetasi Lembut di.</li> 
+        <li> <code>interpolateview</code> - Memungkinkan sudut pandang di naungan simpul dan mencemarinya; bukan komputasi di naungan pixel. Ini dapat membuat naungan pixel lebih cepat, tetapi menggunakan satu interpolator tekstur lebih.</li> 
+        <li> <code>halfasview</code> - Pass setengah arah vektor ke dalam fungsi pencahayaan bukan tampilan arah. Setengah arahan akan dihitung dan dinormalkan per simpul. Ini lebih cepat, tetapi tidak sepenuhnya benar.</li> 
+        <li> <code>approxview</code> - Dihapus dalam Unity 5.0. Gunakan <code>interpolateview</code> bukan.</li> 
+        <li> <code>dualforward</code> - Gunakan dual lightmaps di jalur rendering <a href="RenderTech-ForwardRendering.html">forward</a>.</li> 
+        <li> <code>dithercrossfade</code> - Membuat permukaan naungan mendukung efek menthering. Anda kemudian dapat menerapkan naungan ini ke <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#GameObject">Glossary</a></span></span></span> yang menggunakan komponen <span class="tooltip"><a href="class-LODGroup.html">LOD Group</a><span class="tooltiptext">Komponen untuk mengelola tingkat detail (LOD) untuk GameObjects. <a href="class-LODGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#LODGroup">Glossary</a></span></span></span> yang dikonfigurasi untuk mode transisi lintas-fade.</li> 
+       </ul> 
+       <p>Untuk melihat apa yang berbeda dari menggunakan opsi yang berbeda di atas, dapat membantu untuk menggunakan tombol “Show Generated Code” di <a href="class-Shader.html">Shader Inspector</a>.</p> 
+       <h2>Permukaan struktur input Shader</h2> 
+       <p>Struktur input <code>Input</code> umumnya memiliki koordinat tekstur yang diperlukan oleh naungan. Koordinat tekstur harus diberi nama “<code>uv</code>” diikuti dengan nama tekstur (atau memulainya dengan “<code>uv2</code>” untuk menggunakan set koordinat tekstur kedua).</p> 
+       <p>Nilai tambahan yang dapat dimasukkan ke dalam struktur input:</p> 
+       <ul> 
+        <li> <code>float3 viewDir</code> - mengandung sudut pandang, untuk komputasi efek Parallax, pencahayaan pelek dll.</li> 
+        <li> <code>float4</code> dengan <code>COLOR</code> semantik - mengandung warna per-vertex yang diserbuki.</li> 
+        <li> <code>float4 screenPos</code> - mengandung posisi ruang layar untuk efek refleksi atau ruang layar. Perhatikan bahwa ini tidak cocok untuk <a href="SL-GrabPass.html">GrabPass</a>; Anda perlu menghitung UV kustom sendiri menggunakan fungsi <code>ComputeGrabScreenPos</code>.</li> 
+        <li> <code>float3 worldPos</code> - mengandung posisi ruang dunia.</li> 
+        <li> <code>float3 worldRefl</code> - mengandung vektor refleksi dunia <em>jika penanam permukaan tidak menulis ke o. Sitemap</em>. Lihat naungan Reflect-Diffuse misalnya.</li> 
+        <li> <code>float3 worldNormal</code> - mengandung vektor normal dunia <em>jika penanam permukaan tidak menulis ke o. Sitemap</em>.</li> 
+        <li> <code>float3 worldRefl; INTERNAL_DATA</code> - mengandung vektor refleksi dunia <em>jika warna permukaan menulis ke o. Sitemap</em>. Untuk mendapatkan vektor refleksi berdasarkan per-piksel <span class="tooltip"><strong>normal map</strong><span class="tooltiptext">Jenis tekstur Peta Bump yang memungkinkan Anda untuk menambahkan detail permukaan seperti benjolan, alur, dan goresan ke model yang menangkap cahaya seolah-olah mereka diwakili oleh geometri nyata.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Normalmap">Glossary</a></span></span></span>, gunakan <code>WorldReflectionVector (IN, o.Normal)</code>. Lihat Reflect-Bumped shader misalnya.</li> 
+        <li> <code>float3 worldNormal; INTERNAL_DATA</code> - mengandung vektor normal dunia <em>jika warna permukaan menulis ke o. Sitemap</em>. Untuk mendapatkan vektor normal berdasarkan peta normal per-piksel, gunakan <code>WorldNormalVector (IN, o.Normal)</code>.</li> 
+       </ul> 
+       <h2>Mobile Website Index. Sitemap</h2> 
+       <p>Saat ini beberapa bagian dari pipa kompilasi naungan permukaan tidak mengerti sintaks HLSL yang spesifik <a href="UsingDX11GL3Features.html">WinZip 11</a>, jadi jika Anda menggunakan fitur HLSL seperti StrukturdBuffers, RWTextures dan sintaks non-DX9 lainnya, Anda harus membungkusnya menjadi makro praprosesor DX11-hanya.</p> 
+       <p>Lihat halaman <a href="SL-PlatformDifferences.html">Perbedaan spesifik platform</a> dan <a href="SL-ShaderPrograms.html">Menggunakan HLSL</a> untuk rincian.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="shader-writing-vertex-fragment.html"></a></span> 
+         <div class="tip">
+           Contoh naungan 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="SL-RenderPipeline.html"></a></span> 
+         <div class="tip">
+           Permukaan Shader dan jalur rendering 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: aset mesh</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="mesh.html">Meshes</a></li> 
+         <li>aset mesh</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="AnatomyofaMesh.html"></a></span> 
+          <div class="tip">
+            Data Mesh 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="comp-MeshGroup.html"></a></span> 
+          <div class="tip">
+            Komponen Mesh 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>aset mesh</h1> 
+       <!--BeginSwitchLink--> 
+       <a href="../ScriptReference/Mesh.html" title="Go to Mesh page in the Scripting Reference" class="switch-link gray-btn sbtn left">Switch to Scripting</a> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>A aset <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a class="tooltipMoreInfoLink" href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mesh">Glossary</a></span></span></span> mewakili mesh dalam proyek Unity Anda.</p> 
+       <p>Biasanya, Unity menciptakan aset mesh ketika mengimpor <span class="tooltip"><a class="tooltipMoreInfoLink" href="models.html">model</a><span class="tooltiptext">representasi model 3D dari objek, seperti karakter, bangunan, atau sepotong furnitur. <a href="3D-formats.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Model">Glossary</a></span></span></span>, tetapi Anda juga dapat membuat aset mesh langsung di Unity; misalnya, oleh <a href="GeneratingMeshGeometryProcedurally.html">membuat mesh dengan kode</a> dan menyimpan hasilnya sebagai aset.</p> 
+       <h2>Referensi Inspektur Mesh</h2> 
+       <p>Pilih aset jala dalam <strong><span class="tooltip"><strong>Project window</strong><span class="tooltiptext">A window that shows the contents of your <code>Assets</code> folder (Project tab) <a class="tooltipMoreInfoLink" href="ProjectView.html">More info</a><br><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#Projectwindow">Glossary</a></span></span></span></strong> untuk membuka <strong>Mesh <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, asset or project settings, allowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span></strong>. Inspektur ini menampilkan informasi tentang mesh, seperti jumlah total simpul atau nama dari setiap bentuk campuran mesh memiliki. Ini juga menampilkan pratinjau visual mesh.</p> 
+       <h3>Informasi Mesh</h3> 
+       <p>The Mesh Inspector menampilkan informasi tentang bagaimana mesh <span class="tooltip"><strong>asset stores</strong><span class="tooltiptext">Sebuah perpustakaan yang berkembang dari aset gratis dan komersial yang diciptakan oleh Unity dan anggota komunitas. Menawarkan berbagai aset, dari tekstur, model dan animasi ke seluruh contoh proyek, tutorial dan ekstensi Editor. <a class="tooltipMoreInfoLink" href="AssetStore.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AssetStore">Glossary</a></span></span></span> datanya, tetapi bukan nilai dalam data itu sendiri. Misalnya, Inspektur menunjukkan bahwa Unity menyimpan nilai untuk Posisi sebagai satu set dari tiga nilai Float32 untuk setiap simpul, tetapi tidak menunjukkan nilai Posisi dari simpul tertentu.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/mesh-inspector.png" alt="The Mesh Inspector"> 
+        <figcaption>
+          Inspektur Mesh 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Vertices</strong></td> 
+          <td style="text-align:left;">Jumlah total vertices di mesh, dan berapa banyak penyimpanan on-disk dan memori runtime Penggunaan Unity untuk menyimpan data simpul untuk mesh. Untuk setiap atribut vertex, Unity menunjukkan berapa banyak penyimpanan on-disk dan memori runtime Penggunaan Unity untuk menyimpan atribut itu, dan jenis data yang digunakan Unity untuk itu.<br><br> Untuk informasi lebih lanjut tentang data ini, lihat <a href="AnatomyofaMesh.html">Data Mesh</a>. Untuk informasi tentang bagaimana Unity dapat mengompres data dalam mesh, lihat <a href="mesh-compression.html">Mengkompresi data mesh</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Indices</strong></td> 
+          <td style="text-align:left;">Jumlah total indeks di jala, berapa banyak penyimpanan on-disk dan memori runtime digunakan untuk menyimpan data ini, dan informasi tentang indeks untuk setiap sub-mesh.<br><br> Untuk informasi lebih lanjut tentang data ini, lihat <a href="AnatomyofaMesh.html">Data Mesh</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Skin</strong></td> 
+          <td style="text-align:left;">Bagian ini hanya terlihat pada <a href="mesh-introduction.html#deformable-meshes">skinned mesh</a>.<br><br> Untuk informasi lebih lanjut tentang data ini, lihat <a href="AnatomyofaMesh.html">Data Mesh</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>BlendWeight</strong></td> 
+          <td style="text-align:left;">Berapa banyak tulang dapat mempengaruhi simpul.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>BlendIndices</strong></td> 
+          <td style="text-align:left;">Indeks tulang yang mempengaruhi simpul kulit.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Blend Shapes</strong></td> 
+          <td style="text-align:left;">Jumlah total bentuk campuran dalam mesh dan daftar nama mereka. Jumlah bingkai di samping setiap bentuk campuran menggambarkan berapa banyak bingkai kunci masing-masing memiliki.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Other</strong></td> 
+          <td style="text-align:left;">Tampilkan informasi tambahan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Bounds Center</strong></td> 
+          <td style="text-align:left;">Kotak yang terikat menggambarkan di mana tepi luar berbohong jala. "Bounds Center" menyimpan lokasi pusat kotak terikat mesh.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Bounds Size</strong></td> 
+          <td style="text-align:left;">Setiap nilai mewakili panjang tepi kotak yang terikat di X, Y dan Z arah.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Read/Write Enabled</strong></td> 
+          <td style="text-align:left;">Nilai properti <a href="../ScriptReference/Mesh-isReadable.html">Mesh.isReadable</a>, yang menentukan apakah Unity dapat mengakses dan memodifikasi data mesh tertentu pada runtime.<br><br> Anda dapat mengatur nilai ini dengan kotak cemen <strong>Read/Write Enabled</strong> di <a href="FBXImporter-Model.html">Model Jendela Pengaturan impor</a>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>Pratinjau Mesh</h3> 
+       <p>Bagian ini dari Inspektur memungkinkan Anda untuk melihat pratinjau tampilan jala dan menjelajahi data mesh dengan cara visual.</p> 
+       <p>Anda dapat menggunakan kontrol mouse dan keyboard berikut untuk menavigasi tampilan jala:</p> 
+       <ul> 
+        <li>Putar tampilan: klik kiri dan tarik.</li> 
+        <li>Putar sumber cahaya: klik kanan dan tarik. Sumber cahaya hanya hadir dalam pandangan “Shaded” dan “Blendshapes”.</li> 
+        <li>Pan <span class="tooltip"><strong>camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span>: klik tengah dan tarik.</li> 
+        <li>Zoom kamera dan keluar: gulir roda mouse.</li> 
+        <li>Atur ulang pengaturan zoom dan pan: hover kursor mouse di dalam pratinjau dan tekan tombol "F". Ini tidak mengatur ulang rotasi.</li> 
+       </ul> 
+       <p>Tampilan "UV Layout" menampilkan peta UV mesh Anda sebagai gambar 2D. Rotasi persatuan dalam pandangan ini. Untuk memanci kamera, klik dan seret tombol kiri, kanan, atau mouse tengah.</p> 
+       <p>Anda dapat menggunakan properti berikut di <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span> untuk mengkonfigurasi tampilan:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>View mode</strong></td> 
+          <td style="text-align:left;">Memberikan berbagai cara visualisasi jala.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Shaded</strong></td> 
+          <td style="text-align:left;">Menyediakan visualisasi jala dengan cahaya dasar. Ini adalah tampilan default. Untuk informasi lebih lanjut, lihat <a href="#shaded">Shaded view</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>UV Checker</strong></td> 
+          <td style="text-align:left;">Menggunakan tekstur checkerboard ke mesh untuk memvisualisasikan bagaimana peta UV mesh menerapkan tekstur. Untuk informasi lebih lanjut, lihat <a href="#uv-checker">Tampilan Checker UV</a> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>UV Layout</strong></td> 
+          <td style="text-align:left;">Menampilkan bagaimana simpul jala diatur dalam peta UV yang tidak terbungkus. Tampilan ini menonaktifkan toggle Wireframe. Untuk informasi lebih lanjut, lihat <a href="#uv-layout">Login Tampilan tata letak</a> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Vertex Color</strong></td> 
+          <td style="text-align:left;">Mengvisualisasikan warna simpul yang simpul di mesh ini. Jika tidak ada vertices memiliki warna simpul, item menu ini dinonaktifkan. Untuk informasi lebih lanjut, lihat <a href="#vertex-color">Tampilan warna Vertex</a> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Normals</strong></td> 
+          <td style="text-align:left;">Mengvisualisasikan arah relatif dari normal di mesh dengan warna. Untuk informasi lebih lanjut, lihat <a href="#normals">Tampilan normal</a> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Tangents</strong></td> 
+          <td style="text-align:left;">Mengvisualisasikan data tangen di mesh dengan warna. Untuk informasi lebih lanjut, lihat <a href="#tangents">Tangents view</a> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Blendshapes</strong></td> 
+          <td style="text-align:left;">Memungkinkan Anda pratinjau campuran bentuk deformasi ke jala. Jika mesh tidak memiliki bentuk campuran, item menu ini dinonaktifkan. Untuk informasi lebih lanjut, lihat <a href="#blend-shapes">Blendshapes view</a> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Wireframe</strong></td> 
+          <td style="text-align:left;">Tidak tersedia dalam mode Layout UV.<br><br> Jika diaktifkan, pratinjau menampilkan visualisasi simpul dan tepi. Jika tidak, itu tidak. Meme it</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Channel picker</strong></td> 
+          <td style="text-align:left;">Hanya tersedia dalam mode UV Checker.<br><br> Menu drop-down ini memungkinkan Anda untuk mengubah tampilan UV channel preview. Jika mesh hanya menggunakan satu saluran UV, maka hanya “channel 0” diaktifkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Texture size</strong></td> 
+          <td style="text-align:left;">Hanya tersedia dalam mode UV Checker.<br><br> Slider ini memungkinkan Anda untuk mengubah ukuran tekstur yang diperiksa pada peta UV mesh.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Blend shape picker</strong></td> 
+          <td style="text-align:left;">Hanya tersedia dalam mode Blendshapes.<br><br> Drop-down ini memungkinkan Anda untuk mengubah bentuk campuran yang divisualisasikan dalam pratinjau jala. Ketika Anda memilih bentuk campuran yang berbeda, Unity tidak lagi menerapkan bentuk campuran sebelumnya ke pratinjau jala.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Setiap tampilan menampilkan data berikut tentang jaring di bawah pratinjau jala:</p> 
+       <ul> 
+        <li>Nama mesh.</li> 
+        <li>Jumlah vertik di jala.</li> 
+        <li>Jenis dan jumlah wajah di jala. Kebanyakan jala menggunakan segitiga untuk menentukan wajah.</li> 
+        <li>Jumlah bentuk campuran di jala, jika ada.</li> 
+        <li>Jumlah sub-meshes di jala, jika ada lebih dari satu.</li> 
+        <li>Nama semua peta UV di jala.</li> 
+        <li>Untuk jaring berkelok-kelok, nama sifat bobot kulit.</li> 
+       </ul> 
+       <p><a name="shaded"></a></p> 
+       <h4>Shaded view</h4> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/mesh-preview-shaded.png" alt="The Mesh Preview in Shaded view, with the wireframe setting disabled"> 
+        <figcaption>
+          The Mesh Preview di Tampilan di Shaded, dengan pengaturan wireframe dinonaktifkan 
+        </figcaption> 
+       </figure> 
+       <p>Tampilan Shaded menyediakan visualisasi mesh dengan cahaya dasar. Ketika Anda mengimpor mesh dari aplikasi pemodelan 3D, Unity memisahkan mesh menjadi sub-meshes untuk setiap bahan di mesh. Unity menerapkan warna yang berbeda untuk setiap sub-mesh dalam pandangan ini. Anda dapat menemukan legenda untuk warna-warna ini di bawah bagian Indeks dari Inspektur Mesh. screenshot berikut menunjukkan contoh legenda ini untuk mesh dengan tiga sub-mesh, dengan pengaturan wireframe diaktifkan.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/mesh-preview-shaded-submesh.png" alt="The Shaded view, displaying a mesh with three submeshes and the legend that shows their colors"> 
+        <figcaption>
+          Pemandangan yang didinginkan, menampilkan mesh dengan tiga submeshes dan legenda yang menunjukkan warna mereka 
+        </figcaption> 
+       </figure> 
+       <p><a name="uv-checker"></a></p> 
+       <h4>Tampilan Checker UV</h4> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/mesh-preview-uv-checker.png" alt="The UV Checker view with the wireframe setting enabled"> 
+        <figcaption>
+          Tampilan UV Checker dengan pengaturan wireframe diaktifkan 
+        </figcaption> 
+       </figure> 
+       <p>Tampilan ini menerapkan tekstur checkerboard ke mesh untuk memvisualisasikan bagaimana peta UV mesh menerapkan tekstur. Ini juga menambahkan menu dropdown lain di sebelah menu view picker. Di tangkapan layar di atas, menu baru ini menampilkan "channel 0". Dropdown ini memungkinkan Anda untuk memeriksa saluran UV yang berbeda ketika peta UV Anda menggunakan lebih dari satu saluran.</p> 
+       <p>Untuk mengubah ukuran tekstur checkerboard dalam pandangan ini, gunakan slider di sebelah menu dropdown saluran pemilih. Perubahan slider ini tidak mempengaruhi pengaturan di peta UV Anda, hanya ukuran tekstur dalam pandangan ini. Gunakan slider untuk menjelajahi bagaimana ukuran tekstur yang berbeda terlihat di mesh.</p> 
+       <p><a name="uv-layout"></a></p> 
+       <h4>Login Tampilan tata letak</h4> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/mesh-preview-uv-layout.png" alt="The UV Layout view"> 
+        <figcaption>
+          Tampilan Tata Letak UV 
+        </figcaption> 
+       </figure> 
+       <p>Tampilan tata letak UV menampilkan bagaimana simpul jala Anda diatur dalam peta UV yang tidak terbungkus. Wireframe toggle tidak aktif dalam pandangan ini, karena sudah berurusan dengan simpul. Unity menonaktifkan semua kontrol kamera kecuali panci kamera dan zoom dalam pandangan ini.</p> 
+       <p>Secara default, tampilan Tata letak UV menampilkan kisaran UV 0..1. Anda dapat mengakses saluran UV yang berbeda dengan menu dropdown pemilih saluran.</p> 
+       <p><a name="vertex-color"></a></p> 
+       <h4>Tampilan warna Vertex</h4> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/mesh-preview-vertex-color.png" alt="The Vertex Color view with the wireframe setting disabled"> 
+        <figcaption>
+          Tampilan Warna Vertex dengan pengaturan wireframe dinonaktifkan 
+        </figcaption> 
+       </figure> 
+       <p>Tampilan warna Vertex menampilkan warna simpul di jala Anda. Warna Vertex terpisah dari bahan apa pun yang dimiliki jala. Untuk informasi lebih lanjut tentang warna simpul, lihat.</p> 
+       <p><a name="normals"></a></p> 
+       <h4>Tampilan normal</h4> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/mesh-preview-normals.png" alt="The Normals view with the wireframe setting enabled"> 
+        <figcaption>
+          Tampilan normal dengan pengaturan wireframe diaktifkan 
+        </figcaption> 
+       </figure> 
+       <p>Tampilan normal menggunakan warna untuk memvisualisasikan arah yang normal di wajah jala. Arah vektor normal mempengaruhi bagaimana cahaya berinteraksi dengan bagian jala.</p> 
+       <p><a name="tangents"></a></p> 
+       <h4>Tangents view</h4> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/mesh-preview-tangents.png" alt="The Tangents view with the wireframe setting enabled"> 
+        <figcaption>
+          Tampilan Tangents dengan pengaturan wireframe diaktifkan 
+        </figcaption> 
+       </figure> 
+       <p>Tampilan Tangents menggunakan warna untuk memvisualisasikan data tangen di jala. Unity menggunakan tangents sebagai bagian dari alur kerja untuk bump-mapped <span class="tooltip"><strong>Shaders</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span>.</p> 
+       <p><a name="blend-shapes"></a></p> 
+       <h4>Blendshapes view</h4> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/mesh-preview-blendshapes.png" alt="The Blendshapes view with the wireframe setting disabled."> 
+        <figcaption>
+          Tampilan Blendshapes dengan pengaturan wireframe dinonaktifkan. 
+        </figcaption> 
+       </figure> 
+       <p>Tampilan Blendshapes menerapkan deformasi bentuk campuran ke mesh Anda dan menampilkan hasilnya di jendela pratinjau. Anda dapat melihat-lihat satu bentuk campuran pada suatu waktu; pandangan menunjukkan setiap bentuk campuran dengan nilai tertinggi. Ini berarti bahwa pratinjau dari bentuk campuran yang melengkung senyum karakter, misalnya, menampilkan kurva pada maksimumnya.</p> 
+       <p>Tampilan ini menambahkan menu dropdown baru untuk memilih bentuk campuran di sebelah tampilan penetes pemilih. Menu dropdown daftar semua bentuk campuran di mesh saat ini. Jika daftar tidak dapat masuk ke layar tunggal, gunakan panah di bagian atas dan bawah daftar untuk menavigasi melalui daftar lengkap.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="AnatomyofaMesh.html"></a></span> 
+         <div class="tip">
+           Data Mesh 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="comp-MeshGroup.html"></a></span> 
+         <div class="tip">
+           Komponen Mesh 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

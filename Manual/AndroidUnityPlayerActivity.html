@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Memperpanjang UnityPlayerActivity Kode Java</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="PlatformSpecific.html">Pengembangan platform</a></li> 
+         <li><a href="android.html">Android</a></li> 
+         <li><a href="android-developing.html">Mengembangkan untuk Android</a></li> 
+         <li><a href="PluginsForAndroid.html">Membangun dan menggunakan plug-ins untuk Android</a></li> 
+         <li>Memperpanjang UnityPlayerActivity Kode Java</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="AndroidJARPlugins.html"></a></span> 
+          <div class="tip">
+            JAR plug-ins 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="AndroidNativePlugins.html"></a></span> 
+          <div class="tip">
+            Asli (C++) plug-ins untuk Android 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Memperpanjang UnityPlayerActivity Kode Java</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Bagian di halaman ini:</p> 
+       <ul> 
+        <li><a href="#ExtendingUnityPlayerActivity">Memperpanjang file UnityPlayerActivity</a></li> 
+        <li><a href="#StartupArguments">Menentukan argumen startup Unity dari file UnityPlayerActivity kustom</a></li> 
+        <li><a href="#UnityPlayerActivityExample">File contoh UnityPlayerActivity dengan manifestasi sampel</a></li> 
+       </ul> 
+       <p><a name="ExtendingUnityPlayerActivity"></a></p> 
+       <h2>Memperpanjang file UnityPlayerActivity</h2> 
+       <p>Ketika Anda mengembangkan aplikasi Unity Android, Anda dapat menggunakan <span class="tooltip"><strong>plug-ins</strong><span class="tooltiptext">Satu set kode yang dibuat di luar Unity yang menciptakan fungsi dalam Unity. Ada dua jenis plug-ins yang dapat Anda gunakan di Unity: Managed plug-ins (diproduksi. Rakitan NET dibuat dengan alat-alat seperti Studio Visual) dan plug-ins asli (pustaka kode asli yang spesifik platform). <a class="tooltipMoreInfoLink" href="Plugins.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Plug-in">Glossary</a></span></span></span> untuk memperpanjang kelas standar <code>UnityPlayerActivity</code> (kelas Java utama untuk Unity Player di Android, mirip dengan <code>AppController.mm</code> pada Unity iOS). Aplikasi dapat menimpa semua interaksi dasar antara OS Android dan aplikasi Android Unity.</p> 
+       <p>Untuk menimpa aktivitas default:</p> 
+       <ul> 
+        <li>Buat <code>Activity</code> baru yang berasal dari <code>UnityPlayerActivity</code> (lihat dokumentasi Android pada <a href="http://developer.android.com/reference/android/app/Activity.html">Activity</a>);</li> 
+        <li>Modifikasi <a href="android-manifest.html">Android SDK</a> untuk memiliki <code>Activity</code> baru sebagai titik masuk aplikasi.</li> 
+       </ul> 
+       <p>Cara termudah untuk mencapai ini adalah untuk mengekspor proyek Anda dari Unity, kemudian membuat modifikasi yang diperlukan untuk kelas <code>UnityPlayerActivity</code> di Android Studio. Atau, Anda dapat membuat kelas baru, memperluasnya, memodifikasi <code>AndroidManifest.xml</code> dalam proyek kesatuanLibrary, dan kemudian mengganti <code>UnityPlayerActivity</code> dengan kelas Anda.</p> 
+       <p>Untuk membuat plug-in dengan <code>Activity</code> baru Anda dan tambahkan ke Anda Proyek, melakukan langkah-langkah berikut:</p> 
+       <ol> 
+        <li>Memperpanjang file UnityPlayerActivity. Cara terbaik untuk melakukan ini adalah di Android Studio setelah mengekspor proyek Anda dari Unity. Anda kemudian memiliki opsi berikut: 
+         <ul> 
+          <li>Masukkan file .java atau .kt yang berisi kelas aktivitas Anda langsung ke proyek Unity Secara default, file terletak di: 
+           <ul> 
+            <li> <strong>macOS:</strong>:<code>/Applications/Unity/Unity.app/Contents/PlaybackEngines/AndroidPlayer/src/com/unity3d/player</code> </li> 
+            <li> <strong>Windows:</strong>: <code>C:\Program Files\Unity\Editor\Data\PlaybackEngines\AndroidPlayer\src\com\unity3d\player</code> </li> 
+           </ul> </li> 
+          <li>Buat pustaka Java yang berisi kelas Anda, kompila dan masukkan file .jar ke proyek Unity Anda</li> 
+          <li> <a href="https://developer.android.com/studio/projects/android-library">Buat perpustakaan Android</a> yang berisi kelas Anda. Anda kemudian dapat menempatkan perpustakaan ini ke proyek Unity Anda dalam kode sumber Anda. Untuk melakukan ini, berikan folder Anda nama dengan ekstensi .androidlib, atau dapat dikompilasi dan menempatkan file .aar di proyek Unity Anda</li> 
+         </ul> </li> 
+        <li>Buat Android App Manifest baru untuk mengatur <code>Activity</code> baru sebagai titik masuk aplikasi Anda, kemudian letakkan file <code>AndroidManifest.xml</code> di folder <code>Assets/Plugins/Android</code> Proyek Anda.</li> 
+       </ol> 
+       <p><a name="StartupArguments"></a></p> 
+       <h2>Menentukan argumen startup Unity dari file UnityPlayerActivity kustom</h2> 
+       <p>Ketika Anda memperpanjang <code>UnityPlayerActivity</code>, Anda dapat override <code>String UnityPlayerActivity.updateUnityCommandLineArguments</code> (String cmdLine) untuk melewati argumen startup ke Unity.</p> 
+       <p> <code>UnityPlayerActivity</code> memanggil metode ini selama startup. Ini menerima argumen baris perintah saat ini, yang dapat null atau kosong, dan mengembalikan string baru argumen baris perintah untuk lulus ke Unity.</p> 
+       <p>Untuk gambaran umum antarmuka baris perintah Unity, lihat <a href="CommandLineArguments.html">argumen baris perintah</a>.</p> 
+       <p>Contoh berikut menunjukkan cara menggunakan ini untuk memilih API Grafik berdasarkan perangkat saat ini:</p> 
+       <pre><code class="lang-java">package com.company.product;
+import com.unity3d.player.UnityPlayerActivity;
+import android.os.Bundle;
+import android.os.Build;
+
+public class OverrideExample extends UnityPlayerActivity {
+    private boolean preferVulkan() {
+        // Use Vulkan on Google Pixel devices
+        if (Build.MANUFACTURER.equals("Google") &amp;&amp; Build.MODEL.startsWith("Pixel"))
+            return true;
+        else
+            return false;
+    }
+
+    private boolean preferES2() {
+        // Use OpenGL ES 2.0 on devices that run Android 5.1 or older
+        if (Build.VERSION.SDK_INT &lt;= Build.VERSION_CODES.LOLLIPOP_MR1)
+            return true;
+        else
+            return false;
+    }
+
+    private String appendCommandLineArgument(String cmdLine, String arg) {
+        if (arg == null || arg.isEmpty())
+            return cmdLine;
+        else if (cmdLine == null || cmdLine.isEmpty())
+            return arg;
+        else
+            return cmdLine + " " + arg; 
+    } 
+
+    @Override protected String updateUnityCommandLineArguments(String cmdLine)
+    {
+        if (preferVulkan())
+            return appendCommandLineArgument(cmdLine, "-force-vulkan");
+        else if (preferES2())
+            return appendCommandLineArgument(cmdLine, "-force-gles20");
+        else
+            return cmdLine; // let Unity pick the Graphics API based on PlayerSettings
+    }
+
+    @Override protected void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+    }
+}
+</code></pre> 
+       <p><a name="UnityPlayerActivityExample"></a></p> 
+       <h1>File contoh UnityPlayerActivity</h1> 
+       <p>Berikut ini adalah contoh dari file <code>UnityPlayerActivity</code>:</p> 
+       <pre><code class="lang-java">OverrideExample.java:
+package com.company.product;
+import com.unity3d.player.UnityPlayerActivity;
+import android.os.Bundle;
+import android.util.Log;
+
+public class OverrideExample extends UnityPlayerActivity {
+  protected void onCreate(Bundle savedInstanceState) {
+    // call UnityPlayerActivity.onCreate()
+    super.onCreate(savedInstanceState);
+    // print debug message to logcat
+    Log.d("OverrideActivity", "onCreate called!");
+  }
+  public void onBackPressed()
+  {
+    // instead of calling UnityPlayerActivity.onBackPressed() we just ignore the back button event
+    // super.onBackPressed();
+  }
+}
+</code></pre> 
+       <p><code>AndroidManifest.xml</code> yang sesuai mungkin terlihat seperti berikut:</p> 
+       <pre><code class="lang-xml">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.company.product"&gt;
+  &lt;application android:icon="@drawable/app_icon" android:label="@string/app_name"&gt;
+    &lt;activity android:name="com.YourPackage.name.OverrideExample"
+             android:label="@string/app_name"
+             android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"&gt;
+        &lt;intent-filter&gt;
+            &lt;action android:name="android.intent.action.MAIN" /&gt;
+            &lt;category android:name="android.intent.category.LAUNCHER" /&gt;
+        &lt;/intent-filter&gt;
+    &lt;/activity&gt;
+  &lt;/application&gt;
+&lt;/manifest&gt;
+
+</code></pre> 
+       <p>Untuk membuat plug-in dengan Aktivitas baru Anda dan tambahkan ke Anda Proyek, Anda harus melakukan langkah-langkah berikut:</p> 
+       <ol> 
+        <li>Memperpanjang file UnityPlayerActivity. Ini dilakukan terbaik di Android Studio setelah mengekspor proyek dari Unity. Ada beberapa pilihan: 
+         <ul> 
+          <li>File .java atau .kt yang berisi kelas aktivitas Anda dapat dimasukkan ke dalam proyek Unity.</li> 
+          <li>Buat perpustakaan Java yang berisi kelas Anda, kompila dan tuntaskan berkas .jar ke proyek Unity.</li> 
+          <li>Buat perpustakaan Android mengandung kelas Anda; perpustakaan ini dapat dimasukkan ke dalam proyek Unity dalam kode sumber dari (oleh naming folder untuk memiliki .androidlib "ekstensi") atau dapat dikompilasi dan mengakibatkan .aar dimasukkan ke dalam proyek Unity.</li> 
+         </ul> </li> 
+        <li>Buat Android App Manifest baru untuk mengatur Aktivitas baru sebagai titik masuk aplikasi Anda, kemudian letakkan file AndroidManifest.xml di folder Assets/Plugins/Android dari Proyek Anda.</li> 
+       </ol> 
+       <hr> 
+       <ul> 
+        <li><span class="page-history">Ditambahkan sampel kode baru pada 2019. 2. di</span></li> 
+        <li><span class="page-history">Diperbarui AndroidManifest contoh untuk 2019.3 Unity dan up</span></li> 
+       </ul> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="AndroidJARPlugins.html"></a></span> 
+         <div class="tip">
+           JAR plug-ins 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="AndroidNativePlugins.html"></a></span> 
+         <div class="tip">
+           Asli (C++) plug-ins untuk Android 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Penanda Profiler Umum</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="analysis.html">Analysis</a></li> 
+         <li><a href="Profiler.html">Profiler</a></li> 
+         <li>Penanda Profiler Umum</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="profiler-profiling-applications.html"></a></span> 
+          <div class="tip">
+            Profil aplikasi Anda 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="ProfilerWindow.html"></a></span> 
+          <div class="tip">
+            WordPress.org 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Penanda Profiler Umum</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Kode Unity di instrumentasi dengan sejumlah besar penanda <span class="tooltip"><strong>Profiler</strong><span class="tooltiptext">Jendela yang membantu Anda untuk mengoptimalkan permainan Anda. Ini menunjukkan berapa banyak waktu yang dihabiskan di berbagai bidang permainan Anda. Sebagai contoh, dapat melaporkan persentase waktu yang dihabiskan <strong>rendering</strong>, aimating, atau dalam logika permainan Anda. <a class="tooltipMoreInfoLink" href="Profiler.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profiler">Glossary</a></span></span></span> yang memberi Anda wawasan tentang apa yang memakan waktu dalam aplikasi Anda. Tabel berikut menjelaskan beberapa penanda umum yang dilakukan:</p> 
+       <ul> 
+        <li><a href="#main-thread">Marker dasar benang utama</a></li> 
+        <li><a href="#script-update">WordPress.org</a></li> 
+        <li><a href="#rendering">Rendering dan penanda VSync</a></li> 
+        <li><a href="#backend">Tanda skrip akhir belakang</a></li> 
+        <li><a href="#multithreading">Penandaan multithreading</a></li> 
+        <li><a href="#physics">Penanda fisika</a></li> 
+        <li><a href="#warnings">Peringatan kinerja</a></li> 
+       </ul> 
+       <p><a name="main-thread"></a></p> 
+       <h2>Marker dasar benang utama</h2> 
+       <p>Penanda dasar benang utama memberikan pemisahan yang jelas antara waktu yang dihabiskan pada aplikasi Anda dan waktu yang dihabiskan pada kegiatan Editor dan Profiler. <a href="../ScriptReference/Unity.Profiling.ProfilerRecorder.html">ProfilerRecorder</a> juga dapat menggunakan penanda ini untuk mendapatkan waktu bingkai pada benang utama.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Marker</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>PlayerLoop</strong></td> 
+          <td style="text-align:left;">Mengandung sampel yang berasal dari loop utama aplikasi Anda. Jika Anda menargetkan Editor bukan mode Play saat Pemain berjalan dalam Editor dalam mode Play aktif, sampel PlayerLoop bersarang di bawah EditorLoop.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>EditorLoop</strong><br><em>(Editor hanya marker)</em> </td> 
+          <td style="text-align:left;">Mengandung sampel yang berasal dari loop utama Editor. Ini hanya hadir saat Anda profil pemain di Editor. Ketika Anda menargetkan Mode Play dengan Profiler, sampel EditorLoop menunjukkan jumlah waktu yang dihabiskan rendering dan menjalankan Editor yang berisi Pemain.<br><br> Profiler tidak mencatat data rinci lebih lanjut di bawah penanda EditorLoop. Ini karena sampel yang kode Editor memancarkan sementara Profiler adalah profiling Play mode membuat profil besar overhead.<br><br><strong>Others</strong> di <a href="ProfilerCPU.html#charts">Login Grafik modul profiler</a>. Akibatnya, sampel EditorLoop biasanya kontributor terbesar untuk kategori itu. Jika Anda ingin melihat apa yang dilakukan Editor dalam waktu ini dan juga mendapatkan rincian yang lebih rinci tentang apa yang berkontribusi pada kategori <strong>Others</strong>.<a href="profiler-profiling-applications.html">mengubah target Profiler ke Editor sebagai gantinya</a><br><br><strong>Editor</strong> mengubah apa tampilan Profiler dalam pane rinci modul CPU Profiler, serta pemecahan Kategori dalam grafik modul Profiler CPU. Ini karena sampel yang sebelumnya tersembunyi di bawah sampel EditorLoop kemudian berkontribusi terhadap kategori masing-masing.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Profiler.CollectEditorStats</strong><br><em>(Editor hanya marker)</em> </td> 
+          <td style="text-align:left;">Mengandung sampel yang berkaitan dengan mengumpulkan statistik untuk modul Profiler aktif yang berbeda.<br><br>Samples yang bersarang di bawah Profiler. Penanda CollectGlobalStats menunjukkan berapa banyak overhead yang terjadi pemain ketika mengumpulkan statistik modul tertentu. Semua sampel anak lain hanya mencerminkan efek mereka di Editor.<br><br> Untuk menghapus overhead yang ada modul tertentu, tutup grafik modul, atau memanggil Profiler.SetAreaEnabled.<br><br><strong>Note:</strong> Modul Profiler kustom yang menggunakan counter built-in memungkinkan area counter built-in, bahkan jika modul itu milik telah dinonaktifkan. Untuk mencegah Profiler dari mengumpulkan statistik ini dan membuat pengumpulan overhead, pastikan bahwa kedua modul Profiler bawaan dan modul Profiler kustom Anda dinonaktifkan.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>Editor-only marker</h3> 
+       <p>Ada penanda tertentu yang hanya muncul ketika Anda profil di Editor Unity. Penanda ini tidak muncul dalam aktivitas yang berhubungan dengan pemain, dan hanya berkaitan dengan aktivitas Editor. Penanda-only termasuk pemeriksaan keamanan seperti GetComponentNullErrorWrapper, yang membantu untuk mengidentifikasi penggunaan komponen null; CheckConsistensi, yang memvalidasi pengaturan objek; CheckAllowDestructionRecursive, yang merupakan pemeriksaan penghancuran; dan kegiatan terkait Prefab.</p> 
+       <p>Secara default, dalam tampilan <strong>Hierarchy</strong> modul Profiler CPU, tumpukan sampel dengan penanda-only runtuh dan diberi nama <code>EditorOnly [SampleName]</code>. Meskipun tumpukan sampel ini atau sampel anak mereka mungkin menyebabkan alokasi yang berhasil yang dapat menyebabkan pengumpulan sampah yang terpicu, mereka tidak berkontribusi pada GC. Nilai Alloc sampel induk mereka jika mereka runtuh.</p> 
+       <p>Untuk mengubah perilaku default, di kanan atas pane detail modul, pilih menu konteks dan menonaktifkan pengaturan <a href="ProfilerCPU.html#hierarchy">Gratis download</a>. Ketika Anda melakukan ini, Anda dapat memperluas sampel dan berkontribusi GC. Nilai Alloc untuk penanda yang menarik.</p> 
+       <p>Pilihan ini tidak mempengaruhi pandangan <strong>Timeline</strong>, dan sampel dan anak-anak mereka muncul diperluas. Anda biasanya dapat mengabaikan sampel dengan penanda ini, karena mereka berhubungan dengan aktivitas Editor-only dan tidak memiliki dampak pada mengurangi alokasi yang dikelola. Namun, mereka dapat berguna untuk menyelidiki jika Anda memiliki masalah serius dengan dampak kinerja yang mereka miliki pada mode Play.</p> 
+       <p><a name="script-update"></a></p> 
+       <h2>WordPress.org</h2> 
+       <p>Kecuali Anda menggunakan <a href="JobSystem.html">Sistem Pekerjaan</a>, sebagian besar kode skrip Anda di bawah marker berikut. Untuk informasi sampel Sistem Kerja, lihat bagian <a href="#multithreading">Penanda multi threading</a> dari halaman ini.</p> 
+       <p>Untuk rincian lebih lanjut tentang Loop Pembaruan Unity, lihat dokumentasi di . Jika Anda telah memasukkan callback Anda sendiri ke dalam melalui, sampel pembaruan skrip Anda muncul di bawah penanda PlayerLoopSystem utama masing-masing, jika dimasukkan sebagai subsistem, atau sendiri, jika masuk langsung ke loop utama.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Marker</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>BehaviourUpdate</strong></td> 
+          <td style="text-align:left;">Mengandung semua sampel metode <a href="../ScriptReference/MonoBehaviour.Update.html">Login Sitemap</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>CoroutinesDelayedCalls</strong></td> 
+          <td style="text-align:left;">Mengandung semua sampel <a href="../ScriptReference/Coroutine.html">Coroutines</a> setelah hasil pertama mereka.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>FixedBehaviourUpdate</strong></td> 
+          <td style="text-align:left;">Mengandung semua sampel metode <a href="MonoBehaviour.FixedUpdate.html">Monobehaviour.FixedUpdate</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>PreLateUpdate.ScriptRunBehaviourLateUpdate</strong></td> 
+          <td style="text-align:left;">Mengandung semua sampel metode <a href="../ScriptReference/MonoBehaviour.LateUpdate.html">Login Login</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Update.ScriptRunBehaviourUpdate</strong></td> 
+          <td style="text-align:left;">Mengandung semua sampel <a href="../ScriptReference/MonoBehaviour.Update.html">Login Sitemap</a> dan <a href="../ScriptReference/Coroutine.html">Coroutines</a>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="rendering"></a></p> 
+       <h2>Rendering dan penanda VSync</h2> 
+       <p>Penanda ini mengandung sampel di mana CPU menghabiskan data pemrosesan waktu untuk GPU, atau di mana mungkin menunggu GPU selesai. Jika <a class="tooltipMoreInfoLink" href="ProfilerGPU.html">Login Catalog</a> tidak tersedia, atau menambahkan terlalu banyak overhead, <span class="tooltip"><strong>toolbar</strong><span class="tooltiptext">Se baris tombol dan kontrol dasar di bagian atas Editor Unity yang memungkinkan Anda untuk berinteraksi dengan Editor dengan berbagai cara (misalnya scaling, terjemahan). <a href="Toolbar.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Toolbar">Glossary</a></span></span></span> dalam profiler rincian modul pane tidak menunjukkan informasi ini. Sampel di bawah penanda ini dapat memberi Anda ide yang baik dari apakah aplikasi Anda adalah CPU-bound atau GPU-bound.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Marker</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>WaitForTargetFPS</strong></td> 
+          <td style="text-align:left;">Menunjukkan berapa banyak waktu aplikasi Anda yang dihabiskan menunggu FPS yang ditargetkan bahwa <a href="../ScriptReference/Application-targetFrameRate.html">Aplikasi.targetFrameRate</a> menentukan.<br><br> Jika sampel adalah subsample dari Gfx.WaitForPresentOnGfxThread, itu mewakili jumlah waktu bahwa aplikasi Anda menghabiskan menunggu untuk GPU. Sebagai contoh, ini bisa saat GPU menghabiskan menunggu VSync berikutnya, jika dikonfigurasi pada <a href="../ScriptReference/QualitySettings-vSyncCount.html">WordPress.org</a>, atau jika vSync diberlakukan pada platform target Anda. Namun, sampel dengan penanda ini juga dipancarkan jika GPU belum selesai menyusun bingkai.<br><br> Untuk menentukan apa yang menyebabkan sampel dengan penanda ini untuk menggunakan banyak waktu, beralih ke <a href="ProfilerCPU.html#timeline">Tampilan garis waktu dalam modul profiler CPU</a>. Dalam pandangan ini, Anda dapat memeriksa apa yang terjadi pada benang render dan berapa banyak waktu berlalu antara sampel ini berakhir dalam bingkai saat ini dan sampel yang sama berakhir dalam bingkai sekitarnya. <br><br> Jika durasi lebih besar dari waktu bingkai aplikasi Anda harus (didasarkan pada tingkat bingkai yang ditargetkan atau vSync) bingkai Anda mengambil terlalu lama untuk membuat atau menghitung. Jika itu kasus, menyelidiki benang render dan melihat berapa banyak waktu yang dihabiskan di Gfx. PresentFrame atas pekerjaan lain yang harus disiapkan dan mengeluarkan perintah untuk GPU. Jika benang render menghabiskan sejumlah besar waktu di Gfx.PresentFrame, pekerjaan rendering Anda adalah GPU-bound. Jika waktu render thread dihabiskan menyiapkan perintah, aplikasi Anda adalah CPU-bound.<br><br> Untuk mengetahui apa yang harus difokuskan, jika aplikasi Anda terikat GPU, profil GPU bekerja dengan Profiler Unity atau profiler platform. Untuk informasi lebih lanjut, lihat dokumentasi manual Pengguna tentang cara .<br><br><strong>Note:</strong> Editor tidak VSync di GPU dan bukan menggunakan WaitForTargetFPS untuk mensimulasikan penundaan VSync. Beberapa platform, di Android dan iOS tertentu, menegakkan VSync atau memiliki rentang frame rate default 30 atau 60.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Gfx.PresentFrame</strong></td> 
+          <td style="text-align:left;">Mewakili waktu aplikasi Anda yang dihabiskan menunggu GPU untuk membuat dan menyajikan bingkai, yang mencakup menunggu VSync.<br><br> Sampel dengan penanda WaitForTargetFPS pada benang utama menunjukkan berapa banyak waktu yang dihabiskan menunggu VSync.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Gfx.ProcessCommands</strong></td> 
+          <td style="text-align:left;">Berisi semua pemrosesan perintah rendering pada benang render. Aplikasi Anda mungkin telah menghabiskan beberapa waktu pemrosesan ini menunggu perintah <span class="tooltip"><strong>VSync</strong><span class="tooltiptext">Sinkronisasi vertikal (VSync) adalah pengaturan tampilan yang menangkap tingkat bingkai permainan untuk mencocokkan tingkat refresh monitor, untuk mencegah robek gambar.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#VSync">Glossary</a></span></span></span> atau baru dari benang utama, yang dapat Anda lihat dari sampel anak Gfx.WaitForPresentOnGfxThread.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Gfx.WaitForCommands</strong></td> 
+          <td style="text-align:left;">Menunjukkan bahwa benang render siap untuk perintah baru. Jika Anda melihat penanda ini, mungkin menunjukkan bottleneck pada benang utama.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Sitemap e.g.<code>&lt;GraphicsAPIName&gt;.WaitForLastPresent</code><br><strong>GfxDeviceD3D11.WaitForLastPresent</strong><br><strong>GfxDeviceD3D12.WaitForLastPresent</strong><br><strong>GfxDeviceMetal.WaitForLastPresent</strong> </td> 
+          <td style="text-align:left;">Sampel dengan penanda ini muncul ketika benang utama menunggu GPU untuk membalikkan nomor bingkai ke layar (<code>Time.frameCount - QualitySettings.maxQueuedFrames + 1</code>). Ini berarti bahwa jika KualitasSettings.maxQueuedFrames lebih besar dari satu, kali ini dihabiskan menunggu GPU untuk membalik bingkai bahwa aplikasi Anda diminta untuk membuat dalam bingkai benang utama sebelumnya.<br><br> Untuk detail lebih lanjut tentang sampel ini dan gambaran Pipa Bingkai Unity, lihat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Gfx.WaitForPresentOnGfxThread</strong></td> 
+          <td style="text-align:left;">Menunjukkan bahwa benang utama siap untuk memulai rendering bingkai berikutnya, tetapi benang render tidak selesai menunggu GPU untuk menyajikan bingkai. Ini mungkin menunjukkan bahwa aplikasi Anda adalah GPU-bound. Untuk melihat apa benang render secara bersamaan menghabiskan waktu, periksa <a href="ProfilerCPU.html#timeline">Login Tampilan Timeline modul profiler</a>.<br><br> Jika benang render menghabiskan waktu di Kamera. Render, aplikasi Anda adalah CPU-bound dan mungkin menghabiskan terlalu banyak waktu mengirim panggilan atau tekstur ke GPU.<br><br> Jika benang render menghabiskan waktu di Gfx.PresentFrame, aplikasi Anda adalah GPU-bound, atau mungkin menunggu VSync di GPU. A WaitForTargetFPS sub-sample dari Gfx.WaitForPresentOnGfxThread mewakili bagian dari fase Present bahwa aplikasi Anda menghabiskan menunggu VSync. Fase Present adalah bagian dari waktu antara Unity menginstruksikan API grafis untuk menukar penyangga, pada saat operasi ini selesai.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Gfx.WaitForRenderThread</strong></td> 
+          <td style="text-align:left;">Menunjukkan bahwa benang utama menunggu benang render untuk memproses semua perintah dalam aliran perintahnya. Sampel dengan penanda ini hanya muncul dalam rendering multithreaded.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="backend"></a></p> 
+       <h2>Tanda skrip akhir belakang</h2> 
+       <p>Sampel menyoroti aktivitas Mono atau <span class="tooltip"><strong>IL2CPP</strong><span class="tooltiptext">Back-end scripting bersatu yang dapat Anda gunakan sebagai alternatif untuk Mono ketika proyek bangunan untuk beberapa platform. <a class="tooltipMoreInfoLink" href="IL2CPP.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#IL2CPP">Glossary</a></span></span></span> <span class="tooltip"><strong>scripting backend</strong><span class="tooltiptext">Kerangka kerja yang skrip di Unity. Unity mendukung tiga backend scripting yang berbeda tergantung pada platform target: Mono, .NET dan IL2CPP. Platform Windows Universal, namun hanya mendukung dua: .NET dan IL2CPP. <a href="windowsstore-il2cpp.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ScriptingBackend">Glossary</a></span></span></span> dan berguna untuk memecahkan masalah dengan pengumpulan sampah dan alokasi.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Marker</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>GC.Alloc</strong></td> 
+          <td style="text-align:left;">Mewakili alokasi di landak yang berhasil yang mengandung alokasi terkelola yang tunduk pada pengumpulan sampah otomatis. Untuk mengurangi waktu aplikasi Anda menghabiskan pada pengumpulan sampah otomatis, Anda harus meminimalkan jenis sampel ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>GC.Collect</strong></td> 
+          <td style="text-align:left;">Mewakili sampel yang berkaitan dengan pengumpulan sampah. Kapanpun Unity perlu melakukan pengumpulan sampah, berhenti menjalankan kode program Anda dan hanya melanjutkan eksekusi normal ketika kolektor sampah telah menyelesaikan semua pekerjaannya. Login Jika Anda telah mengaktifkan <strong>Note:</strong> kolektor sampah mungkin tidak menyelesaikan pekerjaannya dalam satu bingkai.<a href="performance-incremental-garbage-collection.html">Koleksi Sampah</a><br><br><a href="performance-managed-memory.html">Memahami manajemen memori otomatis</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Mono.JIT</strong><br><em>Mono-only</em> </td> 
+          <td style="text-align:left;">Mengandung sampel yang berkaitan dengan kompilasi tepat waktu dari metode scripting. Ketika fungsi dieksekusi untuk pertama kalinya, Mono mengkompilasinya dan Mono. JIT mewakili overhead kompilasi ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UnsafeUtility.Malloc</strong></td> 
+          <td style="text-align:left;">Mengandung sampel yang memanggil ketidakamanan. Malloc untuk mengalokasikan memori yang tidak dikelola. Sementara Pengumpul Sampah tidak melacak memori ini, mengalokasikan memori mungkin memiliki dampak kinerja yang signifikan yang ditunjukkan dengan sampel ini. Untuk menyelidiki sumber panggilan ini, Anda dapat mengaktifkan perekaman <span class="tooltip"><a href="ProfilerCPU.html#call-stacks">Call Stack</a><span class="tooltiptext">Daftar metode yang disebut pada waktu lari, diatur sebagai tumpukan pertama-out terakhir. <br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#callstack">Glossary</a></span></span></span> untuk penanda ini di jendela Profiler.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="multithreading"></a></p> 
+       <h2>Penandaan multithreading</h2> 
+       <p>Penanda ini mengandung sampel yang tidak mengukur siklus CPU yang dikonsumsi, tetapi alih-alih menyoroti informasi yang berkaitan dengan sinkronisasi benang dan Sistem Kerja. Ketika Anda melihat sampel ini, gunakan modul Profiler CPU <a href="ProfilerCPU.html#timeline">Timeline view</a> untuk memeriksa apa yang terjadi pada benang lain pada saat yang sama.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Marker</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Idle</strong></td> 
+          <td style="text-align:left;">Mengandung sampel yang menunjukkan panjang waktu bahwa Thread Pekerja tidak aktif. Benang pekerja tidak aktif setiap saat bahwa Sistem Kerja tidak menggunakannya, dan masuk ke mode tunggu, di mana ia menunggu pada semaphore.<br><br> celah kecil antara Idle sampel biasanya terjadi ketika Job System membangun mereka, misalnya, untuk menjadwalkan pekerjaan baru. kesenjangan yang lebih panjang mungkin menunjukkan bahwa pekerjaan asli yang belum berperang berjalan pada benang.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>JobHandle.Complete</strong></td> 
+          <td style="text-align:left;">Mengandung sampel yang menunjukkan ketika titik sinkron pada pekerjaan terjadi. Sinkronkan poin mungkin memiliki dampak kinerja pada aplikasi Anda dan mungkin mengganggu pelaksanaan kode kerja multi-threaded. Untuk memudahkan untuk menemukan di mana titik sinkronisasi terjadi, aktifkan perekaman <a href="ProfilerCPU.html#call-stacks">Call Stack</a> untuk sampel ini. Dalam tampilan <strong>Timeline</strong> modul profiler CPU Anda dapat mengaktifkan <a href="ProfilerCPU.html#flow-events">Flow Events</a> untuk melihat pekerjaan yang selesai pada titik ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Semaphore.WaitForSignal</strong></td> 
+          <td style="text-align:left;">Mengandung sampel yang menggambarkan titik sinkronisasi pada benang. Untuk menemukan benang yang menunggu, periksa pandangan Timeline untuk sampel yang berakhir segera sebelum yang ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>WaitForJobGroupID</strong></td> 
+          <td style="text-align:left;">Pagar Sinkronkan pada JobHandle dipicu. Ini mungkin menyebabkan <a href="../ScriptReference/Unity.Jobs.IJobParallelFor.html">pekerjaan mencuri</a>, yang terjadi ketika seorang pekerja menyelesaikan pekerjaannya dan kemudian melihat pekerjaan pekerja lain untuk menyelesaikan. Ini menunjukkan sebagai sampel pekerjaan yang dieksekusi di bawah penanda ini. Pekerjaan yang "stolen" tidak tentu pekerjaan yang sedang menunggu.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="physics"></a></p> 
+       <h2>Penanda fisika</h2> 
+       <p>Tabel berikut menguraikan beberapa fisika tingkat tinggi <span class="tooltip"><strong>Profiler markers</strong><span class="tooltiptext">Ditempatkan dalam kode untuk menggambarkan acara CPU atau GPU yang kemudian ditampilkan di jendela Unity Profileer. Ditambahkan ke kode Unity secara default, atau Anda dapat menggunakan untuk menambahkan penanda kustom Anda sendiri. <a href="profiler-markers.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profilermarker">Glossary</a></span></span></span>. <a href="../ScriptReference/MonoBehaviour.FixedUpdate.html">FixedUpdate</a> memanggil semua pengukuran ini.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Marker</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Physics.FetchResults</strong></td> 
+          <td style="text-align:left;">Mengandung sampel yang mengumpulkan hasil simulasi fisika dari <span class="tooltip"><strong>physics engine</strong><span class="tooltiptext">Sebuah sistem yang mensimulasikan aspek sistem fisik sehingga benda dapat mempercepat dengan benar dan dipengaruhi oleh tabrakan, gravitasi dan kekuatan lainnya. <a class="tooltipMoreInfoLink" href="PhysicsSection.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#PhysicsEngine">Glossary</a></span></span></span>, seperti aliran kontak, memicu tumpang tindih, dan peristiwa kerusakan <span class="tooltip"><strong>joint</strong><span class="tooltiptext">Komponen fisika yang memungkinkan koneksi dinamis antara komponen Rigidbody, biasanya memungkinkan beberapa tingkat pergerakan seperti engsel. <a href="Joints.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#joint">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Physics.Interpolation</strong></td> 
+          <td style="text-align:left;">Mengandung sampel yang mengukur waktu eksekusi Fisika. Metode interpolasi. Metode ini mengelola interpolasi posisi dan rotasi untuk semua objek fisika dalam aplikasi Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Physics.Processing</strong></td> 
+          <td style="text-align:left;">Mengandung sampel yang menghabiskan waktu menunggu pada benang utama sampai simulasi fisika selesai di semua benang. Jika aplikasi Anda menghabiskan banyak waktu dalam Fisika. Pengolahan tetapi hanya memiliki beberapa fisika yang terkait <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#GameObject">Glossary</a></span></span></span> di <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>, mungkin menunjukkan bahwa benang pekerja mengambil tugas sistem lain karena mencuri pekerjaan dan dilaporkan sebagai fisika. Ini karena saat menunggu, benang utama mengambil pekerjaan dari antrian prioritas tinggi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Physics.ProcessingCloth</strong></td> 
+          <td style="text-align:left;">Mengandung sampel yang mengukur waktu eksekusi Fisika. Metode pengolahanCloth. Metode ini memproses semua pekerjaan fisika kain. Perluas sampel ini untuk menunjukkan detail tingkat rendah dari pekerjaan dilakukan secara internal di mesin fisika.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Physics.ProcessReports</strong></td> 
+          <td style="text-align:left;">Mengandung sampel yang sesuai dengan waktu yang dihabiskan data fisika ke skrip melalui callback seperti OnTriggerEnter. Login Sampel ini tidak menghitung data yang diperlukan karena telah disiapkan selama FetchResults.<strong>Note:</strong><br><br>There are four distinct sub-stages:</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Physics.Contacts</strong></td> 
+          <td style="text-align:left;">Mengandung sampel yang mengukur waktu eksekusi Fisika. Sitemap Proses ini OnCollisionEnter, OnCollisionExit, dan acara OnCollisionStay.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Physics.JointBreaks</strong></td> 
+          <td style="text-align:left;">Mengandung sampel yang mengukur waktu eksekusi Fisika. Login Proses ini diperbarui dan pesan terkait dengan sendi yang rusak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Physics.TriggerEnterExits</strong></td> 
+          <td style="text-align:left;">Mengandung sampel yang mengukur waktu eksekusi Fisika. Login Proses ini OnTriggerEnter dan acara OnTriggerExit.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Physics.TriggerStays</strong></td> 
+          <td style="text-align:left;">Mengandung sampel yang mengukur waktu eksekusi Fisika. Login Proses ini Acara OnTriggerStay.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Physics.Simulate</strong></td> 
+          <td style="text-align:left;">Mengandung sampel yang mengukur jumlah waktu yang dihabiskan bekerja pada prasyarat untuk metode <a href="../ScriptReference/Physics.Simulate.html">Fisika. Login</a>. Metode ini menginstruksikan mesin fisika untuk menjalankan simulasinya, yang memperbarui keadaan fisika saat ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Physics.UpdateBodies</strong></td> 
+          <td style="text-align:left;">Mengandung sampel yang memperbarui semua posisi dan rotasi tubuh fisika. Untuk setiap permainan Objek yang memiliki komponen <span class="tooltip"><strong>Rigidbody</strong><span class="tooltiptext">Komponen yang memungkinkan GameObject untuk dipengaruhi oleh gravitasi simulasi dan kekuatan lainnya. <a class="tooltipMoreInfoLink" href="class-Rigidbody.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Rigidbody">Glossary</a></span></span></span>, sampel dengan penanda ini membaca pose dari mesin fisika dan menulisnya ke Transform.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Physics.UpdateCloth</strong></td> 
+          <td style="text-align:left;">Mengandung sampel yang mengukur waktu eksekusi Fisika. Metode UpdateCloth. Metode ini memproses pembaruan yang berkaitan dengan kain dan Mesh yang dikupas.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Untuk informasi lebih lanjut tentang siklus hidup skrip dan sampel umum dalam siklus hidup skrip, lihat dokumentasi pada <a href="ExecutionOrder.html#UpdateOrder">Pesanan Pelaksanaan Fungsi Acara</a>.</p> 
+       <p><a name="warnings"></a></p> 
+       <h2>Peringatan kinerja</h2> 
+       <p>Profiler CPU mendeteksi beberapa masalah kinerja umum dan memperingatkan Anda tentang mereka. Ini muncul di kolom Peringatan tampilan <a href="ProfilerCPU.html#hierarchy">Login Hierarchy modul profiler</a> dalam pane detail modul.</p> 
+       <p>Profiler mendeteksi beberapa panggilan tertentu yang harus Anda hindari dalam konteks kinerja-critical. Ini menampilkan peringatan dengan alasan operasi mempengaruhi kinerja sebagai berikut:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Warning</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Animation.DestroyAnimationClip</strong><br><strong>Animation.AddClip</strong><br><strong>Animation.RemoveClip</strong><br><strong>Animation.Clone</strong><br><strong>Animation.Deactivate</strong> </td> 
+          <td style="text-align:left;">Menunjukkan bahwa Rebuild InternState telah dipicu. Rebuild InternState adalah operasi yang melalui daftar kurva untuk setiap klip di komponen Animasi, dan kemudian rebinds setiap kurva untuk nilai pada komponen, pada GameObject.<br><br> Ini adalah operasi intensif sumber daya, sehingga Anda harus menghindari memanggil metode ini pada runtime sebanyak mungkin.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>AssetBundle.asset/allAssets</strong></td> 
+          <td style="text-align:left;">Menunjukkan bahwa Unity disebut AssetBundleRequest. Sitemap Aset API sementara pemuatan AssetBundle tidak lengkap (AssetBundleRequest. isDone adalah palsu). Ini menyebabkan kios pada benang utama dan menunggu operasi pemuatan selesai.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>AsyncUploadManager.AsyncBufferResized</strong><br><strong>AsyncUploadManager.AsyncBufferDelete</strong> </td> 
+          <td style="text-align:left;">Menunjukkan bahwa penyangga internal untuk mengunggah data ke GPU diubah karena tidak cukup besar. Resizing ini lambat dan menyebabkan lonjakan dalam aktivitas CPU.<br><br> Anda dapat menghindari peringatan ini jika Anda dapat mengambil memori untuk mengalokasikan ukuran yang lebih besar di depan. <br><br> Anda dapat menggunakan pengaturan <strong>Async Upload Buffer Size</strong> pada <a href="class-QualitySettings.html">Pengaturan kualitas</a> untuk mengatur ukuran default.<br><br>The AsyncUploadManager.AsyncBufferResized marker menunjukkan ukuran baru dialokasikan yang dapat Anda gunakan sebagai panduan untuk ukuran penyangga default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Rigidbody.SetKinematic</strong></td> 
+          <td style="text-align:left;">Membuat non-convex MeshCollider untuk kaku.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="profiler-profiling-applications.html"></a></span> 
+         <div class="tip">
+           Profil aplikasi Anda 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="ProfilerWindow.html"></a></span> 
+         <div class="tip">
+           WordPress.org 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Membuat dan mengubah Pengaturan Jarak Jauh</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="monetization" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UnityServices.html">Layanan Unity</a></li> 
+         <li><a href="UnityAnalytics.html"></a></li> 
+         <li><a href="UnityAnalyticsRemoteSettings.html">Pengaturan Jarak Jauh</a></li> 
+         <li> Membuat dan merubah Remote Settings</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UnityAnalyticsRemoteSettings.html"></a></span> 
+          <div class="tip">
+            Pengaturan Jarak Jauh 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UnityAnalyticsRemoteSettingsUsing.html"></a></span> 
+          <div class="tip"> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Membuat dan mengubah Pengaturan Jarak Jauh</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p> <em><strong>Note</strong>: sekarang tersedia sebagai <span class="tooltip"><strong>preview package</strong><span class="tooltiptext">A </span></span></em>preview* paket dalam pengembangan dan belum siap untuk produksi. Paket dalam pratinjau mungkin ada tahap perkembangan, dari tahap awal hingga penyelesaian dekat.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Previewpackage">Glossary</a></span>. Remote Config adalah penawaran yang ditingkatkan yang memungkinkan Anda untuk mengubah perilaku dan penampilan permainan Anda tanpa memerlukan biner baru. Anda dapat mengaktifkan atau menonaktifkan fitur, mengubah spesifikasi permainan Anda untuk menargetkan audiens tertentu, atau menjalankan acara khusus dengan menjadwalkan rilis konten baru. Sitemap</p> 
+       <p><a class="tooltipMoreInfoLink" href="SettingUpProjectServices.html">Layanan Unity</a> and the <a href="UnityAnalyticsOverview.html">Layanan Analisis Unity</a> for your Unity project. Once you have enabled <span class="tooltip"><strong>Analytics</strong><span class="tooltiptext"><strong>Unity Analytics</strong><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Analytics">Glossary</a></span></span></span>, open the Analytics dashboard and go to the <span class="tooltip"><strong>Remote Settings</strong><span class="tooltiptext">Pengaturan jarak jauh adalah variabel game yang dapat Anda set jarak jauh di Dasbor Analisis Anda. <a href="UnityAnalyticsRemoteSettings.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#RemoteSettings">Glossary</a></span></span></span> page to create and change the Remote Settings values. See <a href="UnityAnalyticsRemoteSettingsUsing.html">Menggunakan Pengaturan Jarak Jauh dalam proyek Unity</a> to learn how to access these Remote Settings values in your game or application.</p> 
+       <p>Layanan Analytics menyediakan dua konfigurasi Pengaturan Jarak Jauh:</p> 
+       <ol> 
+        <li><p>Layanan Analytics mengirimkan pengaturan konfigurasi Rilis ke komputer dan perangkat yang berjalan secara teratur, non-development build aplikasi Anda.</p></li> 
+        <li><p>Layanan Analytics mengirimkan pengaturan konfigurasi Pengembangan ke komputer dan perangkat yang menjalankan <span class="tooltip"><strong>development builds</strong><span class="tooltiptext">Membangun pengembangan termasuk simbol debug dan memungkinkan Profiler. <a class="tooltipMoreInfoLink" href="UnityCloudBuildDevelopmentBuilds.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#DevelopmentBuild">Glossary</a></span></span></span> (yaitu, membangun dibuat dengan bendera Pembangunan Membangun diperiksa pada <a href="BuildSettings.html">Membangun jendela Pengaturan</a>). Mode bermain dalam jumlah Editor Unity sebagai pembangunan build.</p></li> 
+       </ol> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AnalyticsRemoteSettingsTab.png" alt="The Remote Settings page on the Analytics dashboard for a game called Raging Bots"> 
+        <figcaption>
+          Halaman Pengaturan Jarak Jauh di dashboard Analytics untuk permainan yang disebut Raging Bots 
+        </figcaption> 
+       </figure> 
+       <p></p> 
+       <p></p> 
+       <h2></h2> 
+       <p></p> 
+       <ul> 
+        <li><p></p></li> 
+        <li><p></p></li> 
+        <li><p></p></li> 
+       </ul> 
+       <p>Nilai pengaturan dapat berupa jenis primitif berikut: <strong>Int</strong>, <strong>Float</strong>, <strong>String</strong>, atau <strong>Bool</strong>. Aturan untuk menetapkan nilai:</p> 
+       <ul> 
+        <li><p>Nilai Int adalah 32-bit integers (–2147483648 to 2147483647).</p></li> 
+        <li><p>Nilai Float adalah single-precision, 32-bit floating-point numbers (sekitar –3.4x10<sup>38 g</sup> sd 3.4x10<sup>38 g</sup>).</p></li> 
+        <li><p>String terbatas pada 1024 karakter.</p></li> 
+        <li><p>Anda harus menspesifikasikan nilai boolean dengan string “true” atau “false”.</p></li> 
+       </ul> 
+       <h2>Menambahkan Pengaturan Jarak Jauh</h2> 
+       <p>Untuk menambahkan Pengaturan Jarak Jauh:</p> 
+       <ol> 
+        <li><p>Di Anda, buka halaman <strong>Remote Settings</strong>.</p></li> 
+        <li><p>Mengatur <strong>Configuration</strong> ke <strong>Release</strong> atau <strong>Development</strong> untuk pengaturan.</p></li> 
+        <li><p>Klik <strong>ADD NEW KEY-VALUE</strong> (di bagian atas daftar pengaturan).</p></li> 
+        <li><p>Masukkan nama untuk kunci.</p></li> 
+        <li><p>Mengatur jenis nilai.</p></li> 
+        <li><p>Masukkan nilai default.</p></li> 
+        <li><p>Klik tombol <strong>Save</strong>.</p></li> 
+        <li><p>Klik tombol <strong>Sync</strong> untuk menerbitkan perubahan Anda. (Anda tidak perlu mengklik tombol <strong>Sync</strong> setelah membuat setiap pengaturan individu; Anda dapat menunggu untuk menyinkronkan pengaturan Anda sampai Anda menyelesaikan membuat semua perubahan pada konfigurasi saat ini.)</p></li> 
+       </ol> 
+       <p>Sitemap Untuk menambahkan nilai yang ditargetkan pada segmen yang berbeda, simpan pengaturan nilai kunci default dan kemudian edit. Pilihan segmen hanya muncul ketika Anda mengedit pengaturan, bukan ketika Anda pertama kali membuat satu.<strong>Note:</strong> To add values targeted to different segments, save the default key-value setting and then edit it. The segment options only appear when you edit a setting, not when you first create one.</p> 
+       <h2>Mengedit Pengaturan Jarak Jauh</h2> 
+       <p>Untuk mengedit Pengaturan Jarak Jauh:</p> 
+       <ol> 
+        <li><p>Buka halaman <strong>Remote Settings</strong> di dasbor Analytics Anda.</p></li> 
+        <li><p>Pilih <strong>Release</strong> atau <strong>Development</strong> <strong>Configuration</strong>.</p></li> 
+        <li> <p>Klik ikon edit di sebelah pengaturan yang ingin Anda ubah.</p> 
+         <figure> 
+          <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/RemoteSettingsEditSetting.png" alt=""> 
+         </figure> </li> 
+        <li><p>Membuat perubahan Anda. Perhatikan bahwa mengubah nama kunci memiliki efek yang sama seperti menghapus kunci lama dan menciptakan yang baru.</p></li> 
+        <li><p>Klik tombol <strong>Save</strong>.</p></li> 
+        <li><p>Klik tombol <strong>Sync</strong> untuk menerbitkan perubahan Anda. Unity membaca pengaturan yang diperbarui pemain waktu berikutnya memulai sesi.</p></li> 
+       </ol> 
+       <h2>Menyelesaikan pengeditan simultan</h2> 
+       <p>Jika dua orang di tim Anda mengedit Pengaturan Jarak Jauh pada proyek pada saat yang sama, Anda dapat mendapatkan konflik ketika mencoba untuk menyinkronkan pengaturan yang dimodifikasi dengan layanan.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/RemoteSettingsEditConflict.png" alt="Warning that someone else has changed the settings while you were editing the same project"> 
+        <figcaption>
+          Peringatan bahwa orang lain telah mengubah pengaturan sementara Anda mengedit proyek yang sama 
+        </figcaption> 
+       </figure> 
+       <p>Ketika konflik terjadi, Anda memiliki opsi berikut:</p> 
+       <p><strong>OVERWRITE</strong></p> 
+       <p>Menyiapkan semua perubahan pada layanan karena Anda sinkronisasi terakhir dan mendorong pengaturan Anda ke layanan. Ketika Anda memilih overwrite, pengaturan pada layanan akan mencocokkan pengaturan Anda saat ini persis.</p> 
+       <p><strong>MERGE</strong></p> 
+       <p>Menggabungkan pengaturan Anda saat ini dengan pengaturan yang dimodifikasi dari layanan dan memberi Anda kesempatan untuk membuat perubahan sebelum menyelesaikan operasi sinkronisasi.</p> 
+       <p>Jika Anda mengedit nilai pengaturan yang sama, perubahan Anda menulis versi dari layanan. Selain itu, nilai dan pengaturan yang dihapus pada layanan dipulihkan (sejak mereka masih ada dalam versi Anda). Jika tidak, perubahan dari layanan karena Anda tetap disinkronkan.</p> 
+       <p>Setelah merging, halaman Pengaturan Jarak Jauh Anda diperbarui untuk mencerminkan merger, tetapi pengaturan gabungan tidak didorong ke server. Anda dapat meninjau perubahan terbaru dan klik tombol <strong>Sync</strong> lagi ketika Anda siap.</p> 
+       <p><strong>CANCEL</strong></p> 
+       <p>Membatalkan operasi sinkronisasi dan menutup dialog konflik tanpa membuat perubahan. Pengaturan Anda tidak disimpan ke layanan.</p> 
+       <h2>Menambahkan nilai yang berbeda untuk segmen yang berbeda</h2> 
+       <p>Anda dapat menetapkan beberapa nilai tersegmentasi ke kunci Pengaturan Jarak Jauh tunggal. Ketika seorang pemain adalah anggota salah satu segmen yang memiliki nilai tertentu, Unity mengirimkan nilai itu kepada pemain bukan nilai default, <strong>All Users</strong>. (Jika pemain memenuhi syarat untuk beberapa nilai tersegmentasi, Unity mengirimkan nilai dari segmen prioritas tertinggi.)</p> 
+       <p>Untuk menetapkan nilai tertentu ke segmen tertentu:</p> 
+       <ol> 
+        <li><p>Buka halaman <strong>Remote Settings</strong> di dasbor Analytics Anda.</p></li> 
+        <li><p>Pilih Konfigurasi <strong>Release</strong> atau <strong>Development</strong>.</p></li> 
+        <li><p>Tambahkan Pengaturan Jarak Jauh jika tidak ada.</p></li> 
+        <li><p>Klik ikon edit di sebelah kanan pengaturan.</p></li> 
+        <li><p>Klik <strong>ADD EXISTING SEGMENT</strong>.</p></li> 
+        <li><p>Dalam baris baru, pilih segmen dari daftar drop-down dan masukkan nilai.</p></li> 
+        <li><p>Klik tombol <strong>Save</strong>.</p></li> 
+       </ol> 
+       <h2>Pengaturan Jarak Jauh</h2> 
+       <p>Untuk menghapus Pengaturan Jarak Jauh, pertama buka tampilan edit untuk pengaturan:</p> 
+       <ol> 
+        <li><p>Buka halaman <strong>Remote Settings</strong> di dasbor Analytics Anda.</p></li> 
+        <li><p>Mengatur <strong>Configuration</strong> ke <strong>Release</strong> atau <strong>Development</strong> untuk pengaturan.</p></li> 
+        <li> <p>Klik ikon edit di sebelah pengaturan yang ingin dihapus untuk membuka tampilan edit:</p> 
+         <figure> 
+          <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/RemoteSettingsDelete.png" alt=""> 
+         </figure> </li> 
+        <li><p>Untuk menghapus nilai untuk segmen tertentu, klik tombol <strong>minus</strong> ke kanan tampilan edit dan kemudian klik <strong>Save</strong>. (Anda tidak dapat menghapus nilai <strong>All Users</strong> default.)</p></li> 
+        <li><p>Untuk menghapus seluruh pengaturan, klik ikon menghapus di bagian bawah tampilan edit dan kemudian pastikan Anda ingin menghapus pengaturan.</p></li> 
+        <li><p>Klik tombol <strong>Sync</strong> untuk menerbitkan perubahan Anda.</p></li> 
+       </ol> 
+       <h2>Pengaturan prioritas segmen</h2> 
+       <p>Ketika pemain adalah anggota lebih dari satu segmen, Unity mengirimkan nilai yang ditetapkan untuk segmen prioritas tertinggi. (Jika pengaturan tidak memiliki nilai tersegmentasi, atau pemain tidak menjadi anggota segmen yang memiliki nilai yang berbeda untuk kunci, maka Unity mengirimkan nilai Semua Pengguna.) Anda dapat mengatur urutan segmen Anda untuk menentukan nilai-nilai yang tersegmentasi harus mengambil precedence ketika ada tumpang tindih.</p> 
+       <p>Untuk mengatur prioritas segmen:</p> 
+       <ol> 
+        <li><p>Buka halaman <strong>Remote Settings</strong> di dasbor Analytics Anda.</p></li> 
+        <li><p>Pilih Konfigurasi <strong>Release</strong> atau <strong>Development</strong>.</p></li> 
+        <li> <p>Klik ikon menu di sudut kanan atas daftar pengaturan:</p> 
+         <figure> 
+          <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/RemoteSettingsMenuIcon.png" alt=""> 
+         </figure> </li> 
+        <li> <p>Klik ikon prioritas segmen.</p> 
+         <figure> 
+          <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/RemoteSettingsPriorityIcon.png" alt=""> 
+         </figure> </li> 
+        <li><p>Jendela <strong>Segment Priority</strong> terbuka, menunjukkan pesanan Anda saat ini. Hanya segmen yang sudah ditugaskan nilai untuk Pengaturan Jarak Jauh yang muncul di jendela.</p></li> 
+        <li> <p>Reorder segmen dengan mengklik dan menyeret item ke tempat.</p> 
+         <figure> 
+          <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/RemoteSettingsSegmentOrder.png" alt=""> 
+         </figure> </li> 
+        <li><p>Ketika pesanan benar, klik <strong>Save</strong>.</p></li> 
+        <li><p>Klik tombol <strong>Sync</strong> untuk menerbitkan perubahan Anda.</p></li> 
+       </ol> 
+       <p>Prioritas segmen berlaku untuk semua pengaturan dalam konfigurasi, tetapi Anda dapat memiliki prioritas yang berbeda untuk konfigurasi Pengembangan dan Rilis.</p> 
+       <h2>Pengaturan impor dan ekspor</h2> 
+       <p>Anda dapat mengimpor dan mengekspor pengaturan menggunakan comma-separated-value (CSV) format file.</p> 
+       <p><strong>To export your current settings:</strong></p> 
+       <ol> 
+        <li><p>Navigasi ke halaman Pengaturan Jarak Jauh di dasbor <span class="tooltip"><strong>Unity Analytics</strong><span class="tooltiptext">Sebuah platform data yang menyediakan analitik untuk permainan Unity Anda. <a class="tooltipMoreInfoLink" href="UnityAnalytics.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UnityAnalytics">Glossary</a></span></span></span> Anda.</p></li> 
+        <li><p>Pilih konfigurasi, baik <strong>Release</strong> atau <strong>Development</strong> yang ingin Anda ekspor.</p></li> 
+        <li> <p>Klik ikon menu di sisi kanan header daftar:</p> 
+         <figure> 
+          <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AnalyticsRSMenuIcon.png" alt=""> 
+         </figure> </li> 
+        <li><p>Pilih <strong>Download CSV</strong> untuk mengekspor pengaturan saat ini ke komputer Anda.</p></li> 
+       </ol> 
+       <p>Layanan Analytics mengunduh pengaturan saat ini sebagai file CSV.</p> 
+       <p>Perhatikan bahwa jika Anda mengunduh file CSV sebelum membuat pengaturan, file benar-benar kosong. File yang valid untuk mengunggah harus berisi baris header. Sitemap<a href="#csvformat">Remote Pengaturan CSV Login</a>.</p> 
+       <p><strong>To import settings into your project:</strong></p> 
+       <ol> 
+        <li><p>Navigasi ke halaman Pengaturan Jarak Jauh di dasbor Analisis Unity Anda.</p></li> 
+        <li><p>Pilih konfigurasi, baik <strong>Release</strong> atau <strong>Development</strong> yang ingin Anda tujukan dengan pengaturan impor.</p></li> 
+        <li><p>Klik ikon menu di sisi kanan header daftar.</p></li> 
+        <li><p>Pilih <strong>Upload CSV</strong> untuk mengimpor file pengaturan baru ke proyek.</p></li> 
+        <li><p>Pilih file CSV yang berisi pengaturan baru.</p></li> 
+        <li> <p>Klik <strong>Open</strong>.</p> <p>Layanan Analytics meng-upload file pengaturan dan menggantikan semua pengaturan saat ini dalam konfigurasi yang dipilih, tetapi tidak melakukan nilai-nilai belum.</p> <p>Jika format atau kesalahan nilai ada dalam file, layanan memberi Anda opsi untuk mengunduh file CSV merinci kesalahan. Tidak ada perubahan yang dilakukan pada pengaturan ketika kesalahan terjadi.</p> </li> 
+        <li><p>Klik <strong>Sync</strong> untuk melakukan perubahan pengaturan dan membuat mereka hidup. (Harap halaman atau arahkan tanpa sinkronisasi untuk membuang pengaturan yang diunggah.)</p></li> 
+       </ol> 
+       <p>Ketika Anda mengimpor pengaturan, <strong>ALL</strong> kunci dan nilai diubah untuk mencocokkan file yang diunggah. Jika pengaturan yang ada atau nilai segmen tidak muncul dalam file, yang pengaturan dihapus.</p> 
+       <h3>Membuat dan menghapus pengaturan selama impor</h3> 
+       <p>Selain mengedit nilai pengaturan, Anda dapat membuat dan menghapus pengaturan ketika Anda mengunggah file CSV untuk konfigurasi.</p> 
+       <p>Pertama, unduh file CSV pengaturan saat ini untuk konfigurasi. Anda kemudian dapat mengedit file ini untuk membuat perubahan Anda. (Lihat <a href="#spreadsheets">Bekerja dengan Spreadsheet</a>) jika Anda menggunakan aplikasi Spreadsheet untuk mengedit file.)</p> 
+       <p><strong>To create a new setting:</strong></p> 
+       <ol> 
+        <li>Tambahkan baris baru dalam file.</li> 
+        <li>Tentukan nama kunci yang unik.</li> 
+        <li>Tentukan jenis data (int, float, string, atau bool).</li> 
+        <li>Masukkan “Semua Pengguna Saat Ini” sebagai segmen.</li> 
+        <li>Tinggalkan blank field terakhir (untuk segmen default).</li> 
+       </ol> 
+       <p>Pengaturan baru akan terlihat seperti:</p> 
+       <pre><code>a_bool_value,bool,TRUE,All Current Users,
+</code></pre> 
+       <p><strong>To add a new segmented value for a setting:</strong></p> 
+       <ol> 
+        <li><p>Tambahkan baris ke file.</p></li> 
+        <li><p>Ulangi nama kunci dan jenis data dari pengaturan.</p></li> 
+        <li><p>Masukkan nilai untuk segmen.</p></li> 
+        <li><p>Masukkan nama segmen. Nama segmen harus didefinisikan untuk proyek sebelum Anda mengimpor pengaturan. Gunakan halaman <a href="UnityAnalyticsSegmentBuilder.html">Pembuat Segmen</a> untuk melihat segmen yang ada serta mendefinisikan yang baru.</p></li> 
+        <li> <p>Mengatur prioritas segmen.</p> <p>Prioritas untuk semua segmen dalam file harus menjadi bilangan bulat berturut-turut dimulai dengan 1. Misalnya, jika Anda menggunakan lima segmen dalam file CSV Anda, satu-satunya prioritas yang diperbolehkan adalah angka 1-5. Prioritas yang sama harus ditugaskan di mana pun dalam file yang digunakan. Misalnya, jika Anda menggunakan segmen Jepang untuk nilai puluhan dalam file CSV Anda, nilai prioritas yang sama harus digunakan dalam setiap baris.</p> </li> 
+       </ol> 
+       <p>Pengaturan dengan nilai tersegmentasi akan terlihat seperti:</p> 
+       <pre><code>a_bool_value,bool,false,All Current Users,
+a_bool_value,bool,true,1-3 Days,1
+a_bool_value,bool,false,4-7 Days,2
+</code></pre> 
+       <p><strong>To delete a setting:</strong></p> 
+       <p>Sederhana menghapus baris mendefinisikan pengaturan dari file. Jika Anda menghapus baris yang mengandung default, "Semua Pengguna Saat Ini" segmen, Anda juga harus menghapus setiap baris mendefinisikan nilai-nilai tersegmentasi. Perhatikan bahwa jika Anda menghapus nilai-nilai tersegmentasi yang mungkin juga perlu menerima prioritas segmen untuk mempertahankan urutan integer berturut-turut.</p> 
+       <p>Akhirnya, unggah file CSV yang dimodifikasi dan tekan tombol <strong>Sync</strong> di halaman Pengaturan Jarak Jauh untuk menyimpan perubahan dan menerbitkan perubahan.</p> 
+       <p><a name="csvformat"></a></p> 
+       <h3>Remote Pengaturan CSV File Format</h3> 
+       <p>Format CSV Pengaturan Jarak Jauh sesuai dengan <a href="https://tools.ietf.org/html/rfc4180">ISO9001-2008,ROHS</a>. File yang diekspor dikodekan sebagai UTF-8.</p> 
+       <p>File pengaturan memiliki lima bidang. Anda harus menyertakan baris header sebagai baris pertama dalam file:</p> 
+       <pre><code>key,type,value,segment,priority
+</code></pre> 
+       <p>Bidang dalam file adalah:</p> 
+       <ul> 
+        <li> <strong>key</strong> - Nama kunci Pengaturan Jarak Jauh.</li> 
+        <li> <strong>type</strong> - jenis data pengaturan: int, float, string, atau bool.</li> 
+        <li> <strong>value</strong> - nilai pengaturan.</li> 
+        <li><span class="tooltip"><strong>segment</strong><span class="tooltiptext">Segmen adalah subset dari basis pemain Anda, terpisahkan oleh perbedaan utama. Melihat metrik dan peristiwa oleh segmen dapat mengungkapkan perbedaan perilaku dalam game antara kelompok yang berbeda. <a class="tooltipMoreInfoLink" href="UnityAnalyticsTerminology.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Segment">Glossary</a></span></span></span> - nama segmen untuk nilai pengaturan.</li> 
+        <li> <strong>priority</strong> - prioritas segmen untuk nilai pengaturan.</li> 
+       </ul> 
+       <p><strong>Rules for entries in the CSV file:</strong></p> 
+       <ul> 
+        <li><p>Setiap baris harus mengandung kombinasi kunci dan segmen yang unik.</p></li> 
+        <li><p>Semua segmen dalam file CSV harus ada. Segmen baru harus dibuat menggunakan halaman <a href="UnityAnalyticsSegmentBuilder.html">Pembuat Segmen</a> dari dashboard Analytics.</p></li> 
+        <li><p>Gunakan string, “Semua Pengguna Saat Ini” untuk segmen default.</p></li> 
+        <li><p>Default "Semua Pengguna Saat Ini" segmen harus dikaitkan dengan setiap kunci persis sekali dalam file.</p></li> 
+        <li><p>Jangan menetapkan prioritas pada segmen “Semua Pengguna Saat Ini” (memiliki garis kosong).</p></li> 
+        <li><p>Prioritas untuk semua segmen lain harus ditugaskan.</p></li> 
+        <li><p>Prioritas segmen harus sama untuk semua kunci yang digunakan dalam.</p></li> 
+        <li><p>Prioritas segmen yang ditugaskan di semua segmen harus berurutan (mulai dengan 1).</p></li> 
+        <li><p>Gunakan TRUE dan FALSE untuk nilai Boolean.</p></li> 
+        <li><p>String yang mengandung kommas, kutipan ganda, dan garis istirahat harus ditutupi dengan karakter ganda-quote.</p></li> 
+        <li> <p>Karakter kutipan ganda dalam string harus melarikan diri dengan mengulangi kutipan ganda. Contoh:</p> <pre><code>"Hello World!"            -&gt; """Hello World!"""
+He said, "How do you do?" -&gt; "He said, ""How do you do?"""
+</code></pre> </li> 
+        <li><p>File dapat berisi hingga 201 baris (termasuk header).</p></li> 
+       </ul> 
+       <p>Sitemap Buat sampel Nilai Pengaturan Jarak Jauh di dashboard dan unduh untuk menghasilkan file sampel.<strong>Tip:</strong> Create sample Remote Settings values on the dashboard and download to generate a sample file. </p> 
+       <p><a name="spreadsheets"></a></p> 
+       <h3>Bekerja dengan Spreadsheet</h3> 
+       <p>Format file CSV tidak secara ketat standar, sehingga Anda mungkin mengalami variasi saat membuka atau menyimpan file CSV dalam aplikasi spreadsheet yang berbeda. Selalu uji bahwa ladang di file Pengaturan Jarak Jauh Anda benar dipertahankan setelah membuat perjalanan pulang dari halaman Pengaturan Jarak Jauh, ke aplikasi pengeditan Anda, dan kembali. Terutama periksa bahwa karakter Unicode (Emoji, simbol, karakter di luar kisaran ASCII dasar, dll) tidak diubah dan angka titik mengambang tidak terpotong.</p> 
+       <p>Biasanya ketika mengimpor file CSV, aplikasi spreadsheet menafsirkan string mulai dengan <code>'</code>, <code>+</code>, <code>-</code>, atau karakter <code>=</code> sebagai ekspresi daripada string polos. Anda dapat mencoba mendorong string seperti dalam kutipan ganda dan menyesuaikan opsi impor spreadsheet yang Anda gunakan. Sebagai contoh, dalam Google Sheets Anda dapat mematikan opsi “Convert string ke nomor dan tanggal”; sementara di LibreOffice Anda dapat menyala, “Quoted Strings Sebagai Teks”.</p> 
+       <p>Untuk pengaturan jenis float, pastikan bahwa semua digit signifikan dari nilai pengaturan ditampilkan dalam sel spreadsheet. Jika tidak, aplikasi spreadsheet truncate nilai dan Anda kehilangan presisi ketika Anda mengekspor spreadsheet ke file CSV.</p> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2017-12-12 Login</span></p></li> 
+        <li><p><span class="page-edit">2017–08–28 - Layanan yang kompatibel dengan Unity 5.5 seterusnya pada tanggal ini tetapi kompatibilitas versi dapat dikenakan perubahan.</span></p></li> 
+        <li><p><span class="page-edit">2017–06-30 - Ditambahkan: Memungkinkan karakter “.”, “_”, dan “-” dalam nama kunci.</span></p></li> 
+        <li><p><span class="page-edit">2017-06-30 - Ditambahkan: impor CSV dan ekspor.</span></p></li> 
+        <li><p> <span class="page-history">Fitur baru di 2017. 1 Artikel</span> </p></li> 
+        <li><p><span class="page-history">2017–08–28 - Ditambahkan Pengaturan Jarak Jauh yang tersegmentasi: menetapkan nilai yang berbeda untuk segmen yang berbeda pada 2017. 1 Artikel</span></p></li> 
+       </ul> 
+       <!-- area:monetization --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UnityAnalyticsRemoteSettings.html"></a></span> 
+         <div class="tip">
+           Pengaturan Jarak Jauh 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UnityAnalyticsRemoteSettingsUsing.html"></a></span> 
+         <div class="tip"> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

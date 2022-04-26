@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Lukisan di Tilemaps</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Unity2D.html">2D</a></li> 
+         <li><a href="class-Tilemap.html">Tilemap</a></li> 
+         <li><a href="Tilemap-workflow.html">Tilemap workflow</a></li> 
+         <li>Lukisan di Tilemaps</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="Tilemap-Palette.html"></a></span> 
+          <div class="tip">
+            Membuat palet ubin 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="TilemapPainting-SelectionTool.html"></a></span> 
+          <div class="tip">
+            Pilih Alat 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Lukisan di Tilemaps</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Rincian berikut langkah dan alat untuk lukisan <strong>Tiles</strong> pada <strong>Tilemap</strong>. Namun, jika Anda melukis <a href="Tilemap-Isometric.html">Isometric Tilemap</a>, merujuk ke <a href="Tilemap-Isometric-Palette.html">Membuat palet ubin untuk Isometric Tilemap</a> untuk langkah dan informasi tertentu.</p> 
+       <p>Untuk memulai lukisan ubin, pilih Tilemap Anda ingin melukis dari menu drop-down <strong>Active Tilemap</strong> di jendela <strong>Tilemap Palette</strong>. Tilemaps dibuat dalam hierarki <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> secara otomatis ditambahkan ke menu drop-down. Hanya <strong>Active Tilemap</strong> yang dipilih saat ini dipengaruhi oleh alat lukisan <strong>Tile Palette</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ActiveTilemap_highlight.png" alt="The Active Tilemap"> 
+        <figcaption>
+          Aktif Tilemap 
+        </figcaption> 
+       </figure> 
+       <p>Alat lukisan Tilemap ditemukan di baris di bagian atas jendela <strong>Tile Palette</strong>. Alat-alat ini juga dapat digunakan untuk mengedit <a href="Tilemap-Palette.html">Palet keramik</a> itu sendiri.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TilePalette_ToolRow.png" alt="Tool Row"> 
+        <figcaption>
+          Alat Baris 
+        </figcaption> 
+       </figure> 
+       <h2>Alat Lukisan Shortcuts</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Tool</th> 
+          <th style="text-align:left;">Kunci Shortcut</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SelectTool.png" alt=""> <a href="#Select">Pilih Alat</a> </td> 
+          <td style="text-align:left;">S</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/MoveTool.png" alt=""> <a href="#Move">Alat Pindah</a> </td> 
+          <td style="text-align:left;">M</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BrushTool.png" alt=""> <a href="#Brush">Paintbrush Tool</a> </td> 
+          <td style="text-align:left;">B</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PaintboxTool.png" alt=""> <a href="#Rec">Kotak Isi Alat</a> </td> 
+          <td style="text-align:left;">U</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/EyedropTool.png" alt=""><a href="#Picker">Alat Picker</a> </td> 
+          <td style="text-align:left;">Login Sementara menggunakan <br> atau <strong>Brush Tool</strong>, tahan <strong>Box Fill Tool</strong> (<strong>Ctrl</strong> pada macOS) untuk beralih sementara ke Alat ini.<strong>Command</strong> on macOS) to temporarily switch to this Tool.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/EraserTool.png" alt=""> <a href="#Eraser">Alat Eraser</a> </td> 
+          <td style="text-align:left;">Login Sementara menggunakan <br> atau <strong>Brush Tool</strong>, tahan <strong>Box Fill Tool</strong> untuk beralih sementara ke Alat ini.<strong>Shift</strong> to temporarily switch to this Tool.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PaintBucketTool.png" alt=""> <a href="#Fill">Alat Isi Banjir</a> </td> 
+          <td style="text-align:left;">G</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>Pilih Tool<a name="Select"></a> </h3> 
+       <p>Gunakan <strong>Select Tool</strong> untuk memilih ubin di Active Tilemap atau tahan dan seret lebih banyak ubin untuk memilih lebih banyak sekaligus. Rincian properti dari ubin yang dipilih ditunjukkan di jendela <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>. Lihat halaman <a href="TilemapPainting-SelectionTool.html">Pilih Alat</a> untuk informasi lebih lanjut tentang dan contoh pilihan yang berbeda tersedia.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SelectTile_inspector.png" alt="Selecting a Tile on the Tilemap with the Select Tool"> 
+        <figcaption>
+          Memilih Tilemap dengan ruang 
+         <strong>Select Tool</strong>% 
+        </figcaption> 
+       </figure> 
+       <p>Setelah memilih ubin dengan alat pilih, Anda dapat menggunakan <strong><a href="#Move">Move Tool</a></strong> untuk memindahkan ubin yang dipilih ke posisi yang berbeda pada ubinmap.</p> 
+       <h3>Alat Pindah<a name="Move"></a> </h3> 
+       <p>Gunakan <strong>Move Tool</strong> untuk memindahkan pilihan Select Tool's Tile (The Move Tool tidak dapat memilih Tiles sendiri). Tahan dan seret ubin yang dipilih ke posisi lain di Tilemap.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TilePalette_MoveTool.png" alt=""> 
+       </figure> 
+       <h3>Cat brush Tool<a name="Brush"></a> </h3> 
+       <p>Gunakan <strong>Paintbrush Tool</strong> untuk memilih ubin di palet ubin, atau tahan dan tarik lebih dari beberapa ubin untuk memilih lebih banyak sekaligus. Kemudian klik di lokasi apa pun di Tilemap di Adegani untuk memulai melukis dengan ubin yang dipilih Anda. Tahan Pergeseran saat menggunakan <strong>Paintbrush Tool</strong> untuk beralih ke <strong><a href="#Eraser">Erase Tool</a></strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TilePalette_PaintTool.png" alt=""> 
+       </figure> 
+       <p>Untuk memilih dan melukis dengan Ubin yang sudah ada di Tilemap bukan <strong>Tilemap Palette</strong>, tahan <strong>Ctrl</strong> saat Anda memilih Ubin di Tilemap dengan <strong>Paintbrush Tool</strong>. Ini secara singkat beralih ke <strong><a href="#Picker">Picker Tool</a></strong> untuk memilih ubin untuk melukis.</p> 
+       <h3>Box Isi Alat<a name="Rec"></a> </h3> 
+       <p>Gunakan <strong>Box Fill Tool</strong> untuk memilih ubin di palet ubin, atau tahan dan tarik lebih dari beberapa ubin untuk memilih lebih banyak sekaligus. Pemilihan yang dibuat dengan alat lukisan lainnya juga valid. Tahan dan seret <strong>Box Fill Tool</strong> atas Tilemap untuk menggambar bentuk persegi panjang yang mengisi dengan ubin yang dipilih.)</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TilePalette_FillBox.png" alt=""> 
+       </figure> 
+       <h3>Alat Picker<a name="Picker"></a> </h3> 
+       <p>Gunakan <strong>Picker Tool</strong> untuk memilih ubin dari palet Tilemap atau Tilemap; tahan dan seret lebih banyak ubin untuk memilih lebih banyak sekaligus. Alat aktif beralih ke <strong>Paintbrush Tool</strong> setelah seleksi dibuat, untuk memungkinkan Anda untuk melukis segera di Tilemap dengan ubin yang dipilih.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Tilemap_PickerTool.png" alt=""> 
+       </figure> 
+       <h3>Alat Pembersih<a name="Eraser"></a> </h3> 
+       <p>Gunakan <strong>Eraser Tool</strong> untuk menghapus ubin dari ubinmap dengan memilih mereka sementara alat diaktifkan. Untuk menghapus area yang lebih besar sekaligus, tahan dan seret Alat Eraser ke ukuran yang diinginkan di Palet Tilemap, kemudian cat di atas Ubin yang ingin Anda hapus di Tilemap.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TilePalette_Erase.png" alt=""> 
+       </figure> 
+       <h3>Alat Isi Banjir<a name="Fill"></a> </h3> 
+       <p><strong>Flood Fill Tool</strong> digunakan untuk mengisi area sel kosong atau ubin identik dengan ubin yang dipilih. Pilih Tile untuk digunakan sebagai Isi Banjir dengan memilih dari palet Tilemap. Alat ini tidak dapat digunakan dengan beberapa ubin.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TilePalette_FillTool.png" alt=""> 
+       </figure> 
+       <h2>Mode Fokus Tilemap</h2> 
+       <p>Gunakan mode Fokus Tilemap untuk fokus pada Tilemap atau Grid <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> tertentu, dan memudar GameObjects lain di Adegan. Ini berguna ketika bekerja dengan lapisan mutilple Tilemap untuk menghindari kebingungan dan kekacauan.</p> 
+       <p>Pertama pilih target Tilemap dari dropdown <strong>Active Target</strong> di jendela <strong>Tilemap Palette</strong> atau dari jendela <strong>Hierarchy</strong>. Fokus Tilmap Pada menu dropdown ditemukan di sebelah kanan bawah <span class="tooltip"><strong>Scene View</strong><span class="tooltiptext">Tampilan interaktif ke dunia yang Anda buat. Anda menggunakan Adegan Lihat untuk memilih dan posisi pemandangan, karakter, kamera, lampu, dan semua jenis lain dari Game Object. <a class="tooltipMoreInfoLink" href="UsingTheSceneView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SceneView">Glossary</a></span></span></span>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TilePalette_FocusTilemap.png" alt=""> 
+       </figure> 
+       <p>Pilih target <strong>Focus On</strong> dari opsi dalam menu dropdown:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Target</th> 
+          <th style="text-align:left;">Function</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>None</strong></td> 
+          <td style="text-align:left;">Tidak ada target yang dipilih.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Tilemap</strong><span class="tooltiptext">GameObject yang memungkinkan Anda untuk dengan cepat membuat tingkat 2D menggunakan ubin dan overlay grid. <a class="tooltipMoreInfoLink" href="class-Tilemap.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Tilemap">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">GameObject Tilemap yang dipilih difokuskan. Semua GameObjects lainnya pingsan. Pilih opsi ini untuk fokus hanya pada lapisan Tilemap tunggal.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Grid</strong></td> 
+          <td style="text-align:left;">Orang tua Grid GameObject dan semua anak-anaknya terfokus. Semua GameObjects lainnya pingsan. Pilih opsi ini untuk fokus pada seluruh Tilemap dengan semua lapisan secara keseluruhan.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Inspektur Sikat Aktif</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ActiveBrush_inspector.png" alt="Active Brush inspector window."> 
+        <figcaption>
+          Jendela inspektur sikat aktif. 
+        </figcaption> 
+       </figure> 
+       <p>Inspektur Brush Aktif berada di bagian bawah jendela <a class="tooltipMoreInfoLink" href="Tilemap-Palette.html">Palet keramik</a>. Ini memungkinkan Anda untuk mengubah Sikat aktif saat ini dan sifatnya. Ini diminimalkan secara default. Untuk memperluasnya, seret bagian bawah <span class="tooltip"><strong>toolbar</strong><span class="tooltiptext">Se baris tombol dan kontrol dasar di bagian atas Editor Unity yang memungkinkan Anda untuk berinteraksi dengan Editor dengan berbagai cara (misalnya scaling, terjemahan). <a href="Toolbar.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Toolbar">Glossary</a></span></span></span> ke atas.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AB_defaultbrush.png" alt="The Active Brush drop-down menu, with Default selected."> 
+        <figcaption>
+          Menu drop-down Brush Aktif, dengan 'Default' dipilih. 
+        </figcaption> 
+       </figure> 
+       <p>Gunakan menu drop-down untuk mengubah Sikat aktif dari Sikat Default ke Sikat lain yang Anda miliki dalam proyek, seperti.</p> 
+       <h2>Sikat pratinjau dan pintas lainnya</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TilePalette_BrushPreview.png" alt="Brush preview: Visual preview of picked Tile at the cursor"> 
+        <figcaption>
+          Pratinjau sikat: Pratinjau visual ubin yang dipetik di kursor 
+        </figcaption> 
+       </figure> 
+       <p>Ketika melukis Tilemap di Tampilan Adegan dengan Sikat aktif, pratinjau dari ubin yang dipilih (s) ditunjukkan di lokasi kursor. Ini adalah <strong>Brush preview</strong> yang membantu Anda untuk memvisualisasikan penempatan ubin sebelum melukis. Sikat pratinjau dengan beberapa ubin mungkin terlihat berbeda ketika kursor hovers atas baris atau kolom tetangga. Ini lebih jelas pada <a href="Tilemap-Hexagonal.html">Hexagonal Tilemaps</a>.</p> 
+       <p>Potongan-potongan berikut memungkinkan Anda untuk mengubah orientasi atau z-posisi ubin yang dipilih, yang secara visual tercermin dalam preview sikat.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Kunci Shortcut</th> 
+          <th style="text-align:left;">Function</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">[</td> 
+          <td style="text-align:left;">Putar sikat aktif searah jarum jam.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">]</td> 
+          <td style="text-align:left;">Putar sikat aktif anti-arah.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Shift + [</td> 
+          <td style="text-align:left;">Balik sikat aktif di sepanjang sumbu x.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Shift + ]</td> 
+          <td style="text-align:left;">Balik sikat aktif di sepanjang sumbu y.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">- (Tersedia ketika <strong>Can Change Z Position</strong> diaktifkan)</td> 
+          <td style="text-align:left;">Meningkatkan posisi z dari sikat aktif. Ini hanya tersedia ketika <strong>Can Change Z Position</strong> diaktifkan untuk sikat aktif.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">= (Tersedia saat <strong>Can Change Z Position</strong> diaktifkan)</td> 
+          <td style="text-align:left;">Mengurangi posisi z sikat aktif. Ini hanya tersedia ketika <strong>Can Change Z Position</strong> diaktifkan untuk sikat aktif.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <hr> 
+       <ul> 
+        <li><span class="page-history">Nama Alat Isi Diperbarui untuk Alat Isi Banjir di Unity <span class="search-words">NewIn20202</span></span></li> 
+        <li><span class="page-edit">2020–01–07</span></li> 
+        <li><span class="page-history">Pilih Diperbarui Fungsi alat dalam Unity <span class="search-words">NewIn20201</span></span></li> 
+        <li><span class="page-history">Editor posisi Z ditambahkan dalam Unity <span class="search-words">NewIn20182</span></span></li> 
+        <li><span class="page-history">Tilemaps ditambahkan dalam <span class="search-words">NewIn20172</span></span></li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="Tilemap-Palette.html"></a></span> 
+         <div class="tip">
+           Membuat palet ubin 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="TilemapPainting-SelectionTool.html"></a></span> 
+         <div class="tip">
+           Pilih Alat 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

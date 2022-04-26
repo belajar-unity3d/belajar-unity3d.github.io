@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: GUI Skin (IMGUI System)</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UIToolkits.html">Buat antarmuka pengguna (UI)</a></li> 
+         <li><a href="GUIScriptingGuide.html">GUI (IMGUI)</a></li> 
+         <li>GUI Skin (IMGUI System)</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="gui-Extending.html"></a></span> 
+          <div class="tip">
+            JPG PNG BMP GIF 3 MB 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="class-GUIStyle.html"></a></span> 
+          <div class="tip">
+            GUI Style (IMGUI System) 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>GUI Skin (IMGUI System)</h1> 
+       <!--BeginSwitchLink--> 
+       <a href="../ScriptReference/GUISkin.html" title="Go to GUISkin page in the Scripting Reference" class="switch-link gray-btn sbtn left">Switch to Scripting</a> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p> <strong>GUISkins</strong> adalah koleksi <strong>GUIStyles</strong> yang dapat diterapkan pada GUI Anda. Setiap tipe <strong>Control</strong> memiliki definisi gaya sendiri. Skins dimaksudkan untuk memungkinkan Anda untuk menerapkan gaya ke seluruh <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span>, bukan satu Kontrol sendiri.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Inspector-GUISkin.png" alt="A GUI Skin as seen in the Inspector"> 
+        <figcaption>
+          Login Kulit seperti yang terlihat di Inspektur 
+        </figcaption> 
+       </figure> 
+       <p>Untuk membuat GUISkin, pilih <strong>Assets-&gt;Create-&gt;GUI Skin</strong> dari bilah menu.</p> 
+       <p> <strong>Please Note</strong>: Halaman ini mengacu pada bagian dari sistem <a class="tooltipMoreInfoLink" href="GUIScriptingGuide.html">IMGUI</a>, yang merupakan sistem UI <em>scripting-only</em>. Unity memiliki sistem UI berbasis GameObject yang dapat Anda gunakan. Hal ini memungkinkan Anda untuk merancang dan mengedit elemen antarmuka pengguna sebagai objek yang terlihat dalam tampilan <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>. Lihat <a href="UISystem.html">UI System Manual</a> untuk informasi lebih lanjut.</p> 
+       <h2>Properties</h2> 
+       <p>Semua properti dalam GUI Skin adalah seorang individu <a href="class-GUIStyle.html">GUIStyle</a>. Silahkan baca halaman <a href="class-GUIStyle.html">GUIStyle</a> untuk informasi lebih lanjut tentang cara menggunakan Styles.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong><em>Property:</em></strong></th> 
+          <th style="text-align:left;"><strong><em>Function:</em></strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Font</strong></td> 
+          <td style="text-align:left;">Font global untuk digunakan untuk setiap kontrol di GUI</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Box</strong></td> 
+          <td style="text-align:left;"><a href="class-GUIStyle.html">Style</a> untuk digunakan untuk semua kotak</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Button</strong></td> 
+          <td style="text-align:left;"><a href="class-GUIStyle.html">Style</a> untuk digunakan untuk semua Tombol</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Toggle</strong><span class="tooltiptext">Sebuah kotak centang yang memungkinkan pengguna untuk mengganti opsi atau menonaktifkan. <a class="tooltipMoreInfoLink" href="script-Toggle.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Toggle">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;"><a href="class-GUIStyle.html">Style</a> untuk digunakan untuk semua Toggles</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Label</strong></td> 
+          <td style="text-align:left;"><a href="class-GUIStyle.html">Style</a> untuk digunakan untuk semua Label</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Text Field</strong></td> 
+          <td style="text-align:left;"><a href="class-GUIStyle.html">Style</a> untuk digunakan untuk semua bidang teks</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Text Area</strong></td> 
+          <td style="text-align:left;"><a href="class-GUIStyle.html">Style</a> untuk digunakan untuk semua Area Teks</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Window</strong></td> 
+          <td style="text-align:left;"><a href="class-GUIStyle.html">Style</a> untuk digunakan untuk semua Windows</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Horizontal Slider</strong></td> 
+          <td style="text-align:left;"><a href="class-GUIStyle.html">Style</a> untuk digunakan untuk semua bar slider horisontal</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Horizontal Slider Thumb</strong></td> 
+          <td style="text-align:left;"><a href="class-GUIStyle.html">Style</a> untuk digunakan untuk semua Tombol Thumb Slider Horizontal</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Vertical Slider</strong></td> 
+          <td style="text-align:left;"><a href="class-GUIStyle.html">Style</a> untuk digunakan untuk semua bar slider vertikal</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Vertical Slider Thumb</strong></td> 
+          <td style="text-align:left;"><a href="class-GUIStyle.html">Style</a> untuk digunakan untuk semua Tombol Thumb Slider Vertikal</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Horizontal Scrollbar</strong></td> 
+          <td style="text-align:left;"><a href="class-GUIStyle.html">Style</a> untuk digunakan untuk semua Horizontal Scrollbars</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Horizontal Scrollbar Thumb</strong></td> 
+          <td style="text-align:left;"><a href="class-GUIStyle.html">Style</a> untuk digunakan untuk semua Tombol Thumb Gulir Horizontal</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Horizontal Scrollbar Left Button</strong></td> 
+          <td style="text-align:left;"><a href="class-GUIStyle.html">Style</a> untuk digunakan untuk semua Tombol Kiri Gulir Horizontal</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Horizontal Scrollbar Right Button</strong></td> 
+          <td style="text-align:left;"><a href="class-GUIStyle.html">Style</a> untuk digunakan untuk semua Tombol Kanan Gulir Horizontal</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Vertical Scrollbar</strong></td> 
+          <td style="text-align:left;"><a href="class-GUIStyle.html">Style</a> untuk digunakan untuk semua Vertical Scrollbars</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Vertical Scrollbar Thumb</strong></td> 
+          <td style="text-align:left;"><a href="class-GUIStyle.html">Style</a> untuk digunakan untuk semua Tombol Thumb Gulir Vertikal</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Vertical Scrollbar Up Button</strong></td> 
+          <td style="text-align:left;"><a href="class-GUIStyle.html">Style</a> untuk digunakan untuk semua Tombol Gulir Gulir Vertikal</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Vertical Scrollbar Down Button</strong></td> 
+          <td style="text-align:left;"><a href="class-GUIStyle.html">Style</a> untuk digunakan untuk semua Tombol Bawah Gulir Vertikal</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Custom 1–20</strong></td> 
+          <td style="text-align:left;">Kustom tambahan Gaya yang dapat diterapkan pada Kontrol</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Custom Styles</strong></td> 
+          <td style="text-align:left;">Berbagai gaya kustom tambahan yang dapat diterapkan pada setiap kontrol</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Settings</strong></td> 
+          <td style="text-align:left;">Pengaturan Tambahan untuk seluruh GUI</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Double Click Selects Word</strong> </td> 
+          <td style="text-align:left;">Jika diaktifkan, klik dua kata akan memilihnya</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Triple Click Selects Line</strong> </td> 
+          <td style="text-align:left;">Jika diaktifkan, klik tiga kata akan memilih seluruh garis</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Cursor Color</strong> </td> 
+          <td style="text-align:left;">Warna kursor keyboard</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Cursor Flash Speed</strong> </td> 
+          <td style="text-align:left;">Kecepatan di mana kursor teks akan berkedip ketika mengedit Kontrol Teks</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Selection Color</strong> </td> 
+          <td style="text-align:left;">Warna area yang dipilih Teks</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Details</h2> 
+       <p>Ketika Anda membuat seluruh GUI untuk permainan Anda, Anda kemungkinan akan perlu melakukan banyak kustomisasi untuk setiap jenis kontrol yang berbeda. Dalam banyak genre permainan yang berbeda, seperti strategi real-time atau role-playing, ada kebutuhan untuk praktis setiap jenis kontrol tunggal.</p> 
+       <p>Karena setiap individu Kontrol menggunakan Style tertentu, tidak masuk akal untuk menciptakan gaya individu lusin-plus dan menetapkan mereka semua secara manual. Login Kulit merawat masalah ini untuk Anda. Dengan menciptakan Skin GUI, Anda memiliki koleksi gaya yang telah ditentukan untuk setiap Kontrol individu. Anda kemudian menerapkan Skin dengan satu baris kode, yang menghilangkan kebutuhan untuk secara manual menentukan Gaya setiap Kontrol individu.</p> 
+       <h3>Membuat GUISkins</h3> 
+       <p>GUISkins adalah file aset. Untuk membuat Skin GUI, pilih <strong>Assets-&gt;Create-&gt;GUI Skin</strong> dari bilah menu. Ini akan menempatkan GUISkin baru di <strong>Project View</strong> Anda.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/GUISkin-ProjectView.png" alt="A new GUISkin file in the Project View"> 
+        <figcaption>
+          File GUISkin baru di Tampilan Proyek 
+        </figcaption> 
+       </figure> 
+       <h3>Mengedit GUISkins</h3> 
+       <p>Setelah Anda membuat GUISkin, Anda dapat mengedit semua <a class="tooltipMoreInfoLink" href="class-GUIStyle.html">Styles</a> yang mengandung di <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>. Sebagai contoh, <strong>Text Field</strong> <a href="class-GUIStyle.html">Style</a> akan diterapkan pada semua Kontrol Field Teks.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/GUISkin-EditingTextField.png" alt="Editing the Text Field Style in a GUISkin"> 
+        <figcaption>
+          Mengedit Gaya Bidang Teks di GUISkin 
+        </figcaption> 
+       </figure> 
+       <p>Tidak peduli berapa banyak Field Teks yang Anda buat di script Anda, mereka akan semua menggunakan <a href="class-GUIStyle.html">Style</a> ini. Tentu saja, Anda telah mengontrol perubahan gaya satu kolom teks di atas yang lain jika Anda ingin. Kami akan membahas bagaimana hal itu dilakukan di sampingnya.</p> 
+       <h3>Menerapkan GUISkins</h3> 
+       <p>Untuk menerapkan GUISkin ke GUI Anda, Anda harus menggunakan skrip sederhana untuk membaca dan menerapkan Kulit ke Kontrol Anda.</p> 
+       <pre><code>
+    // Create a public variable where we can assign the GUISkin
+    var customSkin : GUISkin;
+
+    // Apply the Skin in our OnGUI() function
+    function OnGUI () {
+        GUI.skin = customSkin;
+
+        // Now create any Controls you like, and they will be displayed with the custom Skin
+        GUILayout.Button ("I am a re-Skinned Button");
+
+        // You can change or remove the skin for some Controls but not others
+        GUI.skin = null;
+
+        // Any Controls created here will use the default Skin and not the custom Skin
+        GUILayout.Button ("This Button uses the default UnityGUI Skin");
+    }
+
+
+</code></pre> 
+       <p>Dalam beberapa kasus Anda ingin memiliki dua Kontrol yang sama dengan Gaya yang berbeda. Untuk ini, tidak masuk akal untuk menciptakan Skin baru dan menugaskannya. Sebagai gantinya, Anda menggunakan salah satu gaya <strong>Custom</strong> di kulit. Memberikan <strong>Name</strong> untuk Style kustom, dan Anda dapat menggunakan nama itu sebagai argumen terakhir dari Kontrol individu.</p> 
+       <pre><code>    // One of the custom Styles in this Skin has the name "MyCustomControl"
+    var customSkin : GUISkin;
+
+    function OnGUI () {
+        GUI.skin = customSkin;
+
+        // We provide the name of the Style we want to use as the last argument of the Control function
+        GUILayout.Button ("I am a custom styled Button", "MyCustomControl");
+
+        // We can also ignore the Custom Style, and use the Skin's default Button Style
+        GUILayout.Button ("I am the Skin's Button Style");
+    }
+
+</code></pre> 
+       <p>Untuk informasi lebih lanjut tentang bekerja dengan GUIStyles, baca halaman <a href="class-GUIStyle.html">GUIStyle</a>. Untuk informasi lebih lanjut tentang menggunakan UnityGUI, silakan baca <a href="GUIScriptingGuide.html">Panduan Scripting GUI</a>.</p> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="gui-Extending.html"></a></span> 
+         <div class="tip">
+           JPG PNG BMP GIF 3 MB 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="class-GUIStyle.html"></a></span> 
+         <div class="tip">
+           GUI Style (IMGUI System) 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

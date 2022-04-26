@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Bekerja di Inspektur</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="UsingTheEditor.html">Antarmuka unity</a></li> 
+         <li><a href="UsingTheInspector.html">Jendela Inspektur</a></li> 
+         <li>Bekerja di Inspektur</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UsingTheInspector.html"></a></span> 
+          <div class="tip">
+            Jendela Inspektur 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="InspectorFocused.html"></a></span> 
+          <div class="tip">
+            Inspektur Fokus 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Bekerja di Inspektur</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Halaman ini menjelaskan beberapa pilihan untuk mengendalikan jendela <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Inspector">Glossary</a></span></span></span> itu sendiri. Untuk informasi tentang menetapkan properti untuk <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#GameObject">Glossary</a></span></span></span>, <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span>, dan Aset, lihat <a href="EditingValueProperties.html">Editing properti</a>.</p> 
+       <p><a name="locking-the-inspector"></a></p> 
+       <h2>Kunci Inspektur</h2> 
+       <p>Biasanya, Inspektur menunjukkan sifat dari GameObject yang dipilih saat ini, skrip, atau Aset. Tapi kadang-kadang, berguna untuk menyimpan satu item di Inspektur sementara Anda bekerja dengan item lain. Dalam hal itu, Anda dapat mengunci jendela Inspektur ke item tertentu.</p> 
+       <p>Untuk mengunci jendela Inspektur ke item, klik ikon kunci di jendela Inspektur. Ikon kunci berubah untuk menunjukkan bahwa Inspektur sekarang terkunci untuk seleksi.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/inspector-lock-button.png" alt="The Inspector lock button in in its unlocked (left) and locked (right) states"> 
+        <figcaption>
+          Tombol kunci Inspector di negara-negara yang dibuka (kiri) dan terkunci (kanan) 
+        </figcaption> 
+       </figure> 
+       <p>Ini berguna ketika Anda mengedit satu properti item sering. Misalnya, jika Anda menyempurnakan posisi Kamera, Anda dapat mengunci jendela Inspektur ke Kamera, dan membuka jendela Inspektur kedua (<strong>More Items</strong> (<strong>⋮</strong>) menu: <strong>Add Tab &gt; Inspector</strong>) untuk terus menampilkan sifat pilihan saat ini.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Note:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <a href="InspectorFocused.html">Inspektur Fokus</a> adalah alternatif untuk mengunci jendela Inspektur. Inspektur yang terfokus hanya pernah menampilkan sifat item yang Anda buka.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="reordering-components"></a></p> 
+       <h2>Reorder GameObject komponen</h2> 
+       <p>Anda dapat memesan komponen GameObject di jendela Inspector. Perintah komponen yang berlaku di Inspektur adalah urutan yang sama yang perlu Anda gunakan ketika Anda komponen query di skrip Anda.</p> 
+       <p><span class="tooltip"><strong>Transform component</strong><span class="tooltiptext">Komponen Transform menentukan Posisi, Rotasi, dan Skala setiap objek di tempat kejadian. Setiap GameObject memiliki Transform. <a class="tooltipMoreInfoLink" href="class-Transform.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#TransformComponent">Glossary</a></span></span></span> GameObject selalu merupakan komponen terpenting. Anda tidak dapat memindahkannya, atau menempatkan komponen lain di atasnya.</p> 
+       <p>Untuk memesan komponen GameObject di jendela Inspektur, lakukan salah satu berikut:</p> 
+       <ul> 
+        <li>Seret-and-drop header komponen dari satu posisi ke posisi lain. Ketika Anda menyeret header komponen, penanda penyisipan biru muncul di mana Unity akan menempatkan komponen.</li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/inspector-component-reorder-drag.png" alt="Reordering GameObject components in the Inspector by dragging and dropping"> 
+        <figcaption>
+          Menggantikan komponen GameObject di Inspektur dengan menyeret dan menjatuhkan 
+        </figcaption> 
+       </figure> 
+       <ul> 
+        <li>Klik kanan komponen untuk membuka menu konteks, dan pilih <strong>Move Up</strong> atau <strong>Move Down</strong>.</li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/inspector-component-reorder-menu.png" alt="Reordering GameObject components in the Inspector using the context menu"> 
+        <figcaption>
+          Menggantikan komponen GameObject di Inspektur menggunakan menu konteks 
+        </figcaption> 
+       </figure> 
+       <h3>Reordering komponen untuk beberapa GameObjects</h3> 
+       <p>Ketika Anda memilih <a href="UsingTheInspector.html#inspecting-multiple-items">beberapa GameObjects</a>, Inspektur menampilkan semua komponen yang dipilih GameObjects memiliki umum. Jika Anda memesan komponen umum ini, perubahan berlaku untuk semua GameObjects yang dipilih.</p> 
+       <p><a name="assigning-icons"></a></p> 
+       <h2>Assign icons</h2> 
+       <p>Anda dapat menetapkan ikon kustom untuk GameObjects, <span class="tooltip"><strong>Prefabs</strong><span class="tooltiptext">Jenis aset yang memungkinkan Anda untuk menyimpan GameObject lengkap dengan komponen dan properti. Prefab bertindak sebagai template dari mana Anda dapat membuat instance objek baru di tempat kejadian. <a class="tooltipMoreInfoLink" href="Prefabs.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Prefab">Glossary</a></span></span></span>, dan skrip dari jendela Inspektur. Ikon kustom muncul di <span class="tooltip"><a href="UsingTheSceneView.html">Tampilan adegan</a><span class="tooltiptext">Tampilan interaktif ke dunia yang Anda buat. Anda menggunakan Adegan Lihat untuk memilih dan posisi pemandangan, karakter, kamera, lampu, dan semua jenis lain dari Game Object. <a href="UsingTheSceneView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#SceneView">Glossary</a></span></span></span> dengan cara yang sama seperti ikon default untuk item seperti Lampu dan <span class="tooltip"><strong>Cameras</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span>.</p> 
+       <ul> 
+        <li>Ketika Anda menetapkan ikon untuk GameObject, ikon muncul dalam pandangan <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> atas GameObject, dan duplikat.</li> 
+        <li>Ketika Anda menetapkan ikon untuk Prefab, ikon muncul dalam pandangan Adegan atas setiap kasus yang Prefab.</li> 
+        <li>Ketika Anda menetapkan ikon ke skrip, ikon muncul dalam pandangan Adegan atas GameObject yang memiliki skrip terpasang.</li> 
+       </ul> 
+       <p>Untuk mengontrol bagaimana Unity menarik ikon kustom dalam pandangan Adegan, gunakan <a href="GizmosMenu.html">Menu di Gizmos</a>.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">NOTE</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Ketika Anda mengubah ikon Aset, Unity menandai Aset yang dimodifikasi, dan sistem <span class="tooltip"><strong>version control</strong><span class="tooltiptext">Sistem untuk mengelola perubahan file. Anda dapat menggunakan Unity bersama dengan alat kontrol versi yang paling umum, termasuk Perforce, Git, Mercurial dan PlasticSCM. <a class="tooltipMoreInfoLink" href="VersionControl.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#VersionControl">Glossary</a></span></span></span> mendaftarkan perubahan.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>Menetapkan ikon kustom untuk GameObjects, script, dan Prefab</h3> 
+       <p>Untuk menetapkan ikon kustom ke GameObject atau script:</p> 
+       <ol> 
+        <li>Buka item di jendela Inspektur.</li> 
+        <li>Klik tombol <strong>Select icon</strong>.</li> 
+        <li>Pilih ikon dari menu <strong>Select icon</strong> (lihat di bawah).</li> 
+       </ol> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/inspector-select-icon-button.png" alt="The Select Icon button for GameObjects/Prefabs (left) and scripts (right)"> 
+        <figcaption>
+          Pilih ikon tombol untuk GameObjects/Prefabs (kiri) dan skrip (kanan) 
+        </figcaption> 
+       </figure> 
+       <p>Untuk menetapkan ikon kustom untuk Prefab, Anda harus membuka Prefab di <a href="EditingInPrefabMode.html">Mode Prefab</a>.</p> 
+       <h3>Pilih ikon dari menu ikon Pilih</h3> 
+       <p>Anda menetapkan ikon kustom dari menu <strong>Select Icon</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/IconSelectorPopup.png" alt=""> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Jenis ikon:</th> 
+          <th style="text-align:left;">Deskripsi:</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">1</td> 
+          <td style="text-align:left;">Ikon label berwarna kapsul. Dalam pandangan adegan, mereka menampilkan nama item yang mereka ditugaskan untuk.<br><br> Klik ikon label untuk menetapkannya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">2</td> 
+          <td style="text-align:left;">Gambar-only ikon berwarna panggilan. Mereka berguna ketika Anda bekerja dengan objek yang mungkin tidak memiliki representasi visual. Misalnya, Anda dapat menetapkan ikon gambar-hanya ke titik-titik navigasi sehingga Anda dapat melihat dan memilihnya dalam tampilan Adegan. <br><br> Klik ikon gambar-hanya untuk menetapkannya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">3</td> 
+          <td style="text-align:left;">Aset ikon adalah Aset gambar di Adegan Anda yang Anda gunakan sebagai ikon kustom. Misalnya, Anda dapat menggunakan ikon tengkorak dan tulang untuk menunjukkan area bahaya di tingkat permainan.<br><br> Klik tombol <strong>Other</strong> untuk membuka jendela Object Picker dan pilih Aset gambar untuk menetapkan ikon.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Home &gt; Sitemap</h2> 
+       <p>Biasanya, jendela Inspektur dikonfigurasi sebagai editor untuk properti seleksi. Tapi kadang-kadang berguna untuk hanya melihat sifat dan nilai-nilai mereka. Ketika Anda mengaktifkan mode Debug, Inspektur hanya menunjukkan sifat dan nilai-nilai mereka. Jika pemilihan memiliki komponen skrip, mode Debug juga menampilkan variabel pribadi, meskipun Anda tidak dapat mengedit nilai-nilai mereka.</p> 
+       <p>Anda dapat beralih mode Debug untuk setiap jendela Inspektur secara individual.</p> 
+       <ul> 
+        <li>Untuk mengaktifkan mode Debug, klik tombol <strong>More Items</strong> (<strong>⋮</strong>) untuk membuka menu konteks, dan pilih <strong>Debug</strong>.</li> 
+        <li>Untuk kembali ke mode normal, klik tombol <strong>More Items</strong> (<strong>⋮</strong>) untuk membuka menu konteks, dan pilih <strong>Normal</strong>.</li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/DebugModeInspector.png" alt="A Mesh Renderer component in Normal mode (left) and Debug mode (right)"> 
+        <figcaption>
+          Komponen Renderer Mesh dalam mode normal (kiri) dan mode Debug (kanan) 
+        </figcaption> 
+       </figure> 
+       <hr> 
+       <ul> 
+        <li><span class="page-history">Halaman bagian Inspektur di Unity 2020.1</span></li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UsingTheInspector.html"></a></span> 
+         <div class="tip">
+           Jendela Inspektur 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="InspectorFocused.html"></a></span> 
+         <div class="tip">
+           Inspektur Fokus 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

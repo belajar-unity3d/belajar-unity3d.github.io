@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Login</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="UsingTheEditor.html">Antarmuka unity</a></li> 
+         <li><a href="UsingTheSceneView.html">Tampilan adegan</a></li> 
+         <li><a href="PositioningGameObjects.html">Posisi GameObjects</a></li> 
+         <li>Grid snapping</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="PositioningGameObjects.html"></a></span> 
+          <div class="tip">
+            Posisi GameObjects 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UsingCustomEditorTools.html"></a></span> 
+          <div class="tip">
+            Menggunakan alat editor kustom 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Grid snapping</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Unity menyediakan grid visual di jendela <strong><span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#Scene">Glossary</a></span></span></span> view</strong> Editor, yang dapat membantu secara tepat menyelaraskan <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> dengan snapping (moving) mereka ke lokasi grid terdekat.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SceneGrids.png" alt="The same view displaying the grid lines along the x, y, and z axes"> 
+        <figcaption>
+          Tampilan yang sama menampilkan garis grid sepanjang x, y, dan z axes 
+        </figcaption> 
+       </figure> 
+       <p>Anda dapat mengambil GameObject ke grid yang diproyeksikan di sepanjang X, Y, atau Z kapak dalam beberapa cara:</p> 
+       <ul> 
+        <li> <a href="#grid-align">Align dipilih GameObjects</a> ke titik grid terdekat.</li> 
+        <li> <a href="#grid-snap">Nyalakan jepit grid</a> saat Anda bergerak, berputar, atau skala GameObject.</li> 
+       </ul> 
+       <p>Anda juga bisa <a href="#snap-increments">mengubah GameObject secara bertahap</a> tanpa menyelaraskannya dengan gridlines. Jika Anda perlu mengubah berapa banyak Anda bergerak, berputar, atau scaling, Anda dapat mengubah nilai snap yang masuk.</p> 
+       <p>Secara default, grid tersembunyi, tetapi Anda dapat <a href="#grid-toggle">membuatnya terlihat</a> dan <a href="#grid-axis">saklar yang sumbu</a> muncul di sepanjang. Anda dapat menyesuaikan grid dalam penampilan dan perilaku dengan mengubah berikut:</p> 
+       <ul> 
+        <li><a href="#grid-resize">size</a> grid (memungkinkan jarak antara garis).</li> 
+        <li><a href="#grid-color">color</a> dari garis grid sendiri.</li> 
+        <li>Bagaimana <a href="#grid-opacity">transparan atau buram</a> garis grid muncul.</li> 
+        <li><a class="tooltipMoreInfoLink" href="#grid-location">position</a> grid di jendela <strong><span class="tooltip"><strong>Scene view</strong><span class="tooltiptext">An interactive view into the world you are creating. You use the Scene View to select and position scenery, characters, cameras, lights, and all other types of Game Object. <a href="UsingTheSceneView.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SceneView">Glossary</a></span></span></span></strong> (menghilangkan lebih dekat atau lebih jauh).</li> 
+       </ul> 
+       <p>Banyak dari <a href="#grid-custom">tindakan mendukung pintasan keyboard</a> ini. Anda dapat melihat kombinasi kunci yang ditugaskan untuk tindakan ini dan menggunakan <a href="ShortcutsManager.html">Shortcuts Manager</a> untuk menyesuaikannya.</p> 
+       <p><a name="grid-and-snap"></a></p> 
+       <h2>Grid dan Snap toolbar Overlay</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/scene-grids-overlay.png" alt="Grid and Snap toolbar Overlay"> 
+        <figcaption>
+          Grid dan Snap toolbar Overlay 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Icon</th> 
+          <th style="text-align:left;">Actions</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Sitemap visibilitas grid<img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SceneGrids-Vis-icon.png" alt=""> Grid visibility</td> 
+          <td style="text-align:left;"> <a href="#grid-toggle">Mozilla Firefox</a><br><a href="#grid-axis">Mengubah sumbu grid</a><br> <a href="#grid-opacity">Mengubah opacity grid</a><br> <a href="#grid-move-to-handle">Pindahkan grid ke pegangan gizmo atau kembali ke asal</a> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Sitemap Login<img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SceneGrids-Mode-icon.png" alt=""> Grid snapping</td> 
+          <td style="text-align:left;"> <a href="#grid-snap">Toggle Menu</a><br><a href="#grid-resize">Mengubah ukuran grid</a> <br> <a href="#grid-align">Align a GameObject untuk sumbu</a> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Sitemap Login<img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/scene-grids-increment-icon.png" alt=""> Snap increment</td> 
+          <td style="text-align:left;"><a href="#snap-increments">Mengubah nilai snap increment default</a></td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p> <strong>Note</strong>: Pengaturan pada <strong>Grid and Snap</strong> <a href="overlays.html">Overlay</a> global untuk semua pemandangan.</p> 
+       <h2>Align, snap, dan gerakan inkremental</h2> 
+       <p>Bagian ini memberikan informasi tentang cara melakukan tindakan ini:</p> 
+       <ul> 
+        <li><a href="#grid-align">Aligning (pushing) ke grid</a></li> 
+        <li><a href="#grid-snap">Mengaktifkan auto-snapping</a></li> 
+        <li><a href="#snap-increments">Bergerak, berputar, dan scaling increments</a></li> 
+       </ul> 
+       <p><a name="grid-align"></a></p> 
+       <h3>Align (push) ke grid</h3> 
+       <p>Anda dapat menyelaraskan GameObject ke titik grid terdekat pada sumbu tunggal, atau pada semua sumbu sekaligus.</p> 
+       <p>Untuk menyelaraskan GameObject ke titik terdekat pada grid untuk sumbu tertentu:</p> 
+       <ol> 
+        <li><p>Pada <strong>Grid and Snap</strong> Overlays <span class="tooltip"><strong>toolbar</strong><span class="tooltiptext">Se baris tombol dan kontrol dasar di bagian atas Editor Unity yang memungkinkan Anda untuk berinteraksi dengan Editor dengan berbagai cara (misalnya scaling, terjemahan). <a class="tooltipMoreInfoLink" href="Toolbar.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Toolbar">Glossary</a></span></span></span>, buka menu drop-down grid snapping (<img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SceneGrids-Mode-icon-inline.png" alt="">).</p></li> 
+        <li> <p>Pada bagian <strong>Align Selected</strong>, klik tombol <strong>X</strong>, <strong>Y</strong>, atau <strong>Z</strong> yang sesuai dengan sumbu yang ingin Anda dorong.</p> 
+         <figure> 
+          <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/scene-grid-align-selection.png" alt="Align Selection to Grid section of the Grid and Snap window"> 
+          <figcaption>
+            Seleksi Align ke bagian Grid dari jendela Grid dan Snap 
+          </figcaption> 
+         </figure> </li> 
+       </ol> 
+       <p>Untuk menyelaraskan GameObject pada semua sumbu sekaligus:</p> 
+       <ol> 
+        <li><p>Pilih GameObject (s) Anda ingin menyelaraskan ke grid.</p></li> 
+        <li> <p>Gunakan shortcut <strong>Ctrl</strong> +<strong>\</strong> (Windows) atau <strong>Command</strong> +<strong>\</strong> (macOS) untuk mendorong GameObject (s) ke grid pada semua sumbu.</p> <p>Atau, dari <strong>Grid and Snap</strong> Overlays toolbar, buka menu drop-down visibilitas grid (<img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SceneGrids-Mode-icon-inline.png" alt="">) dan di bagian <strong>Align Selected</strong>, klik <strong>All Axes</strong>.</p> </li> 
+       </ol> 
+       <p><a name="grid-snap"></a></p> 
+       <h3>Mengaktifkan auto-snapping</h3> 
+       <p>Untuk mengaktifkan snapping otomatis ke grid:</p> 
+       <ol> 
+        <li>Mengaktifkan alat <strong>Move</strong> dan pastikan orientasi pegangan dalam Overlay Pengaturan Alat diatur ke <a href="PositioningGameObjects.html#GizmoHandlePositions">Global</a> (<img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SceneGrids-Global-icon.png" alt="">).</li> 
+        <li>Klik ikon grid snapping (<img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SceneGrids-Mode-icon-inline.png" alt="">) di Overlay toolbar <strong>Grid and Snap</strong>. Ikon berwarna biru saat diaktifkan.</li> 
+       </ol> 
+       <p>Ketika Anda mengaktifkan grid snapping otomatis, <strong>Move</strong>, <strong>Rotate</strong>, dan alat transformasi <strong>Scale</strong> snap GameObject yang dipilih (s) ke grid sepanjang sumbu <span class="tooltip"><strong>gizmo</strong><span class="tooltiptext">Overlay grafis yang terkait dengan GameObject di Adegani, dan ditampilkan di Tampilan Adegan. Alat adegan internal seperti alat bergerak adalah Gizmos, dan Anda dapat membuat Gizmos kustom menggunakan tekstur atau scripting. Beberapa Gizmos hanya ditarik ketika GameObject dipilih, sementara Gizmos lainnya ditarik oleh Editor terlepas dari GameObjects mana yang dipilih. <a class="tooltipMoreInfoLink" href="GizmosMenu.html#GizmosIcons">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Gizmo">Glossary</a></span></span></span> aktif. Jika Anda membutuhkan GameObject untuk bergerak dalam perbaikan yang lebih kecil, Anda juga dapat <a href="#snap-increments">mengubahnya secara bertahap</a>.</p> 
+       <p><a name="snap-increments"></a></p> 
+       <h3>Pindahkan, putar, dan peningkatan skala</h3> 
+       <p>Untuk bergerak, memutar, atau skala dengan nilai snap yang masuk:</p> 
+       <ul> 
+        <li>Tahan tombol <strong>Control</strong> (Windows) atau kunci <strong>Command</strong> (macOS) saat menggunakan salah satu <a href="PositioningGameObjects.html">transformasi gizmos</a>.</li> 
+       </ul> 
+       <p>Untuk mengubah nilai snap increment default:</p> 
+       <ol> 
+        <li><p>Dari <strong>Grid and Snap</strong> Overlays toolbar, buka menu drop-down snap (<img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/scene-grids-increment-icon-inline.png" alt="">).</p></li> 
+        <li> <p>Bagian <strong>Increment Snap</strong> mengandung beberapa properti yang memungkinkan Anda mengatur nilai yang sama untuk semua kapak atau nilai yang berbeda:</p> 
+         <figure> 
+          <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/scene-grid-snapping-increment.png" alt="Increment Snap section of the Grid and Snap window"> 
+          <figcaption>
+            Bagian Snap Increment dari jendela Grid dan Snap 
+          </figcaption> 
+         </figure> <p> <strong>Move</strong>: Dengan ikon tautan yang dipilih, masukkan nilai snap yang seragam untuk semua sumbu, atau unlink axes dan mengatur nilai snap increment yang berbeda dalam sifat sumbu <strong>X</strong>, <strong>Y</strong>, dan sumbu <strong>Z</strong>.</p> <p> <strong>Rotate</strong>: Masukkan nilai kenaikan rotasi dalam derajat.</p> <p> <strong>Scale</strong>: Masukkan nilai kenaikan skala sebagai faktor skala. Misalnya, jika nilai Skala adalah 2, GameObject yang dipilih akan berskala dua kali ukuran aslinya.</p> </li> 
+       </ol> 
+       <h2>Sesuaikan grid</h2> 
+       <p>Bagian ini memberikan informasi tentang menyesuaikan hal berikut:</p> 
+       <ul> 
+        <li><a href="#grid-toggle">Menunjukkan dan menyembunyikan garis grid</a></li> 
+        <li><a href="#grid-axis">Mengubah sumbu di mana grid muncul</a></li> 
+        <li><a href="#grid-resize">Mempertahankan grid</a></li> 
+        <li><a href="#grid-color">Mengubah warna default dari garis grid</a></li> 
+        <li><a href="#grid-opacity">Mengubah opacity grid</a></li> 
+        <li><a href="#grid-location">Menyesuaikan lokasi grid</a></li> 
+        <li><a href="#grid-reset">Mengatur ulang nilai dan pengaturan secara default</a></li> 
+       </ul> 
+       <p><a name="grid-toggle"></a></p> 
+       <h3>Tampilkan dan menyembunyikan garis grid</h3> 
+       <p>visibilitas grid Toggle dengan mengklik ikon visibilitas grid (<img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SceneGrids-Vis-icon-inline.png" alt="">) di Grid dan Snap <a href="overlays.html">Overlay</a> toolbar untuk menampilkan atau menyembunyikan grid pada setiap sumbu (X, Y, Z). Jika Anda berada di <a href="SceneViewNavigation.html">Mode ortopografi</a> (Iso), Unity memilih tampilan.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SceneGridsAxis.png" alt="The grid appears in the Scene view window when you click the grid visibility button"> 
+        <figcaption>
+          Grid muncul di jendela 
+         <strong>Scene view</strong> ketika Anda klik tombol visibilitas grid 
+        </figcaption> 
+       </figure> 
+       <p><a name="grid-axis"></a></p> 
+       <h3>Mengubah sumbu di mana grid muncul</h3> 
+       <p>Untuk mengubah sumbu mana grid muncul di:</p> 
+       <ol> 
+        <li><p>Dari <strong>Grid and Snap</strong> Overlays toolbar, buka menu drop-down visibilitas grid (<img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SceneGrids-Vis-icon-inline.png" alt="">).</p></li> 
+        <li> <p>Dari bagian <strong>Grid Plane</strong>, pilih sumbu yang ingin Anda tampilkan.</p> 
+         <figure> 
+          <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/scene-grids-select-axis.png" alt="The Grid Axis section under the grid visibility drop-down menu"> 
+          <figcaption>
+            Login Bagian Axis di bawah menu drop-down visibilitas grid 
+          </figcaption> 
+         </figure> </li> 
+       </ol> 
+       <p><a name="grid-resize"></a></p> 
+       <h3>Ubah ukuran grid</h3> 
+       <p>Anda dapat mengatur ukuran gridlines karena muncul di jendela <strong>Scene view</strong>. Ini mempengaruhi penampilan grid dan bagaimana GameObjects Anda <a href="#grid-snap">secara otomatis terkunci ke grid</a>, tetapi tidak mempengaruhi berapa banyak GameObject Anda (s) <a href="#snap-increments">bergerak, memutar, atau skala increments</a>.</p> 
+       <p>Jika Anda mengatur ukuran untuk semua kapak sekaligus, seragam (dasar persegi) grid muncul. Namun, Anda juga dapat menggunakan nilai yang berbeda pada salah satu dari tiga sumbu untuk melihat grid non-uniform (dasar persegi). Secara default, grid diatur ke jarak seragam (1 pada semua sumbu).</p> 
+       <p>Untuk mengubah ukuran grid:</p> 
+       <ol> 
+        <li><p>Dari <strong>Grid and Snap</strong> Overlays toolbar, buka menu drop-down snap (<img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/scene-grids-increment-icon-inline.png" alt="">).</p></li> 
+        <li> <p>Gunakan properti <strong>Size</strong> dengan ikon link yang dipilih untuk memasukkan nilai seragam untuk grid visual (semua garis grid panjang yang sama), atau tidak menghubungkan sumbu dan menentukan jarak non-uniform antara garis grid untuk <strong>X</strong>, <strong>Y</strong>, dan <strong>Z</strong>.</p> <p>Misalnya, untuk membuat grid persegi panjang pada sumbu x dan y, unlink axes dan set <strong>X</strong> dan <strong>Y</strong> untuk 1, dan set <strong>Z</strong> ke 2.</p> </li> 
+        <li> <p>Jika Anda ingin beralih kembali ke nilai seragam antara garis grid:</p> 
+         <ul> 
+          <li>Pilih ikon tautan.</li> 
+          <li>Properti <strong>Size</strong> sekarang menampilkan nilai dari semua kapak dengan nilai yang dimasukkan dalam <strong>X</strong>.</li> 
+         </ul> </li> 
+       </ol> 
+       <p> <strong>Note</strong>: Anda juga dapat menggunakan pintas keyboard untuk meningkatkan dan menurunkan ukuran grid:</p> 
+       <ul> 
+        <li>Untuk meningkatkan ukuran grid, gunakan <strong>Ctrl</strong> +<strong>]</strong> (Windows) atau <strong>Command</strong> +<strong>]</strong> (macOS).</li> 
+        <li>Untuk menurunkan ukuran grid, gunakan <strong>Ctrl</strong> +<strong>[</strong> (Windows) atau <strong>Command</strong> +<strong>[</strong> (macOS).</li> 
+       </ul> 
+       <p><a name="grid-color"></a></p> 
+       <h3>Mengubah warna default dari garis grid</h3> 
+       <p>Untuk mengubah warna garis grid yang terlihat di jendela <strong>Scene view</strong>:</p> 
+       <ol> 
+        <li><p>Buka halaman Unity <a href="Preferences.html">Preferences</a> (go ke <strong>Edit</strong> &gt; <strong>Preferences</strong> pada Windows atau <strong>Unity</strong> &gt; <strong>Preferences</strong> pada macOS).</p></li> 
+        <li> <p>Klik pada kategori Warna dari daftar untuk melihat halaman <strong>Colors</strong>.</p> 
+         <figure> 
+          <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SceneGridsPrefs.png" alt="The grid preference properties on the Preferences page"> 
+          <figcaption>
+            Properti preferensi grid di halaman Preferensi 
+          </figcaption> 
+         </figure> </li> 
+        <li><p>Pilih warna baru menggunakan pemilih warna properti <strong>Grid</strong>.</p></li> 
+       </ol> 
+       <p><a name="grid-opacity"></a></p> 
+       <h3>Mengubah opacity grid</h3> 
+       <p>Jika garis grid terlalu ringan atau terlalu gelap, Anda dapat menyesuaikannya:</p> 
+       <ol> 
+        <li><p>Dari <strong>Grid and Snap</strong> Overlays toolbar, buka menu drop-down visibilitas grid (<img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SceneGrids-Vis-icon-inline.png" alt="">).</p></li> 
+        <li> <p>Sesuaikan <strong>Opacity</strong> menggunakan slider.</p> 
+         <figure> 
+          <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/scene-grids-opacity.png" alt="Adjust opacity in the grid visibility drop-down menu"> 
+          <figcaption>
+            Sesuaikan opacity di menu drop-down visibilitas grid 
+          </figcaption> 
+         </figure> </li> 
+       </ol> 
+       <p><a name="grid-location"></a></p> 
+       <h3>Sesuaikan lokasi grid</h3> 
+       <p>Anda dapat menggunakan shortcut berikut untuk memindahkan grid mundur dan maju sepanjang sumbunya:</p> 
+       <ul> 
+        <li>Untuk mendebarkan grid mundur, gunakan <strong>Shift</strong> +<strong>[</strong>.</li> 
+        <li>Untuk mendebarkan grid ke depan, gunakan <strong>Shift</strong> +<strong>]</strong>.</li> 
+       </ul> 
+       <p>Nudging grid membawanya lebih dekat (misalnya, jika sulit untuk melihat GameObject Anda terhadap grid jauh) atau mengirimkannya jauh.</p> 
+       <p><a name="grid-move-to-handle"></a></p> 
+       <h3>Pindahkan grid ke pegangan objek permainan</h3> 
+       <p>Dari menu drop-down visibilitas grid (<img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SceneGrids-Vis-icon-inline.png" alt="">) di bilah alat Grid dan Snap Overlay, gunakan bagian <strong>Move To</strong> untuk memindahkan grid ke pegangan GameObject yang dipilih (<strong>Handle</strong>) atau kembali ke posisi default (<strong>Origin</strong>).</p> 
+       <p><a name="grid-reset"></a></p> 
+       <h3>Atur ulang nilai dan pengaturan secara default</h3> 
+       <p>Untuk mengatur ulang sumbu grid dan pengaturan ke default mereka:</p> 
+       <ol> 
+        <li><p>Dari <strong>Grid and Snap</strong> Overlays toolbar, buka menu drop-down visibilitas grid (<img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SceneGrids-Vis-icon-inline.png" alt="">).</p></li> 
+        <li><p>Klik menu <strong>More</strong>.<strong>Reset</strong>.</p></li> 
+       </ol> 
+       <p>Untuk mengatur ulang ukuran grid ke default:</p> 
+       <ol> 
+        <li><p>Dari <strong>Grid and Snap</strong> Overlays toolbar, buka menu drop-down grid (<img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SceneGrids-Mode-icon-inline.png" alt="">).</p></li> 
+        <li><p>Klik menu <strong>More</strong>.<strong>Reset</strong>.</p></li> 
+       </ol> 
+       <p>Untuk mengatur ulang nilai snap increment ke default:</p> 
+       <ol> 
+        <li><p>Dari <strong>Grid and Snap</strong> Overlays toolbar, buka menu drop-down snap (<img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/scene-grids-increment-icon-inline.png" alt="">).</p></li> 
+        <li> <p>Klik menu <strong>More</strong>.<strong>Reset</strong>.</p> <p>Hanya nilai di bawah bagian <strong>Increment Snap</strong> kembali ke nilai default mereka.</p> </li> 
+       </ol> 
+       <p><a name="grid-custom"></a></p> 
+       <h2>Shortcut defaults</h2> 
+       <p>Anda dapat melakukan tindakan berikut dengan shortcut Unity default ini:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Action</strong></th> 
+          <th style="text-align:left;"><strong>Default shortcut</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><a href="#grid-resize">Meningkatkan Ukuran Grid</a></td> 
+          <td style="text-align:left;"> <strong>Ctrl</strong>+<strong>]</strong> (Windows) atau <br><strong>Command</strong>+<strong>]</strong> (macOS)</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="#grid-resize">Mengurangi Ukuran Grid</a></td> 
+          <td style="text-align:left;"> <strong>Ctrl</strong>+<strong>[</strong> (Windows) atau <br><strong>Command</strong>+<strong>[</strong> (macOS)</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="#grid-location">Nudge Grid Backward</a></td> 
+          <td style="text-align:left;"> <strong>Shift</strong>+<strong>[</strong> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="#grid-location">Nudge Grid Forward</a></td> 
+          <td style="text-align:left;"> <strong>Shift</strong>+<strong>]</strong> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="#grid-align">Mendorong ke Grid (Align Selection ke Grid)</a></td> 
+          <td style="text-align:left;"> <strong>Ctrl</strong>+<strong>\</strong> (Windows) atau <br><strong>Command</strong>+<strong>\</strong> (macOS)</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="#grid-reset">Reset Grid</a></td> 
+          <td style="text-align:left;">(tidak dipersingkat secara default)</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Untuk mengubah shortcut keyboard default ini, gunakan <a href="ShortcutsManager.html">Shortcuts Manager</a>.</p> 
+       <hr> 
+       <ul> 
+        <li><span class="page-history">Peningkatan grid asli diperbarui dalam <span class="search-words">NewIn20193</span></span></li> 
+        <li><span class="page-history">Grid dan snap pindah ke Overlays toolbar diperbarui dalam <span class="search-words">Panties20212</span></span></li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="PositioningGameObjects.html"></a></span> 
+         <div class="tip">
+           Posisi GameObjects 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UsingCustomEditorTools.html"></a></span> 
+         <div class="tip">
+           Menggunakan alat editor kustom 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

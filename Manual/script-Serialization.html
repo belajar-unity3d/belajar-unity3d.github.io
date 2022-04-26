@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: serialisasi Script</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="ScriptingSection.html">Scripting</a></li> 
+         <li><a href="unity-architecture.html">Arsitektur persatuan</a></li> 
+         <li>Script serialization</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="RunningEditorCodeOnLaunch.html"></a></span> 
+          <div class="tip">
+            Menjalankan Kode Script Editor di Launch 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="script-Serialization-BuiltInUse.html"></a></span> 
+          <div class="tip">
+            serialisasi internal 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Script serialization</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p> <strong>Serialization</strong> adalah proses otomatis mengubah struktur data atau GameObject menyatakan ke dalam format yang dapat disimpan Unity dan reconstruct nanti.</p> 
+       <p>Bagaimana Anda mengatur data dalam proyek Unity Anda mempengaruhi bagaimana menyatukan data tersebut, yang dapat memiliki dampak signifikan pada kinerja proyek Anda. Serialisasi outlines halaman ini dalam Unity dan bagaimana mengoptimalkan proyek Anda untuk itu.</p> 
+       <p>Dokumen ini mencakup topik berikut:</p> 
+       <ul> 
+        <li><a href="#SerializationRules">Peraturan Serialisasi</a></li> 
+        <li><a href="#CustomSerialization">Serialisasi Khusus</a></li> 
+        <li><a href="#HowUnityUsesSerialization">Bagaimana Unity menggunakan serialisasi</a></li> 
+        <li><a href="#errors">Kesalahan serialisasi</a></li> 
+        <li><a href="#bestPractise">Serialisasi Praktik terbaik</a></li> 
+       </ul> 
+       <h2>Sitemap Peraturan serialisasi<a name="SerializationRules"></a> Serialization rules</h2> 
+       <p>Serializers di Unity dirancang khusus untuk beroperasi secara efisien pada runtime. Karena ini, serialisasi dalam persatuan berperilaku berbeda untuk serialisasi di lingkungan pemrograman lainnya. Serializers dalam pekerjaan Unity langsung pada <strong>fields</strong> dari Anda C# kelas daripada properti mereka, sehingga ada aturan bahwa bidang Anda harus sesuai untuk menjadi serialisasi. Bagian berikut menguraikan cara menggunakan serialisasi lapangan di Unity.</p> 
+       <p>Untuk menggunakan serialisasi lapangan Anda harus memastikan bahwa lapangan:</p> 
+       <ul> 
+        <li>Adalah publik, atau memiliki atribut <a href="../ScriptReference/SerializeField.html">Serial</a> attribute</li> 
+        <li>tidak statis</li> 
+        <li>tidak surut</li> 
+        <li>tidak membaca</li> 
+        <li>Memiliki tipe lapangan yang dapat serialisasi: 
+         <ul> 
+          <li>Jenis data primitif (int, float, ganda, bool, string, dll)</li> 
+          <li>Jenis Enum (32 bit atau lebih kecil)</li> 
+          <li>Penyangga ukuran tetap</li> 
+          <li>Jenis bawaan unity, misalnya vektor2, vektor3, Rect, Matrix4x4, Warna, AnimasiCurve</li> 
+          <li>Struktur kustom dengan atribut Serializable</li> 
+          <li>Indeks ke objek yang berasal dari <a href="../ScriptReference/Object.html">Login Sitemap</a> </li> 
+          <li>Kelas kustom dengan atribut Serializable. (Lihat <a href="#CustomClasses">Serialisasi kelas kustom</a>).</li> 
+          <li>Berbagai tipe lapangan yang disebutkan di atas</li> 
+          <li>A <code>List&lt;T&gt;</code> dari jenis lapangan yang disebutkan di atas</li> 
+         </ul> </li> 
+       </ul> 
+       <p> <strong>Note</strong>: Unity tidak mendukung serialisasi jenis multilevel (multidimensional array, array bergerigi, dictionaries, dan tipe kontainer bersarang). Jika Anda ingin serialisasi ini, Anda memiliki dua pilihan:</p> 
+       <ul> 
+        <li>Bungkus tipe bersarang dalam kelas atau merusak</li> 
+        <li>Gunakan callback serialisasi, dengan menerapkan <a href="../ScriptReference/ISerializationCallbackReceiver.html">ISerializationCallbackReceiver</a>, untuk melakukan <a href="#CustomSerialization">serialisasi kustom</a>.</li> 
+       </ul> 
+       <h3>Sitemap Serialisasi kelas kustom<a name="CustomClasses"></a> Serialization of custom classes</h3> 
+       <p>Untuk menyatukan kelas kustom, Anda harus memastikan kelas:</p> 
+       <ul> 
+        <li>Memiliki atribut <a href="../ScriptReference/Serializable.html">Serial</a> attribute</li> 
+        <li>tidak statis.</li> 
+       </ul> 
+       <p>Ketika Anda menetapkan instance dari kelas yang telah ditentukan oleh <code>UnityEngine.Object</code> ke lapangan dan Unity menyimpan bidang itu, Unity serializes lapangan sebagai referensi untuk contoh itu. Unity serializes instance itu sendiri secara mandiri, sehingga tidak diduplikasi ketika beberapa bidang ditugaskan ke instance. Tapi untuk kelas kustom yang tidak berasal dari <code>UnityEngine.Object</code>, Unity mencakup keadaan instance langsung dalam data serialisasi MonoBehaviour atau ScriptableObject yang merujuk pada mereka. Ada dua cara yang bisa terjadi: <strong>inline</strong> dan oleh <strong><code>[SerializeReference]</code></strong>.</p> 
+       <ul> 
+        <li> <strong>Inline serialization</strong>: Secara default, Unity serialisasi kelas kustom sesuai nilai ketika Anda tidak menentukan <code>[SerializeReference]</code> di lapangan yang merujuk pada kelas. Ini berarti bahwa jika Anda menyimpan referensi ke instance kelas kustom di beberapa bidang yang berbeda, mereka menjadi benda terpisah ketika serialisasi. Kemudian, ketika Unity deserializes bidang, mereka mengandung benda yang berbeda dengan data yang identik.</li> 
+        <li> <strong><code>[SerializeReference]</code> serialization</strong>: Jika Anda menentukan <code>[SerializeReference]</code>, Unity menetapkan objek sebagai referensi yang dikelola. Objek host masih menyimpan objek langsung dalam data serial, tetapi di bagian registry khusus.</li> 
+       </ul> 
+       <p> <code>[SerializeReference]</code> menambahkan beberapa overhead tetapi mendukung kasus berikut:</p> 
+       <ul> 
+        <li>Lapangan dapat di null. serialisasi inline tidak dapat mewakili null, bukan, itu menggantikan null dengan objek inline yang memiliki bidang yang tidak ditentukan.</li> 
+        <li>Beberapa referensi ke objek yang sama. Jika Anda menyimpan referensi ke instance kelas kustom di beberapa bidang yang berbeda tanpa menggunakan <code>[SerializeReference]</code>, maka mereka menjadi benda terpisah ketika serialisasi.</li> 
+        <li>Grafik dan data siklik (misalnya, objek yang memiliki referensi kembali ke dirinya sendiri). serialisasi kelas Inline tidak mendukung null atau referensi bersama, sehingga setiap siklus data dapat menyebabkan hasil yang tidak terduga, seperti perilaku <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span> aneh, kesalahan konsol atau loop tak terbatas.</li> 
+        <li>Polimorfisme. Jika Anda membuat kelas yang berasal dari kelas induk dan menetapkannya ke lapangan yang menggunakan kelas induk sebagai jenisnya, tanpa <code>[SerializeReference]</code> Unity hanya menampilkan bidang yang milik kelas induk. Ketika Unity deserializes instance kelas, seketika kelas induk bukan kelas yang berasal.</li> 
+        <li>Ketika struktur data membutuhkan pengenal yang stabil untuk menunjuk ke objek tertentu tanpa mengeras posisi array objek atau mencari seluruh array. Sitemap<a href="../ScriptReference/SerializationUtility.SetManagedReferenceIdForObject.html">SerialisasiUtility.SetManagedReferenceIdForObject</a>.</li> 
+       </ul> 
+       <p> <strong>Note</strong>: serialisasi inline lebih efisien, dan Anda harus menggunakannya kecuali jika Anda membutuhkan salah satu fitur yang mendukung <code>[SerializeReference]</code>. Untuk rincian lengkap tentang cara menggunakan <code>[SerializeReference]</code>, lihat dokumentasi <a href="../ScriptReference/SerializeReference.html">SerializeReference</a>.</p> 
+       <h3>Serialisasi properti</h3> 
+       <p>Unity tidak biasanya men serialisasi properti kecuali dalam situasi berikut:</p> 
+       <ul> 
+        <li>Jika properti memiliki bidang backing eksplisit, Unity mendemonstrasikannya sesuai dengan aturan serialisasi biasa. Contoh:</li> 
+       </ul> 
+       <pre><code>public int MyInt
+{
+get =&gt; m_backing;
+private set =&gt; m_backing = value;
+}
+[SerializeField] private int m_backing;
+</code></pre> 
+       <ul> 
+        <li>Unity serializes properti dengan bidang autogenerasi selama reloading panas saja. <br><br><code>public int MyInt { get; set; }</code> <br><br> Jika Anda tidak ingin menyatukan properti dengan bidang autogenerasi, gunakan atribut [bidang: NonSerialized].</li> 
+       </ul> 
+       <h2>Sitemap serialisasi kustom<a name="CustomSerialization"></a> Custom serialization</h2> 
+       <p>Kadang-kadang Anda mungkin ingin serialisasi sesuatu yang serializer Unity tidak mendukung (misalnya, Kamus C#). Pendekatan terbaik adalah menerapkan antarmuka <a href="../ScriptReference/ISerializationCallbackReceiver.html">ISerializationCallbackReceiver</a> di kelas Anda. Hal ini memungkinkan Anda untuk menerapkan callback yang diinvokasi pada poin kunci selama serialisasi dan deserialisasi:</p> 
+       <ol> 
+        <li>Ketika sebuah objek adalah tentang menjadi serialisasi, Unity memanggil callback <code>OnBeforeSerialize()</code>. Di dalam panggilan ini adalah di mana Anda dapat mengubah data Anda menjadi sesuatu yang saling memahami. Sebagai contoh, untuk serialisasi C# Kamus, salin data dari Kamus ke dalam array kunci dan array nilai.</li> 
+        <li>Setelah callback <code>OnBeforeSerialize()</code> selesai, Unity serialisasi array.</li> 
+        <li>Kemudian, ketika objek dinonaktifkan, Unity memanggil callback <code>OnAfterDeserialize()</code>. Di dalam panggilan ini adalah di mana Anda dapat mengubah data kembali menjadi bentuk yang nyaman untuk objek dalam memori. Misalnya, gunakan array kunci dan nilai untuk mengenali Kamus C#.</li> 
+       </ol> 
+       <h2>Sitemap Bagaimana Unity menggunakan serialisasi<a name="HowUnityUsesSerialization"></a> How Unity uses serialization</h2> 
+       <h3>Hemat dan pemuatan</h3> 
+       <p>Unity menggunakan serialisasi untuk memuat dan menyimpan <span class="tooltip"><a class="tooltipMoreInfoLink" href="CreatingScenes.html">scenes</a><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Scene">Glossary</a></span></span></span>, <span class="tooltip"><a href="AssetWorkflow.html">Assets</a><span class="tooltiptext">Setiap media atau data yang dapat digunakan dalam permainan atau proyek Anda. Aset mungkin berasal dari file yang dibuat di luar Unity, seperti model 3D, file audio atau gambar. Anda juga dapat membuat beberapa jenis aset di Unity, seperti Pengontrol Animator, Audio Mixer atau Tekstur Render. <a href="AssetWorkflow.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Asset">Glossary</a></span></span></span>, dan <a href="AssetBundlesIntro.html">AssetBundles</a> ke dan dari memori perangkat Anda. Ini termasuk data yang disimpan dalam objek API scripting Anda sendiri seperti komponen <a href="../ScriptReference/MonoBehaviour.html">MonoBehaviour</a> dan <a href="class-ScriptableObject.html">Login Sitemap</a>.</p> 
+       <p>Banyak fitur di Editor Unity dibangun di atas sistem serialisasi inti. Dua hal untuk sangat menyadari dengan serialisasi adalah <a href="UsingTheInspector.html">Jendela inspektur</a>, dan pemuatan panas.</p> 
+       <h4>Jendela Inspektur</h4> 
+       <p>Jendela Inspektur menunjukkan nilai bidang serialisasi objek yang diperiksa. Ketika Anda mengubah nilai dalam Inspektur, Inspektur memperbarui data serial dan memicu deserialisasi yang memperbarui objek yang diperiksa.</p> 
+       <p>Hal yang sama berlaku untuk objek Unity bawaan, dan objek scripting seperti kelas MonoBehaviour-derived.</p> 
+       <p>Unity tidak menelepon ajang C# properti dan setters ketika Anda melihat atau mengubah nilai di jendela Inspektur; bukan, Unity mengakses bidang backing serialisasi langsung.</p> 
+       <h4>Reloading panas</h4> 
+       <p>Reloading panas adalah di mana Anda membuat atau mengedit <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> sementara Editor terbuka dan menerapkan perilaku skrip segera. Anda tidak perlu me-restart Editor untuk perubahan untuk mengambil efek.</p> 
+       <p>Ketika Anda mengubah dan menyimpan skrip, Reload panas Unity semua data skrip yang dimuat pada waktu. Unity menyimpan semua variabel serializable di semua skrip yang dimuat, kemudian isi ulang skrip dan mengembalikan variabel serial. Hot reloading membuang semua data yang tidak serializable, sehingga Anda tidak akan dapat mengakses data setelahnya.</p> 
+       <p>Ini mempengaruhi semua jendela Editor dan semua MonoBehaviours dalam proyek. Tidak seperti kasus lain dari serialisasi, Unity serializes bidang pribadi secara default ketika reloading, bahkan jika mereka tidak memiliki atribut 'SerializeField'.</p> 
+       <p>Ketika skrip reload Unity:</p> 
+       <ol> 
+        <li>Unity serializes dan menyimpan semua variabel di semua script yang dimuat.</li> 
+        <li>Unity mengembalikan mereka dengan nilai-nilai pra-serialisasi mereka: 
+         <ul> 
+          <li>Unity mengembalikan semua variabel - termasuk variabel pribadi - yang memenuhi persyaratan untuk serialisasi, bahkan jika variabel tidak memiliki atribut <code>[SerializeField]</code>. Kadang-kadang, Anda perlu mencegah Unity dari variabel pribadi restoring, misalnya, jika Anda ingin referensi untuk menjadi null setelah reloading dari script. Dalam kasus ini, gunakan atribut <a href="../ScriptReference/NonSerialized.html"><code>[field: NonSerialized]</code></a>.</li> 
+          <li>Unity tidak pernah mengembalikan variabel statis, sehingga tidak menggunakan variabel statis untuk negara-negara yang perlu Anda simpan setelah Reload Unity script karena proses reloading akan membuangnya.</li> 
+         </ul>%</li> 
+       </ol> 
+       <h3>Prefabs</h3> 
+       <p>A <span class="tooltip"><a class="tooltipMoreInfoLink" href="Prefabs.html">Prefab</a><span class="tooltiptext">Jenis aset yang memungkinkan Anda untuk menyimpan GameObject lengkap dengan komponen dan properti. Prefab bertindak sebagai template dari mana Anda dapat membuat instance objek baru di tempat kejadian. <a href="Prefabs.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Prefab">Glossary</a></span></span></span> adalah data serial dari satu atau lebih <span class="tooltip"><a href="GameObjects.html">GameObjects</a><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#GameObject">Glossary</a></span></span></span> atau <span class="tooltip"><a href="Components.html">components</a><span class="tooltiptext">Bagian fungsional dari GameObject. GameObject dapat mengandung sejumlah komponen. Unity memiliki banyak komponen built-in, dan Anda dapat membuat Anda sendiri dengan menulis skrip yang berwarisi dari MonoBehaviour. <a href="UsingComponents.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#component">Glossary</a></span></span></span>. Contoh Prefab mengandung referensi untuk kedua sumber Prefab dan daftar modifikasi untuk itu. Modifikasi adalah apa yang perlu dilakukan Unity untuk sumber Prefab untuk membuat instance Prefab tertentu.</p> 
+       <p>Contoh Prefab hanya ada saat Anda mengedit proyek Anda di Editor Unity. Editor Unity mengikutkan GameObject dari dua set data serialisasinya: sumber Prefab dan modifikasi instance Prefab.</p> 
+       <h3>Instantiation</h3> 
+       <p>Ketika Anda memanggil <a href="../ScriptReference/Object.Instantiate.html"><code>Instantiate</code></a> pada apa pun yang ada di tempat kejadian, seperti Prefab atau GameObject:</p> 
+       <ol> 
+        <li>Unity serializes itu. Ini terjadi baik pada runtime dan di Editor. Unity dapat serialisasi segala sesuatu yang berasal dari <code>UnityEngine.Object</code>.</li> 
+        <li>Unity menciptakan GameObject baru dan merusak data ke GameObject baru.</li> 
+        <li>Unity menjalankan kode serialisasi yang sama dalam varian yang berbeda untuk melaporkan bahwa <code>UnityEngine.Objects</code> lain itu referensi. Ini memeriksa semua referensi <code>UnityEngine.Objects</code> untuk melihat apakah mereka bagian dari data Unity instaniates. Jika titik referensi untuk sesuatu yang eksternal, seperti Tekstur, Unity menyimpan referensi itu. Jika titik referensi untuk sesuatu yang internal, seperti anak GameObject, Unity patch referensi ke salinan yang sesuai.</li> 
+       </ol> 
+       <h3>Unloading aset yang tidak digunakan</h3> 
+       <p> <code>EditorUtility.UnloadUnusedAssetsImmediate</code> adalah kolektor sampah Unity asli dan memiliki tujuan yang berbeda untuk kolektor sampah C# standar. Ini berjalan setelah Anda memuat adegan dan memeriksa objek (seperti Tekstur) yang tidak lagi referensi dan membongkar mereka dengan aman. Pengumpul sampah Unity asli menjalankan serializer dalam variasi objek mana melaporkan semua referensi ke <code>UnityEngine.Objects</code> eksternal. Ini adalah bagaimana Tekstur yang digunakan satu adegan, bongkar kolektor garbage di depan.</p> 
+       <h3>Perbedaan antara serialisasi Editor dan runtime</h3> 
+       <p>Kebanyakan serialisasi terjadi di Editor, sedangkan deserialization adalah fokus pada runtime. Unity serializes beberapa fitur hanya di Editor, sementara itu dapat serialisasi fitur lain di kedua Editor dan pada runtime:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature</strong></th> 
+          <th style="text-align:left;"><strong>Editor</strong></th> 
+          <th style="text-align:left;"><strong>Runtime</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Assets in Binary Format</strong></td> 
+          <td style="text-align:left;">Baca/ tulis didukung</td> 
+          <td style="text-align:left;">Baca didukung</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Assets in YAML format</strong></td> 
+          <td style="text-align:left;">Baca/ tulis didukung</td> 
+          <td style="text-align:left;">Tidak didukung</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Saving scenes, prefabs and other assets</strong></td> 
+          <td style="text-align:left;">Didukung, kecuali dalam mode Bermain</td> 
+          <td style="text-align:left;">Tidak didukung</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Serialization of individual objects with <a href="JSONSerialization.html">JsonUtility</a></strong></td> 
+          <td style="text-align:left;">Baca/ tulis dukungan dengan JsonUtility.<br><br>Support untuk jenis objek tambahan dengan EditorJsonUtility</td> 
+          <td style="text-align:left;">Baca/ tulis dukungan dengan JsonUtility</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/SerializeReference.html">SerializeReference</a></strong></td> 
+          <td style="text-align:left;">Supported</td> 
+          <td style="text-align:left;">Supported</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/ISerializationCallbackReceiver.html">ISerializationCallbackReceiver</a></strong></td> 
+          <td style="text-align:left;">Supported</td> 
+          <td style="text-align:left;">Supported</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><a href="../ScriptReference/Serialization.FormerlySerializedAsAttribute.html">FormerlySerializedAs</a></strong></td> 
+          <td style="text-align:left;">Supported</td> 
+          <td style="text-align:left;">Tidak didukung</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Objek dapat memiliki bidang tambahan yang hanya serialisasi Editor, seperti ketika Anda menyatakan bidang dalam UNITY_ EDITOR <a href="PlatformDependentCompilation.html">simbol scripting</a>:</p> 
+       <pre><code class="lang-C#">public class SerializeRules : MonoBehaviour
+{
+#if UNITY_EDITOR
+public int m_intEditorOnly;
+#endif
+}
+</code></pre> 
+       <p>Dalam contoh di atas, lapangan <code>m_intEditorOnly</code> hanya serialisasi dalam editor dan tidak termasuk dalam build. Hal ini memungkinkan Anda untuk menyimpan memori dengan data yang hanya diperlukan dalam Editor dari build Anda. Setiap kode yang menggunakan bidang itu juga perlu dikompilasi secara kondisional, misalnya dalam blok #if UNITY_EDITOR, sehingga kelas dapat mengkompilasi pada waktu membangun.</p> 
+       <p>Editor tidak mendukung benda-benda dengan bidang yang bersatu hanya serialisasi pada runtime, (misalnya, ketika Anda menyatakan bidang di dalam UNITY_STANDALONE directive).</p> 
+       <h2>Sitemap Kesalahan serialisasi Script<a name="errors"></a> Script serialization errors</h2> 
+       <p>serialisasi script dapat menyebabkan kesalahan. Perbaiki beberapa ini tercantum di bawah ini.</p> 
+       <h3>“Find tidak diperbolehkan untuk disebut dari konstruktor MonoBehaviour (atau premiizer lapangan instance), panggilan di Awake atau Start. Sitemap</h3> 
+       <p>Login API seperti <a href="../ScriptReference/GameObject.Find.html"><code>GameObject.Find</code></a> di dalam konstruktor MonoBehaviour atau initializer lapangan memicu kesalahan ini.</p> 
+       <p>Untuk memperbaiki ini, lakukan panggilan ke API Scripting di <a href="../ScriptReference/MonoBehaviour.Start.html"><code>MonoBehaviour.Start</code></a> bukan dalam konstruktor.</p> 
+       <h3>“Find tidak diperbolehkan untuk disebut selama serialisasi, menyebutnya dari Awake atau Start. Sitemap</h3> 
+       <p>Memanggil Scripting API seperti GameObject. Cari dari dalam penyusunan kelas ditandai dengan <code>System.Serializable</code> memicu kesalahan ini.</p> 
+       <p>Untuk memperbaiki ini, edit kode Anda sehingga tidak membuat panggilan API Scripting di setiap konstruktor untuk objek serial.</p> 
+       <h3>API Reference</h3> 
+       <p>Pembatasan di atas mempengaruhi sebagian besar API Scripting. Hanya beberapa bagian dari API skrip Unity dibebaskan dan Anda dapat menyebutnya dari mana saja:</p> 
+       <ul> 
+        <li><a href="../ScriptReference/Debug.Log.html"><code>Debug.Log</code></a></li> 
+        <li> <a href="../ScriptReference/Mathf.html"><code>Mathf</code></a> fungsi</li> 
+        <li>Struktur diri yang sederhana; misalnya matematika seperti <a href="../ScriptReference/Vector3.html"><code>Vector3</code></a> dan <a href="../ScriptReference/Quaternion.html"><code>Quaternion</code></a> </li> 
+       </ul> 
+       <p>Untuk mengurangi risiko kesalahan selama serialisasi, hanya memanggil metode API yang mandiri dan tidak perlu mendapatkan atau mengatur data di Unity sendiri, kecuali tidak ada alternatif.</p> 
+       <h2>Sitemap Praktik terbaik<a name="bestPractise"></a> Serialization best practice</h2> 
+       <p>Anda dapat mengatur data Anda untuk memastikan Anda mendapatkan penggunaan serialisasi Unity yang optimal.</p> 
+       <ul> 
+        <li>Bertujuan memiliki serialisasi satu Unity dari data yang paling kecil. Tujuan dari ini bukan untuk menghemat ruang pada hard drive komputer Anda, tetapi untuk memastikan bahwa Anda dapat mempertahankan kompatibilitas mundur dengan versi proyek sebelumnya. Kecocokan kembali dapat menjadi lebih sulit kemudian dalam pengembangan jika Anda bekerja dengan set besar data serial.</li> 
+        <li>Jangan pernah memiliki data duplikat Unity atau data cache. Hal ini menyebabkan masalah yang signifikan untuk kompatibilitas mundur: itu membawa risiko kesalahan yang tinggi karena data dapat keluar dari sinkronisasi.</li> 
+        <li>Hindari struktur berulang di mana Anda merujuk kelas lain. Tata letak struktur serialisasi selalu perlu sama; independen data dan hanya tergantung pada apa yang terpapar dalam skrip. Satu-satunya cara untuk merujuk kelas lain adalah melalui kelas yang berasal dari <code>UnityEngine.Object</code>. Kelas-kelas ini terpisah; mereka hanya referensi satu sama lain dan mereka tidak malu konten.</li> 
+       </ul> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="RunningEditorCodeOnLaunch.html"></a></span> 
+         <div class="tip">
+           Menjalankan Kode Script Editor di Launch 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="script-Serialization-BuiltInUse.html"></a></span> 
+         <div class="tip">
+           serialisasi internal 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

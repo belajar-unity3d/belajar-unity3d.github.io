@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Manajer Jaringan HUD dalam mode LAN</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="cloud" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UNet.html">Multiplayer dan Jaringan</a></li> 
+         <li>Jaringan Manager HUD dalam mode LAN</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UNetManagerHUD.html"></a></span> 
+          <div class="tip">
+            Menggunakan Manajer Jaringan HUD 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UNetManagerHUDMatchMakerMode.html"></a></span> 
+          <div class="tip">
+            Jaringan Manager HUD dalam mode matchmaker 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Jaringan Manager HUD dalam mode LAN</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Important</strong>: UNet adalah solusi yang diuraikan, dan Solusi Multiplayer baru dan <span class="tooltip"><strong>Networking</strong><span class="tooltiptext">Sistem Unity yang memungkinkan game multiplayer di jaringan komputer. <a class="tooltipMoreInfoLink" href="UNetOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Networking">Glossary</a></span></span></span> (Netcode untuk GameObjects) sedang berkembang. Untuk informasi lebih lanjut dan langkah selanjutnya melihat informasi di .</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/NetworkManagerHUDLANMode.png" alt="The Network Manager HUD in LAN mode (the default mode) as seen in the Game view."> 
+        <figcaption>
+          Jaringan Manager HUD dalam mode LAN (mode default) seperti yang terlihat dalam pandangan Game. 
+        </figcaption> 
+       </figure> 
+       <h3>Login Login</h3> 
+       <p>Klik tombol <strong>LAN Host</strong> untuk memulai permainan sebagai host di jaringan lokal. Klien ini adalah host <em>and</em>one dari pemain dalam permainan. Ini menggunakan informasi dari bagian <strong>Network Info</strong> di <span class="tooltip"><strong>inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span> untuk menghosting permainan.</p> 
+       <p>Ketika Anda mengklik tombol ini, HUD beralih ke tampilan sederhana dari rincian jaringan, dan tombol <strong>Stop (X)</strong> yang memungkinkan Anda untuk menghentikan hosting permainan dan kembali ke menu LAN utama.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/NetworkManagerHUDHostingLAN.png" alt="The Network Manager HUD when hosting a LAN game."> 
+        <figcaption>
+          Jaringan Manager HUD ketika hosting permainan LAN. 
+        </figcaption> 
+       </figure> 
+       <p>Ketika Anda telah memulai permainan sebagai tuan rumah, pemain lain dari permainan kemudian dapat terhubung ke tuan rumah untuk bergabung dengan permainan.</p> 
+       <p>Klik tombol <strong>Stop (X)</strong> untuk memutuskan setiap pemain yang terhubung ke pemain host. Mengklik <strong>Stop (X)</strong> juga mengembalikan HUD ke menu LAN.</p> 
+       <h3>LAN Client</h3> 
+       <p>Untuk terhubung ke host di jaringan lokal, gunakan kolom teks ke kanan tombol <strong>LAN Client</strong> untuk menentukan alamat host. Alamat host default adalah "localhost", yang berarti klien terlihat pada komputernya sendiri untuk host game. Klik <strong>LAN Client </strong><strong>(C)</strong> untuk mencoba untuk terhubung ke alamat host yang telah Anda tentukan.</p> 
+       <p>Gunakan default "localhost" di bidang ini jika Anda menjalankan beberapa kasus permainan Anda pada satu komputer, untuk menguji berinteraksiivitas multiplayer. Untuk melakukan ini, Anda dapat membuat membangun permainan Anda yang mandiri, dan kemudian meluncurkan beberapa kali di komputer Anda. Ini adalah cara umum untuk dengan cepat menguji bahwa interaksi permainan jaringan Anda berfungsi seperti yang Anda harapkan, tanpa Anda perlu menyebarkan permainan Anda ke beberapa komputer atau perangkat.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/NetworkGame3Instances.jpg" alt="An example of three instances of a networked game running on the same desktop PC. This is useful for quick tests to ensure networked interactions are behaving as you intended. One is running as LAN Host, and two are running as LAN Client."> 
+        <figcaption>
+          Contoh dari tiga kasus permainan jaringan yang berjalan pada PC desktop yang sama. Ini berguna untuk tes cepat untuk memastikan interaksi jaringan berperilaku seperti yang Anda maksudkan. Satu berjalan sebagai LAN Host, dan dua berjalan sebagai LAN Klien. 
+        </figcaption> 
+       </figure> 
+       <p>When you want to test your game on multiple machines within the same network (that is, on a LAN), you need to put the address of the person acting as host into the "localhost<strong>"</strong> text field.</p> 
+       <p>Orang yang bertindak sebagai tuan rumah perlu memberitahu alamat IP mereka kepada semua orang yang menjalankan klien LAN, sehingga Anda dapat mengetik ini ke dalam kotak.</p> 
+       <p>Masukkan alamat IP (atau biarkan sebagai "localhost" jika Anda mengujinya pada mesin Anda sendiri), kemudian klik <strong>LAN Client</strong> untuk mencoba terhubung ke host.</p> 
+       <p>Ketika klien mencoba untuk menghubungkan, HUD menampilkan tombol <strong>Cancel Connection Attempt</strong>. Klik ini jika Anda ingin berhenti mencoba untuk terhubung ke host. <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/NetworkManagerHUDConnectionAttempt.png" alt="The HUD while attempting a connection"> </p> 
+       <p>Jika koneksi berhasil, HUD menampilkan <strong>Stop (X) button</strong>. Klik ini jika Anda ingin menghentikan permainan pada klien dan memutuskan dari host:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/NetworkManagerHUDConnected.png" alt="The HUD after a successful connection"> 
+        <figcaption>
+          HUD setelah koneksi yang sukses 
+        </figcaption> 
+       </figure> 
+       <p>Unity memiliki sistem Discovery Jaringan built-in, yang memungkinkan klien untuk secara otomatis menemukan tuan rumah di jaringan lokal yang sama. Namun, ini tidak dibangun ke dalam <span class="tooltip"><strong>Network Manager</strong><span class="tooltiptext">Komponen Jaringan yang mengelola state jaringan proyek. <a class="tooltipMoreInfoLink" href="UNetManager.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#NetworkManager">Glossary</a></span></span></span> HUD, sehingga Anda perlu memasukkan alamat secara manual. Anda dapat mengintegrasikan sistem Jaringan Discovery ke dalam permainan Anda ketika Anda mengganti Manajer Jaringan HUD dengan <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span> Anda sendiri. Lihat dokumentasi tentang <a href="UNetDiscovery.html">Jaringan Discovery</a> untuk mempelajari lebih lanjut.</p> 
+       <h3>LAN Server Only</h3> 
+       <p>Klik <strong>LAN Server Only</strong> untuk memulai permainan yang bertindak sebagai server yang klien lain dapat terhubung ke, tetapi yang tidak bertindak sebagai klien untuk permainan itu sendiri. Jenis permainan ini sering disebut "server yang didedikasikan". Pengguna tidak dapat bermain game pada contoh ini dari permainan Anda. Semua pemain harus terhubung sebagai klien, dan tidak ada yang bermain pada kasus yang berjalan sebagai server.</p> 
+       <p>Server khusus pada hasil LAN dalam kinerja yang lebih baik untuk semua pemain yang terhubung, karena server tidak perlu memproses gameplay pemain lokal selain bertindak sebagai server.</p> 
+       <p>Anda juga mungkin memilih opsi ini jika Anda ingin menghosting permainan yang dapat dimainkan di internet (hanya dari hanya dalam jaringan lokal), tetapi ingin mempertahankan kontrol server sendiri - misalnya, untuk mencegah kecurangan oleh salah satu klien, karena hanya server memiliki wewenang atas permainan. Untuk melakukan ini, Anda harus menjalankan game dalam mode <strong>Server Only</strong> pada komputer dengan alamat IP publik.</p> 
+       <h3>Enable Match Maker</h3> 
+       <p>Klik <strong>Enable Match Maker (M)</strong> untuk mengubah HUD ke mode matchmaker. Anda perlu menggunakan mode Matchmaker jika Anda ingin membuat atau terhubung ke game yang dihosting di internet menggunakan layanan multiplayer Unity. Klik <strong>Enable Match Maker (M)</strong> untuk menampilkan kontrol Pencocokan di Manajer Jaringan HUD.</p> 
+       <p> <strong>Note</strong>: Ingat bahwa fitur Jaringan Manajer HUD adalah bantuan sementara untuk pengembangan. Ini memungkinkan Anda untuk mendapatkan permainan multiplayer Anda berjalan dengan cepat, tetapi Anda harus menggantinya dengan kontrol UI Anda sendiri ketika Anda siap.</p> 
+       <!-- area:cloud --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UNetManagerHUD.html"></a></span> 
+         <div class="tip">
+           Menggunakan Manajer Jaringan HUD 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UNetManagerHUDMatchMakerMode.html"></a></span> 
+         <div class="tip">
+           Jaringan Manager HUD dalam mode matchmaker 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy"> 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

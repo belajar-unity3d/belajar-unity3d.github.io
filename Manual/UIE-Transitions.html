@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: transisi USS</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UIToolkits.html"></a></li> 
+         <li><a href="UIElements.html"></a></li> 
+         <li><a href="UIE-USS.html">UI gaya dengan USS</a></li> 
+         <li><a href="UIE-USS-Properties-Reference.html">Referensi properti ASS</a></li> 
+         <li>USS transisi</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UIE-Transform.html"></a></span> 
+          <div class="tip">
+            USS mengubah 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UIE-USS-CustomProperties.html"></a></span> 
+          <div class="tip">
+            Properti kustom ASS (variabel) 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>USS transisi</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>USS transisi mengubah nilai properti selama durasi tertentu. Mirip dengan <a class="tooltipMoreInfoLink" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions">CSS transition</a>, <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span> Toolkit mendukung banyak fungsi easing, durasi transisi variabel, dan penundaan transisi yang dapat dikonfigurasi. Anda dapat mengubah tampilan dan nuansa transisi dan menyesuaikan urutan di mana transisi terjadi. Anda dapat menggunakan fungsi easing untuk memicu <a href="#discrete">animasi diskrit</a> setiap saat transisi.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UIBuilder/transition-gif.gif" alt="A transition example"> 
+        <figcaption>
+          Contoh transisi 
+        </figcaption> 
+       </figure> 
+       <p> <strong>Important</strong>: </p> 
+       <ul> 
+        <li>Untuk properti yang Anda suplai dengan nilai dan unit, pastikan unit untuk nilai awal sesuai dengan unit untuk nilai akhir. Perhatikan perhatian khusus untuk transisi ke atau dari nilai default. Sebagai contoh, nilai default atribut <code>translate</code> adalah <code>0</code>. Ini sangat menggunakan <span class="tooltip"><strong>pixels</strong><span class="tooltiptext">Unit terkecil dalam gambar komputer. Ukuran piksel tergantung pada resolusi layar Anda. Pencahayaan pixel dihitung pada setiap piksel layar. <a class="tooltipMoreInfoLink" href="ShadowPerformance.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#pixel">Glossary</a></span></span></span> sebagai unitnya. Jika Anda mencoba transisi dari nilai ini ke nilai <code>translate</code> yang diungkapkan dengan persentase, Anda akan memiliki ketidakcococokan unit. Unit yang tidak memiliki konversi yang konsisten antara mereka, seperti piksel dan persentase, rentan untuk menyatukan ketidakcocokan.</li> 
+        <li>Animasi transisi pada bingkai dipicu ketika keadaan arus properti berbeda dari negara sebelumnya. Bingkai pertama dalam <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> tidak memiliki keadaan sebelumnya; oleh karena itu, Anda harus memulai animasi transisi setelah bingkai pertama.</li> 
+        <li>Untuk elemen visual dalam hirarki, transisi USS berperilaku sama seperti di <a href="https://drafts.csswg.org/css-transitions/#starting">CSS transition</a>, jika Anda mengatur transisi untuk properti yang mewarisi, seperti <code>color</code>, transisi diterapkan pada elemen induk cascade ke elemen anak. Untuk mengetahui properti mana yang diwariskan, lihat <a href="UIE-USS-Properties-Reference.html">Referensi properti ASS</a>.</li> 
+        <li>Ketika transisi tidak lengkap terganggu, transisi USS berperilaku sama seperti di <a href="https://drafts.csswg.org/css-transitions/#reversing">CSS transition</a>, transisi terbalik mungkin lebih cepat.</li> 
+       </ul> 
+       <p>Transisi termasuk sifat berikut:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>USS syntax</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Property</strong></td> 
+          <td style="text-align:left;"><code>transition-property</code></td> 
+          <td style="text-align:left;">Menentukan nama properti AS efek transisi adalah untuk. <code>all</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Duration</strong></td> 
+          <td style="text-align:left;"><code>transition-duration</code></td> 
+          <td style="text-align:left;">Tentukan berapa lama efek transisi yang diperlukan untuk menyelesaikan. <code>0s</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Easing function</strong></td> 
+          <td style="text-align:left;"><code>transition-timing-function</code></td> 
+          <td style="text-align:left;">Menentukan bagaimana properti bergerak antara nilai dari waktu ke waktu. <code>ease</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Delay</strong></td> 
+          <td style="text-align:left;"><code>transition-delay</code></td> 
+          <td style="text-align:left;">Tentukan ketika efek transisi dimulai. <code>0s</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Transition</strong></td> 
+          <td style="text-align:left;"><code>transition</code></td> 
+          <td style="text-align:left;">Shorthand untuk <code>transition-property</code>, <code>transition-duration</code>, <code>transition-timing-function</code>, dan <code>transition-delay</code>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Anda dapat menggunakan kontrol di <a href="UIE-UIBuilder">Pembuat UI</a>, skrip <a href="UIE-USS.html">API</a>, atau C# untuk mengatur sifat transisi untuk elemen visual.</p> 
+       <h2>Kontrol transisi di Pembuat UI</h2> 
+       <p>Anda dapat menggunakan kontrol di bagian <strong>Transition Animations</strong> dari <strong><span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, asset or project settings, allowing you to inspect and edit the values. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span></strong> di UI Builder untuk mengatur aturan transisi dari elemen visual. Anda dapat mengatur beberapa transisi pada elemen visual. Untuk menambahkan transisi lain, klik <strong>Add Transition</strong>. Untuk menghapusnya, klik tanda minus.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UIBuilder/example-transition.png" alt="This transition causes a visual element to adjust its scale over 500 milliseconds in a linear fashion after a delay of 20 milliseconds."> 
+        <figcaption>
+          transisi ini menyebabkan elemen visual untuk menyesuaikan skalanya lebih dari 500 mili detik dalam mode linier setelah penundaan 20 mili detik. 
+        </figcaption> 
+       </figure> 
+       <h3>Property</h3> 
+       <p>Pengaturan kontrol <strong>Property</strong> yang properti transisi berlaku untuk. Untuk menggunakannya, pilih nama properti kata kunci atau USS dari dropdown. Dropdown memiliki bilah pencarian yang dapat Anda gunakan untuk menemukan kata kunci tertentu atau nama properti ASS.</p> 
+       <p> <strong>Note</strong>: Jika Anda memilih <strong>Ignored</strong>, Unity mengabaikan transisi yang didefinisikan untuk durasi yang ditentukan, penundaan, dan fungsi easing.</p> 
+       <h3>Duration</h3> 
+       <p>Kontrol <strong>Duration</strong> menetapkan properti durasi. Untuk menggunakannya, masukkan nilai dalam kotak teks dan tentukan unit, atau pilih <strong>initial</strong> dalam pemilih unit.</p> 
+       <p> <strong>Tip</strong>: Anda dapat memasukkan <code>s</code> atau <code>ms</code> setelah nilai atau masukkan <code>initial</code>. Ini secara otomatis mengubah unit yang ditampilkan dalam pemilih unit. Anda juga dapat menyeret untuk menentukan nilai dalam kotak teks.</p> 
+       <h3>Easing</h3> 
+       <p>Kontrol <strong>Easing</strong> menetapkan properti fungsi easing. Untuk menggunakannya, pilih nama fungsi easing dari dropdown.</p> 
+       <h3>Delay</h3> 
+       <p>Kontrol <strong>Delay</strong> menetapkan properti penundaan. Untuk menggunakannya, masukkan nilai dalam kotak teks dan tentukan unit, atau pilih <strong>initial</strong> dalam pemilih unit.</p> 
+       <p> <strong>Tip</strong>: Anda dapat memasukkan <code>s</code> atau <code>ms</code> setelah nilai atau masukkan <code>initial</code>. Ini secara otomatis mengubah unit yang ditampilkan dalam pemilih unit. Anda juga dapat menyeret untuk menentukan nilai dalam kotak teks.</p> 
+       <h2>Properti transisi ASS</h2> 
+       <p>Anda dapat menggunakan aturan styling untuk mengatur sifat transisi untuk elemen visual. Anda dapat mengatur aturan styling dalam file ASS atau inline dalam file UXML.</p> 
+       <h3><code>transition-property</code></h3> 
+       <p>Anda dapat menyediakan properti USS tunggal, kata kunci, atau daftar yang dipisahkan dari mereka.</p> 
+       <p>Tabel berikut daftar kata kunci yang didukung untuk <code>transition-property</code>:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Keyword</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>all</code></td> 
+          <td style="text-align:left;">Bandingkan transisi ke semua properti dan menimpa transisi yang telah disiapkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>initial</code></td> 
+          <td style="text-align:left;">Bandingkan transisi ke semua properti. Anda tidak dapat menggunakan kata kunci ini dalam daftar yang dipisahkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>none</code></td> 
+          <td style="text-align:left;">Ignores transisi untuk semua properti. Anda tidak dapat menggunakan kata kunci ini dalam daftar yang dipisahkan.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <div id="discrete"></div> 
+       <p>Anda dapat menerapkan transisi ke sebagian besar properti ASS. Namun, animatabilitas untuk sifat tertentu berbeda. Sifat-sifat USS jatuh ke dalam kategori berikut:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Animatability</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Fully animatable</strong></td> 
+          <td style="text-align:left;">Mendukung transisi dari nilai awal ke nilai akhir, pada kecepatan yang mengikuti fungsi pemasasan dan durasi transisi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Discrete</strong></td> 
+          <td style="text-align:left;">Mendukung transisi antara nilai dalam satu langkah dari nilai awal ke nilai akhir.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Non-animatable</strong></td> 
+          <td style="text-align:left;">Tidak mendukung transisi.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Untuk mengetahui animatabilitas masing-masing properti, lihat <a href="UIE-USS-Properties-Reference.html">Referensi properti ASS</a>.</p> 
+       <p> <strong>Note</strong>: Unity merekomendasikan Anda menggunakan transisi dengan <a href="UIE-Transform.html">USS mengubah properti</a>. Meskipun Anda dapat menggunakan transisi pada properti ASS lain, itu mungkin mengakibatkan animasi dengan tingkat bingkai yang buruk karena perubahan nilai pada properti ini mungkin menyebabkan rekalkuasi tata letak. Rekalkuasi tata letak dalam setiap bingkai dapat memperlambat laju bingkai animasi transisi Anda.</p> 
+       <p><strong>Examples</strong></p> 
+       <pre><code class="lang-css">transition-property: scale;
+transition-property: translate, all, rotate;
+transition-property: initial;
+transition-property: none;
+</code></pre> 
+       <h3><code>transition-duration</code></h3> 
+       <p>Anda dapat menyediakan nomor dengan unit, kata kunci, atau daftar nomor dan unit yang dipisahkan.</p> 
+       <p>Jika Anda menyediakan beberapa nilai, setiap nilai berlaku untuk properti yang sesuai yang ditentukan dalam <code>transition-property</code>.</p> 
+       <p> <code>transition-duration</code> hanya mendukung kata kunci <code>initial</code> (<code>0s</code>). Anda tidak dapat menggunakan kata kunci ini dalam daftar yang dipisahkan.</p> 
+       <p><strong>Examples</strong></p> 
+       <pre><code class="lang-css">transition-duration: 2s;
+transition-duration: 800ms;
+transition-duration: 3s, 1500ms, 1.75s;
+transition-duration: initial;
+</code></pre> 
+       <p>Dalam contoh berikut, durasi asli untuk skala adalah 1s, tetapi <code>all</code> menimpanya menjadi 2s.</p> 
+       <pre><code class="lang-css">transition-property: scale, all, rotate;
+transition-duration: 1s, 2s, 3s;
+</code></pre> 
+       <h3><code>transition-timing-function</code></h3> 
+       <p>Anda dapat menyediakan fungsi easing, kata kunci, atau daftar lengkap fungsi easing.</p> 
+       <p>Jika Anda menyediakan beberapa nilai, setiap nilai berlaku untuk properti yang sesuai yang ditentukan dalam <code>transition-property</code>.</p> 
+       <p> <code>transition-timing-function</code> hanya mendukung kata kunci <code>initial</code>. Ini sama dengan <code>ease</code>. Anda tidak dapat menggunakan kata kunci ini dalam daftar yang dipisahkan.</p> 
+       <p>UI Toolkit mendukung fungsi easing berikut:</p> 
+       <ul> 
+        <li><code>ease</code></li> 
+        <li><code>ease-in</code></li> 
+        <li><code>ease-out</code></li> 
+        <li><code>ease-in-out</code></li> 
+        <li><code>linear</code></li> 
+        <li><code>ease-in-sine</code></li> 
+        <li><code>ease-out-sine</code></li> 
+        <li><code>ease-in-out-sine</code></li> 
+        <li><code>ease-in-cubic</code></li> 
+        <li><code>ease-out-cubic</code></li> 
+        <li><code>ease-in-out-cubic</code></li> 
+        <li><code>ease-in-circ</code></li> 
+        <li><code>ease-out-circ</code></li> 
+        <li><code>ease-in-out-circ</code></li> 
+        <li><code>ease-in-elastic</code></li> 
+        <li><code>ease-out-elastic</code></li> 
+        <li><code>ease-in-out-elastic</code></li> 
+        <li><code>ease-in-back</code></li> 
+        <li><code>ease-out-back</code></li> 
+        <li><code>ease-in-out-back</code></li> 
+        <li><code>ease-in-bounce</code></li> 
+        <li><code>ease-out-bounce</code></li> 
+        <li><code>ease-in-out-bounce</code></li> 
+       </ul> 
+       <p>Untuk informasi rinci tentang setiap fungsi, lihat <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function">Dokumentasi MDN untuk atribut CSS <code>transition-timing-function</code> CSS attribute</a> atau <a href="https://easings.net/">easings.net</a>.</p> 
+       <p><strong>Examples</strong></p> 
+       <pre><code class="lang-css">transition-timing-function: linear;
+transition-timing-function: ease-in, ease-out-circ, ease-in-out-cubic;
+transition-timing-function: initial;
+</code></pre> 
+       <h3><code>transition-delay</code></h3> 
+       <p>Anda dapat menyediakan nomor dengan unit, kata kunci, atau daftar nomor dan unit yang dipisahkan.</p> 
+       <p>Jika Anda menyediakan beberapa nilai, setiap nilai berlaku untuk properti yang sesuai yang ditentukan dalam <code>transition-property</code>.</p> 
+       <p> <code>transition-delay</code> hanya mendukung kata kunci <code>initial</code> (<code>0s</code>). Anda tidak dapat menggunakan kata kunci ini dalam daftar yang dipisahkan.</p> 
+       <p><strong>Examples</strong></p> 
+       <pre><code class="lang-css">transition-delay: 0s;
+transition-delay: 300ms;
+transition-delay: 2s, 650ms, 2.75s;
+transition-delay: initial;
+</code></pre> 
+       <h3><code>transition</code></h3> 
+       <p>Anda dapat menyediakan satu transisi, kata kunci, atau daftar transisi yang dipisahkan. Anda memisahkan properti dalam transisi oleh ruang dengan urutan berikut:</p> 
+       <ol> 
+        <li><code>transition-property</code></li> 
+        <li><code>transition-delay</code></li> 
+        <li><code>transition-duration</code></li> 
+        <li><code>transition-timing-function</code></li> 
+       </ol> 
+       <p> <code>transition</code> hanya mendukung kata kunci <code>initial</code>, yang mewakili nilai awal dari setiap properti transisi:</p> 
+       <ul> 
+        <li> <code>transition-delay</code>: <code>0s</code> </li> 
+        <li> <code>transition-duration</code>: <code>0s</code> </li> 
+        <li> <code>transition-property</code>: <code>initial</code> </li> 
+        <li> <code>transition-timing-function</code>: <code>ease</code> </li> 
+       </ul> 
+       <p><strong>Examples</strong></p> 
+       <pre><code class="lang-css">/*One transition*/
+transition: width 2s ease-out;
+
+/*Two transitions*/
+transition: margin-right 4s, color 1s;
+</code></pre> 
+       <h2>C# properti</h2> 
+       <p>Anda dapat mengatur sifat transisi untuk elemen visual dalam skrip C #.</p> 
+       <h3><code>IStyle.transitionProperty</code></h3> 
+       <p>Properti <a href="../ScriptReference/UIElements.IStyle-transitionProperty.html"><code>IStyle.transitionProperty</code></a> menetapkan sifat AS untuk transisi yang berlaku.</p> 
+       <p>Properti <code>transitionProperty</code> adalah tipe <code>StyleList&lt;StylePropertyName&gt;</code>. <a href="../ScriptReference/UIElements.StylePropertyName.html"><code>StylePropertyName</code></a> adalah struct yang dapat Anda <a href="../ScriptReference/UIElements.StylePropertyName-ctor.html">construct</a> dari string. <a href="../ScriptReference/UIElements.StyleList_1.html"><code>StyleList</code></a> adalah struct yang dapat Anda <a href="../ScriptReference/UIElements.StyleList_1-ctor.html">construct</a> dari daftar <code>StylePropertyName</code>s.</p> 
+       <p><strong>Example</strong></p> 
+       <pre><code class="lang-cs">//Create a list that contains the rotate property, and use it to set transitionProperty.
+List&lt;StylePropertyName&gt; properties = new List&lt;StylePropertyName&gt;();
+properties.Add(new StylePropertyName("rotate"));
+//Given a VisualElement named "element"...
+element.style.transitionProperty = new StyleList&lt;StylePropertyName&gt;(properties);
+</code></pre> 
+       <p>Anda dapat menggunakan konversi implicit untuk menyederhanakan kode di atas sebagai berikut:</p> 
+       <pre><code class="lang-cs">//Given a VisualElement named "element"...
+element.style.transitionProperty = new List&lt;StylePropertyName&gt; { "rotate" };
+</code></pre> 
+       <h3><code>IStyle.transitionDuration</code></h3> 
+       <p>Properti <a href="../ScriptReference/UIElements.IStyle-transitionDuration.html"><code>IStyle.transitionDuration</code></a> menetapkan durasi transisi pada elemen visual.</p> 
+       <p>Properti <code>transitionDuration</code> adalah tipe <code>StyleList&lt;TimeValue&gt;</code>. <a href="../ScriptReference/UIElements.TimeValue.html"><code>TimeValue</code></a> adalah struct yang dapat Anda <a href="../ScriptReference/UIElements.TimeValue-ctor.html">construct</a> dari angka dan a <a href="../ScriptReference/UIElements.TimeUnit.html"><code>TimeUnit</code></a> enum. <a href="../ScriptReference/UIElements.StyleList_1.html"><code>StyleList</code></a> adalah struct yang dapat Anda <a href="../ScriptReference/UIElements.StyleList_1-ctor.html">construct</a> dari daftar <code>TimeValue</code>s.</p> 
+       <p><strong>Example</strong></p> 
+       <pre><code class="lang-cs">//Create a list that contains durations 2s and 500ms and use it to set transitionDuration.
+List&lt;TimeValue&gt; durations = new List&lt;TimeValue&gt;();
+durations.Add(new TimeValue(2f, TimeUnit.Second));
+durations.Add(new TimeValue(500f, TimeUnit.Millisecond));
+//Given a VisualElement named "element"...
+element.style.transitionDuration = new StyleList&lt;TimeValue&gt;(durations);
+</code></pre> 
+       <p>Anda dapat menggunakan konversi implicit untuk menyederhanakan kode di atas sebagai berikut:</p> 
+       <pre><code class="lang-cs">//Given a VisualElement named "element"...
+element.style.transitionDuration = new List&lt;TimeValue&gt; { 2, new (500, TimeUnit.Millisecond) };
+</code></pre> 
+       <h3><code>IStyle.transitionTimingFunction</code></h3> 
+       <p>Properti <a href="../ScriptReference/UIElements.IStyle-transitionTimingFunction.html"><code>IStyle.transitionTimingFunction</code></a> menetapkan fungsi easing untuk transisi pada elemen visual.</p> 
+       <p>Properti <code>transitionTimingFunction</code> adalah tipe <code>StyleList&lt;EasingFunction&gt;</code>. <a href="../ScriptReference/UIElements.EasingFunction.html"><code>EasingFunction</code></a> adalah bangunan yang dapat Anda <a href="../ScriptReference/UIElements.EasingFunction-ctor.html">construct</a> dari <a href="../ScriptReference/UIElements.EasingMode.html"><code>EasingMode</code></a> enum.</p> 
+       <p><strong>Example</strong></p> 
+       <pre><code class="lang-cs">//Create a list that contains the Linear easing function, and use it to set transitionTimingFunction.
+List&lt;EasingFunction&gt; easingFunctions = new List&lt;EasingFunction&gt;();
+easingFunctions.Add(new EasingFunction(EasingMode.Linear));
+//Given a VisualElement named "element"...
+element.style.transitionTimingFunction = new StyleList&lt;EasingFunction&gt;(easingFunctions);
+</code></pre> 
+       <p>Anda dapat menggunakan konversi implicit untuk menyederhanakan kode di atas sebagai berikut:</p> 
+       <pre><code class="lang-cs">//Given a VisualElement named "element"...
+element.style.transitionTimingFunction = new List&lt;EasingFunction&gt; { EasingMode.Linear };
+</code></pre> 
+       <h3><code>IStyle.transitionDelay</code></h3> 
+       <p>Properti <a href="../ScriptReference/UIElements.IStyle-transitionDelay.html"><code>IStyle.transitionDelay</code></a> menetapkan penundaan untuk transisi pada elemen visual.</p> 
+       <p>Properti <code>transitionDelay</code> adalah tipe <code>StyleList&lt;TimeValue&gt;</code>. <a href="../ScriptReference/UIElements.TimeValue.html"><code>TimeValue</code></a> adalah struct yang dapat Anda <a href="../ScriptReference/UIElements.TimeValue-ctor.html">construct</a> dari angka dan a <a href="../ScriptReference/UIElements.TimeUnit.html"><code>TimeUnit</code></a> enum. <a href="../ScriptReference/UIElements.StyleList_1.html"><code>StyleList</code></a> adalah struct yang dapat Anda <a href="../ScriptReference/UIElements.StyleList_1-ctor.html">construct</a> dari daftar <code>TimeValue</code>s.</p> 
+       <p><strong>Example</strong></p> 
+       <pre><code class="lang-cs">//Create a list that contains delays 0.5s and 200ms, and use it to set transitionDelay.
+List&lt;TimeValue&gt; delays = new List&lt;TimeValue&gt;();
+delays.Add(new TimeValue(0.5f, TimeUnit.Second));
+delays.Add(new TimeValue(200f, TimeUnit.Millisecond));
+//Given a VisualElement named "element"...
+element.style.transitionDuration = new StyleList&lt;TimeValue&gt;(delays);
+</code></pre> 
+       <p>Anda dapat menggunakan konversi implicit untuk menyederhanakan kode di atas sebagai berikut:</p> 
+       <pre><code class="lang-cs">//Given a VisualElement named "element"...
+element.style.transitionDelay = new List&lt;TimeValue&gt; { 0.5f, new(200, TimeUnit.Millisecond) };
+</code></pre> 
+       <h2>More examples</h2> 
+       <p>Bagian ini mencakup contoh yang menerapkan transisi pada beberapa properti.</p> 
+       <p> <strong>Example 1</strong>: Contoh ini berlaku transisi pada sifat <code>scale</code> dan <code>transform-origin</code>:</p> 
+       <ul> 
+        <li>Transisi pertama adalah properti <code>scale</code>. Memiliki durasi <code>4s</code>, penundaan <code>0s</code>, dan fungsi easing <code>ease-in-sine</code>.</li> 
+        <li>Transisi kedua adalah properti <code>transform-origin</code>. Memiliki durasi <code>3s</code>, penundaan <code>600ms</code>, dan fungsi easing <code>ease-out-elastic</code>.</li> 
+       </ul> 
+       <pre><code class="lang-css">.classA {
+    transition-property: scale, transform-origin;
+    transition-duration: 4s, 3s;
+    transition-delay: 0s, 600ms;
+    transition-timing-function: ease-in-sine, ease-out-elastic;
+}
+</code></pre> 
+       <p> <strong>Example 2</strong>: Dalam contoh ini, transisi selanjutnya menimpa transisi sebelumnya, termasuk transisi dengan kata kunci <code>all</code>:</p> 
+       <ul> 
+        <li>Transisi pertama adalah pada semua properti. Ini berlaku durasi 500 mili detik, penundaan nol detik, dan fungsi easing <code>linear</code>.</li> 
+        <li>Transisi kedua adalah properti <code>translate</code>. Ini menimpa transisi dengan durasi <code>1s</code>, penundaan <code>1s</code>, dan fungsi easing <code>ease-in</code>. Semua sifat lain masih memiliki durasi <code>500ms</code>, penundaan <code>0s</code>, dan fungsi easing <code>linear</code>.</li> 
+       </ul> 
+       <pre><code class="lang-css">.classB {
+    transition-property: all, translate;
+    transition-duration: 500ms, 1s;
+    transition-delay: 0s, 1s;
+    transition-timing-function: linear, ease-in;
+}
+</code></pre> 
+       <p> <strong>Example 3</strong>: </p> 
+       <p>Contoh ini menunjukkan apa yang terjadi ketika daftar nilai properti adalah panjang yang berbeda. Jika daftar nilai properti lebih pendek daripada <code>transition-property</code>, Unity mengulang nilainya untuk membuat mereka cocok. Demikian pula, jika ada daftar nilai properti lebih lama yaitu untuk <code>transition-property</code>, Unity truncates itu.</p> 
+       <pre><code class="lang-css">.classC {
+    transition-property: scale, rotate, translate;
+    transition-duration: 1s, 2s;
+    transition-delay: 1s, 2s, 3s, 4s, 5s, 6s, 7s;
+}
+</code></pre> 
+       <p>Tabel berikut menunjukkan hasil akhir untuk contoh di atas:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Duration</strong></th> 
+          <th style="text-align:left;"><strong>Delay</strong></th> 
+          <th style="text-align:left;"><strong>Easing function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>scale</code></td> 
+          <td style="text-align:left;"><code>1s</code></td> 
+          <td style="text-align:left;"><code>1s</code></td> 
+          <td style="text-align:left;"><code>ease</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>rotate</code></td> 
+          <td style="text-align:left;"><code>2s</code></td> 
+          <td style="text-align:left;"><code>2s</code></td> 
+          <td style="text-align:left;"><code>ease</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>translate</code></td> 
+          <td style="text-align:left;"><code>1s</code></td> 
+          <td style="text-align:left;"><code>4s</code></td> 
+          <td style="text-align:left;"><code>ease</code></td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p> <strong>Important</strong>: <code>transition-property</code>, <code>transition-duration</code>, <code>transition-delay</code>, dan <code>transition-timing-function</code> adalah sifat USS yang terpisah. Jika Anda meninggalkan salah satu dari mereka yang tidak terdefinisi, mungkin bahwa mereka didefinisikan di tempat lain, seperti dalam aturan AS atau inline lain pada elemen UXML.</p> 
+       <h2>Sumber daya tambahan</h2> 
+       <ul> 
+        <li> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">Menggunakan transisi CSS</a>(Mozilla pengembang dokumentasi)</li> 
+        <li> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition">CSS transition</a> (Mozilla pengembang dokumentasi)</li> 
+        <li> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property">CSS3</a> (Mozilla pengembang dokumentasi)</li> 
+        <li> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration">Properti transisi CSS</a> (Mozilla pengembang dokumentasi)</li> 
+        <li> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function">Properti transisi CSS</a> (Mozilla pengembang dokumentasi)</li> 
+        <li> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay">Properti transisi CSS</a> (Mozilla pengembang dokumentasi)</li> 
+       </ul> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UIE-Transform.html"></a></span> 
+         <div class="tip">
+           USS mengubah 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UIE-USS-CustomProperties.html"></a></span> 
+         <div class="tip">
+           Properti kustom ASS (variabel) 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy"> 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

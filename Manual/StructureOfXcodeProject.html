@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Struktur Proyek Xcode Unity</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="platforms" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="PlatformSpecific.html">Pengembangan platform</a></li> 
+         <li><a href="iphone.html">iOS</a></li> 
+         <li><a href="iphone-GettingStarted.html">Memulai perkembangan iOS</a></li> 
+         <li>Struktur Proyek Xcode Unity</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="iphone-BuildProcess.html"></a></span> 
+          <div class="tip">
+            Dalam proses pembangunan iOS 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="BuildSettingsiOS.html"></a></span> 
+          <div class="tip">
+            pengaturan build iOS 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Struktur Proyek Xcode Unity</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Ketika Anda membangun Proyek Unity untuk platform iOS, Unity membuat folder yang berisi proyek Xcode. Anda perlu proyek ini untuk menyusun dan menandatangani aplikasi Anda sebelum Anda menyebarkannya di perangkat. Anda juga perlu menggunakannya untuk mempersiapkan dan menggabungkan permainan Anda untuk distribusi di App Store. Struktur proyek Xcode telah berubah sebagai Unity 2019.3 untuk mendukung integrasi Unity ke aplikasi iOS asli melalui <a href="UnityasaLibrary-iOS.html">Unity sebagai Perpustakaan</a>.</p> 
+       <p>Sebelum Anda membangun Proyek untuk iOS, pastikan Anda mengatur <strong>Bundle Identifier</strong> di iOS <a href="PlayerSettingsiOS-Other"><strong>Player Settings</strong></a>** <strong>(menu: </strong>Edit &gt; Pengaturan Proyek &gt; Pengaturan Pemain<strong>). You can also choose whether your app targets the simulator or an actual device. To do this, change the </strong>SDK Login</p> 
+       <h2>Target Proyek</h2> 
+       <p>Setiap proyek Unity iOS Xcode yang dihasilkan memiliki struktur dan target berikut:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Unity-iPhone-Project-Folder.png" alt=""> 
+       </figure> 
+       <ul> 
+        <li> <strong>UnityFramework</strong>: Bagian perpustakaan dalam target <strong>UnityFramework</strong>. Ini termasuk folder <em>Classes</em>, <em>UnityFramework</em>, dan <em>Libraries</em>, serta kerangka tergantung, andXcode menggunakannya untuk membangun file <em>UnityFramework.framework</em>.</li> 
+        <li> <strong>Unity-iPhone</strong>: Bagian peluncur tipis dalam target <strong>Unity-iPhone</strong>. Ini termasuk folder <em>MainApp</em> dan data representasi aplikasi seperti Layar Peluncuran, file <em>.xib</em>, ikon, data, dan file <em>/Info.plist</em>, dan menjalankan perpustakaan. Target <strong>Unity-iPhone</strong> memiliki ketergantungan tunggal pada target <strong>UnityFramework</strong>.</li> 
+       </ul> 
+       <h2>Catalog</h2> 
+       <p>Folder <em>Classes</em> mengandung kode yang mengintegrasikan Unity Runtime dan Objective-C. Unity menyimpan titik masuk aplikasi dalam file <em>main.mm</em> dan <em>UnityAppController.mm/h</em> di dalam folder ini. Anda dapat membuat AppDelegate Anda sendiri berasal dari UnityAppController, atau, jika ada <span class="tooltip"><strong>plug-ins</strong><span class="tooltiptext">Satu set kode yang dibuat di luar Unity yang menciptakan fungsi dalam Unity. Ada dua jenis plug-ins yang dapat Anda gunakan di Unity: Managed plug-ins (diproduksi. Rakitan NET dibuat dengan alat-alat seperti Studio Visual) dan plug-ins asli (pustaka kode asli yang spesifik platform). <a class="tooltipMoreInfoLink" href="Plugins.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Plug-in">Glossary</a></span></span></span> Anda termasuk <em>AppController.h</em>, Anda dapat menyertakan <em>WordPress.org</em> bukan. Jika folder <em>Plugins/iOS</em> Anda termasuk _ AppController.mm / h_, Anda dapat menggabungkan dan mengubah nama mereka.</p> 
+       <p>File <em>Profil Internal.h</em> juga mendefinisikan kondisi kompiler untuk mengaktifkan internal <span class="tooltip"><strong>Profiler</strong><span class="tooltiptext">Jendela yang membantu Anda untuk mengoptimalkan permainan Anda. Ini menunjukkan berapa banyak waktu yang dihabiskan di berbagai bidang permainan Anda. Sebagai contoh, dapat melaporkan persentase waktu yang dihabiskan <strong>rendering</strong>, aimating, atau dalam logika permainan Anda. <a class="tooltipMoreInfoLink" href="Profiler.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profiler">Glossary</a></span></span></span>. Kode di folder ini tidak berubah sering, dan Anda dapat menempatkan kelas kustom di sini. Jika Anda memilih mode <strong>Append</strong>, Xcode melestarikan perubahan pada folder ini antara build. Namun, fungsi ini tidak mendukung beberapa target build dan membutuhkan struktur tetap dari folder <em>Libraries</em>.</p> 
+       <p>Satuan internal Profiler cepat dan tidak mengganggu, dan memberi makan informasi dasar tentang:</p> 
+       <ul> 
+        <li>Subsistem mana yang mengambil sebagian besar waktu bingkai.</li> 
+        <li>Ukuran .NET heap.</li> 
+        <li>Perhitungan dan durasi acara GC.</li> 
+       </ul> 
+       <p>Untuk informasi lebih lanjut, lihat dokumentasi tentang <a href="iphone-InternalProfiler.html">Profiler built-in</a>.</p> 
+       <h2>Data folder</h2> 
+       <p>Folder ini berisi aset serialisasi aplikasi Anda, serta rakitan .NET (.dll atau file .dat) baik kode penuh atau metadata, tergantung pada pengaturan pengupasan kode. File <em>mesin.config</em> mengatur berbagai. Layanan NET seperti keamanan dan WebRequest. Xcode menyegarkan isi folder ini dengan setiap build. Anda tidak boleh melakukan perubahan.</p> 
+       <p>Secara default, <em>Data</em> folder <strong>Target Membership</strong> adalah target <strong>Unity-iPhone</strong>, dan Pencarian Unity Runtime untuk di <code>mainBundle</code>. Untuk mengubah bundel default di mana tampilan Unity Runtime untuk folder <em>Data</em>, hubungi <code>setDataBundleId: "com.my.product"</code> pada instance UnityFramework sebelum Anda memanggil salah satu fungsi lari. Misalnya, jika Anda ingin memiliki <em>Data</em> bersama dengan panggilan UnityFramework, gunakan <code>setDataBundleId: "com.unity3d.framework"</code> dan set <strong>Target Membership</strong> ke <strong>UnityFramework</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Xcode-Data-Folder.png" alt=""> 
+       </figure> 
+       <p>Sitemap Sumber Daya On-Demand hanya didukung ketika folder <strong>Note:</strong> adalah bagian dari target Aplikasi dan bukan bagian dari target UnityFramework.<em>Data</em> folder is a part of the Application target and not a part of the UnityFramework target. </p> 
+       <h2>folder Perpustakaan</h2> 
+       <p>Folder <em>Libraries</em> mengandung <em>libil2cpp.a</em> untuk <span class="tooltip"><strong>IL2CPP</strong><span class="tooltiptext">Back-end scripting bersatu yang dapat Anda gunakan sebagai alternatif untuk Mono ketika proyek bangunan untuk beberapa platform. <a class="tooltipMoreInfoLink" href="IL2CPP.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#IL2CPP">Glossary</a></span></span></span>. File <em>libiPhone-lib.a</em> adalah perpustakaan statis Unity Runtime, dan <em>RegisterMonoModules.cpp</em> mengikat kode asli Unity dengan .NET. Xcode dan menyegarkan isi folder ini dengan setiap build. Anda tidak boleh melakukan perubahan.</p> 
+       <h2>folder kustom</h2> 
+       <p>Anda dapat menempatkan file kustom Anda di sini.</p> 
+       <h2>File grafis</h2> 
+       <p>Ikon dan layar percikan (.PNG file) terletak di katalog aset di folder <em>USB-Kabel</em>. Unity secara otomatis mengelola file-file ini. Peluncuran Layar, Pembuat Antarmuka XML mereka (file xib), dan file Storyboard disimpan di folder akar Proyek. Untuk mengatur mereka di Unity menggunakan jendela <strong>Player</strong> <strong>Settings</strong> (menu: <strong>Edit &gt; Project Settings &gt; Player Settings</strong>). Ketika Anda membuat gambar peluncuran kustom, pastikan mereka mematuhi <a href="https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/launch-screen/">Panduan Antarmuka Manusia</a> Apple.</p> 
+       <h2>PDF file</h2> 
+       <p>Anda dapat mengelola file <em>/Info.plist</em> dalam target Unity-iPhone (dapat diakses melalui <code>mainBundle</code>) dari Unity's <strong>Player Settings</strong> (menu: <strong>Edit &gt; Project Settings &gt; Player Settings</strong>, kemudian pilih bagian <strong>Other</strong> dan gulir ke bagian <strong>Identification</strong>; untuk rincian lebih lanjut, lihat dokumentasi pada ). Ketika Unity membangun Pemain, memperbarui file ini daripada menggantinya. Jangan membuat perubahan untuk itu kecuali Anda harus.</p> 
+       <p>File <em>WordPress.org</em> (dapat diakses melalui <code>bundleWithIdentifier:@"com.unity3d.framework"</code>) adalah bagian dari UnityFramework. Anda dapat menyimpan nilai di sini bukan file <em>/Info.plist</em> utama untuk memastikan bahwa Anda masih bisa mendapatkan nilai-nilai ini jika UnityFramework dipindahkan ke aplikasi lain.</p> 
+       <h2>File lain</h2> 
+       <p>Ini termasuk file proyek Xcode (file<em>.xcodeproj</em>), dan tautan framework yang hanya muncul di <strong>Project Navigator</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Xcode-Other-Files.png" alt=""> 
+       </figure> 
+       <h4>Membangun proyek Xcode dengan xcodebuild</h4> 
+       <p>Ketika Anda menggunakan argumen baris perintah untuk menentukan pengaturan build, ini mempengaruhi semua target proyek Xcode. Untuk mencegah ini, beberapa pengaturan build memiliki versi yang cukup besar yang dapat Anda gunakan untuk menentukan yang menargetkan pengaturan build Anda mempengaruhi. Ini diterapkan melalui Pengaturan yang ditentukan pengguna (*<em>APP suffix digunakan untuk target aplikasi dan *</em>FRAMEWORK suffix untuk target framework).</p> 
+       <p>Ketika membangun dengan xcodebuild, gunakan versi yang cukup untuk:</p> 
+       <p>Catalog Login PRODUK_URL_APP</p> 
+       <p>PROVISIONING_PROFILE Login PROVISIONING_PROFILE_APP</p> 
+       <p>PROVISIONING_PROFILE_SPECIFIER -&gt; PROVISIONING_PROFILE_SPECIFIER_APP</p> 
+       <p>Login Login LAIN_LDFLAGS_FRAMEWORK</p> 
+       <p>Berdasarkan pipa build kustom Anda, Anda dapat memperluas daftar untuk menutupi pengaturan lain.</p> 
+       <h4>Modifikasi proyek Xcode</h4> 
+       <p>Untuk memodifikasi proyek Xcode yang dihasilkan, gunakan <a href="../ScriptReference/iOS.Xcode.PBXProject.html">Xcode.PBXProject</a>.</p> 
+       <h2>Target Proyek</h2> 
+       <p>Sebagai Unity 2019.3, <code>PBXProject.GetUnityTargetName</code> dan <code>pbxProject-&gt;TargetGuidByName("Unity-iPhone")</code> adalah usang. Sebagai gantinya, Anda dapat menggunakan <code>pbxProject-&gt;GetUnityFrameworkTargetGuid()</code>, atau <code>pbxProject-&gt;GetUnityMainTargetGuid()</code>:</p> 
+       <pre><code>// Obsolete
+string targetGuid = proj.TargetGuidByName("Unity-iPhone");
+string targetGuid = proj.TargetGuidByName(PBXProject.GetUnityTargetName());
+
+// Instead call one of these
+string targetGuid = proj.GetUnityFrameworkTargetGuid(); 
+string targetGuid = proj.GetUnityMainTargetGuid();
+</code></pre> 
+       <p>Jika Anda perlu mendukung jalur kode lama dan baru dalam paket Anda atau custom build postprocessor, ikuti langkah-langkah ini:</p> 
+       <ol> 
+        <li>Rely pada kemampuan impor plugin setiap kali memungkinkan (misalnya, untuk menentukan framework tambahan).</li> 
+        <li>Gunakan refleksi:</li> 
+       </ol> 
+       <pre><code>string mainTargetGuid;
+string unityFrameworkTargetGuid;
+        
+var unityMainTargetGuidMethod = proj.GetType().GetMethod("GetUnityMainTargetGuid");
+var unityFrameworkTargetGuidMethod = proj.GetType().GetMethod("GetUnityFrameworkTargetGuid");
+                
+if (unityMainTargetGuidMethod != null &amp;&amp; unityFrameworkTargetGuidMethod != null)
+{
+    mainTargetGuid = (string)unityMainTargetGuidMethod.Invoke(proj, null);
+    unityFrameworkTargetGuid = (string)unityFrameworkTargetGuidMethod.Invoke(proj, null);
+}
+else
+{
+    mainTargetGuid = proj.TargetGuidByName ("Unity-iPhone");
+    unityFrameworkTargetGuid = mainTargetGuid;
+}
+</code></pre> 
+       <ul> 
+        <li> <span class="page-history">Unity sebagai Perpustakaan untuk iOS ditambahkan di .</span><span class="search-words">NewIn20193</span> </li> 
+       </ul> 
+       <!-- area:platforms --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="iphone-BuildProcess.html"></a></span> 
+         <div class="tip">
+           Dalam proses pembangunan iOS 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="BuildSettingsiOS.html"></a></span> 
+         <div class="tip">
+           pengaturan build iOS 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

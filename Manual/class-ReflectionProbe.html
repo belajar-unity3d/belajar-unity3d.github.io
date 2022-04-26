@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Probe Reflection</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="LightingOverview.html">Lighting</a></li> 
+         <li><a href="ReflectionProbes.html">Refleksi Probe</a></li> 
+         <li>Refleksi Probe</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="RefProbePerformance.html"></a></span> 
+          <div class="tip">
+            Refleksi kinerja Probe 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="lighting-precomputed-data.html"></a></span> 
+          <div class="tip">
+            Data pencahayaan yang telah ditentukan 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Refleksi Probe</h1> 
+       <!--BeginSwitchLink--> 
+       <a href="../ScriptReference/ReflectionProbe.html" title="Go to ReflectionProbe page in the Scripting Reference" class="switch-link gray-btn sbtn left">Switch to Scripting</a> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Sebuah <strong>Reflection Probe</strong> agak seperti <span class="tooltip"><strong>camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Camera">Glossary</a></span></span></span> yang menangkap pandangan bulat dari lingkungan di semua arah. Gambar yang ditangkap kemudian disimpan sebagai <a href="class-Cubemap.html">Cubemap</a> yang dapat digunakan oleh benda dengan bahan reflektif. Beberapa probe refleksi dapat digunakan dalam <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> dan objek yang diberikan dapat diatur untuk menggunakan cubemap yang diproduksi oleh probe terdekat. Hasilnya adalah bahwa refleksi pada objek dapat berubah secara meyakinkan sesuai dengan lingkungannya.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ReflectionProbeScene.jpg" alt="A Reflection Probe showing reflections from a nearby object"> 
+        <figcaption>
+          Probe Reflection menunjukkan refleksi dari objek terdekat 
+        </figcaption> 
+       </figure> 
+       <h2>Properties</h2> 
+       <p>Unity menampilkan sifat yang berbeda dalam Probe Reflection <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Inspector">Glossary</a></span></span></span> tergantung pada <span class="tooltip"><strong>render pipeline</strong><span class="tooltiptext">Rangkaian operasi yang mengambil isi dari Adegan, dan menampilkannya di layar. Unity memungkinkan Anda memilih dari pipa render yang dibangun sebelumnya, atau menulis sendiri. <a href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span> yang digunakan Proyek Anda.</p> 
+       <ul> 
+        <li>Jika Proyek Anda menggunakan <a href="universal-render-pipeline.html">Pipa Render Universal (URP)</a>, lihat .</li> 
+        <li>Jika Proyek Anda menggunakan <a href="high-definition-render-pipeline.html">Definisi Tinggi Render Pipeline (HDRP)</a>, lihat .</li> 
+        <li>Jika Proyek Anda menggunakan <a href="built-in-render-pipeline.html">Pipa Render Built-in</a>, Unity menampilkan sifat berikut:</li> 
+       </ul> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong><em>Property:</em></strong></th> 
+          <th style="text-align:left;"><strong><em>Function:</em></strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Type</strong></td> 
+          <td style="text-align:left;">Pilih apakah probe adalah untuk pengaturan <strong>Baked</strong>, <strong>Custom</strong>, atau <strong>Realtime</strong>. Jika Anda memilih <strong>Baked</strong>, Probe Reflection tidak menangkap <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> pada runtime yang memiliki Probe Refleksi mereka Bendera Statis dinonaktifkan. Jika Anda ingin menangkap GameObject dinamis dalam Probe Reflection panggang, pilih <strong>Custom</strong> dan mengaktifkan <strong>Dynamic Objects</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Dynamic Objects</strong></td> 
+          <td style="text-align:left;">(<strong>Custom</strong> jenis hanya) Objek-objek kekuatan tidak ditandai sebagai <strong>Static</strong> untuk dipanggang pada refleksi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Cubemap</strong><span class="tooltiptext">Koleksi enam tekstur persegi yang dapat mewakili refleksi di lingkungan atau skybox yang digambar di balik geometri Anda. Enam kotak membentuk wajah kubus imajiner yang mengelilingi objek; setiap wajah mewakili pandangan di sepanjang arah sumbu dunia (hingga, kiri, kanan, ke depan dan belakang). <a class="tooltipMoreInfoLink" href="class-Cubemap.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Cubemap">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">(<strong>Custom</strong> jenis hanya) Mengatur <a href="class-Cubemap.html">cubemap</a> kustom untuk probe.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Refresh Mode</strong></td> 
+          <td style="text-align:left;">(<strong>Realtime</strong> jenis hanya) Pilih jika dan bagaimana probe akan menyegarkan pada runtime. Opsi <em>Di Awake</em> membuat probe hanya sekali ketika pertama kali menjadi aktif. <em>Setiap Bingkai</em> membuat probe setiap pembaruan bingkai, opsional menggunakan <strong>Time Slicing</strong> (lihat di bawah). Opsi <strong>Via Scripting</strong> menyegarkan probe dari perintah skrip pengguna daripada pembaruan otomatis.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Time Slicing</strong></td> 
+          <td style="text-align:left;">(<strong>Realtime</strong> jenis hanya) Bagaimana cara mendistribusikan pembaruannya dari waktu ke waktu? Pilihan adalah <strong>All Faces At Once</strong> (spreads update lebih dari sembilan bingkai), <strong>Individual Faces</strong> (perbarui lebih dari empat bingkai) dan <strong>No Time Slicing</strong> (perbarui terjadi sepenuhnya dalam satu bingkai). Lihat di bawah ini untuk rincian lebih lanjut.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Runtime settings</strong></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Importance</strong></td> 
+          <td style="text-align:left;">Tingkat "imporan" dari probe ini dibandingkan dengan tetangganya. Nilai yang lebih tinggi menunjukkan penting yang lebih besar; probe yang lebih penting akan memiliki prioritas lebih sedikit penting dalam kasus di mana objek berada dalam kisaran dua atau lebih probe. Pengaturan ini juga mempengaruhi <strong>Blending</strong>, menjelaskan <a href="UsingReflectionProbes.html">here</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Intensity</strong></td> 
+          <td style="text-align:left;">Pengubah intensitas yang diterapkan pada tekstur probe ini pada <span class="tooltip"><strong>shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Box Projection</strong></td> 
+          <td style="text-align:left;">Periksa kotak ini untuk mengaktifkan proyeksi untuk pemetaan UV refleksi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Box Size</strong></td> 
+          <td style="text-align:left;">Ukuran kotak di mana refleksi akan diterapkan pada GameObject. Nilai tidak dipengaruhi oleh Transformasi GameObject. Juga digunakan oleh <strong>Box Projection</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Box Offset</strong></td> 
+          <td style="text-align:left;">Pusat kotak di mana refleksi akan diterapkan pada GameObject. Nilai relatif terhadap posisi GameObject. Juga digunakan oleh <strong>Box Projection</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Cubemap capture settings</strong></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Resolution</strong></td> 
+          <td style="text-align:left;">Resolusi gambar refleksi yang ditangkap.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>HDR</strong><span class="tooltiptext">kisaran dinamis tinggi<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#HDR">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Harus Dinamis Tinggi Rentang rendering diaktifkan untuk cubemap? Ini juga menentukan apakah data probe disimpan dalam format <a href="http://www.openexr.com/">OpenEXR</a> atau PNG.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Shadow Distance</strong></td> 
+          <td style="text-align:left;">Jarak di mana bayangan ditarik ketika rendering probe.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Clear Flags</strong></td> 
+          <td style="text-align:left;">Opsi untuk menentukan bagaimana area latar belakang kosong cubemap akan diisi. Pilihan <span class="tooltip"><strong>Skybox</strong><span class="tooltiptext">Jenis khusus Bahan yang digunakan untuk mewakili langit. Biasanya enam sisi. <a class="tooltipMoreInfoLink" href="class-Skybox.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Skybox">Glossary</a></span></span></span> dan <strong>Solid Color</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Background</strong></td> 
+          <td style="text-align:left;">Warna latar belakang dimana kubus refleksi dibersihkan sebelum rendering.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Culling Mask</strong><span class="tooltiptext">Memungkinkan Anda untuk memasukkan atau membatasi objek untuk diberikan oleh Kamera, dengan Layer.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#CullingMask">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Memungkinkan objek pada lapisan tertentu yang disertakan atau dikecualikan dalam refleksi. Lihat bagian tentang masker budidaya kamera di halaman <span class="tooltip"><a class="tooltipMoreInfoLink" href="Layers.html">Layers</a><span class="tooltiptext">Lapisan dalam Unity dapat digunakan untuk memilih kelompok GameObjects secara selektif atau keluar dari proses atau perhitungan tertentu. Ini termasuk rendering kamera, pencahayaan, tabrakan fisika, atau perhitungan kustom dalam kode Anda sendiri. <a href="Layers.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Layer">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Use Occlusion Culling</strong></td> 
+          <td style="text-align:left;">Harus <span class="tooltip"><strong>occlusion culling</strong><span class="tooltiptext">A yang menonaktifkan rendering objek ketika mereka tidak saat ini dilihat oleh kamera karena mereka dikabur (disebutkan) oleh benda lain. <a class="tooltipMoreInfoLink" href="OcclusionCulling.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Occlusionculling">Glossary</a></span></span></span> digunakan ketika memanggang probe?</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Clipping Planes</strong><span class="tooltiptext">Pesawat yang membatasi seberapa jauh atau menutup kamera dapat melihat dari posisi saat ini. Berbagai tampilan kamera adalah antara pesawat klip jauh dan dekat. Lihat pesawat klip jauh dan dekat pesawat kliping. <a class="tooltipMoreInfoLink" href="class-Camera.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#clippingplane">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Dekat dan <span class="tooltip"><strong>far clipping planes</strong><span class="tooltiptext">Jarak tarik maksimum untuk kamera. Geometry di luar pesawat yang ditentukan oleh nilai ini tidak diberikan. Pesawat tegak lurus ke arah depan kamera (Z).<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Farclippingplane">Glossary</a></span></span></span> dari "camera".</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Details</h2> 
+       <p>Ada dua tombol di bagian atas jendela Inspektur <strong>Reflection Probe</strong> yang digunakan untuk mengedit sifat <strong>Size</strong> dan <strong>Probe Origin</strong> langsung dalam Adegan. Dengan tombol kiri (<strong>Size</strong>) dipilih, zona probe efek ditunjukkan dalam adegan sebagai bentuk kotak kuning dengan pegangan untuk menyesuaikan ukuran kotak.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/RefProbeHandles.png" alt=""> 
+       </figure> 
+       <p>Tombol kanan (<strong>Origin</strong>) memungkinkan Anda untuk menyeret kerabat asal probe ke kotak. Perhatikan bahwa pegangan asal menyerupai pegangan posisi <a href="class-Transform.html">Transform</a> tetapi dua posisi tidak sama. Juga, operasi rotasi dan skala tidak tersedia untuk kotak probe.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/RefProbeOrigin.png" alt=""> 
+       </figure> 
+       <p>Properti <strong>Type</strong> probe menentukan bagaimana data refleksi dibuat dan diperbarui:</p> 
+       <ul> 
+        <li> <strong>Baked</strong> probe menyimpan kubus refleksi statis yang dihasilkan oleh baking di editor.</li> 
+        <li> <strong>Custom</strong> probe menyimpan kubemap statis yang dapat dihasilkan oleh baking atau set secara manual oleh pengguna.</li> 
+        <li> <strong>Realtime</strong> probe memperbarui cubemap pada runtime dan karena itu dapat bereaksi terhadap objek dinamis di tempat kejadian.</li> 
+       </ul> 
+       <p>Untuk menggunakan kubus refleksi, objek harus memiliki opsi <strong>Reflection Probes</strong> diaktifkan pada <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-MeshRenderer.html">Mesh Renderer</a><span class="tooltiptext">Komponen mesh yang mengambil geometri dari Filter Mesh dan render di posisi yang ditentukan oleh komponen Transform objek. <a href="class-MeshRenderer.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#MeshRenderer">Glossary</a></span></span></span> dan juga menggunakan naungan yang mendukung probe refleksi. Ketika objek melewati dalam volume yang ditetapkan oleh sifat <strong>Size</strong> probe dan <strong>Probe Origin</strong>, cubemap probe akan diterapkan pada objek.</p> 
+       <p>Anda juga dapat mengatur manual yang mencerminkan probe untuk digunakan untuk objek tertentu menggunakan pengaturan pada <a class="tooltipMoreInfoLink" href="class-MeshRenderer.html">Mesh Renderer</a> objek. Untuk melakukan ini, pilih salah satu pilihan untuk properti <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mesh">Glossary</a></span></span></span> Renderer (<strong>Reflection Probes</strong>, <strong>Simple</strong> atau <strong>Blend Probes</strong>) dan tarik probe yang dipilih ke properti <strong>Blend Probes and Skybox</strong>.<strong>Anchor Override</strong> property.</p> 
+       <p>Lihat bagian <a href="ReflectionProbes.html">Refleksi Probe</a> dalam manual untuk rincian lebih lanjut tentang prinsip dan penggunaan.</p> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="RefProbePerformance.html"></a></span> 
+         <div class="tip">
+           Refleksi kinerja Probe 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="lighting-precomputed-data.html"></a></span> 
+         <div class="tip">
+           Data pencahayaan yang telah ditentukan 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

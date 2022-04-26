@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Contoh: membuat quad</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="mesh.html">Meshes</a></li> 
+         <li><a href="GeneratingMeshGeometryProcedurally.html">Menggunakan jala dengan skrip C#</a></li> 
+         <li>Contoh: membuat quad</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UsingtheMeshClass.html"></a></span> 
+          <div class="tip">
+            Menggunakan Kelas Mesh 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="LevelOfDetail.html"></a></span> 
+          <div class="tip">
+            Tingkat Detail (LOD) untuk jala 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Contoh: membuat quad</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Untuk mewakili permukaan datar, Unity mencakup Plane dan <span class="tooltip"><strong>Quad</strong><span class="tooltiptext">Objek primitif yang menyerupai pesawat tetapi tepinya hanya satu unit panjang, hanya menggunakan 4 simpul, dan permukaan berorientasi pada pesawat XY ruang koordinat lokal. <a class="tooltipMoreInfoLink" href="PrimitiveObjects.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Quad">Glossary</a></span></span></span> <a href="PrimitiveObjects.html">Permainan primitifObjects</a> yang dapat Anda sesaat di <span class="tooltip"><strong>Scenes</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Scene">Glossary</a></span></span></span> Anda. Namun, berguna untuk memahami cara menggunakan script untuk membangun quadrilateral <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mesh">Glossary</a></span></span></span> diri. Ini penting untuk generasi mesh prosedural.</p> 
+       <p>Catatan: Proses unity dan menampilkan geometri pada segitiga, dan tidak quad. Ini berarti bahwa primitif Quad terdiri dari dua segitiga.</p> 
+       <h2>Vertex array</h2> 
+       <p>Hal pertama yang perlu Anda lakukan adalah mengatur array vertices yang menggunakan bentuk Anda.</p> 
+       <p>Contoh ini mengasumsikan bahwa quad terletak pada sumbu x dan sumbu y, dan bahwa skrip Anda mengandung lebar variabel dan tinggi.</p> 
+       <pre><code>Vector3[] vertices = new Vector3[4]
+{
+    new Vector3(0, 0, 0),
+    new Vector3(width, 0, 0),
+    new Vector3(0, height, 0),
+    new Vector3(width, height, 0)
+};
+mesh.vertices = vertices;
+</code></pre> 
+       <p>Contoh ini memasok simpul dalam urutan berikut: Bottom-left Bottom-right Top-left Top-right</p> 
+       <p>Karena cara yang mengambil sifat data Mesh, jauh lebih efisien untuk mengatur data dalam array Anda sendiri dan kemudian menetapkan array ke properti (misalnya, untuk <code>Mesh.vertices</code> atau <code>Mesh.normals</code>), daripada mengakses array properti melalui elemen individu.</p> 
+       <h2>Triangles</h2> 
+       <p>Selanjutnya, Anda perlu mengatur segitiga. Sebuah quad terdiri dari dua segitiga, masing-masing terdiri dari tiga poin di array simpul yang Anda buat sebelumnya. Untuk menentukan poin, Anda mendefinisikan setiap segitiga sebagai tiga indeks array simpul. Misalnya, segitiga kiri bawah untuk quad ini menggunakan indeks 0, 2, dan 1 yang sesuai dengan koordinat (0, 0, 0), (0, tinggi, 0), dan (lebar, 0, 0) dari array simpul. Ordering penting karena Anda harus memesan sudut searah jarum jam. segitiga kanan atas menggunakan indeks 2, 3, dan 1.</p> 
+       <pre><code>int[] tris = new int[6]
+{
+    // lower left triangle
+    0, 2, 1,
+    // upper right triangle
+    2, 3, 1
+};
+mesh.triangles = tris;
+</code></pre> 
+       <h2>Normals</h2> 
+       <p>Mesh dengan simpul dan segitiga terlihat di Adegan, tetapi Unity tidak mendinginkan dengan benar karena tidak memiliki normal. Normal untuk contoh ini sederhana karena mereka semua identik. Setiap poin normal dalam arah sumbu z negatif di ruang lokal quad. Ketika Anda menambahkan normal, Unity benar mendinginkan quad, tetapi Anda perlu Cahaya di Adegan untuk melihat efek.</p> 
+       <pre><code>Vector3[] normals = new Vector3[4]
+{
+    -Vector3.forward,
+    -Vector3.forward,
+    -Vector3.forward,
+    -Vector3.forward
+};
+mesh.normals = normals;
+</code></pre> 
+       <p>Jika Anda tidak ingin menentukan normal diri Anda, Anda dapat menggunakan <a href="#ScriptRef:Mesh.RecalculateNormals.html">Mesh.RecalculateNormals()</a>.</p> 
+       <h2>Tekstur koordinat</h2> 
+       <p>Akhirnya, untuk menampilkan Tekstur pada Bahan Mesh dengan benar, tambahkan koordinat tekstur ke Mesh. Koordinat tekstur antara 0 dan 1. Setiap simpul di Mesh memiliki koordinat tekstur yang menentukan di mana Tekstur Material untuk sampel dari. Untuk menunjukkan seluruh Tekstur di seluruh quad, nilai koordinat tekstur pada setiap simpul harus semua 0 atau 1 sehingga setiap sudut quad sesuai dengan sudut Tekstur.</p> 
+       <pre><code>Vector2[] uv = new Vector2[4]
+{
+      new Vector2(0, 0),
+      new Vector2(1, 0),
+      new Vector2(0, 1),
+      new Vector2(1, 1)
+};
+mesh.uv = uv;
+</code></pre> 
+       <h2>skrip akhir</h2> 
+       <p>Skrip berikut menggabungkan semuanya di atas untuk membuat quad di Adegan Anda. Untuk menggunakannya: Buat skrip C# baru (menu: Aset &gt; Buat &gt; C# Script) dan nama QuadCreator. Buka skrip QuadCreator, salin kode contoh ke dalamnya, dan simpan skrip. Kembali di Editor, buat GameObject baru di Adegan Anda (menu: GameObject &gt; Buat Empty). Dalam Inspektur, pilih Tambahkan Komponen &gt; Script &gt; Login Posisikan <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> di mana pun Anda ingin di tempat kejadian. Masukkan Mode Bermain. Jika Anda tidak dapat melihat quad di Adegan atau Tampilan Game, pastikan Anda melihatnya dari sisi yang benar; Unity tidak membuat wajah belakang Mesh ini.</p> 
+       <pre><code>using UnityEngine;
+
+public class QuadCreator : MonoBehaviour
+{
+    public float width = 1;
+    public float height = 1;
+
+    public void Start()
+    {
+        MeshRenderer meshRenderer = gameObject.AddComponent&lt;MeshRenderer&gt;();
+        meshRenderer.sharedMaterial = new Material(Shader.Find("Standard"));
+
+        MeshFilter meshFilter = gameObject.AddComponent&lt;MeshFilter&gt;();
+
+        Mesh mesh = new Mesh();
+
+        Vector3[] vertices = new Vector3[4]
+        {
+            new Vector3(0, 0, 0),
+            new Vector3(width, 0, 0),
+            new Vector3(0, height, 0),
+            new Vector3(width, height, 0)
+        };
+        mesh.vertices = vertices;
+
+        int[] tris = new int[6]
+        {
+            // lower left triangle
+            0, 2, 1,
+            // upper right triangle
+            2, 3, 1
+        };
+        mesh.triangles = tris;
+
+        Vector3[] normals = new Vector3[4]
+        {
+            -Vector3.forward,
+            -Vector3.forward,
+            -Vector3.forward,
+            -Vector3.forward
+        };
+        mesh.normals = normals;
+
+        Vector2[] uv = new Vector2[4]
+        {
+            new Vector2(0, 0),
+            new Vector2(1, 0),
+            new Vector2(0, 1),
+            new Vector2(1, 1)
+        };
+        mesh.uv = uv;
+
+        meshFilter.mesh = mesh;
+    }
+}
+
+</code></pre> 
+       <p>Catatan: Kode contoh ini dalam fungsi Start, yang berarti bahwa itu mengeksekusi sekali ketika Anda memasukkan Mode Play, dan Mesh tidak berubah sepanjang aplikasi. Namun, Anda dapat menambahkan kode dalam fungsi Update untuk membuat perubahan Mesh setiap bingkai. Ketahuilah bahwa ini sangat meningkatkan intensitas sumber daya dari generasi Mesh.</p> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UsingtheMeshClass.html"></a></span> 
+         <div class="tip">
+           Menggunakan Kelas Mesh 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="LevelOfDetail.html"></a></span> 
+         <div class="tip">
+           Tingkat Detail (LOD) untuk jala 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

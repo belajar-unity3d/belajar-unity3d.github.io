@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: ShaderLab: menetapkan tag ke Pass</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="Shaders.html">Shaders</a></li> 
+         <li><a href="shader-writing.html">Menu Menu</a></li> 
+         <li><a href="SL-Reference.html">ShaderLab</a></li> 
+         <li><a href="SL-Pass.html">ShaderLab: mendefinisikan Pass</a></li> 
+         <li>ShaderLab: menetapkan tag ke Pass</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="SL-Name.html"></a></span> 
+          <div class="tip">
+            ShaderLab: menetapkan nama ke Pass 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="shader-predefined-pass-tags-built-in.html"></a></span> 
+          <div class="tip">
+            ShaderLab: Tag Pass yang telah ditentukan di Pipeline Render Built-in 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>ShaderLab: menetapkan tag ke Pass</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Halaman ini berisi informasi tentang menggunakan blok <code>Tags</code> pada kode <span class="tooltip"><strong>ShaderLab</strong><span class="tooltiptext">Bahasa Unity untuk mendefinisikan struktur benda-benda Shader. <a class="tooltipMoreInfoLink" href="SL-Shader.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ShaderLab">Glossary</a></span></span></span> Anda untuk menetapkan tag ke Pass. Ini juga berisi informasi tentang menggunakan tag <code>LightMode</code>.</p> 
+       <p>Untuk informasi tentang bagaimana objek <span class="tooltip"><strong>Shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Shader">Glossary</a></span></span></span> bekerja, dan hubungan antara <span class="tooltip"><strong>Shader objects</strong><span class="tooltiptext">Contoh kelas Shader, objek Shader adalah wadah untuk program naungan dan instruksi GPU, dan informasi yang memberi tahu Unity bagaimana menggunakannya. Gunakan mereka dengan bahan untuk menentukan penampilan adegan Anda. <a href="shader-objects.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shaderobject">Glossary</a></span></span></span>, SubShaders dan Passes, lihat <a href="ShadersOverview.html">Dasar objek Shader</a>.</p> 
+       <h2>Overview</h2> 
+       <p>Tag adalah pasangan nilai kunci dari data yang dapat Anda berikan kepada Pass. Unity menggunakan tag dan nilai yang telah ditentukan untuk menentukan bagaimana dan ketika membuat Pass yang diberikan. Anda juga dapat membuat tag Pass kustom Anda sendiri dengan nilai kustom, dan mengaksesnya dari kode C#.</p> 
+       <p>Tag Pass yang paling umum digunakan adalah tag <code>LightMode</code>; ini digunakan dalam semua pipa render. Tag Pass lainnya bervariasi oleh <span class="tooltip"><strong>render pipeline</strong><span class="tooltiptext">Rangkaian operasi yang mengambil isi dari Adegan, dan menampilkannya di layar. Unity memungkinkan Anda memilih dari pipa render yang dibangun sebelumnya, atau menulis sendiri. <a class="tooltipMoreInfoLink" href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span>. Untuk informasi lebih lanjut, lihat halaman berikut:</p> 
+       <ul> 
+        <li>Untuk label Pass yang telah ditentukan di Pipeline Render Built-in, lihat <a href="shader-predefined-pass-tags-built-in.html">Tag Pass yang telah ditentukan di Pipeline Render Built-in</a>.</li> 
+        <li>Untuk tag Pass yang telah ditentukan di Pipa Render Universal (URP), lihat.</li> 
+       </ul> 
+       <h2>Kompatibilitas pipa Render</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature name</strong></th> 
+          <th style="text-align:left;"><strong>Built-in Render Pipeline</strong></th> 
+          <th style="text-align:left;"><strong>Universal Render Pipeline (URP)</strong></th> 
+          <th style="text-align:left;"><strong>High Definition Render Pipeline (HDRP)</strong></th> 
+          <th style="text-align:left;"><strong>Custom SRP</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>ShaderLab: Pass Tags block</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>ShaderLab: LightMode Pass tag</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Menggunakan blok Tag</h2> 
+       <p>Untuk menetapkan Tag ke Pass di ShaderLab, Anda menempatkan blok <code>Tags</code> di dalam blok <code>Pass</code>.</p> 
+       <p>Perhatikan bahwa kedua SubShaders dan Passes menggunakan blok <code>Tags</code>, tetapi mereka bekerja berbeda. Menetapkan tag SubShader ke Pass tidak berpengaruh, dan sebaliknya. Perbedaannya adalah di mana Anda menempatkan blok <code>Tags</code>:</p> 
+       <ul> 
+        <li>Untuk menentukan tag Pass, letakkan blok <code>Tags</code> di dalam blok <code>Pass</code>.</li> 
+        <li>Untuk menentukan tag SubShader, letakkan blok <code>Tags</code> di dalam blok <code>SubShader</code> tetapi di luar blok <code>Pass</code>.</li> 
+       </ul> 
+       <p>Untuk informasi tentang menetapkan tag ke SubShader, lihat <a href="SL-SubShader.html">Menetapkan tag ke SubShader</a>.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Signature</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>Tags {"&lt;name1&gt;" = "&lt;value1&gt;" "&lt;name2&gt;" = "&lt;value2&gt;"}</code></td> 
+          <td style="text-align:left;">Berlaku tag yang diberikan ke Pass.<br><br> Anda dapat mendefinisikan banyak tag yang Anda sukai.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Menggunakan tag Pass dengan skrip C#</h2> 
+       <p>Untuk mengakses nilai label Pass dari C# <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span>, Anda dapat menggunakan API <a href="../ScriptReference/Shader.FindPassTagValue.html">Shader.FindPassTagValue</a>. Ini bekerja untuk Tag Pass yang telah ditentukan Unity, dan untuk Tag Pass kustom yang telah Anda buat.</p> 
+       <p>Sitemap Ada beberapa API yang bekerja langsung dengan tag LightMode Pass. Untuk informasi lebih lanjut, lihat <strong>Note:</strong>.<a href="#lightmode-tag-scripts">Menggunakan tag LightMode dengan skrip C#</a>.</p> 
+       <p><a name="lightmode-tag"></a></p> 
+       <h2>Tag LightMode</h2> 
+       <p>Tag <code>LightMode</code> adalah tag Pass yang telah ditentukan yang digunakan Unity untuk menentukan apakah untuk mengeksekusi Pass selama bingkai tertentu, ketika selama bingkai Unity mengeksekusi Pass, dan apa yang dilakukan Unity dengan output.</p> 
+       <p>Sitemap Tag <strong>Note:</strong> tidak terkait dengan <code>LightMode</code> enum, yang berkaitan dengan pencahayaan.<a href="../ScriptReference/Experimental.GlobalIllumination.LightMode.html">LightMode</a> enum, which relates to lighting.</p> 
+       <p>Setiap render pipa menggunakan tag <code>LightMode</code>, tetapi nilai yang telah ditentukan dan maknanya bervariasi. Untuk informasi lebih lanjut, lihat <a href="#lightmode-tag-syntax">Syntax dan nilai yang valid</a>.</p> 
+       <p>Di Pipeline Render Built-in, jika Anda tidak mengatur tag <code>LightMode</code>, Unity membuat Pass tanpa pencahayaan atau bayangan; ini pada dasarnya sama dengan memiliki nilai <code>LightMode</code> <code>Always</code>. Dalam Render Pipeline Alkitab, Anda dapat menggunakan nilai <code>SRPDefaultUnlit</code> untuk referensi Passes tanpa tag LightMode.</p> 
+       <p><a name="lightmode-tag-syntax"></a></p> 
+       <h3>Syntax dan nilai yang valid</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Signature</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">"CahayaMode" = "[value]"</td> 
+          <td style="text-align:left;">Mengatur nilai LightMode untuk Pass ini.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Nilai valid untuk tag ini tergantung pada pipa render.</p> 
+       <ul> 
+        <li>Untuk LightMode Masukkan nilai tag di Pipeline Render Built-in, lihat <a href="shader-predefined-pass-tags-built-in.html">Tag Pass yang telah ditentukan di Pipeline Render Built-in</a>.</li> 
+        <li>Untuk LightMode Lulus nilai tag di Universal Render Pipeline (URP), lihat.</li> 
+       </ul> 
+       <p><a name="lightmode-tag-scripts"></a></p> 
+       <h3>Menggunakan tag LightMode dengan skrip C#</h3> 
+       <p> <a href="../ScriptReference/Material.SetShaderPassEnabled.html">Bahan.SetShaderPassEnabled</a> dan <a href="../ScriptReference/ShaderTagId.html">ShaderTagId</a> menggunakan nilai tag <code>LightMode</code> untuk menentukan bagaimana Unity menangani Pass yang diberikan.</p> 
+       <p>Dalam Render Pipeline Alkitab, Anda dapat membuat nilai kustom untuk tag <code>LightMode</code>. Anda kemudian dapat menggunakan nilai-nilai kustom ini untuk menentukan yang Passes untuk menggambar selama panggilan yang diberikan ke <a href="../ScriptReference/Rendering.ScriptableRenderContext.DrawRenderers.html">ScriptableRenderContext.DrawRenderers</a>, dengan mengkonfigurasi bangunan <a href="../ScriptReference/Rendering.DrawingSettings.html">DrawingSettings</a>. Untuk informasi lebih lanjut dan contoh kode, lihat <a href="srp-creating-simple-render-loop.html">Membuat loop render sederhana di Pipa Render Scriptable kustom</a>.</p> 
+       <h3>Examples</h3> 
+       <pre><code>Shader "Examples/ExampleLightMode"
+{
+    SubShader
+    {
+        Pass
+        {    
+              Tags { "LightMode" = "Always" }
+            
+              // The rest of the code that defines the Pass goes here.
+        }
+    }
+}
+</code></pre> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="SL-Name.html"></a></span> 
+         <div class="tip">
+           ShaderLab: menetapkan nama ke Pass 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="shader-predefined-pass-tags-built-in.html"></a></span> 
+         <div class="tip">
+           ShaderLab: Tag Pass yang telah ditentukan di Pipeline Render Built-in 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

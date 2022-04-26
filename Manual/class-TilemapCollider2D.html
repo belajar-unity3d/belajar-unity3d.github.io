@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Tilemap Collider 2D</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Unity2D.html">2D</a></li> 
+         <li><a href="class-Tilemap.html">Tilemap</a></li> 
+         <li><a href="Tilemap-workflow.html">Tilemap workflow</a></li> 
+         <li>Artikelcode 2D</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="TilemapPainting-SelectionTool.html"></a></span> 
+          <div class="tip">
+            Pilih Alat 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="Tilemap-Hexagonal.html"></a></span> 
+          <div class="tip">
+            Hexagonal Tilemaps 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Artikelcode 2D</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Komponen <strong>Tilemap Collider 2D</strong> menghasilkan bentuk <span class="tooltip"><strong>Collider</strong><span class="tooltiptext">Bentuk tak terlihat yang digunakan untuk menangani tabrakan fisik untuk objek. Seorang sari tidak perlu menjadi bentuk yang sama dengan jala objek - perkiraan kasar sering lebih efisien dan tidak dapat dibedakan dalam gameplay. <a class="tooltipMoreInfoLink" href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Collider">Glossary</a></span></span></span> untuk komponen <span class="tooltip"><a href="#Tilemap-TileAsset">Tiles</a><span class="tooltiptext">Sebuah kelas sederhana yang memungkinkan sprite untuk diberikan di sebuah Tilemap. <a href="Tilemap-ScriptableTiles-Tile.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Tile">Glossary</a></span></span></span> pada <span class="tooltip"><a href="#class-Tilemap">Tilemap</a><span class="tooltiptext">GameObject yang memungkinkan Anda untuk dengan cepat membuat tingkat 2D menggunakan ubin dan overlay grid. <a href="class-Tilemap.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Tilemap">Glossary</a></span></span></span> yang sama pada <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> yang sama. Ketika Anda menambahkan atau menghapus ubin pada komponen Tilemap, Tilemap Collider 2D memperbarui bentuk Collider selama <code>LateUpdate</code>. Ini batch beberapa perubahan ubin bersama untuk memastikan dampak minimal pada kinerja.</p> 
+       <h2>Tilemap Collider 2D properti</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TilemapCollider2DPropertiesNov.png" alt="Tilemap Collider 2D window"> 
+        <figcaption>
+          Home &gt; Sitemap 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Property</th> 
+          <th style="text-align:left;">Function</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Max Tile Change Count</strong></td> 
+          <td style="text-align:left;">Jumlah maksimum perubahan ubin (seperti menambahkan / memindahkan ubin ke Tilemap) untuk menumpuk sebelum melakukan rebuild Collider penuh bukan bangunan rebuild yang tidak biasa. <br><br> Jumlah perubahan terakumulasi tinggi dapat menyebabkan pembangunan kembali inkremental <strong>Tilemap Collider 2D</strong> menjadi lebih lambat daripada membangun kembali penuh. Mengurangi nilai ini untuk menyelesaikan masalah ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Extrusion Factor</strong></td> 
+          <td style="text-align:left;">Mengatur jumlah (dalam unit ruang dunia Unity) untuk mengekstrusi bentuk Collider dari setiap ubin. Ini meminimalkan kesenjangan antara bentuk Collider ubin tetangga dan membawa mereka ke dalam set <strong>Vertex Distance</strong> minimum di <strong>Composite Collider 2D</strong>, yang kemudian dapat mengimbangi Collider ubin bersama. <br><br> Properti ini berwarna abu-abu dan dinonaktifkan secara default. Ini hanya tersedia ketika <a href="#Composite">Digunakan oleh Komposit</a> diaktifkan, dan <a href="#class-CompositeCollider2D">Komposit Collider 2D</a> melekat pada GameObject yang sama.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Material</strong><span class="tooltiptext">Aset yang menentukan bagaimana permukaan harus diberikan. <a class="tooltipMoreInfoLink" href="class-Material.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Material">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Bahan Fisika yang menentukan sifat <span class="tooltip"><strong>collisions</strong><span class="tooltiptext">tabrakan terjadi ketika mesin fisika mendeteksi bahwa tabrakan dari dua GameObjects membuat kontak atau tumpang tindih, ketika setidaknya satu memiliki komponen kaku dan bergerak. <a class="tooltipMoreInfoLink" href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Collision">Glossary</a></span></span></span>, seperti gesekan dan bouncing.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Is Trigger</strong></td> 
+          <td style="text-align:left;">Pilih kotak cek ini untuk memiliki Tilemap Collider 2D behave sebagai pemicu.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Used by Effector</strong></td> 
+          <td style="text-align:left;">Pilih kotak cek ini untuk membuat Tilemap Collider 2D digunakan oleh <a href="#Effectors2D">Efektor 2D</a> yang terpasang.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Used by Composite</strong><a name="Composite"></a> </td> 
+          <td style="text-align:left;">Pilih kotak cek ini untuk membuat Collider ini digunakan oleh Collider Komposit terpasang 2D.<br><br> Ketika <strong>Used by Composite</strong> diaktifkan, semua sifat kecuali Offset tidak lagi tersedia di komponen Tilemap Collider 2D. Sebagai gantinya, sifat dikontrol oleh komponen Composite Collider 2D yang terpasang.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Offset</strong></td> 
+          <td style="text-align:left;">Offset lokal dari geometri Tilemap Collider 2D.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Efek Collider Type pada generasi Collider</h2> 
+       <p>Bentuk Collider yang dihasilkan untuk setiap ubin di Tilemap tergantung pada jenis Collider yang diinginkan ditetapkan dalam sifat <a href="#Tilemap-TileAsset">Aset Tile</a>. Perilaku generasi bentuk komponen sesuai dengan Jenis Collider dengan cara berikut:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Jenis Collider</th> 
+          <th style="text-align:left;">Function</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>None</strong></td> 
+          <td style="text-align:left;">Komponen Tilemap Collider 2D tidak menghasilkan bentuk Collider untuk ubin ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Sprite</strong><span class="tooltiptext">Objek grafis 2D. Jika Anda digunakan untuk bekerja di 3D, Sprites pada dasarnya hanya tekstur standar tetapi ada teknik khusus untuk menggabungkan dan mengelola tekstur sprite untuk efisiensi dan kenyamanan selama perkembangan. <a class="tooltipMoreInfoLink" href="Sprites.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Sprite">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Komponen Tilemap Collider 2D menghasilkan bentuk Collider berdasarkan Sprite yang ditugaskan ke ubin. Bentuk Collider didasarkan pada set <a href="#CustomPhysicsShape">Fisika kustom Login</a> untuk Sprite.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Grid</strong></td> 
+          <td style="text-align:left;">Komponen Tilemap Collider 2D menghasilkan bentuk Collider berdasarkan bentuk sel Grid, yang ditentukan oleh Tata Letak Sel yang dipilih dari komponen Grid.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Tilemap dan Collider Komposit</h2> 
+       <p>Anda dapat menggunakan komponen Tilemap Collider 2D bersama dengan komponen <a href="#class-CompositeCollider2D">Komposit Collider 2D</a>. Ketika Anda menambahkan kedua komponen ke Tilemap yang sama, Unity komposit bentuk Collider ubin tetangga bersama. Ini menghaluskan sudut dan tepi antara bentuk Collider di ubin tetangga.</p> 
+       <p>Menggunakan kedua komponen bersama-sama mengurangi jumlah bentuk Collider individu yang terlibat dalam pembaruan fisika, yang mengurangi jumlah perhitungan yang diperlukan, dan meminimalkan dampak pada kinerja.</p> 
+       <h2>Scripting API</h2> 
+       <p>Jika Anda memerlukan perubahan langsung terjadi pada Collider, gunakan <em>WordPress.org</em> untuk memprosesnya segera. Anda dapat menggunakan <em>WordPress.org</em> untuk memeriksa apakah pemrosesan yang diperlukan.</p> 
+       <hr> 
+       <ul> 
+        <li><span class="page-history">Properti baru ditambahkan pada Unity 2020. 1 Artikel</span></li> 
+        <li><span class="page-history">Tilemaps ditambahkan dalam <span class="search-words">NewIn20172</span></span></li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="TilemapPainting-SelectionTool.html"></a></span> 
+         <div class="tip">
+           Pilih Alat 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="Tilemap-Hexagonal.html"></a></span> 
+         <div class="tip">
+           Hexagonal Tilemaps 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

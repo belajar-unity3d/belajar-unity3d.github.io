@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Editor Modul Profiler</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="analysis.html">Analysis</a></li> 
+         <li><a href="Profiler.html">Profiler</a></li> 
+         <li><a href="Profiler-customizing.html">Sesuaikan Profiler</a></li> 
+         <li><a href="Profiler-creating-custom-modules.html">Membuat modul Profiler Kustom</a></li> 
+         <li>Profiler Modul Editor</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="Profiler-creating-custom-modules.html"></a></span> 
+          <div class="tip">
+            Membuat modul Profiler Kustom 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="Profiler-customizing-details-view.html"></a></span> 
+          <div class="tip">
+            Membuat panel detail modul kustom 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Profiler Modul Editor</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Editor Modul <span class="tooltip"><strong>Profiler</strong><span class="tooltiptext">Jendela yang membantu Anda untuk mengoptimalkan permainan Anda. Ini menunjukkan berapa banyak waktu yang dihabiskan di berbagai bidang permainan Anda. Sebagai contoh, dapat melaporkan persentase waktu yang dihabiskan <strong>rendering</strong>, aimating, atau dalam logika permainan Anda. <a class="tooltipMoreInfoLink" href="Profiler.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profiler">Glossary</a></span></span></span> adalah alat yang dapat Anda gunakan untuk menambahkan modul kustom Anda sendiri ke jendela Unity Profileer. Anda juga dapat menambahkan counter built-in untuk modul, atau menggunakan API runtime untuk menambahkan counter kustom Anda sendiri ke modul. Untuk informasi tentang cara menerapkan counter Anda sendiri, lihat dokumentasi paket Profiling di .</p> 
+       <p>Ini sangat berguna ketika Anda perlu hone dalam statistik yang ingin Anda analisa lebih dalam, atau untuk menambahkan statistik kustom tentang aplikasi Anda ke jendela Profiler.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/profiler-module-editor.png" alt="The Profiler Module Editor window, with a new module selected"> 
+        <figcaption>
+          Jendela Editor Modul Profiler, dengan modul baru yang dipilih 
+        </figcaption> 
+       </figure> 
+       <p>Untuk menggunakan Editor Modul Profiler, buka Jendela Profiler (<strong>Window &gt; Analysis &gt; Profiler</strong>) dan kemudian pilih dropdown Modul Profiler.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/profiler-module-dropdown.png" alt="The Profiler module dropdown"> 
+        <figcaption>
+          Profiler modul dropdown 
+        </figcaption> 
+       </figure> 
+       <p>Pilih ikon gigi, dan jendela <strong>Profiler Module Editor</strong> terbuka. Jendela memiliki tiga kolom:</p> 
+       <ul> 
+        <li>Sitemap Daftar ini berisi semua modul yang tersedia yang dapat Anda tambahkan ke jendela Profiler. Modul built-in adalah abu-abu-out dalam daftar, menunjukkan bahwa Anda tidak dapat mengedit konten mereka. Anda dapat menyeret dan menjatuhkan modul untuk mengubah penampilan mereka di jendela Profiler. Ketika Anda membuat Modul Profiler kustom Anda sendiri, itu juga muncul dalam daftar ini.<strong>List of Profiler Modules:</strong> This list contains all of the available modules you can add to the Profiler Window. Built-in modules are greyed-out in the list, indicating that you cannot edit their contents. You can drag and drop the modules to reorder their appearance in the Profiler window. When you create your own custom Profiler Module, it also appears in this list.</li> 
+        <li> <strong>Profiler Module information pane</strong> (hanya muncul ketika Anda membuat atau memilih modul kustom): Daftar counter yang terkandung dalam modul kustom</li> 
+        <li> <strong>Available counters</strong> (hanya muncul ketika Anda membuat atau memilih modul kustom): Daftar counter yang tersedia Anda dapat menambahkan ke modul kustom.</li> 
+       </ul> 
+       <h2>Membuat modul kustom</h2> 
+       <p>Untuk membuat modul kustom, pilih tombol <strong>Add</strong> di sebelah kiri bawah jendela Editor Modul Profiler. Unity menambahkan modul Profiler baru ke daftar yang disebut <strong>New Profiler Module</strong>. Untuk mengubah nama modul, klik di bidang teks dan gunakan keyboard Anda untuk mengatur nama.</p> 
+       <h3>Menambahkan counter ke modul</h3> 
+       <p>Untuk mengumpulkan data dalam modul Profiler kustom, Anda harus menambahkan setidaknya satu counter untuk modul untuk melacak. Anda dapat menambahkan kontra Unity bawaan, atau menggunakan API <a href="../ScriptReference/Unity.Profiling.ProfilerRecorder.html">ProfilerRecorder</a> untuk membuat counter Anda sendiri untuk menambahkan ke modul. Daftar counter yang tersedia muncul di pane <strong>Available Counters</strong>.</p> 
+       <p>Jika Anda tidak memiliki data yang dimuat ke jendela Profiler, maka setiap counter yang Anda buat tidak muncul di pane <strong>Available Counters</strong> ketika Anda memuat Editor Modul Profiler. Untuk melihat penghitung kustom Anda, Anda harus menangkap atau memuat beberapa data yang memiliki penghitung yang dipancarkan Anda dengan Profiler, dan membuka kembali Editor Modul Profiler.</p> 
+       <p>Counter Unity yang tersedia dibagi menjadi tiga daerah: <a href="ProfilerMemory.html">Memory</a>, <a href="ProfilerRendering.html">Render</a>, dan <a href="profiler-virtual-texturing-module.html">Tekstur Virtual</a>. Untuk informasi lebih lanjut tentang counter tertentu yang tersedia di daerah ini, lihat dokumentasi untuk setiap modul.</p> 
+       <p>Jika Anda menggunakan API untuk menambahkan counter Anda sendiri, Anda harus memuat atau mengumpulkan beberapa data ke jendela Profiler terlebih dahulu, dan kemudian counter kustom Anda muncul di pane <strong>Available Counters</strong> di bawah judul <strong>User</strong> dari Editor Modul Profiler.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/profiler-module-editor-user-counters.png" alt="Profiler Module Editor with User counters listed."> 
+        <figcaption>
+          Editor Modul Profiler dengan counter Pengguna yang terdaftar. 
+        </figcaption> 
+       </figure> 
+       <p>Untuk menambahkan counter ke modul, pilih dalam daftar <strong>Available Counters</strong> dan kemudian pilih tombol <strong>Add Selected</strong>. Atau, Anda dapat mengklik dua kali counter untuk menambahkannya ke modul. Unity kemudian menambahkan counter ini ke modul Profiler yang dipilih. Untuk menambahkan beberapa counter ke modul sekaligus, Anda dapat menahan <strong>Shift</strong> dan klik dua counter untuk memilih semua counter antara dua, atau Anda dapat menahan <strong>Ctrl</strong> (<strong>Command</strong> pada macOS) untuk memilih counter satu pada satu waktu, kemudian pilih tombol <strong>Add Selected</strong>.</p> 
+       <p>Untuk memesan kembali counter, Anda dapat menyeret dan menjatuhkannya. Anda hanya dapat menambahkan maksimum 10 counter ke modul.</p> 
+       <h3>Menggunakan modul kustom</h3> 
+       <p>Ketika Anda senang dengan modul kustom Anda, pilih tombol <strong>Save Changes</strong> di sudut kanan bawah jendela Editor Modul Profiler. Unity menutup jendela, dan Anda kemudian dapat melihat modul baru Anda yang tercantum di jendela Profiler.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/profiler-garbage-collection-module.png" alt="Profiler Module Editor (left), with a custom module. On the right, the custom module in the Profiler window."> 
+        <figcaption>
+          Editor Modul Profiler (kiri), dengan modul kustom. Di sebelah kanan, modul kustom di jendela Profiler. 
+        </figcaption> 
+       </figure> 
+       <p>Untuk secara efektif menggunakan dan membandingkan data Anda terhadap modul bawaan, Anda dapat memesan ulang modul di Jendela Profiler. Untuk melakukan ini, buka Editor Modul Profiler, dan kemudian drag dan drop modul di pane <strong>Profiler Modules</strong>.</p> 
+       <p>Ini sangat berguna jika Anda ingin memeriksa elemen kustom dari aplikasi Anda terhadap lonjakan dalam data built-in Profiler.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/profiler-window-custom-module.png" alt="A custom Profiler Module displaying the number of bullets and tanks on screen in the game. Note the correspondence to the rendering data."> 
+        <figcaption>
+          Modul Profiler kustom menampilkan jumlah peluru dan tangki di layar dalam permainan. Perhatikan korespondensi data rendering. 
+        </figcaption> 
+       </figure> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="Profiler-creating-custom-modules.html"></a></span> 
+         <div class="tip">
+           Membuat modul Profiler Kustom 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="Profiler-customizing-details-view.html"></a></span> 
+         <div class="tip">
+           Membuat panel detail modul kustom 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Pengenalan Pipa Render Scriptable</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="render-pipelines.html">Pipa render</a></li> 
+         <li><a href="ScriptableRenderPipeline.html">Facebook Twitter Youtube</a></li> 
+         <li>Scriptable Render Pipa pengenalan</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="ScriptableRenderPipeline.html"></a></span> 
+          <div class="tip">
+            Facebook Twitter Youtube 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="srp-using-scriptable-render-context.html"></a></span> 
+          <div class="tip">
+            Penjadwalan dan mengeksekusi perintah rendering di Pipa Render Scriptable 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Scriptable Render Pipa pengenalan</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Halaman ini menjelaskan bagaimana karya Unity <a class="tooltipMoreInfoLink" href="ScriptableRenderPipeline.html">Scriptable Render Pipeline (SRP)</a>, dan memperkenalkan beberapa konsep kunci dan terminologi. Informasi di halaman ini berlaku untuk Universal <span class="tooltip"><strong>Render Pipeline</strong><span class="tooltiptext">Rangkaian operasi yang mengambil isi dari Adegan, dan menampilkannya di layar. Unity memungkinkan Anda memilih dari pipa render yang dibangun sebelumnya, atau menulis sendiri. <a href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span> (URP), Pipa Render Definisi Tinggi (HDRP), dan pipa render kustom yang didasarkan pada SRP.</p> 
+       <p>The Scriptable Render Pipeline adalah lapisan API tipis yang memungkinkan Anda menjadwalkan dan mengkonfigurasi perintah rendering menggunakan C# <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span>. Unity melewati perintah ini untuk arsitektur grafis tingkat rendah, yang kemudian mengirim instruksi ke API grafis.</p> 
+       <p>URP dan HDRP dibangun di atas SRP. Anda juga dapat membuat pipa render kustom Anda sendiri di atas SRP.</p> 
+       <h2>Render Pipeline Instance dan Render Pipeline Asset</h2> 
+       <p>Setiap render pipa berdasarkan SRP memiliki dua elemen khusus kunci:</p> 
+       <ul> 
+        <li>Sitemap Ini adalah contoh kelas mendefinisikan fungsi pipa render Anda. Nyamuk skrip dari <strong>Render Pipeline Instance</strong>, dan menimpa metode <a href="../ScriptReference/Rendering.RenderPipeline.html">RenderPipeline</a>.<code>Render()</code> method.</li> 
+        <li>Sitemap Ini adalah aset di Proyek Unity Anda yang menyimpan data tentang mana Render Pipeline Instance untuk digunakan, dan bagaimana mengkonfigurasinya. Nyamuk skrip dari <strong>Render Pipeline Asset</strong> dan menimpa metode <a href="../ScriptReference/Rendering.RenderPipelineAsset.html">RenderPipelineAsset</a>.<code>CreatePipeline()</code> method.</li> 
+       </ul> 
+       <p>Untuk informasi lebih lanjut tentang unsur-unsur ini, dan instruksi tentang cara membuat mereka dalam pipa render kustom, lihat <a href="srp-creating-render-pipeline-asset-and-render-pipeline-instance.html">Membuat Render Aset Pipa dan Instance Pipa Render</a>.</p> 
+       <h2>ScriptableRenderContext</h2> 
+       <p> <code>ScriptableRenderContext</code> adalah kelas yang bertindak sebagai antarmuka antara kode C# kustom dalam render pipa dan kode grafis tingkat rendah Unity.</p> 
+       <p>Gunakan API <a href="../ScriptReference/Rendering.ScriptableRenderContext.html">ScriptableRenderContext</a> untuk menjadwalkan dan melaksanakan perintah rendering. Untuk informasi, lihat <a href="srp-using-scriptable-render-context.html">Penjadwalan dan mengeksekusi perintah rendering di Pipa Render Scriptable</a>.</p> 
+       <h2>Titik masuk dan callback</h2> 
+       <p>Ketika bekerja dengan SRP, gunakan ini untuk membuat kode Unity memanggil kode C # Anda pada waktu tertentu.</p> 
+       <ul> 
+        <li> <a href="../ScriptReference/Rendering.RenderPipeline.Render.html">RenderPipeline.Render</a> adalah titik masuk utama ke SRP. Unity memanggil metode ini secara otomatis. Jika Anda menulis pipa render kustom, ini adalah di mana Anda mulai menulis kode Anda.</li> 
+        <li>Kelas <a href="../ScriptReference/Rendering.RenderPipelineManager.html">RenderPipelineManager</a> memiliki peristiwa berikut yang dapat Anda berlangganan, sehingga Anda dapat mengeksekusi kode kustom pada poin tertentu dalam render loop: 
+         <ul> 
+          <li>Sitemap Sitemap Ini dapat menghasilkan sampah. Gunakan <a href="../ScriptReference/Rendering.RenderPipelineManager-beginFrameRendering.html">beginFrameRendering</a> bukan.<strong>Note:</strong> This can generate garbage. Use <code>beginContextRendering</code> instead.</li> 
+          <li>Sitemap Sitemap Ini dapat menghasilkan sampah. Gunakan <a href="../ScriptReference/Rendering.RenderPipelineManager-endFrameRendering.html">endFrameRendering</a> bukan.<strong>Note:</strong> This can generate garbage. Use <code>endContextRendering</code> instead.</li> 
+          <li><a href="../ScriptReference/Rendering.RenderPipelineManager-beginContextRendering.html">beginContextRendering</a></li> 
+          <li><a href="../ScriptReference/Rendering.RenderPipelineManager-endContextRendering.html">endContextRendering</a></li> 
+          <li><a href="../ScriptReference/Rendering.RenderPipelineManager-beginCameraRendering.html">beginCameraRendering</a></li> 
+          <li><a href="../ScriptReference/Rendering.RenderPipelineManager-endCameraRendering.html">endCameraRendering</a></li> 
+         </ul> </li> 
+       </ul> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="ScriptableRenderPipeline.html"></a></span> 
+         <div class="tip">
+           Facebook Twitter Youtube 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="srp-using-scriptable-render-context.html"></a></span> 
+         <div class="tip">
+           Penjadwalan dan mengeksekusi perintah rendering di Pipa Render Scriptable 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

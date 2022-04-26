@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Mengimpor model dengan animasi humanoid</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="models.html">Models</a></li> 
+         <li><a href="models-importing.html">Mengimpor model ke Unity</a></li> 
+         <li>Mengimpor model dengan animasi humanoid</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="ImportingModelFiles.html"></a></span> 
+          <div class="tip">
+            Mengimpor model 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="GenericAnimations.html"></a></span> 
+          <div class="tip">
+            Mengimpor model dengan animasi non-humanoid (generic) 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Mengimpor model dengan animasi humanoid</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Halaman ini berisi panduan untuk mengimpor model untuk digunakan dengan Unity <a href="AnimationOverview.html">Sistem Animasi</a>. Untuk informasi tentang membuat model untuk digunakan dengan Sistem Animasi, lihat <a href="UsingHumanoidChars.html">Membuat model untuk animasi</a>.</p> 
+       <p>Sistem Animasi bekerja dengan dua jenis model:</p> 
+       <ul> 
+        <li>Model <strong>Humanoid</strong> adalah struktur tertentu, yang mengandung setidaknya 15 tulang yang diatur dalam cara yang longgar sesuai dengan kerangka manusia yang sebenarnya. Halaman ini berisi panduan untuk mengimpor jenis model ini.</li> 
+        <li>Model <strong>Generic</strong> adalah segalanya. Ini mungkin apa pun dari teakettle ke naga. Untuk informasi tentang mengimpor jenis model ini, lihat <a href="GenericAnimations.html">Mengimpor model dengan animasi non-humanoid (generic)</a>.</li> 
+       </ul> 
+       <p>Untuk panduan impor umum yang berlaku untuk semua jenis model, lihat <a href="ImportingModelFiles.html">Mengimpor model</a>.</p> 
+       <h2>Overview</h2> 
+       <p>Ketika Unity mengimpor file Model yang mengandung rig dan Animasi <strong>Humanoid</strong>, perlu untuk mendamaikan struktur tulang Model ke Animasinya. Ini melakukan ini dengan memetakan setiap tulang dalam file ke Humanoid Avatar sehingga dapat memainkan Animasi dengan benar. Untuk alasan ini, penting untuk hati-hati menyiapkan <span class="tooltip"><strong>Model file</strong><span class="tooltiptext">File yang berisi data 3D, yang dapat mencakup definisi untuk jaring, tulang, animasi, bahan dan tekstur. <a class="tooltipMoreInfoLink" href="3D-formats.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Modelfile">Glossary</a></span></span></span> Anda sebelum mengimpor ke Unity.</p> 
+       <ol> 
+        <li> <a href="#AvatarSetup">Tentukan jenis Rig dan buat Avatar</a>.</li> 
+        <li> <a href="#AvatarConfig">Memperbaiki atau memverifikasi pemetaan Avatar</a>.</li> 
+        <li>Setelah selesai dengan pemetaan tulang, Anda dapat secara opsional klik tab <strong>Muscles &amp; Settings</strong> ke <a href="MuscleDefinitions.html">tweak konfigurasi otot Avatar</a>.</li> 
+        <li>Anda dapat opsional <a class="tooltipMoreInfoLink" href="class-Avatar.html#HumanTemplate">menyimpan pemetaan tulang skeleton Anda ke Avatar</a> sebagai file <span class="tooltip"><strong>Human Template</strong><span class="tooltiptext">Tulang yang telah ditentukan sebelumnya. Digunakan untuk mencocokkan tulang dari file FBX ke Avatar. <a href="class-HumanTemplate.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Humantemplate">Glossary</a></span></span></span> (.ht).</li> 
+        <li>Anda dapat secara opsional membatasi animasi yang diimpor pada tulang tertentu oleh <a href="#AvatarMask">mendefinisikan Masker Avatar</a>.</li> 
+        <li>Dari tab <strong>Animation</strong>, aktifkan opsi <strong>Import Animation</strong> dan kemudian atur sifat spesifik aset lainnya, .</li> 
+        <li>Jika file terdiri dari beberapa animasi atau tindakan, Anda dapat <a href="Splittinganimations.html">mendefinisikan rentang tindakan spesifik sebagai Klip Animasi</a>.</li> 
+        <li>Untuk setiap <span class="tooltip"><strong>Animation Clip</strong><span class="tooltiptext">Animasi data yang dapat digunakan untuk karakter animasi atau animasi sederhana. Ini adalah bagian "unit" sederhana dari gerakan, seperti (salah satu contoh spesifik) "Idle", "Walk" atau "Run". <a class="tooltipMoreInfoLink" href="class-AnimationClip.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnimationClip">Glossary</a></span></span></span> didefinisikan dalam file, Anda dapat: 
+         <ul> 
+          <li><a href="class-AnimationClip.html#ClipProperties">Mengubah pose dan transformasi akar</a></li> 
+          <li><a href="LoopingAnimationClips.html">Mengoptimalkan looping</a></li> 
+          <li> <strong>Mirror</strong> animasi di kedua sisi kerangka Humanoid.</li> 
+          <li> <a href="AnimationCurvesOnImportedClips.html">Tambahkan kurva ke klip</a> untuk menghidupkan waktu item lain</li> 
+          <li> <a href="AnimationEventsOnImportedClips.html">Tambahkan acara ke klip</a> untuk memicu tindakan tertentu dalam waktu dengan animasi</li> 
+          <li> <a href="AnimationMaskOnImportedClips.html">Discard bagian dari animasi</a> mirip dengan menggunakan runtime <a href="class-AvatarMask.html">Masker Avatar</a> tetapi diterapkan pada waktu impor</li> 
+          <li> <a href="AnimationRootMotionNodeOnImportedClips.html">Pilih Node Gerak Akar yang berbeda</a> untuk mendorong aksi dari</li> 
+          <li><a href="class-AnimationClip.html#ImportMessages">Baca pesan apa pun dari Unity tentang mengimpor klip</a></li> 
+          <li><a href="class-AnimationClip.html#AnimationPreview">Tonton pratinjau klip animasi</a></li> 
+         </ul> </li> 
+        <li>Untuk menyimpan perubahan, klik tombol <strong>Apply</strong> di bagian bawah jendela <strong>Import Settings</strong> atau <strong>Revert</strong> untuk membuang perubahan Anda.</li> 
+       </ol> 
+       <p><a name="AvatarSetup"></a></p> 
+       <h2>Mengatur Avatar</h2> 
+       <p>Dari <a href="FBXImporter-Rig.html">Tab rig dari jendela Inspektur</a>, set <strong>Animation Type</strong> ke <strong>Humanoid</strong>. Secara default, properti <strong>Avatar Definition</strong> diatur ke <strong>Create From This Model</strong>. Jika Anda menyimpan opsi ini, upaya Unity untuk memetakan set tulang yang didefinisikan dalam file ke Avatar Humanoid.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Rig-2.png" alt="Humanoid Rig"> 
+        <figcaption>
+          Humanoid Rig 
+        </figcaption> 
+       </figure> 
+       <p>Dalam beberapa kasus, Anda dapat mengubah opsi ini menjadi <strong>Copy From Other Avatar</strong> untuk menggunakan Avatar Anda sudah didefinisikan untuk file Model lain. Misalnya, jika Anda membuat aplikasi pemodelan 3D Anda dengan beberapa animasi yang berbeda, Anda dapat mengekspor Mesh ke satu file FBX, dan setiap animasi ke file FBX sendiri. Ketika Anda mengimpor file ini ke Unity, Anda hanya perlu membuat Avatar tunggal untuk file pertama yang Anda impor (biasanya Mesh). Selama semua file menggunakan struktur tulang yang sama, Anda dapat menggunakan kembali Avatar untuk sisa file (misalnya, semua animasi).<span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a class="tooltipMoreInfoLink" href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mesh">Glossary</a></span></span></span> (skin) in your 3D modeling application with several distinct animations, you can export the Mesh to one FBX file, and each animation to its own FBX file. When you import these files into Unity, you only need to create a single Avatar for the first file you import (usually the Mesh). As long as all the files use the same bone structure, you can re-use that Avatar for the rest of the files (for example, all the animations).</p> 
+       <p>Jika Anda mengaktifkan opsi ini, Anda harus menentukan mana Avatar yang ingin Anda gunakan dengan mengatur properti <strong>Source</strong>.</p> 
+       <p>Anda juga dapat mengubah jumlah maksimum tulang yang dapat mempengaruhi simpul yang diberikan dengan properti <a href="FBXImporter-Rig.html#SkinWeights">Berat kulit</a>. Secara default, properti ini membatasi pengaruh terhadap empat tulang, tetapi Anda dapat menentukan nilai yang berbeda.</p> 
+       <p>Ketika Anda mengklik tombol <strong>Apply</strong>, Unity mencoba untuk mencocokkan struktur tulang yang ada ke struktur tulang Avatar. Dalam banyak kasus, dapat melakukan ini secara otomatis dengan menganalisis koneksi antara tulang di rig.</p> 
+       <p>Jika pertandingan berhasil, tanda cek muncul di sebelah menu <strong>Configure</strong>. Unity juga menambahkan sub-Asset Avatar ke Aset Model, yang dapat Anda temukan di tampilan Proyek.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/MecanimFBXNoAvatar.png" alt="Avatar appears as a sub-Asset of the imported Model"> 
+        <figcaption>
+          Avatar muncul sebagai sub-Asset dari Model yang diimpor 
+        </figcaption> 
+       </figure> 
+       <p>Pertandingan yang sukses hanya berarti bahwa Unity mampu mencocokkan semua tulang yang diperlukan. Namun, untuk hasil yang lebih baik, Anda juga perlu mencocokkan tulang opsional dan mengatur model dalam <span class="tooltip"><strong>T-pose</strong><span class="tooltiptext">Tentang di mana karakter memiliki lengan mereka langsung ke sisi, membentuk "T". pose yang diperlukan untuk karakter yang akan ada, untuk membuat Avatar.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#T-pose">Glossary</a></span></span></span> yang tepat.</p> 
+       <p>Jika Unity tidak dapat membuat Avatar, silang muncul di sebelah tombol <strong>Configure</strong>, dan tidak ada sub-asset Avatar muncul dalam tampilan Proyek.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/MecanimAvatarInvalid.png" alt="Unity failed to create a valid Avatar"> 
+        <figcaption>
+          Unity gagal untuk membuat Avatar yang valid 
+        </figcaption> 
+       </figure> 
+       <p>Karena Avatar adalah aspek penting dari sistem animasi, penting untuk mengkonfigurasinya dengan benar untuk <span class="tooltip"><strong>Model</strong><span class="tooltiptext">representasi model 3D dari objek, seperti karakter, bangunan, atau sepotong furnitur. <a class="tooltipMoreInfoLink" href="3D-formats.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Model">Glossary</a></span></span></span> Anda.</p> 
+       <p>Untuk alasan ini, apakah atau bukan penciptaan Avatar otomatis berhasil, Anda harus selalu <a href="#AvatarConfig">Login Login</a> valid dan diatur dengan benar.</p> 
+       <p><a name="AvatarConfig"></a></p> 
+       <h2>Konfigurasi Avatar</h2> 
+       <p>Jika Anda ingin memeriksa bahwa Unity dengan benar memetakan tulang model Anda ke Avatar, atau jika Unity gagal untuk membuat Avatar untuk model Anda, Anda dapat mengklik tombol <strong>Configure …</strong> pada tab <span class="tooltip"><strong>Rig</strong><span class="tooltiptext">Hirarki kerangka sendi untuk jala. <a class="tooltipMoreInfoLink" href="FBXImporter-Rig.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Rig">Glossary</a></span></span></span> untuk memasukkan <a href="class-Avatar.html">Mode konfigurasi Avatar</a>.</p> 
+       <p>Jika Unity berhasil menciptakan sebuah Avatar, Avatar muncul sebagai sub-asset dari model Asset. Anda dapat memilih aset Avatar di <span class="tooltip"><strong>Project window</strong><span class="tooltiptext">Jendela yang menunjukkan isi folder <code>Assets</code> (Project tab) <a class="tooltipMoreInfoLink" href="ProjectView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Projectwindow">Glossary</a></span></span></span>, dan kemudian klik tombol “Configure Avatar” di Inspector untuk memasukkan mode konfigurasi Avatar. Mode ini memungkinkan untuk memeriksa atau menyesuaikan bagaimana peta Unity tulang model Anda ke tata letak Avatar.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/MecanimAvatarCreated.png" alt="The Inspector for an Avatar sub-asset"> 
+        <figcaption>
+          Inspektur untuk sub-asset Avatar 
+        </figcaption> 
+       </figure> 
+       <p>Setelah Anda memasukkan mode konfigurasi Avatar, jendela <strong>Avatar</strong> muncul dalam pemetaan tulang yang menampilkan <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>.</p> 
+       <p>Pastikan pemetaan tulang benar dan bahwa Anda memetakan tulang opsional yang Unity tidak menetapkan.</p> 
+       <p>Kerangka Anda harus memiliki setidaknya tulang yang diperlukan untuk Unity untuk menghasilkan pertandingan yang valid. Untuk meningkatkan peluang Anda untuk menemukan pertandingan untuk Avatar, nama tulang Anda dengan cara yang mencerminkan bagian tubuh yang mereka wakili. Misalnya, “LeftArm” dan “RightForearm” membuatnya jelas apa kontrol tulang ini.</p> 
+       <h3>Strategi pemetaan</h3> 
+       <p>Jika model melakukan <em>not</em> menghasilkan pertandingan yang valid, Anda dapat menggunakan proses yang mirip dengan satu Unity menggunakan internal:</p> 
+       <ol> 
+        <li>Pilih <strong>Clear</strong> dari menu <strong>Mapping</strong> di bagian bawah jendela <strong>Avatar</strong> untuk mengatur ulang pemetaan yang dicoba Unity.<br><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/MecanimMappingMenus.png" alt="The Mapping drop-down menu at the bottom of the Avatar window"> </li> 
+        <li>Pilih <strong>Sample Bind-pose</strong> dari menu <strong>Pose</strong> di bagian bawah jendela <strong>Avatar</strong> untuk memperkirakan model awal Model pose.<br><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/MecanimPoseMenus.png" alt="The Pose drop-down menu at the bottom of the Avatar window"> </li> 
+        <li>Pilih <strong>Mapping</strong> &gt; <strong>Automap</strong> untuk membuat tulang-menempel dari pose awal.</li> 
+        <li>Pilih <strong>Pose</strong> &gt; <strong>Enforce T-Pose</strong> untuk mengatur Model kembali ke T-pose yang diperlukan.</li> 
+       </ol> 
+       <p>Jika automapping gagal sepenuhnya atau sebagian, Anda dapat secara manual menetapkan tulang dengan baik menyeret mereka dari pandangan <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> atau dari pandangan <strong>Hierarchy</strong>. Jika Unity berpikir tulang pas, muncul di hijau di tab <strong>Avatar Mapping</strong>; jika tidak muncul di merah.</p> 
+       <h3>Mengatur ulang pose</h3> 
+       <p><strong>T-pose</strong> adalah pose default yang diperlukan oleh Animasi Unity dan merupakan pose yang disarankan untuk model dalam aplikasi pemodelan 3D Anda. Namun, jika Anda tidak menggunakan T-pose untuk model karakter Anda dan animasi tidak bekerja seperti yang diharapkan, Anda dapat memilih <strong>Reset</strong> dari menu drop-down <strong>Pose</strong>:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/MecanimPoseMenus.png" alt="The Pose drop-down menu at the bottom of the Avatar window"> 
+        <figcaption>
+          Menu drop-down 
+         <strong>Pose</strong> di bagian bawah jendela 
+         <strong>Avatar</strong> window 
+        </figcaption> 
+       </figure> 
+       <p>Jika tugas tulang benar, tetapi karakternya tidak dalam pose yang benar, Anda akan melihat pesan "Character tidak dalam T-Pose". Anda dapat mencoba untuk memperbaiki bahwa dengan memilih <strong>Enforce T-Pose</strong> dari menu <strong>Pose</strong>. Jika pose masih tidak benar, Anda dapat secara manual memutar tulang yang tersisa menjadi T-pose.</p> 
+       <p><a name="AvatarMask"></a></p> 
+       <h2>Membuat Masker Avatar</h2> 
+       <p>Masking memungkinkan Anda untuk membuang beberapa data animasi dalam klip, memungkinkan klip untuk menghidupkan hanya bagian dari objek atau karakter daripada seluruh hal. Misalnya, Anda mungkin memiliki animasi berjalan standar yang mencakup gerakan lengan dan kaki, tetapi jika karakter membawa objek besar dengan kedua tangan maka Anda tidak ingin lengan mereka berayun ke sisi saat mereka berjalan. Namun, Anda masih bisa menggunakan animasi berjalan standar sambil membawa objek dengan menggunakan topeng hanya memainkan bagian tubuh bagian atas dari animasi membawa di atas animasi berjalan.</p> 
+       <p>Anda dapat menerapkan masking ke klip animasi baik selama waktu impor, atau saat runtime. Masking selama waktu impor lebih disukai, karena memungkinkan data animasi yang dibuang untuk dihilangkan dari build Anda, membuat file lebih kecil dan karenanya menggunakan memori lebih sedikit. Hal ini juga membuat untuk pemrosesan lebih cepat karena ada sedikit data animasi yang akan dipadukan pada runtime. Dalam beberapa kasus, masking impor mungkin tidak cocok untuk tujuan Anda. Dalam hal itu, Anda dapat menerapkan masker pada runtime dengan membuat Aset <span class="tooltip"><strong>Avatar Mask</strong><span class="tooltiptext">Spesifikasi untuk bagian tubuh mana yang termasuk atau dikecualikan untuk rig animasi. Digunakan dalam Lapisan Animasi dan di importir. <a class="tooltipMoreInfoLink" href="class-AvatarMask.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#AvatarMask">Glossary</a></span></span></span>, dan <a href="AnimationLayers.html">menggunakannya dalam pengaturan lapisan</a> dari <span class="tooltip"><strong>Animator Controller</strong><span class="tooltiptext">Kontrol animasi melalui Lapisan Animasi dengan Mesin Negara Animasi dan Pohon Animasi Blend, dikendalikan oleh Parameter Animasi. Pengontrol Animator yang sama dapat direferensikan oleh beberapa model dengan komponen Animator. <a href="class-AnimatorController.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnimatorController">Glossary</a></span></span></span> Anda.</p> 
+       <p>Untuk membuat aset Avatar Mask kosong, Anda dapat:</p> 
+       <ul> 
+        <li>Pilih <strong>Create</strong> &gt; <strong>Avatar Mask</strong> dari menu <span class="tooltip"><strong>Assets</strong><span class="tooltiptext">Setiap media atau data yang dapat digunakan dalam permainan atau proyek Anda. Aset mungkin berasal dari file yang dibuat di luar Unity, seperti model 3D, file audio atau gambar. Anda juga dapat membuat beberapa jenis aset di Unity, seperti Pengontrol Animator, Audio Mixer atau Tekstur Render. <a class="tooltipMoreInfoLink" href="AssetWorkflow.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Asset">Glossary</a></span></span></span>.</li> 
+        <li>Klik objek Model yang ingin Anda tentukan masker pada tampilan <span class="tooltip"><strong>Project</strong><span class="tooltiptext">Dalam Unity, Anda menggunakan proyek untuk merancang dan mengembangkan permainan. Proyek menyimpan semua file yang terkait dengan permainan, seperti file aset dan Adegan. <a class="tooltipMoreInfoLink" href="2Dor3D.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Project">Glossary</a></span></span></span>, lalu klik kanan dan pilih <strong>Create</strong> &gt; <strong>Avatar Mask</strong>.</li> 
+       </ul> 
+       <p>Aset baru muncul dalam pandangan <strong>Project</strong>:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ConfiguringtheAvatar-Mask.png" alt="The Avatar Mask window"> 
+        <figcaption>
+          WordPress.org 
+        </figcaption> 
+       </figure> 
+       <p>Anda sekarang dapat <a class="tooltipMoreInfoLink" href="class-AvatarMask.html">tambahkan bagian tubuh ke masker</a> dan kemudian menambahkan masker ke <span class="tooltip"><a href="AnimationLayers.html">Lapisan Animasi</a><span class="tooltiptext">Lapisan Animasi mengandung Mesin Negara Animasi yang mengontrol animasi model atau bagian darinya. Contoh ini adalah jika Anda memiliki lapisan tubuh penuh untuk berjalan atau melompat dan lapisan yang lebih tinggi untuk gerakan tubuh atas seperti membuang objek atau menembak. Lapisan yang lebih tinggi mengambil precedence untuk bagian tubuh yang mereka kontrol. <a href="AnimationLayers.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#AnimationLayer">Glossary</a></span></span></span> atau menambahkan referensi ke bawah bagian <span class="tooltip"><a href="AnimationMaskOnImportedClips.html">Mask</a><span class="tooltiptext">Dapat merujuk pada Masker Sprite, Masker UI, atau Masker Lapisan <a href="script-Mask.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mask">Glossary</a></span></span></span> dari <a href="class-AnimationClip.html">Animasi tab</a>.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="ImportingModelFiles.html"></a></span> 
+         <div class="tip">
+           Mengimpor model 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="GenericAnimations.html"></a></span> 
+         <div class="tip">
+           Mengimpor model dengan animasi non-humanoid (generic) 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

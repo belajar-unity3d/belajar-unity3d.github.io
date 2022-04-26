@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Menggunakan Kamera Fisik</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="CamerasOverview.html">Kamera</a></li> 
+         <li>Menggunakan Kamera Fisik</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="MultipleCameras.html"></a></span> 
+          <div class="tip">
+            Menggunakan lebih dari satu kamera 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="SL-CameraDepthTexture.html"></a></span> 
+          <div class="tip">
+            Kamera dan tekstur kedalaman 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Menggunakan Kamera Fisik</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Sifat <a class="tooltipMoreInfoLink" href="class-Camera.html">kamera komponen</a> Fisik <span class="tooltip"><strong>Camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span> mensimulasikan format kamera dunia nyata pada kamera Unity. Ini berguna untuk mengimpor informasi kamera dari aplikasi model 3D yang juga meniru kamera dunia nyata.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/InspectorCameraPhysCam.png" alt=""> 
+       </figure> 
+       <p>Unity menyediakan pengaturan yang sama seperti pengaturan kamera fisik aplikasi model 3D. Dua sifat utama yang mengontrol apa tampilan kamera adalah <strong>Focal Length</strong> dan <strong>Sensor Size</strong>.</p> 
+       <ul> 
+        <li> <p>Sitemap Jarak antara sensor dan lensa kamera. Ini menentukan bidang pandang vertikal. Ketika kamera Unity adalah dalam mode Kamera Fisik, mengubah Panjang Focal juga mengubah bidang tampilan sesuai. Panjang fokus yang lebih kecil menghasilkan bidang pandang yang lebih besar, dan sebaliknya.<strong>Focal Length:</strong> The distance between the sensor and the camera lens. This determines the vertical field of view. When a Unity camera is in Physical Camera mode, changing the Focal Length also changes the field of view accordingly. Smaller focal lengths result in a larger field of view, and vice versa.</p> 
+         <figure> 
+          <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PhysCamAttributes.png" alt="The relationship between a cameras focal length, field of view, and sensor size"> 
+          <figcaption>
+            Hubungan antara panjang fokus kamera, bidang tampilan, dan ukuran sensor 
+          </figcaption> 
+         </figure> </li> 
+        <li><p>Sitemap Lebar dan tinggi sensor yang menangkap gambar. Ini menentukan <strong>Sensor Size:</strong> kamera fisik. Anda dapat memilih dari beberapa ukuran sensor preset yang sesuai dengan format kamera dunia nyata, atau mengatur ukuran kustom. Ketika rasio aspek sensor berbeda dengan rasio aspek rendered, sebagaimana diatur dalam pandangan Game, Anda dapat mengontrol bagaimana Unity sesuai dengan gambar kamera ke gambar rendered (lihat informasi pada <span class="tooltip"><strong>aspect ratio</strong><span class="tooltiptext">Hubungan dimensi proporsional gambar, seperti lebar dan tingginya.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AspectRatio">Glossary</a></span></span></span>, di bawah).<a href="#GateFit">Gerbang Fit</a>, below).</p></li> 
+       </ul> 
+       <p><a name="LensShift"></a></p> 
+       <h2>Pergeseran lensa</h2> 
+       <p> <strong>Lens Shift</strong> mengimbangi lensa kamera dari sensornya secara horizontal dan vertikal. Ini memungkinkan Anda untuk mengubah pusat fokus, dan memposisikan subjek dalam bingkai rendered, dengan sedikit atau tidak ada distorsi.</p> 
+       <p>Teknik ini umum dalam fotografi arsitektur. Misalnya, jika Anda ingin menangkap bangunan tinggi, Anda bisa memutar kamera. Tapi itu mendistorsi gambar, membuat garis paralel muncul untuk cembung.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LensShift_VRot.png" alt="Rotating the camera up to capture the top of the building causes vertical lines to converge"> 
+        <figcaption>
+          Memutar kamera hingga menangkap bagian atas bangunan menyebabkan garis vertikal untuk cembung 
+        </figcaption> 
+       </figure> 
+       <p>Jika Anda menggeserkan lensa menjadi alih-alih memutar kamera, Anda dapat mengubah komposisi gambar untuk menyertakan bagian atas bangunan, tetapi garis paralel tetap lurus.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LensShift_VShift.png" alt="Shifting the lens along the Y axis moves the focal center, but keeps vertical lines straight"> 
+        <figcaption>
+          Pergeseran lensa di sepanjang sumbu Y bergerak pusat fokus, tetapi menjaga garis vertikal lurus 
+        </figcaption> 
+       </figure> 
+       <p>Demikian pula, Anda dapat menggunakan pergeseran lensa horisontal untuk menangkap benda yang luas tanpa distorsi Anda mungkin mendapatkan dengan memutar kamera.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LensShift_HRot.png" alt=""> 
+       </figure> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LensShift_HShift.png" alt="Rotating the camera (top) to frame the building causes horizontal lines to converge. Shifting the lens horizontally instead (bottom) reframes the image, but keeps the horizontal lines straight."> 
+        <figcaption>
+          Memutar kamera (top) untuk membingungkan bangunan menyebabkan garis horizontal untuk cembung. Pergeseran lensa secara horizontal bukan (bottom) reframe gambar, tetapi tetap garis horizontal lurus. 
+        </figcaption> 
+       </figure> 
+       <h3>Pergeseran lensa dan ketajaman frustum</h3> 
+       <p>Satu efek samping dari pergeseran lensa adalah bahwa itu membuat oblique <a href="UnderstandingFrustum.html">view frustum</a> kamera. Itu berarti sudut antara garis pusat kamera dan frustum lebih kecil di satu sisi daripada di sisi lain.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ObliqueFrustum_LensShift.png" alt="The images above show the camera frustuim before (left) and after (right) a Y-axis lens shift. Shifting the lens up makes the frustum oblique."> 
+        <figcaption>
+          Gambar di atas menunjukkan frustuim kamera sebelum (kiri) dan setelah (kanan) pergeseran lensa sumbu Y. Pergeseran lensa sehingga membuat frustum oblique. 
+        </figcaption> 
+       </figure> 
+       <p>Anda dapat menggunakan ini untuk membuat efek visual berdasarkan perspektif. Misalnya, dalam permainan balap, Anda mungkin ingin menjaga perspektif rendah ke tanah. Pergeseran lensa adalah cara untuk mencapai frustum miring tanpa scripting.</p> 
+       <p>Untuk informasi lebih lanjut, lihat dokumentasi pada <a href="ObliqueFrustum.html">Menggunakan Frustum Oblique</a>.</p> 
+       <p><a name="GateFit"> </a></p> 
+       <h2>Gerbang Fit</h2> 
+       <p>Properti <strong>Gate Fit</strong> komponen kamera menentukan apa yang terjadi ketika tampilan Game dan sensor kamera fisik memiliki rasio aspek yang berbeda.</p> 
+       <p>Dalam mode <strong>Physical Camera</strong>, kamera memiliki dua "gates. Sitemap</p> 
+       <ul> 
+        <li><p>Area yang diberikan dalam pandangan Game, sesuai dengan resolusi yang Anda atur dalam menu drop-down <strong>Aspect</strong>, disebut "pintu resolusi".</p></li> 
+        <li><p>Area bahwa kamera benar-benar melihat, sebagaimana didefinisikan oleh sifat <strong>Sensor Size</strong>, disebut "pusat film".</p></li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/GateFitGates.png" alt="An example of resolution gate vs. film gate when the two gates have different aspect ratios"> 
+        <figcaption>
+          Contoh gerbang resolusi vs. gerbang film ketika kedua gerbang memiliki rasio aspek yang berbeda 
+        </figcaption> 
+       </figure> 
+       <p>Ketika kedua gerbang memiliki rasio aspek yang berbeda, Unity “fits” gerbang resolusi ke gerbang film. Ada beberapa mode yang cocok, tetapi mereka semua menghasilkan satu dari tiga hasil.</p> 
+       <ul> 
+        <li>Sitemap Ketika gerbang film melebihi gerbang resolusi setelah pas, render pandangan Game sebanyak gambar kamera sesuai dengan rasio aspek, dan memotong sisa.<strong>Cropping:</strong> When the film gate exceeds the resolution gate after fitting, the Game view renders as much of the camera image as fits within its aspect ratio, and cuts off the rest.</li> 
+        <li>Sitemap Ketika gerbang film melebihi gerbang resolusi setelah pas, tampilan Game masih melakukan perhitungan rendering untuk bagian dari <strong>Overscanning:</strong> yang jatuh di luar bidang tampilan kamera.<span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> that fall outside the camera’s field of view.</li> 
+        <li>Sitemap Tampilan Game render gambar kamera penuh, diregangkan secara horizontal atau vertikal agar sesuai dengan rasio aspeknya.<strong>Stretching:</strong> The Game view renders the full camera image, stretched either horizontally or vertically to fit its aspect ratio.</li> 
+       </ul> 
+       <p>Untuk melihat gerbang di <span class="tooltip"><strong>Scene view</strong><span class="tooltiptext">Tampilan interaktif ke dunia yang Anda buat. Anda menggunakan Adegan Lihat untuk memilih dan posisi pemandangan, karakter, kamera, lampu, dan semua jenis lain dari Game Object. <a class="tooltipMoreInfoLink" href="UsingTheSceneView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#SceneView">Glossary</a></span></span></span>, dan lihat bagaimana mereka cocok bersama-sama, pilih kamera dan melihat pandangannya frustum. Gerbang resolusi adalah <span class="tooltip"><strong>clipping plane</strong><span class="tooltiptext">Pesawat yang membatasi seberapa jauh atau menutup kamera dapat melihat dari posisi saat ini. Berbagai tampilan kamera adalah antara pesawat klip jauh dan dekat. Lihat pesawat klip jauh dan dekat pesawat kliping. <a href="class-Camera.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#clippingplane">Glossary</a></span></span></span> kamera. Gerbang film adalah persegi panjang kedua di dasar frustum.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/GateFitUI.png" alt="In the example above, the outer rectangle (A) at the base of the camera’s view frustum is the resolution gate. The inner rectangle (B) is the film gate"> 
+        <figcaption>
+          Dalam contoh di atas, persegi panjang luar (A) di dasar pandangan kamera frustum adalah gerbang resolusi. persegi panjang bagian dalam (B) adalah gerbang film 
+        </figcaption> 
+       </figure> 
+       <h3>Mode Fit Gerbang</h3> 
+       <p>Modus <strong>Gate Fit</strong> yang Anda pilih menentukan bagaimana Unity mengubah gerbang resolusi (dan akibatnya, pandangan kamera frustum). Gerbang film selalu memiliki ukuran yang sama.</p> 
+       <p>Bagian berikut memberikan rincian lebih lanjut pada setiap mode Gerbang Fit.</p> 
+       <h3>Vertical</h3> 
+       <p>Ketika <strong>Gate Fit</strong> diatur ke <strong>Vertical</strong>, Unity cocok dengan gerbang resolusi ke ketinggian (sumbu Y) dari gerbang film. Setiap perubahan yang Anda buat ke lebar sensor (<strong>Sensor Size &gt; X</strong>) tidak berpengaruh pada gambar yang diberikan.</p> 
+       <p>Jika rasio aspek sensor lebih besar dari rasio aspek tampilan game, menyatukan gambar yang diberikan di sisi:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/GateFitV_600x900_16mm.png" alt="Gate Fit set to Vertical: Resolution gate aspect ratio is 0.66:1 (600 x 900 px). Film gate aspect ratio is 1.37:1 (16mm). The red areas indicate where Unity crops the image in the Game view."> 
+        <figcaption> 
+         <strong>Gate Fit</strong> set ke 
+         <strong>Vertical</strong>: Rasio aspek gerbang resolusi adalah 0,66: 1 (600 x 900 px). Rasio aspek gerbang film adalah 1.37: 1 (16mm). Area merah menunjukkan di mana tanaman Unity gambar dalam pandangan Game. 
+        </figcaption> 
+       </figure> 
+       <p>Jika rasio aspek sensor lebih kecil dari rasio aspek tampilan permainan, Unity overscans gambar rendered di sisi:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/GateFitV_16-9_16mm.png" alt="Gate Fit set to Vertical: Resolution gate aspect ratio is 16:9. Film gate aspect ratio is 1.37:1 (16mm). The green areas indicate where Unity overscans the image in the Game view."> 
+        <figcaption> 
+         <strong>Gate Fit</strong> set ke 
+         <strong>Vertical</strong>: Rasio aspek gerbang resolusi adalah 16: 9. Rasio aspek gerbang film adalah 1.37: 1 (16mm). Area hijau menunjukkan di mana Unity overscans gambar dalam pandangan Game. 
+        </figcaption> 
+       </figure> 
+       <h3>Horizontal</h3> 
+       <p>Ketika <strong>Gate Fit</strong> diatur ke <strong>Horizontal</strong>, Unity cocok dengan gerbang resolusi ke lebar (sumbu X) dari gerbang film. Setiap perubahan yang Anda buat pada ketinggian sensor (Sensor Size &gt; Y) tidak berpengaruh pada gambar yang diberikan.</p> 
+       <p>Jika rasio aspek sensor lebih besar dari rasio aspek pandangan Game, Unity overscans gambar rendered di bagian atas dan bawah:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/GateFitH_600x900_16mm.png" alt="Gate Fit is set to Horizontal: Resolution gate aspect ratio is 0.66:1 (600 x 900 px). Film gate aspect ratio is 1.37:1 (16mm). The green areas indicate where Unity overscans the image in the Game view."> 
+        <figcaption> 
+         <strong>Gate Fit</strong> diatur ke 
+         <strong>Horizontal</strong>: Rasio aspek gerbang resolusi adalah 0,66: 1 (600 x 900 px). Rasio aspek gerbang film adalah 1.37: 1 (16mm). Area hijau menunjukkan di mana Unity overscans gambar dalam pandangan Game. 
+        </figcaption> 
+       </figure> 
+       <p>Jika rasio aspek sensor lebih kecil dari rasio aspek tampilan permainan, gambar rendered dirajut di bagian atas dan bawah.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/GateFitH_16-9_16mm.png" alt="Gate Fit set to Horizontal: Resolution gate aspect ratio is 16:9. Film gate aspect ratio is 1.37:1 (16mm). The red areas indicate where Unity crops the image in the Game view."> 
+        <figcaption> 
+         <strong>Gate Fit</strong> set ke 
+         <strong>Horizontal</strong>: Rasio aspek gerbang resolusi adalah 16: 9. Rasio aspek gerbang film adalah 1.37: 1 (16mm). Area merah menunjukkan di mana tanaman Unity gambar dalam pandangan Game. 
+        </figcaption> 
+       </figure> 
+       <h3>None</h3> 
+       <p>Ketika Gerbang Fit diatur ke None, Unity cocok dengan gerbang resolusi ke lebar dan tinggi (X dan Y axes) dari gerbang film. Unity meregangkan gambar yang diberikan agar sesuai dengan rasio aspek tampilan Game.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/GateFitF_16mm.png" alt="No gate fit. The camera uses the film gate aspect ratio of 1.37:1 (16mm), and stretches the image horizontally to fit a Game view aspect ratio of 16:9 (left) and vertically to fit a game view aspect ratio of 0.66:1 (right)"> 
+        <figcaption>
+          Tidak ada fit gerbang. Kamera menggunakan rasio aspek gerbang film 1.37: 1 (16mm), dan meregangkan gambar secara horizontal agar sesuai dengan rasio aspek Game view 16:9 (kiri) dan secara vertikal sesuai dengan rasio aspek tampilan permainan 0,66: 1 (kanan) 
+        </figcaption> 
+       </figure> 
+       <h3>Isi dan Overscan</h3> 
+       <p>Ketika <strong>Gate Fit</strong> diatur ke <strong>Fill</strong> atau <strong>Overscan</strong>, Unity secara otomatis melakukan fit vertikal atau horisontal, tergantung pada rasio aspek gerbang resolusi dan gerbang film.</p> 
+       <ul> 
+        <li> <strong>Fill</strong> cocok dengan gerbang resolusi ke sumbu kecil gerbang film, dan merajut sisa gambar kamera.</li> 
+        <li> <strong>Overscan</strong> cocok dengan gerbang resolusi ke sumbu yang lebih besar dan overscans area di luar batas gambar kamera.</li> 
+       </ul> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2018–10–05 Login</span></p></li> 
+        <li><p><span class="page-history">Opsi Kamera Fisik ditambahkan dalam <span class="search-words">NewIn20182</span></span></p></li> 
+        <li><p><span class="page-history">Opsi Gerbang Fit ditambahkan dalam Unity 2018.3</span></p></li> 
+       </ul> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="MultipleCameras.html"></a></span> 
+         <div class="tip">
+           Menggunakan lebih dari satu kamera 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="SL-CameraDepthTexture.html"></a></span> 
+         <div class="tip">
+           Kamera dan tekstur kedalaman 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

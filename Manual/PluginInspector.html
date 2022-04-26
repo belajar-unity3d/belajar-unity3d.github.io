@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Impor dan mengkonfigurasi plug-ins</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="core" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="ScriptingSection.html">Scripting</a></li> 
+         <li><a href="Plugins.html">Plug-ins</a></li> 
+         <li>Impor dan mengkonfigurasi plug-ins</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="Plugins.html"></a></span> 
+          <div class="tip">
+            Plug-ins 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UsingDLL.html"></a></span> 
+          <div class="tip">
+            Managed plug-ins 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Impor dan mengkonfigurasi plug-ins</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Jika Anda memiliki <span class="tooltip"><a class="tooltipMoreInfoLink" href="UsingDLL.html">managed plug-in</a><span class="tooltiptext">Sitemap Perakitan NET yang dibuat dengan alat seperti Visual Studio untuk digunakan di Unity. <a href="Plugins.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Managedplug-in">Glossary</a></span></span></span> atau <span class="tooltip"><a href="NativePlugins.html">plug-in asli</a><span class="tooltiptext">Perpustakaan kode asli spesifik platform yang diciptakan di luar Unity untuk digunakan di Unity. Memungkinkan Anda dapat mengakses fitur seperti panggilan OS dan perpustakaan kode pihak ketiga yang tidak akan tersedia untuk Unity. <a href="Plugins.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Nativeplug-in">Glossary</a></span></span></span>, Anda dapat mengimpornya ke Unity, kemudian mengkonfigurasinya. Dalam Editor, <span class="tooltip"><strong>plug-in</strong><span class="tooltiptext">Satu set kode yang dibuat di luar Unity yang menciptakan fungsi dalam Unity. Ada dua jenis plug-ins yang dapat Anda gunakan di Unity: Managed plug-ins (diproduksi. Rakitan NET dibuat dengan alat-alat seperti Studio Visual) dan plug-ins asli (pustaka kode asli yang spesifik platform). <a href="Plugins.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Plug-in">Glossary</a></span></span></span> diperlakukan sebagai aset, mirip dengan skrip, dan Anda dapat mengkonfigurasinya di jendela Inspektur.</p> 
+       <p>Anda dapat menggunakan konfigurasi plug-in untuk menentukan di mana plug-in berjalan; platform dan konfigurasi platform mana, serta di bawah kondisi mana</p> 
+       <h2>Impor plug-in</h2> 
+       <p>Cara paling sederhana untuk mengimpor plug-in ke proyek Anda adalah untuk mengklik dan menyeret plug-in ke folder Aset atau salah satu subfolder. Unity mengenali jenis file dan folder tertentu sebagai plug-ins. Ini juga dapat menerapkan pengaturan default yang sesuai dengan platform yang dimaksudkan plug-in.</p> 
+       <h3>Jenis file plug-in yang didukung dan folder</h3> 
+       <p>Unity memperlakukan file dengan ekstensi berikut sebagai plug-in:</p> 
+       <ul> 
+        <li>a</li> 
+        <li>.aar</li> 
+        <li>.bc</li> 
+        <li>.c</li> 
+        <li>.cc</li> 
+        <li>.cpp</li> 
+        <li>.dll</li> 
+        <li>.def</li> 
+        <li>.dylib</li> 
+        <li>.h</li> 
+        <li>.jar</li> 
+        <li>.jslib</li> 
+        <li>.jspre</li> 
+        <li>.m</li> 
+        <li>.mm</li> 
+        <li>.prx</li> 
+        <li>.rpl</li> 
+        <li>.so</li> 
+        <li>.sprx</li> 
+        <li>.suprx</li> 
+        <li>.swift</li> 
+        <li>.winmd</li> 
+        <li>.xex</li> 
+        <li>.xib</li> 
+       </ul> 
+       <p>Unity juga memperlakukan folder tertentu sebagai plug-in yang dibundel. Unity tidak mencari file plug-in tambahan dalam folder ini, sehingga semua dalam folder dianggap satu plug-in. Unity memperlakukan folder dengan ekstensi berikut sebagai plug-in yang dibundel:</p> 
+       <ul> 
+        <li>.androidlib</li> 
+        <li>.bundle</li> 
+        <li>.framework</li> 
+        <li>.plugin</li> 
+       </ul> 
+       <h3>Pengaturan default plug-in</h3> 
+       <p>Unity secara otomatis menerapkan pengaturan default spesifik platform ke plug-in jika jalur plug-in dalam folder Aset sesuai dengan pola spesifik platform. Jika jalan tidak cocok dengan pola, Unity menerapkan pengaturan default platform Editor ke plug-in.</p> 
+       <p>Tabel berikut menunjukkan pola jalan Kesatuan mengenali. Pelabuhan jalur yang muncul dalam kurung adalah opsional. Ketika jalan termasuk titik ganda, dapat mencakup lebih banyak folder.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Folder path patterns</strong></th> 
+          <th style="text-align:left;"><strong>Default settings</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Assets/../Editor/(x86</strong> atau <strong>x86_64 or x64)</strong> </td> 
+          <td style="text-align:left;"> <strong>Platform</strong>: Editor hanya<br><br><strong>CPU</strong> (opsional): Berdasarkan subfolder, jika ada.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Assets/../Plugins/(x86_64</strong> atau <strong>x86 or x64)</strong> </td> 
+          <td style="text-align:left;"> <strong>Platform</strong>: Windows, Linux dan macOS<br><br><strong>CPU</strong> (opsional): Berdasarkan subfolder, jika ada.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Assets/Plugins/iOS</strong></td> 
+          <td style="text-align:left;"> <strong>Platform</strong>: Login</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Assets/Plugins/WSA/(SDK80</strong> <strong>SDK81</strong> atau <strong>PhoneSDK81)/(x86</strong> atau <strong>ARM)</strong> </td> 
+          <td style="text-align:left;"> <strong>Platform</strong>: Universal Windows Platform<br><br><strong>SDK</strong> (opsional): Berdasarkan subfolder, jika ada. Untuk alasan kompatibilitas, SDK81 adalah Win81, TeleponSDK81 adalah WindowsPhone81.<br><br><strong>CPU</strong> (opsional): Berdasarkan subfolder, jika present<br><br><strong>Note</strong>: Anda dapat menggunakan kata kunci <strong>Metro</strong> bukan <strong>WSA</strong>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Mengubah pengaturan plug-in</h2> 
+       <p>Dalam Unity, plug-ins baik <strong>managed</strong> atau <strong>native</strong>. Tabel berikut menunjukkan pengaturan mana yang relevan untuk setiap jenis plug-in:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Setting</strong></th> 
+          <th style="text-align:left;"><strong>Managed</strong></th> 
+          <th style="text-align:left;"><strong>Native</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Select platforms for plugin</strong></td> 
+          <td style="text-align:left;">x</td> 
+          <td style="text-align:left;">x</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Platform settings</strong></td> 
+          <td style="text-align:left;">x</td> 
+          <td style="text-align:left;">x</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Asset Labels</strong></td> 
+          <td style="text-align:left;">x</td> 
+          <td style="text-align:left;">x</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Asset Bundles</strong></td> 
+          <td style="text-align:left;">x</td> 
+          <td style="text-align:left;">x</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>General</strong></td> 
+          <td style="text-align:left;">x</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Define Constraints</strong></td> 
+          <td style="text-align:left;">x</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Plugin load settings</strong></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">x</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Untuk melihat dan mengubah pengaturan plug-in di <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>, pilih file plug-in di jendela <strong>Project</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PlugInsCombined.png" alt="Settings for a managed plug-in (left) and a native plug-in (right)."> 
+        <figcaption>
+          Pengaturan untuk plug-in yang dikelola (kiri) dan plug-in asli (kanan). 
+        </figcaption> 
+       </figure> 
+       <h2>Sitemap Pengaturan plug-in umum<a name="platform"></a> Common plug-in settings</h2> 
+       <p> <strong>Select platform for plugin</strong> dan <strong>Platform settings</strong> menentukan di mana membangun Unity termasuk plug-in.</p> 
+       <p>Tabel berikut menjelaskan pengaturan umum.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Setting</strong></th> 
+          <th style="text-align:left;"><strong>Options</strong></th> 
+          <th style="text-align:left;"><strong>Notes</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Select platforms for plugin</strong></td> 
+          <td style="text-align:left;">• <strong>Editor</strong>: Untuk bermain mode dan untuk skrip yang berjalan pada waktu edit. <br>• <strong>Standalone</strong>: Windows, Linux dan macOS.<br>• Setiap platform termasuk dalam instalasi Unity Anda, seperti Android, iOS dan WebGL.</td> 
+          <td style="text-align:left;" colspan="2">Untuk memungkinkan plug-in untuk bekerja dengan platform yang tidak termasuk dalam Unity namun, periksa <strong>Any Platform</strong>. Anda dapat mengecualikan platform individu jika Anda tidak mendukungnya.<br><br> Ketika Anda mengimpor plug-in, Unity memuatnya ke dalam memori. Plug-in asli tidak dapat dibongkar; tetap dimuat dalam sesi Unity bahkan setelah Anda mengubah pengaturannya. Untuk membongkar plug-in, Anda harus restart Unity.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Platform settings</strong></td> 
+          <td style="text-align:left;" colspan="3">Untuk setiap platform yang Anda pilih, Anda dapat menentukan kondisi tambahan, seperti arsitektur CPU dan ketergantungan. Unity hanya menunjukkan pengaturan yang berlaku untuk platform Anda dan, di mana mungkin, untuk jenis plug-in spesifik Anda di platform itu. Misalnya, file plug-in asli dengan ekstensi .dll dapat berjalan hanya pada Windows, sehingga Unity hanya menunjukkan pengaturan Windows.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Editor</td> 
+          <td style="text-align:left;">• CPU arsitektur<br>• OS</td> 
+          <td style="text-align:left;">Kebanyakan plug-ins yang dikelola kompatibel dengan CPU dan OS.<br><br>Most plug-ins asli hanya kompatibel dengan satu OS dan, tergantung pada bagaimana mereka dikompilasi, mungkin kompatibel dengan hanya arsitektur CPU tunggal.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Windows, Linux dan macOS</td> 
+          <td style="text-align:left;">• CPU arsitektur<br>• OS</td> 
+          <td style="text-align:left;">Perpustakaan yang terkelola biasanya kompatibel dengan arsitektur OS dan CPU, kecuali mereka mengakses API sistem tertentu. perpustakaan kapasemen<br><br>Native libraries are only compatible with a single OS, but can be compatible with the 32-bit, the 64-bit, or both CPU architectures.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="no tooltip">Windows Server</span></td> 
+          <td style="text-align:left;" colspan="2">See <a href="windowsstore-plugins-il2cpp.html">Platform Windows Universal: Plugin pada Scripting IL2CPP</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Android</td> 
+          <td style="text-align:left;">Sinyal CPU</td> 
+          <td style="text-align:left;">Arsitektur CPU harus sesuai dengan arsitektur bahwa perpustakaan disusun untuk. Unity tidak memvalidasi pengaturan Anda.<br><br> Lihat juga: <a href="AndroidAARPlugins.html">AAR plug-ins dan Android Perpustakaan</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">iOS dan tvOS</td> 
+          <td style="text-align:left;">• Ketergantungan kerangka<br>• Tambahkan ke Binaris Tertanam<br>• Bendera compile</td> 
+          <td style="text-align:left;">Ketika Anda memilih opsi <strong>Add to Embedded Binaries</strong>, Unity menetapkan opsi proyek Xcode untuk menyalin file plug-in ke paket aplikasi akhir. Lakukan ini untuk:<br>• Perpustakaan yang dimuat secara dinamis. Login Bundel dan kerangka yang mengandung perpustakaan yang dimuat secara dinamis. Login Setiap aset dan sumber daya yang perlu dimuat pada waktu berjalan.<br><br> Dalam bidang <br><br>In the <strong>Compile Flags</strong> field, set the compile flags for plug-in source code files that Unity must compile as part of the build.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p> <strong>Tip</strong>: Untuk informasi pada pengaturan umum lainnya, lihat <a href="AssetBundlesIntro.html">Asset Bundles</a> dan <a href="Searching.html">Mencari di Editor</a>.</p> 
+       <h3>Pengaturan plug-in yang terkelola</h3> 
+       <p>Plug-ins yang dikelola dapat menjadi perpustakaan pihak ketiga atau rakitan pengguna yang ingin Anda masukkan dalam proyek.</p> 
+       <h3>Umum - Referensi Otomatis</h3> 
+       <p>Pengaturan <strong>Auto Reference</strong> mengontrol bagaimana definisi perakitan dalam referensi proyek file plug-in. Ketika Anda mengaktifkan Referensi Otomatis, semua assemblies dan definisi perakitan yang telah ditentukan secara otomatis merujuk file plug-in.</p> 
+       <p> <strong>Auto Reference</strong> diaktifkan secara default.</p> 
+       <p>Untuk membatasi lingkup di mana plug-in dapat direferensikan, menonaktifkan Auto Reference. Anda kemudian perlu secara eksplisit menyatakan semua referensi ke plug-in. Anda mungkin ingin melakukan ini jika:</p> 
+       <ul> 
+        <li>Anda ingin mencegah <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> dari kesalahan menggunakan plug-in.</li> 
+        <li>Anda iterating di plug-in dan ingin mengurangi waktu kompilasi. Jika Anda secara eksplisit mendeklarasikan plug-in, Unity recompiles hanya rakitan tergantung, bukan seluruh proyek Anda.</li> 
+        <li>Anda ingin mencegah plug-ins yang digunakan dalam <a href="AssetStorePackages.html">Paket Asset Store</a> dari konflik dengan kode lain dalam proyek ke mana paket diimpor.</li> 
+       </ul> 
+       <p>Ketika Anda menonaktifkan Unity <strong>Auto Reference</strong> tidak dapat merujuk plug-in dari rakitan yang telah ditentukan itu menciptakan untuk proyek Anda. Rakitan yang telah ditentukan ini mengandung semua skrip dalam proyek Anda yang belum ditugaskan ke perakitan lain menggunakan file definisi perakitan. Untuk kelas referensi, fungsi, atau sumber daya lainnya dari plug-in yang memiliki properti <strong>Auto Reference</strong> dinonaktifkan, kode referensi harus dalam perakitan yang dibuat dengan file definisi perakitan. Misalnya, jika set skrip dalam proyek Anda menggunakan plug-in, Anda harus membuat file definisi perakitan untuk skrip tersebut, dan tambahkan referensi eksplisit ke plug-in dalam file definisi.</p> 
+       <p>Lebih dari satu perakitan dapat menggunakan plug-in, tetapi semua rakitan harus secara eksplisit menyatakan ketergantungan. Untuk mempelajari lebih lanjut tentang definisi perakitan di Unity, lihat <a href="ScriptCompilationAssemblyDefinitionFiles.html">Definisi perakitan</a>.</p> 
+       <p> <strong>Note</strong>: Opsi <strong>Auto Reference</strong> tidak berpengaruh pada apakah file disertakan dalam build. Untuk mengontrol Pengaturan Build untuk penggunaan plug-ins <a href="#platform">Pengaturan platform</a>.</p> 
+       <h3>Umum - Validate Referensi</h3> 
+       <p>Unity dapat memeriksa referensi plug-in Anda tersedia dalam proyek. Jika Anda tidak melakukan validasi ini, pengguna dapat menemukan kesalahan runtime ketika aplikasi mencoba menggunakan referensi yang hilang.</p> 
+       <p>Aktifkan opsi <strong>Validate References</strong> untuk memeriksa:</p> 
+       <ul> 
+        <li>Apakah referensi plug-in ada. Misalnya, jika plug-in Anda referensi plug-in Newtonsoft. Json.dll Json.dll</li> 
+        <li>Apakah referensi yang kuat akan dapat memuat. Hal ini penting karena referensi yang kuat harus sesuai dengan versi. Misalnya, jika Anda mengkompilasi plug-in dengan referensi ke versi "b.dll" 2.0.0, versi itu harus dalam proyek.</li> 
+       </ul> 
+       <p>Jika Anda tidak ingin memeriksa referensi yang kuat, tetapi masih ingin memeriksa referensi itu ada:</p> 
+       <ol> 
+        <li>Inspektur <strong>Plugin</strong>, memungkinkan <strong>Validate References</strong>.</li> 
+        <li>Pada <strong>Project Settings</strong> &gt; <strong>Player</strong> &gt; <strong>Other Settings</strong> &gt; disable <strong>Assembly Version Validation</strong>.</li> 
+       </ol> 
+       <h3>Define Constraints</h3> 
+       <p>Anda dapat menentukan kondisi di mana Unity memuat plug-in untuk memori dan referensi itu. Kondisi ini adalah simbol yang harus dipenuhi, yang berarti didefinisikan atau tidak ditentukan.</p> 
+       <p>Kontras bekerja seperti #if preprocessor directive di C #, tetapi pada tingkat perakitan bukan tingkat skrip. Anda dapat mempelajari lebih lanjut tentang batasan di <a href="class-AssemblyDefinitionImporter.html">Komponen Definisi Perakitan</a>.</p> 
+       <p>Anda dapat menggunakan simbol bawaan Unity, atau menambahkan simbol di <strong>Project Settings</strong> &gt; <strong>Player</strong> &gt; <strong>Other Settings</strong> &gt; <strong>Script Compilation</strong> &gt; <strong>Scripting Define Symbols</strong> &gt; <a href="PlatformDependentCompilation.html">kompilasi Platform</a>. Simbol yang Anda tambahkan adalah platform spesifik, sehingga Anda perlu mendefinisikannya untuk setiap platform yang relevan. Lihat untuk informasi lebih lanjut, termasuk daftar simbol bawaan.</p> 
+       <p> <strong>Tip</strong>: Untuk menentukan bahwa simbol harus tidak ditentukan, perbaiki dengan ala ! (tanda pameran) simbol.</p> 
+       <p>Dalam contoh berikut, kita ingin Unity untuk memuat dan merujuk plug-in hanya pada runtime skrip non-IL2CPP untuk Unity 2018.3 atau lebih baru. Kami mendefinisikan dua batasan, dan keduanya harus dipenuhi:</p> 
+       <ul> 
+        <li> <code>ENABLE_IL2CPP</code> tidak didefinisikan</li> 
+        <li> <code>UNITY_2018_3_OR_NEWER</code> didefinisikan</li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Define_Constraints.png" alt="Define Constraints for a specific runtime and Unity version"> 
+        <figcaption>
+          Define Constraints untuk versi runtime dan Unity tertentu 
+        </figcaption> 
+       </figure> 
+       <h2>Pengaturan beban plugin - Beban pada startup</h2> 
+       <p>Anda dapat mulai mengeksekusi kode asli yang independen dari awalisasi grafis, skrip, pemuatan aset, <span class="tooltip"><strong>scenes</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>, dan sebagainya. Ini berbeda dengan cara default pemain memuat plug-in asli, yang harus menunggu sampai panggilan pertama ke salah satu fungsi plug-in, biasanya dilakukan oleh skrip.</p> 
+       <p>Untuk memuat plug-ins sebelum aplikasi mengeksekusi skrip apa pun:</p> 
+       <ol> 
+        <li>Menerapkan <code>UnityPluginLoad</code> di plug-in. Sitemap<a href="NativePluginInterface.html">Antarmuka plug-in asli tingkat rendah</a>.</li> 
+        <li>Di Editor, pilih <strong>Plugin load settings</strong> &gt; <strong>Load on startup</strong>.</li> 
+       </ol> 
+       <p> <strong>Tip</strong>: Sebagai contoh dari fungsi plug-in skrip C#, lihat <a href="NativePlugins.html">Catalog</a>.</p> 
+       <!-- area:core --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="Plugins.html"></a></span> 
+         <div class="tip">
+           Plug-ins 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UsingDLL.html"></a></span> 
+         <div class="tip">
+           Managed plug-ins 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

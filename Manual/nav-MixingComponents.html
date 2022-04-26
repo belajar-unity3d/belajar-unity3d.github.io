@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Menggunakan Agen NavMesh dengan Komponen Lain</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Navigation.html">Navigasi dan Pathfinding</a></li> 
+         <li><a href="nav-Overview.html">Navigation Overview</a></li> 
+         <li>Menggunakan Agen NavMesh dengan Komponen Lain</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="nav-AdditiveLoading.html"></a></span> 
+          <div class="tip">
+            Memuat Beberapa NavMeshes menggunakan Pemuatan Aditif 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="class-NavMeshAgent.html"></a></span> 
+          <div class="tip">
+            NavMesh Agent 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Menggunakan Agen NavMesh dengan Komponen Lain</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Anda dapat menggunakan agen <span class="tooltip"><strong>NavMesh</strong><span class="tooltiptext">Sebuah mesh yang Unity menghasilkan perkiraan daerah dan hambatan yang dapat berjalan di lingkungan Anda untuk mencari jalan dan navigasi yang dikendalikan AI. <a class="tooltipMoreInfoLink" href="nav-BuildingNavMesh.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#NavMesh">Glossary</a></span></span></span>, NavMesh Obstacle, dan Off komponen <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mesh">Glossary</a></span></span></span> Link dengan komponen Unity lainnya juga. Berikut adalah daftar dos dan tidak ketika mencampur komponen yang berbeda bersama.</p> 
+       <h2>Agen NavMesh dan Fisika</h2> 
+       <ul> 
+        <li>Anda tidak perlu menambahkan fisika <span class="tooltip"><strong>colliders</strong><span class="tooltiptext">Bentuk tak terlihat yang digunakan untuk menangani tabrakan fisik untuk objek. Seorang sari tidak perlu menjadi bentuk yang sama dengan jala objek - perkiraan kasar sering lebih efisien dan tidak dapat dibedakan dalam gameplay. <a class="tooltipMoreInfoLink" href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Collider">Glossary</a></span></span></span> ke Agen NavMesh untuk mereka untuk menghindari satu sama lain 
+         <ul> 
+          <li>Itu, sistem navigasi mensimulasikan agen dan reaksi mereka terhadap hambatan dan dunia statis. Di sini dunia statis adalah NavMesh panggang.</li> 
+         </ul> </li> 
+        <li>Jika Anda ingin Agen NavMesh untuk mendorong objek fisika atau menggunakan pemicu fisika: 
+         <ul> 
+          <li>Tambahkan komponen Collider (jika tidak ada)</li> 
+          <li>Tambahkan komponen <span class="tooltip"><strong>Rigidbody</strong><span class="tooltiptext">Komponen yang memungkinkan GameObject untuk dipengaruhi oleh gravitasi simulasi dan kekuatan lainnya. <a class="tooltipMoreInfoLink" href="class-Rigidbody.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Rigidbody">Glossary</a></span></span></span> 
+           <ul> 
+            <li>Nyalakan kinematik (Is Kinematik) - ini penting!</li> 
+            <li>Kinematik berarti bahwa tubuh yang kaku dikendalikan oleh sesuatu yang lain dari simulasi fisika</li> 
+           </ul> </li> 
+         </ul> </li> 
+        <li>Jika kedua agen NavMesh dan kaku (non-kinematik) aktif pada saat yang sama, Anda memiliki kondisi ras 
+         <ul> 
+          <li>Kedua komponen dapat mencoba untuk memindahkan agen sama yang mengarah pada perilaku yang tidak ditentukan</li> 
+         </ul> </li> 
+        <li>Anda dapat menggunakan Agen NavMesh untuk bergerak misalnya karakter pemain, tanpa fisika 
+         <ul> 
+          <li>Mengatur prioritas agen pemain untuk nomor kecil (prioritas tinggi), untuk memungkinkan pemain untuk menyikat melalui kerumunan</li> 
+          <li>Pindahkan agen pemain menggunakan <a href="../ScriptReference/AI.NavMeshAgent-velocity.html">NavMeshAgent.velocity</a>, sehingga agen lain dapat memprediksi pergerakan pemain untuk menghindari pemain.</li> 
+         </ul> </li> 
+       </ul> 
+       <h2>Agen NavMesh dan Animator</h2> 
+       <ul> 
+        <li>Agen NavMesh dan Animator dengan <span class="tooltip"><strong>Root Motion</strong><span class="tooltiptext">Gerak simpul akar karakter, apakah itu dikendalikan oleh animasi itu sendiri atau eksternal. <a class="tooltipMoreInfoLink" href="RootMotion.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#RootMotion">Glossary</a></span></span></span> dapat menyebabkan kondisi balap 
+         <ul> 
+          <li>Kedua komponen mencoba untuk memindahkan transformasi setiap bingkai</li> 
+          <li>Dua solusi yang mungkin</li> 
+         </ul>%</li> 
+        <li>Informasi harus selalu mengalir dalam satu arah 
+         <ul> 
+          <li>Baik agen memindahkan karakter dan animasi berikut</li> 
+          <li>Atau animasi bergerak karakter berdasarkan hasil simulasi</li> 
+          <li>Jika tidak, Anda akan berakhir setelah hard ke debug umpan balik loop</li> 
+         </ul> </li> 
+        <li> <em>Animasi berikut agen</em> 
+         <ul> 
+          <li>Gunakan <a href="../ScriptReference/AI.NavMeshAgent-velocity.html">NavMeshAgent.velocity</a> sebagai masukan ke Animator untuk kira-kira mencocokkan pergerakan agen ke animasi</li> 
+          <li>Robust dan sederhana untuk menerapkan, akan mengakibatkan geser kaki di mana animasi tidak dapat mencocokkan kecepatan</li> 
+         </ul> </li> 
+        <li> <em>Agen mengikuti animasi</em> 
+         <ul> 
+          <li>Disable <a href="../ScriptReference/AI.NavMeshAgent-updatePosition.html">NavMeshAgent.updatePosition</a> dan <a href="../ScriptReference/AI.NavMeshAgent-updateRotation.html">NavMeshAgent.updateRotation</a> untuk menipu simulasi dari lokasi objek permainan</li> 
+          <li>Gunakan perbedaan antara posisi agen simulasi (<a href="../ScriptReference/AI.NavMeshAgent-nextPosition.html">NavMeshAgent.nextPosition</a>) dan akar animasi (<a href="../ScriptReference/Animator-rootPosition.html">WordPress.org</a>) untuk menghitung kontrol untuk animasi</li> 
+          <li>Lihat <a href="nav-CouplingAnimationAndNavigation.html">Animasi Kopling dan Navigasi</a> untuk rincian lebih lanjut</li> 
+         </ul> </li> 
+       </ul> 
+       <h2>NavMesh Agen dan NavMesh Obstacle</h2> 
+       <ul> 
+        <li>Jangan bercampur dengan baik! 
+         <ul> 
+          <li>Mengaktifkan keduanya akan membuat agen mencoba untuk menghindari dirinya</li> 
+          <li>Jika ukiran diaktifkan di samping itu, agen mencoba untuk terus-menerus kembali ke tepi lubang yang diukir, bahkan lebih banyak perilaku erron</li> 
+         </ul> </li> 
+        <li>Pastikan hanya salah satu dari mereka aktif pada waktu tertentu 
+         <ul> 
+          <li>Tentukan keadaan, Anda dapat mematikan agen dan menyalakan hambatan untuk memaksa agen lain untuk menghindarinya</li> 
+          <li>Atau Anda dapat menggunakan prioritas untuk membuat agen tertentu untuk dihindari lebih</li> 
+         </ul> </li> 
+       </ul> 
+       <h2>NavMesh Obstacle dan Fisika</h2> 
+       <ul> 
+        <li>Jika Anda ingin objek yang dikendalikan fisika untuk mempengaruhi perilaku NavMesh Agent 
+         <ul> 
+          <li>Tambahkan komponen NavMesh Obstacle ke objek yang agen harus menyadari, ini memungkinkan sistem penghindaran untuk alasan tentang hambatan</li> 
+         </ul> </li> 
+        <li>Jika objek permainan memiliki kaku dan NavMesh Obstacle terpasang, kecepatan rintangan diperoleh dari kakubody secara otomatis 
+         <ul> 
+          <li>Ini memungkinkan Agen NavMesh untuk memprediksi dan menghindari hambatan bergerak</li> 
+         </ul> </li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="nav-AdditiveLoading.html"></a></span> 
+         <div class="tip">
+           Memuat Beberapa NavMeshes menggunakan Pemuatan Aditif 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="class-NavMeshAgent.html"></a></span> 
+         <div class="tip">
+           NavMesh Agent 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

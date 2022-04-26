@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Contoh Dimainkan</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="AnimationSection.html">Animation</a></li> 
+         <li><a href="Playables.html">API documentation</a></li> 
+         <li>Contoh Playables</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="Playables-ScriptPlayable.html"></a></span> 
+          <div class="tip">
+            ScriptPlayable dan PlayableBehaviour 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="AnimationGlossary.html"></a></span> 
+          <div class="tip">
+            Syarat animasi 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Contoh Playables</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <h2>PlayableGraph Visualizer</h2> 
+       <p>Semua contoh dalam dokumen ini menggunakan PlayableGraph Visualizer (Di bawah ini) untuk menggambarkan pohon dan node yang dibuat oleh API <span class="tooltip"><strong>Playables</strong><span class="tooltiptext">API yang menyediakan cara untuk membuat alat, efek atau mekanisme gameplay lainnya dengan mengatur dan mengevaluasi sumber data dalam struktur seperti pohon yang dikenal sebagai PlayableGraph. <a class="tooltipMoreInfoLink" href="Playables.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Playables">Glossary</a></span></span></span>. The <span class="tooltip"><strong>Playable graph</strong><span class="tooltiptext">API untuk mengendalikan Playables. Grafik yang dapat dimainkan memungkinkan Anda untuk membuat, menghubungkan dan menghancurkan playables. <a href="Playables-Graph.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#PlayableGraph">Glossary</a></span></span></span> Visualizer adalah alat yang tersedia melalui GitHub.</p> 
+       <p>Untuk menggunakan PlayableGraph Visualizer:</p> 
+       <ol> 
+        <li><p>Unduh Playable Login Visualizer yang sesuai dengan versi Unity Anda dari <a href="https://github.com/UnityTech/graph-visualizer">Repositori GitHub</a> </p></li> 
+        <li><p>Buka alat dengan memilih <strong>Window</strong> &gt; <strong>PlayableGraph Visualizer</strong> </p></li> 
+        <li><p>Daftarkan grafik Anda menggunakan GraphVisualizerClient. Tampilkan(Bermain Grafik, nama string).</p></li> 
+       </ol> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PlayablesExamples5.png" alt="The GraphVisualizer window"> 
+        <figcaption>
+          The GraphVisualizer window 
+        </figcaption> 
+       </figure> 
+       <p>Playables dalam grafik diwakili oleh node berwarna. intensitas warna kawat menunjukkan berat campuran. Lihat <a href="https://github.com/UnityTech/graph-visualizer">GitHub</a> untuk informasi lebih lanjut tentang alat ini.</p> 
+       <h2>Bermain satu klip animasi pada GameObject</h2> 
+       <p>Contoh ini menunjukkan <code>PlayableGraph</code> sederhana dengan output yang dapat dimainkan tunggal yang terkait dengan satu simpul yang dapat dimainkan. Node yang dapat dimainkan memainkan satu <span class="tooltip"><strong>animation clip</strong><span class="tooltiptext">Animasi data yang dapat digunakan untuk karakter animasi atau animasi sederhana. Ini adalah bagian "unit" sederhana dari gerakan, seperti (salah satu contoh spesifik) "Idle", "Walk" atau "Run". <a class="tooltipMoreInfoLink" href="class-AnimationClip.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnimationClip">Glossary</a></span></span></span> (clip). Sebuah <code>AnimationClipPlayable</code> harus membungkus klip animasi untuk membuatnya kompatibel dengan API Playables.</p> 
+       <pre><code>
+using UnityEngine;
+
+using UnityEngine.Playables;
+
+using UnityEngine.Animations;
+
+[RequireComponent(typeof(Animator))]
+
+public class PlayAnimationSample : MonoBehaviour
+
+{
+
+    public AnimationClip clip;
+
+    PlayableGraph playableGraph;
+
+    void Start()
+
+    {
+
+        playableGraph = PlayableGraph.Create();
+
+        playableGraph.SetTimeUpdateMode(DirectorUpdateMode.GameTime);
+
+        var playableOutput = AnimationPlayableOutput.Create(playableGraph, "Animation", GetComponent&lt;Animator&gt;());
+
+        // Wrap the clip in a playable
+
+        var clipPlayable = AnimationClipPlayable.Create(playableGraph, clip);
+
+        // Connect the Playable to an output
+
+        playableOutput.SetSourcePlayable(clipPlayable);
+
+        // Plays the Graph.
+
+        playableGraph.Play();
+
+    }
+
+    void OnDisable()
+
+    {
+
+        // Destroys all Playables and PlayableOutputs created by the graph.
+
+        playableGraph.Destroy();
+
+    }
+
+}
+
+</code></pre> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PlayablesExamples0.png" alt="The PlayableGraph generated by PlayAnimationSample"> 
+        <figcaption>
+          PlayableGraph yang dihasilkan oleh PlayAnimation Sitemap 
+        </figcaption> 
+       </figure> 
+       <p>Gunakan <code>AnimationPlayableUtilities</code> untuk menyederhanakan penciptaan dan pemutaran animasi yang dapat dimainkan, seperti yang ditunjukkan dalam contoh berikut:__ __</p> 
+       <pre><code>
+using UnityEngine;
+
+using UnityEngine.Playables;
+
+using UnityEngine.Animations;
+
+[RequireComponent(typeof(Animator))]
+
+public class PlayAnimationUtilitiesSample : MonoBehaviour
+
+{
+
+    public AnimationClip clip;
+
+    PlayableGraph playableGraph;
+
+    void Start()
+
+    {
+
+        AnimationPlayableUtilities.PlayClip(GetComponent&lt;Animator&gt;(), clip, out playableGraph);
+
+    }
+
+    void OnDisable()
+
+    {
+
+        // Destroys all Playables and Outputs created by the graph.
+
+        playableGraph.Destroy();
+
+    }
+
+}
+
+</code></pre> 
+       <h2>Membuat pohon campuran animasi</h2> 
+       <p>Contoh ini menunjukkan cara menggunakan <code>AnimationMixerPlayable</code> untuk mencampur dua klip animasi. Sebelum memadukan klip animasi, mereka harus dibungkus dengan playables. Untuk melakukan ini, <code>AnimationClipPlayable</code> (clipPlayable0 dan clipPlayable1) membungkus setiap <code>AnimationClip</code> (clip0 dan clip1). Metode <code>SetInputWeight()</code> secara dinamis menyesuaikan berat campuran masing-masing dapat dimainkan.</p> 
+       <p>Meskipun tidak ditampilkan dalam contoh ini, Anda juga dapat menggunakan <code>AnimationMixerPlayable</code> untuk mencampur mixer yang dapat dimainkan dan playable lainnya.</p> 
+       <pre><code>
+using UnityEngine;
+
+using UnityEngine.Playables;
+
+using UnityEngine.Animations;
+
+[RequireComponent(typeof(Animator))]
+
+public class MixAnimationSample : MonoBehaviour
+
+{
+
+    public AnimationClip clip0;
+
+    public AnimationClip clip1;
+
+    public float weight;
+
+    PlayableGraph playableGraph;
+
+    AnimationMixerPlayable mixerPlayable;
+
+    void Start()
+
+    {
+
+        // Creates the graph, the mixer and binds them to the Animator.
+
+        playableGraph = PlayableGraph.Create();
+
+        var playableOutput = AnimationPlayableOutput.Create(playableGraph, "Animation", GetComponent&lt;Animator&gt;());
+
+        mixerPlayable = AnimationMixerPlayable.Create(playableGraph, 2);
+
+        playableOutput.SetSourcePlayable(mixerPlayable);
+
+        // Creates AnimationClipPlayable and connects them to the mixer.
+
+        var clipPlayable0 = AnimationClipPlayable.Create(playableGraph, clip0);
+
+        var clipPlayable1 = AnimationClipPlayable.Create(playableGraph, clip1);
+
+        playableGraph.Connect(clipPlayable0, 0, mixerPlayable, 0);
+
+        playableGraph.Connect(clipPlayable1, 0, mixerPlayable, 1);
+
+        
+
+        // Plays the Graph.
+
+        playableGraph.Play();
+
+    }
+
+    void Update()
+
+    {
+
+        weight = Mathf.Clamp01(weight);
+
+        mixerPlayable.SetInputWeight(0, 1.0f-weight);
+
+        mixerPlayable.SetInputWeight(1, weight);
+
+    }
+
+    void OnDisable()
+
+    {
+
+        // Destroys all Playables and Outputs created by the graph.
+
+        playableGraph.Destroy();
+
+    }
+
+}
+
+</code></pre> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PlayablesExamples1.png" alt="The PlayableGraph generated by `MixAnimationSample"> 
+        <figcaption> 
+         <code>PlayableGraph</code> yang dihasilkan oleh `MixAnimationSample 
+        </figcaption> 
+       </figure> 
+       <h2>Mencampur AnimasiClip dan AnimatorController</h2> 
+       <p>Contoh ini menunjukkan cara menggunakan <code>AnimationMixerPlayable</code> untuk memadukan <code>AnimationClip</code> dengan <code>AnimatorController</code>.</p> 
+       <p>Sebelum memadukan <code>AnimationClip</code> dan <code>AnimatorController</code>, mereka harus dibungkus dengan playables. Untuk melakukan ini, <code>AnimationClipPlayable</code> (clipPlayable) membungkus <code>AnimationClip</code> (clip) dan <code>AnimatorControllerPlayable</code> (ctrlPlayable) membungkus RuntimeAnimatorController (controller). Metode <code>SetInputWeight(</code>) secara dinamis menyesuaikan bobot campuran masing-masing dapat dimainkan.</p> 
+       <pre><code>
+using UnityEngine;
+
+using UnityEngine.Playables;
+
+using UnityEngine.Animations;
+
+[RequireComponent(typeof(Animator))]
+
+public class RuntimeControllerSample : MonoBehaviour
+
+{
+
+    public AnimationClip clip;
+
+    public RuntimeAnimatorController controller;
+
+    public float weight;
+
+    PlayableGraph playableGraph;
+
+    AnimationMixerPlayable mixerPlayable;
+
+    void Start()
+
+    {
+
+        // Creates the graph, the mixer and binds them to the Animator.
+
+        playableGraph = PlayableGraph.Create();
+
+        var playableOutput = AnimationPlayableOutput.Create(playableGraph, "Animation", GetComponent&lt;Animator&gt;());
+
+        mixerPlayable = AnimationMixerPlayable.Create(playableGraph, 2);
+
+        playableOutput.SetSourcePlayable(mixerPlayable);
+
+        // Creates AnimationClipPlayable and connects them to the mixer.
+
+        var clipPlayable = AnimationClipPlayable.Create(playableGraph, clip);
+
+        var ctrlPlayable = AnimatorControllerPlayable.Create(playableGraph, controller);
+
+        playableGraph.Connect(clipPlayable, 0, mixerPlayable, 0);
+
+        playableGraph.Connect(ctrlPlayable, 0, mixerPlayable, 1);
+
+        
+
+        // Plays the Graph.
+
+        playableGraph.Play();
+
+    }
+
+    void Update()
+
+    {
+
+        weight = Mathf.Clamp01(weight);
+
+        mixerPlayable.SetInputWeight(0, 1.0f-weight);
+
+        mixerPlayable.SetInputWeight(1, weight);
+
+    }
+
+    void OnDisable()
+
+    {
+
+        // Destroys all Playables and Outputs created by the graph.
+
+        playableGraph.Destroy();
+
+    }
+
+}
+
+</code></pre> 
+       <h2>Membuat Playable Grafik dengan beberapa output</h2> 
+       <p>Contoh ini menunjukkan cara membuat <code>PlayableGraph</code> dengan dua jenis output yang dapat dimainkan berbeda: <code>AudioPlayableOutpu</code>t dan <code>AnimationPlayableOutput</code>. Sebuah <code>PlayableGraph</code> dapat memiliki banyak output yang dapat dimainkan dari berbagai jenis.</p> 
+       <p>Contoh ini juga menunjukkan cara bermain <code>AudioClip</code> melalui <code>AudioClipPlayable</code> yang terhubung ke <code>AudioPlayableOutput</code>.</p> 
+       <pre><code>
+using UnityEngine;
+
+using UnityEngine.Animations;
+
+using UnityEngine.Audio;
+
+using UnityEngine.Playables;
+
+[RequireComponent(typeof(Animator))]
+
+[RequireComponent(typeof(AudioSource))]
+
+public class MultiOutputSample : MonoBehaviour
+
+{
+
+    public AnimationClip animationClip;
+
+    public AudioClip audioClip;
+
+    PlayableGraph playableGraph;
+
+    void Start()
+
+    {
+
+        playableGraph = PlayableGraph.Create();
+
+        // Create the outputs.
+
+        var animationOutput = AnimationPlayableOutput.Create(playableGraph, "Animation", GetComponent&lt;Animator&gt;());
+
+        var audioOutput = AudioPlayableOutput.Create(playableGraph, "Audio", GetComponent&lt;AudioSource&gt;());
+
+        
+
+        // Create the playables.
+
+        var animationClipPlayable = AnimationClipPlayable.Create(playableGraph, animationClip);
+
+        var audioClipPlayable = AudioClipPlayable.Create(playableGraph, audioClip, true);
+
+        // Connect the playables to an output
+
+        animationOutput.SetSourcePlayable(animationClipPlayable);
+
+        audioOutput.SetSourcePlayable(audioClipPlayable);
+
+        // Plays the Graph.
+
+        playableGraph.Play();
+
+    }
+
+    void OnDisable()
+
+    {
+
+        // Destroys all Playables and Outputs created by the graph.
+
+        playableGraph.Destroy();
+
+    }
+
+}
+
+</code></pre> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PlayablesExamples2.png" alt="The PlayableGraph generated by `MultiOutputSample"> 
+        <figcaption> 
+         <code>PlayableGraph</code> yang dihasilkan oleh `MultiOutputSample 
+        </figcaption> 
+       </figure> 
+       <h2>Mengontrol keadaan bermain pohon</h2> 
+       <p>Contoh ini menunjukkan cara menggunakan metode <code>Playable.SetPlayState()</code> untuk mengontrol keadaan bermain node pada pohon <code>PlayableGraph</code>. Metode <code>SetPlayState</code> mengontrol keadaan bermain seluruh pohon, salah satu cabangnya, atau satu node.</p> 
+       <p>Ketika mengatur keadaan bermain dari suatu node, negara itu menyebar ke semua anak-anaknya, terlepas dari keadaan bermain mereka. Sebagai contoh, jika node anak dihentikan secara eksplisit, mengatur node induk untuk “pemainan” juga menetapkan semua node anaknya untuk “pemainan. Sitemap</p> 
+       <p>Dalam contoh ini, <code>PlayableGraph</code> mengandung mixer yang memadukan dua klip animasi. Sebuah <code>AnimationClipPlayable</code> membungkus setiap klip animasi dan metode <code>SetPlayState()</code> secara eksplisit menghentikan kedua playable. <code>AnimationClipPlayable</code> kedua dihentikan secara eksplisit, sehingga waktu internalnya tidak maju dan output nilai yang sama. Nilai yang tepat tergantung pada waktu tertentu ketika <code>AnimationClipPlayable</code> dihentikan.</p> 
+       <pre><code>
+using UnityEngine;
+
+using UnityEngine.Playables;
+
+using UnityEngine.Animations;
+
+[RequireComponent(typeof(Animator))]
+
+public class PauseSubGraphAnimationSample : MonoBehaviour
+
+{
+
+    public AnimationClip clip0;
+
+    public AnimationClip clip1;
+
+    PlayableGraph playableGraph;
+
+    AnimationMixerPlayable mixerPlayable;
+
+    void Start()
+
+    {
+
+        // Creates the graph, the mixer and binds them to the Animator.
+
+        playableGraph = PlayableGraph.Create();
+
+        var playableOutput = AnimationPlayableOutput.Create(playableGraph, "Animation", GetComponent&lt;Animator&gt;());
+
+        mixerPlayable = AnimationMixerPlayable.Create(playableGraph, 2);
+
+        playableOutput.SetSourcePlayable(mixerPlayable);
+
+        // Creates AnimationClipPlayable and connects them to the mixer.
+
+        var clipPlayable0 = AnimationClipPlayable.Create(playableGraph, clip0);
+
+        var clipPlayable1 = AnimationClipPlayable.Create(playableGraph, clip1);
+
+        playableGraph.Connect(clipPlayable0, 0, mixerPlayable, 0);
+
+        playableGraph.Connect(clipPlayable1, 0, mixerPlayable, 1);
+
+        mixerPlayable.SetInputWeight(0, 1.0f);
+
+        mixerPlayable.SetInputWeight(1, 1.0f);
+
+        clipPlayable1.SetPlayState(PlayState.Paused);
+
+        // Plays the Graph.
+
+        playableGraph.Play();
+
+    }
+
+    void OnDisable()
+
+    {
+
+        // Destroys all Playables and Outputs created by the graph.
+
+        playableGraph.Destroy();
+
+    }
+
+}
+
+</code></pre> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PlayablesExamples3.png" alt="The PlayableGraph generated by PauseSubGraphAnimationSample. Notice that the second clip is paused (red edge)."> 
+        <figcaption>
+          PlayableGraph yang dihasilkan oleh PauseSubGraphAnimation Sitemap Perhatikan bahwa klip kedua dihentikan (sisi merah). 
+        </figcaption> 
+       </figure> 
+       <h2>Mengontrol waktu pohon</h2> 
+       <p>Contoh ini menunjukkan cara menggunakan metode Play() untuk memainkan PlayableGraph, cara menggunakan metode SetPlayState() untuk menghentikan metode yang dapat dimainkan, dan cara menggunakan metode SetTime() secara manual mengatur waktu lokal yang dapat dimainkan dengan variabel.</p> 
+       <pre><code>
+using UnityEngine;
+
+using UnityEngine.Playables;
+
+using UnityEngine.Animations;
+
+[RequireComponent(typeof(Animator))]
+
+public class PlayWithTimeControlSample : MonoBehaviour
+
+{
+
+    public AnimationClip clip;
+
+    public float time;
+
+    PlayableGraph playableGraph;
+
+    AnimationClipPlayable playableClip;
+
+    void Start()
+
+    {
+
+        playableGraph = PlayableGraph.Create();
+
+        var playableOutput = AnimationPlayableOutput.Create(playableGraph, "Animation", GetComponent&lt;Animator&gt;());
+
+        // Wrap the clip in a playable
+
+        playableClip = AnimationClipPlayable.Create(playableGraph, clip);
+
+        // Connect the Playable to an output
+
+        playableOutput.SetSourcePlayable(playableClip);
+
+        // Plays the Graph.
+
+        playableGraph.Play();
+
+        // Stops time from progressing automatically.
+
+        playableClip.SetPlayState(PlayState.Paused);
+
+    }
+
+    void Update () 
+
+    {
+
+        // Control the time manually
+
+        playableClip.SetTime(time);
+
+    }
+
+    
+
+    void OnDisable()
+
+    {
+
+        // Destroys all Playables and Outputs created by the graph.
+
+        playableGraph.Destroy();
+
+    }
+
+}
+
+</code></pre> 
+       <h2>Membuat PlayableBehaviour</h2> 
+       <p>Contoh ini menunjukkan cara membuat playable kustom dengan kelas publik <code>PlayableBehaviour</code>. Contoh ini juga menunjukkan bagaimana untuk menimpa metode virtual <code>PrepareFrame()</code> untuk mengontrol node pada <code>PlayableGraph</code>. Playable kustom dapat menimpa salah satu metode virtual lainnya dari kelas <code>PlayableBehaviour</code>.</p> 
+       <p>Dalam contoh ini, node yang dikendalikan adalah serangkaian klip animasi (clipsToPlay). <code>SetInputMethod()</code> mengubah berat campuran setiap klip animasi, memastikan bahwa hanya satu klip bermain pada waktu, dan metode <code>SetTime()</code> menyesuaikan waktu lokal sehingga pemutaran dimulai pada saat klip animasi diaktifkan.</p> 
+       <pre><code>
+using UnityEngine;
+
+using UnityEngine.Animations;
+
+using UnityEngine.Playables;
+
+public class PlayQueuePlayable : PlayableBehaviour
+
+{
+
+    private int m_CurrentClipIndex = -1;
+
+    private float m_TimeToNextClip;
+
+    private Playable mixer;
+
+    public void Initialize(AnimationClip[] clipsToPlay, Playable owner, PlayableGraph graph)
+
+    {
+
+        owner.SetInputCount(1);
+
+        mixer = AnimationMixerPlayable.Create(graph, clipsToPlay.Length);
+
+        graph.Connect(mixer, 0, owner, 0);
+
+        owner.SetInputWeight(0, 1);
+
+        for (int clipIndex = 0 ; clipIndex &lt; mixer.GetInputCount() ; ++clipIndex)
+
+        {
+
+            graph.Connect(AnimationClipPlayable.Create(graph, clipsToPlay[clipIndex]), 0, mixer, clipIndex);
+
+            mixer.SetInputWeight(clipIndex, 1.0f);
+
+        }
+
+    }
+
+    override public void PrepareFrame(Playable owner, FrameData info)
+
+    {
+
+        if (mixer.GetInputCount() == 0)
+
+            return;
+
+        // Advance to next clip if necessary
+
+        m_TimeToNextClip -= (float)info.deltaTime;
+
+        if (m_TimeToNextClip &lt;= 0.0f)
+
+        {
+
+            m_CurrentClipIndex++;
+
+            if (m_CurrentClipIndex &gt;= mixer.GetInputCount())
+
+                m_CurrentClipIndex = 0;
+
+            var currentClip = (AnimationClipPlayable)mixer.GetInput(m_CurrentClipIndex);
+
+            // Reset the time so that the next clip starts at the correct position
+
+            currentClip.SetTime(0);
+
+            m_TimeToNextClip = currentClip.GetAnimationClip().length;
+
+        }
+
+        // Adjust the weight of the inputs
+
+        for (int clipIndex = 0 ; clipIndex &lt; mixer.GetInputCount(); ++clipIndex)
+
+        {
+
+            if (clipIndex == m_CurrentClipIndex)
+
+                mixer.SetInputWeight(clipIndex, 1.0f);
+
+            else
+
+                mixer.SetInputWeight(clipIndex, 0.0f);
+
+        }
+
+    }
+
+}
+
+[RequireComponent(typeof (Animator))]
+
+public class PlayQueueSample : MonoBehaviour
+
+{
+
+    public AnimationClip[] clipsToPlay;
+
+    PlayableGraph playableGraph;
+
+    void Start()
+
+    {
+
+        playableGraph = PlayableGraph.Create();
+
+        var playQueuePlayable = ScriptPlayable&lt;PlayQueuePlayable&gt;.Create(playableGraph);
+
+        var playQueue = playQueuePlayable.GetBehaviour();
+
+        playQueue.Initialize(clipsToPlay, playQueuePlayable, playableGraph);
+
+        var playableOutput = AnimationPlayableOutput.Create(playableGraph, "Animation", GetComponent&lt;Animator&gt;());
+
+        playableOutput.SetSourcePlayable(playQueuePlayable);
+        playableOutput.SetSourceInputPort(0);
+
+        playableGraph.Play();
+
+    }
+
+    void OnDisable()
+
+    {
+
+        // Destroys all Playables and Outputs created by the graph.
+
+        playableGraph.Destroy();
+
+    }
+
+}
+
+</code></pre> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PlayablesExamples4.png" alt="The PlayableGraph generated by PlayQueueSample"> 
+        <figcaption>
+          PlayQueueSample 
+        </figcaption> 
+       </figure> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2017–07–01 Sitemap</span></p></li> 
+        <li><p><span class="page-history">Unity <a href="../Manual/30_search.html?q=newin20171">2017.1</a> <span class="search-words">NewIn20171</span></span></p></li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="Playables-ScriptPlayable.html"></a></span> 
+         <div class="tip">
+           ScriptPlayable dan PlayableBehaviour 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="AnimationGlossary.html"></a></span> 
+         <div class="tip">
+           Syarat animasi 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

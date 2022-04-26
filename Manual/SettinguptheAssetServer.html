@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Menyiapkan Server Aset</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="LegacyTopics.html">Legacy Topics</a></li> 
+         <li><a href="AssetServer.html">Aset Server</a></li> 
+         <li>Menyiapkan Server Aset</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="AssetServer.html"></a></span> 
+          <div class="tip">
+            Aset Server 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="CacheServer.html"></a></span> 
+          <div class="tip">
+            MySQL Server 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Menyiapkan Server Aset</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>WARNING: LEGACY DOCUMENTATION</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Perhatikan bahwa dari 2017.1 Asset Server adalah produk yang telah ditentukan. Kami merekomendasikan menggunakan SCM Plastik atau Perforce untuk kontrol versi dalam proyek Unity Anda. 2017–06–30</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Instalasi Server-side</h2> 
+       <p>Server Aset dirancang untuk menjadi instalasi satu kali sederhana pada mesin server. Berinteraksi dengan Asset Server dilakukan melalui Unity. Unity dapat diinstal pada mesin server, tetapi tidak perlu. Ini harus diadministrasi dari mesin Klien, di mana Proyek dan Pengguna dapat ditambahkan. Setiap klien tambahan harus dikonfigurasi untuk disinkronkan dengan Proyek, menggunakan kredensial Pengguna tertentu.</p> 
+       <p>Anda dapat menginstal Aset Server pada Mac OS X 10.4 atau kemudian, Windows Vista dan berbagai distribusi Linux termasuk CentOS, Ubuntu dan Suse Linux. Sitemap</p> 
+       <p>installer akan menginstal semua file yang diperlukan, setup database dan meluncurkan Asset Server. Pada akhir proses Anda akan diminta untuk membuat <strong>Admin password</strong>. Kata sandi ini diperlukan untuk memberikan Aset Server dari dalam Unity. Anda harus terhubung ke Asset Server sebagai administrator sebelum Anda dapat membuat proyek atau pengguna.</p> 
+       <h2>Mengelola Server Aset</h2> 
+       <p>Aset Server memungkinkan jumlah <strong>Users</strong> untuk terhubung ke <span class="tooltip"><strong>Project</strong><span class="tooltiptext">Dalam Unity, Anda menggunakan proyek untuk merancang dan mengembangkan permainan. Proyek menyimpan semua file yang terkait dengan permainan, seperti file aset dan Adegan. <a class="tooltipMoreInfoLink" href="2Dor3D.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Project">Glossary</a></span></span></span>. Administrator harus menghubungkan pertama ke Server dengan Unity sebagai klien dan membuat Proyek dan Pengguna baru.</p> 
+       <p>Panduan ini akan menunjukkan bagaimana untuk mendapatkan server Anda dan berjalan dan siap digunakan.</p> 
+       <p>Harap diperhatikan bahwa <span class="tooltip"><strong>Asset Server</strong><span class="tooltiptext">Legacy - Sistem kontrol aset dan versi dengan antarmuka pengguna grafis terintegrasi menjadi Unity. Aktifkan anggota tim untuk bekerja sama pada proyek pada komputer yang berbeda. <a class="tooltipMoreInfoLink" href="AssetServer.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#AssetServer">Glossary</a></span></span></span> sekarang merupakan produk warisan. Kami merekomendasikan menggunakan <strong>Plastic SCM</strong> atau <span class="tooltip"><strong>Perforce</strong><span class="tooltiptext">Sistem kontrol versi untuk manajemen perubahan file. <a href="perForceIntegration.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Perforce">Glossary</a></span></span></span> untuk kontrol versi dalam proyek Unity Anda.</p> 
+       <p> <a href="plasticSCMIntegration">PlasticSCM</a> <a href="perForceIntegration.html">PerForce</a> </p> 
+       <p>Sitemap Luncurkan <strong>1.</strong> dan buka proyek kosong. Pilih <strong>Unity</strong> &gt; <strong>Window</strong> &gt; <strong>Asset Management</strong>, lalu klik tombol <span class="tooltip"><strong>Version Control</strong><span class="tooltiptext">Sistem untuk mengelola perubahan file. Anda dapat menggunakan Unity bersama dengan alat kontrol versi yang paling umum, termasuk Perforce, Git, Mercurial dan PlasticSCM. <a class="tooltipMoreInfoLink" href="VersionControl.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#VersionControl">Glossary</a></span></span></span>.<strong>Settings</strong> button.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AssetServer-settings.png" alt="The Versioning tab"> 
+        <figcaption>
+          tab 
+         <strong>Versioning</strong> tab 
+        </figcaption> 
+       </figure> 
+       <p>Anda kemudian akan melihat pengaturan <strong>Version Control</strong> di <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>, sekarang pilih <strong>Asset Server</strong> dari menu drop down <strong>Mode</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AssetServer-modeSelection.png" alt="The Version Control Settings"> 
+        <figcaption> 
+         <strong>Version Control Settings</strong> 
+        </figcaption> 
+       </figure> 
+       <p>Sitemap Sekarang kita akan menjalankan server aset. Cari dan menjalankan file berikut:<strong>2.</strong> Now we are going to run the asset server. Find and run the following file:</p> 
+       <p> <strong>Windows:</strong> C:\Program Files (x86)\Unity\AssetServer\bin\AssetServerControl.exe</p> 
+       <p> <strong>Macintosh:</strong>/Library/UnityAssetServer</p> 
+       <p><em>Catatan: pengguna Yosemite 10.10.3 perlu mencari melalui direktori liabry hard drive, bukan direktori liabry pengguna.</em></p> 
+       <p>Sitemap Anda sekarang dapat memilih <strong>3.</strong> &gt; <strong>Window</strong> &gt; <strong>Asset Management</strong>. Ini akan membuka tab manajemen server aset.<strong>Version Control</strong>. This will open the asset server’s management tab.</p> 
+       <p>Klik tombol Administrasi.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AssetServer-AdministrateDialog.png" alt="The Administration tab"> 
+        <figcaption>
+          tab 
+         <strong>Administration</strong> tab 
+        </figcaption> 
+       </figure> 
+       <p>Sitemap Dalam bidang <strong>4.</strong>, masukkan kedua <strong>Server Address</strong> atau <strong>ip address</strong> komputer yang menjalankan Aset Server yang ingin Anda berikan. Jika Asset Server diinstal pada mesin lokal Anda, Anda dapat menggunakan "localhost" sebagai <strong>host name</strong>. Selanjutnya, berikan nama administrator dan kata sandi. Nama administrator selalu “admin”, dan kata sandi apa yang dimasukkan ketika menginstal Aset Server. Akhirnya, tekan tombol <strong>Server Address</strong>. Sekarang Anda terhubung ke Asset Server, dan dapat melakukan pengaturan awal.<strong>Connect</strong> button. You’re now connected to the Asset Server, and can perform the initial setup.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AssetServer-ServerConnection.png" alt="The Administration tab"> 
+        <figcaption>
+          tab 
+         <strong>Administration</strong> tab 
+        </figcaption> 
+       </figure> 
+       <h3>Mengelola Proyek dan Pengguna</h3> 
+       <p>Setiap Server dapat berisi beberapa Proyek, dan setiap Pengguna dapat memiliki izin untuk satu atau lebih Proyek. Proyek umumnya ortogonal, dan unik dalam koleksi aset. Ini terbaik untuk berpikir "satu Proyek sama satu permainan".</p> 
+       <p>Proyek Baru dapat dibuat dengan mengklik tombol <strong>Create</strong> di tab <strong>Server Administration</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AssetServer-NewProject.png" alt="Click Create, then enter a name for the new project"> 
+        <figcaption>
+          Klik Buat, lalu masukkan nama untuk proyek baru 
+        </figcaption> 
+       </figure> 
+       <p>Pengguna baru dapat dibuat dengan memilih proyek yang ada dan kemudian mengklik tombol <strong>New User</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AssetServer-NewUser.png" alt="Creating a new user"> 
+        <figcaption>
+          Membuat pengguna baru 
+        </figcaption> 
+       </figure> 
+       <p>Setelah pengguna telah dibuat dalam satu Proyek, pengguna dapat ditambahkan ke proyek lain dengan mengaktifkan kotak centang di sebelah kiri nama pengguna dalam daftar pengguna.</p> 
+       <p>Anda dapat mengaktifkan atau menonaktifkan akses pengguna untuk proyek individu. Untuk menghapus proyek atau pengguna dari server menggunakan tombol <strong>Delete Project</strong> dan <strong>Delete User</strong>.</p> 
+       <h3>Pengaturan Firewall</h3> 
+       <p>Server Aset Unity menggunakan port TCP <strong>10733</strong>. Anda mungkin perlu mengaktifkan koneksi ke port ini di firewall dan / atau router Anda.</p> 
+       <h2>Advanced</h2> 
+       <p>Server Aset dibangun menggunakan versi PostgreSQL yang dimodifikasi. Mengakses database SQL secara langsung memerlukan sedikit pengetahuan teknis tentang baris perintah SQL dan Unix/Linux. kebijaksanaan pengguna disarankan.</p> 
+       <h3>Backing up</h3> 
+       <p>Kami telah menyediakan alat baris perintah untuk kembali ke server aset. Alat harus dijalankan dari akun administrator pada mesin yang menjalankan server aset. BACKUP_LOCATION dengan nama jalan Anda ingin alat cadangan untuk menempatkan cadangan:</p> 
+       <p>Mac OS X <code>sudo /Library/UnityAssetServer/bin/as_backup</code> BACKUP_LOCATION</p> 
+       <p>Linux <code>sudo /opt/unity_asset_server/bin/as_backup</code> Login</p> 
+       <p>Windows XP (32/64 bit) Login<code>"%ProgramFiles%\Unity\AssetServer\bin\as_backup.cmd"</code> BACKUP_LOCATION</p> 
+       <p>as_backup akan membuat direktori di BACKUP_LOCATION yang berisi satu atau lebih file per proyek ditambah file yang berisi informasi tentang setiap proyek dan cadangan semua pengguna dan kata sandi mereka.</p> 
+       <h3>Mengembalikan Cadangan</h3> 
+       <p>Untuk mengembalikan cadangan Asset Server yang diproduksi dengan as_backup, melakukan instalasi bersih dari Asset Server tanpa proyek yang dibuat. (Peraturan pemulihan akan menolak untuk menulis proyek yang sudah ada dengan nama yang sama.)</p> 
+       <p>Kemudian jalankan alat restorasi cadangan yang disediakan, <code>as_restore</code> menunjuk ke lokasi cadangan yang dibuat dengan as_backup:</p> 
+       <p>Mac OS X <code>sudo /Library/UnityAssetServer/bin/as_restore</code> BACKUP_LOCATION</p> 
+       <p>Linux <code>sudo /opt/unity_asset_server/bin/as_restore</code> Login</p> 
+       <p>Windows XP (32/64 bit) Login<code>"%ProgramFiles%\Unity\AssetServer\bin\as_restore.cmd"</code> BACKUP_LOCATION</p> 
+       <p>Perhatikan bahwa Anda juga dapat menggunakan as_backup dan as_restore untuk memindahkan instalasi server aset dari satu mesin ke mesin lain dengan melakukan backup pada mesin sumber, memindahkan direktori cadangan ke mesin tujuan (atau memasangnya melalui berbagi file jaringan,) dan kemudian menjalankan as_restore untuk memasukkan data ke dalam instance Server Aset yang baru diinstal. Ini bahkan akan bekerja ketika sumber dan tujuan Asset Server memiliki versi yang berbeda atau berjalan pada sistem operasi yang berbeda.</p> 
+       <h3>Menempatkan nama database Proyek Server Aset</h3> 
+       <p>Untuk melihat tabel di database Proyek, pertama-tama Anda perlu mencari nama database yang sebenarnya. Jalankan perintah baris perintah ini pada mesin hosting Asset Server:</p> 
+       <p>Login Sitemap<code>/Library/UnityAssetServer/bin/psql -U admin -h localhost -d postgres -c 'select * from all_databases**view'</code> </p> 
+       <p>Linux <code>/opt/unity_asset_server/bin/psql -U admin -h localhost -d postgres -c 'select * from all_databases**view'</code> </p> 
+       <p>Windows XP (32/64 bit)<code>"%ProgramFiles%\Unity\AssetServer\bin\psql.exe" -U admin -h localhost -d postgres -c "select * from all_databases**view"</code> </p> 
+       <p>Ini dan perintah lain akan meminta Anda untuk kata sandi. Setiap kali ini terjadi, masukkan kata sandi admin untuk database, yang ditetapkan selama instalasi. Hasilnya akan menjadi tabel yang mengikuti tata letak dasar ini:</p> 
+       <pre><code>    databasename | projectname | description | version 
+--------------------+--------------------+--------------------------+---------
+ sandbox | Sandbox | Created with Unity 2.0.0 | 1.0
+ game | Game | Created with Unity 2.0.0 | 1.0
+ my_game_project | My Game Project | Created with Unity 2.0.0 | 1.0
+(3 rows)
+
+
+</code></pre> 
+       <p>Sekarang Anda perlu mengidentifikasi "databasename" Proyek yang ingin Anda kembali. Ketika membuat database, default "databasename" sama dengan "projectname" seperti yang ditunjukkan dalam Unity, tetapi dalam huruf kecil dan ruang diganti dengan underscores.</p> 
+       <p>Perhatikan bahwa jika server Anda menghosting beberapa database PostgreSQL pada port yang berbeda, Anda perlu untuk secara eksplisit memberikan port yang digunakan untuk terhubung ke database Aset Server. Dalam kasus ini tambahkan -p 10733 untuk perintah yang diberikan (menurut Anda telah menggunakan port default 10733 untuk instance Anda.) Contoh:</p> 
+       <p>Linux <code>/opt/unity_asset_server/bin/psql -U admin -h localhost -d postgres -c 'select * from all_databases**view' -p 10733</code> </p> 
+       <h3>SQL database Sitemap</h3> 
+       <p>Ini dan semua perintah lain menggunakan alat dari distribusi PostgreSQL. Anda dapat membaca lebih banyak tentang alat-alat ini di sini: http://www.postgresql.org/docs/8.3/interactive/reference-client.html</p> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2017–06–30 Login</span></p></li> 
+        <li><p><span class="page-history">Aset Server yang diuraikan dalam</span></p></li> 
+        <li><p><span class="page-history">Windows XP dukungan di Standalone Player dihapus pada 2018.1</span></p></li> 
+       </ul> 
+       <!-- area:none --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="AssetServer.html"></a></span> 
+         <div class="tip">
+           Aset Server 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="CacheServer.html"></a></span> 
+         <div class="tip">
+           MySQL Server 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

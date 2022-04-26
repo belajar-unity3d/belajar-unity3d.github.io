@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Analisis Metrik, Segmen, dan Terminologi</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="monetization" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UnityServices.html">Layanan Unity</a></li> 
+         <li><a href="UnityAnalytics.html"></a></li> 
+         <li>Analisis Metrik, Segmen, dan Terminologi</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UnityAnalyticsPIPL.html"></a></span> 
+          <div class="tip">
+            Analisis Unity dan PIPL 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UnityCloudBuild.html"></a></span> 
+          <div class="tip">
+            Build di Unity Cloud 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Analisis Metrik, Segmen, dan Terminologi</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Glossary ini mendefinisikan metrik dan terminologi yang digunakan oleh Sistem Unity <span class="tooltip"><strong>Analytics</strong><span class="tooltiptext"><strong>Unity Analytics</strong><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Analytics">Glossary</a></span></span></span> dan dokumentasi.</p> 
+       <h2>Metrics</h2> 
+       <p>Sistem <span class="tooltip"><strong>Unity Analytics</strong><span class="tooltiptext">Sebuah platform data yang menyediakan analitik untuk permainan Unity Anda. <a class="tooltipMoreInfoLink" href="UnityAnalytics.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UnityAnalytics">Glossary</a></span></span></span> mengumpulkan atau mengimbangi metrik berikut dan menampilkannya dalam laporan pada Ikhtisar Dasbor Analisis dan halaman Data Explorer:</p> 
+       <h3>Metrik Pemain Aktif:</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>DAU</strong><br>(Daily Active Users)</td> 
+          <td style="text-align:left;">Jumlah pemain yang berbeda yang memulai sesi pada hari tertentu. Sistem Unity Analytics membanjiri hari-harinya pada Waktu Universal Koordinasi (UTC), sehingga angka DAU menghitung pemain antara pukul 0:00 UTC dan 24:00 UTC, tidak peduli zona waktu yang terletak di. Sesi baru dihitung ketika pemain meluncurkan permainan Anda atau membawa permainan yang ditangguhkan ke latar belakang setelah 30 menit ketidakaktifan.<br><br>DAU mencakup pemain baru dan kembali.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>DAU per MAU</strong><br> (DAU/MAU)</td> 
+          <td style="text-align:left;">Persentase pengguna aktif bulanan yang bermain pada hari tertentu. Juga dikenal sebagai Faktor Sticky di industri analitik dan permainan, metrik ini sering digunakan sebagai satu perkiraan keterlibatan pemain.<br><br> Perhatikan bahwa metrik termasuk kembali dan pemain baru. Influx pemain baru bisa menutupi keluar (churn) pemain yang ada. Dengan kata lain, DAU yang stabil per metrik MAU tidak berarti keterlibatan pemain tinggi jika pemain meninggalkan permainan Anda secepat mereka bergabung. Selalu periksa metrik retensi serta.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>MAU</strong><br>(Pengguna Aktif Bulanan)</td> 
+          <td style="text-align:left;">Jumlah pemain yang memulai sesi dalam 30 hari terakhir.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>New Users</strong></td> 
+          <td style="text-align:left;">Pengguna yang bermain game Anda untuk pertama kalinya.<br><br> Unity mencatat nilai ID yang konsisten, acak untuk <a href="../ScriptReference/PlayerPrefs.html">PlayerPrefs</a> dan menggunakan id untuk mengidentifikasi pemain yang kembali. Perhatikan bahwa jika file PlayerPrefs dibersihkan atau dihapus, maka pemain dihitung sebagai pengguna baru waktu berikutnya mereka meluncurkan permainan. File PlayerPrefs dihapus ketika pemain menghapus dan kemudian menginstal ulang permainan Anda (tetapi tidak ketika memperbarui).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Number of Users</strong></td> 
+          <td style="text-align:left;">Jumlah kumulatif pemain unik selama 90 hari terakhir. Pengguna yang tidak bermain lebih dari 90 hari dihapus dari jumlah.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Percentage of Population</strong></td> 
+          <td style="text-align:left;">Populasi pemain Anda sebagai persentase. Biasanya hanya berguna ketika dikombinasikan dengan segmen. dihitung sebagai persentase dari Jumlah Pengguna metrik yang merupakan anggota dari segmen tertentu.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>Metrik sesi:</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Sessions per User</strong></td> 
+          <td style="text-align:left;">Jumlah rata-rata sesi per orang bermain pada hari tertentu. Login Juga dikenal sebagai Rata-rata Jumlah Sesi per DAU.<br>Also known as Average Number of Sessions per DAU.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Total Daily Playing Time</strong></td> 
+          <td style="text-align:left;">Waktu bermain kumulatif semua orang bermain pada hari tertentu.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Total Daily Playing Time per Active User</strong></td> 
+          <td style="text-align:left;">Waktu bermain rata-rata orang bermain pada hari tertentu.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Total Sessions Today</strong></td> 
+          <td style="text-align:left;">Jumlah total sesi oleh semua orang bermain pada hari tertentu. Juga dikenal sebagai Sesi Total.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>Retention Metrik:</h3> 
+       <p>Unity Analytics menghitung retensi menggunakan metode yang dikenal sebagai <em>Retensi N-Day</em>. Secara matematika, N-Day Retention dihitung sebagai jumlah orang bermain persis N hari setelah sesi pertama mereka, dibagi oleh jumlah pengguna baru persis N hari yang lalu.</p> 
+       <p>metrik retensi standar dihitung oleh Unity Analytics meliputi:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Day 1 Retention</strong></td> 
+          <td style="text-align:left;">Persentase pemain yang kembali ke permainan Anda satu hari setelah bermain pertama kalinya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Day 7 Retention</strong></td> 
+          <td style="text-align:left;">Persentase pemain yang kembali ke permainan Anda tujuh hari setelah bermain pertama kalinya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Day 30 Retention</strong></td> 
+          <td style="text-align:left;">Persentase pemain yang kembali ke permainan Anda tiga puluh hari setelah bermain pertama kalinya.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>Metrik Monetisasi:</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>ARPDAU</strong><br>(Average Revenue Per Daily Active User)</td> 
+          <td style="text-align:left;">Pendapatan rata-rata per pengguna yang bermain pada hari tertentu.<br><br>Revenue mencakup uang yang diperoleh dari iklan Unity, transaksi IAP Unity terverifikasi, dan transaksi IAP terverifikasi yang dilaporkan menggunakan fungsi <a href="../ScriptReference/Analytics.Analytics.Transaction.html">Analisa.Transaction()</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>ARPPU</strong><br>(Penghasilan wajib Per Membayar Pengguna)</td> 
+          <td style="text-align:left;">Pendapatan IAP terverifikasi rata-rata per pengguna yang menyelesaikan transaksi IAP terverifikasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Number of Unverified Transactions</strong></td> 
+          <td style="text-align:left;">Jumlah total transaksi IAP, apakah atau tidak diverifikasi. transaksi <br><br>IAP termasuk pembelian Unity IAP dan pembelian yang dilaporkan menggunakan fungsi <a href="../ScriptReference/Analytics.Analytics.Transaction.html">Analisa.Transaction()</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Number of Verified Transactions</strong></td> 
+          <td style="text-align:left;">Transaksi IAP yang telah diverifikasi melalui toko aplikasi yang tepat. Verifikasi IAP saat ini didukung oleh Apple App Store dan Google Play Store.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Total IAP Revenue</strong></td> 
+          <td style="text-align:left;">Total pendapatan IAP, termasuk pendapatan dari transaksi terverifikasi dan terverifikasi. transaksi <br><br>IAP termasuk pembelian Unity IAP dan pembelian yang dilaporkan menggunakan fungsi <a href="../ScriptReference/Analytics.Analytics.Transaction.html">Analisa.Transaction()</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Total Verified Revenue</strong></td> 
+          <td style="text-align:left;">Pendapatan dari iklan Unity dan transaksi IAP terverifikasi. Verifikasi IAP saat ini didukung oleh Apple App Store dan Google Play Store.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Unverified IAP Revenue</strong></td> 
+          <td style="text-align:left;">Pendapatan IAP dari sumber yang tidak mendukung verifikasi dan dari transaksi yang gagal verifikasi. Transaksi dapat gagal verifikasi karena penipuan atau karena informasi yang hilang atau rusak. Misalnya, jika Anda belum mengonfigurasi kunci Google API Anda di Dasbor Analytics, mencoba untuk memverifikasi transaksi Google Play Store akan gagal. Sitemap<a href="UnityAnalyticsReceiptVerification.html">Verifikasi Penerimaan</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Verified IAP Revenue</strong></td> 
+          <td style="text-align:left;">Pendapatan dari transaksi IAP terverifikasi. Verifikasi IAP saat ini didukung oleh Apple App Store dan Google Play Store.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Verified Paying Users</strong></td> 
+          <td style="text-align:left;">Pemain yang melakukan pembelian IAP terverifikasi. Verifikasi IAP saat ini didukung oleh Apple App Store dan Google Play Store.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>Metrik iklan:</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Ad ARPU</strong><br>(Average Revenue Per User)</td> 
+          <td style="text-align:left;">Unity Rata-rata Pendapatan iklan per pemain.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Ad Revenue</strong></td> 
+          <td style="text-align:left;">Jumlah Unity Pendapatan iklan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Ad Starts</strong></td> 
+          <td style="text-align:left;">Jumlah iklan video yang mulai bermain.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Ads per DAU</strong></td> 
+          <td style="text-align:left;">Jumlah iklan dimulai per pemain aktif pada hari tertentu.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>eCPM</strong><span class="tooltiptext">(perkiraan Biaya Per Mille) Perkiraan pendapatan untuk 1000 kesan iklan untuk aplikasi Anda. . <a href="UnityAnalyticsTerminology.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#eCPM">Glossary</a></span></span></span><br> (perkiraan Biaya Per Mille)</td> 
+          <td style="text-align:left;">Perkiraan pendapatan untuk 1000 kesan iklan untuk aplikasi Anda. Sitemap</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Untuk informasi lebih lanjut tentang Iklan, lihat .</p> 
+       <h2>Segments</h2> 
+       <p>Segmen adalah subset dari basis pemain Anda, terpisahkan oleh perbedaan utama, seperti negara, platform, tingkat pengalaman, atau pola pengeluaran. Segmen digunakan dengan fitur <span class="tooltip"><strong>Data Explorer</strong><span class="tooltiptext">Halaman Dashboard Unity Analytics yang memungkinkan Anda untuk membangun, melihat dan mengekspor laporan pada metrik dan acara Analytics Anda. Anda juga dapat melihat bagaimana metrik dan acara kustom berubah seiring waktu. <a class="tooltipMoreInfoLink" href="UnityAnalyticsDataExplorer.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#DataExplorer">Glossary</a></span></span></span>, <strong>Funnel Analyzer</strong>, dan <span class="tooltip"><strong>Remote Settings</strong><span class="tooltiptext">Pengaturan jarak jauh adalah variabel game yang dapat Anda set jarak jauh di Dasbor Analisis Anda. <a href="UnityAnalyticsRemoteSettings.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#RemoteSettings">Glossary</a></span></span></span>.</p> 
+       <p>Layanan Analytics menyediakan serangkaian segmen standar dan memberikan kemampuan untuk membuat segmen Anda sendiri. Anda dapat melihat aturan mendefinisikan segmen standar dan membuat segmen kustom Anda sendiri di halaman Analytics Dashboard <a href="UnityAnalyticsSegmentBuilder.html">Pembuat Segmen</a>.</p> 
+       <h3>Segmen Siklus Hidup:</h3> 
+       <p>Para pemain kelompok segmen siklus hidup dengan jumlah hari sejak pertama kali memainkan permainan Anda. Layanan mendefinisikan kelompok siklus hidup berikut:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">1-3 Hari</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">4–7 Hari</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">0 Artikel Sitemap</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">15-30 hari</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">31+ Hari</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Catatan: Segmen siklus hidup hanya mencakup pemain dalam 90 hari pertama bermain permainan Anda. Dengan kata lain, segmen <strong>31+ Days</strong> termasuk pemain yang pertama bermain lebih dari 30 hari yang lalu dan kurang dari 90 hari.</p> 
+       <h3>Segmen geografis:</h3> 
+       <p>Para pemain kelompok segmen geografis oleh negara. Pemain geolokasi menggunakan teknik seperti analisis IP. Segmen geografis standar termasuk negara-negara berikut:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Australia</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Kanada</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">China</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">France</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Germany</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Indonesia</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Rusia</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Korea</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Indonesia</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Indonesia</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Amerika Serikat</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Rest of World</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Segmen <em>Rest of World</em> mencakup semua pemain dari negara-negara yang tidak terdaftar secara individual. Perhatikan bahwa Anda dapat mendefinisikan segmen kustom Anda sendiri untuk pemain kelompok oleh negara-negara lain, individu. (Namun, para pemain juga termasuk di segmen standar Dunia.)</p> 
+       <h3>Segmen Monetisasi:</h3> 
+       <p>Kelompok monetisasi pemain kelompok dengan berapa banyak uang yang mereka habiskan pada pembelian dalam aplikasi dalam permainan Anda:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Whales</strong></td> 
+          <td style="text-align:left;">Pemain yang telah menghabiskan setidaknya $ 20 dalam hidup mereka.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Dolphins</strong></td> 
+          <td style="text-align:left;">Pemain yang telah menghabiskan antara $ 5 dan $ 19.99.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Minnows</strong></td> 
+          <td style="text-align:left;">Pemain yang telah menghabiskan kurang dari $5 dalam hidup mereka.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Never Monetized</strong></td> 
+          <td style="text-align:left;">Pemain yang belum pernah menghabiskan mata uang riil.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>All Spenders</strong></td> 
+          <td style="text-align:left;">Pemain yang telah melakukan pembelian dalam aplikasi terverifikasi atau terverifikasi dalam masa hidup mereka.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Metaphor <em>Whales, Dolphins, Minnows</em> adalah analogi analitik umum berdasarkan pengamatan bahwa sejumlah kecil pengguna memiliki dampak besar yang tidak proporsional pada “ecosystem” dari permainan F2P yang khas.</p> 
+       <h3><strong>Platform Segments</strong></h3> 
+       <p>Pemain kelompok segmen platform oleh platform di mana mereka bermain. Sistem Analytics menyediakan dua segmen platform standar:</p> 
+       <ul> 
+        <li><p>Pengguna Android</p></li> 
+        <li><p>Login Sitemap</p></li> 
+       </ul> 
+       <h3>Segmen kustom</h3> 
+       <p>Buat segmen kustom untuk mendapatkan segmentasi yang lebih halus daripada yang disediakan oleh segmen standar, serta untuk membuat segmen yang menggabungkan aturan dari kategori segmen yang berbeda.</p> 
+       <p>Tidak seperti segmen standar, setelah pemain menjadi anggota segmen kustom, pemain selalu menjadi anggota.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Standard and Custom Events</strong></td> 
+          <td style="text-align:left;">Segmen dengan apakah acara kustom tertentu telah dikirim sementara pengguna bermain. Anda juga dapat menentukan pembatasan nilai parameter.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Sessions</strong></td> 
+          <td style="text-align:left;">Segmen ketika dan berapa lama pengguna yang dimainkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>IAP revenue</strong></td> 
+          <td style="text-align:left;">Segmen oleh aktivitas IAP.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Demographics</strong></td> 
+          <td style="text-align:left;">Segmen oleh demografi yang dilaporkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Geography</strong></td> 
+          <td style="text-align:left;">Segmen oleh negara.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Application version</strong></td> 
+          <td style="text-align:left;">Segmen dengan versi aplikasi atau dibundel.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Segmen baru berlaku untuk data baru saja. Data yang ada tidak diproses ulang menggunakan aturan segmentasi baru.</p> 
+       <p>Lihat <a href="UnityAnalyticsSegmentBuilder.html">Pembuat Segmen</a> untuk informasi lebih lanjut tentang mendefinisikan segmen Anda sendiri.</p> 
+       <h2>Terminology</h2> 
+       <p>Ketentuan berikut digunakan oleh Layanan Analisis Unity:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Analytics Events</strong><span class="tooltiptext">Acara yang dikirim ke Layanan Analytics dengan contoh aplikasi Anda. Peristiwa analis berisi data yang diproses dan agregat untuk memberikan wawasan perilaku pemain. <a class="tooltipMoreInfoLink" href="UnityAnalyticsCustomEvents.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnalyticsEvents">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Acara yang dikirim ke Layanan Analytics dengan contoh aplikasi Anda. Peristiwa analis berisi data yang diproses dan agregat untuk memberikan wawasan perilaku pemain.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Cohort</strong></td> 
+          <td style="text-align:left;">Kelompok pemain dengan setidaknya satu karakteristik serupa. Anda dapat mendefinisikan dan menganalisis berbagai kohorts dari userbase Anda dengan <a href="UnityAnalyticsSegmentBuilder.html">segments</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Core Events</strong><span class="tooltiptext">Peristiwa inti adalah peristiwa dasar yang dikirim oleh kode Analisis Unity dalam permainan Anda. Acara ini, dan analitik berdasarkan mereka, menjadi tersedia hanya dengan mengaktifkan Unity Analytics untuk sebuah proyek. Acara inti meliputi: berjalan aplikasi, mulai aplikasi, dan info perangkat. <a class="tooltipMoreInfoLink" href="UnityAnalyticsDashboardEventManager.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#CoreEvents">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Peristiwa inti adalah peristiwa dasar yang dikirim oleh kode Analisis Unity dalam permainan Anda. Acara ini, dan analitik berdasarkan mereka, menjadi tersedia hanya dengan mengaktifkan Unity Analytics untuk sebuah proyek. Acara inti meliputi: berjalan aplikasi, mulai aplikasi, dan info perangkat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Standard Events</strong><span class="tooltiptext">Peristiwa standar adalah peristiwa khusus aplikasi yang Anda kirim dalam menanggapi tindakan atau tonggak pemain penting. Peristiwa standar memiliki nama standar dan daftar parameter yang ditentukan. <a class="tooltipMoreInfoLink" href="UnityAnalyticsCustomEvents.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Standardevent">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Peristiwa standar adalah peristiwa khusus aplikasi yang Anda kirim dalam menanggapi tindakan atau tonggak pemain penting. Peristiwa standar memiliki nama standar dan daftar parameter yang ditentukan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Custom Events</strong><span class="tooltiptext">Acara kustom adalah acara gratis yang dapat Anda kirim ketika peristiwa standar yang tepat tidak tersedia. Acara kustom dapat memiliki nama dan hingga sepuluh parameter. Gunakan peristiwa standar dalam preferensi untuk acara kustom di mana mungkin. <a class="tooltipMoreInfoLink" href="UnityAnalyticsCustomEvents.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#CustomEvents">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Acara kustom adalah acara gratis yang dapat Anda kirim ketika peristiwa standar yang tepat tidak tersedia. Acara kustom dapat memiliki nama dan hingga sepuluh parameter. Gunakan peristiwa standar dalam preferensi untuk acara kustom di mana mungkin.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Funnel</strong><span class="tooltiptext">Dalam Analytics, sebuah corong adalah urutan linear dari peristiwa standar atau kustom yang Anda harapkan pemain untuk menyelesaikan pesanan. <a class="tooltipMoreInfoLink" href="UnityAnalyticsFunnels.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Funnel">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Sebuah saluran adalah urutan linear dari peristiwa standar atau kustom yang Anda harapkan pemain untuk menyelesaikan pesanan. Analisis corong dapat mengungkapkan langkah-langkah di urutan di mana pemain menghadapi gesekan atau masalah. Misalnya, saluran berdasarkan peristiwa penyelesaian tingkat akan mengungkapkan apakah lebih besar dari jumlah pemain yang diharapkan berhenti bermain pada tingkat tertentu. Sitemap<a href="UnityAnalyticsFunnels.html">Funnels</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Heatmaps</strong><span class="tooltiptext">Heatmaps adalah visualisasi spasial data analitik. <a class="tooltipMoreInfoLink" href="UnityAnalyticsOverview.html#Heatmaps">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Heatmaps">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Heatmaps adalah visualisasi spasial data analitik. Tampilan visualisasi heatmap untuk acara analitik khusus dilaidkan pada <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> Anda di Editor Unity. Heatmaps memerlukan akses ke <a href="UnityAnalyticsRawDataExport.html">Ekspor Data Baku</a>, fitur berlangganan pro. Sitemap<a href="https://bitbucket.org/Unity-Technologies/heatmaps/wiki/v2">Heatmaps</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Remote Settings</strong></td> 
+          <td style="text-align:left;">Pengaturan jarak jauh adalah variabel game yang dapat Anda set jarak jauh di Dasbor Analisis Anda. Sitemap<a href="UnityAnalyticsRemoteSettings.html">Pengaturan Jarak Jauh</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Aggregated Data</strong></td> 
+          <td style="text-align:left;">Seperti peristiwa yang diterima oleh Layanan Analisis, data diproses dan agregat. Data agregat adalah dasar dari sebagian besar laporan Dasbor dan visualisasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Raw Data</strong></td> 
+          <td style="text-align:left;">Peristiwa analis individu yang dikirim oleh aplikasi Anda. Pengembang dengan berlangganan Unity Pro dapat mengunduh data ini menggunakan <a href="UnityAnalyticsRawDataExport.html">Ekspor Data Baku</a> untuk analisis di alat eksternal atau tujuan lainnya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Segment</strong></td> 
+          <td style="text-align:left;">Segmen adalah subset dari basis pemain Anda, terpisahkan oleh perbedaan utama. Melihat metrik dan peristiwa oleh segmen dapat mengungkapkan perbedaan perilaku dalam game antara kelompok yang berbeda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Session</strong></td> 
+          <td style="text-align:left;">Waktu bermain atau penggunaan tunggal. Sesi baru dihitung ketika pemain meluncurkan permainan Anda atau membawa permainan yang ditangguhkan ke latar belakang setelah 30 menit ketidakaktifan.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Syarat-syarat umum berikut ini membantu untuk memahami:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Active Users</strong></td> 
+          <td style="text-align:left;">Pemain yang baru-baru ini memainkan permainan Anda. Unity Analytics mendefinisikan pemain aktif sebagai seseorang yang telah bermain dalam 90 hari kalender terakhir.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Churn</strong></td> 
+          <td style="text-align:left;">Tingkat di mana pengguna meninggalkan permainan Anda selama periode tertentu. Pengguna Anda churn penting dalam memperkirakan nilai seumur hidup pengguna Anda. Secara matematika, churn adalah pelengkap retensi (dalam kata lain: Churn + Retention = 100%).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>COPPA</strong><span class="tooltiptext">( Undang-Undang Perlindungan Privasi Online Anak) COPPA adalah hukum AS yang berlaku untuk aplikasi yang mengumpulkan informasi pribadi dan ditargetkan kepada anak-anak di bawah usia 14. <a class="tooltipMoreInfoLink" href="UnityAnalyticsCOPPA.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#COPPA">Glossary</a></span></span></span><br>(Children’s Online Privacy Protection Act)</td> 
+          <td style="text-align:left;">COPPA adalah hukum AS yang berlaku untuk aplikasi yang mengumpulkan informasi pribadi dan ditargetkan untuk anak-anak di bawah usia 14. <br><br> <a href="https://www.ftc.gov/enforcement/rules/rulemaking-regulatory-reform-proceedings/childrens-online-privacy-protection-rule">COPPA FAQ</a> dan <a href="UnityAnalyticsCOPPA.html">Kepatuhan COPPA</a> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Conversion Rate</strong></td> 
+          <td style="text-align:left;">Persentase pengguna yang menyelesaikan aksi atau urutan tindakan. Sebagai contoh, tingkat konversi dari satu langkah saluran ke bagian berikutnya adalah persentase pemain yang membuatnya melalui langkah-langkah, sementara tingkat konversi saluran sebagai keseluruhan adalah persentase pemain memulai saluran yang menyelesaikan seluruh urutan. Konversi istilah juga digunakan dalam konteks lain, seperti mulai dan kemudian menyelesaikan pembelian, atau menonton iklan dan kemudian mengklik tautan di iklan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>CTR</strong><br>(Klik Melalui Tingkat)</td> 
+          <td style="text-align:left;">Persentase pemain yang mengeklik tautan dalam iklan yang ditampilkan dalam permainan Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Engagement</strong></td> 
+          <td style="text-align:left;">Keterlibatan adalah ukuran yang luas tentang bagaimana pemain menikmati, atau sebaliknya diinvestasikan, dalam permainan Anda. Tidak mungkin untuk mengukur secara langsung, metrik berikut sering digunakan untuk memperkirakan keterlibatan: Retention, DAU, MAU, DAU/MAU, jumlah sesi, dan panjang sesi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>F2P</strong><br> (Gratis Play)</td> 
+          <td style="text-align:left;">Model bisnis yang menawarkan akses gratis pengguna ke permainan fungsional penuh dan sebagian besar konten aplikasi. Strategi monetisasi untuk judul ini umumnya termasuk mikrotransaksi yang memungkinkan pengguna untuk mengakses fitur premium dan barang virtual.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Fill Rate</strong></td> 
+          <td style="text-align:left;">Tingkat di mana iklan tersedia ketika Anda meminta satu.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>GDPR</strong><br>(Peraturan Perlindungan Data Umum)</td> 
+          <td style="text-align:left;">Hukum Uni Eropa mengatur privasi data. Lihat <a href="UnityAnalyticsDataPrivacy.html">Unity Analytics dan Peraturan Perlindungan Data Umum UE</a> untuk informasi lebih lanjut.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>IAP</strong><span class="tooltiptext">Pendapatan dari “transaksi mikro” dalam permainan. <a class="tooltipMoreInfoLink" href="UnityIAP.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#IAP">Glossary</a></span></span></span><br> (In-app Purchase)</td> 
+          <td style="text-align:left;">Pendapatan dari “transaksi mikro” dalam permainan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Impressions</strong></td> 
+          <td style="text-align:left;">Jumlah iklan kali dilihat dalam permainan Anda. Kesan dihitung bahkan jika iklan tidak selesai.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>LTV</strong><br> (Nilai Seumur Hidup)</td> 
+          <td style="text-align:left;">Perkiraan nilai pemain rata-rata selama hidup mereka dengan aplikasi atau permainan Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Sticky Factor</strong></td> 
+          <td style="text-align:left;">Sebuah perkiraan bagaimana menyusun permainan adalah untuk pemainnya. Faktor "lengket" yang tinggi berarti bahwa pemain tetap dengan aplikasi seiring waktu. Unity Analytics menghitung Faktor Sticky sebagai persentase pengguna aktif bulanan yang bermain pada hari tertentu (DAU/MAU), yang merupakan definisi yang umum digunakan. Perhatikan bahwa definisi ini dapat menyembunyikan keluar dari pengguna yang ada dengan influx pengguna baru, sehingga tidak harus diandalkan sebagai indikator "kesehatan" dari permainan Anda dalam isolasi dari metrik retensi Anda.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2017–08–29 Sitemap</span></p></li> 
+        <li><p><span class="page-history">2018–06–04 - Segmen Demografi yang Dihapus, yang tidak lagi didukung.</span></p></li> 
+        <li><p><span class="page-history">Fitur baru di Unity 2017. 1 Artikel</span></p></li> 
+       </ul> 
+       <!-- area:monetization --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UnityAnalyticsPIPL.html"></a></span> 
+         <div class="tip">
+           Analisis Unity dan PIPL 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UnityCloudBuild.html"></a></span> 
+         <div class="tip">
+           Build di Unity Cloud 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Database</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="render-pipelines.html">Pipa render</a></li> 
+         <li><a href="built-in-render-pipeline.html">Menggunakan Pipa Render Built-in</a></li> 
+         <li><a href="built-in-shader-examples.html">Contoh naungan untuk Pipa Render Built-in</a></li> 
+         <li>Visualizing vertex data</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="SL-VertexFragmentShaderExamples.html"></a></span> 
+          <div class="tip">
+            Dasar warna kustom 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="universal-render-pipeline.html"></a></span> 
+          <div class="tip">
+            Menggunakan Pipa Render Universal 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Visualizing vertex data</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Contoh ini <span class="tooltip"><strong>shaders</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Shader">Glossary</a></span></span></span> untuk Built-in <span class="tooltip"><strong>Render Pipeline</strong><span class="tooltiptext">Rangkaian operasi yang mengambil isi dari Adegan, dan menampilkannya di layar. Unity memungkinkan Anda memilih dari pipa render yang dibangun sebelumnya, atau menulis sendiri. <a href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span> menunjukkan berbagai cara visualisasi data vertex.</p> 
+       <p>Untuk informasi tentang naungan menulis, lihat <a href="shader-writing.html">Menu Menu</a>.</p> 
+       <h2>Visualisasi UV</h2> 
+       <p>Contoh berikut naungan memvisualisasikan set pertama UV dari <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a class="tooltipMoreInfoLink" href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mesh">Glossary</a></span></span></span>. Naungan ini berguna untuk debugging koordinat.</p> 
+       <p>Kode mendefinisikan sebuah struct yang disebut <code>appdata</code> sebagai input <span class="tooltip"><strong>vertex shader</strong><span class="tooltiptext">Program yang berjalan pada setiap simpul model 3D ketika model sedang diberikan. <a class="tooltipMoreInfoLink" href="SL-ShaderPrograms.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#vertexshader">Glossary</a></span></span></span>. Struktur ini mengambil posisi simpul dan koordinat tekstur pertama sebagai inputnya.</p> 
+       <pre><code>Shader "Debug/UV 1" {
+SubShader {
+    Pass {
+        CGPROGRAM
+        #pragma vertex vert
+        #pragma fragment frag
+            #include "UnityCG.cginc"
+
+        // vertex input: position, UV
+        struct appdata {
+            float4 vertex : POSITION;
+            float4 texcoord : TEXCOORD0;
+        };
+
+        struct v2f {
+            float4 pos : SV_POSITION;
+            float4 uv : TEXCOORD0;
+        };
+        
+        v2f vert (appdata v) {
+            v2f o;
+            o.pos = UnityObjectToClipPos(v.vertex);
+            o.uv = float4( v.texcoord.xy, 0, 0 );
+            return o;
+        }
+        
+        half4 frag( v2f i ) : SV_Target {
+            half4 c = frac( i.uv );
+            if (any(saturate(i.uv) - i.uv))
+                c.b = 0.5;
+            return c;
+        }
+        ENDCG
+    }
+}
+}
+</code></pre> 
+       <p>Di sini, koordinat UV divisualisasikan sebagai warna merah dan hijau, sementara warna biru tambahan telah diterapkan untuk mengkoordinasikan di luar kisaran 0 hingga 1:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SL-DebugUV1.png" alt="Debug UV1 shader applied to a torus knot model"> 
+        <figcaption>
+          Debug UV1 naungan diterapkan untuk model simpul torus 
+        </figcaption> 
+       </figure> 
+       <p>Variasi ini pada naungan yang sama memvisualisasikan set UV kedua:</p> 
+       <pre><code>Shader "Debug/UV 2" {
+SubShader {
+    Pass {
+        CGPROGRAM
+        #pragma vertex vert
+        #pragma fragment frag
+            #include "UnityCG.cginc"
+
+        // vertex input: position, second UV
+        struct appdata {
+            float4 vertex : POSITION;
+            float4 texcoord1 : TEXCOORD1;
+        };
+
+        struct v2f {
+            float4 pos : SV_POSITION;
+            float4 uv : TEXCOORD0;
+        };
+        
+        v2f vert (appdata v) {
+            v2f o;
+            o.pos = UnityObjectToClipPos(v.vertex );
+            o.uv = float4( v.texcoord1.xy, 0, 0 );
+            return o;
+        }
+        
+        half4 frag( v2f i ) : SV_Target {
+            half4 c = frac( i.uv );
+            if (any(saturate(i.uv) - i.uv))
+                c.b = 0.5;
+            return c;
+        }
+        ENDCG
+    }
+}
+}
+</code></pre> 
+       <h2>Visualisasi warna simpul</h2> 
+       <p>Naungan berikut menggunakan posisi simpul dan warna per-vertex sebagai input naungan simpul (didefinisikan dalam struktur <strong>appdata</strong>).</p> 
+       <pre><code>Shader "Debug/Vertex color" {
+SubShader {
+    Pass {
+        CGPROGRAM
+        #pragma vertex vert
+        #pragma fragment frag
+        #include "UnityCG.cginc"
+
+        // vertex input: position, color
+        struct appdata {
+            float4 vertex : POSITION;
+            fixed4 color : COLOR;
+        };
+
+        struct v2f {
+            float4 pos : SV_POSITION;
+            fixed4 color : COLOR;
+        };
+        
+        v2f vert (appdata v) {
+            v2f o;
+            o.pos = UnityObjectToClipPos(v.vertex );
+            o.color = v.color;
+            return o;
+        }
+        
+        fixed4 frag (v2f i) : SV_Target { return i.color; }
+        ENDCG
+    }
+}
+}
+</code></pre> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SL-DebugColors.png" alt="Debug Colors shader applied to a torus knot model that has illumination baked into colors"> 
+        <figcaption>
+          Warna Debug warna naungan diterapkan untuk model simpul torus yang memiliki pencahayaan dipanggang menjadi warna 
+        </figcaption> 
+       </figure> 
+       <h2>Mengvisualisasikan normal</h2> 
+       <p>Naungan berikut menggunakan posisi simpul dan normal sebagai input naungan simpul (didefinisikan dalam struktur <strong>appdata</strong>). Komponen XY &amp; Z normal divisualisasikan sebagai warna RGB. Karena komponen normal berada di kisaran 1 hingga 1, kami mengukur dan membimbing mereka sehingga warna output dapat ditampilkan dalam kisaran 0 hingga 1.</p> 
+       <pre><code>Shader "Debug/Normals" {
+SubShader {
+    Pass {
+        CGPROGRAM
+        #pragma vertex vert
+        #pragma fragment frag
+        #include "UnityCG.cginc"
+
+        // vertex input: position, normal
+        struct appdata {
+            float4 vertex : POSITION;
+            float3 normal : NORMAL;
+        };
+
+        struct v2f {
+            float4 pos : SV_POSITION;
+            fixed4 color : COLOR;
+        };
+        
+        v2f vert (appdata v) {
+            v2f o;
+            o.pos = UnityObjectToClipPos(v.vertex );
+            o.color.xyz = v.normal * 0.5 + 0.5;
+            o.color.w = 1.0;
+            return o;
+        }
+        
+        fixed4 frag (v2f i) : SV_Target { return i.color; }
+        ENDCG
+    }
+}
+}
+</code></pre> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SL-DebugNormals.png" alt="Debug Normals shader applied to a torus knot model. You can see that the model has hard shading edges."> 
+        <figcaption>
+          Debug Normals shader diterapkan pada model simpul torus. Anda dapat melihat bahwa model memiliki tepi bercukur keras. 
+        </figcaption> 
+       </figure> 
+       <h2>Visualisasi tangents dan binormal</h2> 
+       <p>Tangent dan binormal vektor digunakan untuk pemetaan normal. Dalam Unity hanya vektor tangen disimpan dalam simpul, dan binormal berasal dari nilai normal dan tangen.</p> 
+       <p>Naungan berikut menggunakan posisi simpul dan tangent sebagai input naungan simpul (didefinisikan dalam struktur <strong>appdata</strong>). Komponen x,y dan z Tangent divisualkan sebagai warna RGB. Karena komponen normal berada di kisaran -1 hingga 1, kami meningkatkan dan membimbing mereka sehingga warna output berada dalam kisaran 0 hingga 1.</p> 
+       <pre><code>Shader "Debug/Tangents" {
+SubShader {
+    Pass {
+        CGPROGRAM
+        #pragma vertex vert
+        #pragma fragment frag
+        #include "UnityCG.cginc"
+
+        // vertex input: position, tangent
+        struct appdata {
+            float4 vertex : POSITION;
+            float4 tangent : TANGENT;
+        };
+
+        struct v2f {
+            float4 pos : SV_POSITION;
+            fixed4 color : COLOR;
+        };
+        
+        v2f vert (appdata v) {
+            v2f o;
+            o.pos = UnityObjectToClipPos(v.vertex );
+            o.color = v.tangent * 0.5 + 0.5;
+            return o;
+        }
+        
+        fixed4 frag (v2f i) : SV_Target { return i.color; }
+        ENDCG
+    }
+}
+}
+</code></pre> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SL-DebugTangents.png" alt="Debug Tangents shader applied to a torus knot model."> 
+        <figcaption>
+          Debug Tangents shader diterapkan pada model simpul torus. 
+        </figcaption> 
+       </figure> 
+       <p>Naungan berikut memvisualisasikan gigitan. Ini menggunakan posisi simpul, nilai normal dan tangen sebagai input simpul. Bitangent (kadang kali disebut binormal) dihitung dari nilai normal dan tangen. Perlu ditingkatkan dan bias ke dalam kisaran 0 hingga 1.</p> 
+       <pre><code>Shader "Debug/Bitangents" {
+SubShader {
+    Pass {
+        Fog { Mode Off }
+        CGPROGRAM
+        #pragma vertex vert
+        #pragma fragment frag
+        #include "UnityCG.cginc"
+
+        // vertex input: position, normal, tangent
+        struct appdata {
+            float4 vertex : POSITION;
+            float3 normal : NORMAL;
+            float4 tangent : TANGENT;
+        };
+
+        struct v2f {
+            float4 pos : SV_POSITION;
+            float4 color : COLOR;
+        };
+        
+        v2f vert (appdata v) {
+            v2f o;
+            o.pos = UnityObjectToClipPos(v.vertex );
+            // calculate bitangent
+            float3 bitangent = cross( v.normal, v.tangent.xyz ) * v.tangent.w;
+            o.color.xyz = bitangent * 0.5 + 0.5;
+            o.color.w = 1.0;
+            return o;
+        }
+        
+        fixed4 frag (v2f i) : SV_Target { return i.color; }
+        ENDCG
+    }
+}
+}
+</code></pre> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SL-DebugBinormals.png" alt="Debug Bitangents shader applied to a torus knot model."> 
+        <figcaption>
+          Debug Bitangents shader diterapkan pada model simpul torus. 
+        </figcaption> 
+       </figure> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="SL-VertexFragmentShaderExamples.html"></a></span> 
+         <div class="tip">
+           Dasar warna kustom 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="universal-render-pipeline.html"></a></span> 
+         <div class="tip">
+           Menggunakan Pipa Render Universal 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

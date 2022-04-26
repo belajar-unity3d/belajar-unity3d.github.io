@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Jalur rendering di Pipa Render Built-in</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="render-pipelines.html">Pipa render</a></li> 
+         <li><a href="built-in-render-pipeline.html">Menggunakan Pipa Render Built-in</a></li> 
+         <li>Jalur rendering di Pipa Render Built-in</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="graphics-tiers.html"></a></span> 
+          <div class="tip">
+            Grafik 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="RenderTech-ForwardRendering.html"></a></span> 
+          <div class="tip">
+            Maju rendering jalur 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Jalur rendering di Pipa Render Built-in</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Unity's Built-In <span class="tooltip"><strong>Render Pipeline</strong><span class="tooltiptext">Rangkaian operasi yang mengambil isi dari Adegan, dan menampilkannya di layar. Unity memungkinkan Anda memilih dari pipa render yang dibangun sebelumnya, atau menulis sendiri. <a class="tooltipMoreInfoLink" href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span> mendukung jalur rendering yang berbeda. Sebuah <strong>rendering path</strong> adalah serangkaian operasi yang berkaitan dengan pencahayaan dan membentuk. Jalur rendering yang berbeda memiliki kemampuan dan karakteristik kinerja yang berbeda. Memutuskan jalur rendering mana yang paling cocok untuk Proyek Anda tergantung pada jenis Proyek, dan pada perangkat keras target.</p> 
+       <p>Anda dapat memilih jalur rendering yang Meme it Proyek menggunakan di jendela <a class="tooltipMoreInfoLink" href="class-GraphicsSettings.html">Graphics</a>, dan Anda dapat menimpa jalur itu untuk setiap <span class="tooltip"><a href="class-Camera.html">Kamera</a><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span>.</p> 
+       <p>Jika GPU pada perangkat berjalan Proyek tidak mendukung jalur rendering yang telah Anda pilih, Unity secara otomatis menggunakan jalur rendering fidelity yang lebih rendah. Sebagai contoh, pada GPU yang tidak menangani <span class="tooltip"><strong>Deferred Shading</strong><span class="tooltiptext">Sebuah jalur rendering di Pipa Render Built-in yang tidak membatasi jumlah Lampu yang dapat mempengaruhi GameObject. Semua Lampu dievaluasi per-piksel, yang berarti bahwa mereka semua berinteraksi dengan peta normal dan sebagainya. Selain itu, semua Lampu bisa memiliki cookie dan bayangan. <a class="tooltipMoreInfoLink" href="RenderTech-DeferredShading.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Deferredshading">Glossary</a></span></span></span>, Unity menggunakan <span class="tooltip"><strong>Forward Rendering</strong><span class="tooltiptext">Sebuah jalur rendering yang membuat setiap objek dalam satu atau lebih melewati, tergantung pada lampu yang mempengaruhi objek. Lampu sendiri juga diperlakukan berbeda dengan Rendering Maju, tergantung pada pengaturan dan intensitas mereka. <a href="RenderTech-ForwardRendering.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ForwardRendering">Glossary</a></span></span></span>.</p> 
+       <h2>Forward Rendering</h2> 
+       <p>Forward Rendering adalah jalur rendering default di Pipeline Render Built-in. Ini adalah jalur rendering tujuan umum.</p> 
+       <p>Lampu real-time sangat mahal untuk membuat rendering ke depan. Untuk mengimbangi biaya ini, Anda dapat memilih berapa banyak lampu Unity harus membuat per-piksel setiap satu kali. Unity membuat sisa lampu di <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> pada fidelity rendah: per-vertex, atau per-object.</p> 
+       <p>Jika proyek Anda tidak menggunakan sejumlah besar lampu real-time, atau jika kesetiaan pencahayaan tidak penting untuk proyek Anda, maka jalur rendering ini cenderung menjadi pilihan yang baik untuk proyek Anda.</p> 
+       <p>Untuk detail lebih lanjut lihat <a href="RenderTech-ForwardRendering.html">Forward Rendering page</a>.</p> 
+       <h2>Deferred Shading</h2> 
+       <p>Shading yang rusak adalah jalur rendering dengan kesetiaan yang paling pencahayaan dan bayangan di Pipeline Render Built-in.</p> 
+       <p>Pencukur rusak membutuhkan dukungan GPU, dan memiliki keterbatasan. Ini tidak mendukung objek semi transparan (Unity renders ini menggunakan rendering ke depan), proyeksi orografi (Unity menggunakan rendering ke depan untuk Kamera ini), atau anti-alias perangkat keras (meskipun Anda dapat menggunakan efek pasca proses untuk mencapai hasil yang serupa). Ini memiliki dukungan terbatas untuk <span class="tooltip"><strong>culling masks</strong><span class="tooltiptext">Memungkinkan Anda untuk memasukkan atau membatasi objek untuk diberikan oleh Kamera, dengan Layer.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#CullingMask">Glossary</a></span></span></span>, dan memperlakukan bendera <a href="ScriptRef:">Renderer.receiveShadows</a> selalu benar.</p> 
+       <p>Jika proyek Anda memiliki sejumlah besar lampu real-time dan membutuhkan tingkat tinggi kesetiaan pencahayaan, dan perangkat keras target Anda mendukung pencukur yang rusak, maka jalur rendering ini mungkin menjadi pilihan yang baik untuk proyek Anda.</p> 
+       <p>Untuk detail lebih lanjut, termasuk saran tentang batasan jalan rendering ini, lihat <a href="RenderTech-DeferredShading.html">Deferred Shading page</a>.</p> 
+       <h2>Legacy Deferred</h2> 
+       <p> <em>Legacy Deferred (light prepass)</em> mirip dengan Deferred Shading, kecuali menggunakan teknik yang berbeda dengan trade-off yang berbeda. Tidak mendukung Unity 5 standar berbasis fisik <span class="tooltip"><strong>shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span>.</p> 
+       <p>Untuk detail lebih lanjut lihat <a href="RenderTech-DeferredLighting.html">Halaman Pencahayaan yang rusak</a>.</p> 
+       <h2>Login Login</h2> 
+       <p> <em>Login Login</em> adalah jalur rendering dengan kesetiaan pencahayaan terendah dan tidak ada dukungan untuk bayangan real-time. Ini adalah bagian dari jalur rendering Forward.</p> 
+       <p>Untuk detail lebih lanjut lihat <a href="RenderTech-VertexLit.html">Login Login</a>.</p> 
+       <h2>Perbandingan Rendering Path</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"></th> 
+          <th style="text-align:left;"><strong><em>Deferred</em></strong></th> 
+          <th style="text-align:left;"><strong><em>Forward</em></strong></th> 
+          <th style="text-align:left;"><strong>Legacy Deferred</strong></th> 
+          <th style="text-align:left;"><strong><em>Vertex Lit</em></strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Features</strong></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Pencahayaan per-piksel ( peta normal, cookie cahaya)</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">-</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Bayangan real-time</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Dengan gua</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">-</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Reflection Probes</strong><span class="tooltiptext">Komponen rendering yang menangkap pandangan bulat dari sekitarnya di semua arah, seperti kamera. Gambar yang ditangkap kemudian disimpan sebagai kubus yang dapat digunakan oleh benda dengan bahan reflektif. <a class="tooltipMoreInfoLink" href="class-ReflectionProbe.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ReflectionProbe">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">-</td> 
+          <td style="text-align:left;">-</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Kedalaman &amp; Buffer Normal</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Tambahan render melewati</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">-</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Soft Particles</strong><span class="tooltiptext">Partikel yang menciptakan efek semi transparan seperti asap, kabut atau api. Partikel lembut memudar karena mereka mendekati objek buram, untuk mencegah persimpangan dengan geometri. <a class="tooltipMoreInfoLink" href="shader-StandardParticleShaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SoftParticles">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">-</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">-</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Objek semi transparan</td> 
+          <td style="text-align:left;">-</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">-</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Anti-Aliasing</td> 
+          <td style="text-align:left;">-</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">-</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Masker Culling Cahaya</td> 
+          <td style="text-align:left;">Limited</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Limited</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Fidelitas Pencahayaan</td> 
+          <td style="text-align:left;">Semua per-piksel</td> 
+          <td style="text-align:left;">Beberapa per-piksel</td> 
+          <td style="text-align:left;">Semua per-piksel</td> 
+          <td style="text-align:left;">All per-vertex</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Performance</strong></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Biaya cahaya per-piksel</td> 
+          <td style="text-align:left;">Jumlah <span class="tooltip"><strong>pixels</strong><span class="tooltiptext">Unit terkecil dalam gambar komputer. Ukuran piksel tergantung pada resolusi layar Anda. Pencahayaan pixel dihitung pada setiap piksel layar. <a class="tooltipMoreInfoLink" href="ShadowPerformance.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#pixel">Glossary</a></span></span></span> itu menerangi</td> 
+          <td style="text-align:left;">Jumlah piksel * Jumlah benda yang diterangi</td> 
+          <td style="text-align:left;">Jumlah piksel itu menerangi</td> 
+          <td style="text-align:left;">-</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Jumlah objek waktu biasanya diberikan</td> 
+          <td style="text-align:left;">1</td> 
+          <td style="text-align:left;">Jumlah lampu per-piksel</td> 
+          <td style="text-align:left;">2</td> 
+          <td style="text-align:left;">1</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Overhead untuk adegan sederhana</td> 
+          <td style="text-align:left;">High</td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Medium</td> 
+          <td style="text-align:left;">None</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Platform Support</strong></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">PC (Windows/Mac)</td> 
+          <td style="text-align:left;">Model Shader 3.0+ &amp; MRT</td> 
+          <td style="text-align:left;">All</td> 
+          <td style="text-align:left;">Model Shader 3.0+</td> 
+          <td style="text-align:left;">All</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Mobil (iOS/Android)</td> 
+          <td style="text-align:left;">OpenGL ES 3.0 &amp; MRT, Metal (pada perangkat dengan A8 atau kemudian SoC)</td> 
+          <td style="text-align:left;">All</td> 
+          <td style="text-align:left;">OpenGL ES 2.0</td> 
+          <td style="text-align:left;">All</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Consoles</td> 
+          <td style="text-align:left;">XB1, PS4</td> 
+          <td style="text-align:left;">All</td> 
+          <td style="text-align:left;">XB1, PS4, 360</td> 
+          <td style="text-align:left;">-</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="graphics-tiers.html"></a></span> 
+         <div class="tip">
+           Grafik 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="RenderTech-ForwardRendering.html"></a></span> 
+         <div class="tip">
+           Maju rendering jalur 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

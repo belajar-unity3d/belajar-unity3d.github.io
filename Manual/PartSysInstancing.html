@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Sistem Partikel GPU Login</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="visual-effects.html">Efek visual</a></li> 
+         <li><a href="ParticleSystems.html">Sistem partikel</a></li> 
+         <li><a href="Built-inParticleSystem.html">Sistem Partikel Built-in</a></li> 
+         <li>Sistem Partikel GPU Login</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="PartSysVertexStreams.html"></a></span> 
+          <div class="tip">
+            Sistem Partikel aliran simpul dan dukungan Shader Standar 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="particle-system-job-system-integration.html"></a></span> 
+          <div class="tip">
+            Sistem Partikel C# Integrasi Sistem Kerja 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Sistem Partikel GPU Login</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>GPUSicing menawarkan peningkatan kinerja besar dibandingkan dengan rendering CPU. Anda dapat menggunakannya jika Anda ingin <span class="tooltip"><strong>particle system</strong><span class="tooltiptext">Komponen yang mensimulasikan entitas fluida seperti cairan, awan dan nyala dengan menghasilkan dan memikat sejumlah besar gambar 2D kecil di tempat kejadian. <a class="tooltipMoreInfoLink" href="class-ParticleSystem.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#particlesystem">Glossary</a></span></span></span> Anda untuk membuat partikel <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Mesh">Glossary</a></span></span></span> (selain dengan default <a href="PartSysRendererModule.html">mode rendering</a> dari rendering partikel <span class="tooltip"><strong>billboard</strong><span class="tooltiptext">Objek 2D bertekstur yang berputar sehingga selalu menghadapi Kamera. <a href="class-BillboardRenderer.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Billboard">Glossary</a></span></span></span>).</p> 
+       <p>Untuk dapat menggunakan GPU dengan sistem partikel Anda:</p> 
+       <ul> 
+        <li><p>Login Mode <a href="PartSysRendererModule.html">renderer</a> Sistem Partikel hingga <strong>Mesh</strong> </p></li> 
+        <li><p>Gunakan bahan <span class="tooltip"><strong>shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> untuk bahan <a href="PartSysRendererModule.html">renderer</a> yang mendukung GPU Instancing</p></li> 
+        <li><p>Jalankan proyek Anda di platform yang mendukung GPUlawcing</p></li> 
+       </ul> 
+       <p>Untuk mengaktifkan GPU tenggelam untuk sistem partikel, Anda harus mengaktifkan kotak centang <strong>Enable GPU Instancing</strong> dalam modul <strong>Renderer</strong> sistem partikel Anda.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PartSysInstancingEnable.png" alt="The option to enable Particle System GPU instancing in the Renderer module"> 
+        <figcaption>
+          Pilihan untuk mengaktifkan Sistem Partikel GPU di modul Renderer 
+        </figcaption> 
+       </figure> 
+       <p>Unity dilengkapi dengan naungan partikel built-in yang mendukung GPU tenggelam, tetapi bahan partikel default tidak menggunakannya, sehingga Anda harus mengubah ini untuk menggunakan GPU baycing. Partikel naungan yang mendukung GPU bayangan disebut <strong>Particles/Standard Surface</strong>. Untuk menggunakannya, Anda harus membuat <span class="tooltip"><strong>material</strong><span class="tooltiptext">Aset yang menentukan bagaimana permukaan harus diberikan. <a class="tooltipMoreInfoLink" href="class-Material.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Material">Glossary</a></span></span></span> baru Anda sendiri, dan mengatur warna material ke <strong>Particles/Standard Surface</strong>. Anda kemudian harus menetapkan materi baru ini ke bidang material dalam modul <a href="PartSysRendererModule.html">renderer</a> Sistem Partikel.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PartSysInstancingShader.png" alt="The built-in shader that is compatible with Particle System GPU Instancing"> 
+        <figcaption>
+          Naungan bawaan yang kompatibel dengan Sistem Partikel GPU Instancing 
+        </figcaption> 
+       </figure> 
+       <p>Jika Anda menggunakan naungan yang berbeda untuk partikel Anda, itu harus menggunakan '#pragma target 4.5' atau lebih tinggi. Lihat <a href="SL-ShaderCompileTargets.html">Target Kompile</a> untuk rincian lebih lanjut. Persyaratan ini lebih tinggi daripada GPU Instancing biasa dalam Unity karena Sistem Partikel menulis semua data instancenya ke penyanggaan besar tunggal, daripada memecah peninggalan ke beberapa panggilan menarik.</p> 
+       <h2>Contoh warna kustom</h2> 
+       <p>Anda juga dapat menulis warna kustom yang menggunakan GPU Instancing. Lihat bagian berikut untuk informasi lebih lanjut:</p> 
+       <ul> 
+        <li><a href="#SurfaceShader">Sistem partikel GPU Peningkatan dalam Shader Permukaan</a></li> 
+        <li><a href="#CustomShader">Sistem partikel GPU Mengimbangi Shader Kustom</a></li> 
+        <li> <a href="#CustomVertexStreams">Mengkustomisasi data instance yang digunakan oleh Sistem Partikel</a> (untuk bekerja bersama Custom Vertex Streams)</li> 
+       </ul> 
+       <p><a name="SurfaceShader"></a></p> 
+       <h3>Sistem partikel GPU Peningkatan dalam Shader Permukaan</h3> 
+       <p>Berikut adalah contoh kerja lengkap dari Permukaan Shader menggunakan Sistem Partikel GPU Instancing:</p> 
+       <pre><code>
+Shader "Instanced/ParticleMeshesSurface" {
+    Properties {
+        _Color ("Color", Color) = (1,1,1,1)
+        _MainTex ("Albedo (RGB)", 2D) = "white" {}
+        _Glossiness ("Smoothness", Range(0,1)) = 0.5
+        _Metallic ("Metallic", Range(0,1)) = 0.0
+    }
+    SubShader {
+        Tags { "RenderType"="Opaque" }
+        LOD 200
+
+        CGPROGRAM
+        // Physically based Standard lighting model, and enable shadows on all light types
+        // And generate the shadow pass with instancing support
+        #pragma surface surf Standard nolightmap nometa noforwardadd keepalpha fullforwardshadows addshadow vertex:vert
+        // Enable instancing for this shader
+        #pragma multi_compile_instancing
+        #pragma instancing_options procedural:vertInstancingSetup
+        #pragma exclude_renderers gles
+        #include "UnityStandardParticleInstancing.cginc"
+        sampler2D _MainTex;
+        struct Input {
+            float2 uv_MainTex;
+            fixed4 vertexColor;
+        };
+        fixed4 _Color;
+        half _Glossiness;
+        half _Metallic;
+        void vert (inout appdata_full v, out Input o)
+        {
+            UNITY_INITIALIZE_OUTPUT(Input, o);
+            vertInstancingColor(o.vertexColor);
+            vertInstancingUVs(v.texcoord, o.uv_MainTex);
+        }
+
+        void surf (Input IN, inout SurfaceOutputStandard o) {
+            // Albedo comes from a texture tinted by color
+            fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * IN.vertexColor * _Color;
+            o.Albedo = c.rgb;
+            // Metallic and smoothness come from slider variables
+            o.Metallic = _Metallic;
+            o.Smoothness = _Glossiness;
+            o.Alpha = c.a;
+        }
+        ENDCG
+    }
+    FallBack "Diffuse"
+}
+</code></pre> 
+       <p>Ada sejumlah perbedaan kecil untuk <span class="tooltip"><a class="tooltipMoreInfoLink" href="SL-SurfaceShaders.html">Permukaan Shader</a><span class="tooltiptext">Cara merampingkan naungan menulis untuk Pipeline Render Built-in. <a href="SL-SurfaceShaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SurfaceShader">Glossary</a></span></span></span> biasa dalam contoh di atas, yang membuatnya bekerja dengan partikel peninggalan.</p> 
+       <p>Pertama, Anda harus menambahkan dua baris berikut untuk mengaktifkan Peningkatan Instancing, dan menentukan fungsi pengaturan simpul built-in. Fungsi ini hidup di UnityStandardParticleInstancing.cginc, dan memuat data posisi per-instance (per-partikel):</p> 
+       <pre><code>        #pragma instancing_options procedural:vertInstancingSetup
+        #include "UnityStandardParticleInstancing.cginc"
+</code></pre> 
+       <p>Modifikasi lain dalam contohnya adalah fungsi Vertex, yang memiliki dua garis tambahan yang menerapkan atribut per-instance, khusus, warna partikel dan koordinasi tekstur <a href="PartSysTexSheetAnimModule.html">Tekstur Lembar Animasi</a>:</p> 
+       <pre><code>            vertInstancingColor(o.vertexColor);
+            vertInstancingUVs(v.texcoord, o.uv_MainTex);
+</code></pre> 
+       <p><a name="CustomShader"></a></p> 
+       <h3>Sistem Partikel GPU Mengimbangi Shader Kustom</h3> 
+       <p>Berikut ini adalah contoh kerja lengkap dari Shader kustom menggunakan sistem partikel GPU bayangan. Shader kustom ini menambahkan fitur yang diwarnai partikel standar tidak memiliki - fade antara bingkai individu dari <a href="PartSysTexSheetAnimModule.html">lembar tekstur animasi</a>.</p> 
+       <pre><code>Shader "Instanced/ParticleMeshesCustom"
+{
+    Properties
+    {
+        _MainTex("Albedo", 2D) = "white" {}
+        [Toggle(_TSANIM_BLENDING)] _TSAnimBlending("Texture Sheet Animation Blending", Int) = 0
+    }
+    SubShader
+    {
+        Tags{ "RenderType" = "Opaque" }
+        LOD 100
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #pragma multi_compile __ _TSANIM_BLENDING
+            #pragma multi_compile_instancing
+            #pragma instancing_options procedural:vertInstancingSetup
+            #include "UnityCG.cginc"
+            #include "UnityStandardParticleInstancing.cginc"
+            struct appdata
+            {
+                float4 vertex : POSITION;
+                fixed4 color : COLOR;
+                float2 texcoord : TEXCOORD0;
+                UNITY_VERTEX_INPUT_INSTANCE_ID
+            };
+            struct v2f
+            {
+                float4 vertex : SV_POSITION;
+                fixed4 color : COLOR;
+                float2 texcoord : TEXCOORD0;
+#ifdef _TSANIM_BLENDING
+                float3 texcoord2AndBlend : TEXCOORD1;   
+#endif
+            };
+            sampler2D _MainTex;
+            float4 _MainTex_ST;
+            fixed4 readTexture(sampler2D tex, v2f IN)
+            {
+                fixed4 color = tex2D(tex, IN.texcoord);
+#ifdef _TSANIM_BLENDING
+                fixed4 color2 = tex2D(tex, IN.texcoord2AndBlend.xy);
+                color = lerp(color, color2, IN.texcoord2AndBlend.z);
+#endif
+                return color;
+            }
+            v2f vert(appdata v)
+            {
+                v2f o;
+                UNITY_SETUP_INSTANCE_ID(v);
+                o.color = v.color;
+                o.texcoord = v.texcoord;
+                vertInstancingColor(o.color);
+#ifdef _TSANIM_BLENDING
+                vertInstancingUVs(v.texcoord, o.texcoord, o.texcoord2AndBlend);
+#else
+                vertInstancingUVs(v.texcoord, o.texcoord);
+#endif
+                o.vertex = UnityObjectToClipPos(v.vertex);
+                return o;
+            }
+            fixed4 frag(v2f i) : SV_Target
+            {
+                half4 albedo = readTexture(_MainTex, i);
+                return i.color * albedo;
+            }
+            ENDCG
+        }
+    }
+}
+</code></pre> 
+       <p>Contoh ini mengandung kode set-up yang sama sebagai Shader Permukaan untuk memuat data posisi:</p> 
+       <pre><code>        #pragma instancing_options procedural:vertInstancingSetup
+        #include "UnityStandardParticleInstancing.cginc"
+</code></pre> 
+       <p>Modifikasi fungsi simpul sangat mirip dengan permukaan Shader juga:</p> 
+       <pre><code>                vertInstancingColor(o.color);
+#ifdef _TSANIM_BLENDING
+                vertInstancingUVs(v.texcoord, o.texcoord, o.texcoord2AndBlend);
+#else
+                vertInstancingUVs(v.texcoord, o.texcoord);
+#endif
+</code></pre> 
+       <p>Satu-satunya perbedaan di sini, dibandingkan dengan contoh pertama di atas, adalah campuran animasi lembar tekstur. Ini berarti bahwa naungan membutuhkan set ekstra dari koordinat tekstur untuk membaca dua bingkai dari animasi lembar tekstur bukan hanya satu, dan memadukannya bersama.</p> 
+       <p>Akhirnya, naungan fragmen membaca tekstur dan menghitung warna akhir.</p> 
+       <p><a name="CustomVertexStreams"></a></p> 
+       <h3>Sistem partikel Login Mengimbangi aliran vertex kustom</h3> 
+       <p>Contoh di atas hanya menggunakan pengaturan aliran vertex default untuk partikel. Ini termasuk posisi, warna normal, dan satu UV. Namun, dengan menggunakan <a href="PartSysVertexStreams.html">aliran vertex kustom</a>, Anda dapat mengirim data lain ke naungan, seperti velocities, rotasi dan ukuran.</p> 
+       <p>Dalam contoh berikutnya, warna dirancang untuk menampilkan efek khusus, yang membuat partikel yang lebih cepat tampak lebih cerah, dan partikel yang lebih lambat redup. Ada beberapa kode ekstra yang mencerahkan partikel sesuai dengan kecepatan mereka, menggunakan Speed Vertex Stream. Juga, karena naungan ini mengasumsikan efek tidak akan menggunakan animasi lembar tekstur, itu dihilangkan dari struct aliran kustom.</p> 
+       <p>Berikut adalah Shader penuh:</p> 
+       <pre><code>Shader "Instanced/ParticleMeshesCustomStreams"
+{
+    Properties
+    {
+        _MainTex("Albedo", 2D) = "white" {}
+    }
+    SubShader
+    {
+        Tags{ "RenderType" = "Opaque" }
+        LOD 100
+        Pass
+        {
+            CGPROGRAM
+#pragma exclude_renderers gles
+            #pragma vertex vert
+            #pragma fragment frag
+            #pragma multi_compile_instancing
+            #pragma instancing_options procedural:vertInstancingSetup
+            #define UNITY_PARTICLE_INSTANCE_DATA MyParticleInstanceData
+            #define UNITY_PARTICLE_INSTANCE_DATA_NO_ANIM_FRAME
+            struct MyParticleInstanceData
+            {
+                float3x4 transform;
+                uint color;
+                float speed;
+            };
+            #include "UnityCG.cginc"
+            #include "UnityStandardParticleInstancing.cginc"
+            struct appdata
+            {
+                float4 vertex : POSITION;
+                fixed4 color : COLOR;
+                float2 texcoord : TEXCOORD0;
+                UNITY_VERTEX_INPUT_INSTANCE_ID
+            };
+            struct v2f
+            {
+                float4 vertex : SV_POSITION;
+                fixed4 color : COLOR;
+                float2 texcoord : TEXCOORD0;
+            };
+            sampler2D _MainTex;
+            float4 _MainTex_ST;
+            v2f vert(appdata v)
+            {
+                v2f o;
+                UNITY_SETUP_INSTANCE_ID(v);
+                o.color = v.color;
+                o.texcoord = v.texcoord;
+                vertInstancingColor(o.color);
+                vertInstancingUVs(v.texcoord, o.texcoord);
+#if defined(UNITY_PARTICLE_INSTANCING_ENABLED)
+                UNITY_PARTICLE_INSTANCE_DATA data = unity_ParticleInstanceData[unity_InstanceID];
+                o.color.rgb += data.speed;
+#endif
+                o.vertex = UnityObjectToClipPos(v.vertex);
+                return o;
+            }
+            fixed4 frag(v2f i) : SV_Target
+            {
+                half4 albedo = tex2D(_MainTex, i.texcoord);
+                return i.color * albedo;
+            }
+            ENDCG
+        }
+    }
+}
+
+</code></pre> 
+       <p>Naungan termasuk <code>UnityStandardParticleInstancing.cginc</code>, yang mengandung tata letak data default untuk ketika Custom Vertex Streams tidak digunakan. Jadi, ketika menggunakan aliran kustom, Anda harus menimpa beberapa default yang didefinisikan dalam header itu. Overrides ini harus datang <strong>before</strong> termasuk. Contoh di atas mengatur override kustom berikut:</p> 
+       <p>Pertama, ada garis yang memberitahu Unity untuk menggunakan struct kustom yang disebut 'MyParticleInstanceData' untuk data aliran kustom, menggunakan UNITY_PARTICLE_INSTANCE_DATA macro:</p> 
+       <pre><code>            #define UNITY_PARTICLE_INSTANCE_DATA MyParticleInstanceData
+</code></pre> 
+       <p>Selanjutnya, yang lain mendefinisikan memberitahukan sistem peninggalan yang Anim Frame Stream tidak diperlukan dalam naungan ini, karena efek dalam contoh ini tidak dimaksudkan untuk digunakan dengan animasi lembar tekstur:</p> 
+       <pre><code>            #define UNITY_PARTICLE_INSTANCE_DATA_NO_ANIM_FRAME
+</code></pre> 
+       <p>Ketiga, struct untuk data aliran kustom diumumkan:</p> 
+       <pre><code>            struct MyParticleInstanceData
+            {
+                float3x4 transform;
+                uint color;
+                float speed;
+            };
+</code></pre> 
+       <p>Ini menimpa semua datang sebelum <code>UnityStandardParticleInstancing.cginc</code> disertakan, sehingga naungan tidak menggunakan default sendiri untuk mereka mendefinisikan.</p> 
+       <p>Ketika menulis struct Anda, variabel harus mencocokkan aliran simpul yang tercantum dalam modul renderer Sistem Partikel. Ini berarti Anda harus memilih aliran yang ingin Anda gunakan dalam modul Renderer <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Inspector">Glossary</a></span></span></span>, dan menambahkannya ke definisi variabel dalam merusak data aliran kustom Anda dalam urutan yang sama, sehingga mereka cocok:<span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span>, and add them to variable definitions in your custom stream data struct in the same order, so that they match:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PartSysInstancingCustomVertexStreams.png" alt="The custom vertex streams shown in the Renderer module UI, showing some instanced and some non-instanced streams"> 
+        <figcaption>
+          Aliran vertex kustom yang ditunjukkan dalam UI modul Renderer, menunjukkan beberapa aliran yang dicontohkan dan beberapa aliran non-instanced 
+        </figcaption> 
+       </figure> 
+       <p>Item pertama (Position) wajib, sehingga Anda tidak dapat menghapusnya. Anda dapat dengan bebas menambahkan / menghapus entri lain menggunakan tombol plus dan minus untuk menyesuaikan data aliran vertex Anda.</p> 
+       <p>Entries dalam daftar yang diikuti oleh <strong>INSTANCED</strong> mengandung data instance, sehingga Anda harus memasukkannya dalam data instance partikel Anda. Jumlah langsung yang diajukan ke kata <strong>INSTANCED</strong> (misalnya nol dalam <strong>INSTANCED0</strong> dan satu dalam <strong>INSTANCED1</strong>) menunjukkan urutan di mana variabel harus muncul di struct Anda, <em>after</em> variabel "transform". Huruf trailing (.x .xy .xyz atau .xyzw) menunjukkan jenis variabel dan peta untuk mengapung, mengapung2, mengapung3 dan mengapung4 jenis variabel dalam kode naungan Anda.</p> 
+       <p>Anda dapat mengosongkan data aliran vertex lainnya yang muncul dalam daftar, tetapi itu melakukan <em><em>not</em> </em>have kata <strong>INSTANCED</strong> setelah itu, dari contoh partikel data merusak, karena tidak dicontoh data yang diproses oleh naungan. Data ini termasuk dalam jaring sumber, misalnya UV, Normal dan Tangents.</p> 
+       <p>Langkah terakhir untuk menyelesaikan contoh kami adalah untuk menerapkan kecepatan ke warna partikel di dalam <span class="tooltip"><strong>Vertex Shader</strong><span class="tooltiptext">Program yang berjalan pada setiap simpul model 3D ketika model sedang diberikan. <a class="tooltipMoreInfoLink" href="SL-ShaderPrograms.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#vertexshader">Glossary</a></span></span></span>:</p> 
+       <pre><code>#if defined(UNITY_PARTICLE_INSTANCING_ENABLED)
+                UNITY_PARTICLE_INSTANCE_DATA data = unity_ParticleInstanceData[unity_InstanceID];
+                o.color.rgb += data.speed;
+#endif
+</code></pre> 
+       <p>Anda harus membungkus semua kode penjahitan di dalam cek untuk UNITY_PARTICLE_INSTANCING_ENABLED, sehingga dapat mengkompilasi ketika peninggalan tidak digunakan.</p> 
+       <p>Pada titik ini, jika Anda ingin melewati data ke Shader Fragment, Anda dapat menulis data ke dalam struct v2f, seperti Anda akan dengan data naungan lainnya.</p> 
+       <p>Contoh ini menjelaskan cara memodifikasi Shader Kustom untuk digunakan dengan Custom Vertex Streams, tetapi Anda dapat menerapkan pendekatan yang sama dengan Permukaan Shader untuk mencapai fungsi yang sama.</p> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2018–03–28 Sitemap</span></p></li> 
+        <li><p><span class="page-history">Sistem Partikel GPU tenggelam ditambahkan dalam Unity <a href="../Manual/30_search.html?q=newin20181">2018.1</a> <span class="search-words">Oktober 2018</span></span></p></li> 
+       </ul> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="PartSysVertexStreams.html"></a></span> 
+         <div class="tip">
+           Sistem Partikel aliran simpul dan dukungan Shader Standar 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="particle-system-job-system-integration.html"></a></span> 
+         <div class="tip">
+           Sistem Partikel C# Integrasi Sistem Kerja 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

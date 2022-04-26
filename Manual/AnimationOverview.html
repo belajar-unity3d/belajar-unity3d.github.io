@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Tinjauan Sistem Animasi</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="AnimationSection.html">Animation</a></li> 
+         <li>Gambaran Keseluruhan Sistem Animasi</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="AnimationSection.html"></a></span> 
+          <div class="tip">
+            Animation 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="AnimationRotate.html"></a></span> 
+          <div class="tip">
+            Rotasi dalam animasi 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Gambaran Keseluruhan Sistem Animasi</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Unity memiliki sistem animasi yang kaya dan canggih (kadang kali disebut sebagai '<strong>Mecanim</strong>'). Ini menyediakan:</p> 
+       <ul> 
+        <li>Aliran kerja yang mudah dan pengaturan animasi untuk semua elemen Unity termasuk benda, karakter, dan sifat.</li> 
+        <li>Dukungan untuk <a href="class-AnimationClip.html">klip animasi impor</a> dan animasi yang dibuat dalam Unity</li> 
+        <li><span class="tooltip"><strong>Humanoid animation</strong><span class="tooltiptext">Animasi menggunakan kerangka humanoid. Model humanoid umumnya memiliki struktur dasar yang sama, mewakili bagian artculate utama tubuh, kepala dan anggota badan. Ini memudahkan untuk memetakan animasi dari satu kerangka humanoid ke yang lain, memungkinkan penargetan ulang dan kinematik terbalik. <a class="tooltipMoreInfoLink" href="ConfiguringtheAvatar.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Humanoidanimation">Glossary</a></span></span></span> <span class="tooltip"><a href="Retargeting.html">retargeting</a><span class="tooltiptext">Menerapkan animasi yang dibuat untuk satu model ke yang lain. <a href="Retargeting.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Retargeting">Glossary</a></span></span></span> - kemampuan untuk menerapkan animasi dari satu model karakter ke yang lain.</li> 
+        <li>Aliran kerja yang disederhanakan untuk menyelaraskan klip animasi.</li> 
+        <li>Pratinjau nyaman klip animasi, transisi dan interaksi antara mereka. Ini memungkinkan para aimator untuk bekerja lebih mandiri programmer, prototipe dan preview animasi mereka sebelum kode gameplay diikat.</li> 
+        <li>Manajemen interaksi kompleks antara animasi dengan alat pemrograman visual.</li> 
+        <li>Mengingat bagian tubuh yang berbeda dengan logika yang berbeda.</li> 
+        <li>Fitur lapisan dan masking</li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AnimationOverview-Controller.jpg" alt="Typical view of an Animation State Machine in the Animator window"> 
+        <figcaption>
+          Gambaran umum dari Mesin Negara Animasi di jendela Animator 
+        </figcaption> 
+       </figure> 
+       <h2>Animasi alur kerja</h2> 
+       <p>Sistem animasi Unity didasarkan pada konsep <span class="tooltip"><a class="tooltipMoreInfoLink" href="AnimationClips.html">Animasi Klip</a><span class="tooltiptext">Animasi data yang dapat digunakan untuk karakter animasi atau animasi sederhana. Ini adalah bagian "unit" sederhana dari gerakan, seperti (salah satu contoh spesifik) "Idle", "Walk" atau "Run". <a href="class-AnimationClip.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnimationClip">Glossary</a></span></span></span>, yang berisi informasi tentang bagaimana objek tertentu harus mengubah posisi, rotasi, atau sifat lain dari waktu. Setiap klip dapat dianggap sebagai rekaman linier tunggal. Animasi klip dari sumber eksternal diciptakan oleh seniman atau animator dengan alat pihak ketiga seperti Autodeskdesk 3ds Max® atau Autodeskdesk Maya®, atau berasal dari studio capture gerak atau sumber lainnya.</p> 
+       <p>Klip animasi kemudian diatur ke dalam sistem flowchart-like terstruktur yang disebut <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-AnimatorController.html">Pengontrol Animator</a><span class="tooltiptext">Kontrol animasi melalui Lapisan Animasi dengan Mesin Negara Animasi dan Pohon Animasi Blend, dikendalikan oleh Parameter Animasi. Pengontrol Animator yang sama dapat direferensikan oleh beberapa model dengan komponen Animator. <a href="class-AnimatorController.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#AnimatorController">Glossary</a></span></span></span>. Animator Controller bertindak sebagai "<span class="tooltip"><a href="AnimationStateMachines.html">Mesin</a><span class="tooltiptext">Satu set negara di Animator Controller yang karakter atau animasi GameObject dapat masuk, bersama dengan satu set transisi antara negara-negara tersebut dan variabel untuk mengingat keadaan saat ini. Negara-negara yang tersedia akan tergantung pada jenis gameplay, tetapi keadaan khas termasuk hal-hal seperti idling, berjalan, berjalan dan melompat. <a href="StateMachineBasics.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#StateMachine">Glossary</a></span></span></span>" yang melacak klip mana saat ini harus bermain, dan ketika animasi harus berubah atau dicampur bersama.</p> 
+       <p>Animator Controller yang sangat sederhana mungkin hanya mengandung satu atau dua klip, misalnya untuk mengontrol pemintalan powerup dan bouncing, atau untuk menghidupkan bukaan pintu dan penutupan pada waktu yang benar. Pengontrol Animator yang lebih canggih mungkin mengandung puluhan animasi humanoid untuk semua tindakan karakter utama, dan mungkin campuran antara beberapa klip pada saat yang sama untuk memberikan gerakan cairan sebagai pemain bergerak di sekitar <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>.</p> 
+       <p>Sistem Animasi Unity juga memiliki banyak fitur khusus untuk menangani karakter humanoid yang memberi Anda kemampuan untuk animasi humanoid <a class="tooltipMoreInfoLink" href="Retargeting.html">retarget</a> dari setiap sumber (misalnya: menangkap gerakan; Toko Aset; atau beberapa perpustakaan animasi pihak ketiga lainnya) ke model karakter Anda sendiri, serta menyesuaikan <span class="tooltip"><a href="MuscleDefinitions.html">definisi otot</a><span class="tooltiptext">Ini memungkinkan Anda untuk memiliki kontrol yang lebih intuitif atas kerangka karakter. Ketika Avatar berada di tempat, sistem Animasi bekerja di ruang otot, yang lebih intuitif daripada ruang tulang. <a href="MuscleDefinitions.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Muscledefinition">Glossary</a></span></span></span>. Fitur khusus ini diaktifkan oleh sistem <span class="tooltip"><a href="AvatarCreationandSetup.html">Avatar</a><span class="tooltiptext">Antarmuka untuk penargetan ulang animasi dari satu rig ke yang lain. <a href="ConfiguringtheAvatar.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Avatar">Glossary</a></span></span></span> Unity, di mana karakter humanoid dipetakan ke format internal yang umum.</p> 
+       <p>Setiap potongan ini - Klip Animasi, Pengontrol Animator, dan Avatar, dibawa bersama pada <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#GameObject">Glossary</a></span></span></span> melalui <span class="tooltip"><a href="class-Animator.html">Komponen Animator</a><span class="tooltiptext">Komponen pada model yang merupakan model yang menggunakan sistem Animasi. Komponen ini memiliki referensi aset Animator Controller yang mengontrol animasi. <a href="class-AnimatorController.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnimatorComponent">Glossary</a></span></span></span>. Komponen ini memiliki referensi untuk Animator Controller, dan (jika diperlukan) Avatar untuk model ini. Animator Controller, pada gilirannya, mengandung referensi ke Klip Animasi yang digunakan.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/MecanimHowItFitsTogether.jpg" alt="How the various parts of the animation system connect together"> 
+        <figcaption>
+          Bagaimana berbagai bagian sistem animasi terhubung bersama 
+        </figcaption> 
+       </figure> 
+       <p>Diagram di atas menunjukkan berikut:</p> 
+       <ol> 
+        <li>Animasi klip adalah <a href="class-AnimationClip.html">diimpor dari sumber eksternal</a> atau dibuat dalam Unity. Dalam contoh ini, mereka adalah <a href="ConfiguringtheAvatar.html">gerakan impor menangkap animasi humanoid</a>.</li> 
+        <li>Klip animasi ditempatkan dan diatur dalam Animator Controller. Ini menunjukkan pandangan dari Animator Controller di <span class="tooltip"><strong>Animator window</strong><span class="tooltiptext">Jendela di mana Animator Controller divisualkan dan diedit. <a class="tooltipMoreInfoLink" href="AnimatorWindow.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#AnimatorWindow">Glossary</a></span></span></span>. Amerika Serikat (yang dapat mewakili animasi atau mesin sub-state bersarang) muncul sebagai node yang terhubung dengan garis. Pengontrol Animator ini ada sebagai aset di <span class="tooltip"><strong>Project window</strong><span class="tooltiptext">Jendela yang menunjukkan isi folder <code>Assets</code> (Project tab) <a href="ProjectView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Projectwindow">Glossary</a></span></span></span>.</li> 
+        <li>Model karakter rigged (dalam kasus ini, astronot “Astrella”) memiliki konfigurasi spesifik tulang yang dipetakan ke format <a href="class-Avatar.html">Avatar</a> umum Unity. Pemetaan ini disimpan sebagai aset Avatar sebagai bagian dari model karakter impor, dan juga muncul di jendela Proyek seperti yang ditunjukkan.</li> 
+        <li>Ketika mengambil model karakter, memiliki komponen Animator terpasang. Dalam pandangan <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span> ditunjukkan di atas, Anda dapat melihat <a href="class-Animator.html">Komponen Animator</a> yang memiliki kedua <a href="class-AnimatorController.html">Pengontrol Animator</a> dan <a href="class-Avatar.html">Avatar</a> ditugaskan. Animator menggunakan ini bersama-sama untuk menghidupkan model. Referensi Avatar hanya diperlukan ketika mempelajari karakter humanoid. Untuk <a href="GenericAnimations.html">jenis lain dari animasi</a>, hanya Animator Controller diperlukan.</li> 
+       </ol> 
+       <p>Sistem animasi Unity dilengkapi dengan banyak konsep dan terminologi. Jika setiap titik, Anda perlu mencari tahu apa artinya, pergi ke <a href="AnimationGlossary.html">Animasi Glossary</a> kami.</p> 
+       <h2>Sistem animasi Legacy</h2> 
+       <p>Sementara Mecanim dianjurkan untuk digunakan dalam sebagian besar situasi, Unity telah mempertahankan sistem animasi legacy yang ada sebelum Unity 4. Anda mungkin perlu menggunakan ketika bekerja dengan konten yang lebih tua diciptakan sebelum Unity 4. Untuk informasi tentang sistem animasi Legacy, lihat <a href="Animations.html">bagian ini</a> </p> 
+       <hr> 
+       <ul> 
+        <li><span class="page-edit">2018–04–25 Login</span></li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="AnimationSection.html"></a></span> 
+         <div class="tip">
+           Animation 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="AnimationRotate.html"></a></span> 
+         <div class="tip">
+           Rotasi dalam animasi 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

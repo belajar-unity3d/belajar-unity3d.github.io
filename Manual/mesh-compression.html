@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Mengkompresi data mesh</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="mesh.html">Meshes</a></li> 
+         <li>Mengkompresi data mesh</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="importing-lod-meshes.html"></a></span> 
+          <div class="tip">
+            Login Login 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="LoadingTextureandMeshData.html"></a></span> 
+          <div class="tip">
+            Memuat tekstur dan data mesh 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Mengkompresi data mesh</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Anda dapat mengompresi data <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a class="tooltipMoreInfoLink" href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mesh">Glossary</a></span></span></span> dalam Unity untuk mengurangi ukurannya, yang dapat meningkatkan kinerja. Unity menyediakan dua cara kompres mesh. Mereka bekerja berbeda, dan mempengaruhi aspek kinerja yang berbeda:</p> 
+       <ul> 
+        <li> <a href="#vertex-compression">Kompresi Vertex</a> adalah pengaturan yang mempengaruhi setiap mesh dalam proyek Anda. Ini memungkinkan Anda untuk menggunakan format data presisi lebih rendah di jala Anda. Ini mengurangi ukuran data mesh dalam memori, sedikit mengurangi ukuran file, dan mungkin meningkatkan kinerja GPU. Kelemahan potensial adalah hilangnya ketepatan.</li> 
+        <li> <a href="#mesh-compression">Kompresi Mesh</a> adalah pengaturan yang mempengaruhi jala individu. Ini mengompresi data mesh pada disk, yang mengurangi ukuran file. Kelemahan potensial meningkat waktu pemuatan, peningkatan penggunaan memori sementara saat memuat, dan kemungkinan artefak <span class="tooltip"><strong>compression</strong><span class="tooltiptext">Metode menyimpan data yang mengurangi jumlah ruang penyimpanan yang dibutuhkan. <a href="class-TextureImporterOverride.html">Kompresi Tekstur</a>, <a href="class-AnimationClip.html#AssetProperties">Kompresi Animasi</a>, <a href="class-AudioClip.html">Kompresi Audio</a>, <a href="ReducingFilesize.html">Membangun Kompresi</a>.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#compression">Glossary</a></span></span></span>.</li> 
+       </ul> 
+       <p>Anda dapat menggunakan metode kompresi dalam proyek yang sama, tetapi tidak pada mesh yang sama. Jika Anda menerapkan Kompresi Mesh ke jala, Unity tidak menerapkan Kompresi Vertex ke jala itu.</p> 
+       <p>Pengaturan default Unity <strong>Note:</strong> untuk Kompresi Vertex dan Kompresi Mesh cocok untuk sebagian besar proyek. Anda harus mengubah pengaturan ini hanya jika Anda memiliki masalah, dan menilai hasilnya untuk memastikan bahwa perubahan telah membantu.</p> 
+       <p><a name="vertex-compression"></a></p> 
+       <h2>Kompresi Vertex</h2> 
+       <p>Pengaturan Kompresi Vertex memungkinkan Anda untuk menggunakan format data presisi lebih rendah untuk semua jala dalam proyek Anda. Anda melakukan ini dengan mengkonfigurasi jenis data untuk saluran data tertentu.</p> 
+       <p>Anda dapat mengubah jenis data untuk saluran yang diberikan dari FP32 (Floating Point32, nomor titik mengambang 32-bit) ke FP16 (Memotong Point16, juga dikenal sebagai pelampung setengah-precision). Jumlah toko format FP16 dengan tempat yang lebih sedikit setelah titik desimal dari nomor FP32, yang berarti bahwa dibutuhkan lebih sedikit ruang tetapi menawarkan sedikit presisi.</p> 
+       <p>Data yang dikonversi dari FP32 ke FP16 mengambil lebih sedikit ruang dalam memori, dan sedikit ruang kurang pada disk. Pada GPU, data menggunakan bandwidth memori kurang, yang mungkin sedikit meningkatkan kinerja GPU.</p> 
+       <p>Teknik kompresi simpul mengompres jala dengan rasio yang bervariasi tergantung pada berapa banyak atribut vertex yang Anda pilih untuk mengompres. Rasio kompresi biasanya sekitar 1.45x ketika Anda mengompres normal, tangents, warna, dan tiga set koordinat UV.</p> 
+       <h3>Batasan Kompresi Vertex</h3> 
+       <p>Mesh harus memenuhi persyaratan berikut untuk menggunakan kompresi simpul:</p> 
+       <ul> 
+        <li>Jaring harus memiliki properti <strong>Read/Write Enabled</strong> dinonaktifkan. Anda dapat mengubah properti ini di tab Model jendela Pengaturan Model Impor.</li> 
+        <li>Jaring tidak boleh menjadi mesh berkelok-kelok.</li> 
+        <li>Platform target harus mendukung nilai FP16.</li> 
+        <li>Model yang mengandung mesh harus memiliki nilai <strong>Mesh Compression</strong> yang ditetapkan ke “Off”.</li> 
+       </ul> 
+       <p>Jika mesh gagal untuk memenuhi persyaratan ini, maka Unity tidak menerapkan kompresi simpul ke jala dan semua saluran data pada mesh menggunakan nomor presisi FP32.</p> 
+       <h3>Mengkonfigurasi Kompresi Vertex</h3> 
+       <p>Untuk mengubah pengaturan Kompresi Vertex: 1. Buka pengaturan Pemain (menu: <strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Player</strong>). 1. Buka submenu <strong>Other Settings</strong> dan arahkan ke judul <strong>Optimization</strong>. 1. Pilih dropdown <strong>Vertex Compression</strong> dan pilih saluran apa pun untuk mengaktifkan atau menonaktifkan kompresi untuk saluran itu. Anda juga dapat memilih <strong>None</strong> untuk menonaktifkan kompresi untuk semua saluran, atau pilih <strong>Everything</strong> untuk mengaktifkan kompresi untuk semua saluran.</p> 
+       <p>Secara default, Vertex Compression diatur ke <strong>Mixed</strong>, yang menampilkan Unity ketika beberapa pilihan aktif dalam dropdown. Secara default, Unity menggunakan Vertex Compression untuk saluran berikut:</p> 
+       <ul> 
+        <li>Normal</li> 
+        <li>Tangent</li> 
+        <li>Tex Koord 0</li> 
+        <li>Tex Coord 2</li> 
+        <li>Tex Coord 3</li> 
+       </ul> 
+       <p>Unity mengompres saluran ini secara default karena dalam kebanyakan kasus kombinasi pengaturan ini memberikan campuran memori yang baik tanpa perubahan signifikan untuk bagaimana tampilan jala. Unity tidak mengompresi pengaturan lain, Posisi dan Tex Coord 1, secara default karena ini lebih cenderung mempengaruhi penampilan mesh, dan tidak menawarkan pengurangan yang signifikan dalam penggunaan memori. Jika Anda berniat untuk mengaktifkan Kompresi Vertex untuk Saluran Posisi dan Tex Coord 1, Anda harus menguji pengaturan untuk memastikan mereka tidak menyebabkan artefak di jala Anda.</p> 
+       <p><a name="mesh-compression"></a></p> 
+       <h2>Kompresi Mesh</h2> 
+       <p>Anda dapat menggunakan pengaturan Kompresi Mesh untuk mengompres data mesh untuk aset model yang diberikan pada disk. Algoritma Kompresi Mesh lebih agresif daripada teknik Kompresi Vertex, yang menghasilkan rasio kompresi yang lebih tinggi dan karenanya ukuran file yang lebih kecil. Namun, juga memiliki lebih banyak kelemahan.</p> 
+       <p>Ketika Anda menerapkan pengaturan ini, Unity menggunakan algoritma untuk mengganti nilai eksplisit untuk setiap saluran kompresi dengan kisaran antara maksimum dan minimum, di mana jumlah bit tetap mewakili di mana setiap nilai jatuh dalam kisaran itu. Ini mengurangi ukuran data mesh pada disk. Ketika Unity memuat mesh ke dalam memori, itu menekan data, yang berarti itu mengkonversi kisaran ini kembali ke nilai-nilai asli. Setelah ini, kinerja tidak terpengaruh.</p> 
+       <p>Teknik ini dapat berguna jika Anda perlu mengurangi ukuran build akhir atau ukuran asetBundle mesh sebanyak mungkin, dan jika pengurangan kinerja dari dekompresi runtime dapat diterima.</p> 
+       <h3>Batasan Kompresi Mesh</h3> 
+       <p>Pada runtime, dekompresi jala menggunakan sumber daya CPU tambahan; ini berarti bahwa memuat data mesh memakan waktu lebih lama. Unity juga menggunakan memori lebih sementara ketika menekan jala.</p> 
+       <p>Selain itu, rasio kompresi yang relatif tinggi berarti bahwa artefak yang tidak diinginkan dapat muncul ketika Unity menekan mesh. Untuk menghindari artefak ini, Anda harus menguji setiap opsi untuk mesh Anda ingin mengompres dan memeriksa itu muncul dengan benar.</p> 
+       <h3>Mengkonfigurasi Kompresi Mesh</h3> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/mesh-compression-inspector.png" alt="The Mesh Compression setting in the Model Import settings window"> 
+        <figcaption>
+          Pengaturan Kompresi Mesh di jendela pengaturan Impor Model 
+        </figcaption> 
+       </figure> 
+       <p>Untuk menggunakan pengaturan Kompresi Mesh:</p> 
+       <ol> 
+        <li>Pilih model di folder Aset proyek Anda untuk membuka tab Model jendela Pengaturan Impor.</li> 
+        <li>Navigasi ke Mesh yang menuju dan menemukan pengaturan Kompresi Mesh.</li> 
+        <li>Pilih menu dropdown untuk memilih tingkat untuk semua mesh di Model itu. Anda juga dapat mengubah pengaturan ini dalam kode dengan numerasi ModelImporterMeshCompression.</li> 
+       </ol> 
+       <p>Nilai yang tersedia adalah High, Medium, Low, atau Off. Tabel berikut menunjukkan rasio kompresi khas untuk setiap pengaturan ini:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Value</strong></th> 
+          <th style="text-align:left;"><strong>Vertices</strong></th> 
+          <th style="text-align:left;"><strong>Normals</strong></th> 
+          <th style="text-align:left;"><strong>Tangents</strong></th> 
+          <th style="text-align:left;"><strong>UVs</strong></th> 
+          <th style="text-align:left;"><strong>Color</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Off</strong></td> 
+          <td style="text-align:left;">1.0</td> 
+          <td style="text-align:left;">1.0</td> 
+          <td style="text-align:left;">1.0</td> 
+          <td style="text-align:left;">1.0</td> 
+          <td style="text-align:left;">1.0</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Low</strong></td> 
+          <td style="text-align:left;">1 Artikel</td> 
+          <td style="text-align:left;">4.6 g</td> 
+          <td style="text-align:left;">4.4</td> 
+          <td style="text-align:left;">2.0</td> 
+          <td style="text-align:left;">1.0</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Medium</strong></td> 
+          <td style="text-align:left;">2.0</td> 
+          <td style="text-align:left;">5.6 g</td> 
+          <td style="text-align:left;">5.3 g</td> 
+          <td style="text-align:left;">3.2</td> 
+          <td style="text-align:left;">1.3</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>High</strong></td> 
+          <td style="text-align:left;">3.2</td> 
+          <td style="text-align:left;">Chili</td> 
+          <td style="text-align:left;">6.7 g</td> 
+          <td style="text-align:left;">4.0</td> 
+          <td style="text-align:left;">2.0</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Rasio kompresi untuk teknik kompresi mesh</p> 
+       <p>Catatan: Kolom "Color" di atas tabel menunjukkan rasio untuk mesh yang menggunakan format UNorm8. Untuk mesh yang menggunakan format FP32 untuk warna simpul, rasio 4.0 pada pengaturan Rendah, 5.3 pada pengaturan Sedang, dan 8.0 pada pengaturan Tinggi.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="importing-lod-meshes.html"></a></span> 
+         <div class="tip">
+           Login Login 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="LoadingTextureandMeshData.html"></a></span> 
+         <div class="tip">
+           Memuat tekstur dan data mesh 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

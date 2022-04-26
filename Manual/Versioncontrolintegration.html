@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Integrasi kontrol versi</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Unity User Manual 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="EditorFeatures.html">Fitur Editor</a></li> 
+         <li><a href="VersionControl.html">Kontrol Versi</a></li> 
+         <li>Integrasi kontrol versi</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="VersionControl.html"></a></span> 
+          <div class="tip">
+            Kontrol Versi 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="perForceIntegration.html"></a></span> 
+          <div class="tip">
+            API Integration 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Integrasi kontrol versi</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Unity memiliki integrasi dengan sistem kontrol dua versi: <span class="tooltip"><a class="tooltipMoreInfoLink" href="perForceIntegration.html">Perforce</a><span class="tooltiptext">Sistem kontrol versi untuk manajemen perubahan file. <a href="perForceIntegration.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Perforce">Glossary</a></span></span></span> dan <a href="PlasticSCMPlugin.html">Plastik SCM</a>. Untuk menggunakan integrasi dalam Unity, Anda perlu memiliki server <strong>Perforce</strong> atau <strong>Plastic SCM</strong> yang ditetapkan untuk Proyek Unity Anda.</p> 
+       <h2>Mengatur kontrol versi dalam Unity</h2> 
+       <p>Buka Proyek Unity, buka <strong>Edit &gt; Project Settings</strong>, lalu pilih kategori <strong>Editor</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/EditorVersionControlSettings.png" alt="Version Control settings in the Unity Editor"> 
+        <figcaption>
+          Pengaturan Kontrol Versi di Editor Unity 
+        </figcaption> 
+       </figure> 
+       <p>Di bawah <span class="tooltip"><strong>Version Control</strong><span class="tooltiptext">Sistem untuk mengelola perubahan file. Anda dapat menggunakan Unity bersama dengan alat kontrol versi yang paling umum, termasuk Perforce, Git, Mercurial dan PlasticSCM. <a class="tooltipMoreInfoLink" href="VersionControl.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#VersionControl">Glossary</a></span></span></span> ada pengaturan berikut:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Mode</strong></td> 
+          <td style="text-align:left;">Pilih mode kontrol versi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">file meta tersembunyi</td> 
+          <td style="text-align:left;">Sembunyikan file .meta di penjelajah file sistem operasi Anda. Unity tidak menunjukkan file .meta dalam tampilan Proyek, tidak peduli mode yang Anda pilih.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">File meta yang terlihat</td> 
+          <td style="text-align:left;">Pilih opsi ini untuk bekerja dengan sistem kontrol versi yang Unity tidak mendukung. Ini adalah pengaturan default. Anda kemudian dapat mengelola aset sumber dan metadata untuk aset-aset tersebut dengan sistem kontrol versi pilihan Anda. Untuk informasi lebih lanjut, lihat dokumentasi pada <a href="ExternalVersionControlSystemSupport.html">Sistem Kontrol Versi Eksternal</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Perforce</td> 
+          <td style="text-align:left;">Pilih opsi ini jika Anda menggunakan <a href="https://www.perforce.com/">Perforce</a> sebagai sistem kontrol versi Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Plastik SCM</td> 
+          <td style="text-align:left;">Pilih opsi ini jika Anda menggunakan sistem kontrol versi Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"> <strong>Username</strong> <br> (Perforce only)</td> 
+          <td style="text-align:left;">Masukkan nama pengguna yang terkait dengan akun Perforce Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"> <strong>Password</strong> <br>(Perforce only)</td> 
+          <td style="text-align:left;">Masukkan kata sandi yang terkait dengan akun Perforce Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"> <strong>Workspace</strong> <br> (Perforce only)</td> 
+          <td style="text-align:left;">Masukkan ruang kerja Anda (misalnya, <code>Example_Workspace_1</code>).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"> <strong>Server</strong> <br> (Perforce only)</td> 
+          <td style="text-align:left;">Masukkan server Proyek Unity Anda adalah pada (misalnya, localhost:1666).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><span class="tooltip"><strong>Host</strong><span class="tooltiptext">Dalam permainan jaringan multiplayer tanpa server khusus, salah satu peer dalam permainan bertindak sebagai pusat otoritas untuk permainan. Peer ini disebut "host". Ini menjalankan server dan "klien lokal", sementara peers lain masing-masing menjalankan "kehilangan klien". <a class="tooltipMoreInfoLink" href="UNetHostMigration.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Host">Glossary</a></span></span></span> <br> (Perforce only)</td> 
+          <td style="text-align:left;">Masukkan nama host yang komputer Anda harus meniru (misalnya, workstation123.perforce.com)</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Log Level</strong></td> 
+          <td style="text-align:left;">Pilih berapa banyak informasi kontrol versi untuk menerima dalam log konsol Unity.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Verbose</td> 
+          <td style="text-align:left;">Unity mencatat setiap operasi terkait dengan kontrol versi. Opsi ini menyediakan penebangan yang sangat rinci, dan berguna jika Anda ingin debug pengaturan kontrol versi Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Info</td> 
+          <td style="text-align:left;">Kesalahan log Unity, peringatan, dan informasi yang terkait dengan kontrol versi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Notice</td> 
+          <td style="text-align:left;">Kesalahan dan peringatan log Unity.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Fatal</td> 
+          <td style="text-align:left;">Satuan mencetak hanya kesalahan fatal ke konsol.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Status</strong></td> 
+          <td style="text-align:left;">Menampilkan informasi status koneksi ke sistem kontrol versi. Jika Anda tidak terhubung, pilih <strong>Connect</strong> untuk terhubung ke sistem yang telah Anda konfigurasikan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Automatic Add</strong></td> 
+          <td style="text-align:left;">Ketika pengaturan ini diaktifkan, Unity secara otomatis menambahkan file Anda ke sistem kontrol versi ketika Anda menambahkannya ke Proyek, baik melalui Editor atau folder di disk. Ketika pengaturan ini dinonaktifkan, Anda perlu menambahkan file secara manual ke sistem kontrol versi. Pengaturan ini diaktifkan secara default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"> <strong>Work Offline</strong> <br> (Perforce only)</td> 
+          <td style="text-align:left;">Aktifkan pengaturan ini untuk bekerja secara offline. Ketika pengaturan ini diaktifkan, Anda perlu untuk kembali pekerjaan offline di P4V atau menggunakan perintah rekoncile di P4 untuk membawa depot server Perforce hingga tanggal dengan pekerjaan yang Anda lakukan saat offline. Untuk informasi lebih lanjut, lihat <a href="perForceIntegration.html">Offline</a> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"> <strong>Allow Async Update</strong> <br>(Perforce only)</td> 
+          <td style="text-align:left;">Aktifkan pengaturan ini untuk menggunakan query status kontrol versi asinkron. Ketika diaktifkan, Perforce memperbarui status kontrol versi file tanpa memotak Editor Unity. Gunakan pengaturan ini ketika koneksi ke server kontrol versi Anda memiliki latency tinggi.<br> <br> <strong>Note:</strong> Hanya pertanyaan status asinkron. Secara bersamaan melakukan operasi yang mengubah keadaan file, atau memerlukan pengetahuan terkini status file.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"> <strong>Show Failed Checkouts</strong> <br>(Perforce only)</td> 
+          <td style="text-align:left;">Aktifkan properti ini untuk menunjukkan dialog ketika Perforce tidak dapat melakukan operasi check out. Ini mungkin terjadi jika Anda kehilangan koneksi, atau jika pengguna lain secara eksklusif memeriksa Aset yang ingin Anda edit.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"> <strong>Overwrite Failed Checkout Assets</strong> <br> (Perforce only)</td> 
+          <td style="text-align:left;">Ketika Anda mengaktifkan pengaturan ini, Unity menyimpan Aset yang tidak dapat diperiksa. Ini berarti kekuatan Unity melalui simpan ke file, bahkan jika Perforce tidak dapat memeriksa file. Ini diaktifkan secara default. Jika Anda menonaktifkannya, Unity tidak memaksa file Anda untuk menyimpan apakah Perforce tidak dapat memeriksanya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Overlay Icons</strong></td> 
+          <td style="text-align:left;">Aktifkan pengaturan ini untuk menampilkan ikon status kontrol versi di Editor.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Smart Merge</strong></td> 
+          <td style="text-align:left;"> <a href="SmartMerge.html">Smart Merge</a> memudahkan Unity untuk menggabungkan file yang memiliki perubahan pada garis yang sama. Ini berguna jika beberapa pengguna bekerja pada Proyek yang sama pada saat yang sama.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Off</td> 
+          <td style="text-align:left;">Diaktifkan Smart Merge.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Ask</td> 
+          <td style="text-align:left;">Aktifkan Smart Merge, tetapi menerima pemberitahuan sebelum Anda bergabung, jika terjadi konflik. Ini adalah pengaturan default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Premerge</td> 
+          <td style="text-align:left;">Secara otomatis menggunakan Smart Merge.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Konfigurasikan pengaturan <strong>Version Control</strong>, lalu pilih tombol <strong>Connect</strong> di sebelah area status untuk terhubung ke sistem kontrol versi. Ketika Unity terhubung ke sistem, tampilan <strong>Connected</strong> di area status.</p> 
+       <p>Untuk menyesuaikan alat kontrol revisi Anda, buka <strong>Preferences</strong> dan kemudian pilih bagian <strong>External Tools</strong>. Anda dapat memilih alat baru di bawah <strong>Revision Control Diff/Merge</strong>.</p> 
+       <h2>Menggunakan kontrol versi dalam Unity</h2> 
+       <p>Ketika Anda mengatur Editor untuk bekerja dengan sistem kontrol versi Anda, Anda dapat melakukan operasi kontrol versi melalui Editor, bukan dalam klien kontrol versi. Untuk melakukan ini, klik kanan pada Asset dalam tampilan Proyek.</p> 
+       <p>Operasi kontrol versi bervariasi tergantung pada kontrol versi mana yang Anda gunakan. Tabel berikut menampilkan tindakan apa yang tersedia untuk setiap kontrol versi:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Version control operation</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+          <th style="text-align:left;"><strong>Perforce</strong></th> 
+          <th style="text-align:left;"><strong>Plastic SCM</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Get Latest</strong></td> 
+          <td style="text-align:left;">Ini memperbarui file pada mesin Anda untuk mencocokkan mereka dalam sistem kontrol versi.</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Sitemap Untuk mendapatkan perubahan terbaru dan memperbarui file, Anda perlu menggunakan <a href="#window">jendela kontrol versi</a> (<strong>Window &gt; Asset Management &gt; Version Control</strong>).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Submit</strong></td> 
+          <td style="text-align:left;">Mengirimkan keadaan file saat ini ke sistem kontrol versi.</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Check Out</strong></td> 
+          <td style="text-align:left;">Memungkinkan perubahan yang dilakukan pada file.</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Check Out (Other)</strong></td> 
+          <td style="text-align:left;">Pilih apakah untuk memeriksa kedua Aset dan file .meta, atau hanya Aset, atau hanya file .meta.</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Mark Add</strong></td> 
+          <td style="text-align:left;">Menambahkan file ke dalam kendali versi.</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Revert</strong></td> 
+          <td style="text-align:left;">Menerbitkan perubahan untuk membuka file.</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Revert Unchanged</strong></td> 
+          <td style="text-align:left;">Hapus status checked dari file yang sebelumnya telah diperiksa tetapi Anda belum dimodifikasi.</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Resolve Conflicts</strong></td> 
+          <td style="text-align:left;">Menyelesaikan konflik pada file yang telah diubah oleh beberapa pengguna.</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Tidak. Konflik muncul di menu kontrol versi, tetapi Anda perlu menyelesaikannya di Plastic SCM GUI.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Lock</strong></td> 
+          <td style="text-align:left;">Mencegah pengguna lain dari mengirimkan perubahan ke file.</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Sitemap Untuk mengunci atau membuka file di SCM Plastik, Anda harus mengedit file kunci SCM plastik tertentu secara eksternal. Untuk informasi lebih lanjut, lihat halaman di <a href="PlasticSCMPlugin.html">Plastik SCM Login</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Unlock</strong></td> 
+          <td style="text-align:left;">Melepaskan kunci dan memungkinkan siapa pun untuk mengirimkan perubahan.</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Sitemap Untuk mengunci atau membuka file di SCM Plastik, Anda harus mengedit file kunci SCM plastik tertentu secara eksternal. Untuk informasi lebih lanjut, lihat halaman di <a href="PlasticSCMPlugin.html">Plastik SCM Login</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Diff</strong></td> 
+          <td style="text-align:left;">Bandingkan perbedaan antara file lokal di komputer Anda dan file di server. Anda dapat memilih untuk menyebar hanya file Aset, atau file Aset dan file .meta.</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>Memeriksa file</h3> 
+       <p>Dalam beberapa sistem kontrol versi, seperti Perforce, file versi dibaca-hanya secara default, dan mengharuskan Anda untuk memeriksanya sebelum Anda mengeditnya (kecuali Anda telah mengaktifkan pengaturan <strong>Work offline</strong>). Ketika Anda bekerja dengan Aset versi dari Editor, <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Inspector">Glossary</a></span></span></span> menampilkan tombol <strong>Check Out</strong> yang memungkinkan pengeditan file. Selain itu, inspektur <span class="tooltip"><strong>Project Settings</strong><span class="tooltiptext">Pengumpulan yang luas dari pengaturan yang memungkinkan Anda untuk mengkonfigurasi bagaimana Fisika, Audio, Jaringan, Grafik, Input dan banyak bidang lain dari jangkauan proyek Anda. <a href="comp-ManagerGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span> memiliki tombol <strong>Checkout</strong> yang dapat Anda gunakan untuk memeriksa pengaturan Proyek tertentu.</p> 
+       <p>Jika Anda memiliki kode skrip Editor kustom yang menonaktifkan bagian dari alat pengeditan kustom lain untuk aset yang membaca, atau jika Anda menulis ke file versi secara manual, gunakan API <a href="../ScriptReference/AssetDatabase.IsOpenForEdit.html">AssetDatabase.IsOpenForEdit</a> dan <a href="../ScriptReference/AssetDatabase.MakeEditable.html">AssetDatabase.MakeEditable</a> untuk memeriksa untuk mengedit file dan melakukan operasi check out.</p> 
+       <p>Integrasi Kontrol Versi juga mengekspos <a href="../ScriptReference/VersionControl.Provider.PreCheckoutCallback.html">Penyedia.PreCheckoutCallback</a> dan <a href="../ScriptReference/VersionControl.Provider.PreSubmitCallback.html">Penyedia.PreSubmitCallback</a> C# callback untuk logika validasi operasi kontrol versi kustom.</p> 
+       <p>Unity menulis setiap Aset yang Anda modifikasi atau tanda sebagai dimodifikasi dalam Editor ke disk ketika melakukan operasi <strong>Save Project</strong>. Aset kemudian diperiksa dalam kontrol versi jika diperlukan. Ini mungkin menyebabkan Aset mendapatkan diperiksa bahkan jika tidak ada perubahan aktual ke file terjadi. Ini paling sering terjadi ketika skrip editor memanggil <a href="../ScriptReference/EditorUtility.SetDirty.html">Login Login</a> pada Aset, tanpa memeriksa apakah itu dimodifikasi.</p> 
+       <p>Sitemap Jika Unity tidak dapat melakukan perubahan pada klien kontrol versi Anda (misalnya, jika server turun atau jika masalah lisensi terjadi), menyimpan perubahan Anda dalam perubahan terpisah.<strong>Note:</strong> If Unity cannot commit your changes to your version control client (for example, if the server is down or if license issues occur), it stores your changes in a separate changeset.</p> 
+       <p>Ketika Anda menyimpan perubahan Anda ke file .<span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>, Unity secara otomatis memeriksanya. Jika Anda menggunakan SCM Plastik, itu juga secara otomatis memeriksa Aset yang dihasilkan secara otomatis, seperti peta cahaya.</p> 
+       <p><a name="window"></a></p> 
+       <h2>Jendela Kontrol Versi</h2> 
+       <p>Anda dapat menggunakan jendela Kontrol Versi untuk melihat file dalam daftar perubahan Anda. Untuk mengakses navigasi jendela ke <strong>Window &gt; Asset Management &gt; Version Control</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/VersionControlWindowOutgoingChanges.png" alt="The Version Control window docked in the Editor"> 
+        <figcaption>
+          Jendela Kontrol Versi didermaga di Editor 
+        </figcaption> 
+       </figure> 
+       <p>tab <strong>Outgoing</strong> mencantumkan semua perubahan lokal yang mendinginkan komit ke dalam kendali versi. tab <strong>Incoming</strong> daftar semua perubahan yang perlu ditarik dari kontrol versi.</p> 
+       <p>Aset klik kanan atau daftar perubahan di jendela untuk melakukan operasi pada mereka. Untuk memindahkan Aset antara daftar perubahan, tarik dari satu daftar perubahan ke header daftar perubahan target.</p> 
+       <h3>Icons</h3> 
+       <p>Editor menampilkan ikon berikut untuk memvisualisasikan status kontrol versi untuk file dan Aset:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Icon</strong></th> 
+          <th style="text-align:left;"><strong>Purpose</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/VersionControl_P4_AddedLocal.png" alt=""></td> 
+          <td style="text-align:left;">File ditambahkan secara lokal, dan pending tambahan ke kendali versi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/VersionControl_P4_AddedRemote.png" alt=""></td> 
+          <td style="text-align:left;">File ditambahkan ke kontrol versi oleh pengguna lain, dan pending tambahan ke dalam kontrol versi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/VersionControl_P4_CheckOutLocal.png" alt=""></td> 
+          <td style="text-align:left;">File diperiksa secara lokal.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/VersionControl_P4_CheckOutRemote.png" alt=""></td> 
+          <td style="text-align:left;">File diperiksa oleh pengguna lain jauh.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/VersionControl_P4_Conflicted.png" alt=""></td> 
+          <td style="text-align:left;">Sudah ada konflik merging file ini dan perlu diselesaikan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/VersionControl_P4_DeletedLocal.png" alt=""></td> 
+          <td style="text-align:left;">File telah dihapus secara lokal, dan pending penghapusan dalam kontrol versi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/VersionControl_P4_DeletedRemote.png" alt=""></td> 
+          <td style="text-align:left;">File telah dihapus oleh pengguna lain dan pending penghapusan dalam kontrol versi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/VersionControl_P4_Local.png" alt=""></td> 
+          <td style="text-align:left;">File belum di bawah kendali versi. Anda dapat menggunakan operasi <strong>Mark Add</strong> untuk menambahkan file secara manual.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/VersionControl_P4_LockedLocal.png" alt=""></td> 
+          <td style="text-align:left;">File dikunci oleh Anda dan pengguna lain tidak dapat memodifikasinya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/VersionControl_P4_LockedRemote.png" alt=""></td> 
+          <td style="text-align:left;">File dikunci oleh pengguna lain dan Anda tidak dapat memodifikasinya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/VersionControl_P4_OutOfSync.png" alt=""></td> 
+          <td style="text-align:left;">Pengguna lain telah diperiksa dalam versi baru dari file ini. Gunakan operasi <strong>Apply Incoming Changes</strong> untuk mendapatkan versi terbaru.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/VersionControl_P4_AsyncUpdate.png" alt=""></td> 
+          <td style="text-align:left;">Server meminta status kontrol versi dari file ini, atau menunggu tanggapan. Ini hanya muncul jika Anda menggunakan sistem kontrol versi terpusat seperti Perforce.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <!-- area:none --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="VersionControl.html"></a></span> 
+         <div class="tip">
+           Kontrol Versi 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="perForceIntegration.html"></a></span> 
+         <div class="tip">
+           API Integration 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

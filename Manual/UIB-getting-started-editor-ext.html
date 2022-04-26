@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: UI Runtime vs Penulis Ekstensi</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UIToolkits.html">Buat antarmuka pengguna (UI)</a></li> 
+         <li><a href="UIElements.html">UI Toolkit</a></li> 
+         <li><a href="UIBuilder.html">Pembuat UI</a></li> 
+         <li><a href="UIB-getting-started.html">Mulai dengan Pembuat UI</a></li> 
+         <li>Runtime UI vs Penulis Ekstensi Editor</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UIB-getting-started-canvas.html"></a></span> 
+          <div class="tip">
+            Mengatur Kanvas 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UIB-getting-started-inline.html"></a></span> 
+          <div class="tip">
+            Gaya inline vs lembar gaya 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Runtime UI vs Penulis Ekstensi Editor</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Secara default, <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span> Builder menganggap UI sedang dibuat untuk digunakan pada runtime di build Pemain. Seperti itu, semua Dokumen UI baru (UXML) yang dibuat di UI Builder memiliki pengaturan yang disimpan dalam UXML yang menandainya sebagai UI runtime-only. Efek utama ini memiliki dalam UI Builder adalah bahwa tab <strong>Library</strong> pane akan disaring hanya mengandung unsur-unsur yang bekerja paling baik pada runtime.<strong>Standard</strong> tab will be filtered to only contain elements that work best at runtime.</p> 
+       <h2>Pengarang Ekstensi Editor yang Dapat Diaktifkan untuk Dokumen UI (UXML)</h2> 
+       <p>Untuk membuat UI untuk Editor Unity, seperti Editor kustom Windows atau custom <span class="tooltip"><strong>Inspectors</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>, Anda harus mengaktifkan <strong>Editor Extension Authoring</strong> pada Dokumen UI Anda (UXML). Anda dapat mengaktifkan penulisan ekstensi dalam dua cara:</p> 
+       <ol> 
+        <li>Pilih header <strong>Canvas</strong>, dan pada <strong>Inspector</strong> memungkinkan opsi <strong>Document Settings &gt; Editor Extension Authoring</strong>:</li> 
+       </ol> 
+       <p><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UIBuilder/EditorExtensionAuthoringPanelSettings.png" alt="EditorExtensionAuthoringPanelSettings"></p> 
+       <p>Tidak seperti pengaturan <strong>Canvas</strong> lainnya, pengaturan ini akan disimpan sebagai bagian dari Dokumen UI (UXML) menggunakan atribut tag akar <code>&lt;UXML&gt;</code> yang disebut <code>editor-extension-mode</code>.</p> 
+       <ol> 
+        <li>Pada menu <strong>⋮</strong> pada pane <strong>Library</strong>, pilih <strong>Editor Extension Authoring</strong>.</li> 
+       </ol> 
+       <p>Dengan <strong>Editor Extension Authoring</strong> diaktifkan, Anda harus memiliki elemen tambahan dalam tab <strong>Library</strong> pane <strong>Standard</strong>. Elemen editor-only ditandai dengan pil <code>Editor Only</code>.</p> 
+       <h2>Mengatur mode Authoring Ekstensi Editor default untuk Dokumen UI baru (UXML)</h2> 
+       <p>Untuk mengatur pengaturan default untuk <strong>Editor Extension Authoring</strong> pada Dokumen UI baru (UXML):</p> 
+       <ol> 
+        <li>Sitemap <strong>Project Settings</strong> &gt; <strong>UI Builder</strong> </li> 
+        <li>Pilih <strong>Enable Editor Extension Authoring by Default</strong>.</li> 
+       </ol> 
+       <h2>Atribut Penulis Ekstensi Editor</h2> 
+       <p>Setiap Dokumen UI (UX) dibuka di UI Builder memiliki atribut Penulis Ekstensi Editor. UI Builder menambahkan atribut ke tag root dokumen UI, seperti contoh berikut:</p> 
+       <pre><code class="lang-xml">&lt;ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False"&gt;
+</code></pre> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">NOTE</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Karena atribut penulisan ekstensi Editor disimpan dalam file UI Document (UXML), versi dikontrol. Ketika Anda membuat dokumen UI baru (UXML), UI Builder menetapkan atribut Penulis Ekstensi Editor sesuai dengan default yang ditentukan dalam UI Builder <span class="tooltip"><strong>project settings</strong><span class="tooltiptext">Pengumpulan yang luas dari pengaturan yang memungkinkan Anda untuk mengkonfigurasi bagaimana Fisika, Audio, Jaringan, Grafik, Input dan banyak bidang lain dari jangkauan proyek Anda. <a class="tooltipMoreInfoLink" href="comp-ManagerGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Dokumen UI (UXML) yang Anda buat di luar UI Builder (misalnya, dalam editor teks atau IDE) tidak memiliki atribut Penulis Ekstensi Editor sampai Anda membukanya di UI Builder. Ketika Anda membuka dokumen UI yang dibuat secara eksternal (UXML) di UI Builder untuk pertama kalinya, atribut Penulis Ekstensi Editor ditetapkan sesuai dengan standar yang ditentukan dalam pengaturan proyek UI Builder.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UIB-getting-started-canvas.html"></a></span> 
+         <div class="tip">
+           Mengatur Kanvas 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UIB-getting-started-inline.html"></a></span> 
+         <div class="tip">
+           Gaya inline vs lembar gaya 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

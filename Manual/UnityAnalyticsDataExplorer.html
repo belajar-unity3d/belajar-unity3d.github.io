@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Database</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="monetization" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UnityServices.html">Layanan Unity</a></li> 
+         <li><a href="UnityAnalytics.html">Analisis Unity</a></li> 
+         <li><a href="UnityAnalyticsDashboard.html">Analytics Dashboard</a></li> 
+         <li>Data Explorer</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UnityAnalyticsDashbaordOverview.html"></a></span> 
+          <div class="tip">
+            Overview page 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UnityAnalyticsFunnelAnalyzer.html"></a></span> 
+          <div class="tip">
+            Funnel Analyzer page 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Data Explorer</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Membangun laporan untuk metrik dan acara Unity <span class="tooltip"><strong>Analytics</strong><span class="tooltiptext"><strong>Unity Analytics</strong><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Analytics">Glossary</a></span></span></span> Anda menggunakan <strong>Data Explorer</strong>. Laporan Data Explorer menunjukkan bagaimana metrik yang dipilih dan perubahan acara kustom seiring waktu.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UnityAnalyticsDataExplorer1.png" alt="A report in the Data Explorer page showing MAU over time"> 
+        <figcaption>
+          Sebuah laporan di halaman Data Explorer menunjukkan MAU atas waktu 
+        </figcaption> 
+       </figure> 
+       <h2>Buat laporan baru</h2> 
+       <p>Untuk membuat laporan Data Explorer:</p> 
+       <ol> 
+        <li>Navigasi ke dashboard Analytics untuk proyek Anda.</li> 
+        <li>Klik <strong>Data Explorer</strong>.</li> 
+        <li>Tambahkan <strong>Metrics</strong>, <strong>Custom Events</strong>, dan <strong>Ad Metrics</strong> ke laporan dengan mengklik tombol + di sebelah jenis data yang diinginkan. (Pilihan Metrik Iklan dinonaktifkan untuk proyek tidak menggunakan iklan Unity.) <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UnityAnalyticsDataExplorer2.png" alt=""> </li> 
+        <li>Mengatur rentang tanggal dan jenis grafik sesuai keinginan. Lihat <a href="#ReportOptions">Pilihan Laporan</a> untuk informasi lebih lanjut.</li> 
+       </ol> 
+       <p> <strong>Note</strong>: Laporan default mencakup metrik tunggal. Anda dapat mengubah jenis dan segmen metrik untuk item ini. (Untuk menghapus item ini, Anda harus terlebih dahulu menambahkan item kedua - Anda tidak dapat menghapus item data terakhir pada laporan.)</p> 
+       <p>Untuk menyimpan laporan untuk melihat masa depan:</p> 
+       <ol> 
+        <li><p>Klik tombol <strong>New Report</strong>.</p></li> 
+        <li><p>Pada dialog yang terbuka, masukkan nama untuk laporan dan klik <strong>OK</strong>.</p></li> 
+       </ol> 
+       <p>Untuk melihat laporan yang disimpan di masa depan, klik dropdown <strong>Saved Reports</strong> dan pilih nama laporan dalam daftar. Anda dapat menyesuaikan rentang tanggal untuk melihat laporan yang sama dengan data terbaru Anda.</p> 
+       <h2>Salin laporan</h2> 
+       <p>Untuk menyalin laporan Data Explorer yang ada:</p> 
+       <ol> 
+        <li><p>Navigasi ke dashboard Analytics Anda untuk proyek Anda.</p></li> 
+        <li><p>Klik <strong>Data Explorer</strong>.</p></li> 
+        <li><p>Klik dropdown <strong>Saved Reports</strong> dan pilih nama laporan dalam daftar. <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UnityAnalyticsDataExplorer3.png" alt=""> </p></li> 
+        <li><p>Sesuaikan rentang tanggal, jenis grafik atau opsi lain yang diinginkan. Lihat <a href="#ReportOptions">Pilihan Laporan</a> untuk informasi lebih lanjut.</p></li> 
+        <li><p>Klik tombol <strong>New Report</strong>.</p></li> 
+        <li><p>Pada dialog yang terbuka, masukkan nama untuk salinan laporan dan klik <strong>Ok</strong>.</p></li> 
+       </ol> 
+       <h2>Download data laporan</h2> 
+       <p>Untuk mengunduh file nilai koma-separated (CSV) yang berisi data dalam laporan:</p> 
+       <ol> 
+        <li>Navigasi ke dashboard Analytics Anda untuk proyek Anda.</li> 
+        <li>Klik <strong>Data Explorer</strong>.</li> 
+        <li>Mengisi laporan yang disimpan atau membuat yang baru.</li> 
+        <li>Sesuaikan rentang tanggal atau opsi lain yang diinginkan. Lihat <a href="#ReportOptions">Pilihan Laporan</a> untuk informasi lebih lanjut. Klik tombol <strong>CSV</strong> untuk mengunduh data untuk laporan yang ditampilkan saat ini.</li> 
+       </ol> 
+       <p>Sitemap CSV download ekspor tepat apa yang Anda lihat di grafik / stabil. Jika Anda memiliki berlangganan Unity Pro, Anda juga dapat mengunduh semua data Analytics Anda dalam bentuk baku dari halaman <strong>Note:</strong> atau melalui API REST Ekspor Data Baku.<a href="UnityAnalyticsRawDataExport.html">Ekspor Data Baku</a> page or through the Raw Data Export REST API.</p> 
+       <p><a name="ReportOptions"></a></p> 
+       <h2>Pilihan laporan</h2> 
+       <p>Anda dapat menambahkan jenis data berikut ke laporan:</p> 
+       <ul> 
+        <li> <strong>Metric</strong> - Analisis metrik bersaing dari Core <span class="tooltip"><strong>Analytics events</strong><span class="tooltiptext">Acara yang dikirim ke Layanan Analytics dengan contoh aplikasi Anda. Peristiwa analis berisi data yang diproses dan agregat untuk memberikan wawasan perilaku pemain. <a class="tooltipMoreInfoLink" href="UnityAnalyticsCustomEvents.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnalyticsEvents">Glossary</a></span></span></span> dikirim secara otomatis setiap kali seseorang memainkan permainan Anda. metrik ini termasuk hal-hal seperti berapa banyak orang bermain game Anda, berapa lama mereka bermain, dan berapa banyak uang yang mereka habiskan pada pembelian dalam aplikasi.</li> 
+        <li> <strong>Custom Event</strong> - Acara khusus adalah peristiwa yang Anda kirim dari permainan Anda untuk mengukur perilaku atau faktor lain yang unik untuk permainan Anda. Lihat <span class="tooltip"><a class="tooltipMoreInfoLink" href="UnityAnalyticsCustomEvents.html">Acara kustom</a><span class="tooltiptext">Acara kustom adalah acara gratis yang dapat Anda kirim ketika peristiwa standar yang tepat tidak tersedia. Acara kustom dapat memiliki nama dan hingga sepuluh parameter. Gunakan peristiwa standar dalam preferensi untuk acara kustom di mana mungkin. <a href="UnityAnalyticsCustomEvents.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#CustomEvents">Glossary</a></span></span></span> untuk informasi lebih lanjut tentang mendefinisikan dan menggunakan acara kustom.</li> 
+        <li> <strong>Ad Metric</strong> - Data laporan metrik iklan dari Layanan Iklan Unity (hanya tersedia jika Anda menggunakan iklan Unity.)</li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UnityAnalyticsDataExplorer4.png" alt=""> 
+       </figure> 
+       <p>Anda dapat menambahkan hingga dua puluh item data ke satu laporan. Grafik akan menampilkan unit yang tepat untuk skala vertikal selama tidak ada lebih dari dua item data yang menggunakan unit ukuran yang berbeda.</p> 
+       <p>Anda dapat mengatur rentang tanggal untuk laporan dan memilih jenis grafik yang berbeda.</p> 
+       <h3>Metrik dan opsi Metrik Iklan</h3> 
+       <p>Ketika Anda menambahkan <strong>Metric</strong> atau <strong>Ad Metric</strong> ke grafik, Anda harus mengatur nama dan dapat memilih data <span class="tooltip"><strong>Segment</strong><span class="tooltiptext">Segmen adalah subset dari basis pemain Anda, terpisahkan oleh perbedaan utama. Melihat metrik dan peristiwa oleh segmen dapat mengungkapkan perbedaan perilaku dalam game antara kelompok yang berbeda. <a class="tooltipMoreInfoLink" href="UnityAnalyticsTerminology.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Segment">Glossary</a></span></span></span>:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UnityAnalyticsDataExplorer5.png" alt="A metric data item on a report"> 
+        <figcaption>
+          Sebuah item data metrik pada laporan 
+        </figcaption> 
+       </figure> 
+       <ul> 
+        <li>Sitemap Nama metrik</li> 
+        <li>Login Segmen data untuk menunjukkan</li> 
+        <li>C – Menghapus metrik dari laporan</li> 
+       </ul> 
+       <p>Untuk setiap item data, Anda dapat menentukan <strong>Segment</strong> data untuk ditampilkan. A <strong>Segment</strong> adalah subset data untuk item itu, dipilih sesuai dengan satu set aturan. Misalnya, segmen <strong>Android Users</strong> mencakup data hanya untuk pemain di platform Android, sedangkan segmen <strong>iOS Users</strong> mencakup data hanya untuk pemain di platform iOS.</p> 
+       <p>Layanan Analytics mencakup satu set segmen standar. Anda juga dapat membuat <strong>Segments</strong> kustom Anda sendiri. Gunakan <a href="UnityAnalyticsSegmentBuilder.html">Pembuat Segmen</a> untuk melihat definisi segmen standar dan untuk membangun <strong>Segments</strong> kustom Anda sendiri. Perhatikan bahwa ketika Anda membuat <strong>Segment</strong> kustom, itu hanya berlaku untuk metrik dan acara baru dikumpulkan. Data lebih tua tidak diproses untuk dimasukkan dalam <strong>Segment</strong> baru.</p> 
+       <h3>Pilihan acara khusus</h3> 
+       <p>Ketika Anda menambahkan <strong>Custom Event</strong> ke laporan, Anda dapat mengatur opsi tambahan berdasarkan parameter acara.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UnityAnalyticsDataExplorer6.png" alt="A custom event entry on a report has two extra fields (and a pie chart button)"> 
+        <figcaption>
+          A entri acara kustom pada laporan memiliki dua bidang tambahan (dan tombol chart pie) 
+        </figcaption> 
+       </figure> 
+       <ul> 
+        <li>A – Tampilkan grafik pie (hanya untuk item data yang dapat dikategorikan)</li> 
+        <li>Login Nama <strong>Custom Event</strong> </li> 
+        <li>Login <strong>Segment</strong> data untuk menunjukkan</li> 
+        <li>Login Acara kustom nama <strong>Parameter</strong> dan opsi tampilan</li> 
+        <li>E - Bagaimana untuk mengumpulkan nilai parameter</li> 
+        <li>F – Hapus acara kustom dari laporan</li> 
+       </ul> 
+       <p>Ketika <strong>Custom Event</strong> memiliki parameter, Anda dapat memilih bagaimana data untuk acara itu ditampilkan pada grafik. Anda dapat menunjukkan jumlah nilai yang berbeda yang diterima atau, untuk sifat numerik, jumlah atau rata-rata nilai dari semua peristiwa yang diterima:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UnityAnalyticsDataExplorer7.png" alt="Parameter display options"> 
+        <figcaption>
+          Pilihan tampilan parameter 
+        </figcaption> 
+       </figure> 
+       <p>Simbol yang ditampilkan setelah nama <strong>Parameter</strong> menunjukkan bagaimana <strong>Parameter</strong> ditampilkan. Simbol string (A) dan boolean ( Diagram Venn) menunjukkan bahwa nilai <strong>Parameter</strong> dapat dikategorikan menjadi kelompok yang berbeda. Simbol numerik (#) menunjukkan bahwa nilai <strong>Parameter</strong> adalah nomor yang dapat rata-rata atau dirangkum selain dihitung. Perhatikan bahwa numerik <strong>Parameters</strong> muncul dalam daftar dua kali, sekali dengan simbol string dan sekali dengan simbol numerik, memberi Anda pilihan mengobati <strong>Parameter</strong> numerik sebagai nilai yang dapat dikategorikan atau agregatif.</p> 
+       <p>Ketika menunjukkan nilai <strong>Parameter</strong> yang dapat dikategorikan, hanya sepuluh nilai yang paling umum rusak menjadi kelompok individu. Sisa nilai-nilai yang dilumasi bersama-sama dalam kelompok <strong>Other</strong>. Dengan demikian, memperlakukan numerik <strong>Parameters</strong> sebagai string yang dapat dikategorikan umumnya hanya berguna untuk <strong>Parameters</strong> dengan set terbatas nilai yang berbeda.</p> 
+       <p>Anda dapat melihat set nilai yang berbeda di bagian bawah grafik. Anda juga dapat melihat grafik pie dari nilai dengan mengklik tombol pie-chart di depan item data. Hanya grafik pai tunggal dapat ditampilkan pada waktu.</p> 
+       <p>Sitemap Untuk mengunduh data dalam grafik pie data yang dapat dikategorikan, klik tombol pie-chart di sebelah Custom Event sebelum mengklik tombol <strong>Note:</strong>.<strong>CSV</strong> button.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UnityAnalyticsDataExplorer8.png" alt="A pie chart for a level_complete event"> 
+        <figcaption>
+          Grafik pie untuk acara lengkap level_ 
+        </figcaption> 
+       </figure> 
+       <h3>Jenis grafik</h3> 
+       <p>Anda dapat memilih jenis grafik berikut untuk laporan:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UnityAnalyticsDataExplorer9.png" alt=""> 
+       </figure> 
+       <ul> 
+        <li> <strong>Spline</strong> - Grafik garis halus</li> 
+        <li> <strong>Column</strong> - Grafik bar</li> 
+        <li> <strong>Stacked</strong> - Grafik area stacked</li> 
+        <li> <strong>Table</strong> - tabel nilai</li> 
+        <li> <strong>Pie</strong> - Grafik pai (hanya tersedia untuk individu, dikategorikan parameter Acara Kustom)</li> 
+       </ul> 
+       <h4>Grafik</h4> 
+       <p>Anda dapat memperbesar grafik <strong>Spline</strong>, <strong>Column</strong> dan <strong>Stacked</strong> dengan mengklik grafik dan menyeret di bagian yang ingin Anda lihat secara lebih detail.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UnityAnalyticsDataExplorer10.png" alt="Click and drag to zoom in on a section of the chart"> 
+        <figcaption>
+          Klik dan seret untuk memperbesar di bagian grafik 
+        </figcaption> 
+       </figure> 
+       <p>Ketika Anda diperbesar, grafik menampilkan tombol <strong>Reset Zoom</strong>, yang mengembalikan grafik untuk menampilkan seluruh rentang tanggal.</p> 
+       <h2>Annotations</h2> 
+       <p>Anda dapat menggunakan anotasi untuk menandai tanggal faktor eksternal penting yang mungkin mempengaruhi data analitik permainan Anda, seperti pembaruan permainan, kampanye pemasaran, dan promosi. Tambahkan anotasi berbasis tanggal ke laporan Data Explorer menggunakan bagian Annotasi di bawah grafik laporan.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UnityAnalyticsDataExplorer11.png" alt="Annotation marker shown on a report chart"> 
+        <figcaption>
+          Penandaan annotasi ditampilkan pada grafik laporan 
+        </figcaption> 
+       </figure> 
+       <p>Annotations adalah proyek-wide, tidak spesifik untuk laporan individu. Tampilan annotasi pada semua grafik laporan setiap bagian Annotasi terbuka.</p> 
+       <p><strong>To add an annotation:</strong></p> 
+       <ol> 
+        <li>Pada laporan Data Explorer, klik tombol <strong>+ Annotations</strong> untuk membuka bagian <strong>Annotations</strong> (jika belum terbuka).</li> 
+        <li>Klik di kotak tanggal dan atur tanggal untuk anotasi. Anda hanya dapat menambahkan satu catatan anotasi untuk hari tertentu.</li> 
+        <li>Masukkan nama atau teks deskriptif untuk anotasi.</li> 
+        <li>Klik <strong>Save</strong>.</li> 
+       </ol> 
+       <hr> 
+       <ul> 
+        <li><span class="page-edit">2017–08–29 Sitemap</span></li> 
+        <li><span class="page-history">Fitur baru di Unity 2017. 1 Artikel</span></li> 
+       </ul> 
+       <!-- area:monetization --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UnityAnalyticsDashbaordOverview.html"></a></span> 
+         <div class="tip">
+           Overview page 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UnityAnalyticsFunnelAnalyzer.html"></a></span> 
+         <div class="tip">
+           Funnel Analyzer page 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy"> 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

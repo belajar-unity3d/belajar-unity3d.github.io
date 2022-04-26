@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Login</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="monetization" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UnityServices.html">Layanan Unity</a></li> 
+         <li><a href="UnityAnalytics.html">Analisis Unity</a></li> 
+         <li><a href="UnityAnalyticsDashboard.html">Analytics Dashboard</a></li> 
+         <li>Configure page</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UnityAnalyticsDashboardEventManager.html"></a></span> 
+          <div class="tip">
+            Manajer Acara 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UnityAnalyticsMarketInsights.html"></a></span> 
+          <div class="tip">
+            Wawasan Pasar 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Configure page</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Lihat dan edit pengaturan untuk proyek individual Unity Analytics di halaman Konfigurasi. Cari halaman Konfigurasi di bawah <strong>Settings</strong> &gt; <strong>Analytics Settings</strong> di dashboard.</p> 
+       <p>Halaman Konfigurasi berisi bagian ini:</p> 
+       <ul> 
+        <li>Pengaturan Layanan Proyek</li> 
+        <li>Pengaturan Fitur</li> 
+        <li>Pengaturan Admin</li> 
+       </ul> 
+       <h2>Pengaturan Layanan Proyek</h2> 
+       <p>Pengaturan Layanan Proyek aspek kontrol proyek untuk layanan <span class="tooltip"><strong>Analytics</strong><span class="tooltiptext"><strong>Unity Analytics</strong><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Analytics">Glossary</a></span></span></span>. Seperti dicatat di tabel di bawah ini, beberapa pengaturan juga mempengaruhi layanan Ads dan IAP.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UnityAnalyticsDashboardConfigure1.png" alt="Project Service Settings section of the Analytics Configure page"> 
+        <figcaption>
+          Layanan Proyek Bagian pengaturan halaman Konfigurasi Analytics 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Name</strong></td> 
+          <td style="text-align:left;">Nama proyek. Tampilkan di Dasbor Layanan Unity dan jendela Layanan Editor Unity.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Project ID</strong></td> 
+          <td style="text-align:left;">Pengidentifikasi unik untuk proyek. Digunakan untuk mengidentifikasi proyek antara Layanan Unity dan Editor.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Engine Version</strong></td> 
+          <td style="text-align:left;">Tentukan Editor Unity dan versi Engine dalam penggunaan. Nilai yang ditetapkan di sini mengubah informasi yang ditampilkan di halaman Integrasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Google License Key</strong></td> 
+          <td style="text-align:left;">Login Kunci lisensi Google jika Anda ingin memvalidasi pembelian dalam aplikasi (IAP) yang dibuat melalui toko Google Play.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Organization</strong></td> 
+          <td style="text-align:left;">Nama organisasi Unity Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>COPPA Compliance</strong></td> 
+          <td style="text-align:left;">Tentukan apakah proyek Anda diarahkan pada anak-anak dan jatuh di bawah domain Undang-Undang Perlindungan Privasi Online Anak (COPPA).</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Ketika Anda menentukan bahwa aplikasi Anda tunduk pada <span class="tooltip"><strong>COPPA</strong><span class="tooltiptext">( Undang-Undang Perlindungan Privasi Online Anak) COPPA adalah hukum AS yang berlaku untuk aplikasi yang mengumpulkan informasi pribadi dan ditargetkan kepada anak-anak di bawah usia 14. <a class="tooltipMoreInfoLink" href="UnityAnalyticsCOPPA.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#COPPA">Glossary</a></span></span></span>, layanan Unity Ads mengubah cara itu melayani iklan kepada pengguna sesuai dengan aturan. Data yang dikumpulkan oleh layanan Analytics tetap sama.</p> 
+       <p>Ini adalah tanggung jawab Anda untuk memastikan bahwa aplikasi Anda dan penggunaan data Analytics Anda sesuai dengan hukum yang berlaku (Unity tidak dapat memberikan saran hukum pada masalah ini.) Lihat <a href="UnityAnalyticsCOPPA.html">Kepatuhan COPPA</a> untuk informasi lebih lanjut.</p> 
+       <h2>Pengaturan Fitur</h2> 
+       <p>Bagian pengaturan fitur menyediakan informasi dan pengaturan untuk fitur terkait Analytics tertentu.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UnityAnalyticsDashboardConfigure2.png" alt="Feature Settings section of the Analytics Configure page"> 
+        <figcaption>
+          Bagian Pengaturan Fitur dari Halaman Konfigurasi Analytics 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Project Secret Key</strong></td> 
+          <td style="text-align:left;">Kunci rahasia proyek memberikan akses ke data Analytics Anda. Gunakan kunci rahasia proyek dengan API REST Ekspor Data Baku, serta dukungan Pengaturan Jarak Jauh dan Heatmaps di Editor Unity.<br><br> Perhatikan bahwa Anda harus menjaga rahasia <strong>Project Secret Key</strong>. Siapa pun yang memiliki nilai ini dapat berpotensi mengakses data Analytics Anda.<br><br> Juga dicatat bahwa <strong>Project Secret Key</strong> sebelumnya dikenal sebagai <strong>Raw Data Export API Key</strong>. Nilai utama adalah sama; gunakan <strong>Project Secret Key</strong> di tempat mana Anda sebelumnya menggunakan <strong>Raw Data Export API Key</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Heatmaps</strong><span class="tooltiptext">Heatmaps adalah visualisasi spasial data analitik. <a class="tooltipMoreInfoLink" href="UnityAnalyticsOverview.html#Heatmaps">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Heatmaps">Glossary</a></span></span></span><br>(Pro-only)</td> 
+          <td style="text-align:left;">Heatmaps memvisualkan data Analytics Anda dalam dua dimensi dan tiga dimensi dengan menampilkan penanda grafis acara langsung di adegan Editor Anda.<br><br> Untuk menggunakan Heatmaps, aktifkan fitur di halaman Konfigurasi, lalu klik tombol <strong>SDK</strong> untuk mengunduh paket Heatmaps Asset Store.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Remote Settings</strong><span class="tooltiptext">Pengaturan jarak jauh adalah variabel game yang dapat Anda set jarak jauh di Dasbor Analisis Anda. <a class="tooltipMoreInfoLink" href="UnityAnalyticsRemoteSettings.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#RemoteSettings">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Klik tombol <strong>SDK</strong> untuk mengunduh paket Pengaturan Jarak Jauh <span class="tooltip"><strong>Asset Store</strong><span class="tooltiptext">Sebuah perpustakaan yang berkembang dari aset gratis dan komersial yang diciptakan oleh Unity dan anggota komunitas. Menawarkan berbagai aset, dari tekstur, model dan animasi ke seluruh contoh proyek, tutorial dan ekstensi Editor. <a class="tooltipMoreInfoLink" href="AssetStore.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AssetStore">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Standard Events</strong><span class="tooltiptext">Peristiwa standar adalah peristiwa khusus aplikasi yang Anda kirim dalam menanggapi tindakan atau tonggak pemain penting. Peristiwa standar memiliki nama standar dan daftar parameter yang ditentukan. <a class="tooltipMoreInfoLink" href="UnityAnalyticsCustomEvents.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Standardevent">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Klik tombol <strong>SDK</strong> untuk mengunduh paket Aset Acara Standar.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Pengaturan Admin</h2> 
+       <p>Bagian Pengaturan Admin mengandung kontrol yang memungkinkan Anda menghapus data Analytics yang ada atau disable Analytics altogether.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UnityAnalyticsDashboardConfigure3.png" alt="Admin Settings section of the Analytics Configure page"> 
+        <figcaption>
+          Bagian Pengaturan Admin dari halaman Konfigurasi Analytics 
+        </figcaption> 
+       </figure> 
+       <h4>Data Analisis Ulang</h4> 
+       <p>Mengatur ulang data Analytics Anda secara permanen menghapus semua data diproses yang ada sehingga tidak lagi muncul dalam laporan Dashboard, segmen atau corong. Namun, data mentah Anda tidak dihapus dan Anda masih dapat mengunduhnya menggunakan <a href="UnityAnalyticsRawDataExport.html">Ekspor Data Baku</a>.</p> 
+       <p>Data diproses dihapus pada waktu yang tercantum di halaman Konfigurasi, di mana titik pengumpulan data Analytics, pemrosesan, dan agregasi dimulai baru.</p> 
+       <p>Klik tombol <strong>Begin Process</strong> dan ikuti petunjuk untuk menyelesaikan ulang data.</p> 
+       <h4>Turn off Analytics</h4> 
+       <p>Klik tautan <strong>disable this project for Analytics</strong> untuk mematikan <span class="tooltip"><strong>Unity Analytics</strong><span class="tooltiptext">Sebuah platform data yang menyediakan analitik untuk permainan Unity Anda. <a class="tooltipMoreInfoLink" href="UnityAnalytics.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UnityAnalytics">Glossary</a></span></span></span> untuk proyek. (Anda dapat mengandalkan Analytics untuk proyek setiap saat dari Editor Unity atau Dasbor Layanan.)</p> 
+       <hr> 
+       <ul> 
+        <li><span class="page-edit">2017–08–29 Sitemap</span></li> 
+        <li><span class="page-history">Fitur baru di Unity 2017. 1 Artikel</span></li> 
+       </ul> 
+       <!-- area:monetization --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UnityAnalyticsDashboardEventManager.html"></a></span> 
+         <div class="tip">
+           Manajer Acara 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UnityAnalyticsMarketInsights.html"></a></span> 
+         <div class="tip">
+           Wawasan Pasar 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy"> 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

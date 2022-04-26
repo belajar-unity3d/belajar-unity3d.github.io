@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Menerapkan produk IAP</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityServices.html">Layanan Unity</a></li> 
+         <li><a href="udp.html">Portal Distribusi Unity</a></li> 
+         <li>Menerapkan produk IAP</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="udp-distribution.html"></a></span> 
+          <div class="tip">
+            Mendistribusikan permainan Anda dengan UDP 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="udp-sandbox-testing.html"></a></span> 
+          <div class="tip">
+            Menguji permainan Anda di kotak pasir UDP 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Menerapkan produk IAP</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Unity merekomendasikan menambahkan dan mengelola produk IAP Anda di konsol UDP. Konsol UDP adalah sumber kebenaran untuk apa yang diajukan ke sistem back-end toko. Selain itu, konsol UDP memungkinkan Anda:<a href="udp.html#iap-catalog">Catalog</a> in the UDP console is the source of truth for what is submitted to the store’s back-end systems. Additionally, the UDP console lets you:</p> 
+       <ul> 
+        <li><a href="#manage">Kelola beberapa harga dan mata uang IAP</a></li> 
+        <li><a href="#edit">Tambahkan deskripsi dalam beberapa bahasa</a></li> 
+        <li> <a href="#bulk">Unggah item dalam jumlah besar melalui file CSV</a> (multiple currency)</li> 
+       </ul> 
+       <p> <strong>Note</strong>: Jika Anda menggunakan paket UDP hanya, Anda masih harus membuat setidaknya satu item IAP di Editor Unity untuk menguji bahwa itu dapat menyinkronkan dengan konsol UDP dengan benar. Jika Anda menggunakan paket <span class="tooltip"><strong>Unity IAP</strong><span class="tooltiptext">Unity <strong>In App Purchase</strong><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UnityIAP">Glossary</a></span></span></span> (implementasikan codeless), Anda harus menambahkan setiap item IAP di Editor Unity dan mengunggah semuanya ke konsol UDP. Jika Anda menggunakan paket Unity IAP dan telah menerapkan IAP dalam kode, buat item IAP di konsol UDP.</p> 
+       <p>Jika Anda mempertahankan Katalog IAP di klien game Anda, UDP tetap disinkronkan antara Editor Unity dan konsol UDP.</p> 
+       <p><a name="managing-iap"></a></p> 
+       <h2>Mengelola pembelian dalam aplikasi di konsol UDP</h2> 
+       <p>Dalam, arahkan ke permainan Anda melalui halaman My Games. Di halaman Game Info, pilih tombol <strong>EDIT INFO</strong> untuk memasukkan mode edit. Untuk menghemat perubahan pilih <strong>SAVE</strong>. Untuk membuang perubahan, pilih <strong>CANCEL</strong>. Bagian ini mencakup cara mengedit, membuat dan menghapus produk IAP dari konsol UDP.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UDPManagingGame_07.png" alt=""> 
+       </figure> 
+       <p><a name="create"></a></p> 
+       <h3>Membuat item IAP baru</h3> 
+       <p>Untuk membuat item IAP baru di konsol UDP:</p> 
+       <ol> 
+        <li>Pilih <strong>EDIT INFO</strong> di halaman Informasi Game.</li> 
+        <li>Pilih <strong>Add Item</strong> untuk membuat item baru.</li> 
+        <li>Tentukan dan simpan <a href="udp-reference.html#iap">Informasi produk</a> Anda. 
+         <ol> 
+          <li>Ikuti persyaratan untuk ID Produk untuk memastikan mereka berlaku untuk toko aplikasi.</li> 
+          <li>Pastikan produk IAP yang Anda tentukan dalam permainan Anda menggunakan <strong>Product ID</strong> yang sama yang ditetapkan dalam Katalog IAP.</li> 
+         </ol> </li> 
+        <li>Pilih <strong>Manage amounts and currencies</strong> ke: 
+         <ol> 
+          <li>Mengkonversi harga IAP dari USD ke mata uang asing.</li> 
+          <li>Sesuaikan harga dalam mata uang ini.</li> 
+         </ol> </li> 
+        <li>Pilih <strong>SAVE</strong> untuk menyimpan perubahan Anda.</li> 
+       </ol> 
+       <p> <strong>Note</strong>: Jika Anda memiliki banyak item IAP untuk membuat, mempertimbangkan menggunakan fitur <a href="#bulk">Impor IAP Massal</a> untuk membuat semua item IAP Anda sekaligus, termasuk deskripsi dan harga lokal dalam beberapa mata uang.</p> 
+       <p>Jika menggunakan paket UDP, item IAP baru yang Anda tambahkan di Konsol disinkronkan ke proyek Unity Anda. Anda tidak perlu membangun kembali permainan Anda untuk memasukkannya.</p> 
+       <p><a name="edit"></a></p> 
+       <h3>Mengedit Deskripsi IAP</h3> 
+       <p>Untuk mengedit deskripsi IAP, lanjutkan sebagai berikut.</p> 
+       <ol> 
+        <li>Pilih <strong>EDIT INFO</strong> di halaman Informasi Game.</li> 
+        <li>Pilih bahasa yang ingin Anda edit deskripsi Anda melalui pemilih bahasa drop-down.</li> 
+        <li>Di bagian Pembelian In-App, pilih ikon pensil untuk mengedit item IAP yang ada.</li> 
+        <li>Edit informasi item IAP Anda: 
+         <ol> 
+          <li> <strong>Product Name</strong>, nama item IAP</li> 
+          <li> <strong>Description</strong>, untuk menjelaskan item IAP</li> 
+         </ol> </li> 
+        <li>Pilih <strong>SAVE</strong> untuk menyimpan perubahan Anda.</li> 
+       </ol> 
+       <p> <strong>Note</strong>: Langkah di atas hanya mengedit informasi item IAP Anda untuk bahasa yang dipilih. Jika Anda memiliki sejumlah besar item IAP dan bahasa untuk mendukung, pertimbangkan menggunakan <a href="#bulk">Impor IAP Massal</a> untuk mengimpor informasi ini.</p> 
+       <h3>Mengedit harga IAP dan mata uang</h3> 
+       <ol> 
+        <li>Pilih <strong>EDIT INFO</strong> di halaman Informasi Game.</li> 
+        <li>Pilih <strong>Manage amounts and currencies</strong> untuk item IAP untuk: 
+         <ol> 
+          <li>Mengubah harga IAP.</li> 
+          <li>Konversikan dari USD ke mata uang asing.</li> 
+          <li>Sesuaikan harga dalam mata uang ini.</li> 
+         </ol> </li> 
+        <li>Pilih <strong>SAVE</strong> untuk menyimpan perubahan Anda.</li> 
+       </ol> 
+       <p> <strong>Hint</strong>: Untuk mengatur mata uang sebagai mata uang favorit, pilih ikon bintang di sebelah kode mata uang mereka. Ini mencubit mata uang ke bagian atas daftar. Pilih bintang ke pin.</p> 
+       <p> <strong>Note</strong>: Jika Anda memiliki banyak item IAP dan mata uang untuk mendukung, Anda dapat menggunakan fungsi <strong>Convert</strong> untuk secara otomatis mengubah semua harga IAP Anda menjadi mata uang global, berdasarkan jumlah USD yang ditetapkan untuk setiap item IAP. Ini menimpa harga lokal yang telah Anda set sebelumnya.</p> 
+       <p>Atau, gunakan <a href="#bulk">Impor IAP Massal</a> untuk mengimpor semua informasi ini sekaligus.</p> 
+       <h3>Menghapus item IAP</h3> 
+       <ol> 
+        <li>Pilih <strong>EDIT INFO</strong> di halaman Informasi Game.</li> 
+        <li>Pilih trash dapat ikon untuk menghapus item IAP.</li> 
+        <li>Pilih <strong>SAVE</strong> untuk menyimpan perubahan Anda.</li> 
+       </ol> 
+       <h3>Mengimpor item IAP dalam jumlah besar</h3> 
+       <ol> 
+        <li>Pilih <strong>EDIT INFO</strong> di halaman Informasi Game.</li> 
+        <li>Pilih <strong>IMPORT CATALOG</strong> di sudut kanan atas panel Pembelian In-App.<br> Lihat IAP Massal Impor untuk cakupan penuh fungsi ini.</li> 
+        <li>Pilih <strong>SAVE</strong> untuk menyimpan perubahan Anda.</li> 
+       </ol> 
+       <h3>Mengimpor informasi permainan dari Google Play</h3> 
+       <p>Jika Anda telah menerbitkan game Anda di Google Play, Anda dapat mengimpor informasi dasar menggunakan URL Google Play game Anda:</p> 
+       <ol> 
+        <li>Pilih <strong>Import from Google Play</strong>.</li> 
+        <li>Tempel Google Play URL permainan Anda ke kotak input.</li> 
+        <li>Untuk menentukan bahasa mana yang secara khusus impor, gunakan URL Google Play yang berisi suffix bahasa, misalnya untuk penggunaan Italia <code>&amp;hl=it</code>. Login Sitemap Login Play URL tidak mengandung suffix bahasa, UDP mengambil informasi untuk bahasa yang saat ini Anda mengedit di konsol UDP (jika diatur di Google Play).<br>If your Google Play URL doesn’t contain the language suffix, UDP fetches the information for the language that you’re currently editing in the UDP console (if it is set on Google Play).</li> 
+        <li>Pilih <strong>Import</strong>.</li> 
+        <li>Double-check hasilnya dalam beberapa kasus alamat IP komputer Anda mungkin akhirnya menentukan bahasa mana yang Anda layani.</li> 
+       </ol> 
+       <p><a name="bulk"></a></p> 
+       <h2>Impor IAP Massal</h2> 
+       <p>IAP Massal Fitur impor memudahkan mengelola Katalog IAP Anda jika Anda memiliki banyak item IAP. Ini memungkinkan Anda mengunggah file CSV dalam format UDP biasa dan dalam format Google Play ke Konsol UDP dengan semua rincian produk IAP Anda, termasuk harga dalam beberapa mata uang dan deskripsi dalam beberapa bahasa.</p> 
+       <p>Unity menyarankan Anda masih menambahkan item IAP di Editor Unity untuk tujuan pengujian untuk memastikan Anda dapat membeli item IAP di lingkungan kotak pasir.</p> 
+       <p> <strong>Note</strong>: Jika file CSV Anda berisi beberapa bahasa, <a href="#udp-distribution.html#languages">menambahkan bahasa yang didukung</a> sebelum Anda mengimpor file CSV.</p> 
+       <p>Bagian ini menjelaskan cara mengimpor barang IAP Anda dalam jumlah besar melalui CSV.</p> 
+       <h3>Persyaratan implementasi</h3> 
+       <h4>Untuk menambahkan produk IAP baru</h4> 
+       <p>Anda hanya boleh menggunakan fungsi Impor IAP Massal untuk menambahkan produk IAP baru jika Anda menerapkan UDP:</p> 
+       <ul> 
+        <li>Dengan paket UDP</li> 
+        <li>Dengan Unity IAP (pengimplementasikanan kode)</li> 
+       </ul> 
+       <p>Unity menyarankan Anda masih menambahkan item IAP di Editor Unity untuk tujuan pengujian untuk memastikan Anda dapat membeli item IAP di lingkungan kotak pasir.</p> 
+       <h4>Untuk menambahkan deskripsi dan harga lokal</h4> 
+       <p>Untuk semua implementasi, Anda dapat menggunakan Impor IAP Massal untuk menetapkan deskripsi dalam lebih banyak bahasa dan harga dalam lebih banyak mata uang untuk produk IAP yang ada.</p> 
+       <h4>Dengan Paket UDP</h4> 
+       <p>Anda dapat menggunakan Bulk IAP Import untuk sepenuhnya mendefinisikan ulang katalog IAP permainan Anda tanpa harus membangun kembali permainan Anda.</p> 
+       <p>Anda hanya perlu memiliki implementasi UDP dalam urutan kerja yang baik.</p> 
+       <h4>Dengan Unity IAP (pengimplementasikanan kode)</h4> 
+       <p>Dengan Unity IAP, Anda hanya dapat menyinkronkan Katalog IAP Anda dari Editor ke Konsol UDP.</p> 
+       <p>Jika Anda akan mengunggah Katalog IAP permainan Anda ke Konsol UDP melalui Bulk IAP Upload, Anda harus mempersiapkan permainan Anda untuk mengambil informasi produk IAP dari Konsol UDP, daripada dari katalog IAP default klien game.</p> 
+       <p>Untuk memungkinkan permainan Anda untuk mengambil Katalog IAP dari konsol UDP, jangan beri tahu metode pengambilan produk IAP dalam kode Anda.</p> 
+       <p>Untuk informasi lebih lanjut, lihat .</p> 
+       <h3>Unduh Template CSV</h3> 
+       <p>UDP menyediakan template CSV yang dapat Anda gunakan untuk impor massal produk IAP. Templat dalam format UDP biasa untuk file CSV.</p> 
+       <ol> 
+        <li>Pilih <strong>EDIT INFO</strong> pada halaman <strong>Game Information</strong>.</li> 
+        <li>Pergi ke panel <strong>In-App Purchases</strong>.</li> 
+        <li>Pilih <strong>IMPORT CATALOG</strong>.</li> 
+        <li>Pilih <strong>Download Template</strong>.</li> 
+       </ol> 
+       <h3>Isi file CSV</h3> 
+       <p>File CSV menggunakan kommas (,) dan semicolons (;) untuk memisahkan nilai data. Commas memisahkan nilai data primer, dan subnilai terpisah semicolons.</p> 
+       <p>Setiap item IAP harus muncul sepenuhnya pada satu baris dalam file CSV.</p> 
+       <p>Anda harus memasukkan data dalam <a href="udp-reference.html#csv">format</a> yang tepat dari template yang disediakan. Konsol UDP menampilkan pesan kesalahan jika Anda mengunggah file yang berisi kesalahan, seperti sintaks harga tidak valid atau bahasa yang hilang.</p> 
+       <h3>Unggah file CSV Anda</h3> 
+       <ol> 
+        <li>Pilih <strong>EDIT INFO</strong> pada halaman <strong>Game Information</strong>.</li> 
+        <li>Pergi ke bagian <strong>In-App Purchases</strong>.</li> 
+        <li>Pilih <strong>IMPORT CATALOG</strong>.</li> 
+        <li>Pilih <strong>Upload CSV</strong> atau drag dan drop file CSV Anda di kotak yang ditunjuk.</li> 
+        <li>Pilih <strong>IMPORT</strong> untuk mengunggah IAP Anda Katalog ke konsol UDP.</li> 
+       </ol> 
+       <p>Sitemap Mengungkapkan file CSV sepenuhnya menimpa katalog IAP revisi ini. Konsol UDP hanya menggunakan informasi yang terkandung dalam file CSV Anda; informasi IAP lain yang sebelumnya Anda masukkan melalui konsol UDP hilang.<strong>Note:</strong> Uploading a CSV file entirely overwrites this revision’s IAP catalog. The UDP console only uses the information contained in your CSV file; any other IAP information you previously entered via the UDP console is lost.</p> 
+       <h3>Ekspor file CSV</h3> 
+       <p>Untuk menggunakan ulang atau memodifikasi Katalog IAP yang ada:</p> 
+       <ol> 
+        <li>Pilih <strong>EDIT INFO</strong> di halaman Informasi Game.</li> 
+        <li>Pergi ke bagian Pembelian In-App.</li> 
+        <li>Pilih <strong>EXPORT CATALOG</strong>.<br> Ini mengekspor Katalog IAP yang ada sebagai file CSV dalam format UDP biasa.</li> 
+        <li>Modifikasi file CSV.</li> 
+        <li>Unggah file CSV Anda.</li> 
+       </ol> 
+       <p>Tombol <strong>EXPORT CATALOG</strong> hanya ditampilkan jika Anda memiliki produk IAP di Katalog IAP Anda, dan hanya terlihat dalam mode edit. Gambar di bawah ini menunjukkan tombol ini di bagian Pembelian In-App.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UDPBulkImport_06.png" alt=""> 
+       </figure> 
+       <p><a name="google"></a></p> 
+       <h2>Produk IAP impor dari format Google Play</h2> 
+       <p>UDP juga mendukung file CSV dalam format Google Play.</p> 
+       <p>Untuk mengimpor produk IAP menggunakan file Google Play CSV:</p> 
+       <ol> 
+        <li>Pilih <strong>EDIT INFO</strong> pada halaman <strong>Game Information</strong>.</li> 
+        <li>Pergi ke bagian <strong>In-App Purchases</strong>.</li> 
+        <li>Klik <strong>IMPORT CATALOG</strong>.</li> 
+        <li>Pilih kotak centang <strong>CSV file in Google Play format</strong>.</li> 
+        <li>Pilih Unggah CSV atau drag dan drop file CSV Anda di kotak yang ditunjuk. 
+         <ol> 
+          <li>Dalam bidang <strong>Google Play default currency</strong>, pilih mata uang default untuk permainan Anda.</li> 
+         </ol> </li> 
+        <li>Pilih <strong>Import</strong> untuk mengunggah IAP Anda Katalog ke konsol UDP.</li> 
+       </ol> 
+       <h3>Pricing</h3> 
+       <p>Google Play menetapkan harga negara, UDP menetapkan harga dengan mata uang. Oleh karena itu negara-negara peta impor untuk mata uang. Jika produk IAP Anda telah menetapkan harga yang berbeda di seluruh negara menggunakan mata uang yang sama (misalnya, EUR di negara-negara Eropa) UDP menggunakan negara pertama dalam daftar untuk mata uang. Jika ada beberapa negara dengan USD yang terdaftar, penduduk setempat AS digunakan.</p> 
+       <p>UDP tidak mendukung template harga Google Play. Pengaturan ini diabaikan. UDP hanya menggunakan harga lokal yang disediakan dalam file CSV.</p> 
+       <h3>Mata uang default</h3> 
+       <p>UDP menggunakan USD sebagai mata uang default. Jika Anda tidak memiliki harga USD di Google Play, UDP mengubah harga dan mata uang default Google Play menjadi USD dan menggunakan ini sebagai harga default UDP.</p> 
+       <p>Harga lokal yang ditetapkan dalam file CSV Anda dipertahankan dalam mata uang masing-masing.</p> 
+       <p>Untuk negara-negara yang tidak secara eksplisit diatur dalam file CSV, UDP mengubah harga dan mata uang default Google Play Anda menjadi mata uang masing-masing.</p> 
+       <h3>Produk IAP</h3> 
+       <p>Jenis produk IAP (mungkin / tidak dapat dikonsumsi) tidak dapat ditentukan dari file CSV Anda; Anda perlu memberitahu UDP jenis setiap produk IAP.</p> 
+       <p>UDP tidak mendukung Auto-Translate. Pengaturan ini diabaikan. UDP hanya menggunakan deskripsi lokal yang disediakan dalam file CSV.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="udp-distribution.html"></a></span> 
+         <div class="tip">
+           Mendistribusikan permainan Anda dengan UDP 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="udp-sandbox-testing.html"></a></span> 
+         <div class="tip">
+           Menguji permainan Anda di kotak pasir UDP 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

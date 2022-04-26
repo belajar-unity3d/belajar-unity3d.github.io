@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Membuat Aset Bundel di Unity 4</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="LegacyTopics.html">Legacy Topics</a></li> 
+         <li><a href="AssetBundles4x.html">Legacy Asset Bundles</a></li> 
+         <li>Membuat Aset Bundel di Unity 4</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="AssetBundles4x.html"></a></span> 
+          <div class="tip">
+            Legacy Asset Bundles 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="AssetBundleDependencies4x.html"></a></span> 
+          <div class="tip">
+            Mengelola Ketergantungan Aset pada Unity 4 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Membuat Aset Bundel di Unity 4</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p><em>Dalam versi Unity lebih awal dari Unity 5, aset harus dipilih dan ditambahkan ke bundel menggunakan editor <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> saja. (Dalam Unity 5 kami menyediakan alat dalam editor untuk menetapkan aset ke Bundel tertentu). Informasi ini disediakan bagi mereka yang bekerja pada proyek-proyek legacy di Unity 4, dan berbicara asumsi Anda menggunakan Unity 4.</em></p> 
+       <p>Untuk membuat Aset Bundel Anda perlu menggunakan kelas editor BuildPipeline. Semua skrip menggunakan kelas Editor harus ditempatkan di folder bernama Editor, di mana saja di folder Aset. Berikut ini adalah contoh dari skrip tersebut di C#:</p> 
+       <pre><code>// Legacy Unity 4 example. Not for use in Unity 5 &amp; onwards
+using UnityEngine;
+using UnityEditor;
+
+public class ExportAssetBundles {
+    [MenuItem("Assets/Build AssetBundle")]
+    static void ExportResource () {
+        string path = "Assets/myAssetBundle.unity3d";
+        Object[] selection = Selection.GetFiltered(typeof(Object), SelectionMode.DeepAssets);
+        BuildPipeline.BuildAssetBundle(Selection.activeObject, selection, path, 
+                                       BuildAssetBundleOptions.CollectDependencies 
+                                     | BuildAssetBundleOptions.CompleteAssets);
+    }
+}
+</code></pre> 
+       <p>Script editor tidak perlu diterapkan pada <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span>, itu bukan digunakan oleh Editor. Contoh sebelumnya ini akan membuat item baru dalam menu "Assets" dari editor Anda yang disebut "Build AssetBundle".</p> 
+       <p>Untuk menggunakan contoh ini:</p> 
+       <ul> 
+        <li>Buat file skrip C# bernama ExportAssetBundles.cs, di dalam folder bernama Editor, di Tampilan Proyek.</li> 
+        <li>Pilih Aset atau Aset di folder proyek Anda yang ingin Anda buat menjadi Aset.</li> 
+        <li>Pilih Membangun AssetBundle dari menu Aset. Klik “Simpan” untuk membuat AssetBundle.</li> 
+        <li>Garis pertama dari fungsi ExportResource menetapkan jalur AssetBundle Anda.</li> 
+        <li>Garis berikutnya menetapkan pilihan yang akan dibuat menjadi AsetBundle sebagai objek yang dipilih dalam <span class="tooltip"><strong>Project window</strong><span class="tooltiptext">Jendela yang menunjukkan isi folder <code>Assets</code> (Project tab) <a class="tooltipMoreInfoLink" href="ProjectView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Projectwindow">Glossary</a></span></span></span>.</li> 
+       </ul> 
+       <p>Fungsi BuildAssetBundle adalah garis yang menciptakan AssetBundle dan menyimpannya ke lokasi yang ditentukan. Parameter pertama menentukan keyAsset, yang merupakan Aset khusus yang dapat diperoleh langsung dengan properti utamaAsset ketika memuat Aset dari AssetBundle. Tidak wajib untuk mengatur Aset utama, jika ini tidak akan digunakan Anda dapat menggunakan null untuk parameter. Parameter kedua adalah array objek yang akan membuat AssetBundle. Parameter ketiga adalah lokasi pada disk yang asetBundle akan disimpan. Parameter akhir adalah bendera atau opsi yang digunakan saat membangun Aset. <a href="../ScriptReference/BuildAssetBundleOptions.html">BuildAssetBundleOptions</a> ini dapat dikombinasikan menggunakan bitwise ATAU operator.</p> 
+       <p>Aset Bangunan harus menjadi langkah pra-publik yang terjadi hanya sekali dan dengan panggilan fungsi tunggal, misalnya, dengan Menu Barang yang membangun semua Aset. Ketika Anda mengembangkan aplikasi Anda, Anda harus menulis skrip helper yang dapat membangun semua AsetBundles untuk platform target dengan satu klik atau dalam batchmode tanpa intervensi pengguna.</p> 
+       <p>Ada tiga metode kelas yang dapat Anda gunakan untuk membangun AssetBundles:</p> 
+       <ul> 
+        <li><p> <a href="../ScriptReference/BuildPipeline.BuildAssetBundle.html">WordPress.org</a> memungkinkan Anda untuk membangun asetBundles dari setiap jenis aset.</p></li> 
+        <li><p> <a class="tooltipMoreInfoLink" href="../ScriptReference/BuildPipeline.BuildStreamedSceneAssetBundle.html">WordPress.org</a> digunakan ketika Anda ingin memasukkan hanya <span class="tooltip"><strong>scenes</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> untuk distreaming dan dimuat sebagai data yang tersedia.</p></li> 
+        <li><p> <a href="../ScriptReference/BuildPipeline.BuildAssetBundleExplicitAssetNames.html">BuildPipeline.BuildAssetBundleExplicitAssetNames</a> adalah sama seperti BuildPipeline. MembangunAssetBundle tetapi memiliki parameter tambahan untuk menentukan pengidentifikasi string kustom (nama) untuk setiap objek.</p></li> 
+       </ul> 
+       <h2>Contoh cara membangun AsetBundle</h2> 
+       <p>Bundel aset bangunan dilakukan melalui scripting editor. Ada contoh dasar dari ini dalam dokumentasi scripting untuk <a href="../ScriptReference/BuildPipeline.BuildAssetBundle.html">WordPress.org</a>.</p> 
+       <p>Demi contoh ini, salin dan tempelkan skrip dari tautan di atas ke skrip C # baru yang disebut ExportAssetBundles. Script ini harus ditempatkan di folder bernama Editor, sehingga bekerja di dalam Editor Unity.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ExportAssetBundlesScript.png" alt=""> 
+       </figure> 
+       <p>Sekarang dalam menu <span class="tooltip"><strong>Assets</strong><span class="tooltiptext">Setiap media atau data yang dapat digunakan dalam permainan atau proyek Anda. Aset mungkin berasal dari file yang dibuat di luar Unity, seperti model 3D, file audio atau gambar. Anda juga dapat membuat beberapa jenis aset di Unity, seperti Pengontrol Animator, Audio Mixer atau Tekstur Render. <a class="tooltipMoreInfoLink" href="AssetWorkflow.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Asset">Glossary</a></span></span></span>, Anda harus melihat dua pilihan menu baru.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AssetBundleMenuOptions.png" alt=""> 
+       </figure> 
+       <ol> 
+        <li><p> <strong>Build AssetBundle From Selection - Track dependencies</strong>. Ini akan membangun objek saat ini menjadi bundel aset dan mencakup semua ketergantungan. Misalnya jika Anda memiliki <span class="tooltip"><strong>prefab</strong><span class="tooltiptext">Jenis aset yang memungkinkan Anda untuk menyimpan GameObject lengkap dengan komponen dan properti. Prefab bertindak sebagai template dari mana Anda dapat membuat instance objek baru di tempat kejadian. <a class="tooltipMoreInfoLink" href="Prefabs.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Prefab">Glossary</a></span></span></span> yang terdiri dari beberapa lapisan hirarkis maka akan secara berulang menambahkan semua objek anak dan komponen ke bundel aset.</p></li> 
+        <li><p> <strong>Build AssetBundle From Selection - No dependency tracking</strong>. Ini adalah kebalikan dari metode sebelumnya dan hanya akan mencakup aset tunggal yang telah Anda pilih.</p></li> 
+       </ol> 
+       <p>Misalnya ini, Anda harus membuat prefab baru. Pertama membuat kubus baru dengan pergi ke <strong>GameObject &gt; 3D Object &gt; Cube</strong>, yang akan membuat kubus baru di Hierarchy View. Kemudian seret Cube dari Hierarchy View ke Project View, yang akan membuat prefab objek itu.</p> 
+       <p>Anda harus klik kanan kubus prefab di jendela proyek dan pilih <strong>Build AssetBundle From Selection - Track dependencies</strong>. Pada titik ini Anda akan disajikan dengan jendela untuk menyimpan aset “bundled”. Jika Anda membuat folder baru yang disebut "AssetBundles" dan menyimpan kubus sebagai <strong>Cube.unity3d</strong>, jendela proyek Anda sekarang akan melihat sesuatu seperti ini.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AssetBundlesCube.png" alt=""> 
+       </figure> 
+       <p>Pada titik ini Anda dapat memindahkan AssetBundle <strong>Cube.unity3d</strong> di tempat lain di penyimpanan lokal Anda, atau mengunggahnya ke server pilihan Anda.</p> 
+       <h2>Contoh cara mengubah sifat aset saat membangun Aset Bundle</h2> 
+       <p>Anda dapat menggunakan <a href="../ScriptReference/AssetDatabase.ImportAsset.html">AssetDatabase.ImportAsset</a> untuk memaksa reimporting aset tepat sebelum memanggil <a href="../ScriptReference/BuildPipeline.BuildAssetBundle.html">WordPress.org</a>, dan kemudian gunakan <a href="../ScriptReference/AssetPostprocessor.OnPreprocessTexture.html">AssetPostprocessor.OnPreprocessTexture</a> untuk mengatur sifat yang diperlukan. Contoh berikut akan menunjukkan cara mengatur tekstur yang berbeda <span class="tooltip"><strong>compressions</strong><span class="tooltiptext">Metode menyimpan data yang mengurangi jumlah ruang penyimpanan yang dibutuhkan. <a href="class-TextureImporterOverride.html">Kompresi Tekstur</a>, <a href="class-AnimationClip.html#AssetProperties">Kompresi Animasi</a>, <a href="class-AudioClip.html">Kompresi Audio</a>, <a href="ReducingFilesize.html">Membangun Kompresi</a>.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#compression">Glossary</a></span></span></span> ketika membangun Aset Bundle.</p> 
+       <pre><code>// Legacy Unity 4 example. Not for use in Unity 5 &amp; onwards.
+// Builds an asset bundle from the selected objects in the project view,
+// and changes the texture format using an AssetPostprocessor.
+
+using UnityEngine;
+using UnityEditor;
+
+public class ExportAssetBundles {
+    
+    // Store current texture format for the TextureProcessor.
+    public static TextureImporterFormat textureFormat;
+    
+    [MenuItem("Assets/Build AssetBundle From Selection - PVRTC_RGB2")]
+    static void ExportResourceRGB2 () {
+        textureFormat = TextureImporterFormat.PVRTC_RGB2;
+        ExportResource();       
+    }   
+    
+    [MenuItem("Assets/Build AssetBundle From Selection - PVRTC_RGB4")]
+    static void ExportResourceRGB4 () {
+        textureFormat = TextureImporterFormat.PVRTC_RGB4;
+        ExportResource();
+    }
+    
+    static void ExportResource () {
+        // Bring up save panel.
+        string path = EditorUtility.SaveFilePanel ("Save Resource", "", "New Resource", "unity3d");
+        
+        if (path.Length != 0) {
+            // Build the resource file from the active selection.
+            Object[] selection = Selection.GetFiltered(typeof(Object), SelectionMode.DeepAssets);
+            
+            foreach (object asset in selection) {
+                string assetPath = AssetDatabase.GetAssetPath((UnityEngine.Object) asset);
+                if (asset is Texture2D) {
+                    // Force reimport thru TextureProcessor.
+                    AssetDatabase.ImportAsset(assetPath);
+                }
+            }
+            
+            BuildPipeline.BuildAssetBundle(Selection.activeObject, 
+                                           selection, 
+                                           path, 
+                                           BuildAssetBundleOptions.CollectDependencies |
+                                           BuildAssetBundleOptions.CompleteAssets);
+            Selection.objects = selection;
+        }
+    }
+}
+</code></pre> 
+       <pre><code>// Legacy Unity 4 example. Not for use in Unity 5 &amp; onwards.
+// Changes the texture format when building the Asset Bundle.
+
+using UnityEngine;
+using UnityEditor;
+
+public class TextureProcessor : AssetPostprocessor
+{ 
+    void OnPreprocessTexture() {
+        TextureImporter importer = assetImporter as TextureImporter;
+        importer.textureFormat = ExportAssetBundles.textureFormat;
+    }
+}
+
+
+</code></pre> 
+       <p>Anda juga dapat mengontrol bagaimana aset diimpor menggunakan <a href="../ScriptReference/ImportAssetOptions.html">AssetDatabase.ImportAssetOptions</a>.</p> 
+       <p>Dalam lingkungan pengujian, Anda kadang-kadang perlu menguji perubahan yang membutuhkan AsetBundles untuk dibangun kembali. Dalam kasus ini, disarankan untuk menggunakan opsi <a href="../ScriptReference/BuildAssetBundleOptions.UncompressedAssetBundle.html">BuildAssetBundleOptions.UncompressedAssetBundle</a> ketika Anda membangun Aset. Ini membuatnya lebih cepat untuk membangun dan memuat AssetBundles tetapi mereka juga akan lebih besar dan oleh karena itu mengambil lebih lama untuk diunduh.</p> 
+       <h2>Aset Bangunan dalam lingkungan produksi</h2> 
+       <p>Ketika pertama kali menggunakan AssetBundles, mungkin tampak cukup untuk secara manual membangun mereka seperti yang terlihat dalam contoh sebelumnya. Tetapi sebagai proyek tumbuh dalam ukuran dan jumlah aset meningkat, melakukan proses ini dengan tangan tidak efisien. Pendekatan yang lebih baik adalah menulis fungsi yang membangun semua AssetBundles untuk sebuah proyek. Anda dapat, misalnya, menggunakan file teks yang memetakan file Asset ke file AssetBundle.</p> 
+       <!-- area:none --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="AssetBundles4x.html"></a></span> 
+         <div class="tip">
+           Legacy Asset Bundles 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="AssetBundleDependencies4x.html"></a></span> 
+         <div class="tip">
+           Mengelola Ketergantungan Aset pada Unity 4 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

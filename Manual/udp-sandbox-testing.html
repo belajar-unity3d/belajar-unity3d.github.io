@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Menguji permainan Anda di kotak pasir UDP</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityServices.html">Layanan Unity</a></li> 
+         <li><a href="udp.html">Portal Distribusi Unity</a></li> 
+         <li>Menguji permainan Anda di kotak pasir UDP</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="udp-implementing-iap.html"></a></span> 
+          <div class="tip">
+            Menerapkan produk IAP 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="udp-managing-and-publishing.html"></a></span> 
+          <div class="tip">
+            Mengelola dan menerbitkan permainan Anda di konsol UDP 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Menguji permainan Anda di kotak pasir UDP</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Sebelum Anda dapat melepaskan permainan Anda untuk pertama kalinya dan repack untuk toko aplikasi, menguji permainan Anda di lingkungan sandbox. Anda harus:</p> 
+       <ul> 
+        <li>Awali UDP di kotak pasir setidaknya sekali (untuk semua permainan) 
+         <ul> 
+          <li>Hubungi metode Initialize()</li> 
+         </ul> </li> 
+        <li>Lengkapi pembelian IAP di kotak pasir setidaknya sekali (jika permainan Anda memiliki IAPs) 
+         <ul> 
+          <li>Hubungi metode Purchase()</li> 
+         </ul> </li> 
+       </ul> 
+       <p>Ini adalah untuk memastikan bahwa implementasi UDP bekerja untuk kasus sederhana dan nominal. Unity merekomendasikan Anda menguji metode UDP Anda lebih luas. Setelah rilis pertama Anda, Anda tidak perlu teruji di kotak pasir untuk melepaskan revisi baru dari permainan Anda di UDP.</p> 
+       <p> <strong>Note</strong>: Jika Anda menguji permainan Anda dalam mode Pemain Unity, semua transaksi IAP berhasil dan secara otomatis dikonsumsi. Ini tidak terhubung ke konsol UDP dan tidak cukup untuk membersihkan pengujian sandbox.</p> 
+       <p>Untuk menguji permainan Anda di kotak pasir:</p> 
+       <ol> 
+        <li>Di tab Portal Unity dari jendela Pengaturan Proyek, pergi ke bagian akun Uji Sandbox UDP dan membuat kredensial login untuk lingkungan sandbox. Login Jika Anda telah menambahkan kredensial di konsol UDP, Anda dapat menggunakannya.<br>If you have already added credentials in the UDP console, you can use those.</li> 
+        <li>Jalankan permainan Anda pada perangkat Android atau emulator. Login Ketika permainan Anda meluncurkan harus memanggil metode Initializeize, yang menampilkan layar login secara otomatis di lingkungan sandbox. Jika Anda tidak menyebut Initialize pada peluncuran game, memicu langkah yang diperlukan untuk memanggil Initialize. <br>When your game launches it should call the Initialize method, which displays the login screen automatically in the sandbox environment. If you didn’t call Initialize on game launch, trigger the necessary step to call Initialize. 
+         <ol> 
+          <li>Masukkan kredensial login Anda untuk akun uji sandbox. Login Ini adalah semua yang diperlukan untuk memeriksa bahwa permainan menginisialisasi.<br>This is all that’s required to check that the game initializes.</li> 
+          <li>Untuk game IAP, lakukan pembelian untuk menguji pembelian IAP Anda. Login Tidak ada transaksi nyata yang dilakukan di lingkungan kotak pasir.<br>No real transaction is made in the sandbox environment.</li> 
+         </ol> </li> 
+       </ol> 
+       <p>Ketika setiap tes berhasil:</p> 
+       <ul> 
+        <li>Lingkungan sandbox menampilkan notifikasi toast</li> 
+        <li>Sandbox UDP memperbarui bagian <a href="udp-reference.html#sandbox">Pengujian Sandbox</a> dari konsol UDP untuk menampilkan status <strong>Tested</strong> hijau untuk tes yang sesuai</li> 
+       </ul> 
+       <p>Ketika semua tes yang diperlukan berhasil, panel kiri halaman Game Info menampilkan kutu hijau untuk mengkonfirmasi pengujian kotak pasir yang jelas. Sekarang Anda dapat menyelesaikan langkah-langkah yang tersisa di halaman Game Info Anda untuk melepaskan revisi pertama Anda dan mengirimkannya ke toko.</p> 
+       <p>Sandbox login kredensial hanya bekerja dengan build UDP generik untuk lingkungan sandbox. Ketika UDP mengubah build Anda untuk toko aplikasi nyata, UDP menghapus lingkungan kotak pasir dan halaman login, dan patch di SDK khusus toko. SDK khusus toko dalam membangun memastikan transaksi IAP bekerja dengan sistem pembayaran toko itu.</p> 
+       <p> <strong>Note</strong>: Mode Sandbox juga mendukung validasi sisi server.</p> 
+       <h2>Troubleshooting</h2> 
+       <p>Periksa implementasi UDP dan/atau IAP jika ada masalah terkait IAP muncul, seperti:</p> 
+       <ul> 
+        <li>Tidak ada layar login yang muncul</li> 
+        <li>Tidak ada produk IAP yang diambil</li> 
+        <li>Tombol pembelian responsif</li> 
+        <li>Ketidakmampuan untuk menyelesaikan pembelian</li> 
+       </ul> 
+       <p>Untuk informasi pemecahan masalah lebih lanjut, periksa atau hubungi tim dukungan UDP melalui tautan “Hubungi Support” di Konsol UDP.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="udp-implementing-iap.html"></a></span> 
+         <div class="tip">
+           Menerapkan produk IAP 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="udp-managing-and-publishing.html"></a></span> 
+         <div class="tip">
+           Mengelola dan menerbitkan permainan Anda di konsol UDP 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

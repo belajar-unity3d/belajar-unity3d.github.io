@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Jaringan Lobby Manager</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="cloud" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UNet.html">Multiplayer dan Jaringan</a></li> 
+         <li><a href="UNetReference.html">Referensi Komponen Multiplayer</a></li> 
+         <li>Jaringan Lobby Manager</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="class-NetworkIdentity.html"></a></span> 
+          <div class="tip">
+            Identitas Jaringan 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="class-NetworkLobbyPlayer.html"></a></span> 
+          <div class="tip">
+            Lobi Jaringan 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Jaringan Lobby Manager</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Important</strong>: UNet adalah solusi yang diuraikan, dan Solusi Multiplayer baru dan <span class="tooltip"><strong>Networking</strong><span class="tooltiptext">Sistem Unity yang memungkinkan game multiplayer di jaringan komputer. <a class="tooltipMoreInfoLink" href="UNetOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Networking">Glossary</a></span></span></span> (Netcode untuk GameObjects) sedang berkembang. Untuk informasi lebih lanjut dan langkah selanjutnya melihat informasi di .</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>NetworkLobbyManager adalah jenis khusus NetworkManager yang menyediakan lobi multiplayer sebelum memasuki main play <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> permainan. Hal ini memungkinkan Anda untuk mengatur jaringan dengan:</p> 
+       <ul> 
+        <li>Batas pemain maksimum</li> 
+        <li>Mulai otomatis ketika semua pemain siap</li> 
+        <li>Opsi untuk mencegah pemain bergabung dengan permainan dalam kemajuan</li> 
+        <li>Dukungan untuk "Couch Multiplayer" (yaitu beberapa pemain per klien)</li> 
+        <li>Cara yang dapat disesuaikan untuk pemain untuk memilih pilihan sementara di lobi</li> 
+       </ul> 
+       <p>Ada dua jenis <span class="tooltip"><strong>player objects</strong><span class="tooltiptext">Objek API Tingkat Tinggi (HPAPI) yang mewakili pemain di server dan memiliki kemampuan untuk menjalankan perintah (yang mengamankan panggilan prosedur jarak jauh klien-to-server) dari klien pemain. <a class="tooltipMoreInfoLink" href="UNetPlayers.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#PlayerObject">Glossary</a></span></span></span> dengan NetworkLobbyManager:</p> 
+       <p>LobbyPlayer Object</p> 
+       <ul> 
+        <li>Satu untuk setiap pemain</li> 
+        <li>Dibuat ketika klien terhubung, atau pemain ditambahkan</li> 
+        <li>Persis hingga pemutusan klien</li> 
+        <li>Memegang data bendera dan konfigurasi siap</li> 
+        <li>Menangani perintah di lobi</li> 
+        <li>harus menggunakan komponen NetworkLobbyPlayer</li> 
+       </ul> 
+       <p>GamePlayer</p> 
+       <ul> 
+        <li>Satu untuk setiap pemain</li> 
+        <li>Dibuat ketika adegan permainan dimulai</li> 
+        <li>Destroyed ketika lobi masuk kembali</li> 
+        <li>Menangani perintah dalam permainan</li> 
+       </ul> 
+       <h2>Properties</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong><em>Property:</em></strong></th> 
+          <th style="text-align:left;"><strong><em>Function:</em></strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>showLobbyGUI</strong></td> 
+          <td style="text-align:left;">Tampilkan kontrol pengembang OnGUI untuk lobi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>maxPlayers</strong></td> 
+          <td style="text-align:left;">Jumlah maksimum pemain diperbolehkan di lobi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>maxPlayersPerConnection</strong></td> 
+          <td style="text-align:left;">Jumlah maksimum pemain diperbolehkan ditambahkan untuk setiap koneksi klien.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>lobbyPlayerPrefab</strong></td> 
+          <td style="text-align:left;"><span class="tooltip"><strong>prefab</strong><span class="tooltiptext">Jenis aset yang memungkinkan Anda untuk menyimpan GameObject lengkap dengan komponen dan properti. Prefab bertindak sebagai template dari mana Anda dapat membuat instance objek baru di tempat kejadian. <a class="tooltipMoreInfoLink" href="Prefabs.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Prefab">Glossary</a></span></span></span> untuk membuat pemain ketika mereka memasuki lobi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>gamePlayerPrefab</strong></td> 
+          <td style="text-align:left;">Prefab untuk membuat pemain ketika permainan dimulai.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>lobbyScene</strong></td> 
+          <td style="text-align:left;">Pemandangan untuk digunakan untuk lobi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>playScene</strong></td> 
+          <td style="text-align:left;">Pemandangan untuk digunakan untuk bermain game utama.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Details</h2> 
+       <ul> 
+        <li>Slot lobiPlayerPrefab harus diisi oleh objek dengan komponen NetworkLobbyPlayer di atasnya.</li> 
+        <li>Ada GUI untuk manajer lobi. Lihat paket multiplayer-lobby <span class="tooltip"><strong>Asset Store</strong><span class="tooltiptext">Sebuah perpustakaan yang berkembang dari aset gratis dan komersial yang diciptakan oleh Unity dan anggota komunitas. Menawarkan berbagai aset, dari tekstur, model dan animasi ke seluruh contoh proyek, tutorial dan ekstensi Editor. <a class="tooltipMoreInfoLink" href="AssetStore.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AssetStore">Glossary</a></span></span></span>.</li> 
+       </ul> 
+       <h1>Jaringan Lobby Manager</h1> 
+       <p>Jaringan Lobby Manager adalah jenis khusus NetworkManager yang menyediakan lobi multiplayer yang mudah digunakan sebelum memasuki adegan bermain utama dari permainan.</p> 
+       <p>Jaringan Lobby Manager memiliki banyak fitur built-in yang umum untuk permainan multiplayer. Misalnya, mendukung pengaturan batas pemain maksimum, secara otomatis memulai permainan ketika semua pemain siap, dan pilihan untuk mencegah pemain bergabung dengan permainan in-progress. Jaringan Lobby Manager juga mendukung “Couch Multiplayer” di mana beberapa pemain menggunakan klien yang sama untuk bermain bersama.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/NetworkLobbyManager.png" alt="The Network Lobby Manager Component"> 
+        <figcaption>
+          Komponen Manajer Lobi Jaringan 
+        </figcaption> 
+       </figure> 
+       <p>|<strong><em>Property:</em></strong> |<strong><em>Function:</em></strong> | |:—| |<strong>Show Lobby GUI</strong>|Enable this to show the developer GUI controls for the lobby. Ini hanya dimaksudkan untuk digunakan untuk memfasilitasi kemudahan penggunaan pengembang. Anda harus membuat <span class="no tooltip">UI</span> Anda sendiri untuk digunakan dalam permainan Anda selesai.| |<strong>Max Players</strong>|Jumlah maksimum pemain yang diperbolehkan di lobi.|<strong>Max Players Per Connection</strong>|Jumlah maksimum pemain yang diperbolehkan ditambahkan untuk setiap koneksi klien.|<strong>Min Players</strong>| Jumlah minimum pemain yang diperlukan oleh lobi.| |<strong>Lobby Player Prefab</strong>|The prefab untuk membuat pemain ketika mereka memasuki lobi.|<strong>Game Player Prefab</strong>|The prefab untuk membuat pemain ketika pertandingan dimulai.| |<strong>Lobby Scene</strong>|The adegan untuk digunakan untuk lobi. |<strong>Play Scene</strong>|The adegan untuk digunakan untuk bermain game utama. | | | Contoh WebGL dari permainan Anda tidak dapat bertindak sebagai host (dalam mode yang dihosting atau server). Oleh karena itu, untuk instance WebGL dari permainan multiplayer Anda untuk dapat menemukan satu sama lain dan bermain bersama-sama, Anda harus menghosting instance server-only dari permainan Anda berjalan dalam mode LAN, dengan alamat IP yang dapat dijangkau publik, dan harus memiliki opsi ini diaktifkan. Kotak centang ini dipulihkan secara default.|<strong>Network Info</strong> Untuk klien, ini adalah alamat server yang terhubung ke. Untuk server, ini adalah alamat lokal. Ini diatur untuk 'localhost' secara default.|<span class="tooltip"><strong>inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>|Port jaringan saat ini digunakan. Untuk klien, ini adalah port server yang terhubung ke. Untuk server, ini adalah port mendengarkan. Ini diatur ke 7777 secara default.| |<strong>Use Web Sockets</strong>|Terima kasih untuk memberi tahu server apakah mengikat alamat IP tertentu. Jika kotak centang ini tidak menggelitik, maka tidak ada alamat IP tertentu yang terikat (IP_ANY). Kotak centang ini diputuskan secara default. Gunakan ini jika server Anda memiliki beberapa alamat jaringan (misalnya, LAN internal, internet eksternal, VPN) dan Anda ingin spesifik alamat IP untuk melayani permainan Anda.| |<span class="tooltip"><strong>WebGL</strong><span class="tooltiptext">Login API yang membuat grafis 2D dan 3D di browser web. Opsi build Unity WebGL memungkinkan Unity untuk mempublikasikan konten sebagai program JavaScript yang menggunakan teknologi HTML5 dan WebGL rendering API untuk menjalankan konten Unity di browser web. <a class="tooltipMoreInfoLink" href="webgl-gettingstarted.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#WebGL">Glossary</a></span></span></span>|Lemen ini hanya terlihat ketika Server Bind Ke IP kotak centang. Gunakan ini untuk memasukkan alamat IP khusus yang server harus mengikat.| |<strong>Network Address</strong>|Ketika ini diaktifkan, pemeriksaan Unity bahwa klien dan server menggunakan matching <strong>Network Port</strong>. Hal ini berguna untuk memastikan versi yang sudah usang dari klien Anda tidak terhubung ke versi terbaru (diperbarui) dari server Anda. Kotak centang ini dicentang secara default. Hal ini dilakukan dengan melakukan (CRC check)[https://en.wikipedia.org/wiki/Cyclic_redundancy_check] antara server dan klien yang memastikan skrip NetworkBehaviour cocok. Ini mungkin tidak tepat dalam beberapa kasus, seperti ketika Anda sengaja menggunakan proyek Unity yang berbeda untuk klien dan server. Dalam kebanyakan kasus lain, Anda harus meninggalkannya diaktifkan.|<strong>Server Bind To IP</strong>|Waktu maksimum dalam hitungan detik untuk menunda pesan buffered. Default 0,01 detik berarti paket tertunda paling dari 10 mili detik. Menyiapkan ini ke nol menonaktifkan penyangga koneksi HLAPI. Ini diatur ke 0,01 secara default.|<strong>Server Bind Address</strong>|Jumlah paket maksimum yang dapat menyangga untuk setiap saluran. Ini sesuai dengan pilihan saluran. Ini diatur ke 16 secara default.|<strong>Script CRC Check</strong>|Ini memungkinkan instance <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> untuk paket fragmen yang lebih besar dari <strong>Max Delay</strong>, hingga maksimal 64K. Ini dapat menyebabkan penundaan dalam mengirim paket besar. Kotak centang ini dicentang secara default. | |<strong>Max Buffered Packets</strong> Secara default poin ini ke Layanan Multiplayer Unity global pada mm.unet.unity3d.com, dan biasanya Anda tidak perlu mengubah ini. Unity secara otomatis kelompok pemain permainan Anda ke server regional di seluruh dunia, yang menjamin waktu respons multiplayer cepat antara pemain di wilayah yang sama. Ini berarti, misalnya, pemain dari Eropa, AS, dan Asia umumnya berakhir bermain dengan pemain lain dari wilayah global mereka yang sama. Anda dapat menimpa nilai ini untuk kontrol eksplisit yang server regional permainan Anda terhubung ke. Anda mungkin ingin melakukan ini melalui scripting jika Anda ingin memberikan pemain pilihan bergabung dengan server di luar wilayah global mereka. Misalnya, jika “Player A” (dalam AS) ingin terhubung ke pertandingan yang dibuat melalui pencocokan oleh “Player B” (dalam Eropa), mereka harus dapat mengatur wilayah global mereka yang diinginkan dalam permainan Anda. Oleh karena itu Anda perlu menulis fitur <strong>Packet Fragmentation</strong> yang memungkinkan mereka untuk memilih ini. Lihat dokumentasi referensi API pada <code>NetworkConnection</code> untuk informasi lebih lanjut, dan untuk server regional URIs.|<code>maxPacketSize</code>|Port host untuk server Matchmaker. Secara default poin ini ke port 443, dan biasanya Anda tidak perlu mengubah ini.| |<strong>MatchMaker Host URI</strong> Ini ditetapkan untuk "default" secara default.| |<span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span> Ini diatur ke 4 secara default.|<a href="../ScriptReference/Networking.Match.NetworkMatch-baseUri.html">WordPress.org</a>|Anda dapat memperluas bagian ini dari inspektur untuk mengakses pengaturan terkait spawn, tercantum di bawah ini|<strong>MatchMaker Port</strong>|Define prefab default Unity harus digunakan untuk membuat pemain <strong>Match Name</strong> pada server. Unity menciptakan GameObjects Pemain di handler default untuk di server. Menerapkan (OnServer AddPlayer) [https://docs.unity3d.com/ScriptReference/Networking.NetworkManager.OnServerAddPlayer.html] untuk menimpa perilaku ini.| |<strong>Maximum Match Size</strong>|Tick kotak centang ini jika Anda ingin Unity untuk secara otomatis membuat pemain GameObjects terhubung, dan ketika perubahan adegan. Kotak centang ini dicentang secara default. Perhatikan bahwa jika Anda menggunakan MigrasiManager dan Anda tidak mengaktifkan Auto Create Player, Anda perlu memanggil <strong>SpawnInfo</strong> ketika rekoneksi klien Anda.|<strong>Player Prefab</strong>|Define bagaimana Unity harus memutuskan di mana untuk memijat pemain baru GameObjects. Ini diatur ke Acak secara default.| | Acak|Pilih Acak untuk memijat pemain pada awal yang dipilih secara acak.| | Putaran Robin|Pilih Round Robin ke siklus melalui awal Posisi dalam daftar set.| |<span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span>|Gunakan daftar ini untuk menambahkan prefab yang ingin Anda <strong>Auto Create Player</strong> untuk mengetahui, sehingga dapat memijatnya. Anda juga dapat menambahkan dan menghapusnya melalui scripting.| |<a href="../ScriptReference/Networking.ClientScene.SendReconnectMessage.html">ClientScene.SendReconnectMessage</a>|Tick kotak centang ini untuk mengungkapkan opsi konfigurasi canggih di jendela Inspektur Manajer Jaringan.| | Max Connections|Mereka jumlah maksimum koneksi jaringan bersamaan untuk mendukung. Ini diatur ke 4 secara default.| | Saluran Qos| Daftar yang berisi saluran komunikasi yang berbeda dari Manajer Jaringan saat ini, dan pengaturan Kualitas Layanan (QoS) untuk setiap saluran. Gunakan daftar ini untuk menambahkan atau menghapus saluran, dan menyesuaikan pengaturan QoS mereka. Anda juga dapat mengkonfigurasi saluran melalui scripting. Untuk deskripsi setiap opsi QoS, lihat <strong>Player Spawn Method</strong>.| | Timeout|| | Min Update Timeout| Mengatur waktu minimum (dalam mili detik) benang jaringan menunggu antara mengirim pesan jaringan. Benang jaringan tidak mengirim pesan jaringan multiplayer segera. Sebaliknya, periksa setiap koneksi secara berkala pada tingkat tetap untuk melihat apakah memiliki sesuatu untuk mengirim. Ini diatur ke 10ms secara default. Lihat dokumentasi referensi API pada <strong>Registered Spawnable Prefabs</strong> untuk informasi lebih lanjut.| Connect Timeout|Define jumlah waktu (dalam mili detik) Unity harus menunggu sambil mencoba terhubung sebelum mencoba koneksi lagi. Ini diatur ke 2000ms secara default. Lihat dokumentasi referensi API pada <span class="tooltip"><strong>Network Manager</strong><span class="tooltiptext">Komponen Jaringan yang mengelola state jaringan proyek. <a class="tooltipMoreInfoLink" href="UNetManager.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#NetworkManager">Glossary</a></span></span></span> untuk informasi lebih lanjut.| | Disconnect Timeout| Jumlah waktu (dalam mili detik) sebelum Unity menganggap koneksi terputus. Ini diatur ke 2000ms secara default. Lihat dokumentasi referensi API pada <strong>Advanced Configuration</strong> untuk informasi lebih lanjut.| | Ping Timeout|Keduanya waktu (dalam mili detik) antara pengiriman ping (juga dikenal sebagai paket “keep-alive”). Durasi ping timeout harus sekitar satu-third ke satu-kuader durasi Timeout Disconnect, sehingga Unity tidak menganggap bahwa klien terputus sampai server telah gagal menerima setidaknya tiga ping dari klien. Ini diatur ke 500ms secara default. Lihat dokumentasi referensi API pada <a href="../ScriptReference/Networking.QosType.html">QosType</a> untuk informasi lebih lanjut.| Sitemap Pengaturan ini berkaitan dengan reaktor. Reaktor adalah bagian dari sistem multiplayer yang menerima paket jaringan dari sistem operasi yang mendasari, dan melewatinya ke dalam sistem multiplayer untuk pemrosesan.| | Thread Awake Timeout| Durasi waktu dalam mili detik, digunakan oleh reaktor. Bagaimana Reactor menggunakan nilai ini tergantung pada Model Reactor mana yang Anda pilih (lihat di bawah). Ini diatur ke 1ms secara default.| Model Reactor|Pilih jenis reaktor yang digunakan. Model reaktor mendefinisikan bagaimana paket masuk Unity membaca. Untuk sebagian besar permainan dan aplikasi, reaktor Pilih default sesuai. Jika Anda ingin memperdagangkan penundaan kecil dalam pemrosesan pesan jaringan untuk penggunaan CPU yang lebih rendah dan masa pakai baterai yang ditingkatkan, gunakan reaktor Tingkat Fix.| | Pilih Reactor| Model ini menggunakan API <a href="../ScriptReference/Networking.ConnectionConfig.MinUpdateTimeout.html">MinUpdateTimeout</a> yang berarti bahwa benang jaringan “awakens” (yang aktif) segera setelah paket tersedia. Menggunakan metode ini berarti permainan Anda mendapatkan data secepat mungkin. Ini adalah pengaturan Model Reactor default.| | Memperbaiki Reaktor Tingkat| Model ini memungkinkan benang jaringan tidur secara manual untuk jumlah waktu tertentu (didefinisikan oleh nilai dalam Thread Awake Timeout) sebelum memeriksa apakah ada paket masuk yang menunggu diproses.| | Reaktor Max Recv Pesan| Mengatur jumlah pesan maksimum yang disimpan dalam antrian yang diterima. Ini diatur ke 1024 pesan secara default.| | Reaktor Max Sent Pesan| Mengatur jumlah pesan maksimum yang disimpan dalam antrian pengiriman. Ini diatur ke 1024 pesan secara default.| |<a href="../ScriptReference/Networking.ConnectionConfig.ConnectTimeout.html">ConnectTimeout</a>|Tick kotak centang ini untuk mengaktifkan penggunaan simulator jaringan. simulator jaringan memperkenalkan latensi simulasi dan kehilangan paket berdasarkan pengaturan berikut: | Simulasi Rata-rata Latency| Jumlah penundaan dalam mili detik untuk mensimulasikan.| | Simulasi Packet Loss| Jumlah kehilangan paket untuk mensimulasikan persen. Sitemap<a href="../ScriptReference/Networking.ConnectionConfig.DisconnectTimeout.html">DisconnectTimeout</a> for more information.| |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ping Timeout|The amount of time (in milliseconds) between sending pings (also known as “keep-alive” packets). The ping timeout duration should be approximately one-third to one-quarter of the Disconnect Timeout duration, so that Unity doesn’t assume that clients are disconnected until the server has failed to receive at least three pings from the client. This is set to 500ms by default. See API reference documentation on <a href="../ScriptReference/Networking.ConnectionConfig.PingTimeout.html">ConnectionConfig.PingTimeout</a> for more information.| |&nbsp;&nbsp;&nbsp;&nbsp;Global Config|These settings relate to the Reactor. The Reactor is the part of the multiplayer system which receives network packets from the underlying operating system, and passes them into the multiplayer system for processing.| |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thread Awake Timeout|The timeout duration in milliseconds, used by the Reactor. How the Reactor uses this value depends on which Reactor Model you select (see below). This is set to 1ms by default.| |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reactor Model|Choose which type of reactor to use. The reactor model defines how Unity reads incoming packets. For most games and applications, the default Select reactor is appropriate. If you want to trade a small delay in the processing of network messages for lower CPU usage and improved battery life, use the Fix Rate reactor.| |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select Reactor|This model uses the <code>select()</code> API which means that the network thread “awakens” (becomes active) as soon as a packet is available. Using this method means your game gets the data as fast as possible. This is the default Reactor Model setting.| |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fix Rate Reactor|This model lets the network thread sleep manually for a given amount of time (defined by the value in Thread Awake Timeout) before checking whether there are incoming packets waiting to be processed.| |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reactor Max Recv Messages|Set the maximum number of messages stored in the receive queue. This is set to 1024 messages by default.| |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reactor Max Sent Messages|Set the maximum number of messages stored in the send queue. This is set to 1024 messages by default.| |<strong>Use Network Simulator</strong>|Tick this checkbox to enable the usage of the network simulator. The network simulator introduces simulated latency and packet loss based on the following settings:| |&nbsp;&nbsp;&nbsp;&nbsp;Simulated Average Latency|The amount of delay in milliseconds to simulate.| |&nbsp;&nbsp;&nbsp;&nbsp;Simulated Packet Loss|The amount of packet loss to simulate in percent.|</p> 
+       <!-- area:cloud --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="class-NetworkIdentity.html"></a></span> 
+         <div class="tip">
+           Identitas Jaringan 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="class-NetworkLobbyPlayer.html"></a></span> 
+         <div class="tip">
+           Lobi Jaringan 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

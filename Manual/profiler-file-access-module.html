@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Modul Profiler Akses File</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="analysis.html">Analysis</a></li> 
+         <li><a href="Profiler.html">Profiler</a></li> 
+         <li><a href="ProfilerWindow.html">WordPress.org</a></li> 
+         <li>File Access Profiler module</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="ProfilerCPU.html"></a></span> 
+          <div class="tip">
+            Login Database 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="ProfilerGI.html"></a></span> 
+          <div class="tip">
+            Modul Profiler Penerangan Global 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>File Access Profiler module</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>File Access <span class="tooltip"><strong>Profiler</strong><span class="tooltiptext">Jendela yang membantu Anda untuk mengoptimalkan permainan Anda. Ini menunjukkan berapa banyak waktu yang dihabiskan di berbagai bidang permainan Anda. Sebagai contoh, dapat melaporkan persentase waktu yang dihabiskan <strong>rendering</strong>, aimating, atau dalam logika permainan Anda. <a class="tooltipMoreInfoLink" href="Profiler.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profiler">Glossary</a></span></span></span> modul menampilkan informasi tentang aktivitas file dalam aplikasi Anda, seperti jumlah membaca atau menulis operasi Unity melakukan atau jumlah pegangan file terbuka, baik untuk bingkai tertentu atau di semua bingkai dalam tangkapan. Anda dapat menggunakan informasi ini untuk membantu menentukan bagaimana efisien aplikasi Anda melakukan operasi file. Modul ini dapat menangkap informasi tentang operasi file pada setiap file dalam struktur folder aplikasi Anda yang dibangun, atau dalam folder proyek Unity Anda jika Anda menjalankan Profiler di Editor Unity. Modul ini tidak diaktifkan secara default. Untuk mengaktifkan modul File Access Profileer, buka jendela Profiler, pilih menu dropdown <strong>Profiler Modules</strong>, dan toggle kotak cemen.<strong>File Access</strong> checkbox.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/profiler-file-access.png" alt="The File Access Profiler module"> 
+        <figcaption>
+          The File Access Profiler module 
+        </figcaption> 
+       </figure> 
+       <h2>Kategori grafik</h2> 
+       <p>File Access Profiler modul grafik dibagi menjadi lima kategori. Untuk mengubah urutan kategori dalam grafik, seret dan menjatuhkannya di legenda grafik. Anda juga dapat mengklik legenda berwarna kategori untuk memotong tampilannya di atau mati. Untuk informasi lebih lanjut tentang cara menggunakan jendela Profiler, lihat <a href="ProfilerWindow.html">Memulai dengan jendela Profiler</a>. Modul ini tidak mengumpulkan informasi tentang operasi file yang tidak berhasil. Jika upaya operasi file tidak berhasil, Unity menampilkan kesalahan.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Chart</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Files Opened</strong></td> 
+          <td style="text-align:left;">Jumlah total file yang berhasil dibuka dalam sistem file lokal bingkai ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Files Closed</strong></td> 
+          <td style="text-align:left;">Jumlah total file yang berhasil ditutup dalam sistem file lokal bingkai ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>File Seeks</strong></td> 
+          <td style="text-align:left;">Jumlah operasi pencarian file yang dilakukan dalam sistem file lokal bingkai ini. Sebuah file mencari operasi melibatkan pencarian melalui konten file.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Reads in Flight</strong></td> 
+          <td style="text-align:left;">Jumlah total operasi membaca yang sedang berlangsung selama bingkai ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>File Handles Open</strong></td> 
+          <td style="text-align:left;">Jumlah total pegangan file yang diadakan terbuka setiap saat selama bingkai ini. Ini termasuk file yang buka Unity dan penutupan dalam bingkai yang sama.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Detail modul pane</h2> 
+       <p>Ketika Anda memilih bingkai dalam modul File Access Profileer, detail modul pane menampilkan informasi rinci tentang file yang diakses Unity selama tangkapan. File Access Profiler modul memiliki dua pandangan:</p> 
+       <ul> 
+        <li><a href="#FileSummaryView">Tampilan Ringkasan File</a> menyediakan ringkasan semua aktivitas file untuk setiap akses Unity file selama pengaturan bingkai yang dipilih.</li> 
+        <li><a href="#AccessesView">Tampilan akses</a> menampilkan setiap operasi akses file dalam set data dalam urutan yang terjadi.</li> 
+       </ul> 
+       <p>Gunakan menu dropdown di bagian atas dari detail pane toggle yang terlihat aktif. Secara default, tampilan <strong>File Summary</strong> aktif.</p> 
+       <p>Kedua pandangan dapat menampilkan informasi untuk bingkai yang dipilih tunggal, atau untuk semua bingkai dalam tangkapan. Gunakan menu dropdown kedua di bagian atas dari detail pane untuk memilih antara satu bingkai atau semua bingkai. Modul ini tidak mengisi detail pane secara otomatis. Sebaliknya, Anda perlu memilih tombol <strong>Analyze Markers</strong> di bagian atas detail pane untuk mengisi tampilan dengan data.</p> 
+       <p><a name="FileSummaryView"></a></p> 
+       <h3>Tampilan Ringkasan File</h3> 
+       <p>Tampilan <strong>File Summary</strong> menampilkan ringkasan semua operasi akses file yang terjadi pada setiap file selama tangkapan. Satu entri di tabel mewakili ringkasan penuh untuk satu file.</p> 
+       <p>Tabel di bawah ini menjelaskan semua kolom yang memungkinkan tabel tampilan <strong>File Summary</strong> dapat ditampilkan. Tidak semua kolom diaktifkan secara default; untuk mengaktifkan atau menonaktifkan kolom, klik kanan di mana saja di baris yang berisi header kolom untuk membuka menu. Gunakan menu ini untuk beralih kolom apa pun di atau mati.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Detail</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+          <th style="text-align:left;"><strong>Enabled by default</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Filename</strong></td> 
+          <td style="text-align:left;">Nama file yang diakses.</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Total Bytes Read</strong></td> 
+          <td style="text-align:left;">Jumlah total byte informasi Unity dibaca dari file ini selama bingkai yang dipilih.</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Read Access Time (ms)</strong></td> 
+          <td style="text-align:left;">Total waktu Unity menghabiskan membaca dari file ini selama bingkai yang dipilih.</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Access Count</strong></td> 
+          <td style="text-align:left;">Jumlah total akses ke file ini selama bingkai yang dipilih.</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>First Frame</strong></td> 
+          <td style="text-align:left;">Bingkai pertama yang diakses oleh Unity file ini.</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Number of Frames</strong></td> 
+          <td style="text-align:left;">Jumlah total bingkai yang diakses oleh Unity file ini.</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>ID</strong></td> 
+          <td style="text-align:left;">Indeks yang mewakili urutan pelaksanaan penanda akses file.</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Read Bandwidth (MBps)</strong></td> 
+          <td style="text-align:left;">Bandwidth rata-rata operasi membaca pada file ini di atas bingkai yang dipilih, megabyte per detik.</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Open Count</strong></td> 
+          <td style="text-align:left;">Jumlah total operasi pembukaan pada file ini selama bingkai yang dipilih.</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Close Count</strong></td> 
+          <td style="text-align:left;">Jumlah operasi penutupan pada file ini selama bingkai yang dipilih.</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Read Count</strong></td> 
+          <td style="text-align:left;">Jumlah total operasi membaca pada file ini selama bingkai yang dipilih.</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Write Count</strong></td> 
+          <td style="text-align:left;">Jumlah total operasi menulis pada file ini selama bingkai yang dipilih.</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Seek Count</strong></td> 
+          <td style="text-align:left;">Jumlah total file mencari operasi pada file ini selama bingkai yang dipilih.</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Total Bytes Written</strong></td> 
+          <td style="text-align:left;">Jumlah total byte Unity menulis ke file ini selama bingkai yang dipilih.</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Write Bandwidth (MBps)</strong></td> 
+          <td style="text-align:left;">Bandwidth rata-rata operasi menulis pada file ini di atas bingkai yang dipilih, megabyte per detik.</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Open Access Time (ms)</strong></td> 
+          <td style="text-align:left;">Total waktu Unity menghabiskan melakukan operasi pembukaan pada file ini selama bingkai yang dipilih, dalam mili detik.</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Close Access Time (ms)</strong></td> 
+          <td style="text-align:left;">Total waktu Unity menghabiskan melakukan operasi dekat pada file ini selama bingkai yang dipilih, dalam mili detik.</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Write Access Time (ms)</strong></td> 
+          <td style="text-align:left;">Total waktu Unity menghabiskan melakukan operasi menulis ke file ini selama bingkai yang dipilih, dalam mili detik.</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Total Access Time (ms)</strong></td> 
+          <td style="text-align:left;">Total waktu Unity menghabiskan akses file ini selama bingkai yang dipilih, dalam mili detik.</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="AccessesView"></a></p> 
+       <h3>Tampilan akses</h3> 
+       <p>Tampilan <strong>Accesses</strong> memberikan informasi rinci tentang setiap operasi akses file dalam tangkapan. Setiap entri di tabel di pane rincian Profiler mewakili operasi akses file tunggal ke satu file. Tabel di bawah ini menjelaskan semua kolom yang mungkin tampilan Accesses.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Detail</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+          <th style="text-align:left;"><strong>Enabled by default</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Index</strong></td> 
+          <td style="text-align:left;">Nomor ID yang mewakili urutan dalam Unity melakukan operasi akses.</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Filename</strong></td> 
+          <td style="text-align:left;">Nama file yang diakses selama operasi ini. Untuk melihat path file secara penuh, hover kursor Anda di atas entri nama file.</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Type</strong></td> 
+          <td style="text-align:left;">Jenis operasi akses dilakukan. Ini bisa berupa <strong>Open</strong>, <strong>Close</strong>, <strong>Seek</strong>, <strong>Read</strong>, atau <strong>Write</strong>.</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Access Size</strong></td> 
+          <td style="text-align:left;">Jumlah byte ditransfer selama akses, di mana akses dibaca atau menulis. Dimana akses adalah pencarian file, ukurannya adalah tujuan yang diimbangi.</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Offset</strong></td> 
+          <td style="text-align:left;">The (starting) mengimbangi akses file.</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Duration (ms)</strong></td> 
+          <td style="text-align:left;">Waktu yang diambil untuk melakukan akses ini, dalam mili detik.</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Average Bandwidth (MBps)</strong></td> 
+          <td style="text-align:left;">Bandwidth rata-rata untuk akses ini, di mana jenis akses dibaca.</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>First Frame Index</strong></td> 
+          <td style="text-align:left;">ID dari bingkai akses ini dimulai.</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Frames</strong><span class="tooltiptext">Frekuensi di mana bingkai berturut-turut ditampilkan dalam permainan berjalan. <a class="tooltipMoreInfoLink" href="RenderingStatistics.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#frame">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Jumlah total bingkai akses ini terjadi.</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Thread</strong></td> 
+          <td style="text-align:left;">Benang akses terjadi.</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Timestamp (ms)</strong></td> 
+          <td style="text-align:left;">Waktu akses ini dimulai, relatif terhadap awal penangkapan profiler.</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Anda dapat klik kanan pada setiap penanda akses file untuk membuka sub-menu dengan opsi tambahan untuk menjelajahi data. Pilihan yang tersedia adalah sebagai berikut:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Show marker in timeline view</strong></td> 
+          <td style="text-align:left;">Buka penanda ini dalam modul <a href="ProfilerCPU.html">Login Profiler</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Go to the first frame of this marker</strong></td> 
+          <td style="text-align:left;">Pilih bingkai di mana penanda pertama muncul di grafik. Pilihan ini dinonaktifkan jika penanda hanya muncul pada satu bingkai.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Go to the last frame of this marker</strong></td> 
+          <td style="text-align:left;">Pilih bingkai di mana penanda terakhir ini muncul di grafik. Pilihan ini dinonaktifkan jika penanda hanya muncul pada satu bingkai.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Filter the view to this file path</strong></td> 
+          <td style="text-align:left;">Populasi bilah pencarian dengan isi kolom <strong>Filename</strong> untuk menyaring hasilnya.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="ProfilerCPU.html"></a></span> 
+         <div class="tip">
+           Login Database 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="ProfilerGI.html"></a></span> 
+         <div class="tip">
+           Modul Profiler Penerangan Global 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

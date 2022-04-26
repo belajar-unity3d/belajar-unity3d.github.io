@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Peta normal (Bump mapping)</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="Shaders.html">Shaders</a></li> 
+         <li><a href="shader-built-in.html">Reflektor built-in</a></li> 
+         <li><a href="shader-StandardShader.html">Standar Shader</a></li> 
+         <li><a href="StandardShaderMaterialParameters.html">Standard Shader Bahan Inspektur</a></li> 
+         <li>Peta normal (Bump pemetaan)</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="StandardShaderMaterialParameterSmoothness.html"></a></span> 
+          <div class="tip">
+            Smoothness 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="StandardShaderMaterialParameterHeightMap.html"></a></span> 
+          <div class="tip">
+            Heightmap 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Peta normal (Bump pemetaan)</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/StandardShaderParameterNormalMap.png" alt=""> 
+       </figure> 
+       <p>Peta normal adalah jenis <strong><strong>Bump Map</strong></strong>. Mereka adalah jenis tekstur khusus yang memungkinkan Anda untuk menambahkan detail permukaan seperti benjolan, alur, dan goresan ke model yang menangkap cahaya seolah-olah mereka diwakili oleh geometri nyata.</p> 
+       <p>Misalnya, Anda mungkin ingin menunjukkan permukaan yang memiliki alur dan sekrup atau keling di permukaan, seperti lambung pesawat. Satu cara untuk melakukan ini akan menjadi model rincian ini sebagai geometri, seperti yang ditunjukkan di bawah ini.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/StandardShaderNormalMapBadGeometry.jpg" alt="A sheet of aircraft metal with details modeled as real geometry."> 
+        <figcaption>
+          Lembar logam pesawat dengan detail yang dimodelkan sebagai geometri nyata. 
+        </figcaption> 
+       </figure> 
+       <p>Tergantung pada situasi tidak biasanya ide yang baik untuk memiliki detail kecil seperti geometri "real". Di sebelah kanan Anda dapat melihat poligon yang diperlukan untuk membuat detail dari satu sekrup kepala. Lebih dari model besar dengan banyak detail permukaan halus ini akan membutuhkan jumlah poligon yang sangat tinggi untuk ditarik. Untuk menghindari ini, kita harus menggunakan <span class="tooltip"><strong>normal map</strong><span class="tooltiptext">Jenis tekstur Peta Bump yang memungkinkan Anda untuk menambahkan detail permukaan seperti benjolan, alur, dan goresan ke model yang menangkap cahaya seolah-olah mereka diwakili oleh geometri nyata.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Normalmap">Glossary</a></span></span></span> untuk mewakili detail permukaan halus, dan permukaan poligonal resolusi rendah untuk bentuk model yang lebih besar.</p> 
+       <p>Jika kita tidak mewakili detail ini dengan peta benjolan, geometri permukaan bisa menjadi lebih sederhana, dan detailnya diwakili sebagai tekstur yang memodulasi bagaimana cahaya memantulkan permukaan. Ini adalah perangkat keras grafis modern dapat melakukan sangat cepat. Permukaan logam Anda sekarang bisa menjadi pesawat datar poli rendah, dan sekrup, keling, alur dan goresan akan menangkap cahaya dan tampaknya memiliki kedalaman karena tekstur.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/StandardShaderNormalMapAircraftSurface.jpg" alt="The screws, grooves and scratches are defined in a normalmap, which modifies how light reflects off the surface of this low-poly plane, giving the impression of 3D detail. As well as the rivets and screws, a texture allows us to include far more detail like subtle bumps and scratches."> 
+        <figcaption>
+          Sekrup, alur dan goresan didefinisikan dalam peta normal, yang mengubah bagaimana cahaya memantulkan permukaan pesawat rendah poli ini, memberikan kesan detail 3D. Serta keling dan sekrup, tekstur memungkinkan kita untuk memasukkan jauh lebih detail seperti benjolan halus dan goresan. 
+        </figcaption> 
+       </figure> 
+       <p>Dalam perkembangan permainan modern pipa seni, seniman akan menggunakan aplikasi pemodelan 3D mereka untuk menghasilkan peta normal berdasarkan model sumber resolusi yang sangat tinggi. Peta normal kemudian dipetakan ke versi yang lebih rendah dari model, sehingga detail resolusi tinggi asli diberikan menggunakan peta normal.</p> 
+       <h1>Cara membuat dan menggunakan Peta Bump</h1> 
+       <p>Bump pemetaan adalah teknik grafis yang relatif lama, tetapi masih salah satu metode inti yang diperlukan untuk membuat grafis real-time yang realistis. Login Peta juga sering disebut sebagai <strong>Normal Maps</strong> atau <strong>Height Maps</strong>, namun istilah ini memiliki makna yang sedikit berbeda yang akan dijelaskan di bawah ini.</p> 
+       <h2>Apa Permukaan Normal?</h2> 
+       <p>Untuk benar-benar menjelaskan bagaimana pekerjaan pemetaan normal, kami akan menjelaskan apa yang "<strong>normal</strong>" adalah, dan bagaimana digunakan dalam pencahayaan real-time. Mungkin contoh yang paling dasar adalah model di mana setiap permukaan poligon menyala hanya sesuai dengan sudut permukaan relatif terhadap cahaya. Sudut permukaan dapat diwakili sebagai garis menonjol dalam arah tegak lurus dari permukaan, dan arah ini (yang merupakan vektor) relatif terhadap permukaan disebut "<strong>surface normal</strong>", atau hanya, <strong>normal</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BumpMap2Cylinders.png" alt="Two 12-sided cylinders, on the left with flat shading, and on the right with smoothed shading"> 
+        <figcaption>
+          Dua silinder 12 sisi, di sebelah kiri dengan teduh datar, dan di sebelah kanan dengan teduh halus 
+        </figcaption> 
+       </figure> 
+       <p>Dalam gambar di atas, silinder kiri memiliki pencukur datar dasar, dan setiap poligon diwarnai sesuai dengan sudut relatif ke sumber cahaya. Pencahayaan pada setiap poligon konstan di seluruh area poligon karena permukaannya rata. Berikut adalah dua silinder yang sama, dengan bingkai kawat mereka <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a class="tooltipMoreInfoLink" href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mesh">Glossary</a></span></span></span> terlihat:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BumpMap2CylindersWire.png" alt="Two 12-sided cylinders, on the left with flat shading, and on the right with smoothed shading"> 
+        <figcaption>
+          Dua silinder 12 sisi, di sebelah kiri dengan teduh datar, dan di sebelah kanan dengan teduh halus 
+        </figcaption> 
+       </figure> 
+       <p>Model di sebelah kanan memiliki jumlah poligon yang sama sebagai model di sebelah kiri, namun teduh muncul halus - pencahayaan di poligon memberikan penampilan permukaan melengkung. Mengapa ini? Alasannya adalah bahwa <strong>surface normal</strong> pada setiap titik yang digunakan untuk mencerminkan cahaya secara bertahap bervariasi di seluruh lebar poligon, sehingga untuk setiap titik tertentu di permukaan, bouncing cahaya <em>seolah-olah permukaan melengkung</em> dan bukan poligon konstan datar yang benar-benar.</p> 
+       <p>Dilihat sebagai diagram 2D, tiga permukaan poligon di sekitar luar silinder berbentuk datar akan terlihat seperti ini:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BumpMapFlatShadingDiagram.svg" alt="Flat shading on three polygons, viewed as a 2D diagram"> 
+        <figcaption>
+          Pembentukan datar pada tiga poligon, dipandang sebagai diagram 2D 
+        </figcaption> 
+       </figure> 
+       <p>Permukaan normal diwakili oleh panah oranye. Ini adalah nilai yang digunakan untuk menghitung bagaimana cahaya memantulkan permukaan, sehingga Anda dapat melihat bahwa cahaya akan merespon sama sepanjang panjang setiap poligon, karena titik normal permukaan dalam arah yang sama. Ini memberi "mencukur rata", dan merupakan alasan poligon silinder kiri muncul untuk memiliki tepi keras.</p> 
+       <p>Untuk silinder naungan halus namun, permukaan normal bervariasi di poligon datar, seperti yang diwakili di sini:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BumpMapSmoothShadingDiagram.svg" alt="Smooth shading on three polygons, viewed as a 2D diagram"> 
+        <figcaption>
+          Penyembuhan halus pada tiga poligon, dipandang sebagai diagram 2D 
+        </figcaption> 
+       </figure> 
+       <p>Arah normal secara bertahap berubah di permukaan poligon datar, sehingga membentuk di permukaan memberikan kesan kurva halus (seperti yang diwakili oleh garis hijau). Ini tidak mempengaruhi sifat poligonal sebenarnya dari mesh, hanya bagaimana pencahayaan dihitung pada permukaan datar. Permukaan melengkung ini tidak benar-benar hadir, dan melihat wajah pada sudut glancing akan mengungkapkan sifat sebenarnya dari poligon datar, namun dari sudut pandang paling silinder tampaknya memiliki permukaan melengkung halus.</p> 
+       <p>Menggunakan pencukur halus dasar ini, data menentukan arah normal sebenarnya hanya disimpan <strong>per vertex</strong>, sehingga nilai perubahan di permukaan diinterpolasi dari satu simpul ke depan. Dalam diagram di atas, panah merah menunjukkan arah normal yang tersimpan di setiap simpul, dan panah oranye menunjukkan contoh arah normal yang diinterpolasi di seluruh area poligon.</p> 
+       <h2>Apa pemetaan normal?</h2> 
+       <p>Pemetaan normal mengambil modifikasi permukaan normal satu langkah lebih jauh, dengan menggunakan tekstur untuk menyimpan informasi tentang cara memodifikasi permukaan normal di model. Peta normal adalah tekstur gambar yang dipetakan ke permukaan model, mirip dengan tekstur warna biasa, namun setiap <span class="tooltip"><strong>pixel</strong><span class="tooltiptext">Unit terkecil dalam gambar komputer. Ukuran piksel tergantung pada resolusi layar Anda. Pencahayaan pixel dihitung pada setiap piksel layar. <a class="tooltipMoreInfoLink" href="ShadowPerformance.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#pixel">Glossary</a></span></span></span> dalam tekstur peta normal (yang disebut <strong>texel</strong>) mewakili penyimpangan dalam arah normal permukaan dari permukaan "true" normal dari poligon datar (atau diserbuki halus).</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BumpMapBumpShadingDiagram.svg" alt="Normal mapping across three polygons, viewed as a 2D diagram"> 
+        <figcaption>
+          Pemetaan normal di tiga poligon, dipandang sebagai diagram 2D 
+        </figcaption> 
+       </figure> 
+       <p>Dalam diagram ini, yang lagi merupakan representasi 2D dari tiga poligon di permukaan model 3D, setiap panah oranye sesuai dengan pixel dalam tekstur normalmap. Di bawah ini, adalah irisan piksel tunggal dari tekstur normalmap. Di pusat, Anda dapat melihat normal telah dimodifikasi, memberikan <em>appearance</em> dari beberapa benjolan di permukaan poligon. benjolan ini hanya akan jelas karena cara pencahayaan muncul di permukaan, karena normal dimodifikasi ini digunakan dalam perhitungan pencahayaan.</p> 
+       <p>Warna-warna yang terlihat dalam file peta normal mentah biasanya memiliki hue biru, dan tidak mengandung cahaya atau gelap yang sebenarnya - ini karena warna-warna itu sendiri tidak dimaksudkan untuk ditampilkan sebagai mereka. Sebagai gantinya, nilai RGB dari setiap texel mewakili nilai X, Y &amp; Z dari vektor arah, dan diterapkan sebagai modifikasi pada normal halus yang diserbuki dasar dari permukaan poligon.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BumpMapTexturePreview.png" alt="An example normal map texture"> 
+        <figcaption>
+          Contoh tekstur peta normal 
+        </figcaption> 
+       </figure> 
+       <p>Ini adalah peta normal sederhana, yang berisi informasi benjolan untuk beberapa luntur dan teks yang dibesarkan. Peta normal ini dapat diimpor ke Unity dan ditempatkan ke slot Peta Normal dari Standard <span class="tooltip"><strong>Shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span>. Ketika dikombinasikan dalam bahan dengan peta warna ( peta Albedo) dan diterapkan pada permukaan mesh silinder di atas, hasilnya terlihat seperti ini:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BumpMapLitExample.jpg" alt="The example normal map applied to the surface of the cylinder mesh used above"> 
+        <figcaption>
+          Contoh peta normal diterapkan pada permukaan mesh silinder yang digunakan di atas 
+        </figcaption> 
+       </figure> 
+       <p>Sekali lagi, ini tidak mempengaruhi sifat poligonal sebenarnya dari mesh, hanya bagaimana pencahayaan dihitung pada permukaan. Ini jelas mengangkat huruf dan bentuk di permukaan tidak benar-benar hadir, dan melihat wajah pada sudut glancing akan mengungkapkan sifat sebenarnya dari permukaan datar, namun dari sebagian besar sudut pandang silinder sekarang muncul untuk memiliki detail timbul dari permukaan.</p> 
+       <h2>Bagaimana cara membuat peta normal?</h2> 
+       <p>Umum, Normal Peta diproduksi oleh seniman 3D atau Tekstur bersama dengan model atau tekstur yang mereka produksi, dan mereka sering mencerminkan tata letak dan isi peta Albedo. Kadang-kadang mereka diproduksi dengan tangan, dan kadang-kadang mereka diberikan dari aplikasi 3D.</p> 
+       <p>Bagaimana cara membuat peta normal dari aplikasi 3D berada di luar ruang lingkup dokumentasi ini, namun konsep dasar adalah bahwa seniman 3D akan menghasilkan dua versi model - model resolusi yang sangat tinggi yang mengandung semua detail sebagai poligon, dan model "game siap". Model res tinggi akan terlalu rinci untuk berjalan secara optimal dalam permainan (untuk banyak segitiga di jala), tetapi digunakan dalam aplikasi pemodelan 3D untuk menghasilkan peta normal. Versi model yang lebih rendah kemudian dapat mengomit tingkat detail geometri yang sangat halus yang sekarang disimpan di peta normal, sehingga dapat diberikan menggunakan pemetaan normal bukan. Kasus penggunaan yang khas untuk ini akan menunjukkan detail lipatan, kancing, gesper dan jahitan pada pakaian karakter.</p> 
+       <p>Ada beberapa paket perangkat lunak yang dapat menganalisis pencahayaan dalam tekstur fotografi biasa, dan mengekstrak peta normal dari itu. Ini bekerja dengan asumsi tekstur asli menyala dari arah yang konstan, dan area yang ringan dan gelap dianalisis dan diasumsikan sesuai dengan permukaan yang miring. Namun, ketika benar-benar menggunakan peta benjolan, Anda perlu memastikan bahwa Anda Tekstur Albedo <em>tidak</em> memiliki pencahayaan dari arah tertentu dalam gambar - idealnya harus mewakili warna permukaan tanpa pencahayaan sama sekali - karena informasi pencahayaan akan dihitung oleh Unity sesuai arah cahaya, sudut permukaan dan informasi peta benjolan.</p> 
+       <p>Berikut adalah dua contoh, salah satu tekstur dinding batu pengulangan sederhana dengan peta normal yang sesuai, dan satu adalah tekstur karakter dilas dengan peta normal yang sesuai:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BumpMapColourMapStoneWallExample.jpg" alt="A stone wall texture and its corresponding normal map texture"> 
+        <figcaption>
+          Tekstur dinding batu dan tekstur peta normal yang sesuai 
+        </figcaption> 
+       </figure> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BumpMapColourMapAstrellaExample.jpg" alt="A character texture atlas, and its corresponding normal map texture atlas"> 
+        <figcaption>
+          Tekstur karakter dilas, dan tekstur peta normal yang sesuai dilas 
+        </figcaption> 
+       </figure> 
+       <h2>Apa perbedaan antara Peta Bump, Peta Normal dan Peta Tinggi?</h2> 
+       <p> <strong>Normal Maps</strong> dan <strong>Height Maps</strong> keduanya <em>types</em> Peta Bump. Mereka berisi data untuk mewakili detail yang jelas pada permukaan jaring poligonal yang lebih sederhana, tetapi mereka setiap menyimpan data dengan cara yang berbeda.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BumpMapHeightMapNormalMapComparison.jpg" alt="On the left, a height map for bump mapping a stone wall. On the right, a normal map for bump mapping a stone wall."> 
+        <figcaption>
+          Di sebelah kiri, peta tinggi untuk menetas dinding batu. Di sebelah kanan, peta normal untuk menetas dinding batu. 
+        </figcaption> 
+       </figure> 
+       <p>Di atas, di sebelah kiri, Anda dapat melihat peta tinggi yang digunakan untuk menumbuhkan dinding batu. Peta tinggi adalah tekstur hitam dan putih sederhana, di mana setiap pixel mewakili jumlah yang titik di permukaan harus muncul. Pemutih warna pixel, semakin tinggi daerah muncul.</p> 
+       <p>Peta normal adalah tekstur RGB, di mana setiap pixel mewakili <em>perbedaan arah</em> permukaan harus muncul untuk menghadapi, relatif terhadap permukaan yang tidak dimodifikasi normal. Tekstur ini cenderung memiliki tinge ungu biru, karena cara vektor disimpan dalam nilai RGB.</p> 
+       <p>Modern real-time 3D perangkat keras grafis bergantung pada Peta Normal, karena mereka mengandung vektor yang diperlukan untuk memodifikasi bagaimana cahaya harus muncul untuk memuncak permukaan. Unity juga dapat menerima Peta Tinggi untuk pemetaan benjolan, tetapi mereka harus dikonversi ke Peta Normal untuk impor untuk menggunakannya.</p> 
+       <h3>Mengapa warna biru?</h3> 
+       <p>Memahami ini tidak penting untuk menggunakan peta normal! Ini ok untuk melewatkan paragraf ini. Namun jika Anda benar-benar ingin tahu: Nilai warna RGB digunakan untuk menyimpan arah X, Y, Z dari vektor, dengan Z menjadi “up” (kontrary ke konvensi biasa Unity menggunakan Y sebagai “up”). Selain itu, nilai-nilai dalam tekstur diperlakukan seperti yang telah diolah, dengan 0,5 ditambahkan. Hal ini memungkinkan vektor dari semua arah untuk disimpan. Oleh karena itu untuk mengubah warna RGB ke arah vektor, Anda harus berkali-kali dengan dua, lalu subtrak Sitemap Sebagai contoh, nilai RGB (0.5, 0.5, 1) atau #80FF dalam hasil hex dalam vektor (0,0,1) yang “up” untuk tujuan normal-menekan - dan tidak mewakili perubahan pada permukaan model. Ini adalah warna yang Anda lihat di daerah datar peta normal "contoh" sebelumnya di halaman ini.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BumpMapFlatColour.png" alt="A normal map using only #8080FF, which translates to a normal vector of 0,0,1 or straight up. This applies no modification to the surface normal of the polygon, and therefore produces no change to the lighting. Any pixels which are different to this colour results in a vectors that point in a different direction - which therefore modify the angle that is used to calculate light bounce at that point."> 
+        <figcaption>
+          Peta normal hanya menggunakan #80FF, yang menerjemahkan ke vektor normal 0,0,1 atau "meningkatkan". Ini tidak berlaku untuk permukaan normal poligon, dan karena itu tidak menghasilkan perubahan pada pencahayaan. Setiap piksel yang berbeda dengan hasil warna ini dalam vektor yang menunjuk ke arah yang berbeda - yang oleh karena itu memodifikasi sudut yang digunakan untuk menghitung bouncing cahaya pada titik itu. 
+        </figcaption> 
+       </figure> 
+       <p>Nilai (0.43, 0.91, 0.80) memberikan vektor (-0.14, 0,82, 0,6), yang cukup modifikasi curam ke permukaan. Warna seperti ini dapat dilihat di daerah cyan terang dari dinding batu peta normal di bagian atas beberapa tepi batu. Hasilnya adalah tepi ini menangkap cahaya pada sudut yang sangat berbeda ke wajah flatter batu.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BumpMapColourMapStoneWallExample.jpg" alt="The bright cyan areas in the normalmap for these stones show a steep modification to the polygons surface normals at the top edge of each stone, causing them to catch the light at the correct angle."> 
+        <figcaption>
+          Area cyan cerah di peta normal untuk batu-batu ini menunjukkan modifikasi curam ke permukaan poligon normal di tepi atas setiap batu, menyebabkan mereka menangkap cahaya pada sudut yang benar. 
+        </figcaption> 
+       </figure> 
+       <p>Peta normal</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BumpMapStoneExampleNoBumps.jpg" alt="A stone wall with no bumpmap effect. The edges and facets of the rock do not catch the directional sun light in the scene."> 
+        <figcaption>
+          Dinding batu tanpa efek bumpmap. Tepi dan facets dari batu tidak menangkap cahaya matahari arah di tempat kejadian. 
+        </figcaption> 
+       </figure> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BumpMapStoneExampleDay.jpg" alt="The same stone wall with bumpmapping applied. The edges of the stones facing the sun reflect the directional sun light very differently to the faces of the stones, and the edges facing away."> 
+        <figcaption>
+          Dinding batu yang sama dengan bumpmapping diterapkan. Tepi batu yang menghadap matahari memantulkan cahaya matahari berarah sangat berbeda dengan wajah batu, dan tepi menghadap. 
+        </figcaption> 
+       </figure> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BumpMapStoneExampleNightTorch.jpg" alt="The same bumpmapped stone wall, in a different lighting scenario. A point light torch illuminates the stones. Each pixel of the stone wall is lit according to how the light hits the angle of the base model (the polygon), adjusted by the vectors in the normal maps. Therefore pixels facing the light are bright, and pixels facing away from the light are darker, or in shadow."> 
+        <figcaption>
+          Dinding batu bergelombang yang sama, dalam skenario pencahayaan yang berbeda. A titik obor cahaya menerangi batu. Setiap pixel dari dinding batu menyala sesuai dengan bagaimana cahaya hits sudut model dasar ( poligon), disesuaikan dengan vektor di peta normal. Oleh karena itu piksel menghadap cahaya cerah, dan piksel menghadap dari cahaya lebih gelap, atau di bayangan. 
+        </figcaption> 
+       </figure> 
+       <h2>Cara mengimpor dan menggunakan Peta dan Peta Tinggi Normal</h2> 
+       <p>Peta normal dapat diimpor dengan menempatkan file tekstur di folder aset Anda, seperti biasa. Namun, Anda perlu memberitahu Unity bahwa tekstur ini adalah peta normal. Anda dapat melakukan ini dengan mengubah pengaturan “Tipe Tekstur” ke “Normal Map” pada pengaturan impor <span class="tooltip"><strong>inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BumpMapImportInspectorWindow.png" alt=""> 
+       </figure> 
+       <p>Untuk mengimpor <span class="tooltip"><strong>heightmap</strong><span class="tooltiptext">Tekstur abu-abu yang menyimpan data tinggi untuk objek. Setiap pixel menyimpan perbedaan tinggi tegak lurus dengan wajah yang pixel mewakili.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Heightmap">Glossary</a></span></span></span> hitam dan putih sebagai peta normal, prosesnya hampir identik, kecuali Anda perlu memeriksa opsi "Create dari Greyscale".</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BumpMapImportInspectorGreyscale.png" alt=""> 
+       </figure> 
+       <p>Dengan "Create Dari Greyscale" yang dipilih, slider Bumpiness akan muncul dalam inspektur. Anda dapat menggunakan ini untuk mengontrol bagaimana mengarahkan sudut di peta normal, ketika dikonversi dari ketinggian di peta tinggi Anda. Nilai benjolan rendah akan berarti bahwa kontras yang bahkan tajam di heightmap akan diterjemahkan ke sudut dan benjolan yang lembut. Nilai tinggi akan menciptakan benjolan yang berlebihan dan respons pencahayaan kontras yang sangat tinggi untuk benjolan.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BumpMapLowAndHighBumpiness.jpg" alt="Low and High Bumpiness settings when importing a height map as a normal map, and the resulting effect on the model."> 
+        <figcaption>
+          Pengaturan Bumpiness rendah dan tinggi ketika mengimpor peta tinggi sebagai peta normal, dan efek yang dihasilkan pada model. 
+        </figcaption> 
+       </figure> 
+       <p>Setelah Anda memiliki peta normal dalam aset Anda, Anda dapat menempatkannya ke slot Peta Normal Bahan Anda dalam inspektur. Standar Shader memiliki slot peta normal, dan banyak warna legacy yang lebih tua juga mendukung peta normal.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BumpMapPutIntoShader.png" alt="Placing a normal map texture into the correct slot in a material using the Standard Shader"> 
+        <figcaption>
+          Menempatkan tekstur peta normal ke dalam slot yang benar dalam bahan menggunakan Shader Standar 
+        </figcaption> 
+       </figure> 
+       <p>Jika Anda mengimpor peta normal atau heightmap, dan tidak menandainya sebagai peta normal (Dengan memilih <strong>Texture Type: Normal Map</strong> seperti yang dijelaskan di atas), Inspektur Material akan memperingatkan Anda tentang ini dan menawarkan untuk memperbaikinya, seperti:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BumpMapPutIntoShaderFixNow.png" alt="The Fix Now warning appears when trying to use a normalmap that has not been marked as such in the inspector."> 
+        <figcaption>
+          Peringatan “Fix Now” muncul ketika mencoba menggunakan peta normal yang belum ditandai seperti inspektur. 
+        </figcaption> 
+       </figure> 
+       <p>Mengklik “Fix Now” memiliki efek yang sama seperti memilih <strong>Texture Type: Normal Map</strong> dalam pengaturan inspektur tekstur. Ini akan bekerja jika tekstur Anda benar-benar peta normal. Namun jika itu adalah peta tinggi skala abu-abu, itu tidak akan secara otomatis mendeteksi ini - sehingga untuk heightmaps Anda harus selalu memilih opsi "Create dari Greyscale" di jendela inspektur tekstur.</p> 
+       <h2>Peta Normal Sekunder</h2> 
+       <p>Anda juga dapat melihat bahwa ada slot Peta Normal kedua lebih jauh di Inspektur Material untuk Shader Standar. Ini memungkinkan Anda untuk menggunakan peta normal tambahan untuk membuat detail tambahan. Anda dapat menambahkan peta normal ke slot ini dengan cara yang sama dengan slot peta normal biasa, tetapi niat di sini adalah bahwa Anda harus menggunakan skala atau frekuensi yang berbeda dari tiling sehingga dua peta normal bersama-sama menghasilkan <span class="tooltip"><strong>level of detail</strong><span class="tooltiptext">Teknik <em>Tingkat Detail</em> (LOD) adalah optimasi yang mengurangi jumlah segitiga yang dimiliki Unity untuk membuat GameObject ketika jaraknya dari kamera meningkat. <a class="tooltipMoreInfoLink" href="LevelOfDetail.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#levelofdetail">Glossary</a></span></span></span> tinggi pada skala yang berbeda. Misalnya, peta normal Anda dapat menentukan rincian panel di dinding atau kendaraan, dengan berkembang untuk tepi panel. Peta normal sekunder dapat memberikan detail benjolan yang sangat halus untuk goresan dan keausan di permukaan yang dapat disegel pada 5 hingga 10 kali skala peta normal dasar. Detail ini bisa jadi halus seperti hanya terlihat ketika diperiksa erat. Untuk memiliki jumlah detail ini pada peta normal dasar akan membutuhkan peta normal dasar untuk sangat besar, namun dengan menggabungkan dua skala yang berbeda, tingkat detail keseluruhan tinggi dapat dicapai dengan dua tekstur peta normal yang relatif kecil.</p> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="StandardShaderMaterialParameterSmoothness.html"></a></span> 
+         <div class="tip">
+           Smoothness 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="StandardShaderMaterialParameterHeightMap.html"></a></span> 
+         <div class="tip">
+           Heightmap 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

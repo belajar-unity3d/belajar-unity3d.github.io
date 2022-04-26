@@ -1,0 +1,943 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Menambahkan perangkat</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="UsingTheEditor.html">Antarmuka unity</a></li> 
+         <li><a href="device-simulator.html">Simulator Perangkat</a></li> 
+         <li>Menambahkan perangkat</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="device-simulator-simulated-classes.html"></a></span> 
+          <div class="tip">
+            Kelas simulasi 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="device-simulator-plugins.html"></a></span> 
+          <div class="tip">
+            Memperpanjang simulator perangkat 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Menambahkan perangkat</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Untuk menambahkan perangkat baru ke Simulator Perangkat, Anda membuat definisi perangkat dan overlay perangkat.</p> 
+       <p>Definisi perangkat adalah file teks dengan ekstensi <code>.device</code> dalam proyek Unity Anda. Ini mengandung JSON yang menggambarkan sifat perangkat.</p> 
+       <p>Overlay perangkat adalah gambar yang mengandung perbatasan layar perangkat, bersama-sama dengan notches, punchout, dan penambahan lain untuk persegi panjang layar. Anda dapat secara opsional menggunakannya dengan definisi perangkat untuk memvisualisasikan bagaimana elemen perangkat menghalangi layar perangkat, dan untuk menentukan ketika sentuh input gagal sebagai hasilnya.</p> 
+       <h2>Membuat definisi perangkat</h2> 
+       <p>Definisi perangkat adalah file JSON yang mewakili perangkat. Ini memiliki sifat yang diperlukan dan beberapa sifat opsional. Jika file definisi perangkat berisi kesalahan, kesalahan muncul di <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span> ketika Anda memilih file.</p> 
+       <h3>Schema</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Required</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>friendlyName</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Nama untuk ditampilkan dalam <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span> untuk perangkat ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>version</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Menunjukkan versi file definisi perangkat. <code>1</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>screens</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Daftar objek yang masing-masing menggambarkan layar untuk mensimulasikan perangkat untuk. Ini harus berisi setidaknya satu layar. Untuk informasi tentang skema setiap objek layar, lihat <a href="#screen">screen</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>systemInfo</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Sebuah objek yang menggambarkan kemampuan perangkat. Nilai dalam peta objek ini menjadi <a href="../ScriptReference/SystemInfo.html">SystemInfo</a>. Untuk informasi tentang skema objek sistemInfo, lihat <a href="#systeminfo">sistem Sitemap</a>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="screen"></a></p> 
+       <h4>screen</h4> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Required</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>width</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Lebar, dalam <span class="tooltip"><strong>pixels</strong><span class="tooltiptext">Unit terkecil dalam gambar komputer. Ukuran piksel tergantung pada resolusi layar Anda. Pencahayaan pixel dihitung pada setiap piksel layar. <a class="tooltipMoreInfoLink" href="ShadowPerformance.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#pixel">Glossary</a></span></span></span>, dari layar.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>height</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Tinggi, dalam piksel, dari layar.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>navigationBarHeight</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Tinggi, dalam pixel, dari bar navigasi Android layar on-screen yang muncul di beberapa perangkat ketika tidak di layar penuh.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>dpi</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Dpi layar.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>orientations</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Daftar objek yang masing-masing menggambarkan orientasi layar dapat mensimulasikan. Jika Anda tidak menetapkan nilai untuk properti ini, layar mendukung semua orientasi. Untuk informasi tentang skema setiap objek orientasi, lihat <a href="#orientation">orientation</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>presentation</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Sebuah objek yang menggambarkan overlay perangkat. Untuk informasi tentang skema objek ini, lihat <a href="#presentation">presentation</a>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="orientation"></a></p> 
+       <h4>orientation</h4> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Properties</strong></th> 
+          <th style="text-align:left;"><strong>Required</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>orientation</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Orientasi layar. Nilai properti ini adalah jumlah yang peta ke <a href="../ScriptReference/ScreenOrientation.html">ScreenOrientation</a> enum.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>safeArea</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Sebuah <a href="../ScriptReference/Rect.html">Rect</a> yang menentukan area yang aman dari layar. Jika Anda tidak menetapkan nilai untuk properti ini, simulator menganggap seluruh layar aman.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>cutouts</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Daftar <a href="../ScriptReference/Rect.html">Rect</a> yang menentukan area layar yang tidak berfungsi untuk menampilkan konten.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="presentation"></a></p> 
+       <h4>presentation</h4> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Required</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>overlayPath</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Jalur relatif dari file definisi perangkat ke gambar untuk digunakan sebagai overlay perangkat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>borderSize</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Jarak, dalam piksel, dari overlay ke mana layar dimulai.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="systeminfo"></a></p> 
+       <h4>systeminfo</h4> 
+       <p>Sifat dalam objek ini menggambarkan kemampuan dan informasi sistem perangkat. Karena mereka menggambarkan informasi sistem, banyak dari mereka peta properti di <a href="../ScriptReference/Device.SystemInfo.html">SystemInfo</a>.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Required</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>deviceModel</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-deviceModel.html">Perangkat.SystemInfo.deviceModel</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>deviceType</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-deviceType.html">Perangkat.SystemInfo.deviceType</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>operatingSystem</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-operatingSystem.html">Perangkat.SystemInfo.operatingSystem</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>operatingSystemFamily</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-operatingSystemFamily.html">Perangkat.SistemInfo.operatingSystemFamily</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>processorCount</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-processorCount.html">SiteInfo.processorCount</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>processorFrequency</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-processorFrequency.html">Perangkat.Info.processorFrequency</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>processorType</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-processorType.html">Perangkat.SistemInfo.processorType</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supportsAccelerometer</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supportsAccelerometer.html">Perangkat.Info.supportsAccelerometer</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supportsAudio</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supportsAudio.html">Perangkat.SystemInfo.supportsAudio</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supportsGyroscope</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supportsGyroscope.html">Perangkat.Info.supportsGyroscope</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supportsLocationService</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supportsLocationServeice.html">Perangkat.SistemInfo.supportsLocationService</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supportsVibration</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supportsVibration.html">Perangkat.SistemInfo.supportsVibration</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>systemMemorySize</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-systemMemorySize.html">SiteInfo.systemMemorySize</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>unsupportedIdentifier</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-unsupportedIdentifier.html">Device.SystemInfo.unsupportedIdentifier</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>graphicsDependentData</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Daftar objek yang masing-masing menjelaskan API grafis yang mendukung perangkat. Untuk informasi tentang skema setiap objek, lihat <a href="#graphicsdependentdata">Login Login Login</a>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="graphicsdependentdata"></a></p> 
+       <h4>Login Login Login</h4> 
+       <p>Sifat dalam objek menggambarkan API grafis yang mendukung perangkat.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Required</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>graphicsDeviceType</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-graphicsDeviceType.html">Perangkat.Info.graphicsDeviceType</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>graphicsMemorySize</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-graphicsMemorySize.html">Perangkat.Info.graphicsMemorySize</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>graphicsDeviceName</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-graphicsDeviceName.html">Perangkat.Info.graphicsDeviceName</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>graphicsDeviceVendor</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-graphicsDeviceVendor.html">Perangkat.Info.graphicsDeviceVendor</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>graphicsDeviceID</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-graphicsDeviceID.html">Perangkat.Info.graphicsDeviceID</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>graphicsDeviceVendorID</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-graphicsDeviceVendorID.html">Perangkat.Info.graphicsDeviceVendorID</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>graphicsUVStartsAtTop</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-graphicsUVStartsAtTop.html">Perangkat.Info.graphicsUVStartsAtTop</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>graphicsDeviceVersion</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-graphicsDeviceVersion.html">Perangkat.Info.graphicsDeviceVersion</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>graphicsShaderLevel</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-graphicsShaderLevel.html">Perangkat.Info.graphicsShaderLevel</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>graphicsMultiThreaded</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-graphicsMultiThreaded.html">Perangkat.Info.grafisMultiThreaded</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>renderingThreadingMode</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-renderingThreadingMode.html">Perangkat.SystemInfo.renderingThreadingMode</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>hasHiddenSurfaceRemovalOnGPU</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-hasHiddenSurfaceRemovalOnGPU.html">Perangkat.Info.hasHiddenSurfaceRemovalOnGPU</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>hasDynamicUniformArrayIndexingInFragmentShaders</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-hasDynamicUniformArrayIndexingInFragmentShaders.html">Perangkat.Info.hasDynamicUniformArrayIndexingInFragmentShaders</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supportsShadows</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supportsShadows.html">Device.SystemInfo.supportsShadows</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supportsRawShadowDepthSampling</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supportsRawShadowDepthSampling.html">SiteInfo.supportsRawShadowDepthSampling</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supportsMotionVectors</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supportsMotionVectors.html">Perangkat.Info.supportsMotionVectors</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supports3DTextures</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supports3DTextures.html">Perangkat.Info.supports3DTextures</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supports2DArrayTextures</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supports2DArrayTextures.html">Perangkat.Info.supports2DArrayTextures</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supports3DRenderTextures</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supports3DRenderTextures.html">Perangkat.Info.supports3DRenderTextures</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supportsCubemapArrayTextures</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supportsCubemapArrayTextures.html">Perangkat.Info.supportsCubemapArrayTextures</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>copyTextureSupport</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-copyTextureSupport.html">Perangkat.Info.copyTextureSupport</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supportsComputeShaders</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supportsComputeShaders.html">Perangkat.Info.supportsComputeShaders</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supportsGeometryShaders</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supportsGeometryShaders.html">Perangkat.Info.supportsGeometryShaders</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supportsTessellationShaders</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supportsTessellationShaders.html">Perangkat.Info.supportsTessellationShaders</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supportsInstancing</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supportsInstancing.html">Perangkat.SistemInfo.supportsInstancing</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supportsHardwareQuadTopology</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supportsHardwareQuadTopology.html">Perangkat.Info.supportsHardwareQuadTopology</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supports32bitsIndexBuffer</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supports32bitsIndexBuffer.html">Perangkat.Info.supports32bitsIndexBuffer</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supportsSparseTextures</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supportsSparseTextures.html">Perangkat.Info.supportsSparseTextures</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supportedRenderTargetCount</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supportedRenderTargetCount.html">Device.SystemInfo.supportedRenderTargetCount</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supportsSeparatedRenderTargetsBlend</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supportsSeparatedRenderTargetsBlend.html">Perangkat.Info.supportsSeparatedRenderTargetsBlend</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supportedRandomWriteTargetCount</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supportedRandomWriteTargetCount.html">Device.SistemInfo.supportedRandomWriteTargetCount</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supportsMultisampledTextures</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supportsMultisampledTextures.html">Perangkat.Info.supportsMultisampledTextures</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supportsMultisampleAutoResolve</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supportsMultisampleAutoResolve.html">Perangkat.SistemInfo.supportsMultisampleAutoResolve</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supportsTextureWrapMirrorOnce</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supportsTextureWrapMirrorOnce.html">Perangkat.Info.supportsTextureWrapMirrorOnce</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>usesReversedZBuffer</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-usesReversedZBuffer.html">Perangkat.Info.usesReversedZBuffer</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>npotSupport</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-npotSupport.html">Device.SystemInfo.npotSupport</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>maxTextureSize</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-maxTextureSize.html">Perangkat.Info.maxTextureSize</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>maxCubemapSize</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-maxCubemapSize.html">WordPress.org</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>maxComputeBufferInputsVertex</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-maxComputeBufferInputsVertex.html">Perangkat.Info.maxComputeBufferInputsVertex</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>maxComputeBufferInputsFragment</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-maxComputeBufferInputsFragment.html">Perangkat.Info.maxComputeBufferInputsFragment</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>maxComputeBufferInputsGeometry</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-maxComputeBufferInputsGeometry.html">Perangkat.Info.maxComputeBufferInputsGeometry</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>maxComputeBufferInputsDomain</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-maxComputeBufferInputsDomain.html">Perangkat.Info.maxComputeBufferInputsDomain</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>maxComputeBufferInputsHull</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-maxComputeBufferInputsHull.html">Perangkat.Info.maxComputeBufferInputsHull</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>maxComputeBufferInputsCompute</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-maxComputeBufferInputsCompute.html">Perangkat.Info.maxComputeBufferInputsCompute</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>maxComputeWorkGroupSize</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-maxComputeWorkGroupSize.html">Perangkat.Info.maxComputeWorkGroupSize</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>maxComputeWorkGroupSizeX</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-maxComputeWorkGroupSizeX.html">Perangkat.Info.maxComputeWorkGroupSizeX</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>maxComputeWorkGroupSizeY</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-maxComputeWorkGroupSizeY.html">Perangkat.Info.maxComputeWorkGroupSizeY</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>maxComputeWorkGroupSizeZ</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-maxComputeWorkGroupSizeZ.html">Perangkat.Info.maxComputeWorkGroupSizeZ</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supportsAsyncCompute</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supportsAsyncCompute.html">Perangkat.Info.supportsAsyncCompute</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supportsGraphicsFence</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supportsGraphicsFence.html">Perangkat.Info.supportsGraphicsFence</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supportsAsyncGPUReadback</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supportsAsyncGPUReadback.html">Perangkat.Info.supportsAsyncGPUReadback</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supportsRayTracing</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supportsRayTracing.html">Perangkat.Info.supportsRayTracing</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supportsSetConstantBuffer</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supportsSetConstantBuffer.html">Perangkat.Info.supportsSetConstantBuffer</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>hasMipMaxLevel</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-hasMipMaxLevel.html">Device.SystemInfo.hasMipMaxLevel</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>supportsMipStreaming</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-supportsMipStreaming.html">Perangkat.SistemInfo.supportsMipStreaming</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>usesLoadStoreActions</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">See <a href="../ScriptReference/Device.SystemInfo-usesLoadStoreActions.html">Perangkat.Info.usesLoadStoreActions</a>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h4>Definisi perangkat minimal</h4> 
+       <p>Definisi perangkat berikut mengandung setiap properti yang diperlukan dan tidak ada sifat opsional. Ini adalah definisi perangkat minimum yang dapat Anda miliki.</p> 
+       <p> <strong>Note</strong>: Definisi perangkat ini tidak menyediakan data orientasi, sehingga simulator mengasumsikan perangkat mendukung semua orientasi dan bahwa daerah yang aman mencakup seluruh layar.</p> 
+       <pre><code class="lang-json">{
+    "friendlyName": "Minimal Device",
+    "version": 1,
+    "screens": [
+        {
+            "width": 1080,
+            "height": 1920,
+            "dpi": 450.0
+        }
+    ],
+    "systemInfo": {
+        "operatingSystem": "Android"
+    }
+}
+</code></pre> 
+       <h4>Definisi perangkat lengkap</h4> 
+       <p>Definisi perangkat berikut mengandung setiap properti yang diperlukan dan opsional.</p> 
+       <pre><code class="lang-json">{
+    "friendlyName": "Apple iPhone XR",
+    "version": 1,
+    "screens": [
+        {
+            "width": 828,
+            "height": 1792,
+            "navigationBarHeight": 0,
+            "dpi": 326.0,
+            "orientations": [
+                {
+                    "orientation": 1,
+                    "safeArea": {
+                        "serializedVersion": "2",
+                        "x": 0.0,
+                        "y": 68.0,
+                        "width": 828.0,
+                        "height": 1636.0
+                    },
+                    "cutouts": [
+                        {
+                            "serializedVersion": "2",
+                            "x": 184.0,
+                            "y": 1726.0,
+                            "width": 460.0,
+                            "height": 66.0
+                        }
+                    ]
+                },
+                {
+                    "orientation": 3,
+                    "safeArea": {
+                        "serializedVersion": "2",
+                        "x": 88.0,
+                        "y": 42.0,
+                        "width": 1616.0,
+                        "height": 786.0
+                    },
+                    "cutouts": [
+                        {
+                            "serializedVersion": "2",
+                            "x": 0.0,
+                            "y": 184.0,
+                            "width": 66.0,
+                            "height": 460.0
+                        }
+                    ]
+                },
+                {
+                    "orientation": 4,
+                    "safeArea": {
+                        "serializedVersion": "2",
+                        "x": 88.0,
+                        "y": 42.0,
+                        "width": 1616.0,
+                        "height": 786.0
+                    },
+                    "cutouts": [
+                        {
+                            "serializedVersion": "2",
+                            "x": 1726.0,
+                            "y": 184.0,
+                            "width": 66.0,
+                            "height": 460.0
+                        }
+                    ]
+                }
+            ],
+            "presentation": {
+                "overlayPath": "Apple iPhone 11_Overlay.png",
+                "borderSize": {
+                    "x": 51.0,
+                    "y": 51.0,
+                    "z": 51.0,
+                    "w": 51.0
+                }
+            }
+        }
+    ],
+    "systemInfo": {
+        "deviceModel": "iPhone11,8",
+        "deviceType": 1,
+        "operatingSystem": "iOS 12.0",
+        "operatingSystemFamily": 0,
+        "processorCount": 6,
+        "processorFrequency": 0,
+        "processorType": "arm64e",
+        "supportsAccelerometer": true,
+        "supportsAudio": true,
+        "supportsGyroscope": true,
+        "supportsLocationService": true,
+        "supportsVibration": true,
+        "systemMemorySize": 2813,
+        "unsupportedIdentifier": "n/a",
+        "graphicsDependentData": [
+            {
+                "graphicsDeviceType": 16,
+                "graphicsMemorySize": 1024,
+                "graphicsDeviceName": "Apple A12 GPU",
+                "graphicsDeviceVendor": "Apple",
+                "graphicsDeviceID": 0,
+                "graphicsDeviceVendorID": 0,
+                "graphicsUVStartsAtTop": true,
+                "graphicsDeviceVersion": "Metal",
+                "graphicsShaderLevel": 50,
+                "graphicsMultiThreaded": true,
+                "renderingThreadingMode": 0,
+                "hasHiddenSurfaceRemovalOnGPU": true,
+                "hasDynamicUniformArrayIndexingInFragmentShaders": true,
+                "supportsShadows": true,
+                "supportsRawShadowDepthSampling": true,
+                "supportsMotionVectors": true,
+                "supports3DTextures": true,
+                "supports2DArrayTextures": true,
+                "supports3DRenderTextures": true,
+                "supportsCubemapArrayTextures": true,
+                "copyTextureSupport": 31,
+                "supportsComputeShaders": true,
+                "supportsGeometryShaders": false,
+                "supportsTessellationShaders": true,
+                "supportsInstancing": true,
+                "supportsHardwareQuadTopology": false,
+                "supports32bitsIndexBuffer": true,
+                "supportsSparseTextures": false,
+                "supportedRenderTargetCount": 8,
+                "supportsSeparatedRenderTargetsBlend": true,
+                "supportedRandomWriteTargetCount": 8,
+                "supportsMultisampledTextures": 1,
+                "supportsMultisampleAutoResolve": false,
+                "supportsTextureWrapMirrorOnce": 0,
+                "usesReversedZBuffer": true,
+                "npotSupport": 2,
+                "maxTextureSize": 16384,
+                "maxCubemapSize": 16384,
+                "maxComputeBufferInputsVertex": 8,
+                "maxComputeBufferInputsFragment": 8,
+                "maxComputeBufferInputsGeometry": 0,
+                "maxComputeBufferInputsDomain": 8,
+                "maxComputeBufferInputsHull": 8,
+                "maxComputeBufferInputsCompute": 8,
+                "maxComputeWorkGroupSize": 1024,
+                "maxComputeWorkGroupSizeX": 1024,
+                "maxComputeWorkGroupSizeY": 1024,
+                "maxComputeWorkGroupSizeZ": 1024,
+                "supportsAsyncCompute": false,
+                "supportsGraphicsFence": true,
+                "supportsAsyncGPUReadback": true,
+                "supportsRayTracing": false,
+                "supportsSetConstantBuffer": true,
+                "hasMipMaxLevel": true,
+                "supportsMipStreaming": true,
+                "usesLoadStoreActions": true,
+                "supportedTextureFormats": [1, 2, 3, 4, 5],
+                "supportedRenderTextureFormats": [1, 2, 3, 4, 5],
+                "ldrGraphicsFormat": 59,
+                "hdrGraphicsFormat": 74
+            }
+        ]
+    }
+}
+</code></pre> 
+       <h2>Membuat overlay perangkat</h2> 
+       <p>Overlay perangkat adalah gambar yang mengandung batas layar perangkat dan fitur lain seperti notches, meninju, dan tambahan lainnya untuk persegi panjang layar. Anda dapat secara opsional menggunakannya dengan definisi perangkat untuk memvisualisasikan bagaimana elemen perangkat menghalangi layar perangkat, dan untuk menentukan ketika sentuh input gagal sebagai hasilnya.</p> 
+       <p>Simulator Perangkat menafsirkan piksel transparan sebagai area layar yang dapat Anda ketuk, dan opaque piksel warna lain sebagai area yang menghalangi perangkat keras. Tekstur itu sendiri bisa menjadi bentuk apa pun.</p> 
+       <p>Contoh berikut menunjukkan overlay perangkat untuk dua model iPhone.</p> 
+       <p> <strong>Note</strong>: Untuk meniru apa yang Anda lihat ketika Anda menggunakan overlay perangkat, contoh ini menampilkan default Unity di area layar di mana Anda dapat tab. Dalam overlay perangkat nyata, piksel ini harus transparan.<span class="tooltip"><strong>skybox</strong><span class="tooltiptext">Jenis khusus Bahan yang digunakan untuk mewakili langit. Biasanya enam sisi. <a class="tooltipMoreInfoLink" href="class-Skybox.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Skybox">Glossary</a></span></span></span> in the area of the screen where you can tab. In a real device overlay, these pixels should be transparent.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Apple iPhone 8 Overlay</th> 
+          <th style="text-align:left;">Apple iPhone XS Overlay</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/device-simulator-overlay-iphone8.png" alt=""></td> 
+          <td style="text-align:left;"><img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/device-simulator-overlay-iphonexs.png" alt=""></td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>Menggunakan overlay perangkat</h3> 
+       <p>Setelah Anda membuat tekstur overlay perangkat, untuk menggunakannya dengan definisi perangkat, Anda harus mengimpor file tekstur overlay perangkat ke proyek Anda.</p> 
+       <p> <strong>Note</strong>: Ketika Perangkat Simulator memuat tekstur overlay perangkat, upaya untuk mengaktifkan <strong>Read/Write</strong> untuk itu. Jika ini tidak mungkin, Simulator Perangkat menampilkan tekstur tetapi tidak dapat menggunakan tekstur untuk memasukkan masker. Ini berarti bahwa jika Anda mengklik notches dan area lain dari layar bahwa overlay perangkat harus masker, Simulator Perangkat mendeteksi input. Untuk memastikan ini tidak terjadi, ketika Anda mengimpor tekstur overlay perangkat, memungkinkan <strong>Read/Write</strong> di jendela Pengaturan Adapt Tekstur.</p> 
+       <p>Ketika tekstur overlay perangkat berada di proyek Anda, buka file definisi perangkat dan, dalam objek yang mendefinisikan layar perangkat mendukung, tambahkan properti <a href="#presentation">presentation</a>. Di sini, set path ke file gambar (<code>overlayPath</code>) dan ukuran perbatasan (<code>borderSize</code>). Sebagai contoh cara melakukan ini, lihat file definisi perangkat berikut:</p> 
+       <pre><code class="lang-json">{
+    "friendlyName": "Minimal Device with Overlay",
+    "version": 1,
+    "screens": [
+        {
+            "width": 1080,
+            "height": 1920,
+            "dpi": 450.0,
+            "presentation": {
+                "overlayPath": "Overlays/MinimalDeviceOverlay.png",
+                "borderSize": {
+                    "x": 51.0,
+                    "y": 51.0,
+                    "z": 51.0,
+                    "w": 130.0
+                }
+            }
+        }
+    ],
+    "systemInfo": {
+        "operatingSystem": "Android"
+    }
+}
+</code></pre> 
+       <p> <strong>Note</strong>: Jalur ke file tekstur overlay perangkat dapat relatif terhadap file definisi perangkat, atau relatif ke direktori yang mengandung direktori <strong>Assets</strong> atau <strong>Packages</strong> dalam proyek Unity Anda. Misalnya, jika file definisi perangkat berada di direktori <strong>Assets/Devices</strong> dan file overlay perangkat berada di direktori <strong>Assets/Devices/Overlays</strong>, path file berikut keduanya valid:</p> 
+       <ul> 
+        <li>Relatif ke file definisi perangkat: <strong>Overlays/MinimalDeviceOverlay.png</strong> </li> 
+        <li>Relatif ke direktori yang berisi direktori <strong>Assets</strong>: <strong>Assets/Devices/Overlays/MinimalDeviceOverlay.png</strong> </li> 
+       </ul> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="device-simulator-simulated-classes.html"></a></span> 
+         <div class="tip">
+           Kelas simulasi 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="device-simulator-plugins.html"></a></span> 
+         <div class="tip">
+           Memperpanjang simulator perangkat 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

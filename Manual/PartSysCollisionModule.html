@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: modul Collision</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="visual-effects.html">Efek visual</a></li> 
+         <li><a href="ParticleSystems.html">Sistem partikel</a></li> 
+         <li><a href="Built-inParticleSystem.html">Sistem Partikel Built-in</a></li> 
+         <li><a href="PartSysReference.html">Komponen dan Modul</a></li> 
+         <li><a href="ParticleSystemModules.html">Modul Sistem Partikel</a></li> 
+         <li>Collision modul</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="PartSysExtForceModule.html"></a></span> 
+          <div class="tip">
+            Modul Forces eksternal 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="PartSysTriggersModule.html"></a></span> 
+          <div class="tip">
+            Triggers modul 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Collision modul</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Modul ini mengontrol bagaimana <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-ParticleSystem.html">particles</a><span class="tooltiptext">Gambar kecil atau mesh sederhana yang dipancarkan oleh sistem partikel. Sistem partikel dapat menampilkan dan memindahkan partikel dalam jumlah besar untuk mewakili entitas fluida atau amorf. Efek semua partikel bersama menciptakan kesan entitas lengkap, seperti asap. <a href="class-ParticleSystem.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#particle">Glossary</a></span></span></span> collide dengan <span class="tooltip"><a href="GameObjects.html">GameObjects</a><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#GameObject">Glossary</a></span></span></span> di <span class="tooltip"><a href="CreatingScenes.html">Scene</a><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>. Gunakan drop-down pertama untuk menentukan apakah pengaturan tabrakan Anda berlaku untuk <strong>Planes</strong> atau ke <span class="tooltip"><strong>World</strong><span class="tooltiptext">Area di tempat kejadian Anda di mana semua objek berada. Sering digunakan untuk menentukan bahwa koordinat adalah dunia-relatif, bertentangan dengan objek-relatif.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#World">Glossary</a></span></span></span>. Jika Anda memilih <strong>World</strong>, gunakan drop-down <strong>Collision Mode</strong> untuk menentukan apakah pengaturan tabrakan Anda berlaku untuk dunia <a href="2Dor3D.html">2D atau 3D</a>.</p> 
+       <h2>Menggunakan modul Collision</h2> 
+       <p>Modul ini adalah bagian dari komponen <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-ParticleSystem.html">Sistem partikel</a><span class="tooltiptext">Komponen yang mensimulasikan entitas fluida seperti cairan, awan dan nyala dengan menghasilkan dan memikat sejumlah besar gambar 2D kecil di tempat kejadian. <a href="class-ParticleSystem.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#particlesystem">Glossary</a></span></span></span>. Ketika Anda membuat Sistem Partikel Baru GameObject, atau tambahkan komponen Sistem Partikel ke GameObject yang keluar, Unity menambahkan modul Collision ke Sistem Partikel. Secara default, Unity menonaktifkan modul ini. Untuk membuat Sistem Partikel baru dan mengaktifkan modul ini:</p> 
+       <ol> 
+        <li><strong>GameObject</strong> &gt; <strong>Effects</strong> &gt; <strong>Particle System</strong>.</li> 
+        <li>Pada <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>, temukan komponen Sistem Partikel.</li> 
+        <li>Dalam komponen Sistem Partikel, temukan lipatan modul Collision.</li> 
+        <li>Di sebelah kiri header lipat, aktifkan kotak centang.</li> 
+       </ol> 
+       <h3>API</h3> 
+       <p>Karena modul ini adalah bagian dari komponen Sistem Partikel, Anda mengaksesnya melalui kelas <a href="../ScriptReference/ParticleSystem.html">ParticleSystem</a>. Untuk informasi tentang cara mengaksesnya dan mengubah nilai pada runtime, lihat <a href="../ScriptReference/ParticleSystem-collision.html">API documentation</a>.</p> 
+       <h2>Merencanakan sifat modul</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PartSysCollisionInsp.png" alt=""> 
+       </figure> 
+       <p>Untuk beberapa properti di bagian ini, Anda dapat menggunakan mode yang berbeda untuk mengatur nilai mereka. Untuk informasi pada mode yang dapat Anda gunakan, lihat <a href="PartSysUsage.html#VaryOverTime">Memanfaatkan sifat seiring waktu</a>.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Planes popup</strong></td> 
+          <td style="text-align:left;">Pilih mode <strong>Planes</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Planes</strong></td> 
+          <td style="text-align:left;">Daftar Transforms yang dapat diperluas yang mendefinisikan pesawat tabrakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Visualization</strong></td> 
+          <td style="text-align:left;">Pilih apakah pesawat tabrakan <span class="tooltip"><strong>Gizmos</strong><span class="tooltiptext">Overlay grafis yang terkait dengan GameObject di Adegani, dan ditampilkan di Tampilan Adegan. Alat adegan internal seperti alat bergerak adalah Gizmos, dan Anda dapat membuat Gizmos kustom menggunakan tekstur atau scripting. Beberapa Gizmos hanya ditarik ketika GameObject dipilih, sementara Gizmos lainnya ditarik oleh Editor terlepas dari GameObjects mana yang dipilih. <a class="tooltipMoreInfoLink" href="GizmosMenu.html#GizmosIcons">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Gizmo">Glossary</a></span></span></span> akan ditampilkan dalam <span class="tooltip"><strong>Scene view</strong><span class="tooltiptext">Tampilan interaktif ke dunia yang Anda buat. Anda menggunakan Adegan Lihat untuk memilih dan posisi pemandangan, karakter, kamera, lampu, dan semua jenis lain dari Game Object. <a href="UsingTheSceneView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SceneView">Glossary</a></span></span></span> sebagai grid wireframe atau pesawat padat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Scale Plane</strong></td> 
+          <td style="text-align:left;">Ukuran pesawat yang digunakan untuk visualisasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Dampen</strong></td> 
+          <td style="text-align:left;">Pergantian kecepatan partikel yang hilang setelah tabrakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Bounce</strong></td> 
+          <td style="text-align:left;">Pergantian kecepatan partikel yang masuk kembali dari permukaan setelah tabrakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Lifetime Loss</strong></td> 
+          <td style="text-align:left;">Sereal dari total seumur hidup partikel yang hilang jika tabrakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Min Kill Speed</strong></td> 
+          <td style="text-align:left;">Partikel yang bepergian di bawah kecepatan ini setelah tabrakan akan dihapus dari sistem.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Max Kill Speed</strong></td> 
+          <td style="text-align:left;">Partikel yang bepergian di atas kecepatan ini setelah tabrakan akan dihapus dari sistem.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Radius Scale</strong></td> 
+          <td style="text-align:left;">Memungkinkan Anda untuk menyesuaikan radius dari bidang tabrakan partikel sehingga lebih erat sesuai dengan tepi visual partikel grafis.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Send Collision Messages</strong></td> 
+          <td style="text-align:left;">Jika diaktifkan, tabrakan partikel dapat terdeteksi dari <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> oleh fungsi <a href="../ScriptReference/MonoBehaviour.OnParticleCollision.html">OnParticleCollision</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Visualize Bounds</strong></td> 
+          <td style="text-align:left;">Memberikan batas tabrakan setiap partikel sebagai bentuk wireframe dalam tampilan Adegan.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Properti modul dunia</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PartSysCollisionInsp2.png" alt=""> 
+       </figure> 
+       <p>Untuk beberapa properti di bagian ini, Anda dapat menggunakan mode yang berbeda untuk mengatur nilai mereka. Untuk informasi pada mode yang dapat Anda gunakan, lihat <a href="PartSysUsage.html#VaryOverTime">Memanfaatkan sifat seiring waktu</a>.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong><em>Property</em></strong></th> 
+          <th style="text-align:left;"><strong><em>Function</em></strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>World popup</strong></td> 
+          <td style="text-align:left;">Pilih mode <strong>World</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Collision Mode</strong></td> 
+          <td style="text-align:left;">3D atau 2D.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Dampen</strong></td> 
+          <td style="text-align:left;">Pergantian kecepatan partikel yang hilang setelah tabrakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Bounce</strong></td> 
+          <td style="text-align:left;">Pergantian kecepatan partikel yang masuk kembali dari permukaan setelah tabrakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Lifetime Loss</strong></td> 
+          <td style="text-align:left;">Sereal dari total seumur hidup partikel yang hilang jika tabrakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Min Kill Speed</strong></td> 
+          <td style="text-align:left;">Partikel yang bepergian di bawah kecepatan ini setelah tabrakan akan dihapus dari sistem.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Max Kill Speed</strong></td> 
+          <td style="text-align:left;">Partikel yang bepergian di atas kecepatan ini setelah tabrakan akan dihapus dari sistem.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Radius Scale</strong></td> 
+          <td style="text-align:left;">Pengaturan untuk 2D atau 3D.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Collision Quality</strong></td> 
+          <td style="text-align:left;">Gunakan drop-down untuk mengatur kualitas tabrakan partikel. Ini mempengaruhi berapa banyak partikel dapat melewati sari. Pada tingkat kualitas rendah, partikel kadang-kadang dapat melewati sari, tetapi kurang intensif sumber daya untuk menghitung.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;High</td> 
+          <td style="text-align:left;">Ketika <strong>Collision Quality</strong> diatur ke <strong>High</strong>, tabrakan selalu menggunakan sistem fisika untuk mendeteksi hasil tabrakan. Ini adalah pilihan paling intensif sumber daya, tetapi juga yang paling akurat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Medium (Static Colliders)</td> 
+          <td style="text-align:left;">Ketika <strong>Collision Quality</strong> diatur ke <strong>Medium (Static Colliders)</strong>, tabrakan menggunakan grid voxels untuk cache tabrakan sebelumnya, untuk penggunaan kembali lebih cepat dalam bingkai kemudian. Lihat <a href="#WorldCollisions">tabrakan dunia</a>, di bawah ini, untuk mempelajari lebih lanjut tentang cache ini. <br><br> Satu-satunya perbedaan antara <strong>Medium</strong> dan <strong>Low</strong> adalah berapa kali per bingkai sistem partikel kueri sistem fisika. <strong>Medium</strong> membuat lebih banyak pertanyaan per bingkai daripada <strong>Low</strong>. <br><br> Perhatikan bahwa pengaturan ini hanya cocok untuk tabrakan statis yang tidak pernah bergerak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Rendah (Static Colliders)</td> 
+          <td style="text-align:left;">Ketika <strong>Collision Quality</strong> diatur ke <strong>Low (Static Colliders)</strong>, tabrakan menggunakan grid voxels untuk cache tabrakan sebelumnya, untuk penggunaan kembali lebih cepat dalam bingkai kemudian. Lihat <a href="#WorldCollisions">tabrakan dunia</a>, di bawah ini, untuk mempelajari lebih lanjut tentang cache ini. <br><br> Satu-satunya perbedaan antara <strong>Medium</strong> dan <strong>Low</strong> adalah berapa kali per bingkai sistem partikel kueri sistem fisika. <strong>Medium</strong> membuat lebih banyak pertanyaan per bingkai daripada <strong>Low</strong>. <br><br> Perhatikan bahwa pengaturan ini hanya cocok untuk tabrakan statis yang tidak pernah bergerak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Collides With</strong></td> 
+          <td style="text-align:left;">Partikel hanya akan tabrakan dengan objek pada lapisan yang dipilih.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Max Collision Shapes</strong></td> 
+          <td style="text-align:left;">Berapa banyak bentuk tabrakan dapat dianggap untuk tabrakan partikel. Bentuk excess diabaikan, dan <span class="tooltip"><strong>terrains</strong><span class="tooltiptext">Pemandangan di tempat kejadian Anda. Terrain GameObject menambahkan pesawat datar besar untuk adegan Anda dan Anda dapat menggunakan jendela Inspektur Terrain untuk menciptakan lanskap rinci. <a class="tooltipMoreInfoLink" href="terrain-UsingTerrains.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Terrain">Glossary</a></span></span></span> mengambil prioritas.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Enable Dynamic Colliders</strong></td> 
+          <td style="text-align:left;">kolider dinamis adalah sari yang tidak dikonfigurasi sebagai Kinematik (lihat dokumentasi pada <span class="tooltip"><a class="tooltipMoreInfoLink" href="CollidersOverview.html">colliders</a><span class="tooltiptext">Bentuk tak terlihat yang digunakan untuk menangani tabrakan fisik untuk objek. Seorang sari tidak perlu menjadi bentuk yang sama dengan jala objek - perkiraan kasar sering lebih efisien dan tidak dapat dibedakan dalam gameplay. <a href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Collider">Glossary</a></span></span></span> untuk informasi lebih lanjut pada jenis sari). <br><br> Periksa opsi ini untuk menyertakan jenis sari ini di set objek yang partikel merespons dalam tabrakan. Jika Anda membatalkan opsi ini, partikel hanya menanggapi tabrakan terhadap tabrakan statis.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Voxel Size</strong></td> 
+          <td style="text-align:left;">Voxel mewakili nilai pada grid biasa di ruang tiga dimensi. Saat menggunakan tabrakan kualitas <strong>Medium</strong>, tabrakan cache Unity dalam struktur grid. Pengaturan ini mengontrol ukuran grid. Nilai yang lebih kecil memberikan akurasi lebih, tetapi biaya lebih banyak memori, dan kurang efisien. <strong>Low</strong><br><br><strong>Note</strong><strong>Collision Quality</strong> diatur ke <strong>Medium</strong> atau <strong>Low</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Collider Force</strong></td> 
+          <td style="text-align:left;">Menerapkan kekuatan untuk Fisika Collider setelah tabrakan partikel. Ini berguna untuk mendorong tabrakan dengan partikel.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Multiply by Collision Angle</strong></td> 
+          <td style="text-align:left;">Ketika menerapkan kekuatan untuk Collider, meningkatkan kekuatan kekuatan berdasarkan sudut tabrakan antara partikel dan sari. Sudut Grazing akan menghasilkan lebih sedikit kekuatan daripada tabrakan kepala.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Multiply by Particle Speed</strong></td> 
+          <td style="text-align:left;">Ketika menerapkan kekuatan untuk Colliders, meningkatkan kekuatan kekuatan berdasarkan kecepatan partikel. Partikel yang bergerak cepat akan menghasilkan lebih banyak kekuatan daripada yang lebih lambat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Multiply by Particle Size</strong></td> 
+          <td style="text-align:left;">Ketika menerapkan kekuatan untuk Collider, meningkatkan kekuatan kekuatan berdasarkan ukuran partikel. Partikel yang lebih besar akan menghasilkan lebih banyak kekuatan daripada yang lebih kecil.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Send Collision Messages</strong></td> 
+          <td style="text-align:left;">Periksa ini untuk dapat mendeteksi tabrakan partikel dari skrip dengan fungsi <a href="../ScriptReference/MonoBehaviour.OnParticleCollision.html">OnParticleCollision</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Visualize Bounds</strong></td> 
+          <td style="text-align:left;">Pratinjau bidang tabrakan untuk setiap partikel dalam pandangan Adegan.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Details</h2> 
+       <p>Ketika benda lain mengelilingi Sistem Partikel, efeknya seringkali lebih meyakinkan ketika partikel berinteraksi dengan benda-benda tersebut. Misalnya, air atau puing-puing harus diblokir oleh dinding padat daripada cukup melewatinya. Dengan modul <span class="tooltip"><strong>Collision</strong><span class="tooltiptext">tabrakan terjadi ketika mesin fisika mendeteksi bahwa tabrakan dari dua GameObjects membuat kontak atau tumpang tindih, ketika setidaknya satu memiliki komponen kaku dan bergerak. <a class="tooltipMoreInfoLink" href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Collision">Glossary</a></span></span></span> diaktifkan, partikel dapat tabrakan dengan objek di Adegan.</p> 
+       <p>Sistem Partikel dapat diatur sehingga partikelnya bertabrakan dengan kolider di tempat kejadian dengan memilih mode <strong>World</strong> dari pop-up. Colliders juga dapat dinonaktifkan sesuai dengan lapisan yang mereka gunakan dengan menggunakan properti <strong>Collides With</strong>. Pop-up juga memiliki opsi mode <strong>Planes</strong> yang memungkinkan Anda untuk menambahkan set pesawat ke Adegan yang tidak perlu memiliki Colliders. Pilihan ini berguna untuk lantai sederhana, dinding dan benda serupa, dan memiliki overhead prosesor yang lebih rendah dari mode <strong>World</strong>.</p> 
+       <p>Ketika mode <strong>Planes</strong> diaktifkan, daftar transformasi (biasanya kosong GameObjects) dapat ditambahkan melalui properti <strong>Planes</strong>. Pesawat memperpanjang tak terbatas di pesawat XZ lokal objek, dengan sumbu Y positif yang menunjukkan vektor normal pesawat. Untuk membantu perkembangan, pesawat akan ditampilkan sebagai Gizmos di Adegan, terlepas dari apakah atau tidak benda-benda yang terlihat <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a class="tooltipMoreInfoLink" href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mesh">Glossary</a></span></span></span> sendiri. Gizmos dapat ditampilkan sebagai grid wireframe atau pesawat padat, dan juga dapat ditingkatkan. Namun, scaling hanya berlaku untuk visualisasi - pesawat tabrakan sendiri memperpanjang tak terbatas melalui Adegan.</p> 
+       <p>Ketika tabrakan diaktifkan, ukuran partikel kadang-kadang masalah karena grafisnya dapat dip clipped karena membuat kontak dengan permukaan. Ini dapat mengakibatkan partikel yang muncul pada bagian "pikir" ke permukaan sebelum berhenti atau mencukupi. Properti <strong>Radius Scale</strong> mengatasi masalah ini dengan menentukan radius melingkar perkiraan untuk partikel, sebagai persentase dari ukuran sebenarnya. Informasi ukuran ini digunakan untuk mencegah kliping dan menghindari efek tenggelam.</p> 
+       <p>Sifat <strong>Dampen</strong> dan <strong>Bounce</strong> berguna untuk ketika partikel mewakili benda padat. Misalnya, kerikil cenderung memuncak permukaan keras ketika dibuang tetapi partikel bola salju mungkin kehilangan kecepatan selama tabrakan. <strong>Lifetime Loss</strong> dan <strong>Min Kill Speed</strong> dapat membantu mengurangi efek partikel sisa setelah tabrakan. Misalnya, bola api mungkin berlangsung selama beberapa detik sambil terbang melalui udara tetapi setelah bekerja, partikel api terpisah harus disipasi dengan cepat.</p> 
+       <p>Anda juga dapat mendeteksi tabrakan partikel dari skrip jika <strong>Send Collision Messages</strong> diaktifkan. Script dapat dilampirkan ke objek dengan sistem partikel, atau satu dengan Collider, atau keduanya. Dengan mendeteksi tabrakan, Anda dapat menggunakan partikel sebagai benda aktif dalam gameplay, misalnya sebagai proyektil, mantra sihir dan power-up. Lihat halaman referensi script untuk <a href="../ScriptReference/MonoBehaviour.OnParticleCollision.html">MonoBehaviour.PartikelCollision</a> untuk rincian dan contoh lebih lanjut.</p> 
+       <p><a name="WorldCollisions"> </a></p> 
+       <h2>Kualitas Collision Dunia</h2> 
+       <p>Modul Collision Dunia memiliki properti <strong>Collision Quality</strong>, yang dapat Anda set ke <strong>High</strong>, <strong>Medium</strong> atau <strong>Low</strong>. Ketika <strong>Collision Quality</strong> diatur ke <strong>Medium (Static Colliders)</strong> atau <strong>Low (Static Colliders)</strong>, tabrakan menggunakan grid <span class="tooltip"><strong>voxels</strong><span class="tooltiptext">Piksel 3D. <a class="tooltipMoreInfoLink" href="nav-AdvancedSettings.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Voxel">Glossary</a></span></span></span> (nilai pada grid 3D) untuk cache tabrakan sebelumnya, untuk penggunaan ulang cepat dalam bingkai nanti.</p> 
+       <p>Cache ini terdiri dari pesawat di setiap voxel, di mana pesawat mewakili permukaan tabrakan di lokasi itu. Pada setiap bingkai, Unity memeriksa cache untuk pesawat pada posisi partikel, dan jika ada satu, Unity menggunakannya untuk <span class="tooltip"><strong>collision detection</strong><span class="tooltiptext">Proses otomatis yang dilakukan oleh Unity yang menentukan apakah yang bergerak GameObject dengan komponen kaku dan collider telah masuk ke kontak dengan sari lainnya. <a class="tooltipMoreInfoLink" href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#CollisionDetection">Glossary</a></span></span></span>. Jika tidak, itu meminta sistem fisika. Jika tabrakan dikembalikan, ditambahkan ke cache untuk kueri cepat pada bingkai berikutnya.</p> 
+       <p>Ini adalah perkiraan, sehingga beberapa tabrakan yang hilang mungkin terjadi. Anda dapat mengurangi nilai Ukuran Voxel untuk membantu dengan ini; namun, melakukannya menggunakan memori ekstra, dan kurang efisien.</p> 
+       <p>Satu-satunya perbedaan antara <strong>Medium</strong> dan <strong>Low</strong> adalah berapa kali per bingkai sistem diperbolehkan untuk meminta sistem fisika. Rendah membuat pertanyaan lebih sedikit per bingkai dari Medium. Setelah anggaran per-frame telah melebihi, hanya cache digunakan untuk setiap partikel yang tersisa. Ini dapat menyebabkan peningkatan tabrakan yang terjawab, sampai cache telah lebih padat secara komprehensif.</p> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2017–05–30 Login</span></p></li> 
+        <li><p><span class="page-history">Fungsional modul Collision berubah dalam Unity <a href="../Manual/30_search.html?q=newin20171">2017.1</a> <span class="search-words">NewIn20171</span></span></p></li> 
+       </ul> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="PartSysExtForceModule.html"></a></span> 
+         <div class="tip">
+           Modul Forces eksternal 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="PartSysTriggersModule.html"></a></span> 
+         <div class="tip">
+           Triggers modul 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

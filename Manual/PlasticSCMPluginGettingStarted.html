@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Memulai dengan SCM Plastik</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="EditorFeatures.html">Fitur Editor</a></li> 
+         <li><a href="PlasticSCMPlugin.html">Plastik SCM plugin untuk Unity</a></li> 
+         <li>Memulai dengan SCM Plastik</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="PlasticSCMAddIntegrations.html"></a></span> 
+          <div class="tip">
+            Tambahkan integrasi 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="ExternalVersionControlSystemSupport.html"></a></span> 
+          <div class="tip">
+            Menggunakan sistem kontrol versi eksternal dengan Unity 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Memulai dengan SCM Plastik</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <h2>Memasang plugin SCM Plastik untuk Unity</h2> 
+       <p>Plugin ini tersedia melalui Manajer Paket Unity.</p> 
+       <p>Anda harus menghapus plugin Plastik SCM <span class="tooltip"><strong>Asset Store</strong><span class="tooltiptext">Sebuah perpustakaan yang berkembang dari aset gratis dan komersial yang diciptakan oleh Unity dan anggota komunitas. Menawarkan berbagai aset, dari tekstur, model dan animasi ke seluruh contoh proyek, tutorial dan ekstensi Editor. <a class="tooltipMoreInfoLink" href="AssetStore.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#AssetStore">Glossary</a></span></span></span> dari proyek Unity Anda untuk menggunakan Plastic SCM untuk Unity melalui paket <span class="tooltip"><strong>Version Control</strong><span class="tooltiptext">Sistem untuk mengelola perubahan file. Anda dapat menggunakan Unity bersama dengan alat kontrol versi yang paling umum, termasuk Perforce, Git, Mercurial dan PlasticSCM. <a href="VersionControl.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#VersionControl">Glossary</a></span></span></span>. Berikut adalah langkah-langkah untuk melakukannya:</p> 
+       <ol> 
+        <li>Navigasi ke folder Aset / Plasma Anda di Proyek Unity Anda. Hapus folder PlasticSCM.</li> 
+        <li>Buka kembali Proyek Unity Anda untuk menampilkan ulang paket Anda.</li> 
+       </ol> 
+       <p> <strong>Note</strong>: Folder ruang kerja <code>.plastic</code> dalam akar Proyek Unity tidak perlu dihapus karena dapat dibaca oleh paket Kontrol Versi.</p> 
+       <p>Anda dapat mengakses SCM Plastik untuk Unity pada versi yang didukung oleh navigasi ke <strong>Window</strong> &gt; <strong>Plastic SCM</strong>. Dari sana, Anda akan berjalan melalui proses onboarding sederhana, yang akan memandu pengaturan akun Anda dan memastikan bahwa proyek Unity Anda dikonfigurasi dengan benar.</p> 
+       <h3>Menggunakan plugin SCM Plastik</h3> 
+       <p>Plugin SCM Plastik memungkinkan jendela <strong>Plastic SCM</strong> di Editor Unity. Gunakan jendela <strong>Plastic SCM</strong> untuk mengelola perubahan file Anda, termasuk:</p> 
+       <ul> 
+        <li>Tautan proyek Anda ke kendali sumber</li> 
+        <li>Check-in files</li> 
+        <li>Tidak ada perubahan</li> 
+        <li>Bandingkan revisi file</li> 
+       </ul> 
+       <p>Jendela <strong>Plastic SCM</strong> menampilkan daftar file baru dan berubah dalam proyek Anda. Ketika Anda menambahkan file baru, atau menyimpan perubahan ke file yang ada, jendela <strong>Plastic SCM</strong> secara otomatis menampilkan file yang terkena.</p> 
+       <p>Untuk membuka jendela <strong>Plastic SCM</strong>, pilih <strong>Window</strong> &gt; <strong>Plastic SCM</strong>.</p> 
+       <h3>Membuat ruang kerja baru</h3> 
+       <p>Untuk menggunakan plugin Plastik SCM pada proyek Unity, Anda harus membuat ruang kerja untuk proyek di jendela <strong>Plastic SCM</strong> atau di Plastic SCM GUI.</p> 
+       <p>Untuk menciptakan ruang kerja baru untuk proyek Anda di Editor Unity: 1. Pilih <strong>Window</strong> &gt; <strong>Plastic SCM</strong>. 2. Tentukan nama repositori, nama ruang kerja dan jalan ke proyek. Secara default, jalur proyek dan nama yang ada digunakan. 3. Pilih apakah Anda ingin menggunakan SCM Plastik sebagai pengembang (untuk fungsi SCM Plastik penuh) atau seniman (untuk alur kerja yang disederhanakan).</p> 
+       <p>Setelah Anda membuat ruang kerja Anda, jendela <strong>Plastic SCM</strong> menampilkan file proyek Anda. Selain itu, Plastik SCM secara otomatis menciptakan <span class="tooltip"><a class="tooltipMoreInfoLink" href="#ignore">ignore file</a><span class="tooltiptext">File khusus yang digunakan dalam banyak Sistem Kontrol Versi yang menentukan file yang akan dikecualikan dari ditempatkan di bawah kendali versi. Dalam proyek Unity ada sejumlah file yang bisa dikecualikan dari kontrol versi, dan menggunakan File Ignore adalah cara terbaik untuk mencapai ini. <a href="ExternalVersionControlSystemSupport.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Ignorefile">Glossary</a></span></span></span> di ruang kerja, yaitu, folder proyek Anda.</p> 
+       <h3>Memperkuat file proyek Anda ke kendali sumber</h3> 
+       <p>Setelah Anda menghubungkan proyek Anda ke ruang kerja SCM Plastik, tab <strong>Pending Changes</strong> dari jendela <strong>Plastic SCM</strong> menampilkan semua file proyek yang ada sebagai <strong>Added and private</strong>. Untuk menyertakan file ini di ruang kerja, Anda harus <a href="#checking">periksa mereka</a>.</p> 
+       <p>Setelah Anda memeriksa file Anda, tab <strong>Pending changes</strong> menyegarkan dan tidak lagi daftar file yang telah Anda periksa. Selain itu, Plastik SCM GUI sekarang menampilkan:</p> 
+       <ul> 
+        <li>File proyek Anda di Workspace Explorer</li> 
+        <li>Check-in terbaru Anda dalam tampilan Changeset</li> 
+       </ul> 
+       <p><a name="checking"></a></p> 
+       <h3>Memeriksa file</h3> 
+       <p>Untuk memeriksa file:</p> 
+       <ol> 
+        <li>Pilih <strong>Window</strong> &gt; <strong>Plastic SCM</strong>.</li> 
+        <li>Di jendela <strong>Plastic SCM</strong>, pilih file yang ingin Anda periksa.</li> 
+        <li>Dalam bidang teks, masukkan komentar untuk menjelaskan perubahan Anda.</li> 
+        <li>Pilih <strong>Checkin</strong>.</li> 
+       </ol> 
+       <p>Perubahan Anda tercantum dalam tampilan SCM GUI Plastik, dalam tampilan <strong>Changesets</strong>.</p> 
+       <p><a name="ignore"></a></p> 
+       <h3>Mengabaikan file</h3> 
+       <p>Ketika Anda membuat ruang kerja menggunakan plugin Plastik SCM, secara otomatis membuat file yang mengabaikan di ruang kerja Anda. Ini berisi daftar default dari jenis file dan jalur untuk mengecualikan dari kontrol sumber. Jika ada file lain dalam proyek Anda yang ingin Anda kecualikan dari repositori bersama, tambahkan ke file mengabaikan:</p> 
+       <ol> 
+        <li>Di jendela <strong>Plastic SCM</strong>, klik kanan file yang ingin Anda abaikan.</li> 
+        <li>Pilih <strong>Add to ignored list</strong>.</li> 
+        <li>Pilih nama file.</li> 
+       </ol> 
+       <p>File yang Anda pilih untuk mengabaikan dihapus dari daftar <strong>Pending changes</strong>. Anda dapat mengabaikan nama file tertentu, seluruh folder, dan semua file dengan ekstensi tertentu.</p> 
+       <p>Pelajari lebih lanjut tentang <a href="http://blog.plasticscm.com/2020/01/definitive-ignoreconf-for-unity-projects.html">mengabaikan file</a>.</p> 
+       <h3>Melihat perubahan file</h3> 
+       <p>Untuk membandingkan file yang diperbarui dengan versi sebelumnya, klik kanan file di jendela <strong>Plastic SCM</strong> dan pilih <strong>Diff</strong>. Ini membuka pandangan <strong>Differences</strong>, yang membandingkan sumber repositori dengan salinan lokal Anda. Ini adalah tampilan teks.</p> 
+       <h3>Mengalihkan perubahan file</h3> 
+       <p>Jika Anda telah membuat perubahan dalam proyek Anda yang tidak ingin Anda simpan, Anda dapat kembali kembali ke versi sebelumnya, yaitu, versi checked-in terbaru. Untuk mengubah perubahan file, pilih file di tab <strong>Pending changes</strong> dan pilih <strong>Undo changes</strong>.</p> 
+       <h2>Jendela SCM plastik</h2> 
+       <p>Gunakan jendela <strong>Plastic SCM</strong> di Editor Unity untuk mengelola kontrol versi untuk proyek Anda. Jika proyek Anda belum terhubung ke SCM Plastik, jendela <strong>Plastic SCM</strong> menampilkan tampilan untuk membuat ruang kerja baru. Tabel di bawah ini menggambarkan bidang pandangan ini.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Field</th> 
+          <th style="text-align:left;">Description</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Repository name</strong></td> 
+          <td style="text-align:left;">Nama repositori. Secara default, ini adalah nama proyek Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Workspace name</strong></td> 
+          <td style="text-align:left;">Nama ruang kerja. Secara default, ini adalah nama proyek Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Path on disk</strong></td> 
+          <td style="text-align:left;">Jalan ke proyek Anda. Secara default, ini adalah lokasi proyek terbuka Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Developer</strong> radio tombol</td> 
+          <td style="text-align:left;">Pilih opsi ini untuk fungsi SCM plastik penuh, termasuk merging dan mendorong dan menarik cabang.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Artist</strong> radio tombol</td> 
+          <td style="text-align:left;">Pilih opsi ini untuk alur kerja yang lebih sederhana dalam file, tanpa menggabungkan atau beberapa cabang.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Create workspace</strong> tombol</td> 
+          <td style="text-align:left;">Buat ruang kerja untuk proyek Anda dengan rincian yang Anda berikan.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Tabel di bawah ini menjelaskan jendela <strong>Plastic SCM</strong> di Editor Unity.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Field</th> 
+          <th style="text-align:left;">Description</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Branch</strong></td> 
+          <td style="text-align:left;">Menampilkan cabang ruang kerja Anda saat ini bekerja.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Pending changes</strong> tab</td> 
+          <td style="text-align:left;">Menampilkan daftar file yang berubah dalam proyek Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Incoming changes</strong> tab</td> 
+          <td style="text-align:left;">Menampilkan perubahan eksternal di ruang kerja yang belum dimiliki oleh proyek Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Sitemap (Modus operasi saja)<strong>Launch branch explorer</strong> (Developer mode only)</td> 
+          <td style="text-align:left;">Klik untuk membuka penjelajahan cabang.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Sitemap (Modus operasi saja)<strong>Launch Plastic</strong> (Developer mode only)</td> 
+          <td style="text-align:left;">Klik untuk membuka SCM Plastik.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Sitemap (Modis hanya)<strong>Configure Gluon</strong> (Artist mode only)</td> 
+          <td style="text-align:left;">Klik untuk membuka Gluon Plastik dalam mode konfigurasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Sitemap (Modis hanya)<strong>Launch Gluon</strong> (Artist mode only)</td> 
+          <td style="text-align:left;">Klik untuk membuka Gluon Plastik.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>Pending changes tab</h3> 
+       <p>Tab <strong>Pending changes</strong> menampilkan file baru dan berubah dalam versi lokal proyek Anda. Gunakan tab ini untuk memeriksa file Anda ke ruang kerja plastik, termasuk file dari kontrol versi dan membandingkan file yang berubah dengan versi yang sebelumnya dicentang.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Field</th> 
+          <th style="text-align:left;">Description</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Checkin changes</strong></td> 
+          <td style="text-align:left;">Mencapai file yang dipilih ke ruang kerja. Anda harus memasukkan komentar di kotak teks sebelum Anda dapat memeriksa perubahan Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Undo changes</strong></td> 
+          <td style="text-align:left;">Tidak ada perubahan lokal yang dibuat pada file yang dipilih.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Sitemap (Modis hanya)<strong>Keep items locked</strong> (Artist mode only)</td> 
+          <td style="text-align:left;">Menyimpan item yang terkunci setelah operasi check-in. Ini berguna, misalnya, jika Anda ingin membuat beberapa perubahan ke file tetapi periksa secara terpisah sebagai perubahan individu. Untuk membuka item, pilih tombol ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Options</strong></td> 
+          <td style="text-align:left;">Klik untuk membuka jendela <a href="#options">Options</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Item</strong></td> 
+          <td style="text-align:left;">Nama dan jalur file. File dikelompokkan oleh jenis perubahan, misalnya:<br>Changed<br>Deleted<br>Added</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Status</strong></td> 
+          <td style="text-align:left;">Status file, misalnya:<br>Changed<br>Removed lokal<br>Private</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Size</strong></td> 
+          <td style="text-align:left;">Ukuran file.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Extension</strong></td> 
+          <td style="text-align:left;">Ekstensi file.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Type</strong></td> 
+          <td style="text-align:left;">Jenis file.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Date modified</strong></td> 
+          <td style="text-align:left;">Tanggal dan waktu perubahan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Repository</strong></td> 
+          <td style="text-align:left;">Repositori di mana perubahan dibuat, yaitu, repositori lokal atau repositori jarak jauh jika pengguna lain telah membuat perubahan.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Pelajari lebih lanjut tentang tampilan <a href="https://www.plasticscm.com/documentation/gui/plastic-scm-version-control-gui-guide#Chapter4:ThePendingchangesView">Perubahan akhir</a>.</p> 
+       <h3>tab perubahan masuk</h3> 
+       <p>Tab <strong>Incoming changes</strong> menampilkan perubahan eksternal di ruang kerja yang versi lokal proyek Anda belum. Gunakan tab ini untuk mendapatkan perubahan terbaru dari ruang kerja jarak jauh.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Field</th> 
+          <th style="text-align:left;">Description</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Update workspace</strong></td> 
+          <td style="text-align:left;">Memperbarui proyek Anda dengan perubahan eksternal dari ruang kerja.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Path</strong></td> 
+          <td style="text-align:left;">path file dan nama.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Sitemap (Modis hanya)<strong>Last edited by</strong> (Artist mode only)</td> 
+          <td style="text-align:left;">Pengguna yang memeriksa perubahan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Size</strong></td> 
+          <td style="text-align:left;">Ukuran file.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Sitemap (Modis hanya)<strong>Date modified</strong> (Artist mode only)</td> 
+          <td style="text-align:left;">Tanggal cek terbaru file.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Sitemap (Modus operasi saja)<strong>Author</strong> (Developer mode only)</td> 
+          <td style="text-align:left;">Pengguna yang memeriksa perubahan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Sitemap (Modus operasi saja)<strong>Details</strong> (Developer mode only)</td> 
+          <td style="text-align:left;">Jelaskan apa operasi pembaruan akan dilakukan dengan perubahan terkait.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Sitemap (Modus operasi saja)<strong>Resolution method</strong> (Developer mode only)</td> 
+          <td style="text-align:left;">Menunjukkan metode resolusi pengguna yang dipilih ketika memecahkan konflik direktori.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Pelajari lebih lanjut tentang fitur <a href="http://blog.plasticscm.com/2019/10/incoming-changes.html">Perubahan masuk</a>.</p> 
+       <p><a name="options"></a></p> 
+       <h3>Pilihan jendela</h3> 
+       <p>Gunakan jendela <strong>Options</strong> untuk mengontrol perilaku jendela <strong>Plastic SCM</strong>. Tabel di bawah ini menjelaskan pilihan untuk jendela <strong>Plastic SCM</strong>.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Field</th> 
+          <th style="text-align:left;">Description</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"> <strong>What to find</strong> tab</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Show checkouts</strong></td> 
+          <td style="text-align:left;">Tampilkan file yang:<br> Anda telah diperiksa secara eksplisit di Plastic<br> Anda telah pindah<br> Memiliki merge dalam kemajuan</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Find changed files in the workspace</strong></td> 
+          <td style="text-align:left;">Periksa struktur direktori ruang kerja untuk mengidentifikasi file yang berubah melalui timestamp.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Check the content to determine files as changed, not just timestamp</strong></td> 
+          <td style="text-align:left;">Menghitung hash file dengan kalitamps terbaru untuk memastikan konten file benar-benar berubah.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"> <strong>What to show</strong> tab</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Auto-refresh</strong></td> 
+          <td style="text-align:left;">Plastik secara otomatis menyegarkan daftar Pending Changes yang diperlukan untuk menghindari penyegaran manual.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Show private files</strong></td> 
+          <td style="text-align:left;">Tampilkan file yang tidak berkomitmen untuk pengendalian sumber, seperti file baru atau konten yang dihasilkan alat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Show ignored files</strong></td> 
+          <td style="text-align:left;">Tampilkan file yang telah Anda tambahkan ke daftar yang diabaikan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Show hidden files</strong></td> 
+          <td style="text-align:left;">Tampilkan file yang telah Anda tambahkan ke daftar tersembunyi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Show deleted files and directories</strong></td> 
+          <td style="text-align:left;">Tampilkan file yang telah dihapus secara manual di ruang kerja di luar kendali plastik.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"> <strong>Move detection</strong> tab</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Find moved and renamed files and directories</strong></td> 
+          <td style="text-align:left;">Cari ruang kerja untuk mungkin berganti nama atau memindahkan file, misalnya jika satu file telah dihapus dan file lain telah ditambahkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Match binary files only when they have the same extension</strong></td> 
+          <td style="text-align:left;">Pembatasan file pencocokan untuk file biner ke ekstensi yang sama.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Match text files only when they have the same extension</strong></td> 
+          <td style="text-align:left;">Pembatasan file pencocokan untuk file teks ke ekstensi yang sama.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Similarity percentage</strong></td> 
+          <td style="text-align:left;">Tentukan bagaimana file serupa perlu dianggap sebagai pindah atau berganti nama. Login Untuk file teks, persentase ini berkaitan dengan konten. Login Untuk file biner, persentase ini berkaitan dengan ukuran file. Login Untuk struktur direktori, ini berkaitan dengan anak-anak sebagai persentase dari total jumlah entri direktori.<br>For text files, this percentage relates to the content.<br>For binary files, this percentage relates to the file size.<br>For directory structures, this relates to children as a percentage of the total number of directory entries.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Pelajari lebih lanjut tentang jendela <a href="https://www.plasticscm.com/documentation/gui/plastic-scm-version-control-gui-guide#ChangingtheSetofDisplayedRevisions">Options</a>.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="PlasticSCMAddIntegrations.html"></a></span> 
+         <div class="tip">
+           Tambahkan integrasi 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="ExternalVersionControlSystemSupport.html"></a></span> 
+         <div class="tip">
+           Menggunakan sistem kontrol versi eksternal dengan Unity 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

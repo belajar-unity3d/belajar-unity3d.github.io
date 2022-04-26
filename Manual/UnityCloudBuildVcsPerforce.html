@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Menggunakan Dashboard Pengembang Unity untuk mengkonfigurasi Build Cloud untuk Perforce</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="cloud" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UnityServices.html">Layanan Unity</a></li> 
+         <li><a href="UnityCloudBuild.html">Build di Unity Cloud</a></li> 
+         <li><a href="UnityCloudBuildSettingUp.html">Menyiapkan Build Cloud</a></li> 
+         <li>Menggunakan Dashboard Pengembang Unity untuk mengkonfigurasi Build Cloud untuk Perforce</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UnityCloudBuildVcsSubversion.html"></a></span> 
+          <div class="tip">
+            Menggunakan Apache Subversion (SVN) dengan Build Unity Cloud 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UnityCloudBuildVcsPlastic.html"></a></span> 
+          <div class="tip">
+            Menggunakan Dashboard Pengembang Unity untuk mengkonfigurasi Build Unity Cloud untuk Plastik 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Menggunakan Dashboard Pengembang Unity untuk mengkonfigurasi Build Cloud untuk Perforce</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Membangun Unity Cloud mendukung Proyek yang disimpan dalam repositories <a href="https://www.perforce.com/">Perforce</a>.</p> 
+       <p>Penutup topik ini:</p> 
+       <ul> 
+        <li><a href="http://localhost:8090/#configure">Mengkonfigurasi Perforce di Dasbor</a></li> 
+        <li><a href="http://localhost:8090/#target">Menyiapkan platform membangun target</a></li> 
+       </ul> 
+       <h2>Mengkonfigurasi Perforce di Dasbor</h2> 
+       <p>Untuk mengkonfigurasi Cloud Membangun Proyek Anda dari Repositori Perforce:</p> 
+       <ol> 
+        <li><p>Masuk ke .</p></li> 
+        <li><p>Pada halaman <span class="tooltip"><strong>Projects</strong><span class="tooltiptext">Dalam Unity, Anda menggunakan proyek untuk merancang dan mengembangkan permainan. Proyek menyimpan semua file yang terkait dengan permainan, seperti file aset dan Adegan. <a class="tooltipMoreInfoLink" href="2Dor3D.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Project">Glossary</a></span></span></span>, pilih Proyek Anda.</p></li> 
+        <li><p>Di jendela dashboard <strong>Overview</strong>, pada ubin <span class="tooltip"><strong>Cloud Build</strong><span class="tooltiptext">Layanan integrasi berkelanjutan untuk proyek Unity yang mengotomatiskan proses pembuatan build pada server Unity. <a class="tooltipMoreInfoLink" href="UnityCloudBuild.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#CloudBuild">Glossary</a></span></span></span>, klik <strong>OPEN CLOUD BUILD DASHBOARD</strong>.</p></li> 
+        <li><p>Di jendela <strong>Build History</strong>, klik <strong>Set up Cloud Build</strong>.</p></li> 
+        <li><p>Pilih platform mana untuk membangun permainan Anda.</p></li> 
+        <li><p>Di jendela <strong>Source Control</strong>, klik tab <strong>MANUAL</strong>.</p></li> 
+        <li> <p>Dalam bidang <strong>SCM URL</strong>, masukkan URL server Perforce Anda di kedua format berikut:</p> 
+         <ul> 
+          <li>Non-SSL: host: pelabuhan</li> 
+          <li>WordPress.org</li> 
+         </ul> </li> 
+        <li><p>Untuk menghubungkan ke repositori Anda, Anda harus menentukan URL ke server Perforce Anda. Untuk informasi tentang format URL, lihat bagian <strong>URL syntax</strong> di bawah ini.</p></li> 
+        <li><p>Dari menu drop-down <strong>SCM Types</strong>, pilih <span class="tooltip"><strong>Perforce</strong><span class="tooltiptext">Sistem kontrol versi untuk manajemen perubahan file. <a class="tooltipMoreInfoLink" href="perForceIntegration.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Perforce">Glossary</a></span></span></span>.</p></li> 
+        <li><p>Klik tombol <strong>NEXT: ACCESS</strong>. Ketika Unity Cloud Build terhubung ke situs hosting, secara otomatis mendeteksi apakah repositori Anda adalah publik atau pribadi. Jika repositori Anda adalah publik, Cloud Build secara otomatis terhubung kenya dan Anda dapat melewatkan ke <a href="#targetplatforms">Menyiapkan platform membangun target</a>.</p></li> 
+        <li><p>Pada jendela <strong>Grant us access to your source control</strong>, masukkan <strong>Username</strong> dan <strong>Password</strong> untuk repositori Perforce Anda.</p></li> 
+        <li><p>Klik <strong>NEXT: TARGET SETUP</strong>.</p></li> 
+       </ol> 
+       <h3>URL</h3> 
+       <p>Untuk menghubungkan ke repositori Anda, Anda harus menentukan URL ke server Perforce Anda. Anda dapat menentukan URL untuk menggunakan protokol https:// atau SSL.</p> 
+       <p>Berikut ini adalah contoh URL yang valid:</p> 
+       <ul> 
+        <li>url https://127.0.0.1:1667</li> 
+        <li>ssl:127.0.0.1:167</li> 
+       </ul> 
+       <p><a name="targetplatforms"></a></p> 
+       <h2>Menyiapkan platform membangun target</h2> 
+       <p>Di dasbor, di jendela <strong>NEW BUILD TARGET: BASIC INFO</strong>:</p> 
+       <ol> 
+        <li>Dalam bidang <strong>Target Label</strong>, masukkan nama untuk membangun.</li> 
+        <li>Dari menu drop-down <strong>Client Workspace</strong>, pilih ruang kerja dari mana untuk membangun Proyek Anda.</li> 
+        <li>Jika folder akar repositori Anda tidak mengandung <em>Assets</em> dan <em><span class="tooltip"><strong>Project settings</strong><span class="tooltiptext">Pengumpulan yang luas dari pengaturan yang memungkinkan Anda untuk mengkonfigurasi bagaimana Fisika, Audio, Jaringan, Grafik, Input dan banyak bidang lain dari jangkauan proyek Anda. <a class="tooltipMoreInfoLink" href="comp-ManagerGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span></em> Anda, di bidang <strong>Project Subfolder</strong>, masukkan URL folder yang berisi Aset dan pengaturan Proyek Anda.</li> 
+        <li>Dari menu drop-down <strong>Unity Version</strong>, pilih versi Unity yang harus membangun Proyek.</li> 
+        <li>Jika Anda tidak ingin Proyek untuk secara otomatis membangun setiap repositori Anda diperbarui, klik toggle <strong>Auto-build</strong> untuk menonaktifkan fitur ini.</li> 
+       </ol> 
+       <p>Jika Anda membangun platform iOS atau Android, langkah berikutnya Anda adalah memasukkan kredensial untuk membangun. Klik <strong>Next: Credentials</strong>. Untuk semua platform lain, klik <strong>Next: Build</strong> untuk menyelesaikan konfigurasi dan memulai build awal.</p> 
+       <h3>Android</h3> 
+       <p>Di jendela Android <strong>SIGNING CREDS</strong>, memberikan informasi berikut:</p> 
+       <ul> 
+        <li>Sebuah <strong>Bundle ID</strong> untuk mengidentifikasi aplikasi Anda secara unik di perangkat dan di Google Play Store.</li> 
+        <li>Masukkan kredensial <span class="tooltip"><strong>Android keystore</strong><span class="tooltiptext">Sistem Android yang memungkinkan Anda menyimpan entri kunci kriptografi untuk keamanan perangkat yang ditingkatkan. <a class="tooltipMoreInfoLink" href="class-PlayerSettingsAndroid.html#keystore">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AndroidKeystore">Glossary</a></span></span></span> atau pilih <strong>Auto Generated Debug Keystore</strong> untuk menggunakan keystore pengembangan. Untuk informasi lebih lanjut tentang keystore Android, lihat <a href="https://developer.android.com/training/articles/keystore.html">Sistem Keystore Android</a>.</li> 
+       </ul> 
+       <h3>Facebook Twitter</h3> 
+       <p>Di jendela iOS <strong>SIGNING CREDS</strong>, memberikan informasi berikut:</p> 
+       <ul> 
+        <li>A <strong>Bundle ID</strong> untuk mengidentifikasi aplikasi Anda secara unik di perangkat.</li> 
+        <li>Versi Xcode yang untuk membangun aplikasi.</li> 
+        <li>Masukkan kredensial iOS Anda. Untuk informasi lebih lanjut tentang kredensial iOS, lihat <a href="UnityCloudBuildiOS.html">API</a>.</li> 
+       </ul> 
+       <!-- area:cloud --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UnityCloudBuildVcsSubversion.html"></a></span> 
+         <div class="tip">
+           Menggunakan Apache Subversion (SVN) dengan Build Unity Cloud 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UnityCloudBuildVcsPlastic.html"></a></span> 
+         <div class="tip">
+           Menggunakan Dashboard Pengembang Unity untuk mengkonfigurasi Build Unity Cloud untuk Plastik 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Menggunakan skyboxes</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="sky.html">Sky</a></li> 
+         <li><a href="skyboxes.html">Skyboxes</a></li> 
+         <li>Menggunakan skyboxes</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="skyboxes.html"></a></span> 
+          <div class="tip">
+            Skyboxes 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="skybox-shaders.html"></a></span> 
+          <div class="tip">
+            Skybox shaders 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Menggunakan skyboxes</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Pada Unity, <span class="tooltip"><strong>skybox</strong><span class="tooltiptext">Jenis khusus Bahan yang digunakan untuk mewakili langit. Biasanya enam sisi. <a class="tooltipMoreInfoLink" href="class-Skybox.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Skybox">Glossary</a></span></span></span> adalah Bahan yang menggunakan skybox <span class="tooltip"><strong>Shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span>. Untuk informasi tentang apa bayangan skybox tersedia, lihat <a href="skybox-shaders.html">Home &gt; Sitemap</a>.</p> 
+       <h2>Kompatibilitas pipa Render</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature</strong></th> 
+          <th style="text-align:left;"><strong>Built-in <span class="tooltip"><strong>Render Pipeline</strong><span class="tooltiptext">A series of operations that take the contents of a Scene, and displays them on a screen. Unity lets you choose from pre-built render pipelines, or write your own. <a class="tooltipMoreInfoLink" href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span></strong></th> 
+          <th style="text-align:left;"><strong>Universal Render Pipeline (URP)</strong></th> 
+          <th style="text-align:left;"><strong>High Definition Render Pipeline (HDRP)</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Skyboxes</strong></td> 
+          <td style="text-align:left;">G (1)</td> 
+          <td style="text-align:left;">G (1)</td> 
+          <td style="text-align:left;">Promo (2)</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p> <strong>Notes</strong>:</p> 
+       <ol> 
+        <li><a href="built-in-render-pipeline.html">Pipa Render Built-in</a>, dan <a href="universal-render-pipeline.html">Pipa Render Universal (URP)</a> keduanya secara eksklusif menggunakan skybox untuk membuat langit. Kotak langit ini adalah bahan yang menggunakan <a href="skybox-shaders.html">skybox Shader</a>.</li> 
+        <li><a href="high-definition-render-pipeline.html">Definisi Tinggi Render Pipeline (HDRP)</a> tidak mendukung bahan skybox dan bukan termasuk beberapa solusi generasi langit.</li> 
+       </ol> 
+       <h2>Membuat skybox Login</h2> 
+       <p>Untuk membuat bahan skybox baru:</p> 
+       <ol> 
+        <li>Dari bilah menu, klik <strong>Assets &gt; Create &gt; Material</strong>.</li> 
+        <li>Pada drop-down <strong>Shader</strong>, klik <strong>Skybox</strong> kemudian skybox Apakah Anda ingin menggunakan.</li> 
+        <li>Anda sekarang dapat mengisi properti di Bahan untuk mengatur skybox. Sifat yang tersedia pada Bahan tergantung pada kotak langit Shader penggunaan Material.</li> 
+       </ol> 
+       <p> <strong>Note</strong>: Login Shader memiliki set sendiri Tekstur prasyarat yang berbeda dalam jumlah dan <span class="tooltip"><strong>Texture format</strong><span class="tooltiptext">Format file untuk menangani tekstur selama rendering real-time oleh perangkat keras grafis 3D, seperti kartu grafis atau perangkat seluler. <a class="tooltipMoreInfoLink" href="class-TextureImporterOverride.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#TextureFormat">Glossary</a></span></span></span>. Untuk informasi tentang Tekstur Shader langit tertentu memerlukan, lihat dokumentasi untuk Shader skybox. Anda dapat menemukan daftar bayangan skybox dan dokumentasi mereka di halaman <a href="skybox-shaders.html">Home &gt; Sitemap</a>.</p> 
+       <h2>Menggambar skybox di anda adegan</h2> 
+       <p>Setelah Anda membuat bahan skybox, Anda dapat render di <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> Anda. Untuk melakukan ini:</p> 
+       <ol> 
+        <li>Dari bilah menu, klik <strong>Window &gt; Rendering &gt; Lighting Settings</strong>.</li> 
+        <li>Di jendela yang muncul, klik tab <strong>Scene</strong>.</li> 
+        <li>Menetapkan bahan skybox ke properti <strong>Skybox Material</strong>.</li> 
+       </ol> 
+       <p>Ini menarik skybox di latar belakang setiap <span class="tooltip"><strong>Camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span> di Adegan Anda. Jika Anda hanya ingin menggambar skybox untuk kamera tertentu, lihat <a href="#DrawingForCamera">Menggambar skybox untuk kamera tertentu</a>.</p> 
+       <h2>Menggunakan bahan skybox untuk pengaturan cahaya sekitar</h2> 
+       <p>Setelah Anda membuat bahan skybox, Unity dapat menggunakannya untuk menghasilkan pencahayaan ambient di Adegan Anda. Untuk membuat Unity melakukan ini:</p> 
+       <ol> 
+        <li>Buka jendela Pencahayaan (menu: <strong>Window &gt; Rendering &gt; Lighting Settings</strong>).</li> 
+        <li>Menetapkan skybox pilihan Anda ke properti <strong>Skybox Material</strong>.</li> 
+        <li>Klik drop-down <strong>Source</strong> dan, dari daftar, klik <strong>Skybox</strong>.</li> 
+       </ol> 
+       <p>Anda juga dapat menentukan ketika pembaruan Unity pencahayaan ambient. Untuk melakukan ini, ubah <strong>Ambient Mode</strong>. Dua nilai adalah:</p> 
+       <ul> 
+        <li> <strong>Realtime</strong>: Unity terus mengatur pencahayaan ambient untuk Adegan Anda. Ini berguna jika Anda mengubah skybox saat berjalan</li> 
+        <li> <strong>Baked</strong>: Unity hanya menghasilkan pencahayaan ambient untuk Adegan Anda ketika Anda mengklik tombol <strong>Generate Lighting</strong> di bagian bawah jendela Pencahayaan. Ini berguna jika skybox Anda tidak berubah selama waktu berjalan karena menyimpan sumber daya komputasi.</li> 
+       </ul> 
+       <p><a name="DrawingForCamera"> </a></p> 
+       <h2>Menggambar skybox untuk kamera tertentu</h2> 
+       <p>Jika Anda hanya ingin menggambar skybox di latar belakang Kamera tertentu, gunakan <a class="tooltipMoreInfoLink" href="class-Skybox.html">Komponen Skybox</a>. Ketika Anda melampirkan komponen ini ke <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> dengan Kamera, itu menimpa skybox yang menarik kamera. Untuk melampirkan dan mengatur komponen Skybox:</p> 
+       <ol> 
+        <li>Pilih Kamera di Adegan Anda dan lihat di jendela <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>.</li> 
+        <li>Klik <strong>Add Component &gt; Rendering &gt; Skybox</strong>.</li> 
+        <li>Pada komponen Skybox, menetapkan bahan skybox ke properti <strong>Custom Skybox</strong>.</li> 
+       </ol> 
+       <h2>Praktik Terbaik</h2> 
+       <p>Jika Skybox Anda termasuk matahari, bulan, atau cahaya lainnya di dalamnya, atur Cahaya Directional yang poin dalam arah yang sama dengan cahaya. Ini membuatnya tampak seolah-olah cahaya di skybox Anda menciptakan bayangan di Adegan Anda. Jika ada beberapa Lampu Directional di Adegan Anda, Anda dapat memilih mana Directional Light Skybox menggunakan. Untuk melakukan ini:</p> 
+       <ol> 
+        <li>Dari bilah menu, klik <strong>Window &gt; Rendering &gt; Lighting Settings</strong>.</li> 
+        <li>Klik tab <strong>Scene</strong>.</li> 
+        <li>Menetapkan Lampu Directional yang ingin Anda gunakan untuk properti <strong>Sun Source</strong>.</li> 
+       </ol> 
+       <p>Jika Anda ingin memiliki kabut di Adegan Anda, sesuaikan warna kabut ke warna skybox. Ini membuat campuran kabut ke warna langit Adegan. Untuk melakukan ini:</p> 
+       <ol> 
+        <li>Dari bilah menu, klik <strong>Window &gt; Rendering &gt; Lighting Settings</strong>.</li> 
+        <li>Klik tab <strong>Scene</strong>.</li> 
+        <li>Pada bagian <strong>Other Settings</strong>, aktifkan kotak cemen.<strong>Fog</strong> checkbox.</li> 
+        <li>Mengatur properti <strong>Color</strong> untuk warna yang sesuai dengan kotak langit Anda. Untuk ini, Anda dapat menggunakan alat dropper tinta untuk memilih warna dari Adegan.</li> 
+       </ol> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="skyboxes.html"></a></span> 
+         <div class="tip">
+           Skyboxes 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="skybox-shaders.html"></a></span> 
+         <div class="tip">
+           Skybox shaders 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Menggunakan AssetBundles Login</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="cloud" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="AssetWorkflow.html">Arus kerja aset</a></li> 
+         <li><a href="AssetBundlesIntro.html">AssetBundles</a></li> 
+         <li>Menggunakan AssetBundles Natively</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="AssetBundles-Dependencies.html"></a></span> 
+          <div class="tip">
+            Ketergantungan AsetBundle 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="AssetBundles-Cache.html"></a></span> 
+          <div class="tip">
+            Kompresi asetBundle 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Menggunakan AssetBundles Natively</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Ada empat API yang berbeda yang dapat Anda gunakan untuk memuat AssetBundles. Perilaku mereka bervariasi berdasarkan platform bundel dimuat dan metode <span class="tooltip"><strong>compression</strong><span class="tooltiptext">Metode menyimpan data yang mengurangi jumlah ruang penyimpanan yang dibutuhkan. <a href="class-TextureImporterOverride.html">Kompresi Tekstur</a>, <a href="class-AnimationClip.html#AssetProperties">Kompresi Animasi</a>, <a href="class-AudioClip.html">Kompresi Audio</a>, <a href="ReducingFilesize.html">Membangun Kompresi</a>.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#compression">Glossary</a></span></span></span> yang digunakan ketika AssetBundles dibangun (tidak terkompresi, LZMA, LZ4).</p> 
+       <p>Empat API yang harus kami kerjakan dengan:</p> 
+       <ul> 
+        <li></li> 
+        <li></li> 
+        <li></li> 
+        <li>’s (Unity 5.3 atau newer)</li> 
+       </ul> 
+       <h2>AssetBundle.LoadFromMemoryAsync</h2> 
+       <p> <a href="../ScriptReference/AssetBundle.LoadFromMemoryAsync.html">AssetBundle.LoadFromMemoryAsync</a> </p> 
+       <p>Fungsi ini mengambil array dari byte yang mengandung data AssetBundle. Opsional Anda juga dapat melewati nilai CRC jika Anda menginginkan. Jika bundel dikompresi LZMA akan menekan AssetBundle sementara itu memuat. Bundel terkompresi LZ4 dimuat dalam keadaan terkompresi mereka.</p> 
+       <p>Berikut ini adalah salah satu contoh cara menggunakan metode ini:</p> 
+       <pre><code>using UnityEngine;
+using System.Collections;
+using System.IO;
+
+public class Example : MonoBehaviour
+{
+    IEnumerator LoadFromMemoryAsync(string path)
+    {
+        AssetBundleCreateRequest createRequest = AssetBundle.LoadFromMemoryAsync(File.ReadAllBytes(path));
+        yield return createRequest;
+        AssetBundle bundle = createRequest.assetBundle;
+        var prefab = bundle.LoadAsset&lt;GameObject&gt;("MyObject");
+        Instantiate(prefab);
+    }
+}
+</code></pre> 
+       <p>Namun, ini bukan satu-satunya strategi yang membuat menggunakan LoadFromMemoryAsync mungkin. File.ReadAllBytes(path) bisa diganti dengan prosedur yang diinginkan untuk mendapatkan array byte.</p> 
+       <h2>AssetBundle.LoadFromFile</h2> 
+       <p><a href="../ScriptReference/AssetBundle.LoadFromFile.html">AssetBundle.LoadFromFile</a></p> 
+       <p>API ini sangat efisien ketika memuat bundel yang tidak terkompresi dari penyimpanan lokal. Login Dari File akan memuat bundel langsung dari disk jika bundel tidak terkompresi atau chunk (LZ4) dikompresi. Memuat bundel terkompresi penuh (LZMA) dengan metode ini akan terlebih dahulu menekan bundel sebelum memuatnya ke dalam memori.</p> 
+       <p>Satu contoh cara menggunakan <code>LoadFromFile</code>:</p> 
+       <pre><code>using System.IO;
+using UnityEngine;
+
+public class LoadFromFileExample : MonoBehaviour
+{
+    void Start()
+    {
+        var myLoadedAssetBundle = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, "myassetBundle"));
+
+        if (myLoadedAssetBundle == null)
+        {
+            Debug.Log("Failed to load AssetBundle!");
+            return;
+        }
+        var prefab = myLoadedAssetBundle.LoadAsset&lt;GameObject&gt;("MyObject");
+        Instantiate(prefab);
+    }
+}
+</code></pre> 
+       <p>Catatan: Pada perangkat Android dengan Unity 5.3 atau lebih tua, API ini akan gagal ketika mencoba memuat AssetBundles dari jalur Aset Streaming. Ini karena isi jalur itu akan berada di dalam file .jar terkompresi. Unity 5.4 dan yang lebih baru dapat menggunakan panggilan API ini dengan Aset Streaming cukup bagus.</p> 
+       <h2>WordPress.org</h2> 
+       <p><a href="../ScriptReference/Networking.UnityWebRequestAssetBundle.GetAssetBundle.html">WordPress.org</a></p> 
+       <p>UnityWebRequestAssetBundle memiliki panggilan API khusus untuk berurusan dengan AssetBundles. Untuk memulai, Anda harus membuat permintaan web Anda menggunakan <code>UnityWebRequestAssetBundle.GetAssetBundle</code>. Setelah mengembalikan permintaan, melewati objek permintaan menjadi <code>DownloadHandlerAssetBundle.GetContent(UnityWebRequestAssetBundle)</code>. Panggilan <code>GetContent</code> ini akan mengembalikan objek AssetBundle Anda.</p> 
+       <p>Anda juga dapat menggunakan properti <code>assetBundle</code> pada kelas <a href="../ScriptReference/Networking.DownloadHandlerAssetBundle.html">DownloadHandlerAssetBundle</a> setelah mengunduh bundel untuk memuat AssetBundle dengan efisiensi <code>AssetBundle.LoadFromFile</code>.</p> 
+       <p>Berikut ini contoh cara memuat AssetBundle yang mengandung dua <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> dan Instantiate. Untuk memulai proses ini, kita hanya perlu memanggil <code>StartCoroutine(InstantiateObject())</code>;</p> 
+       <pre><code>IEnumerator InstantiateObject()
+{
+    string uri = "file:///" + Application.dataPath + "/AssetBundles/" + assetBundleName; 
+    UnityEngine.Networking.UnityWebRequestAssetBundle request 
+        = UnityEngine.Networking.UnityWebRequestAssetBundle.GetAssetBundle(uri, 0);
+    yield return request.SendWebRequest();
+    AssetBundle bundle = DownloadHandlerAssetBundle.GetContent(request);
+    GameObject cube = bundle.LoadAsset&lt;GameObject&gt;("Cube");
+    GameObject sprite = bundle.LoadAsset&lt;GameObject&gt;("Sprite");
+    Instantiate(cube);
+    Instantiate(sprite);
+}
+</code></pre> 
+       <h4>Memuat Aset dari AssetBundles</h4> 
+       <p>Sekarang Anda telah berhasil mengunduh Anda AsetBundle, saatnya untuk akhirnya dimuat dalam beberapa Aset.</p> 
+       <p>snippet kode generik:</p> 
+       <pre><code>T objectFromBundle = bundleObject.LoadAsset&lt;T&gt;(assetName);
+</code></pre> 
+       <p>T adalah jenis Aset yang Anda coba untuk memuat.</p> 
+       <p>Ada beberapa pilihan ketika memutuskan cara memuat Aset. Kami memiliki <code>LoadAsset</code>, <code>LoadAllAssets</code>, dan rekan Async mereka <code>LoadAssetAsync</code> dan <code>LoadAllAssetsAsync</code> masing-masing.</p> 
+       <p>Ini adalah cara memuat aset dari AsetBundles secara serentak:</p> 
+       <p>Untuk memuat GameObject tunggal:</p> 
+       <pre><code>GameObject gameObject = loadedAssetBundle.LoadAsset&lt;GameObject&gt;(assetName);
+</code></pre> 
+       <p>Untuk memuat semua aset:</p> 
+       <pre><code>Unity.Object[] objectArray = loadedAssetBundle.LoadAllAssets();
+</code></pre> 
+       <p>Sekarang, di mana metode yang ditunjukkan sebelumnya mengembalikan jenis objek yang Anda bongkar atau array objek, metode asinkron mengembalikan <a href="../ScriptReference/AssetBundleRequest.html">AssetBundleRequest</a>. Anda harus menunggu operasi ini untuk menyelesaikan sebelum mengakses aset. Untuk memuat aset:</p> 
+       <pre><code>AssetBundleRequest request = loadedAssetBundleObject.LoadAssetAsync&lt;GameObject&gt;(assetName);
+yield return request;
+var loadedAsset = request.asset;
+</code></pre> 
+       <p>Dan</p> 
+       <pre><code>AssetBundleRequest request = loadedAssetBundle.LoadAllAssetsAsync();
+yield return request;
+var loadedAssets = request.allAssets;
+</code></pre> 
+       <p>Setelah Anda dimuat Aset Anda bagus untuk pergi! Anda dapat menggunakan objek yang dimuat seperti yang Anda inginkan.</p> 
+       <h4>Memuat AsetBundle Manifests</h4> 
+       <p>Memuat manifestasi AssetBundle dapat sangat berguna. Terutama ketika berurusan dengan ketergantungan Aset.</p> 
+       <p>Untuk mendapatkan objek <a href="../ScriptReference/AssetBundleManifest.html">AssetBundleManifest</a> yang dapat digunakan, Anda harus memuat bahwa AsetBundle tambahan (yang bernama hal yang sama dengan folder itu di) dan memuat objek AsetBundleManifest dari itu.</p> 
+       <p>Memuat manifestasi itu sendiri dilakukan persis sama dengan Aset lain dari AsetBundle:</p> 
+       <pre><code>AssetBundle assetBundle = AssetBundle.LoadFromFile(manifestFilePath);
+AssetBundleManifest manifest = assetBundle.LoadAsset&lt;AssetBundleManifest&gt;("AssetBundleManifest");
+</code></pre> 
+       <p>Sekarang Anda memiliki akses ke panggilan API <code>AssetBundleManifest</code> melalui objek manifest dari contoh di atas. Dari sini Anda dapat menggunakan manifestasi untuk mendapatkan informasi tentang AssetBundles yang Anda bangun. Informasi ini termasuk data ketergantungan, data hash, dan data varian untuk AssetBundles.</p> 
+       <p>Ingat di bagian sebelumnya ketika kita membahas dependensi AsetBundle dan bagaimana, jika bundel memiliki ketergantungan pada bundel lain, bundel tersebut harus dimuat sebelum memuat Aset dari bundel asli? Objek manifestasi membuat secara dinamis menemukan ketergantungan pemuatan. Katakanlah kita ingin memuat semua ketergantungan untuk AsetBundle bernama “assetBundle”.</p> 
+       <pre><code>AssetBundle assetBundle = AssetBundle.LoadFromFile(manifestFilePath);
+AssetBundleManifest manifest = assetBundle.LoadAsset&lt;AssetBundleManifest&gt;("AssetBundleManifest");
+string[] dependencies = manifest.GetAllDependencies("assetBundle"); //Pass the name of the bundle you want the dependencies for.
+foreach(string dependency in dependencies)
+{
+    AssetBundle.LoadFromFile(Path.Combine(assetBundlePath, dependency));
+}
+</code></pre> 
+       <p>Sekarang Anda memuat AssetBundles, dependensi Aset, dan Aset, saatnya untuk berbicara tentang mengelola semua Aset yang dimuat ini.</p> 
+       <h2>Mengelola Aset Dimuat</h2> 
+       <p>Sitemap Paket ini menyediakan sistem siap pakai untuk mengelola pemuatan Aset Bundes, dependencies, dan Aset. Unity merekomendasikan menggunakan Alamat daripada mengelola AssetBundles sendiri.<strong>Note:</strong> The package provides a ready-made system to manage loading Asset Bundes, dependencies, and Assets. Unity recommends using Addressables rather than managing AssetBundles yourself.</p> 
+       <p>Lihat juga: Unity Pelajari tutorial tentang</p> 
+       <p>Unity tidak membongkar secara otomatis Objek saat dihapus dari <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> aktif. Pembersihan aset dipicu pada waktu tertentu, dan juga dapat dipicu secara manual.</p> 
+       <p>Penting untuk mengetahui kapan memuat dan membongkar AssetBundle. Improperly membongkar AsetBundle dapat menyebabkan benda duplikat dalam memori atau keadaan yang tidak diinginkan lainnya, seperti tekstur yang hilang.</p> 
+       <p>Hal-hal terbesar untuk memahami tentang manajemen asetBundle adalah ketika memanggil <a href="../ScriptReference/AssetBundle.Unload.html">AssetBundle.Unload(bool)</a> - atau <a href="../ScriptReference/AssetBundle.Unload.html">AssetBundle.UnloadAsync(bool)</a> - dan jika Anda harus lulus benar atau palsu ke panggilan fungsi. Unload adalah fungsi non-statis yang akan membongkar AssetBundle Anda. API ini membongkar informasi header dari AssetBundle yang disebut. Argumen menunjukkan apakah untuk juga membongkar semua Objek yang sesaat dari AssetBundle ini.</p> 
+       <p> <code>AssetBundle.Unload(true)</code> membongkar semua GameObjects (dan ketergantungan mereka) yang dimuat dari AssetBundle. Ini tidak termasuk GameObjects yang disalin (seperti GameObjects Instan), karena mereka tidak lagi milik AssetBundle. Ketika ini terjadi, Tekstur yang dimuat dari AsetBundle (dan masih miliknya) hilang dari GameObjects di Adegan, dan Unity memperlakukan mereka sebagai Tekstur yang hilang.</p> 
+       <p>Mari kita asumsikan Bahan M dimuat dari AssetBundle AB seperti yang ditunjukkan di bawah ini dan digunakan dalam <span class="tooltip"><strong>Prefab</strong><span class="tooltiptext">Jenis aset yang memungkinkan Anda untuk menyimpan GameObject lengkap dengan komponen dan properti. Prefab bertindak sebagai template dari mana Anda dapat membuat instance objek baru di tempat kejadian. <a class="tooltipMoreInfoLink" href="Prefabs.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Prefab">Glossary</a></span></span></span> P.</p> 
+       <p>Jika AB.Unload(true) disebut. Setiap kasus M di adegan aktif juga akan dibongkar dan hancur.</p> 
+       <p>Jika Anda bukan memanggil AB. Unload(false) itu akan memecah rantai instance M dan AB saat ini.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AssetBundles-Native-1.png" alt=""> 
+       </figure> 
+       <p>Jika AB dimuat lagi kemudian dan AB.LoadAsset() disebut, Unity tidak akan kembali-link salinan M yang ada ke Bahan yang baru dimuat.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AssetBundles-Native-2.png" alt=""> 
+       </figure> 
+       <p>Jika Anda membuat instance lain dari Prefab P, itu tidak akan menggunakan salinan yang ada dari M. Alih-alih dua salinan M dimuat.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AssetBundles-Native-3.png" alt=""> 
+       </figure> 
+       <p>Umumnya, menggunakan <code>AssetBundle.Unload(false)</code> tidak menyebabkan situasi yang ideal. Sebagian besar proyek harus menggunakan <code>AssetBundle.Unload(true)</code> dan mengadopsi metode untuk memastikan bahwa Objek tidak digandakan. Dua metode umum adalah:</p> 
+       <ul> 
+        <li><p>Memiliki poin terdefinisi dengan baik selama masa pakai aplikasi di mana transien AsetBundles dibongkar, seperti antara tingkat atau selama layar pemuatan.</p></li> 
+        <li><p>Mempertahankan nomor referensi untuk individu Objek dan bongkar AssetBundles hanya ketika semua objek konstituen mereka tidak digunakan. Ini memungkinkan aplikasi untuk membongkar &amp; memuat ulang objek individu tanpa menggandakan memori.</p></li> 
+       </ul> 
+       <p>Jika aplikasi harus menggunakan <code>AssetBundle.Unload(false)</code>, maka objek individu hanya dapat dibongkar dalam dua cara:</p> 
+       <ul> 
+        <li><p>Menghilangkan semua referensi ke objek yang tidak diinginkan, baik di tempat kejadian dan kode. Setelah ini dilakukan, hubungi <a href="../ScriptReference/Resources.UnloadUnusedAssets.html">Sumber Daya.UnloadUnusedAssets</a>.</p></li> 
+        <li><p>Beban adegan non-additively. Ini akan menghancurkan semua objek dalam adegan saat ini dan invoke <a href="../ScriptReference/Resources.UnloadUnusedAssets.html">Sumber Daya.UnloadUnusedAssets</a> secara otomatis.</p></li> 
+       </ul> 
+       <!-- area:cloud --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="AssetBundles-Dependencies.html"></a></span> 
+         <div class="tip">
+           Ketergantungan AsetBundle 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="AssetBundles-Cache.html"></a></span> 
+         <div class="tip">
+           Kompresi asetBundle 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

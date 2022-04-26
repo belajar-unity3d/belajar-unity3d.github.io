@@ -1,0 +1,869 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Input Unity XR</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="platforms" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Unity User Manual 2022.1 (beta)</a></li> 
+         <li><a href="Input.html">Input</a></li> 
+         <li>Input Unity XR</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="MobileKeyboard.html"></a></span> 
+          <div class="tip">
+            Mobil Keyboard 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="Unity2D.html"></a></span> 
+          <div class="tip">
+            2D 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Input Unity XR</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Bagian ini dari Panduan Pengguna Unity memberikan informasi tentang semua perangkat input yang didukung Unity untuk realitas virtual, realitas augmented, dan aplikasi Windows Mixed Reality. Halaman ini mencakup topik berikut:</p> 
+       <ul> 
+        <li><a href="#XRInputMappings">Pemetaan input XR</a></li> 
+        <li><a href="#AccessingInputDevices">Mengakses perangkat input</a></li> 
+        <li><a href="#AccessingInputFeatures">Mengakses fitur input pada perangkat input</a></li> 
+        <li><a href="#XRInputLegacySystem">Mengakses input XR melalui sistem input legacy</a></li> 
+        <li><a href="#Haptics">Haptics</a></li> 
+       </ul> 
+       <p>Platform XR memiliki berbagai fitur input yang kaya yang dapat Anda manfaatkan ketika Anda merancang interaksi pengguna. Aplikasi Anda dapat menggunakan data spesifik yang merujuk posisi, rotasi, sentuh, tombol, joystick, dan sensor jari. Namun, akses ke fitur input ini dapat bervariasi di antara platform. Misalnya, ada perbedaan kecil antara Rift Vive dan Oculus, tetapi platform desktop VR-enabled dan platform mobile seperti Daydream berbeda banyak lagi.</p> 
+       <p>Unity menyediakan C # struct yang disebut <a href="../ScriptReference/XR.InputFeatureUsage.html">InputFeatureUsage</a>, yang menentukan set standar kontrol perangkat fisik (seperti tombol dan pemicu) untuk mengakses input pengguna pada platform apa pun. Ini membantu Anda mengidentifikasi jenis input dengan nama. Lihat <a href="../ScriptReference/XR.CommonUsages.html">XR.Input.CommonUsages</a> untuk definisi setiap <code>InputFeatureUsage</code>.</p> 
+       <p>Setiap <code>InputFeatureUsage</code> sesuai dengan aksi atau jenis input umum. Misalnya, Unity mendefinisikan <code>InputFeatureUsage</code> yang disebut <code>trigger</code> sebagai input sumbu tunggal yang kontrol jari indeks, terlepas dari platform XR yang Anda gunakan. Anda dapat menggunakan <code>InputFeatureUsage</code> untuk mendapatkan state <code>trigger</code> menggunakan namanya, sehingga Anda tidak perlu mengatur sumbu (atau tombol pada beberapa platform XR) untuk sistem Input Unity konvensional.</p> 
+       <p><a name="XRInputMappings"></a></p> 
+       <h2>Pemetaan input XR</h2> 
+       <p>Tabel berikut daftar nama pengontrol standar <code>InputFeatureUsage</code> dan bagaimana peta ke pengontrol sistem XR populer:</p> 
+       <div class="wide-table"> 
+        <table> 
+         <colgroup> 
+          <col style="text-align:left;"> 
+          <col style="text-align:left;"> 
+          <col style="text-align:left;"> 
+          <col style="text-align:left;"> 
+          <col style="text-align:left;"> 
+          <col style="text-align:left;"> 
+          <col style="text-align:left;"> 
+          <col style="text-align:left;"> 
+          <col style="text-align:left;"> 
+          <col style="text-align:left;"> 
+          <col style="text-align:left;"> 
+          <col style="text-align:left;"> 
+         </colgroup> 
+         <thead> 
+          <tr> 
+           <th style="text-align:left;"><strong>InputFeatureUsage</strong></th> 
+           <th style="text-align:left;"><strong>Feature type</strong></th> 
+           <th style="text-align:left;"> <strong>Legacy input index</strong> (kontroler kiri / pengontrol kanan)</th> 
+           <th style="text-align:left;"><strong>WMR</strong></th> 
+           <th style="text-align:left;"><strong>Oculus</strong></th> 
+           <th style="text-align:left;"><strong>GearVR</strong></th> 
+           <th style="text-align:left;"><strong>Daydream</strong></th> 
+           <th style="text-align:left;"><strong>OpenVR (Full)</strong></th> 
+           <th style="text-align:left;"><strong>Vive</strong></th> 
+           <th style="text-align:left;"><strong>Oculus via OpenVR</strong></th> 
+           <th style="text-align:left;"><strong>WMR via OpenVR</strong></th> 
+           <th style="text-align:left;"><strong>Magic Leap</strong></th> 
+          </tr> 
+         </thead> 
+         <tbody> 
+          <tr> 
+           <td style="text-align:left;"><a href="../ScriptReference/XR.CommonUsages-primary2DAxis.html">primary2DAxis</a></td> 
+           <td style="text-align:left;">2D sumbu</td> 
+           <td style="text-align:left;">[(1,2)/(4,5)]</td> 
+           <td style="text-align:left;">Touchpad</td> 
+           <td style="text-align:left;">Joystick</td> 
+           <td style="text-align:left;">Touchpad</td> 
+           <td style="text-align:left;">Touchpad</td> 
+           <td style="text-align:left;">Trackpad/Joystick</td> 
+           <td style="text-align:left;">Trackpad</td> 
+           <td style="text-align:left;">Joystick</td> 
+           <td style="text-align:left;">Joystick</td> 
+           <td style="text-align:left;">Touchpad</td> 
+          </tr> 
+          <tr> 
+           <td style="text-align:left;"><a href="../ScriptReference/XR.CommonUsages-trigger.html">trigger</a></td> 
+           <td style="text-align:left;">Axis</td> 
+           <td style="text-align:left;">[9/10]</td> 
+           <td style="text-align:left;">Trigger</td> 
+           <td style="text-align:left;">Trigger</td> 
+           <td style="text-align:left;">Trigger</td> 
+           <td style="text-align:left;">Trigger</td> 
+           <td style="text-align:left;">Trigger</td> 
+           <td style="text-align:left;">Trigger</td> 
+           <td style="text-align:left;">Trigger</td> 
+           <td style="text-align:left;">Trigger</td> 
+           <td style="text-align:left;">Trigger</td> 
+          </tr> 
+          <tr> 
+           <td style="text-align:left;"><a href="../ScriptReference/XR.CommonUsages-grip.html">grip</a></td> 
+           <td style="text-align:left;">Axis</td> 
+           <td style="text-align:left;">[11/12]</td> 
+           <td style="text-align:left;">Grip</td> 
+           <td style="text-align:left;">Grip</td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;">Bumper</td> 
+           <td style="text-align:left;">Grip</td> 
+           <td style="text-align:left;">Grip</td> 
+           <td style="text-align:left;">Grip</td> 
+           <td style="text-align:left;">Grip</td> 
+           <td style="text-align:left;">Bumper</td> 
+          </tr> 
+          <tr> 
+           <td style="text-align:left;"><a href="../ScriptReference/XR.CommonUsages-secondary2DAxis.html">sekunder2DAxis</a></td> 
+           <td style="text-align:left;">2D sumbu</td> 
+           <td style="text-align:left;">[(17,18)/(19,20)]</td> 
+           <td style="text-align:left;">Joystick</td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;">Touchpad</td> 
+           <td style="text-align:left;"></td> 
+          </tr> 
+          <tr> 
+           <td style="text-align:left;">sekunder2DAxisClick</td> 
+           <td style="text-align:left;">Button</td> 
+           <td style="text-align:left;">[18/19]</td> 
+           <td style="text-align:left;">Joystick - Klik</td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+          </tr> 
+          <tr> 
+           <td style="text-align:left;"><a href="../ScriptReference/XR.CommonUsages-primaryButton.html">primaryButton</a></td> 
+           <td style="text-align:left;">Button</td> 
+           <td style="text-align:left;">[2/0]</td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;">[X/A] - Press</td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;">App</td> 
+           <td style="text-align:left;">Primary</td> 
+           <td style="text-align:left;">Tombol primer (tombol lepas)(1)</td> 
+           <td style="text-align:left;">Primer (Y / B)</td> 
+           <td style="text-align:left;">Menu</td> 
+           <td style="text-align:left;">Menu</td> 
+          </tr> 
+          <tr> 
+           <td style="text-align:left;"><a href="../ScriptReference/XR.CommonUsages-primaryTouch.html">primaryTouch</a></td> 
+           <td style="text-align:left;">Button</td> 
+           <td style="text-align:left;">[12/10]</td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;">[X/A] - Sentuh</td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+          </tr> 
+          <tr> 
+           <td style="text-align:left;"><a href="../ScriptReference/XR.CommonUsages-secondaryButton.html">secondaryButton</a></td> 
+           <td style="text-align:left;">Button</td> 
+           <td style="text-align:left;">[1]</td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;">[Y/B] - Press</td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;">Alternate</td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;">Alternate (X/A)</td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+          </tr> 
+          <tr> 
+           <td style="text-align:left;"><a href="../ScriptReference/XR.CommonUsages-secondaryTouch.html">secondaryTouch</a></td> 
+           <td style="text-align:left;">Button</td> 
+           <td style="text-align:left;">[13/11]</td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;">[Y/B] - Sentuh</td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+          </tr> 
+          <tr> 
+           <td style="text-align:left;"><a href="../ScriptReference/XR.CommonUsages-gripButton.html">gripButton</a></td> 
+           <td style="text-align:left;">Button</td> 
+           <td style="text-align:left;">[4/5]</td> 
+           <td style="text-align:left;">Basket</td> 
+           <td style="text-align:left;">Basket</td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;">Basket</td> 
+           <td style="text-align:left;">Basket</td> 
+           <td style="text-align:left;">Basket</td> 
+           <td style="text-align:left;">Basket</td> 
+           <td style="text-align:left;">Bumper - Press</td> 
+          </tr> 
+          <tr> 
+           <td style="text-align:left;"><a href="../ScriptReference/XR.CommonUsages-triggerButton.html">Login Login</a></td> 
+           <td style="text-align:left;">Button</td> 
+           <td style="text-align:left;">[14/15]</td> 
+           <td style="text-align:left;">Trigger - Press</td> 
+           <td style="text-align:left;">Trigger - Press</td> 
+           <td style="text-align:left;">Trigger - Press</td> 
+           <td style="text-align:left;">Trigger - Press</td> 
+           <td style="text-align:left;">Trigger - Press</td> 
+           <td style="text-align:left;">Trigger - Press</td> 
+           <td style="text-align:left;">Trigger - Touch</td> 
+           <td style="text-align:left;">Trigger - Press</td> 
+           <td style="text-align:left;">Trigger - Press</td> 
+          </tr> 
+          <tr> 
+           <td style="text-align:left;"><a href="../ScriptReference/XR.CommonUsages-menuButton.html">menuButton</a></td> 
+           <td style="text-align:left;">Button</td> 
+           <td style="text-align:left;">[6/7]</td> 
+           <td style="text-align:left;">Menu</td> 
+           <td style="text-align:left;">Mulai (hanya pengontrol kiri)</td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+          </tr> 
+          <tr> 
+           <td style="text-align:left;"><a href="../ScriptReference/XR.CommonUsages-primary2DAxisClick.html">primary2DAxisClick</a></td> 
+           <td style="text-align:left;">Button</td> 
+           <td style="text-align:left;">[8/9]</td> 
+           <td style="text-align:left;">Touchpad - Klik</td> 
+           <td style="text-align:left;">WordPress.org</td> 
+           <td style="text-align:left;">WordPress.org</td> 
+           <td style="text-align:left;">WordPress.org</td> 
+           <td style="text-align:left;">Trackpad/Joystick - Press</td> 
+           <td style="text-align:left;">Trackpad - Press</td> 
+           <td style="text-align:left;">Joystick - Press</td> 
+           <td style="text-align:left;">WordPress.org</td> 
+           <td style="text-align:left;"></td> 
+          </tr> 
+          <tr> 
+           <td style="text-align:left;"><a href="../ScriptReference/XR.CommonUsages-primary2DAxisTouch.html">primary2DAxisTouch</a></td> 
+           <td style="text-align:left;">Button</td> 
+           <td style="text-align:left;">[16]</td> 
+           <td style="text-align:left;">Touchpad - Sentuh</td> 
+           <td style="text-align:left;">WordPress.org</td> 
+           <td style="text-align:left;">Touchpad - Sentuh</td> 
+           <td style="text-align:left;">Touchpad - Sentuh</td> 
+           <td style="text-align:left;">Trackpad/Joystick - Sentuh</td> 
+           <td style="text-align:left;">Trackpad - Sentuh</td> 
+           <td style="text-align:left;">Joystick - Touch</td> 
+           <td style="text-align:left;">Touchpad - Sentuh</td> 
+           <td style="text-align:left;">Touchpad - Sentuh</td> 
+          </tr> 
+          <tr> 
+           <td style="text-align:left;"><a href="../ScriptReference/XR.CommonUsages-batteryLevel.html">Login Login</a></td> 
+           <td style="text-align:left;">Axis</td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;">Tingkat baterai</td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+          </tr> 
+          <tr> 
+           <td style="text-align:left;"><a href="../ScriptReference/XR.XRDevice-userPresence.html">Login Sitemap</a></td> 
+           <td style="text-align:left;">Button</td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;">Kehadiran pengguna</td> 
+           <td style="text-align:left;">Kehadiran pengguna</td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+           <td style="text-align:left;"></td> 
+          </tr> 
+         </tbody> 
+        </table> 
+       </div> 
+       <p>(1) Tombol sandwich mengacu pada tombol menu Vive. Tombol ini dipetakan ke primerButton, daripada menuButton, untuk menangani aplikasi lintas platform yang lebih baik.</p> 
+       <p>Lihat <a href="../ScriptReference/XR.CommonUsages.html">XR.Input.CommonUsages</a> untuk definisi setiap <code>InputFeatureUsage</code>.</p> 
+       <p><a name="AccessingInputDevices"></a></p> 
+       <h2>Mengakses perangkat input</h2> 
+       <p>Sebuah <a href="../ScriptReference/XR.InputDevice.html">InputDevice</a> mewakili perangkat fisik, seperti pengontrol, ponsel, atau headset. Ini dapat berisi informasi tentang pelacakan perangkat, tombol, joysticks, dan kontrol input lainnya. Untuk informasi lebih lanjut tentang API <code>InputDevice</code>, lihat dokumentasi pada <a href="../ScriptReference/XR.InputDevice.html">InputDevice</a>.</p> 
+       <p>Gunakan kelas <a href="../ScriptReference/XR.InputDevices.html">XR.InputDevices</a> untuk mengakses perangkat input yang saat ini terhubung ke sistem XR. Untuk mendapatkan daftar semua perangkat yang terhubung, gunakan <a href="../ScriptReference/XR.InputDevices.GetDevices.html">InputDevices.GetDevices</a>:</p> 
+       <pre><code>var inputDevices = new List&lt;UnityEngine.XR.InputDevice&gt;();
+UnityEngine.XR.InputDevices.GetDevices(inputDevices);
+
+foreach (var device in inputDevices)
+{
+    Debug.Log(string.Format("Device found with name '{0}' and role '{1}'", device.name, device.role.ToString()));
+}
+</code></pre> 
+       <p>Perangkat input tetap berlaku pada bingkai sampai sistem XR memutuskannya. Gunakan properti <a href="../ScriptReference/XR.InputDevice-isValid.html">InputDevice.IsValid</a> untuk menentukan apakah <code>InputDevice</code> masih mewakili pengontrol aktif.</p> 
+       <p>Anda dapat mengakses perangkat input dengan:</p> 
+       <ul> 
+        <li>Characteristics</li> 
+        <li>Role</li> 
+        <li>XR node</li> 
+       </ul> 
+       <h3>Mengakses perangkat input dengan karakteristik</h3> 
+       <p>Karakteristik perangkat menggambarkan apa perangkat yang mampu, atau apa yang digunakan untuk (misalnya, apakah itu dipasang kepala). <a href="../ScriptReference/XR.InputDeviceCharacteristics.html">Datasheet</a> adalah serangkaian bendera yang dapat Anda tambahkan ke kode Anda untuk mencari perangkat yang sesuai dengan spesifikasi tertentu. Anda dapat menyaring perangkat dengan karakteristik berikut:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Device</strong></th> 
+          <th style="text-align:left;"><strong>Characteristic</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceCharacteristics.HeadMounted.html">HeadMounted</a></td> 
+          <td style="text-align:left;">Perangkat melekat pada kepala pengguna. Ini memiliki pelacakan perangkat dan pelacakan mata pusat. Bendera ini paling umum digunakan untuk mengidentifikasi tampilan yang dipasang di kepala (HMDs).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><a class="tooltipMoreInfoLink" href="../ScriptReference/XR.InputDeviceCharacteristics.Camera.html">Kamera</a><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Perangkat memiliki pelacakan kamera.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceCharacteristics.HeldInHand.html">HeldInHand</a></td> 
+          <td style="text-align:left;">Pengguna memegang perangkat di tangan mereka.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceCharacteristics.HandTracking.html">HandTracking</a></td> 
+          <td style="text-align:left;">Perangkat ini mewakili tangan yang dilacak secara fisik. Ini memiliki pelacakan perangkat, dan mungkin mengandung data tangan dan tulang.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceCharacteristics.EyeTracking.html">EyeTracking</a></td> 
+          <td style="text-align:left;">Perangkat dapat melakukan pelacakan mata dan memiliki fitur <a href="../ScriptReference/XR.CommonUsages-eyesData.html">EyesData</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceCharacteristics.TrackedDevice.html">TrackedDevice</a></td> 
+          <td style="text-align:left;">Perangkat dapat dilacak di ruang 3D. Ini memiliki pelacakan perangkat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceCharacteristics.Controller.html">Controller</a></td> 
+          <td style="text-align:left;">Perangkat memiliki data input untuk tombol dan sumbu, dan dapat digunakan sebagai pengontrol.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceCharacteristics.TrackingReference.html">TrackingReference</a></td> 
+          <td style="text-align:left;">Perangkat mewakili objek referensi pelacakan statis. Ini memiliki pelacakan perangkat, tetapi data pelacakan tidak harus berubah.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceCharacteristics.Left.html">Left</a></td> 
+          <td style="text-align:left;">Gunakan karakteristik ini dalam kombinasi dengan karakteristik HoldInHand atau HandTracking untuk mengidentifikasi perangkat yang terkait dengan tangan kiri.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceCharacteristics.Right.html">Right</a></td> 
+          <td style="text-align:left;">Gunakan karakteristik ini dalam kombinasi dengan karakteristik DiHand atau HandTracking untuk mengidentifikasi perangkat yang terkait dengan tangan yang tepat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceCharacteristics.Simulated6DOF.html">Simulasi6DOF</a></td> 
+          <td style="text-align:left;">Perangkat melaporkan data 6DOF, tetapi hanya memiliki sensor 3DOF. Unity mensimulasikan data posisi.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>XR SDK melaporkan karakteristik ini. Anda dapat melihatnya dengan <a href="../ScriptReference/XR.InputDevice-characteristics.html">InputDevice.Characteristics</a>. Perangkat dapat, dan sering harus, memiliki beberapa karakteristik yang dapat Anda filter dan akses dengan sedikit bendera.</p> 
+       <p> <a href="../ScriptReference/XR.InputDevices.GetDevicesWithCharacteristics.html">InputDevices.GetDevicesWithCharacteristik</a> menyediakan cara untuk mencari semua perangkat dengan set karakteristik yang diberikan. Misalnya, Anda dapat mencari Kiri, HeldInHand, Controller InputDevices tersedia dalam sistem dengan kode berikut:</p> 
+       <pre><code>var leftHandedControllers = new List&lt;UnityEngine.XR.InputDevice&gt;();
+var desiredCharacteristics = UnityEngine.XR.InputDeviceCharacteristics.HeldInHand | UnityEngine.XR.InputDeviceCharacteristics.Left | UnityEngine.XR.InputDeviceCharacteristics.Controller;
+UnityEngine.XR.InputDevices.GetDevicesWithCharacteristics(desiredCharacteristics, leftHandedControllers);
+
+foreach (var device in leftHandedControllers)
+{
+    Debug.Log(string.Format("Device name '{0}' has characteristics '{1}'", device.name, device.characteristics.ToString()));
+}
+</code></pre> 
+       <p>Perangkat fungsi ini menemukan setidaknya karakteristik yang ditentukan, tetapi mungkin mengandung karakteristik tambahan. Sebagai contoh, untuk menemukan pengontrol kiri yang dapat Anda cari InputDeviceCharacteristic. Hanya kiri, dan tidak EnterDeviceCharacteristic. Login</p> 
+       <h3>Mengakses perangkat input dengan peran</h3> 
+       <p>Peran perangkat menggambarkan fungsi umum perangkat input. Gunakan numerasi <a href="../ScriptReference/XR.InputDeviceRole.html">InputDeviceRole</a> untuk menentukan peran perangkat. Peran yang ditentukan adalah:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Role</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceRole.GameController.html">GameController</a></td> 
+          <td style="text-align:left;">Konsol-style <span class="tooltip"><strong>game controller</strong><span class="tooltiptext">Perangkat untuk mengontrol objek dan karakter dalam permainan.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#gamecontroller">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceRole.Generic.html">Generic</a></td> 
+          <td style="text-align:left;">Perangkat yang mewakili perangkat XR inti, seperti tampilan yang dipasang kepala atau perangkat seluler.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceRole.HardwareTracker.html">HardwareTracker</a></td> 
+          <td style="text-align:left;">Perangkat pelacakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceRole.LeftHanded.html">LeftHanded</a></td> 
+          <td style="text-align:left;">Perangkat yang terkait dengan tangan kiri pengguna.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceRole.RightHanded.html">RightHanded</a></td> 
+          <td style="text-align:left;">Perangkat yang terkait dengan tangan kanan pengguna.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="../ScriptReference/XR.InputDeviceRole.TrackingReference.html">TrackingReference</a></td> 
+          <td style="text-align:left;">Perangkat yang melacak perangkat lain, seperti kamera pelacakan Oculus.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>XR SDK melaporkan peran ini, tetapi penyedia yang berbeda dapat mengatur peran perangkat mereka secara berbeda. Selain itu, pengguna dapat beralih tangan, sehingga tugas peran mungkin tidak cocok di mana pengguna memegang perangkat input. Sebagai contoh, pengguna harus mengatur pengontrol Daydream sebagai kanan atau kiri, tetapi dapat memilih untuk menahan pengontrol di tangan yang berlawanan.</p> 
+       <p> <a href="../ScriptReference/XR.InputDevices.GetDevicesWithRole.html">GetDevicesWithRole</a> menyediakan daftar perangkat apa pun dengan <code>InputDeviceRole</code> tertentu. Misalnya, Anda dapat menggunakan <code>InputDeviceRole.GameController</code> untuk mendapatkan perangkat <code>GameController</code> yang terhubung:</p> 
+       <pre><code>var gameControllers = new List&lt;UnityEngine.XR.InputDevice&gt;();
+UnityEngine.XR.InputDevices.GetDevicesWithRole(UnityEngine.XR.InputDeviceRole.GameController, gameControllers);
+
+foreach (var device in gameControllers)
+{
+    Debug.Log(string.Format("Device name '{0}' has role '{1}'", device.name, device.role.ToString()));
+}
+</code></pre> 
+       <h3>Mengakses perangkat input dengan node XR</h3> 
+       <p>XR node mewakili titik fisik referensi dalam sistem XR (misalnya, posisi kepala pengguna, tangan kanan dan kiri mereka, atau referensi pelacakan seperti kamera Oculus).</p> 
+       <p>Enumerasi <a href="../ScriptReference/XR.XRNode.html">XRNode</a> mendefinisikan node berikut:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>XR node</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><a href="../ScriptReference/XR.XRNode.CenterEye.html">CenterEye</a></td> 
+          <td style="text-align:left;">Titik tengah jalan antara pupil mata pengguna.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="../ScriptReference/XR.XRNode.GameController.html">GameController</a></td> 
+          <td style="text-align:left;">Pengontrol permainan gaya konsol. Aplikasi Anda dapat memiliki beberapa perangkat pengontrol permainan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="../ScriptReference/XR.XRNode.HardwareTracker.html">HardwareTracker</a></td> 
+          <td style="text-align:left;">Perangkat pelacakan perangkat keras, biasanya melekat pada pengguna atau barang fisik. Beberapa node pelacak perangkat keras dapat ada.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="../ScriptReference/XR.XRNode.Head.html">Head</a></td> 
+          <td style="text-align:left;">Titik pusat kepala pengguna, seperti dihitung oleh sistem XR.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="../ScriptReference/XR.XRNode.LeftEye.html">LeftEye</a></td> 
+          <td style="text-align:left;">Mata kiri pengguna.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="../ScriptReference/XR.XRNode.LeftHand.html">LeftHand</a></td> 
+          <td style="text-align:left;">Tangan kiri pengguna.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="../ScriptReference/XR.XRNode.RightEye.html">Login Login</a></td> 
+          <td style="text-align:left;">Mata kanan pengguna.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="../ScriptReference/XR.XRNode.RightHand.html">RightHand</a></td> 
+          <td style="text-align:left;">Tangan kanan pengguna.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="../ScriptReference/XR.XRNode.TrackingReference.html">TrackingReference</a></td> 
+          <td style="text-align:left;">Titik referensi pelacakan, seperti kamera Oculus. Beberapa node referensi pelacakan dapat ada.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Gunakan <a href="../ScriptReference/XR.InputDevices.GetDevicesAtXRNode.html">InputDevices.GetDevicesAtXRNode</a> untuk mendapatkan daftar perangkat yang terkait dengan <code>XRNode</code> tertentu. Contoh berikut menunjukkan cara mendapatkan pengontrol kiri tangan:</p> 
+       <pre><code>var leftHandDevices = new List&lt;UnityEngine.XR.InputDevice&gt;();
+UnityEngine.XR.InputDevices.GetDevicesAtXRNode(UnityEngine.XR.XRNode.LeftHand, leftHandDevices);
+
+if(leftHandDevices.Count == 1)
+{
+    UnityEngine.XR.InputDevice device = leftHandDevices[0];
+    Debug.Log(string.Format("Device name '{0}' with role '{1}'", device.name, device.role.ToString()));
+}
+else if(leftHandDevices.Count &gt; 1)
+{
+    Debug.Log("Found more than one left hand!");
+}
+</code></pre> 
+       <h3>Mendengarkan koneksi perangkat dan pemutusan</h3> 
+       <p>Perangkat input konsisten dari bingkai ke bingkai, tetapi dapat menghubungkan atau memutuskan kapan saja. Untuk menghindari pemeriksaan berulang jika perangkat terhubung ke platform, gunakan <a href="../ScriptReference/XR.InputDevices-deviceConnected.html">InputDevices.deviceConnected</a> dan <a href="../ScriptReference/XR.InputDevices-deviceDisconnected.html">InputDevices.deviceDisconnected</a> untuk memberitahukan aplikasi Anda ketika perangkat terhubung atau memutuskan. Ini juga memberi Anda referensi ke perangkat input yang terhubung baru.</p> 
+       <p>Karena Anda dapat mempertahankan referensi ini atas beberapa bingkai, perangkat mungkin memutuskan, atau tidak lagi tersedia. Untuk memeriksa apakah input perangkat masih tersedia, gunakan <a class="tooltipMoreInfoLink" href="../ScriptReference/XR.InputDevice-isValid.html">InputDevice.isValid</a>. <span class="tooltip"><strong>Scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> yang mengakses perangkat input harus memeriksa ini pada awal setiap bingkai sebelum mereka mencoba untuk menggunakan perangkat itu.</p> 
+       <p><a name="AccessingInputFeatures"></a></p> 
+       <h2>Mengakses fitur input pada perangkat input</h2> 
+       <p>Anda dapat membaca fitur input, seperti keadaan tombol pemicu, dari <a href="../ScriptReference/XR.InputDevice.html">InputDevice</a> tertentu. Misalnya, membaca keadaan pemicu yang tepat, ikuti langkah-langkah ini:</p> 
+       <ol> 
+        <li>Gunakan <a href="../ScriptReference/XR.InputDeviceRole.RightHanded.html">Login Login</a> atau <a href="../ScriptReference/XR.XRNode.RightHand.html">XRNode.RightHand</a> untuk mendapatkan contoh perangkat yang tepat.</li> 
+        <li>Setelah Anda memiliki perangkat yang benar, gunakan metode <a href="../ScriptReference/XR.InputDevice.TryGetFeatureValue.html">Datasheet</a> untuk mengakses keadaan saat ini.</li> 
+       </ol> 
+       <p> <code>TryGetFeatureValue()</code> mencoba untuk mengakses nilai fitur saat ini, dan kembali:</p> 
+       <ul> 
+        <li>benar jika berhasil mengambil nilai fitur yang ditentukan</li> 
+        <li>palsu jika perangkat saat ini tidak mendukung fitur yang ditentukan, atau perangkat tidak valid (yaitu, pengontrol tidak lagi aktif)</li> 
+       </ul> 
+       <p>Untuk mendapatkan tombol tertentu, input sentuh, atau nilai sumbu joystick, gunakan kelas <a href="../ScriptReference/XR.CommonUsages.html">CommonUsages</a>. <code>CommonUsages</code> mencakup setiap <code>InputFeatureUsage</code> dalam <a href="#XRInputMappings">Tabel pemetaan input XR</a>, serta fitur pelacakan seperti posisi dan rotasi. Contoh kode berikut menggunakan <a href="../ScriptReference/XR.CommonUsages-triggerButton.html">WordPress.org</a> untuk mendeteksi apakah pengguna saat ini menekan tombol pemicu pada instance <code>InputDevice</code> tertentu:</p> 
+       <pre><code>bool triggerValue;
+if (device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out triggerValue) &amp;&amp; triggerValue)
+{
+    Debug.Log("Trigger button is pressed.");
+}
+</code></pre> 
+       <p>Anda juga dapat menggunakan metode <a href="../ScriptReference/XR.InputDevice.TryGetFeatureUsages.html">InputDevice.TryGetFeatureUsages</a> untuk mendapatkan daftar setiap <code>InputFeatureUsage</code> yang disediakan perangkat. Fungsi ini mengembalikan daftar item <a href="../ScriptReference/XR.InputFeatureUsage.html">InputFeatureUsage</a>, yang memiliki jenis dan properti nama yang menggambarkan fitur. Contoh berikut menunjukkan semua fitur Boolean yang diberikan perangkat input:</p> 
+       <pre><code>var inputFeatures = new List&lt;UnityEngine.XR.InputFeatureUsage&gt;();
+if (device.TryGetFeatureUsages(inputFeatures))
+{
+    foreach (var feature in inputFeatures)
+    {
+        if (feature.type == typeof(bool))
+        {
+            bool featureValue;
+            if (device.TryGetFeatureValue(feature.As&lt;bool&gt;(), out featureValue))
+            {
+                Debug.Log(string.Format("Bool feature {0}'s value is {1}", feature.name, featureValue.ToString()));
+            }
+        }
+    }
+}
+</code></pre> 
+       <h3>Contoh untuk primerButton</h3> 
+       <p>Konfigurasi pengontrol yang berbeda memberikan akses ke fitur yang berbeda. Misalnya, Anda mungkin memiliki beberapa pengontrol pada satu sistem, pengontrol yang berbeda pada sistem yang berbeda, atau tombol yang berbeda pada pengontrol yang sama dengan SDK yang berbeda. Keanekaragaman ini membuatnya lebih rumit untuk mendukung masukan dari berbagai sistem XR. API Unity <code>InputFeatureUsage</code> membantu Anda mendapatkan masukan yang tidak tergantung platform.</p> 
+       <p>Contoh berikut mengakses <code>InputFeatureUsage</code> yang disebut <code>primaryButton</code>, tidak peduli yang controller atau perangkat input menyediakannya. Contohnya termasuk kelas yang memindai perangkat yang tersedia untuk <code>primaryButton</code> saat mereka terhubung. Kelas memantau nilai fitur pada perangkat yang terhubung dan, jika perubahan nilai, kelas mengirimkan <a href="../ScriptReference/Events.UnityEvent.html">UnityEvent</a>.</p> 
+       <p>Untuk menggunakan kelas ini, tambahkan sebagai komponen untuk setiap <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#GameObject">Glossary</a></span></span></span> di <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>. Contoh:</p> 
+       <pre><code>using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.XR;
+
+[System.Serializable]
+public class PrimaryButtonEvent : UnityEvent&lt;bool&gt; { }
+
+public class PrimaryButtonWatcher : MonoBehaviour
+{
+    public PrimaryButtonEvent primaryButtonPress;
+
+    private bool lastButtonState = false;
+    private List&lt;InputDevice&gt; devicesWithPrimaryButton;
+
+    private void Awake()
+    {
+        if (primaryButtonPress == null)
+        {
+            primaryButtonPress = new PrimaryButtonEvent();
+        }
+
+        devicesWithPrimaryButton = new List&lt;InputDevice&gt;();
+    }
+
+    void OnEnable()
+    {
+        List&lt;InputDevice&gt; allDevices = new List&lt;InputDevice&gt;();
+        InputDevices.GetDevices(allDevices);
+        foreach(InputDevice device in allDevices)
+            InputDevices_deviceConnected(device);
+
+        InputDevices.deviceConnected += InputDevices_deviceConnected;
+        InputDevices.deviceDisconnected += InputDevices_deviceDisconnected;
+    }
+
+    private void OnDisable()
+    {
+        InputDevices.deviceConnected -= InputDevices_deviceConnected;
+        InputDevices.deviceDisconnected -= InputDevices_deviceDisconnected;
+        devicesWithPrimaryButton.Clear();
+    }
+
+    private void InputDevices_deviceConnected(InputDevice device)
+    {
+        bool discardedValue;
+        if (device.TryGetFeatureValue(CommonUsages.primaryButton, out discardedValue))
+        {
+            devicesWithPrimaryButton.Add(device); // Add any devices that have a primary button.
+        }
+    }
+
+    private void InputDevices_deviceDisconnected(InputDevice device)
+    {
+        if (devicesWithPrimaryButton.Contains(device))
+            devicesWithPrimaryButton.Remove(device);
+    }
+
+    void Update()
+    {
+        bool tempState = false;
+        foreach (var device in devicesWithPrimaryButton)
+        {
+            bool primaryButtonState = false;
+            tempState = device.TryGetFeatureValue(CommonUsages.primaryButton, out primaryButtonState) // did get a value
+                        &amp;&amp; primaryButtonState // the value we got
+                        || tempState; // cumulative result from other controllers
+        }
+
+        if (tempState != lastButtonState) // Button state changed since last frame
+        {
+            primaryButtonPress.Invoke(tempState);
+            lastButtonState = tempState;
+        }
+    }
+}
+</code></pre> 
+       <p>Kelas <code>PrimaryReactor</code> berikut menggunakan <code>PrimaryButtonWatcher</code> untuk mendeteksi ketika Anda menekan tombol utama dan, dalam menanggapi pers, memutar GameObject induknya. Untuk menggunakan kelas ini, tambahkan ke GameObject yang terlihat, seperti Cube, dan seret referensi <code>PrimaryButtonWatcher</code> ke properti <strong>Watcher</strong>.</p> 
+       <pre><code>using System.Collections;
+using UnityEngine;
+
+public class PrimaryReactor : MonoBehaviour
+{
+    public PrimaryButtonWatcher watcher;
+    public bool IsPressed = false; // used to display button state in the Unity Inspector window
+    public Vector3 rotationAngle = new Vector3(45, 45, 45);
+    public float rotationDuration = 0.25f; // seconds
+    private Quaternion offRotation;
+    private Quaternion onRotation;
+    private Coroutine rotator;
+
+    void Start()
+    {
+        watcher.primaryButtonPress.AddListener(onPrimaryButtonEvent);
+        offRotation = this.transform.rotation;
+        onRotation = Quaternion.Euler(rotationAngle) * offRotation;
+    }
+
+    public void onPrimaryButtonEvent(bool pressed)
+    {
+        IsPressed = pressed;
+        if (rotator != null)
+            StopCoroutine(rotator);
+        if (pressed)
+            rotator = StartCoroutine(AnimateRotation(this.transform.rotation, onRotation));
+        else
+            rotator = StartCoroutine(AnimateRotation(this.transform.rotation, offRotation));
+    }
+
+    private IEnumerator AnimateRotation(Quaternion fromRotation, Quaternion toRotation)
+    {
+        float t = 0;
+        while (t &lt; rotationDuration)
+        {
+            transform.rotation = Quaternion.Lerp(fromRotation, toRotation, t / rotationDuration);
+            t += Time.deltaTime;
+            yield return null;
+        }
+    }
+}
+</code></pre> 
+       <h3>Mengakses data pelacakan tangan</h3> 
+       <p>Perangkat pelacakan tangan dukungan inputDevices. Perangkat pelacakan tangan selalu:</p> 
+       <ul> 
+        <li>has the <a href="../ScriptReference/XR.InputDeviceCharacteristics.HandTracking.html">HandTracking</a>characteristic</li> 
+        <li>mengandung penggunaan <a href="../ScriptReference/XR.CommonUsages-handData.html">CommonUsages.HandData</a> dari tipe <a href="../ScriptReference/XR.Hand.html">Hand</a> type</li> 
+       </ul> 
+       <p>Data pelacakan tangan terdiri dari objek tangan dan serangkaian hingga 21 fitur input tulang. Setiap <a href="../ScriptReference/XR.Bone.html">Bone</a> memiliki posisi dan orientasi, serta referensi untuk orang tua dan tulang anak di hirarki. Objek tangan bisa mendapatkan tulang akar, atau daftar tulang untuk setiap jari individu.</p> 
+       <p>Ketika <a href="../ScriptReference/XR.Hand.TryGetRootBone.html">Hand.TryGetRootBone</a> mendapatkan tulang akar, itu mengambil objek yang mewakili tulang terletak di atas pergelangan tangan. Anda juga bisa mendapatkan daftar tulang yang mewakili setiap jari individu. Memanggil <a href="../ScriptReference/Hand.TryGetFingerBones.html">Hand.TryGetFingerBones</a> kembali daftar, dari knuckle ke ujung, tulang yang mewakili jari itu.</p> 
+       <h3>Mengakses data pelacakan mata</h3> 
+       <p>Perangkat input mendukung perangkat pelacakan mata, serta perangkat pelacakan tangan. Pelacak mata terdiri dari posisi mata kiri dan kanan, lokasi di ruang 3D di mana pengguna sedang mencari, dan jumlah yang setiap mata individu berkedip. Jenis datanya adalah <a href="../ScriptReference/XR.Eyes.html">Eyes</a>. Untuk mengambilnya dari perangkat, gunakan <a href="../ScriptReference/XR.CommonUsages-eyesData.html">CommonUsages.eyesData</a>.</p> 
+       <h3>XRInputSubsystem dan asosiasi InputDevice</h3> 
+       <p>Unity menyediakan dua sistem masukan: sistem input legacy, dan diperkenalkan pada 2019.2. Dalam pengaturan baru, setiap InputDevice dikaitkan dengan <a href="../ScriptReference/XR.XRInputSubsystem.html">XRInputSubsystem</a>. Objek subsistem ini mengontrol perilaku input global yang tidak terkait dengan perangkat input tertentu (misalnya, mengelola asal pelacakan, atau perangkat baru-baru ini dilacak).</p> 
+       <p>Setiap InputDevice mengandung referensi ke subsistem terkait. Referensi ini mati jika perangkat berasal dari platform terintegrasi. Anda juga bisa mendapatkan semua objek XRInputSubsystem aktif dengan <a href="../ScriptReference/SubsystemManager.GetInstances.html">SubsystemManager.GetInstances&lt;XRInputSubsystem&gt;</a>, dan setiap XRInputSubsystem bisa mendapatkan perangkatnya dengan <a href="../ScriptReference/XR.XRInputSubsystem.TryGetInputDevices.html">XRInputSubsystem.TryGetInputDevices</a>.</p> 
+       <p>Anda dapat menggunakan Subsistem Input ke perangkat terbaru dengan <a href="../ScriptReference/XR.XRInputSubsystem.html">WordPress.org</a>. Baru-baru ini mengatur posisi saat ini HMD sebagai asal baru untuk semua perangkat. Ini kembali palsu untuk perangkat yang tidak dapat terbarukan, atau jika platform tidak mendukung pengkinian.</p> 
+       <p>Untuk mengambil batas pelacakan, gunakan <a href="../ScriptReference/XR.XRInputSubsystem.TryGetBoundaryPoints.html">TryGetBoundaryPoints</a>. Ini terdiri dari serangkaian titik 3D berurutan searah jarum jam, di mana nilai y ada di tingkat lantai, dan mereka menandai ' zona aman yang ditentukan pengguna' untuk menempatkan konten dan interaksi. Anda dapat mendengarkan perubahan batas ini dengan <a href="../ScriptReference/XR.XRInputSubsystem-boundaryChanged.html">XRInputSubsystem.boundaryChanged</a>.</p> 
+       <p>XRInputSubsystem juga bertanggung jawab atas mode asal pelacakan, yang menyediakan konteks untuk di mana asal dunia pelacakan. Unity mendukung mode asal pelacakan berikut:</p> 
+       <ul> 
+        <li> <a href="../ScriptReference/XR.TrackingOriginModeFlags.Device.html">Device</a>: Lokasi asal adalah lokasi pertama yang diketahui dari perangkat tampilan utama; sering HMD atau telepon.</li> 
+        <li> <a href="../ScriptReference/XR.TrackingOriginModeFlags.Floor.html">Floor</a>: Lokasi asal adalah lokasi yang dikenal di lantai.</li> 
+        <li> <a href="../ScriptReference/XR.TrackingOriginModeFlags.TrackingReference.html">Referensi Pelacakan</a>: Lokasi asal adalah di bagian InputDevice dengan set karakteristik PelacakanReference.</li> 
+        <li> <a href="../ScriptReference/XR.TrackingOriginModeFlags.Unknown.html">Unknown</a>: Jenis asal pelacakan tidak diketahui. Ini bisa karena kegagalan sistem atau kurangnya dukungan asal pelacakan.</li> 
+       </ul> 
+       <p>Ada tiga API yang dapat Anda gunakan untuk mengelola mode asal pelacakan:</p> 
+       <ul> 
+        <li> <a href="../ScriptReference/XR.XRInputSubsystem.TrySetTrackingOriginMode.html">XRInputSubsystem.TrySetTrackingOriginMode</a> menetapkan mode asal pelacakan</li> 
+        <li> <a href="../ScriptReference/XR.XRInputSubsystem.GetTrackingOriginMode.html">XRInputSubystem.GetTrackingOriginMode</a> mengambil mode asal pelacakan</li> 
+        <li> <a href="../ScriptReference/XR.XRInputSubsystem.GetSupportedTrackingOriginModes.html">XRInputSubsystem.GetSupportedTrackingOriginModes</a> mengambil semua mode asal pelacakan yang mendukung SDK</li> 
+       </ul> 
+       <p><a name="XRInputLegacySystem"></a></p> 
+       <h2>Masukan XR melalui sistem input legacy</h2> 
+       <p>Anda masih dapat menggunakan sistem input legacy, terdiri dari <a class="tooltipMoreInfoLink" href="../ScriptReference/Input.html">Input</a> dan <a href="../ScriptReference/XR.InputTracking.html">Login Login</a>, untuk mengambil fitur input XR. Untuk melakukan ini, gunakan indeks input legacy yang tepat dari <a href="#XRInputMappings">Tabel pemetaan input XR</a> di halaman ini. Pada bagian <strong>Input</strong> dari <span class="tooltip"><strong>Player Settings</strong><span class="tooltiptext">Pengaturan yang memungkinkan Anda mengatur berbagai pilihan khusus pemain untuk permainan akhir yang dibangun oleh Unity. <a href="class-PlayerSettings.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#PlayerSettings">Glossary</a></span></span></span> (menu: <strong>Edit</strong> &gt; <span class="tooltip"><strong>Project Settings</strong><span class="tooltiptext">Pengumpulan yang luas dari pengaturan yang memungkinkan Anda untuk mengkonfigurasi bagaimana Fisika, Audio, Jaringan, Grafik, Input dan banyak bidang lain dari jangkauan proyek Anda. <a href="comp-ManagerGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span> &gt; <strong>Input</strong>), membuat pemetaan sumbu untuk menambahkan pemetaan yang tepat dari nama input ke indeks sumbu untuk fitur perangkat platform. Untuk mengambil nilai tombol atau sumbu, gunakan <a href="../ScriptReference/Input.GetAxis.html">Login Login</a> atau <a href="../ScriptReference/Input.GetButton.html">Input.GetButton</a> dan lulus pada sumbu atau nama tombol yang sekarang dipetakan.</p> 
+       <p>Untuk informasi lebih lanjut tentang cara menggunakan tombol dan joystick axes, lihat dokumentasi pada <a href="class-InputManager.html">InputManager</a>.</p> 
+       <p><a name="Haptics"></a></p> 
+       <h2>Haptics</h2> 
+       <p>Anda dapat mengirim peristiwa yang lebih bahagia ke <a href="../ScriptReference/XR.InputDevice.html">InputDevice</a>. Haptics mengambil bentuk impulse, dengan amplitudo dan durasi.</p> 
+       <p>Tidak semua platform mendukung semua jenis haptik, tetapi Anda dapat meminta perangkat untuk kemampuan yang lebih bahagia. Contoh berikut mendapat perangkat input untuk tangan kanan, periksa untuk melihat apakah perangkat mampu haptik, dan kemudian memainkan kembali impulse jika itu mampu:</p> 
+       <pre><code>List&lt;UnityEngine.XR.InputDevice&gt; devices = new List&lt;UnityEngine.XR.InputDevice&gt;(); 
+
+UnityEngine.XR.InputDevices.GetDevicesWithRole(UnityEngine.XR.InputDeviceRole.RightHanded, devices);
+
+foreach (var device in devices)
+{
+    UnityEngine.XR.HapticCapabilities capabilities;
+    if (device.TryGetHapticCapabilities(out capabilities))
+    {
+            if (capabilities.supportsImpulse)
+            {
+                uint channel = 0;
+                float amplitude = 0.5f;
+                float duration = 1.0f;
+                device.SendHapticImpulse(channel, amplitude, duration);
+            }
+    }
+}
+</code></pre> 
+       <hr> 
+       <ul> 
+        <li><span class="page-history">Diperbarui XR input pemetaan tabel dan sampel kode segar di</span></li> 
+        <li><span class="page-history">Fungsi dan perilaku baru dalam <span class="search-words">NewIn20191,NewIn20192</span></span></li> 
+       </ul> 
+       <!-- area:platforms --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="MobileKeyboard.html"></a></span> 
+         <div class="tip">
+           Mobil Keyboard 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="Unity2D.html"></a></span> 
+         <div class="tip">
+           2D 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

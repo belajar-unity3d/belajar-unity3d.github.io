@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: ShaderLab: kombinasi tekstur legacy</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="Shaders.html">Shaders</a></li> 
+         <li><a href="shader-writing.html">Menu Menu</a></li> 
+         <li><a href="SL-Reference.html">ShaderLab</a></li> 
+         <li><a href="shader-shaderlab-commands.html">ShaderLab: perintah</a></li> 
+         <li><a href="shader-shaderlab-legacy.html">Fungsi legacy ShaderLab</a></li> 
+         <li>ShaderLab: kombinasi tekstur legacy</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="SL-AlphaTest.html"></a></span> 
+          <div class="tip">
+            ShaderLab: pengujian alfa legacy 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="SL-BindChannels.html"></a></span> 
+          <div class="tip">
+            ShaderLab: pemetaan saluran data legacy vertex 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>ShaderLab: kombinasi tekstur legacy</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p> <strong>Note</strong>: Fungsi <span class="tooltip"><strong>ShaderLab</strong><span class="tooltiptext">Bahasa Unity untuk mendefinisikan struktur benda-benda Shader. <a class="tooltipMoreInfoLink" href="SL-Shader.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#ShaderLab">Glossary</a></span></span></span> pada halaman ini adalah legacy, dan didokumentasikan untuk kesan ke belakang hanya. Jika file sumber <span class="tooltip"><strong>shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> Anda termasuk kode HLSL, Unity mengabaikan perintah ini sepenuhnya. Jika file sumber naungan Anda tidak termasuk kode HLSL, Unity mengkompilasi perintah ini ke program naungan biasa pada impor.</p> 
+       <h2>Kompatibilitas pipa Render</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature name</strong></th> 
+          <th style="text-align:left;"><strong>Built-in <span class="tooltip"><strong>Render Pipeline</strong><span class="tooltiptext">A series of operations that take the contents of a Scene, and displays them on a screen. Unity lets you choose from pre-built render pipelines, or write your own. <a class="tooltipMoreInfoLink" href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span></strong></th> 
+          <th style="text-align:left;"><strong>Universal Render Pipeline (URP)</strong></th> 
+          <th style="text-align:left;"><strong>High Definition Render Pipeline (HDRP)</strong></th> 
+          <th style="text-align:left;"><strong>Custom SRP</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Legacy texture combining</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h1>Overview</h1> 
+       <p>Setelah pencahayaan simpul dasar telah dihitung, tekstur diterapkan. Di ShaderLab ini dilakukan menggunakan perintah <strong>SetTexture</strong>.</p> 
+       <p>Fungsi tetap texturing adalah tempat untuk melakukan efek merger gaya lama. Anda dapat memiliki beberapa perintah SetTexture di dalam lulus - semua tekstur diterapkan dalam urutan, seperti lapisan dalam program lukisan. Perintah setTexture harus ditempatkan pada akhir <a href="SL-Pass.html">Pass</a>.</p> 
+       <h2>Syntax</h2> 
+       <pre><code>SetTexture [TextureName] {Texture Block}
+</code></pre> 
+       <p>Menetapkan tekstur. <em>TeksturName</em> harus didefinisikan sebagai properti tekstur. Bagaimana cara menerapkan tekstur didefinisikan dalam <em>TextureBlock</em>.</p> 
+       <p>Kontrol blok tekstur bagaimana tekstur diterapkan. Di dalam blok tekstur dapat hingga dua perintah: <code>combine</code> dan <code>constantColor</code>.</p> 
+       <h2>Tekstur blok perintah <code>combine</code> command</h2> 
+       <p> <code>combine</code> <em>src1</em> * <em>src2</em>: Multiplies src1 dan src2 bersama. Hasilnya akan lebih gelap daripada input.</p> 
+       <p> <code>combine</code> <em>src1</em> + <em>src2</em>: Tambahkan src1 dan src2 bersama. Hasilnya akan lebih ringan daripada input.</p> 
+       <p> <code>combine</code> <em>src1</em> - <em>src2</em>: Subtracts src2 dari src1.</p> 
+       <p><code>combine</code><em>src1</em> <code>lerp</code> (<em>src2</em> (<em>src3</em>) : Interpolates antara src3 dan src1, menggunakan alfa src2. Perhatikan bahwa interpolasi berlawanan arah: src1 digunakan ketika alfa adalah satu, dan src3 digunakan ketika alfa adalah nol.</p> 
+       <p> <code>combine</code> <em>src1</em> * <em>src2</em> + <em>src3</em>: Multiplies src1 dengan komponen alfa src2, kemudian tambahkan src3.</p> 
+       <p>Semua sifat <strong>src</strong> bisa menjadi salah satu <em>previous</em>, <em>constant</em>, <em>primary</em> atau <em>texture</em>.</p> 
+       <ul> 
+        <li> <strong>Previous</strong> adalah hasil dari SetTexture sebelumnya.</li> 
+        <li> <strong>Primary</strong> adalah warna dari <a href="SL-Material.html">perhitungan pencahayaan</a> atau warna simpul jika <a href="SL-BindChannels.html">bound</a>.</li> 
+        <li> <strong>Texture</strong> adalah warna tekstur yang ditentukan oleh <em>TeksturName</em> di SetTexture (lihat di atas).</li> 
+        <li> <strong>Constant</strong> adalah warna yang ditentukan dalam <strong>ConstantColor</strong>.</li> 
+       </ul> 
+       <p>Pengubah:</p> 
+       <ul> 
+        <li>Rumus yang ditentukan di atas dapat secara opsional diikuti oleh kata kunci <strong>Double</strong> atau <strong><span class="tooltip"><strong>Quad</strong><span class="tooltiptext">A primitive object that resembles a plane but its edges are only one unit long, it uses only 4 vertices, and the surface is oriented in the XY plane of the local coordinate space. <a class="tooltipMoreInfoLink" href="PrimitiveObjects.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Quad">Glossary</a></span></span></span></strong> untuk membuat warna yang dihasilkan 2x atau 4x se terang.</li> 
+        <li>Semua sifat <strong>src</strong>, kecuali argumen <code>lerp</code>, dapat secara opsional diawali oleh <strong>one -</strong> untuk membuat warna yang dihasilkan dilalai.</li> 
+        <li>Semua sifat <strong>src</strong> dapat diikuti oleh <strong>alpha</strong> hanya untuk mengambil saluran alfa.</li> 
+       </ul> 
+       <h2>Tekstur blok perintah <code>constantColor</code> command</h2> 
+       <p>Sitemap Tentukan warna konstan yang dapat digunakan dalam perintah gabungan.<strong>ConstantColor color:</strong> Defines a constant color that can be used in the combine command.</p> 
+       <h2>Fungsional dihapus dalam Unity 5.0</h2> 
+       <p>Versi Unity sebelum 5.0 melakukan transformasi koordinat tekstur dukungan dengan perintah <code>matrix</code> di dalam blok tekstur. Jika Anda memerlukan fungsi ini sekarang, pertimbangkan menuliskan naungan Anda sebagai <a class="tooltipMoreInfoLink" href="SL-ShaderPrograms.html">warna yang dapat diprogram</a>, dan lakukan transformasi UV di <span class="tooltip"><strong>vertex shader</strong><span class="tooltiptext">Program yang berjalan pada setiap simpul model 3D ketika model sedang diberikan. <a href="SL-ShaderPrograms.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#vertexshader">Glossary</a></span></span></span>.</p> 
+       <p>Demikian pula, 5.0 menghapus tanda tambah (<code>a+-b</code>), multiply menandatangani add (<code>a*b+-c</code>), multiply subtract (<code>a*b-c</code>) dan produk titik (<code>dot3</code>, tekstur <code>dot3rgba</code> menggabungkan mode. Jika Anda membutuhkannya, lakukan matematika di naungan <span class="tooltip"><strong>pixel</strong><span class="tooltiptext">Unit terkecil dalam gambar komputer. Ukuran piksel tergantung pada resolusi layar Anda. Pencahayaan pixel dihitung pada setiap piksel layar. <a class="tooltipMoreInfoLink" href="ShadowPerformance.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#pixel">Glossary</a></span></span></span> bukan.</p> 
+       <h2>Details</h2> 
+       <p>Sebelum <a href="SL-ShaderPrograms.html">program fragmen</a> ada, kartu grafis yang lebih tua menggunakan pendekatan berlapis untuk tekstur. Tekstur diterapkan satu setelah satu sama lain, memodifikasi warna yang akan ditulis ke layar. Untuk setiap tekstur, tekstur biasanya dikombinasikan dengan hasil operasi sebelumnya. Hari-hari ini disarankan untuk menggunakan program fragmen yang sebenarnya.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/SL/SetTextureGraph.png" alt=""> 
+       </figure> 
+       <p>Perhatikan bahwa setiap tahap tekstur mungkin atau mungkin tidak dijepit ke kisaran 0..1, tergantung pada platform. Ini mungkin mempengaruhi tahap Penyelesaian yang dapat menghasilkan nilai lebih tinggi dari 1,0.</p> 
+       <h2>Separate Alpha &amp; perhitungan warna</h2> 
+       <p>Secara default, formula gabungan digunakan untuk menghitung komponen RGB dan alfa warna. Secara opsional, Anda dapat menentukan formula terpisah untuk perhitungan alfa. Ini terlihat seperti ini:</p> 
+       <pre><code>SetTexture [_MainTex] { combine previous * texture, previous + texture }
+</code></pre> 
+       <p>Di sini, kami menggandakan warna RGB dan menambahkan alfa.</p> 
+       <h2>Sorotan spektral</h2> 
+       <p>Secara default warna <strong>primary</strong> adalah jumlah diffuse, ambient dan <span class="tooltip"><strong>specular colors</strong><span class="tooltiptext">Warna sorotan specular.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#specularcolor">Glossary</a></span></span></span> (seperti didefinisikan dalam <a href="SL-Material.html">Perhitungan pencahayaan</a>). Jika Anda menentukan <strong>SeparateSpecular On</strong> dalam opsi pass, warna specular akan ditambahkan pada <em>after</em> perhitungan merger, daripada sebelumnya. Ini adalah perilaku default dari naungan VertexLit built-in.</p> 
+       <h2>Dukungan perangkat keras grafis</h2> 
+       <p>Kartu grafis modern dengan dukungan <a href="SL-ShaderPrograms.html">fragment shader</a> ("model bentuk 2.0" di desktop, OpenGL ES 2.0 di ponsel) mendukung semua mode <strong>SetTexture</strong> dan setidaknya 4 tahap tekstur (banyak 8 dukungan). Jika Anda menjalankan perangkat keras yang benar-benar lama (dibuat sebelum 2003 di PC, atau sebelum iPhone3GS di ponsel), Anda mungkin memiliki serendah dua tahap tekstur. Penulis naungan harus menulis <a href="SL-SubShader.html">SubShaders</a> terpisah untuk kartu yang ingin mereka dukungan.</p> 
+       <h2>Examples</h2> 
+       <h3>Alpha Blending Dua Tekstur</h3> 
+       <p>Contoh kecil ini membutuhkan dua tekstur. Pertama itu set merger pertama untuk hanya mengambil <strong>_MainTex</strong>, kemudian menggunakan saluran alfa <strong>_BlendTex</strong> untuk memudar dalam warna RGB <strong>_BlendTex</strong> </p> 
+       <pre><code>Shader "Examples/2 Alpha Blended Textures" {
+    Properties {
+        _MainTex ("Base (RGB)", 2D) = "white" {}
+        _BlendTex ("Alpha Blended (RGBA) ", 2D) = "white" {}
+    }
+    SubShader {
+        Pass {
+            // Apply base texture
+            SetTexture [_MainTex] {
+                combine texture
+            }
+            // Blend in the alpha texture using the lerp operator
+            SetTexture [_BlendTex] {
+                combine texture lerp (texture) previous
+            }
+        }
+    }
+}
+</code></pre> 
+       <h3>Alpha Terkendali Pencahayaan Diri</h3> 
+       <p>Naungan ini menggunakan komponen alfa <strong>_MainTex</strong> untuk memutuskan di mana untuk menerapkan pencahayaan. Hal ini dilakukan dengan menerapkan tekstur ke dua tahap; Pada tahap pertama, nilai alfa tekstur digunakan untuk dicampur antara warna simpul dan putih padat. Pada tahap kedua, nilai RGB tekstur dikalikan.</p> 
+       <pre><code>Shader "Examples/Self-Illumination" {
+    Properties {
+        _MainTex ("Base (RGB) Self-Illumination (A)", 2D) = "white" {}
+    }
+    SubShader {
+        Pass {
+            // Set up basic white vertex lighting
+            Material {
+                Diffuse (1,1,1,1)
+                Ambient (1,1,1,1)
+            }
+            Lighting On
+
+            // Use texture alpha to blend up to white (= full illumination)
+            SetTexture [_MainTex] {
+                constantColor (1,1,1,1)
+                combine constant lerp(texture) previous
+            }
+            // Multiply in texture
+            SetTexture [_MainTex] {
+                combine previous * texture
+            }
+        }
+    }
+}
+</code></pre> 
+       <p>Kita bisa melakukan sesuatu yang lain secara gratis di sini, meskipun; bukan campuran putih padat, kita dapat menambahkan warna pencahayaan sendiri dan campuran untuk itu. Perhatikan penggunaan <strong>ConstantColor</strong> untuk mendapatkan _SolidColor dari properti ke dalam campuran tekstur.</p> 
+       <pre><code>Shader "Examples/Self-Illumination 2" {
+    Properties {
+        _IlluminCol ("Self-Illumination color (RGB)", Color) = (1,1,1,1)
+        _MainTex ("Base (RGB) Self-Illumination (A)", 2D) = "white" {}
+    }
+    SubShader {
+        Pass {
+            // Set up basic white vertex lighting
+            Material {
+                Diffuse (1,1,1,1)
+                Ambient (1,1,1,1)
+            }
+            Lighting On
+
+            // Use texture alpha to blend up to white (= full illumination)
+            SetTexture [_MainTex] {
+                // Pull the color property into this blender
+                constantColor [_IlluminCol]
+                // And use the texture's alpha to blend between it and
+                // vertex color
+                combine constant lerp(texture) previous
+            }
+            // Multiply in texture
+            SetTexture [_MainTex] {
+                combine previous * texture
+            }
+        }
+    }
+}
+</code></pre> 
+       <p>Dan akhirnya, kita mengambil semua sifat pencahayaan naungan vertexlit dan tarik yang di:</p> 
+       <pre><code>Shader "Examples/Self-Illumination 3" {
+    Properties {
+        _IlluminCol ("Self-Illumination color (RGB)", Color) = (1,1,1,1)
+        _Color ("Main Color", Color) = (1,1,1,0)
+        _SpecColor ("Spec Color", Color) = (1,1,1,1)
+        _Emission ("Emmisive Color", Color) = (0,0,0,0)
+        _Shininess ("Shininess", Range (0.01, 1)) = 0.7
+        _MainTex ("Base (RGB)", 2D) = "white" {}
+    }
+
+    SubShader {
+        Pass {
+            // Set up basic vertex lighting
+            Material {
+                Diffuse [_Color]
+                Ambient [_Color]
+                Shininess [_Shininess]
+                Specular [_SpecColor]
+                Emission [_Emission]
+            }
+            Lighting On
+
+            // Use texture alpha to blend up to white (= full illumination)
+            SetTexture [_MainTex] {
+                constantColor [_IlluminCol]
+                combine constant lerp(texture) previous
+            }
+            // Multiply in texture
+            SetTexture [_MainTex] {
+                combine previous * texture
+            }
+        }
+    }
+}
+</code></pre> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="SL-AlphaTest.html"></a></span> 
+         <div class="tip">
+           ShaderLab: pengujian alfa legacy 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="SL-BindChannels.html"></a></span> 
+         <div class="tip">
+           ShaderLab: pemetaan saluran data legacy vertex 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

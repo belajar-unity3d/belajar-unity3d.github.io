@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Membangun terkompresi dan konfigurasi server</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="platforms" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Unity User Manual 2022.1 (beta)</a></li> 
+         <li><a href="PlatformSpecific.html">Pengembangan platform</a></li> 
+         <li><a href="webgl.html">WebGL</a></li> 
+         <li><a href="webgl-building-distribution.html">Membangun dan mendistribusikan proyek WebGL</a></li> 
+         <li>Membangun terkompresi dan konfigurasi server</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="webgl-canvas-size.html"></a></span> 
+          <div class="tip">
+            Konfigurasikan ukuran WebGL Canvas 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="webgl-server-configuration-code-samples.html"></a></span> 
+          <div class="tip">
+            Contoh kode konfigurasi server 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Membangun terkompresi dan konfigurasi server</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Untuk menyebarkan build <span class="tooltip"><strong>WebGL</strong><span class="tooltiptext">Login API yang membuat grafis 2D dan 3D di browser web. Opsi build Unity WebGL memungkinkan Unity untuk mempublikasikan konten sebagai program JavaScript yang menggunakan teknologi HTML5 dan WebGL rendering API untuk menjalankan konten Unity di browser web. <a class="tooltipMoreInfoLink" href="webgl-gettingstarted.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#WebGL">Glossary</a></span></span></span>, Anda harus mengkonfigurasi server Anda dan pastikan Anda menggunakan header respons yang benar, sehingga browser dapat menerima respons yang tepat dan memproses respons dengan benar.</p> 
+       <p>Ada dua pengaturan utama dalam Unity yang mempengaruhi bagaimana Anda mengatur server:</p> 
+       <ul> 
+        <li> <strong><span class="tooltip"><strong>Compression</strong><span class="tooltiptext">A method of storing data that reduces the amount of storage space it requires. See <a href="class-TextureImporterOverride.html">Texture Compression</a>, <a href="class-AnimationClip.html#AssetProperties">Animation Compression</a>, <a href="class-AudioClip.html">Audio Compression</a>, <a href="ReducingFilesize.html">Build Compression</a>.<br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#compression">Glossary</a></span></span></span> Format</strong>: Menentukan bagaimana file kompres Unity selama langkah build.</li> 
+        <li> <strong>Decompression Fallback</strong>: Menentukan bagaimana proses Unity mengunduh file ketika build berjalan di browser.</li> 
+       </ul> 
+       <h2>Format Kompresi <a name="content_encoding_header"></a> </h2> 
+       <p>Pilih jenis kompresi dari jendela Pengaturan WebGL Player (menu: <strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Player</strong>, kemudian pilih <strong>WebGL</strong> dan memperluas bagian <strong>Publishing Settings</strong>):</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/WebGLPublishingWindow.png" alt="Image of WebGL Publishing window "> 
+        <figcaption>
+          Gambar dari WebGL Publishing jendela 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Metode kompresi</th> 
+          <th style="text-align:left;">Description</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">gzip</td> 
+          <td style="text-align:left;">Ini adalah opsi default. File Gzip lebih besar dari file Brotli, tetapi lebih cepat untuk membangun, dan didukung secara asli oleh semua browser di atas HTTP dan HTTPS.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Brotli</td> 
+          <td style="text-align:left;">Kompresi Brotli menawarkan rasio kompresi terbaik. File terkompresi Brotli lebih kecil dari gzip, tetapi mengambil waktu lebih lama untuk mengompresi, yang meningkatkan waktu iterasi Anda pada build rilis. Chrome dan Firefox hanya dukungan asli kompresi Brotli melalui HTTPS.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Disabled</td> 
+          <td style="text-align:left;">Disables kompresi. Gunakan opsi ini jika Anda ingin menerapkan kompresi Anda sendiri di <span class="tooltip"><strong>post-processing</strong><span class="tooltiptext">Proses yang meningkatkan visual produk dengan menerapkan filter dan efek sebelum gambar muncul di layar. Anda dapat menggunakan efek pasca proses untuk mensimulasikan kamera fisik dan sifat film, misalnya Bloom dan Kedalaman Lapangan. <a class="tooltipMoreInfoLink" href="PostProcessingOverview.html">More info</a> <span class="search-words">pemrosesan pos, pasca proses, pasca proses</span><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#post-processing">Glossary</a></span></span></span> <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span>. Anda juga harus menggunakannya jika Anda berencana untuk menggunakan kompresi statis pada server hosting.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Untuk informasi lebih lanjut tentang dukungan browser untuk metode kompresi yang dipilih, lihat dokumentasi pada <a href="webgl-browsercompatibility.html">Kompatibilitas browser WebGL</a>.</p> 
+       <h2>Web server</h2> 
+       <p>Anda mungkin perlu menyesuaikan konfigurasi server Anda untuk mencocokkan pengaturan build spesifik Anda. Secara khusus, mungkin ada masalah jika Anda sudah memiliki konfigurasi sisi server lain untuk mengompres file host, yang bisa mengganggu setup ini. Untuk membuat browser melakukan dekompresi secara asli saat mengunduh aplikasi Anda, menerapkan <a href="#content_encoding_header">Judul konten-Encoding</a> ke respons server. header ini harus sesuai dengan jenis kompresi Unity digunakan pada waktu build. Untuk sampel kode, lihat <a href="webgl-server-configuration-code-samples.html">Konfigurasi Server Contoh Kode</a>.</p> 
+       <h2>Dekompresi fallback</h2> 
+       <p>Opsi fallback dekompresi memungkinkan Unity untuk secara otomatis mengatur dekompresor JavaScript ke build Anda. Dekompresor ini sesuai dengan metode kompresi Anda yang dipilih, dan depresi konten Anda jika browser gagal melakukannya.</p> 
+       <h3>Mengaktifkan fallback dekompresi</h3> 
+       <p>Aktifkan dekompresi fallback dari jendela <strong>Player Settings</strong> (menu: <strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Player</strong>, kemudian pilih <strong>WebGL</strong> dan memperluas bagian <strong>Publishing Settings</strong>).</p> 
+       <p>Ketika Anda mengaktifkan fallback dekompresi, Unity menambahkan ekstensi <code>.unityweb</code> ke file build. Anda harus mempertimbangkan menggunakan <strong>Decompression Fallback</strong> jika Anda memiliki pengalaman kurang dengan konfigurasi server, atau jika konfigurasi server tidak tersedia untuk Anda.</p> 
+       <p> <strong>Note</strong>: Menggunakan opsi ini menghasilkan ukuran loader yang lebih besar dan skema pemuatan yang kurang efisien untuk file build.</p> 
+       <h3>Menonaktifkan fallback dekompresi</h3> 
+       <p>Opsi <strong>Decompression Fallback</strong> dinonaktifkan secara default. Oleh karena itu, secara default, membangun file memiliki ekstensi yang sesuai dengan metode kompresi yang Anda pilih.</p> 
+       <p>Ada dua metode kompresi untuk memilih dari: gzip atau Brotli. Untuk informasi lebih lanjut lihat bagian <a href="#content_encoding_header">format kompresi</a>.</p> 
+       <p>Untuk mengaktifkan browser ke file build Unity dekompres asli sementara mereka mengunduh, Anda perlu mengkonfigurasi server web Anda untuk melayani file terkompresi dengan header HTTP yang sesuai. Ini disebut dekompresi browser asli. Ini memiliki keuntungan lebih cepat daripada fallback dekompresi JavaScript, yang dapat mengurangi waktu startup aplikasi Anda.</p> 
+       <p>Proses setup untuk dekompresi browser asli tergantung pada server web Anda. Untuk sampel kode, lihat <a href="webgl-server-configuration-code-samples.html">Konfigurasi Server Contoh Kode</a>.</p> 
+       <h2>Content-Encoding header <a name="content_encoding_header"></a> </h2> 
+       <p>header Konten-Encoding memberitahu browser yang jenis kompresi Unity telah digunakan untuk file terkompresi. Ini memungkinkan browser untuk menekan file secara asli.</p> 
+       <p>Mengatur header respons Konten-Encoding ke metode kompresi yang dipilih dalam <span class="tooltip"><strong>Player Settings</strong><span class="tooltiptext">Pengaturan yang memungkinkan Anda mengatur berbagai pilihan khusus pemain untuk permainan akhir yang dibangun oleh Unity. <a class="tooltipMoreInfoLink" href="class-PlayerSettings.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#PlayerSettings">Glossary</a></span></span></span>.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Metode kompresi</th> 
+          <th style="text-align:left;">File extension</th> 
+          <th style="text-align:left;">Response header</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">gzip</td> 
+          <td style="text-align:left;">.gz</td> 
+          <td style="text-align:left;"><code>Content-Encoding: gzip</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Brotli</td> 
+          <td style="text-align:left;">.br</td> 
+          <td style="text-align:left;"><code>Content-Encoding: br</code></td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>WebAssembly streaming ( header tingkat tinggi)</h2> 
+       <p>Streaming WebAssembly memungkinkan browser untuk menyusun kode WebAssembly saat masih mengunduh kode. Ini secara signifikan meningkatkan waktu pemuatan.</p> 
+       <p>Untuk kompilasi streaming WebAssembly untuk bekerja, server perlu mengembalikan file WebAssembly dengan tipe <code>application/wasm</code> MIME. Untuk menggunakan WebAssembly streaming, Anda perlu melayani file WebAssembly dengan header respons <code>Content-Type: application/wasm</code>. Judul Konten-Tipe memberi tahu server yang mengetikkan konten. Nilai ini harus diatur ke <code>application/wasm</code> untuk file WebAssembly.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">File extension</th> 
+          <th style="text-align:left;">Response header</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">.wasm.gz, .wasm.br</td> 
+          <td style="text-align:left;"><code>Content-Type: application/wasm</code></td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p> <strong>Note</strong>: Streaming WebAssembly tidak bekerja sama dengan dekompresi JavaScript (ketika opsi Fallback Dekompresi diaktifkan). Dalam kasus seperti itu, file WebAssembly yang diunduh harus terlebih dahulu melalui dekompresor JavaScript dan oleh karena itu browser tidak dapat streaming selama diunduh.</p> 
+       <h2>header tambahan</h2> 
+       <p>Jika file Anda mengandung JavaScript, Anda harus menambahkan header <code>application/javascript</code> Content-Type. Beberapa server mungkin termasuk ini secara otomatis, sementara yang lain tidak.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">File extension</th> 
+          <th style="text-align:left;">Response header</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">.js, .js.gz, js.br</td> 
+          <td style="text-align:left;"><code>Content-Type: application/javascript</code></td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <hr> 
+       <ul> 
+        <li><span class="page-history">Halaman yang diperbarui untuk akun untuk konfigurasi server pada 2020. 1 Artikel</span></li> 
+        <li>2019–09–04 <span class="page-history">WebAssembly streaming ditambahkan pada 2019.2</span> </li> 
+        <li><span class="page-history">diperbarui pada 5.6</span></li> 
+       </ul> 
+       <!-- area:platforms --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="webgl-canvas-size.html"></a></span> 
+         <div class="tip">
+           Konfigurasikan ukuran WebGL Canvas 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="webgl-server-configuration-code-samples.html"></a></span> 
+         <div class="tip">
+           Contoh kode konfigurasi server 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

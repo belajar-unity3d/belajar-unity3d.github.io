@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Kinerja dan optimasi</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="AnimationSection.html">Animation</a></li> 
+         <li>Kinerja dan optimalisasi</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="Retargeting.html"></a></span> 
+          <div class="tip">
+            Penargetan ulang animasi Humanoid 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="comp-AnimationGroup.html"></a></span> 
+          <div class="tip">
+            Referensi Animasi 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Kinerja dan optimalisasi</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Halaman ini berisi beberapa tips untuk membantu Anda mendapatkan kinerja terbaik di Unity, meliputi <a href="#anim">sistem animasi</a> dan <a href="#runtime">optimasi jangka waktu</a>.</p> 
+       <p>Sitemap Untuk tips tentang pemodelan karakter Anda dalam aplikasi 3d untuk kinerja terbaik di Unity, lihat <strong>Note:</strong>.<a href="ModelingOptimizedCharacters.html">Merancang karakter untuk kinerja optimal</a>.</p> 
+       <p><a name="anim"></a></p> 
+       <h2>Sistem animasi</h2> 
+       <h3>Controllers</h3> 
+       <p><a href="class-Animator.html">Animator</a> tidak menghabiskan waktu pemrosesan ketika <a href="class-AnimatorController.html">Controller</a> tidak diatur ke dalamnya.</p> 
+       <h3>Animasi sederhana</h3> 
+       <p>Bermain satu <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-AnimationClip.html">Klip Animasi</a><span class="tooltiptext">Animasi data yang dapat digunakan untuk karakter animasi atau animasi sederhana. Ini adalah bagian "unit" sederhana dari gerakan, seperti (salah satu contoh spesifik) "Idle", "Walk" atau "Run". <a href="class-AnimationClip.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnimationClip">Glossary</a></span></span></span> tanpa campuran dapat membuat Unity lebih lambat dari <a href="Animations.html">sistem animasi legacy</a>. Sistem lama sangat langsung, pengambilan kurva dan menulis langsung ke transformasi. Sistem animasi arus Unity memiliki penyangga sementara yang digunakan untuk pencampuran, dan ada salinan tambahan kurva sampel dan data lainnya. Tata letak sistem saat ini dioptimalkan untuk pencampuran animasi dan pengaturan yang lebih kompleks.</p> 
+       <h3>Kurva skala</h3> 
+       <p>Kurva skala yang menarik lebih mahal daripada menimbulkan terjemahan dan kurva rotasi. Untuk meningkatkan kinerja, hindari animasi skala.</p> 
+       <p>Sitemap Ini tidak berlaku untuk kurva konstan (perkuatan yang memiliki nilai yang sama untuk panjang <strong>Note:</strong>). Kurva konstan dioptimalkan, dan kurang mahal bahwa kurva normal. Kurva konstan yang memiliki nilai yang sama sebagai nilai default <a class="tooltipMoreInfoLink" href="AnimationClips.html">klip animasi</a> tidak menulis ke adegan setiap bingkai.<span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> values do not write to the scene every frame.</p> 
+       <h3>Layers</h3> 
+       <p>Sebagian besar waktu Unity mengevaluasi animasi, dan menjaga overhead untuk <span class="tooltip"><a class="tooltipMoreInfoLink" href="AnimationLayers.html">lapisan animasi</a><span class="tooltiptext">Lapisan Animasi mengandung Mesin Negara Animasi yang mengontrol animasi model atau bagian darinya. Contoh ini adalah jika Anda memiliki lapisan tubuh penuh untuk berjalan atau melompat dan lapisan yang lebih tinggi untuk gerakan tubuh atas seperti membuang objek atau menembak. Lapisan yang lebih tinggi mengambil precedence untuk bagian tubuh yang mereka kontrol. <a href="AnimationLayers.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#AnimationLayer">Glossary</a></span></span></span> dan <span class="tooltip"><a href="AnimationStateMachines.html">Mesin Negara Animasi</a><span class="tooltiptext">Grafik dalam Animator Controller yang mengontrol interaksi Amerika Animasi. Setiap state merujuk Pohon Animasi Blend atau Klip Animasi tunggal. <a href="AnimationStateMachines.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnimationStateMachine">Glossary</a></span></span></span> untuk minimum. Biaya menambahkan lapisan lain ke animator, disinkronkan atau tidak, tergantung pada apa animasi dan pohon campuran dimainkan oleh lapisan. Ketika berat lapisan nol, Unity melewatkan pembaruan lapisan.</p> 
+       <h3>Humanoid vs. Jenis animasi generik</h3> 
+       <p>Ini adalah tips untuk membantu Anda memutuskan antara jenis ini:</p> 
+       <ul> 
+        <li>Saat mengimpor <span class="tooltip"><strong>Humanoid animation</strong><span class="tooltiptext">Animasi menggunakan kerangka humanoid. Model humanoid umumnya memiliki struktur dasar yang sama, mewakili bagian artculate utama tubuh, kepala dan anggota badan. Ini memudahkan untuk memetakan animasi dari satu kerangka humanoid ke yang lain, memungkinkan penargetan ulang dan kinematik terbalik. <a class="tooltipMoreInfoLink" href="ConfiguringtheAvatar.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Humanoidanimation">Glossary</a></span></span></span> menggunakan masker <span class="tooltip"><strong>Avatar</strong><span class="tooltiptext">Antarmuka untuk penargetan ulang animasi dari satu rig ke yang lain. <a href="ConfiguringtheAvatar.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Avatar">Glossary</a></span></span></span> (kelas-AvatarMask) untuk menghapus Tujuan IK atau animasi jari jika Anda tidak membutuhkannya.</li> 
+        <li>Ketika Anda menggunakan Generik, menggunakan <span class="tooltip"><strong>root motion</strong><span class="tooltiptext">Gerak simpul akar karakter, apakah itu dikendalikan oleh animasi itu sendiri atau eksternal. <a class="tooltipMoreInfoLink" href="RootMotion.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#RootMotion">Glossary</a></span></span></span> lebih mahal daripada tidak menggunakannya. Jika animasi Anda tidak menggunakan gerakan akar, pastikan bahwa Anda belum menentukan tulang akar.</li> 
+       </ul> 
+       <h3>Optimasi tingkat adegan</h3> 
+       <p>Ada banyak optimasi yang dapat dibuat, beberapa tips berguna meliputi:</p> 
+       <ul> 
+        <li>Menggunakan hashes bukan string untuk meminta Animator.</li> 
+        <li>Menerapkan lapisan AI kecil untuk mengontrol Animator. Anda dapat membuatnya memberikan callback sederhana untuk OnStateChange, OnTransitionBegin, dan acara lainnya.</li> 
+        <li>Gunakan Tag Negara untuk dengan mudah mencocokkan AI <span class="tooltip"><strong>state machine</strong><span class="tooltiptext">Satu set negara di Animator Controller yang karakter atau animasi GameObject dapat masuk, bersama dengan satu set transisi antara negara-negara tersebut dan variabel untuk mengingat keadaan saat ini. Negara-negara yang tersedia akan tergantung pada jenis gameplay, tetapi keadaan khas termasuk hal-hal seperti idling, berjalan, berjalan dan melompat. <a class="tooltipMoreInfoLink" href="StateMachineBasics.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#StateMachine">Glossary</a></span></span></span> Anda ke mesin state Unity.</li> 
+        <li>Gunakan kurva tambahan untuk mensimulasikan peristiwa.</li> 
+        <li>Gunakan kurva tambahan untuk menandai animasi Anda; misalnya, bersama dengan <span class="tooltip"><a class="tooltipMoreInfoLink" href="TargetMatching.html">pencocokan target</a><span class="tooltiptext">Fungsi scripting yang memungkinkan Anda untuk memindahkan karakter dengan cara seperti tanah tangan atau kaki di tempat tertentu pada waktu tertentu. Misalnya, karakter mungkin perlu melompat di batu-batu atau melompat dan mengambil balok overhead. <a href="TargetMatching.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Targetmatching">Glossary</a></span></span></span>.</li> 
+       </ul> 
+       <p><a name="runtime"></a></p> 
+       <h2>Optimasi Runtime</h2> 
+       <h3>Visibility and updates</h3> 
+       <p>Selalu mengoptimalkan animasi dengan mengatur <a href="class-Animator.html">Modus</a> aimators ke <strong>Based on Renderers</strong>, dan menonaktifkan properti <a href="class-SkinnedMeshRenderer.html">renderer mesh berkelok-kelok</a><strong>Update When Offscreen</strong>. Ini menyimpan Unity dari animasi updating ketika karakter tidak terlihat.</p> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="Retargeting.html"></a></span> 
+         <div class="tip">
+           Penargetan ulang animasi Humanoid 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="comp-AnimationGroup.html"></a></span> 
+         <div class="tip">
+           Referensi Animasi 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

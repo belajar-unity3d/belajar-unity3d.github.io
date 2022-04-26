@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Lapisan Terrain</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="CreatingEnvironments.html">Bangunan dunia</a></li> 
+         <li><a href="script-Terrain.html">Terrain</a></li> 
+         <li>Lapisan Terrain</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="terrain-StampTerrain.html"></a></span> 
+          <div class="tip">
+            Catalog 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="class-Brush.html"></a></span> 
+          <div class="tip">
+            Brushes 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Lapisan Terrain</h1> 
+       <!--BeginSwitchLink--> 
+       <a href="../ScriptReference/TerrainLayer.html" title="Go to TerrainLayer page in the Scripting Reference" class="switch-link gray-btn sbtn left">Switch to Scripting</a> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>A <strong>Terrain Layer</strong> adalah Aset yang mendefinisikan kualitas permukaan <span class="tooltip"><strong>Terrain</strong><span class="tooltiptext">Pemandangan di tempat kejadian Anda. Terrain GameObject menambahkan pesawat datar besar untuk adegan Anda dan Anda dapat menggunakan jendela Inspektur Terrain untuk menciptakan lanskap rinci. <a class="tooltipMoreInfoLink" href="terrain-UsingTerrains.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Terrain">Glossary</a></span></span></span>. Lapisan Terrain memegang <span class="tooltip"><a href="class-TextureImporter.html">Textures</a><span class="tooltiptext">Gambar yang digunakan ketika membuat elemen GameObject, Sprite, atau UI. Tekstur sering diterapkan pada permukaan mesh untuk memberikan detail visual. <a href="class-TextureImporter.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#texture">Glossary</a></span></span></span> dan sifat lain yang menggunakan Bahan Terrain untuk membuat permukaan Terrain. Karena Terrain Layers adalah Aset, Anda dapat dengan mudah menggunakannya pada beberapa ubin Terrain.</p> 
+       <p>Anda dapat menambahkan Tekstur ke permukaan Terrain untuk membuat pewarnaan dan detail halus. Terrain <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> biasanya besar, sehingga yang terbaik untuk menggunakan lapisan Terrain dasar dengan Tekstur yang ubin di atas permukaan dan berulang mulus. Anda dapat menggunakan beberapa lapisan Terrain, masing-masing dengan Tekstur yang berbeda, untuk membangun permukaan Terrain yang menarik.</p> 
+       <p>Lapisan Terrain pertama Anda berlaku untuk Terrain secara otomatis menjadi lapisan dasar, dan menyebar di seluruh lansekap. Selain itu, Anda dapat mengecat daerah dengan lapisan Terrain lainnya untuk mensimulasikan permukaan tanah yang berbeda, seperti rumput, gurun, atau salju. Untuk membuat transisi bertahap antara pedesaan rumput dan pantai berpasir, Anda mungkin memilih untuk menerapkan Tekstur dengan opacity variabel.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/1.4-SandyTerrain.png" alt="Terrain with sandy texture"> 
+        <figcaption>
+          Terrain dengan tekstur berpasir 
+        </figcaption> 
+       </figure> 
+       <h2>Membuat Lapisan Terrain</h2> 
+       <p>Untuk membuat Lapisan Terrain langsung di Terrain <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Inspector">Glossary</a></span></span></span>, klik ikon kuas di <span class="tooltip"><strong>toolbar</strong><span class="tooltiptext">Se baris tombol dan kontrol dasar di bagian atas Editor Unity yang memungkinkan Anda untuk berinteraksi dengan Editor dengan berbagai cara (misalnya scaling, terjemahan). <a href="Toolbar.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Toolbar">Glossary</a></span></span></span> di bagian atas Inspector Terrain, dan pilih <strong>Paint Texture</strong> dari menu drop-down. Di bagian bawah bagian <strong>Terrain Layers</strong>, klik tombol <strong>Edit Terrain Layers</strong>, dan pilih <strong>Create Layer</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/1.4-CreateLayer.png" alt="Create Layer in the Terrain Inspector"> 
+        <figcaption>
+          Buat Layer di Inspektur Terrain 
+        </figcaption> 
+       </figure> 
+       <p>Ketika Anda memilih <strong>Create Layer</strong>, Unity membuka jendela <strong>Select Texture2D</strong>. Di sini, pilih gambar untuk digunakan sebagai saluran <strong>Diffuse</strong> dari Terrain Layer. Untuk menetapkan Tekstur <span class="tooltip"><strong>Normal Map</strong><span class="tooltiptext">Jenis tekstur Peta Bump yang memungkinkan Anda untuk menambahkan detail permukaan seperti benjolan, alur, dan goresan ke model yang menangkap cahaya seolah-olah mereka diwakili oleh geometri nyata.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Normalmap">Glossary</a></span></span></span> atau <strong>Mask Map</strong> ke Lapisan Terrain Anda, pilih Lapisan Terrain yang sesuai dalam tampilan Proyek, dan gunakan jendela Inspekturnya.</p> 
+       <p>Atau, untuk membuat Aset Lapisan Terrain yang tidak secara otomatis dikaitkan dengan Terrain, klik kanan jendela Proyek, dan pilih <strong>Create &gt; Terrain Layer</strong> dari menu konteks. Kemudian, mengkonfigurasi berbagai properti di jendela Inspektur untuk Lapisan Terrain baru Anda.</p> 
+       <p>Untuk informasi tentang bagaimana jumlah Terrain Layers mempengaruhi kinerja rendering, lihat <a href="#Performance">Performa rendering</a>. Bahkan ditugaskan Terrain Layers bahwa Anda tidak benar-benar melukis ke ubin Terrain mungkin mempengaruhi kinerja rendering.</p> 
+       <h2>Menambahkan lapisan Terrain</h2> 
+       <p>Awalnya, Terrain tidak memiliki lapisan Terrain yang ditugaskan untuk itu. Secara default, itu menggunakan tekstur checkerboard sampai Anda menambahkan lapisan Terrain.</p> 
+       <p>Setelah Anda membuat Lapisan Terrain di Proyek Anda, klik tombol <strong>Edit Terrain Layers</strong> dan pilih <strong>Add Layer</strong> untuk membuka jendela <strong>Select TerrainLayer</strong>. Klik dua kali pada lapisan Terrain di jendela ini untuk menambahkannya ke Terrain Anda.</p> 
+       <h2>Sifat lapisan Terrain</h2> 
+       <p>Tergantung pada Bahan yang ditetapkan dalam <a href="terrain-OtherSettings.html">Pengaturan Terrain</a>, serta Render Pipeline yang saat ini digunakan, Anda mungkin melihat berbagai pilihan dan sifat dalam Inspektur.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/1.4-TerrainLayerSettings.png" alt="Terrain Layer settings in the Inspector"> 
+        <figcaption>
+          Pengaturan Lapisan Terrain di Inspektur 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Diffuse</strong></td> 
+          <td style="text-align:left;" colspan="2">Tekstur Diffuse mewakili tekstur warna dasar dari Lapisan Terrain. Saluran Alpha Tekstur Diffuse memiliki kegunaan yang berbeda, yang tergantung pada Pipa Render Scriptable aktif dan Shader Anda gunakan untuk membuat Terrain.<br><br> Misalnya, Pipa Render Definisi Tinggi (HDRP) dan Pipa Render Universal (URP) menggunakan saluran Alpha untuk Kehalusan. Namun, jika ada Tekstur Peta Masker pada Lapisan Terrain, itu menggunakan saluran Alpha Tekstur Diffuse untuk nilai Kepadatan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Color Tint</strong></td> 
+          <td style="text-align:left;">Jika Anda menetapkan Tekstur Diffuse, lapangan baru yang disebut <strong>Color Tint</strong> muncul dalam pengaturan Lapisan Terrain. Klik kolom pemilih warna dan pilih warna untuk digunakan.<br><br><strong>Color Tint</strong> adalah fitur yang tersedia di HDRP dan URP.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Opacity as Density</strong></td> 
+          <td style="text-align:left;">Tentukan apakah untuk membuat lapisan Terrain menggunakan nilai yang disimpan dalam saluran Alpha Tekstur Diffuse Lapisan Terrain, bukan bobot splatmap biasa atau nilai tinggi dari Peta Masker. Unity menggunakan nilai saluran Alpha sebagai nilai ambang untuk campuran lapisan.<br><br><strong>Opacity as Density</strong> adalah fitur yang tersedia di HDRP dan URP. Pilihan ini tersedia di setiap Terrain Layer ketika Anda menonaktifkan opsi <strong>Enable Height-based Blend</strong> pada Terrain Lit Material Terrain, dan ketika Anda menetapkan Tekstur Diffuse dan Mask Map ke Terrain Layer.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Normal Map</strong></td> 
+          <td style="text-align:left;" colspan="2">Tekstur Peta Normal mengandung informasi normal untuk Lapisan Terrain Anda. Unity menggunakan informasi ini dalam perhitungan pencahayaan.<br><br>• Jika Anda tidak menetapkan Tekstur Peta Normal dan mengaktifkan hukuman di <a href="terrain-OtherSettings.html">Pengaturan Terrain</a>, Terrain menggunakan normal yang dihasilkan dari peta tinggi Terrain.<br><br>• Jika Anda menetapkan Tekstur Peta Normal dan mengaktifkan hukuman, Unity menggunakan Tekstur Peta Normal bukan normal yang dihasilkan dari heightmap.<br><br>• Jika Anda menonaktifkan hukuman di Terrain, Bahan Terrain bawaan menggunakan normal yang dihasilkan dari geometri Terrain, bahkan jika Anda menetapkan Tekstur Peta Normal pada Lapisan Terrain.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Normal Scale</strong></td> 
+          <td style="text-align:left;" colspan="2">Jika Anda menetapkan Tekstur Peta Normal, lapangan baru yang disebut <strong>Normal Scale</strong> muncul dalam pengaturan Lapisan Terrain. Nilai ini bertindak sebagai faktor scaling untuk nilai normal yang ada di Peta Normal. Nilai 0 berarti bahwa normal yang disimpan di Peta Normal memiliki skala 0, sementara nilai 1 berarti bahwa normal berada pada skala penuh atau pengaruh.<br><br> Contoh dan hasil dari nilai Skala Normal yang berbeda:</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"> <strong>Normal Scale</strong> = 0</td> 
+          <td style="text-align:left;">• Banyak nilai normal yang tidak dikemas oleh 0.<br>• Kekuatan, dan dengan demikian panjang, normal akan 0, dan tidak berpengaruh pada perhitungan pencahayaan. segitiga jala di Terrain secara efektif menggunakan mesh normal untuk perhitungan pencahayaan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"> <strong>Normal Scale</strong> = 1</td> 
+          <td style="text-align:left;">Sitemap Multiplies nilai normal yang tidak dikemas oleh 1.<br>• Kekuatan normal akan 100%.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"> <strong>Normal Scale</strong> = 2</td> 
+          <td style="text-align:left;">Sitemap Multiplies nilai normal yang tidak dikemas oleh 2.<br>• Kekuatan normal akan 200%, dan muncul dua kali sebagai diucapkan sebagai normal dengan Skala Normal 1.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"> <strong>Normal Scale</strong> = -1</td> 
+          <td style="text-align:left;">Sitemap Beberapa nilai normal yang tidak dikemas oleh -1.<br>• Kekuatan normal akan 100% tetapi dilalui, membuat titik normal dalam arah yang berlawanan dari normal dengan Skala Normal 1.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Mask Map</strong></td> 
+          <td style="text-align:left;" colspan="2">The TerrainLit Shader, yang merupakan bagian dari High Definition Render Pipeline (HDRP) dan Universal Render Pipeline (URP), menggunakan data Tekstur Peta Masker ini. Custom Terrain shaders juga dapat menggunakan Tekstur ini untuk tujuan yang ditentukan pengguna, seperti oklusi ambient atau campuran berbasis tinggi.<br><br> Untuk HDRP dan URP TerrainLit Shader, saluran RGBA Tekstur Peta Masker sesuai dengan:</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>R</strong></td> 
+          <td style="text-align:left;">Metallic</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>G</strong></td> 
+          <td style="text-align:left;">Ambient Occlusion</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>B</strong></td> 
+          <td style="text-align:left;">Height</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>A</strong></td> 
+          <td style="text-align:left;">Kehalusan (Diffuse Alpha menjadi Kepadatan)</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Channel Remapping</strong></td> 
+          <td style="text-align:left;" colspan="2">Jika Anda menetapkan Tekstur Peta Masker, judul baru yang disebut <strong>Channel Remapping</strong> muncul dalam pengaturan Lapisan Terrain. Klik segitiga di sebelah kepala untuk menampilkan bidang untuk nilai RGBA minimum dan maksimum. Unity menggunakan kisaran ini untuk nilai remap di setiap saluran Tekstur Peta Masker.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Specular</strong></td> 
+          <td style="text-align:left;" colspan="2">Warna sorotan specular dari Terrain Layer.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Metallic</strong></td> 
+          <td style="text-align:left;" colspan="2">Nilai metalik keseluruhan lapisan Terrain.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Smoothness</strong></td> 
+          <td style="text-align:left;" colspan="2">Nilai kelancaran keseluruhan lapisan Terrain.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Tiling Settings</strong></td> 
+          <td style="text-align:left;" colspan="2">Pengaturan tiling yang berlaku untuk semua Tekstur penggunaan Terrain Layer.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Size</strong></td> 
+          <td style="text-align:left;">Ukuran Tekstur di ruang Terrain, dan seberapa sering ubin Tekstur.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Offset</strong></td> 
+          <td style="text-align:left;">Basis mengimbangi bahwa Unity berlaku untuk lokasi sampel untuk setiap Tekstur di Terrain Layer.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2><strong>Texture painting</strong></h2> 
+       <p>Unity menerapkan lapisan Terrain pertama yang Anda tambahkan ke seluruh lansekap. Jika Anda menambahkan beberapa lapisan Terrain, gunakan alat <a href="terrain-PaintTexture.html">Tekstur cat</a> untuk menerapkan Tekstur berikutnya ke Terrain Anda.</p> 
+       <p>Jika Anda menambahkan ubin Terrain baru tanpa lapisan Terrain, dan cat di atasnya, sistem secara otomatis menambahkan lapisan Terrain yang dipilih untuk ubin Terrain baru. Karena ini adalah lapisan Terrain pertama, Tekstur itu menjadi lapisan dasar, dan mengisi seluruh ubin Terrain.</p> 
+       <p>Dalam Inspektur Terrain, di bawah <strong>Brushes</strong>, ada kotak yang menampilkan Sikat yang tersedia, bersama dengan opsi <strong>Brush Size</strong> dan <strong>Opacity</strong> di bawahnya. Lihat <a href="terrain-UsingTerrains.html">Membuat dan Mengedit Terrains</a> untuk informasi lebih lanjut tentang alat-alat ini.</p> 
+       <p><a name="Performance"></a></p> 
+       <h2><strong>Rendering performance</strong></h2> 
+       <p>Jumlah Lapisan Terrain yang Anda berikan kepada ubin Terrain mungkin mempengaruhi kinerja renderer. Jumlah maksimum yang disarankan dari Terrain Layers tergantung pada yang <span class="tooltip"><a class="tooltipMoreInfoLink" href="render-pipelines.html">render pipa</a><span class="tooltiptext">Rangkaian operasi yang mengambil isi dari Adegan, dan menampilkannya di layar. Unity memungkinkan Anda memilih dari pipa render yang dibangun sebelumnya, atau menulis sendiri. <a href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span> penggunaan Proyek Anda.</p> 
+       <ul> 
+        <li><p>Jika Proyek Anda menggunakan <a href="universal-render-pipeline.html">Pipa Render Universal (URP)</a> atau <a href="built-in-render-pipeline.html">Pipa Render Built-in</a>, Anda dapat menggunakan empat Terrain Layers per Tekstur lulus, tanpa batasan jumlah berlalu. Ini berarti bahwa meskipun Anda diperbolehkan untuk menggunakan banyak Terrain Layers seperti yang Anda inginkan, setiap lulus meningkatkan waktu yang dihabiskan rendering Terrain. Untuk kinerja maksimum, membatasi setiap ubin Terrain Anda ke empat lapisan Terrain.</p></li> 
+        <li><p>Jika Proyek Anda menggunakan <a href="high-definition-render-pipeline.html">Definisi Tinggi Render Pipeline (HDRP)</a>, Anda dapat menambahkan hingga delapan lapisan Terrain per ubin Terrain, dan sistem membuat mereka dalam satu lulus. Tidak ada biaya tambahan. Jika Anda menambahkan lebih dari delapan lapisan Terrain, mereka muncul di Editor Unity, tetapi diabaikan pada waktu yang berjalan.</p></li> 
+       </ul> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2020–01–27 Login</span></p></li> 
+        <li><p><span class="page-history">Informasi yang diperbarui tentang Warna Tint dan Opacity sebagai sifat Kepadatan</span></p></li> 
+       </ul> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="terrain-StampTerrain.html"></a></span> 
+         <div class="tip">
+           Catalog 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="class-Brush.html"></a></span> 
+         <div class="tip">
+           Brushes 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

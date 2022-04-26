@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Mengelola penyimpanan cloud</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="cloud" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UnityServices.html">Layanan Unity</a></li> 
+         <li><a href="UnityCollaborate.html">Unity Collaborate</a></li> 
+         <li>Mengelola penyimpanan cloud</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="CollaborateInProgress.html"></a></span> 
+          <div class="tip">
+            Pemberitahuan edit In-Progress 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UnityCollaborateExportProject.html"></a></span> 
+          <div class="tip">
+            Pindahkan Anda Proyek ke sistem kontrol versi lain 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Mengelola penyimpanan cloud</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Layanan Collaborate menggunakan penyimpanan cloud untuk backup seluruh Proyek Anda di cloud dan membuatnya dapat diakses di mana saja.</p> 
+       <p>Penutup topik ini:</p> 
+       <ul> 
+        <li><a href="#howmuchstorage">Menentukan berapa banyak penyimpanan Anda Proyek menggunakan</a></li> 
+        <li><a href="#addingstorage">Menambahkan lebih banyak penyimpanan</a></li> 
+        <li><a href="#retention">Penyimpanan data cloud</a></li> 
+        <li><a href="#archivingprojects">Archiving Projects</a></li> 
+        <li><a href="#archiveforcollab">Proyek Pengaruh untuk Collaborate</a></li> 
+       </ul> 
+       <p><a name="howmuchstorage"></a></p> 
+       <h2>Menentukan berapa banyak penyimpanan Anda Proyek menggunakan</h2> 
+       <p>Penyimpanan cloud dihitung berdasarkan per organisasi. Unity menghitung jumlah penyimpanan awan yang Organisasi Anda gunakan dengan meringkas ukuran versi terbaru dari semua Proyek Kolaborasi Organisasi Anda. Hanya versi terbaru dari jumlah proyek Anda menuju batas penyimpanan Anda. Versi Sejarah (non-head) Proyek Anda tidak dihitung ke penyimpanan cloud.</p> 
+       <p>Untuk melihat penggunaan penyimpanan Anda saat ini:</p> 
+       <ol> 
+        <li>Sign into the .</li> 
+        <li>Pilih Proyek di Organisasi yang penyimpanan yang ingin Anda lihat.</li> 
+        <li>Di jendela navigasi kiri, klik <strong>Settings</strong>, kemudian klik <strong>Usage</strong>.</li> 
+       </ol> 
+       <p>Pada <span class="tooltip"><strong>Project window</strong><span class="tooltiptext">Jendela yang menunjukkan isi folder <code>Assets</code> (Project tab) <a class="tooltipMoreInfoLink" href="ProjectView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Projectwindow">Glossary</a></span></span></span> utama ada ubin yang menunjukkan:</p> 
+       <ul> 
+        <li> <strong>Cloud storage</strong> - Berapa banyak penyimpanan Proyek saat ini digunakan dibandingkan dengan sisa Proyek di Organisasi Anda, dan seluruh ruang penyimpanan cloud Anda.</li> 
+        <li> <strong>Percent of storage per project</strong> - Berapa banyak penyimpanan yang digunakan oleh setiap Proyek di Organisasi Anda.</li> 
+        <li> <strong>Storage used by &lt;Project name&gt; over time</strong> - Berapa banyak penyimpanan Proyek saat ini telah digunakan karena diciptakan, sampai saat ini.</li> 
+       </ul> 
+       <p><a name="addingstorage"></a></p> 
+       <h2>Menambahkan lebih banyak penyimpanan</h2> 
+       <p>Anda dapat memperoleh lebih banyak penyimpanan cloud dalam dua cara:</p> 
+       <ul> 
+        <li>Upgrade ke Tim Unity Advanced, yang juga menyediakan penyimpanan cloud 25GB.</li> 
+        <li>Paket Penyimpanan Pembelian di dashboard ID Unity. Setiap paket penyimpanan menambahkan penyimpanan awan 25GB ke Organisasi.</li> 
+       </ul> 
+       <p><strong>Upgrading to Unity Teams Advanced</strong></p> 
+       <p>Untuk meningkatkan ke Tim Unity Lanjutan, kunjungi halaman Tim Unity di . Pada halaman Tim Unity Anda dapat mempelajari lebih lanjut tentang fitur Tim Unity Advanced dan kemudian ditingkatkan.</p> 
+       <p><strong>Purchase storage packs</strong></p> 
+       <p>Untuk menambahkan paket penyimpanan:</p> 
+       <ol> 
+        <li>Masuk ke dasbor.</li> 
+        <li>Di bar navigasi kiri, klik <strong>Organizations</strong>.</li> 
+        <li>Di jendela <strong>Organizations</strong> utama, pilih Organisasi.</li> 
+        <li>Di bar navigasi kiri, klik <strong>Service Usage</strong>.</li> 
+        <li>Di jendela <strong>Usage overview</strong>, klik tombol <strong>Manage storage</strong>.</li> 
+        <li>Pada dialog <strong>Add cloud storage</strong>, pilih jumlah penyimpanan yang Anda butuhkan, lalu klik tombol <strong>Continue to purchase</strong>. Jika Anda hanya memiliki satu organisasi, lanjutkan ke langkah 6.</li> 
+        <li>Di jendela <strong>Checkout</strong>, masukkan informasi pembayaran Anda dan kemudian klik <strong>Pay now</strong>.</li> 
+       </ol> 
+       <p><strong>Modifying your contracted amount of storage</strong></p> 
+       <ol> 
+        <li>Masuk ke dasbor.</li> 
+        <li>Di jendela navigasi kiri, klik <strong>Organizations</strong>.</li> 
+        <li>Di jendela <strong>Organizations</strong> utama, pilih Organisasi.</li> 
+        <li>Di bar navigasi kiri, klik <strong>Service Usage</strong>. Jendela Penggunaan Layanan menampilkan periode kontrak Anda dan jumlah paket penyimpanan yang Anda kontrak untuk.</li> 
+        <li>Di jendela <strong>Usage overview</strong>, klik tombol <strong>Manage storage</strong>.</li> 
+        <li>Pada tab <strong>Add cloud storage</strong>, masukkan jumlah paket penyimpanan untuk ditambahkan.</li> 
+        <li>Klik tombol <strong>Next</strong>.</li> 
+        <li>Di jendela <strong>Review order</strong>, meninjau informasi pesanan dan kemudian klik tombol <strong>Confirm purchase</strong>.</li> 
+       </ol> 
+       <p>Anda dapat mengurangi paket penyimpanan nomor pada tab <strong>Manage subscription</strong>:</p> 
+       <ul> 
+        <li>Untuk menghapus semua paket penyimpanan terkontrak, matikan <strong>Automatic Renewal</strong>. Ketika pembaruan otomatis dimatikan, semua paket penyimpanan dihapus pada tanggal pembaruan.</li> 
+        <li>Untuk mengurangi jumlah paket penyimpanan yang diperbarui, masukkan jumlah paket penyimpanan untuk memperbarui di bidang <strong>Select the number of storage packs you want to renew upon renewal</strong>.</li> 
+       </ul> 
+       <p>Kemudian klik tombol <strong>Save</strong>.</p> 
+       <p><a name="retention"></a></p> 
+       <h2>Penyimpanan data cloud</h2> 
+       <p>Jika Anda menggunakan Tim Unity Advanced, Unity tidak menghapus riwayat versi untuk Proyek Anda.</p> 
+       <p>Jika Anda menggunakan Tim Unity Basic, Unity menyimpan data Anda dalam penyimpanan cloud setidaknya 1 tahun. Unity berhak untuk menghapus riwayat Proyek lebih dari 1 tahun. Anda selalu memiliki akses ke versi terbaru dari Proyek Anda, tetapi Anda hanya memiliki akses ke 90 hari terakhir dari sejarah versi Anda. Jika Anda menggunakan Tim Unity Dasar dan ingin akses penuh ke 1 tahun terakhir sejarah Anda, Anda harus meningkatkan ke Tim Unity Lanjutan. Ketika Anda meningkatkan ke Tim Unity Lanjutan, Anda memiliki akses ke sejarah penuh Anda akan maju.</p> 
+       <h2>Mengurangi penggunaan penyimpanan cloud Anda</h2> 
+       <p>Anda memiliki tiga pilihan untuk mengurangi penggunaan penyimpanan cloud Anda:</p> 
+       <ul> 
+        <li>Hapus atau mengurangi ukuran aset dalam proyek Anda. Penting untuk diingat bahwa riwayat proyek tidak dihitung terhadap penggunaan penyimpanan cloud Anda.</li> 
+        <li>Database Sitemap<a href="#archivingprojects">Archiving Projects</a>.</li> 
+        <li>Proyek Arsip untuk Berkolaborasi hanya. Meniru Proyek untuk berkolaborasi hanya memungkinkan Anda untuk ruang penyimpanan cloud gratis, sementara masih dapat menggunakan layanan Unity lainnya seperti Iklan, <span class="tooltip"><strong>Analytics</strong><span class="tooltiptext"><strong>Unity Analytics</strong><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Analytics">Glossary</a></span></span></span>, dan Laporan Kinerja. Sitemap<a href="#archiveforcollab">Proyek Pengaruh untuk Collaborate</a>.</li> 
+       </ul> 
+       <p><a name="archivingprojects"></a></p> 
+       <h2>Archiving Projects</h2> 
+       <p>Menarsipkan Proyek secara otomatis menyaring penyimpanan cloud Collaborate yang terkait dengan Proyek dan layanan Unity tidak lagi dapat diakses.</p> 
+       <p>Untuk menyaring Proyek:</p> 
+       <ol> 
+        <li>Sign into the .</li> 
+        <li>Pilih Proyek ke arsip.</li> 
+        <li>Di bar navigasi kiri, klik <strong>Settings</strong>, lalu klik <strong>General</strong>.</li> 
+        <li>Di bagian bawah jendela utama, baca catatan penting dan, jika Anda yakin Anda ingin arsip Proyek, klik tombol <strong>Archive my Project for ALL Unity services</strong>.</li> 
+        <li>Dalam dialog <strong>Are you sure you want to archive this Project</strong>, masukkan nama Proyek dan kemudian klik tombol <strong>Yes, archive it</strong>.</li> 
+       </ol> 
+       <p>Untuk membuka sebuah Proyek:</p> 
+       <ol> 
+        <li>Sign into the .</li> 
+        <li>Di kanan atas jendela utama, di bawah tombol <strong>CREATE NEW PROJECT</strong>, klik tautan <strong>View Archived Projects</strong>.</li> 
+        <li>Temukan Proyek untuk mengaktifkan kembali, klik ellipsi vertikal ke kanan nama Proyek dan kemudian pilih <strong>Unarchive Project</strong>.</li> 
+       </ol> 
+       <p><a name="archiveforcollab"></a></p> 
+       <h2>Proyek Pengaruh untuk Collaborate</h2> 
+       <p>Untuk mengarsipkan Proyek untuk berkolaborasi hanya:</p> 
+       <ol> 
+        <li>Sign into the .</li> 
+        <li>Pilih Proyek ke arsip.</li> 
+        <li>Di jendela navigasi kiri, klik <span class="tooltip"><strong>Collaborate</strong><span class="tooltiptext">Layanan cloud-hosted Unity yang menyediakan cara sederhana untuk tim untuk menyimpan, berbagi, dan berkontribusi pada proyek Unity mereka. <a class="tooltipMoreInfoLink" href="UnityCollaborate.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Collaborate">Glossary</a></span></span></span>, kemudian klik <strong>Storage</strong>.</li> 
+        <li>Di jendela utama, klik tombol <strong>ARCHIVE</strong>.</li> 
+       </ol> 
+       <p>Untuk membuka arsip Proyek untuk berkolaborasi:</p> 
+       <ol> 
+        <li>Sign into the .</li> 
+        <li>Select the Project to unarchive.</li> 
+        <li>Di jendela navigasi kiri, klik <strong>Collaborate</strong>, kemudian klik <strong>Storage</strong>.</li> 
+        <li>Di jendela utama, klik tombol <strong>UNARCHIVE</strong>.</li> 
+       </ol> 
+       <hr> 
+       <p><span class="page-edit">2018–07–16 Sitemap</span></p> 
+       <!-- area:cloud --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="CollaborateInProgress.html"></a></span> 
+         <div class="tip">
+           Pemberitahuan edit In-Progress 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UnityCollaborateExportProject.html"></a></span> 
+         <div class="tip">
+           Pindahkan Anda Proyek ke sistem kontrol versi lain 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

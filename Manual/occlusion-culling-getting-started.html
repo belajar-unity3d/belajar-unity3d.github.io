@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Memulai dengan penanaman oklusi</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="CamerasOverview.html">Kamera</a></li> 
+         <li><a href="OcclusionCulling.html">Occlusion culling</a></li> 
+         <li>Memulai dengan penanaman oklusi</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="OcclusionCulling.html"></a></span> 
+          <div class="tip">
+            Occlusion culling 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="occlusion-culling-dynamic-gameobjects.html"></a></span> 
+          <div class="tip">
+            Menggunakan penanaman oklusi dengan GameObjects dinamis 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Memulai dengan penanaman oklusi</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Halaman ini menjelaskan cara mengatur <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Scene">Glossary</a></span></span></span> Anda untuk <span class="tooltip"><strong>occlusion culling</strong><span class="tooltiptext">A yang menonaktifkan rendering objek ketika mereka tidak saat ini dilihat oleh kamera karena mereka dikabur (disebutkan) oleh benda lain. <a href="OcclusionCulling.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Occlusionculling">Glossary</a></span></span></span>, bake data budidaya oklusi Anda, dan memvisualisasikan hasilnya.</p> 
+       <h2>Menyiapkan Adegan Anda</h2> 
+       <p>Sebelum Anda mulai, mengidentifikasi semua <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> di Anda Adegan bahwa Anda ingin menjadi Occluders Statis (GameObjects yang tidak bergerak, dan itu menghalangi pandangan GameObjects yang ada di belakang mereka) dan Occludees Statis (GameObjects yang tidak bergerak, dan dikosongkan oleh Occluders Statis). GameObject dapat berupa Occluder Statis dan Occludee Statis.</p> 
+       <p>Calon yang baik untuk Occluders Statis menengah ke besar solid GameObjects, seperti dinding atau bangunan. Untuk menjadi Occluder Statis, GameObject harus:</p> 
+       <ul> 
+        <li>Memiliki komponen <span class="tooltip"><a class="tooltipMoreInfoLink" href="terrain-UsingTerrains.html">Terrain</a><span class="tooltiptext">Pemandangan di tempat kejadian Anda. Terrain GameObject menambahkan pesawat datar besar untuk adegan Anda dan Anda dapat menggunakan jendela Inspektur Terrain untuk menciptakan lanskap rinci. <a href="terrain-UsingTerrains.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Terrain">Glossary</a></span></span></span> atau <span class="tooltip"><a href="MeshRenderer">Mesh Renderer</a><span class="tooltiptext">Komponen mesh yang mengambil geometri dari Filter Mesh dan render di posisi yang ditentukan oleh komponen Transform objek. <a href="class-MeshRenderer.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#MeshRenderer">Glossary</a></span></span></span> component</li> 
+        <li>Be opaque</li> 
+        <li>Tidak bergerak di runtime</li> 
+       </ul> 
+       <p>Perhatikan bahwa jika Anda menggunakan kelompok <span class="tooltip"><strong>LOD</strong><span class="tooltiptext">Teknik <em>Tingkat Detail</em> (LOD) adalah optimasi yang mengurangi jumlah segitiga yang dimiliki Unity untuk membuat GameObject ketika jaraknya dari kamera meningkat. <a class="tooltipMoreInfoLink" href="LevelOfDetail.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#LOD">Glossary</a></span></span></span>, Unity menggunakan level dasar GameObject (LOD0) dari Occluder Statis untuk menentukan apa yang disebarkan. Jika silhouette dari GameObject bervariasi jauh antara LOD0 dan tingkat LOD lainnya, itu mungkin tidak menjadi kandidat yang baik untuk Occluder Statis.</p> 
+       <p>Setiap GameObject yang kemungkinan akan disebarkan pada runtime adalah kandidat yang baik untuk menjadi Occludee Statis, termasuk GameObjects kecil atau transparan. Untuk menjadi Occludee Statis, GameObject harus:</p> 
+       <ul> 
+        <li>Memiliki jenis komponen Renderer</li> 
+        <li>Tidak bergerak di runtime</li> 
+       </ul> 
+       <p>Ketika Anda telah mengidentifikasi GameObjects yang ingin Anda Occluders Statis dan Occludees Statis, Anda dapat mengatur Adegan Anda.</p> 
+       <ol> 
+        <li>Pilih semua GameObjects yang ingin Anda Occluders Statis.</li> 
+        <li>Di jendela <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>, buka menu drop-down <strong><a href="StaticObjects.html">Static Editor Flags</a></strong> dan pilih <strong>Occluder Static</strong>.</li> 
+        <li>Pilih semua GameObjects yang ingin Anda statis.</li> 
+        <li>Di jendela Inspektur, buka menu drop-down <strong>Static Editor Flags</strong> dan pilih <strong>Occludee Static</strong>.</li> 
+        <li>Tambahkan <span class="tooltip"><strong>Camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span> ke Adegan Anda dan pilih, atau pilih Kamera yang ada.</li> 
+        <li>Di jendela Inspektur, memastikan bahwa properti <strong>Occlusion Culling</strong> Kamera diaktifkan.</li> 
+       </ol> 
+       <h2>Kue data</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/OcclusionCullingInspectorBake.png" alt="Occlusion culling inspector bake tab."> 
+        <figcaption>
+          Occlusion culling inspector bake tab. 
+        </figcaption> 
+       </figure> 
+       <ol> 
+        <li>Pada menu atas, pilih <strong>Window &gt; Rendering &gt; Occlusion Culling</strong> untuk membuka <a href="occlusion-culling-window.html">Jendela Culling Occlusion</a>.</li> 
+        <li>Pilih tab <strong>Bake</strong>.</li> 
+        <li>Di sudut kanan bawah dari jendela Inspektur, tekan tombol <strong>Bake</strong>. Unity menghasilkan data budidaya occlusion, menyimpan data sebagai aset di Proyek Anda, dan menghubungkan aset dengan Adegan saat ini.</li> 
+       </ol> 
+       <h2>Mengvisualisasikan hasil</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/OcclusionCullingInspectorVisualization.png" alt="Occlusion Culling window Visualization tab."> 
+        <figcaption>
+          Occlusion Culling jendela visualisasi tab. 
+        </figcaption> 
+       </figure> 
+       <ol> 
+        <li>Pastikan jendela Budidaya Occlusion dan <span class="tooltip"><strong>Scene view</strong><span class="tooltiptext">Tampilan interaktif ke dunia yang Anda buat. Anda menggunakan Adegan Lihat untuk memilih dan posisi pemandangan, karakter, kamera, lampu, dan semua jenis lain dari Game Object. <a class="tooltipMoreInfoLink" href="UsingTheSceneView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SceneView">Glossary</a></span></span></span> keduanya terlihat. Ketika jendela Culling Occlusion terlihat, menampilkan data budidaya occlusion dan popup Culling Occlusion di pemandangan.</li> 
+        <li>Pilih Kamera di Adegan.</li> 
+        <li>Pindahkan Kamera di sekitar, dan amati pemandangan. Anda harus melihat GameObjects hilang dari pandangan ketika Kamera tidak dapat melihat mereka, karena baik culling frustum atau kusen oklusi.</li> 
+        <li>Gunakan <a href="occlusion-culling-window.html#occlusion-culling-popup">Home &gt; Sitemap</a> dalam pandangan Adegan untuk mengkonfigurasi visualisasi.</li> 
+        <li>Jika diperlukan, tweak <a href="occlusion-culling-window.html#bake-tab">bake settings</a> di tab <strong>Bake</strong> dari jendela Culling Occlusion, dan ulangi proses pembuatan roti.</li> 
+       </ol> 
+       <p>Jika Anda menggunakan built-in <span class="tooltip"><strong>Render Pipeline</strong><span class="tooltiptext">Rangkaian operasi yang mengambil isi dari Adegan, dan menampilkannya di layar. Unity memungkinkan Anda memilih dari pipa render yang dibangun sebelumnya, atau menulis sendiri. <a class="tooltipMoreInfoLink" href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span>, Anda dapat menggunakan <strong>Overdraw</strong>_ Adegan Melihat Mode untuk melihat jumlah overdraw yang terjadi, dan panel statistik dalam pandangan Game untuk melihat jumlah segitiga, vert, dan batch yang disatukan.</p> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="OcclusionCulling.html"></a></span> 
+         <div class="tip">
+           Occlusion culling 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="occlusion-culling-dynamic-gameobjects.html"></a></span> 
+         <div class="tip">
+           Menggunakan penanaman oklusi dengan GameObjects dinamis 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

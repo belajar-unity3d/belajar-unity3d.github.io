@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Jenis data dan presisi Shader</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="Shaders.html">Shaders</a></li> 
+         <li><a href="shader-writing.html">Menu Menu</a></li> 
+         <li><a href="SL-ShaderPrograms.html">HLSL di Unity</a></li> 
+         <li>Jenis data dan presisi Shader</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="SL-UnityShaderVariables.html"></a></span> 
+          <div class="tip">
+            Variabel naungan internal 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="SL-SamplerStates.html"></a></span> 
+          <div class="tip">
+            Menggunakan state sampler 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Jenis data dan presisi Shader</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Standar <span class="tooltip"><strong>Shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> bahasa di Unity adalah <a href="SL-ShaderPrograms.html">HLSL</a>, dan umum HLSL data jenis didukung. Namun, Unity memiliki beberapa tambahan untuk jenis HLSL, terutama untuk dukungan yang lebih baik pada platform seluler.</p> 
+       <h2>Jenis data dasar</h2> 
+       <p>Mayoritas perhitungan dalam naungan dilakukan pada nomor titik mengambang (yang akan menjadi <code>float</code> dalam bahasa pemrograman reguler seperti C #). Beberapa varian dari jenis titik mengambang hadir: <code>float</code>, <code>half</code> dan <code>fixed</code> (serta varian vektor/matrix dari mereka, seperti <code>half3</code> dan <code>float4x4</code>). Jenis-jenis ini berbeda dalam presisi (dan, akibatnya, kinerja atau penggunaan daya):</p> 
+       <h4>Presisi tinggi: <code>float</code> </h4> 
+       <p>Nilai titik mengambang presisi tertinggi; umumnya 32 bit (seperti <code>float</code> dari bahasa pemrograman biasa).</p> 
+       <p>Ketepatan <code>float</code> penuh umumnya digunakan untuk posisi ruang dunia, koordinat tekstur, atau komputasi scalar yang melibatkan fungsi kompleks seperti trigonometry atau power/exponentiation.</p> 
+       <h4>Presisi sedang: <code>half</code> </h4> 
+       <p>Nilai titik mengambang presisi menengah; umumnya 16 bit ( kisaran -60000 hingga +60000, dengan sekitar 3 digit desimal presisi).</p> 
+       <p>Setengah presisi berguna untuk vektor pendek, arah, posisi ruang objek, warna rentang dinamis tinggi.</p> 
+       <h4>Presisi rendah: <code>fixed</code> </h4> 
+       <p>Nilai titik tetap presisi paling rendah. Umumnya 11 bit, dengan kisaran -2.0 hingga + 2.0 dan 1/256th presisi.</p> 
+       <p>Ketepatan tetap berguna untuk warna biasa (seperti biasanya disimpan dalam tekstur biasa) dan melakukan operasi sederhana pada mereka.</p> 
+       <h4>Mengintegrasikan jenis data</h4> 
+       <p>Pengintegrasian (tipe data<code>int</code>) sering digunakan sebagai counter loop atau indeks array. Untuk tujuan ini, mereka umumnya bekerja dengan baik di berbagai platform.</p> 
+       <p>Tergantung pada platform, tipe integer mungkin tidak didukung oleh GPU. Sebagai contoh, Direct3D 9 dan OpenGL ES 2.0 GPUs hanya beroperasi pada data titik mengambang, dan ekspresi integer yang terlihat sederhana (dalam operasi bit atau logis) mungkin digambar menggunakan instruksi matematika titik mengambang yang cukup rumit.</p> 
+       <p>Direct3D 11, OpenGL ES 3, Logam dan platform modern lainnya memiliki dukungan yang tepat untuk jenis data integer, sehingga menggunakan sedikit pergeseran dan sedikit masking bekerja seperti yang diharapkan.</p> 
+       <h2>Komposit vektor/matrix Login</h2> 
+       <p>HLSL memiliki tipe vektor dan matriks bawaan yang diciptakan dari jenis dasar. Misalnya, <code>float3</code> adalah vektor 3D dengan komponen .x, .y, .z, dan <code>half4</code> adalah vektor 4D presisi menengah dengan .x, .y, .z, komponen .w. Atau, vektor dapat diindeks menggunakan .r, .g, .b, .a komponen, yang berguna ketika bekerja pada warna.</p> 
+       <p>Jenis matriks dibangun dengan cara yang sama; misalnya <code>float4x4</code> adalah matriks transformasi 4x4. Perhatikan bahwa beberapa platform hanya mendukung matriks persegi, sebagian besar OpenGL ES 2.0.</p> 
+       <p><a name="samplertypes"></a></p> 
+       <h2>Tekstur / Jenis sampel</h2> 
+       <p>Biasanya Anda menyatakan tekstur dalam kode HLSL Anda sebagai berikut:</p> 
+       <pre><code>sampler2D _MainTex;
+samplerCUBE _Cubemap;
+</code></pre> 
+       <p>Untuk platform seluler, ini diterjemahkan ke dalam "kursus presisi rendah", yaitu tekstur diharapkan memiliki data presisi rendah di dalamnya. Anda dapat mengubah presisi sampler default untuk seluruh proyek Unity di <span class="tooltip"><strong>Player Settings</strong><span class="tooltiptext">Pengaturan yang memungkinkan Anda mengatur berbagai pilihan khusus pemain untuk permainan akhir yang dibangun oleh Unity. <a class="tooltipMoreInfoLink" href="class-PlayerSettings.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#PlayerSettings">Glossary</a></span></span></span> menggunakan dropdown <em>Model presisi Shader</em>. Jika Anda tahu tekstur Anda mengandung warna <span class="tooltip"><strong>HDR</strong><span class="tooltiptext">kisaran dinamis tinggi<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#HDR">Glossary</a></span></span></span>, Anda mungkin ingin menggunakan sampel presisi setengah:</p> 
+       <pre><code>sampler2D_half _MainTex;
+samplerCUBE_half _Cubemap;
+</code></pre> 
+       <p>Atau jika tekstur Anda mengandung data presisi float penuh (misalnya <a href="SL-CameraDepthTexture.html">tekstur kedalaman</a>), gunakan sampler presisi penuh:</p> 
+       <pre><code>sampler2D_float _MainTex;
+samplerCUBE_float _Cubemap;
+</code></pre> 
+       <h2>Presisi, Dukungan Perangkat Keras dan Kinerja</h2> 
+       <p>Satu komplikasi penggunaan tipe data <code>float</code> / <code>half</code> /<code>fixed</code> adalah bahwa PC GPUs adalah presisi tinggi <strong>always</strong>. Itu, untuk semua PC (Windows / Mac / Linux) GPU, itu tidak masalah apakah Anda menulis <code>float</code>, <code>half</code> atau jenis data <code>fixed</code> di naungan Anda. Mereka selalu mematuhi segala sesuatu dalam presisi titik mengambang 32-bit penuh.</p> 
+       <p>Jenis <code>half</code> dan <code>fixed</code> hanya menjadi relevan ketika menargetkan GPU seluler, di mana jenis ini terutama ada untuk kekuatan (dan kadang-kadang kinerja) kendala. Perlu diingat bahwa Anda harus menguji naungan Anda di ponsel untuk melihat apakah atau tidak Anda berjalan ke masalah presisi / numerik.</p> 
+       <p>Bahkan di GPU seluler, dukungan presisi yang berbeda bervariasi antara keluarga GPU. Berikut ini ikhtisar tentang bagaimana setiap keluarga GPU seluler memperlakukan setiap tipe titik mengambang (diindikasikan oleh jumlah bit yang digunakan untuk itu):</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Login Login</th> 
+          <th style="text-align:left;">float</th> 
+          <th style="text-align:left;">half</th> 
+          <th style="text-align:left;">fixed</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Seri PowerVR 6/7</td> 
+          <td style="text-align:left;">32</td> 
+          <td style="text-align:left;" colspan="2">16 g</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Mozilla Firefox 64 ...</td> 
+          <td style="text-align:left;">32</td> 
+          <td style="text-align:left;">16 g</td> 
+          <td style="text-align:left;">1 Artikel</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Mozilla Firefox 57.0.1 ...</td> 
+          <td style="text-align:left;">32</td> 
+          <td style="text-align:left;" colspan="2">16 g</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Mozilla Firefox 64 ...</td> 
+          <td style="text-align:left;" colspan="3">32 simpul 24 fragmen</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">ARM Mali T6xx/7xx</td> 
+          <td style="text-align:left;">32</td> 
+          <td style="text-align:left;" colspan="2">16 g</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Login Brunei 400/450</td> 
+          <td style="text-align:left;" colspan="3">32 simpul 16 fragmen</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">NVIDIA X1</td> 
+          <td style="text-align:left;">32</td> 
+          <td style="text-align:left;" colspan="2">16 g</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">NVIDIA K1</td> 
+          <td style="text-align:left;" colspan="3">32</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Login Tegra 3/4</td> 
+          <td style="text-align:left;">32</td> 
+          <td style="text-align:left;" colspan="2">16 g</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Kebanyakan GPU seluler modern sebenarnya hanya mendukung nomor 32-bit (digunakan untuk tipe <code>float</code>) atau nomor 16-bit (digunakan untuk jenis <code>half</code> dan <code>fixed</code>). Beberapa GPU yang lebih tua memiliki ketepatan yang berbeda untuk komputasi naungan <span class="tooltip"><strong>vertex shader</strong><span class="tooltiptext">Program yang berjalan pada setiap simpul model 3D ketika model sedang diberikan. <a class="tooltipMoreInfoLink" href="SL-ShaderPrograms.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#vertexshader">Glossary</a></span></span></span> dan fragmen.</p> 
+       <p>Menggunakan presisi lebih rendah sering bisa lebih cepat, baik karena peningkatan alokasi register GPU, atau karena unit eksekusi “perjalanan cepat” khusus untuk operasi matematika presisi rendah tertentu. Bahkan ketika tidak ada keunggulan kinerja mentah, menggunakan presisi lebih rendah sering menggunakan daya yang kurang pada GPU, yang menyebabkan masa pakai baterai yang lebih baik.</p> 
+       <p>Aturan umum thumb adalah untuk memulai dengan setengah presisi untuk segala sesuatu kecuali posisi dan koordinat tekstur. Hanya meningkatkan presisi jika setengah presisi tidak cukup untuk beberapa bagian perhitungan.</p> 
+       <h4>Dukungan untuk infinities, NaNs dan nilai titik mengambang khusus lainnya</h4> 
+       <p>Dukungan untuk nilai-nilai titik mengambang khusus dapat berbeda tergantung pada keluarga GPU mana (paling mobile) Anda berjalan.</p> 
+       <p>Semua PC GPU yang mendukung dukungan Direct3D 10 dengan standar titik mengambang IEEE 754. Ini berarti bahwa jumlah pelampung berperilaku persis seperti yang mereka lakukan dalam bahasa pemrograman biasa pada CPU.</p> 
+       <p>Ponsel GPU dapat memiliki tingkat dukungan yang sedikit berbeda. Pada beberapa, membagi nol dengan nol mungkin menyebabkan NaN ("bukan nomor"); pada orang lain itu mungkin mengakibatkan ketidakpastian, nol atau nilai yang tidak ditentukan lainnya. Pastikan untuk menguji naungan Anda pada perangkat target untuk memeriksa mereka didukung.</p> 
+       <h2>GPU Sitemap</h2> 
+       <p>Vendor GPU memiliki panduan mendalam tentang kinerja dan kemampuan GPU mereka. Lihat ini untuk rincian:</p> 
+       <ul> 
+        <li><a href="https://developer.arm.com/docs/101897/0200">ARM Mali GPU Panduan Pengembang Praktik Terbaik</a></li> 
+        <li><a href="https://developer.qualcomm.com/software/adreno-gpu-sdk/tools">Panduan Pengembang Qualcomm Adreno OpenGL ES</a></li> 
+        <li><a href="https://community.imgtec.com/developers/powervr/documentation/">Panduan Arsitektur PowerVR</a></li> 
+       </ul> 
+       <h2>Lihat Juga</h2> 
+       <ul> 
+        <li><a href="SL-PlatformDifferences.html">Perbedaan rendering spesifik platform</a></li> 
+        <li><a href="SL-ShaderPerformance.html">Tips Kinerja Shader</a></li> 
+       </ul> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="SL-UnityShaderVariables.html"></a></span> 
+         <div class="tip">
+           Variabel naungan internal 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="SL-SamplerStates.html"></a></span> 
+         <div class="tip">
+           Menggunakan state sampler 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

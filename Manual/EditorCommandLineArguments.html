@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Unity Editor perintah baris argumen</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="EditorFeatures.html">Fitur Editor</a></li> 
+         <li><a href="CommandLineArguments.html">argumen baris perintah</a></li> 
+         <li>Unity Editor perintah baris argumen</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="CommandLineArguments.html"></a></span> 
+          <div class="tip">
+            argumen baris perintah 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="PlayerCommandLineArguments.html"></a></span> 
+          <div class="tip">
+            Login Sitemap 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Unity Editor perintah baris argumen</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <h2>Peluncuran Unity</h2> 
+       <p>Di macOS, ketik berikut ke Terminal untuk meluncurkan Unity:</p> 
+       <p><code>/Applications/Unity/Unity.app/Contents/MacOS/Unity</code></p> 
+       <p>Pada Windows, ketik berikut ke Command Prompt untuk meluncurkan Unity:</p> 
+       <p><code>"C:\Program Files\Unity\Editor\Unity.exe"</code></p> 
+       <p>Ketika Anda meluncurkan Unity seperti ini, menerima perintah dan informasi pada startup, yang dapat berguna untuk suite uji, membangun otomatis dan tugas produksi lainnya.</p> 
+       <h2>Konfigurasi argumen</h2> 
+       <p>Anda dapat menjalankan aplikasi Editor dan build Unity dengan perintah dan informasi tambahan pada startup. Halaman ini mencantumkan argumen baris perintah yang dapat Anda gunakan untuk meluncurkan dan mengkonfigurasi instance Editor Unity.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Command</strong></th> 
+          <th style="text-align:left;"><strong>Details:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>-createProject &lt;pathname&gt;</code></td> 
+          <td style="text-align:left;">Buat proyek kosong di jalan tertentu.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-disable-assembly-updater &lt;assembly1 assembly2&gt;</code></td> 
+          <td style="text-align:left;">Tentukan daftar yang dipisahkan dari nama perakitan sebagai parameter untuk Unity untuk mengabaikan pembaruan otomatis.<br><br> Daftar ruang-separated nama perakitan adalah opsional: lulus opsi baris perintah tanpa nama perakitan untuk mengabaikan semua rakitan, seperti dalam contoh 1.<br><br><strong>Example 1</strong><br><code>unity.exe -disable-assembly-updater</code><br><br><strong>Example 2</strong><br><code>unity.exe -disable-assembly-updater A1.dll subfolder/A2.dll</code><br><br><code>A1.dll</code><code>A2.dll</code> Sitemap 2 memiliki dua nama perakitan, satu dengan nama jalan. Contoh 2 mengabaikan <code>subfolder</code>, tidak peduli folder apa yang disimpan di, dan mengabaikan <br><br><code>-disable-assembly-updater</code>:<a href="LogFiles.html">Editor.log</a><br><br><code>[Assembly Updater] warning: Ignoring assembly [assembly_path] as requested by command line parameter.”).</code><br><br>:<a href="APIUpdater.html">API Updater</a><br><br><br><br><strong>Note</strong> yang tidak perlu ketika Anda mengimpor perakitan. argumen ini berguna jika Anda ingin mengimpor perakitan yang mengakses API Unity yang tidak perlu memperbarui. Ini juga berguna ketika Anda mengimpor rakitan yang tidak mengakses API Unity (misalnya, jika Anda telah membangun beberapa atau semua kode sumber Anda di luar Unity, dan Anda ingin mengimpor rakitan yang dihasilkan ke dalam proyek Unity Anda).: Jika Anda menonaktifkan pembaruan setiap perakitan yang perlu memperbarui, Anda mungkin mendapatkan kesalahan pada waktu kompilasi, menjalankan waktu, atau keduanya, yang sulit dilacak.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-disable-gpu-skinning</code></td> 
+          <td style="text-align:left;">Unit Pemrosesan Grafik yang Dapat Diaktifkan (GPU) <span class="tooltip"><strong>skinning</strong><span class="tooltiptext">Proses mengikat sendi tulang ke vertices mesh karakter atau ‘skin’. Dilakukan dengan alat eksternal, seperti Blender atau Autodesk Maya. <a class="tooltipMoreInfoLink" href="UsingHumanoidChars.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Skinning">Glossary</a></span></span></span> pada startup.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <code>-executeMethod &lt;ClassName.MethodName&gt;</code> atau <code>-executeMethod &lt;NamespaceName.ClassName.MethodName&gt;</code> </td> 
+          <td style="text-align:left;">Mengeksekusi metode statis segera setelah Unity membuka proyek, dan setelah pembaruan server Aset opsional selesai. Anda dapat menggunakan ini untuk tugas-tugas seperti integrasi berkelanjutan, melakukan Uji Unit, membuat build atau menyiapkan data.<br><br> Untuk mengembalikan kesalahan dari proses baris perintah, baik membuang pengecualian yang menyebabkan Unity untuk keluar dengan kode pengembalian 1, atau memanggil <a href="../ScriptReference/EditorApplication.Exit.html">Login Login</a> dengan kode pengembalian non-zero.<br><br> Untuk lulus parameter, tambahkan ke baris perintah dan mengambil mereka di dalam fungsi menggunakan <code>System.Environment.GetCommandLineArgs</code>. Untuk menggunakan <code>-executeMethod</code>, Anda perlu menempatkan skrip enclosing di folder Editor. Metode yang Anda eksekusi harus didefinisikan sebagai statis.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-exportPackage &lt;exportAssetPath1 exportAssetPath2 ExportAssetPath3 exportFileName&gt;</code></td> 
+          <td style="text-align:left;">Ekspor paket, diberikan jalur (atau set jalur tertentu). Dalam contoh ini, <code>exportAssetPath</code> adalah folder (relatif untuk akar proyek Unity) untuk mengekspor dari proyek Unity, dan <code>exportFileName</code> adalah nama paket. Opsi ini hanya mengekspor seluruh folder sekaligus. Anda biasanya perlu menggunakan perintah ini dengan argumen <code>-projectPath</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-importPackage &lt;pathname&gt;</code></td> 
+          <td style="text-align:left;">Mengimpor <span class="tooltip"><a class="tooltipMoreInfoLink" href="AssetPackagesCreate.html">Paket aset</a><span class="tooltiptext">Koleksi file dan data dari proyek Unity, atau elemen proyek, yang dikompresi dan disimpan dalam satu file, mirip dengan file Zip, dengan ekstensi <code>.unitypackage</code>. Paket aset adalah cara praktis berbagi dan menggunakan proyek Unity dan koleksi aset. <a href="AssetPackages.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Assetpackage">Glossary</a></span></span></span> yang diberikan. Unity tidak menampilkan dialog impor.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-job-worker-count &lt;N&gt;</code></td> 
+          <td style="text-align:left;">Tentukan jumlah benang maksimum untuk Pekerjaan Unity <a href="../ScriptReference/Unity.Jobs.LowLevel.Unsafe.JobsUtility.JobWorkerMaximumCount.html">Hitungan Pekerja Pekerjaan</a>. Anda juga dapat mengatur nilai ini sebagai <code>job-worker-count=&lt;N&gt;</code> di <code>boot.config</code> untuk Unity Standalone Player.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-logFile &lt;pathname&gt;</code></td> 
+          <td style="text-align:left;">Tentukan di mana Unity menulis Editor atau file log standalone Windows/Linux/OSX. Untuk output ke konsol, tentukan - untuk nama jalan. Pada Windows, tentukan opsi - untuk mengarahkan output ke <code>stdout</code>, yang secara default bukan konsol.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-noUpm</code></td> 
+          <td style="text-align:left;">Mengaktifkan Manajer Paket Unity.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-openfile &lt;path&gt;</code></td> 
+          <td style="text-align:left;">Buka proyek dari jalur ke tempat kejadian atau file paket. Atau, Anda dapat menggunakan argumen <code>-projectPath</code> argument</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-password &lt;password&gt;</code></td> 
+          <td style="text-align:left;">Masukkan kata sandi ke formulir log-in selama aktivasi Editor Unity.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-projectPath &lt;pathname&gt;</code></td> 
+          <td style="text-align:left;">Buka proyek di jalur yang diberikan. Jika nama jalan mengandung ruang, tutupkan dalam kutipan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-quit</code></td> 
+          <td style="text-align:left;">Cukup Editor Unity setelah perintah lain telah selesai mengeksekusi. Ini dapat menyebabkan pesan kesalahan disembunyikan (tetapi mereka masih muncul dalam file <code>Editor.log</code>).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-releaseCodeOptimization</code></td> 
+          <td style="text-align:left;">Aktifkan mode optimasi kode rilis, menginjak mode optimasi kode default saat ini untuk sesi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Sitemap Hulu<code>-setDefaultPlatformTextureFormat</code> (Android only)</td> 
+          <td style="text-align:left;">Mengatur tekstur default <strong><span class="tooltip"><strong>compression</strong><span class="tooltiptext">A method of storing data that reduces the amount of storage space it requires. See <a href="class-TextureImporterOverride.html">Texture Compression</a>, <a href="class-AnimationClip.html#AssetProperties">Animation Compression</a>, <a href="class-AudioClip.html">Audio Compression</a>, <a href="ReducingFilesize.html">Build Compression</a>.<br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#compression">Glossary</a></span></span></span></strong> ke format yang diinginkan sebelum Anda mengimpor tekstur atau membangun proyek. Ini jadi Anda tidak perlu mengimpor tekstur lagi dengan format yang Anda inginkan. Format yang tersedia adalah dxt, pvrtc, atc, dll, dan astc.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-silent-crashes</code></td> 
+          <td style="text-align:left;">Mencegah Unity dari menampilkan dialog yang muncul ketika pemain berdiri sendiri crash. argumen ini berguna ketika Anda ingin menjalankan Pemain dalam membangun otomatis atau tes, di mana Anda tidak ingin dialog prompt untuk menghalangi otomatisasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-username &lt;username&gt;</code></td> 
+          <td style="text-align:left;">Masukkan nama pengguna ke formulir log-in selama aktivasi Editor Unity.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-vcsMode &lt;mode&gt;</code></td> 
+          <td style="text-align:left;">Mengatur mode kontrol versi. Mode yang tersedia adalah <code>"Visible Meta Files"</code>, <code>"Hidden Meta Files"</code>, <code>Perforce</code>, dan <code>PlasticSCM</code>. Anda dapat menggunakan bendera tambahan untuk mengisi kolom konfigurasi untuk mode kontrol versi yang diberikan. Bendera ini didasarkan pada metode <a href="../ScriptReference/VersionControl.Provider.GetActiveConfigFields.html">Provider.GetActiveConfigFields</a>. Misalnya, Anda dapat menggunakan <code>-vcPerforceUsername</code>, <code>-vcPerforcePassword</code>, <code>-vcPerforceWorkspace</code> dan <code>-vcPerforceServer</code> untuk mengatur username Perforce, ruang kerja dan bidang server.<br><br><strong>Note</strong>: argumen <code>&lt;mode&gt;</code> yang mengandung ruang harus dibungkus dalam kutipan ganda (“).|<code>-vcsModeSession &lt;mode&gt;</code>| Mengatur mode kontrol versi untuk sesi ini. Mode yang tersedia adalah <code>"Visible Meta Files"</code>, <code>"Hidden Meta Files"</code>, <code>Perforce</code>, dan <code>PlasticSCM</code>. Anda dapat menggunakan bendera tambahan untuk mengisi kolom konfigurasi untuk mode kontrol versi yang diberikan. Bendera ini didasarkan pada metode <a href="../ScriptReference/VersionControl.Provider.GetActiveConfigFields.html">Provider.GetActiveConfigFields</a>. Misalnya, Anda dapat menggunakan <code>-vcPerforceUsername</code>, <code>-vcPerforcePassword</code>, <code>-vcPerforceWorkspace</code> dan <code>-vcPerforceServer</code> untuk mengatur username Perforce, ruang kerja dan bidang server.<br><br><strong>Note</strong>: argumen <code>&lt;mode&gt;</code> yang mengandung ruang harus dibungkus dalam kutipan ganda (”).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-version</code></td> 
+          <td style="text-align:left;">Cetak jumlah versi Editor Unity di baris perintah, tanpa meluncurkan Editor.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>WordPress.org</h2> 
+       <p>Gunakan argumen berikut untuk mengkonfigurasi mode batch Unity. Mode batch memungkinkan Unity untuk menjalankan tugas yang telah ditentukan tanpa input tambahan, yang membuat mode batch berguna untuk tugas otomatis seperti pengujian. Untuk informasi lebih lanjut, lihat <a href="CLIBatchmodeCoroutines.html">Mode batch dan kompatibilitas koroutine built-in</a>.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Command</strong></th> 
+          <th style="text-align:left;"><strong>Details:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>-accept-apiupdate</code></td> 
+          <td style="text-align:left;">Gunakan opsi baris perintah ini untuk menentukan bahwa APIUpdater harus berjalan ketika Unity diluncurkan dalam mode batch.<br><br>Example:<br><br><code>unity.exe -accept-apiupdate -batchmode [other params]</code><br><br> APIUpdater tidak menjalankan jika Anda membatalkan argumen baris perintah ini ketika Anda meluncurkan Unity dalam mode batch. Ini mungkin menyebabkan kesalahan kompiler.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-batchmode</code></td> 
+          <td style="text-align:left;">Jalankan Unity dalam mode batch. Dalam mode batch, Unity menjalankan argumen garis perintah tanpa perlu interaksi manusia. Ini juga menekan jendela pop-up yang membutuhkan interaksi manusia (seperti jendela Simpan Adegan); namun, Editor Unity sendiri terbuka seperti biasa. Anda harus selalu menjalankan Unity dalam mode batch ketika menggunakan argumen baris perintah, karena memungkinkan otomatisasi untuk berjalan tanpa gangguan.<br><br> Ketika pengecualian terjadi selama pelaksanaan kode skrip, pembaruan server Aset gagal, atau operasi lain gagal, Unity segera keluar dengan kode pengembalian <strong>1</strong>.<br><br> Dalam mode batch, Unity mengirim versi minimal dari output log ke konsol. Namun, <a href="LogFiles.html">Log Files</a> masih mengandung informasi log penuh. Anda tidak dapat membuka proyek dalam mode batch sementara Editor memiliki proyek yang sama terbuka; hanya satu kasus Unity dapat berjalan pada waktu.<br><br> Untuk memeriksa apakah Editor atau Standalone Player berjalan dalam mode batch, gunakan operator <a href="../ScriptReference/Application-isBatchMode.html">Aplikasi.isBatchMode</a>.<br><br> Jika proyek belum diimpor ketika menggunakan <code>-batchmode</code>, platform target adalah yang default. Untuk memaksa platform yang berbeda, gunakan opsi <code>-buildTarget</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-nographics</code></td> 
+          <td style="text-align:left;">Ketika Anda menjalankan ini dalam mode batch, itu tidak menginisialisasi perangkat grafis. Anda kemudian dapat menjalankan alur kerja otomatis pada mesin yang tidak memiliki GPU. Aliran kerja otomatis hanya bekerja ketika Anda memiliki jendela fokus, jika tidak Anda tidak dapat mengirim perintah input simulasi. <code>-nographics</code> tidak memungkinkan Anda untuk memanggang GI, karena <span class="tooltip"><strong>Enlighten</strong><span class="tooltiptext">Sistem pencahayaan oleh Geomerics yang digunakan dalam Unity untuk lightmapping dan untuk Mencerahkan Penerangan Global Realtime. <a class="tooltipMoreInfoLink" href="https://www.siliconstudio.co.jp/en/products-service/enlighten/">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Enlighten">Glossary</a></span></span></span> membutuhkan percepatan GPU.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Membangun Argumen</h2> 
+       <p>Gunakan argumen berikut untuk membangun pemain untuk berbagai platform dari baris perintah. Untuk informasi lebih lanjut tentang pemain bangunan dengan argumen baris perintah, lihat <a href="PlayerCommandLineArguments.html">Login Sitemap</a>.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Command</strong></th> 
+          <th style="text-align:left;"><strong>Details:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>-buildLinux64Player &lt;pathname&gt;</code></td> 
+          <td style="text-align:left;">Membangun pemain Linux mandiri 64-bit (misalnya, <code>-buildLinux64Player path/to/your/build</code>).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-buildOSXUniversalPlayer &lt;pathname&gt;</code></td> 
+          <td style="text-align:left;">Membangun 64-bit berdiri sendiri Mac OSX pemain (misalnya, <code>-buildOSXUniversalPlayer path/to/your/build.app</code>).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-buildTarget &lt;name&gt;</code></td> 
+          <td style="text-align:left;">Pilih target build aktif sebelum memuat proyek. Pilihan yang mungkin adalah: <br><br>• Standalone<br>• Win<br>• Win64<br>• OSXUniversal<br>• Linux64<br>• iOS<br>• Android<br>• WebGL<br>• WindowsStoreApps<br>• tvOS</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-buildWindowsPlayer &lt;pathname&gt;</code></td> 
+          <td style="text-align:left;">Membangun standalone 32-bit Windows player (misalnya, -buildWindowsPlayer path/to/your/build.exe).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-buildWindows64Player &lt;pathname&gt;</code></td> 
+          <td style="text-align:left;">Membangun pemain Windows mandiri 64-bit (misalnya, -buildWindows64Player path/to/your/build.exe).</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>WordPress.org</h2> 
+       <p>Gunakan argumen berikut untuk mengkonfigurasi penggunaan Unity dari server cache. Untuk informasi lebih lanjut, lihat <span class="tooltip"><a class="tooltipMoreInfoLink" href="CacheServer.html">MySQL Server</a><span class="tooltiptext">Aplikasi mandiri yang dapat Anda jalankan di komputer lokal Anda yang menyimpan data aset impor untuk mengurangi waktu yang dibutuhkan untuk mengimpor aset. <a href="CacheServer.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#CacheServer">Glossary</a></span></span></span>.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Command</strong></th> 
+          <th style="text-align:left;"><strong>Details:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>-EnableCacheServer</code></td> 
+          <td style="text-align:left;">Tells Unity untuk menggunakan <a href="UnityAccelerator.html">MySQL Server</a> yang lebih baru. Anda juga harus menggunakan <code>-cacheServerEndpoint</code> untuk menentukan alamat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-cacheServerEndpoint</code></td> 
+          <td style="text-align:left;">Menentukan alamat endpoint jika Anda menggunakan yang lebih baru <strong>Accelerator</strong> Cache Server.<br><br> Contoh: <code>-cacheServerEndpoint 127.0.0.1:10080</code>. Overrides konfigurasi yang tersimpan di Preferensi Editor. Gunakan ini untuk menghubungkan beberapa kasus Unity ke server Cache yang berbeda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-cacheServerNamespacePrefix</code></td> 
+          <td style="text-align:left;">Mengatur prefiks ruang nama untuk server Cache 100<strong>Accelerator</strong> yang lebih baru. Digunakan untuk mengelompokkan data bersama pada Cache Server.<br><br> Contoh: <code>-cacheServerNamespacePrefix</code> MyProject</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-cacheServerEnableDownload</code></td> 
+          <td style="text-align:left;">Download yang dapat diaktifkan dari Cache <strong>Accelerator</strong> yang lebih baru Server.<br><br>Example:<code>-cacheServerEnableDownload true</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-cacheServerEnableUpload</code></td> 
+          <td style="text-align:left;">Mengaktifkan unggah ke Cache <strong>Accelerator</strong> yang lebih baru Server.<br><br>Example:<code>-cacheServerEnableUpload false</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-CacheServerIPAddress &lt;host:port&gt;</code></td> 
+          <td style="text-align:left;">Memungkinkan penggunaan yang lebih tua (v1) Cache Server, dan menentukan Alamat IP untuk terhubung ke startup. Overrides konfigurasi yang tersimpan di Preferensi Editor. Gunakan ini untuk menghubungkan beberapa kasus Unity ke v1 Cache Server yang berbeda.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Debugging argumen</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Command</strong></th> 
+          <th style="text-align:left;"><strong>Details:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>-disableManagedDebugger</code></td> 
+          <td style="text-align:left;">menonaktifkan soket mendengarkan debugger.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-diag-debug-shader-compiler</code></td> 
+          <td style="text-align:left;">Unity meluncurkan hanya satu kasus Kompiler <strong><span class="tooltip"><strong>Shader</strong><span class="tooltiptext">A program that runs on the GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Shader">Glossary</a></span></span></span></strong>, dan memaksa waktunya menjadi satu jam. Berguna untuk debugging Shader Compiler masalah.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-debugCodeOptimization</code></td> 
+          <td style="text-align:left;">Aktifkan mode optimasi kode debug, menginjak mode optimasi kode default saat ini untuk sesi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-enableCodeCoverage</code></td> 
+          <td style="text-align:left;">Cakupan kode EEnables dan memungkinkan akses ke <a href="../ScriptReference/TestTools.Coverage.html">API</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-stackTraceLogType</code></td> 
+          <td style="text-align:left;">Memungkinkan debugging rinci. Semua pengaturan memungkinkan <strong>None</strong>, <strong>Script Only</strong> dan <strong>Full</strong> untuk dipilih (misalnya, <code>-stackTraceLogType Full</code>).</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Grafik API</h2> 
+       <p>Gunakan argumen berikut untuk memaksa Editor Unity untuk menggunakan API grafis tertentu.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Command</strong></th> 
+          <th style="text-align:left;"><strong>Details:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Sitemap Hulu<code>-force-d3d11</code> (Windows only)</td> 
+          <td style="text-align:left;">Membuat editor menggunakan Direct3D 11 untuk rendering. Biasanya API grafis tergantung pada <strong><span class="tooltip"><strong>Player Settings</strong><span class="tooltiptext">Settings that let you set various player-specific options for the final game built by Unity. <a class="tooltipMoreInfoLink" href="class-PlayerSettings.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PlayerSettings">Glossary</a></span></span></span></strong> (biasanya default ke D3D11).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Sitemap Hulu<code>-force-d3d12</code> (Windows only)</td> 
+          <td style="text-align:left;">Membuat editor menggunakan Direct3D 12 untuk rendering. Biasanya API grafis tergantung pada <strong>Player Settings</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-force-glcore</code></td> 
+          <td style="text-align:left;">Membuat editor menggunakan profil inti OpenGL 3/4 untuk rendering. Editor mencoba menggunakan versi OpenGL terbaik yang tersedia dan semua ekstensi OpenGL yang terpapar oleh driver OpenGL. Jika platform tidak didukung, editor menggunakan Direct3D.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-force-glcoreXY</code></td> 
+          <td style="text-align:left;">Mirip dengan<code>-force-glcore</code>, tetapi permintaan versi konteks OpenGL tertentu. Nilai yang diterima untuk XY: 32, 33, 40, 41, 42, 43, 44 atau 45.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Sitemap Hulu<code>-force-gles</code> (Windows only)</td> 
+          <td style="text-align:left;">Membuat editor menggunakan OpenGL untuk Sistem Tertanam untuk rendering. Editor mencoba menggunakan versi OpenGL ES terbaik yang tersedia, dan semua ekstensi OpenGL ES yang terpapar oleh driver OpenGL.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Sitemap Hulu<code>-force-glesXY</code> (Windows only)</td> 
+          <td style="text-align:left;">Mirip dengan <code>-force-gles</code>, tetapi permintaan versi konteks OpenGL ES tertentu. Nilai yang diterima untuk XY: 30, 31 atau 32.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-force-vulkan</code></td> 
+          <td style="text-align:left;">Buat Editor menggunakan Vulkan untuk rendering. Biasanya API grafis tergantung pada <strong>Player Settings</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-force-clamped</code></td> 
+          <td style="text-align:left;">Gunakan ini dengan <code>-force-glcoreXY</code> untuk mencegah Unity dari memeriksa ekstensi OpenGL tambahan, memungkinkan untuk menjalankan antara platform dengan jalur kode yang sama.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>License arguments</h2> 
+       <p>Gunakan argumen berikut untuk memproses lisensi Unity atau menjalankan Editor Unity dengan opsi lisensi yang berbeda.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Command</strong></th> 
+          <th style="text-align:left;"><strong>Details:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>-createManualActivationFile</code></td> 
+          <td style="text-align:left;">Langkah salah satu <a href="ManualActivationGuide.html">Proses tiga langkah</a> untuk mengaktifkan lisensi Unity secara manual. Untuk informasi lebih lanjut, lihat <a href="ManualActivationGuide.html#alf-commandline">Hasilkan file aktivasi lisensi (.alf) dari baris perintah</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-force-free</code></td> 
+          <td style="text-align:left;">Jalankan Editor seolah-olah ada lisensi Unity gratis di mesin, bahkan jika lisensi Unity Pro dipasang.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-manualLicenseFile &lt;yourulffile&gt;</code></td> 
+          <td style="text-align:left;">Langkah tiga <a href="ManualActivationGuide.html">Proses tiga langkah</a> untuk secara manual mengaktifkan lisensi Unity. Untuk informasi lebih lanjut, lihat <a href="ManualActivationGuide.html#ulf-commandline">Hasilkan file aktivasi lisensi (.alf) dari baris perintah</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-returnlicense</code></td> 
+          <td style="text-align:left;">Kembalikan lisensi aktif saat ini ke server lisensi. Untuk informasi lebih lanjut, lihat <a href="ManagingYourUnityLicense.html#returnlicense">Mengembalikan lisensi Anda</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-serial &lt;serial&gt;</code></td> 
+          <td style="text-align:left;">Aktifkan lisensi Unity Anda dengan nomor serial yang ditentukan. Untuk informasi lebih lanjut, lihat <a href="OnlineActivationGuide#license-activation-cli">Mengaktifkan lisensi dari baris perintah</a>.<br><br><strong>Note</strong>: Ketika Anda menggunakan argumen ini, Anda juga harus menggunakan argumen <code>-batchmode</code>. Ini juga praktik yang baik untuk menentukan argumen <code>-quit</code>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>argumen logam (hanya macOS)</h2> 
+       <p>Gunakan argumen berikut untuk mengkonfigurasi penggunaan Unity dari API grafis <a href="Metal.html">Metal</a> untuk perangkat Apple.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Command</strong></th> 
+          <th style="text-align:left;"><strong>Details:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>-force-device-index</code></td> 
+          <td style="text-align:left;">Saat menggunakan Metal, buat Editor menggunakan perangkat GPU tertentu dengan melewati indeks GPU (macOS hanya).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <code>-force-low-power-device</code> (hanya macOS)</td> 
+          <td style="text-align:left;">Jika Anda menggunakan Metal, buat Editor menggunakan perangkat daya rendah.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-force-metal</code></td> 
+          <td style="text-align:left;">Membuat editor menggunakan Metal sebagai API grafis default (macOS hanya).</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Profiler</h2> 
+       <p>Gunakan argumen berikut untuk mengkonfigurasi penggunaan Unity dari <span class="tooltip"><a class="tooltipMoreInfoLink" href="Profiler.html">Profiler</a><span class="tooltiptext">Jendela yang membantu Anda untuk mengoptimalkan permainan Anda. Ini menunjukkan berapa banyak waktu yang dihabiskan di berbagai bidang permainan Anda. Sebagai contoh, dapat melaporkan persentase waktu yang dihabiskan <strong>rendering</strong>, aimating, atau dalam logika permainan Anda. <a href="Profiler.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profiler">Glossary</a></span></span></span>.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Command</strong></th> 
+          <th style="text-align:left;"><strong>Details:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>-deepprofiling</code></td> 
+          <td style="text-align:left;">Aktifkan Deep Profileing pilihan untuk <a href="ProfilerWindow.html">CPU-profiler</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-profiler-enable</code></td> 
+          <td style="text-align:left;">Profil start-up dari Pemain atau Editor. Ketika Anda menggunakan argumen ini dengan Pemain, memiliki efek yang sama sebagai membangun Pemain dengan opsi <strong>Autoconnect Profiler</strong> diaktifkan dalam Membangun Pengaturan.<br><br> Ketika Anda menggunakan argumen ini dengan Editor, itu mulai mengumpulkan dan menampilkan informasi Profiler di jendela Profiler pada start-up dari Editor.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-profiler-log-file &lt;Path/To/Log/File.raw&gt;</code></td> 
+          <td style="text-align:left;">argumen ini mengatur <a href="Profiler.html">Profiler Unity</a> untuk merampingkan data profil ke file .raw pada startup. Ini bekerja untuk kedua Pemain dan Editor.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-profiler-capture-frame-count &lt;NumberOfFrames&gt;</code></td> 
+          <td style="text-align:left;">argumen ini menetapkan berapa banyak bingkai Profiler harus menangkap profil ketika streaming ke file .raw pada start-up. Ini hanya bekerja pada Pemain.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>-profiler-maxusedmemory</code></td> 
+          <td style="text-align:left;">Secara default, <code>maxUsedMemory</code> untuk Unity Profileer adalah 16MB untuk Pemain dan 256MB untuk Editor. Anda dapat menggunakan argumen ini untuk mengatur parameter <code>maxUsedMemory</code> ke ukuran kustom pada start-up (misalnya, <code>-profiler-maxusedmemory 16777216</code>). Ukuran diatur dalam byte.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Examples</h2> 
+       <p>Sitemap C# skrip dalam proyek:*<em>*</em>C# script in the project:*</p> 
+       <pre><code class="lang-C#">using UnityEditor;
+class MyEditorScript
+{
+     static void PerformBuild ()
+     {
+         string[] scenes = { "Assets/MyScene.unity" };
+         BuildPipeline.BuildPlayer(scenes, ...);
+     }
+}
+</code></pre> 
+       <p>Perintah berikut mengeksekusi Unity dalam mode batch, mengeksekusi metode <code>MyEditorScript.PerformBuild</code>, dan kemudian berhenti setelah selesai.</p> 
+       <p><strong>Windows:</strong></p> 
+       <pre><code>"C:\Program Files\Unity\Editor\Unity.exe" -quit -batchmode -projectPath "C:\Users\UserName\Documents\MyProject" -executeMethod
+MyEditorScript.PerformBuild
+</code></pre> 
+       <p><strong>macOS:</strong></p> 
+       <pre><code>/Applications/Unity/Unity.app/Contents/MacOS/Unity -quit -batchmode -projectPath ~/UnityProjects/MyProject -executeMethod
+MyEditorScript.PerformBuild
+</code></pre> 
+       <h2>Unity Editor argumen baris perintah khusus</h2> 
+       <p>Anda hanya harus menggunakan keadaan khusus ini, atau ketika diarahkan oleh Dukungan Unity.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Command</strong></th> 
+          <th style="text-align:left;"><strong>Details:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>-enableIncompatibleAssetDowngrade</code></td> 
+          <td style="text-align:left;">Gunakan ini ketika Anda memiliki Aset yang dibuat oleh versi Unity yang lebih baru, yang Anda inginkan untuk menurunkan kelas untuk bekerja dengan versi Unity Anda saat ini. Ketika Anda mengaktifkan ini, Unity menyajikan Anda dengan pencarian dialog untuk konfirmasi downgrade ini jika Anda mencoba membuka proyek yang akan membutuhkannya.<br><br> Catatan: Prosedur ini tidak didukung dan sangat berisiko, dan hanya boleh digunakan sebagai resor terakhir.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>argumen Editor tambahan dari paket</h2> 
+       <p>argumen baris perintah Editor tambahan tersedia ketika paket ini diinstal.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Package</strong></th> 
+          <th style="text-align:left;"><strong>Details:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Burst</td> 
+          <td style="text-align:left;">Lihat dokumentasi paket.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Test Framework</td> 
+          <td style="text-align:left;">Lihat dokumentasi paket.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="CommandLineArguments.html"></a></span> 
+         <div class="tip">
+           argumen baris perintah 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="PlayerCommandLineArguments.html"></a></span> 
+         <div class="tip">
+           Login Sitemap 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

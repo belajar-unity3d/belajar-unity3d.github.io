@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Kompilasi bersyarat</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="ScriptingSection.html">Scripting</a></li> 
+         <li><a href="unity-architecture.html">Arsitektur persatuan</a></li> 
+         <li><a href="script-compilation.html">Joomla</a></li> 
+         <li>Kompilasi Kondisional</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="ScriptCompileOrderFolders.html"></a></span> 
+          <div class="tip">
+            folder khusus dan urutan kompilasi skrip 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="CustomScriptingSymbols.html"></a></span> 
+          <div class="tip">
+            Simbol scripting kustom 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Kompilasi Kondisional</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Dukungan unity untuk bahasa C# termasuk penggunaan <strong>directives</strong>, yang memungkinkan Anda untuk secara selektif termasuk atau mengecualikan kode dari kompilasi, berdasarkan apakah <strong>scripting symbols</strong> tertentu adalah <em>defined</em> atau <em>tidak ditentukan</em>.</p> 
+       <p>Anda dapat membaca lebih luas tentang bagaimana petunjuk ini bekerja di C# pada <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/preprocessor-directives">Login C# praprosesor halaman arahan</a>.</p> 
+       <p>Unity memiliki berbagai simbol skrip built-in yang mewakili opsi yang dapat Anda gunakan di <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> Anda untuk selektif termasuk atau mengecualikan bagian kode dari kompilasi.</p> 
+       <p>Misalnya, simbol scripting bawaan yang ditetapkan ketika pemain dibangun untuk platform standalone Windows adalah <code>UNITY_STANDALONE_WIN</code>. Anda dapat memeriksa apakah simbol ini didefinisikan menggunakan jenis khusus jika pernyataan, sebagai berikut:</p> 
+       <pre><code>#if UNITY_STANDALONE_WIN
+
+  Debug.Log("Standalone Windows");
+
+#endif
+</code></pre> 
+       <p>Karakter hash (<code>#</code>) di depan <code>if</code> dan <code>endif</code> menunjukkan bahwa pernyataan ini adalah "arah", dan ditangani selama proses kompilasi, daripada saat runtime.</p> 
+       <p>Oleh karena itu dalam contoh di atas, garis Debug hanya disertakan untuk kompilasi dalam membangun proyek Windows yang berdiri sendiri. Ini dihilangkan sepenuhnya ketika disusun di Editor, atau dalam pembangun target lainnya. Ini berbeda untuk menggunakan struktur <code>if .. then .. else</code> biasa, yang hanya akan memotong <em>execution</em> bagian tertentu dari kode pada waktu yang berjalan. Lihat lebih lanjut di bawah ini untuk contoh penuh.</p> 
+       <p>Ada sejumlah simbol scripting bawaan yang memungkinkan Anda untuk secara selektif mengkompilasi atau kode omit berdasarkan <a href="#Platform">Platform</a> yang dipilih, <a href="#Editor">Versi Editor</a>, dan skenario lingkungan sistem miscellan <a href="#Other">other</a>. Simbol scripting bawaan ini tercantum di bawah ini.</p> 
+       <p>Selain itu, Anda dapat mendefinisikan simbol scripting Anda sendiri baik menggunakan Editor <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span>, melalui scripting, atau melalui file aset, yang memungkinkan Anda untuk mengontrol kompilasi sebagian dari kode Anda berdasarkan definisi arbitrase. Lihat <a href="CustomScriptingSymbols.html">Simbol scripting kustom</a> untuk informasi lebih lanjut.</p> 
+       <p> <em>Catatan: <strong>Scripting symbols</strong> kadang-kadang disebut sebagai “define simbol”, “preprocessor mendefinisikan”, atau hanya “defines”</em>.</p> 
+       <p><a name="Platform"></a></p> 
+       <h2>WordPress.org</h2> 
+       <p>Unity secara otomatis mendefinisikan simbol scripting tertentu berdasarkan platform penulisan dan membangun target. Ini adalah sebagai berikut:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Define</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>UNITY_EDITOR</strong></td> 
+          <td style="text-align:left;">Simbol Scripting untuk memanggil Skrip Editor Unity dari kode permainan Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UNITY_EDITOR_WIN</strong></td> 
+          <td style="text-align:left;">Simbol Scripting untuk kode Editor di Windows.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UNITY_EDITOR_OSX</strong></td> 
+          <td style="text-align:left;">Simbol Scripting untuk kode Editor pada Mac OS X.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UNITY_EDITOR_LINUX</strong></td> 
+          <td style="text-align:left;">Simbol Scripting untuk kode Editor di Linux.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UNITY_STANDALONE_OSX</strong></td> 
+          <td style="text-align:left;">Simbol scripting untuk mengkompilasi atau mengeksekusi kode khusus untuk Mac OS X (termasuk arsitektur Universal, PPC dan Intel).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UNITY_STANDALONE_WIN</strong></td> 
+          <td style="text-align:left;">Simbol scripting untuk membandingkan / mengeksekusi kode khusus untuk aplikasi Windows standalone.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UNITY_STANDALONE_LINUX</strong></td> 
+          <td style="text-align:left;">Simbol scripting untuk membandingkan / mengeksekusi kode khusus untuk aplikasi mandiri Linux.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UNITY_STANDALONE</strong></td> 
+          <td style="text-align:left;">Simbol Scripting untuk membandingkan / mengeksekusi kode untuk platform yang berdiri sendiri (Mac OS X, Windows atau Linux).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UNITY_WII</strong></td> 
+          <td style="text-align:left;">Simbol scripting untuk membandingkan / mengeksekusi kode untuk konsol Wii.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UNITY_IOS</strong></td> 
+          <td style="text-align:left;">Simbol scripting untuk membandingkan / mengeksekusi kode untuk platform iOS.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UNITY_IPHONE</strong></td> 
+          <td style="text-align:left;">Sitemap Gunakan <strong>UNITY_IOS</strong> bukan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UNITY_ANDROID</strong></td> 
+          <td style="text-align:left;">Simbol Scripting untuk platform Android.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UNITY_LUMIN</strong></td> 
+          <td style="text-align:left;">Simbol Scripting untuk platform Magic Leap OS. Anda juga dapat menggunakan <strong>PLATFORM_LUMIN</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UNITY_TIZEN</strong></td> 
+          <td style="text-align:left;">Simbol Scripting untuk platform Tizen.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UNITY_TVOS</strong></td> 
+          <td style="text-align:left;">Simbol Scripting untuk platform Apple TV.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UNITY_WSA</strong></td> 
+          <td style="text-align:left;">Simbol Scripting untuk <span class="tooltip"><strong>Universal Windows Platform</strong><span class="tooltiptext">Fitur IAP yang mendukung simulator Pembelian Aplikasi Microsoft, yang memungkinkan Anda untuk menguji aliran pembelian IAP pada perangkat sebelum menerbitkan aplikasi Anda. <a class="tooltipMoreInfoLink" href="UnityIAPUniversalWindows.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#UniversalWindowsPlatform">Glossary</a></span></span></span>. Selain itu, <strong>NETFX_CORE</strong> didefinisikan ketika membandingkan file C# terhadap . NET Core dan menggunakan . Sitemap<span class="tooltip"><strong>scripting backend</strong><span class="tooltiptext">Kerangka kerja yang skrip di Unity. Unity mendukung tiga backend scripting yang berbeda tergantung pada platform target: Mono, .NET dan IL2CPP. Platform Windows Universal, namun hanya mendukung dua: .NET dan IL2CPP. <a href="windowsstore-il2cpp.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ScriptingBackend">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UNITY_WSA_10_0</strong></td> 
+          <td style="text-align:left;">Simbol Scripting untuk Platform Windows Universal. Selain itu <strong>WINDOWS_UWP</strong> didefinisikan ketika membandingkan file C# terhadap .NET Core.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UNITY_WEBGL</strong></td> 
+          <td style="text-align:left;">Simbol Scripting untuk <span class="tooltip"><strong>WebGL</strong><span class="tooltiptext">Login API yang membuat grafis 2D dan 3D di browser web. Opsi build Unity WebGL memungkinkan Unity untuk mempublikasikan konten sebagai program JavaScript yang menggunakan teknologi HTML5 dan WebGL rendering API untuk menjalankan konten Unity di browser web. <a class="tooltipMoreInfoLink" href="webgl-gettingstarted.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#WebGL">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UNITY_FACEBOOK</strong></td> 
+          <td style="text-align:left;">Simbol Scripting untuk platform Facebook (WebGL atau Windows mandiri).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UNITY_ANALYTICS</strong></td> 
+          <td style="text-align:left;">Simbol scripting untuk memanggil metode Unity <span class="tooltip"><strong>Analytics</strong><span class="tooltiptext"><strong>Unity Analytics</strong><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Analytics">Glossary</a></span></span></span> dari kode permainan Anda. Versi 5.2 dan di atas.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UNITY_ASSERTIONS</strong></td> 
+          <td style="text-align:left;">Simbol Scripting untuk proses kontrol pernyataan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UNITY_64</strong></td> 
+          <td style="text-align:left;">Simbol Scripting untuk platform 64-bit.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="Editor"></a></p> 
+       <h2>Versi editor Simbol Scripting</h2> 
+       <p>Unity secara otomatis mendefinisikan simbol scripting tertentu berdasarkan versi Editor yang saat ini Anda gunakan.</p> 
+       <p>Mengingat nomor versi <strong>X.Y.Z</strong> (misalnya, 2019.4.14), Unity mengekspos tiga simbol skrip global dalam format berikut: <strong>UNITY_X</strong>, <strong>UNITY_X_Y</strong> dan <strong>UNITY_X_Y_Z</strong>.</p> 
+       <p>Berikut adalah contoh simbol scripting yang terkena Unity 2019.4.14:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Define</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>UNITY_2019</strong></td> 
+          <td style="text-align:left;">Simbol Scripting untuk versi rilis Unity 2019, yang terkena setiap 2019. Y.Z rilis.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UNITY_2019_4</strong></td> 
+          <td style="text-align:left;">Simbol scripting untuk versi utama Unity 2019.4, terpapar di setiap rilis 2019.4.Z.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UNITY_2019_4_14</strong></td> 
+          <td style="text-align:left;">Simbol Scripting untuk versi minor Unity 2019.4.14.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Anda juga dapat menyusun kode secara selektif berdasarkan versi awal Unity yang diperlukan untuk mengkompilasi atau mengeksekusi sebagian kode yang diberikan. Mengingat format versi yang sama seperti di atas (<strong>X.Y</strong>), Unity mengekspos satu #define global dalam format <strong>UNITY_X_Y_OR_NEWER</strong>, yang dapat Anda gunakan untuk tujuan ini.</p> 
+       <p><a name="Other"></a></p> 
+       <h2>Simbol scripting lainnya</h2> 
+       <p>Simbol skriping lain menentukan Unity adalah:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Define</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>CSHARP_7_3_OR_NEWER</strong></td> 
+          <td style="text-align:left;">Tentukan ketika membangun skrip dengan dukungan untuk C# 7.3 atau yang lebih baru.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>ENABLE_MONO</strong></td> 
+          <td style="text-align:left;">Scripting backend #define untuk Mono.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>ENABLE_IL2CPP</strong></td> 
+          <td style="text-align:left;">Scripting backend #define untuk <span class="tooltip"><strong>IL2CPP</strong><span class="tooltiptext">Back-end scripting bersatu yang dapat Anda gunakan sebagai alternatif untuk Mono ketika proyek bangunan untuk beberapa platform. <a class="tooltipMoreInfoLink" href="IL2CPP.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#IL2CPP">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>NET_2_0</strong></td> 
+          <td style="text-align:left;">Ditetapkan ketika membangun skrip terhadap tingkat kompatibilitas API NET 2.0 pada Mono dan IL2CPP.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>NET_2_0_SUBSET</strong></td> 
+          <td style="text-align:left;">Ditetapkan ketika membangun skrip terhadap tingkat kompatibilitas API Subset NET 2.0 pada Mono dan IL2CPP.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>NET_LEGACY</strong></td> 
+          <td style="text-align:left;">Ditetapkan ketika membangun skrip terhadap .NET 2.0 atau .NET 2.0 Subset API tingkat kompatibilitas pada Mono dan IL2CPP.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>NET_4_6</strong></td> 
+          <td style="text-align:left;">Ditetapkan ketika membangun skrip terhadap tingkat kompatibilitas API NET 4.x pada Mono dan IL2CPP.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>NET_STANDARD_2_0</strong></td> 
+          <td style="text-align:left;">Didefinisikan ketika membangun skrip terhadap tingkat kompatibilitas API NET Standard 2.0 pada Mono dan IL2CPP.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>ENABLE_WINMD_SUPPORT</strong></td> 
+          <td style="text-align:left;">Setelah dukungan Windows Runtime diaktifkan pada IL2CPP. Lihat <a href="IL2CPP-WindowsRuntimeSupport.html">Dukungan Windows Runtime</a> untuk rincian lebih lanjut.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>ENABLE_INPUT_SYSTEM</strong></td> 
+          <td style="text-align:left;">Setelah paket Sistem Input diaktifkan dalam <span class="tooltip"><strong>Player Settings</strong><span class="tooltiptext">Pengaturan yang memungkinkan Anda mengatur berbagai pilihan khusus pemain untuk permainan akhir yang dibangun oleh Unity. <a class="tooltipMoreInfoLink" href="class-PlayerSettings.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#PlayerSettings">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>ENABLE_LEGACY_INPUT_MANAGER</strong></td> 
+          <td style="text-align:left;">Ditetapkan ketika legacy <span class="tooltip"><strong>Input Manager</strong><span class="tooltiptext">Pengaturan di mana Anda dapat mendefinisikan semua sumbu input yang berbeda, tombol dan kontrol untuk proyek Anda. <a class="tooltipMoreInfoLink" href="class-InputManager.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#InputManager">Glossary</a></span></span></span> diaktifkan dalam Pengaturan Pemain.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UNITY_SERVER</strong></td> 
+          <td style="text-align:left;">Didefinisikan ketika pengaturan Build Server diaktifkan dalam Pengaturan Build</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>DEVELOPMENT_BUILD</strong></td> 
+          <td style="text-align:left;">Didefinisikan ketika skrip Anda berjalan di pemain yang dibangun dengan opsi "<span class="tooltip"><strong>Development Build</strong><span class="tooltiptext">Membangun pengembangan termasuk simbol debug dan memungkinkan Profiler. <a class="tooltipMoreInfoLink" href="UnityCloudBuildDevelopmentBuilds.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#DevelopmentBuild">Glossary</a></span></span></span>".</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Pengujian kode precompiled</h2> 
+       <p>Di bawah ini adalah contoh cara menggunakan kode yang telah ditentukan. Ini mencetak pesan yang tergantung pada platform yang Anda pilih untuk membangun target Anda.</p> 
+       <p>Pertama-tama, pilih platform yang ingin Anda uji kode Anda dengan pergi ke <strong>File &gt; Build Settings</strong>. Ini menampilkan jendela <strong>Build Settings</strong>; pilih platform target Anda dari sini.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BuildSettings_01.png" alt="Build Settings window with Windows, Mac, Linux selected as the target platform"> 
+        <figcaption>
+          Membangun jendela Pengaturan dengan Windows, Mac, Linux dipilih sebagai platform target 
+        </figcaption> 
+       </figure> 
+       <p>Pilih platform yang ingin Anda uji kode prekompiled Anda terhadap dan klik <strong>Switch Platform</strong> untuk memberitahu Unity yang platform yang Anda targetkan.</p> 
+       <p>Buat script dan copy/paste kode berikut:</p> 
+       <pre><code>using UnityEngine;
+using System.Collections;
+
+public class PlatformDefines : MonoBehaviour {
+  void Start () {
+
+    #if UNITY_EDITOR
+      Debug.Log("Unity Editor");
+    #endif
+
+    #if UNITY_IOS
+      Debug.Log("iOS");
+    #endif
+
+    #if UNITY_STANDALONE_OSX
+        Debug.Log("Standalone OSX");
+    #endif
+
+    #if UNITY_STANDALONE_WIN
+      Debug.Log("Standalone Windows");
+    #endif
+
+  }          
+}
+</code></pre> 
+       <p>Untuk menguji kode, klik <strong>Play Mode</strong>. Konfirmasikan bahwa kode bekerja dengan memeriksa pesan yang relevan di konsol Unity, tergantung pada platform mana yang Anda pilih - misalnya, jika Anda memilih <strong>iOS</strong>, pesan "Unity iOS" diatur untuk muncul di konsol.</p> 
+       <p>Dalam C # Anda dapat menggunakan atribut <code>CONDITIONAL</code> yang lebih bersih, kurang kesalahan-memproduksi cara pengupasan fungsi. Lihat <a href="https://msdn.microsoft.com/en-us/library/system.diagnostics.conditionalattribute(v=vs.110).aspx">Sitemap Kelas Attribute</a> untuk informasi lebih lanjut. Perhatikan bahwa callback Unity umum (ex. Start(), Update(), LateUpdate(), FixedUpdate(), Awake()) tidak terpengaruh oleh atribut ini karena mereka disebut langsung dari mesin dan, karena alasan kinerja, tidak memperhitungkan mereka ke akun.</p> 
+       <p>Selain kompiler <code>#if</code> dasar, Anda juga dapat menggunakan uji multiway di C#:</p> 
+       <pre><code>#if UNITY_EDITOR
+
+    Debug.Log("Unity Editor");
+
+#elif UNITY_IOS
+
+    Debug.Log("Unity iOS");
+
+#else
+
+    Debug.Log("Any other platform");
+
+#endif
+</code></pre> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="ScriptCompileOrderFolders.html"></a></span> 
+         <div class="tip">
+           folder khusus dan urutan kompilasi skrip 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="CustomScriptingSymbols.html"></a></span> 
+         <div class="tip">
+           Simbol scripting kustom 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Login Komponen pemain</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="VideoPlayer.html">Gambaran keseluruhan video</a></li> 
+         <li>Web Browser</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="VideoPlayer.html"></a></span> 
+          <div class="tip">
+            Gambaran keseluruhan video 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="VideoPlayer-MigratingFromMovieTexture.html"></a></span> 
+          <div class="tip">
+            Migrating dari MovieTexture ke VideoPlayer 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Web Browser</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Gunakan Video Player <span class="tooltip"><a class="tooltipMoreInfoLink" href="Components.html">component</a><span class="tooltiptext">Bagian fungsional dari GameObject. GameObject dapat mengandung sejumlah komponen. Unity memiliki banyak komponen built-in, dan Anda dapat membuat Anda sendiri dengan menulis skrip yang berwarisi dari MonoBehaviour. <a href="UsingComponents.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#component">Glossary</a></span></span></span> untuk melampirkan <a href="Video.html">file video</a> ke <span class="tooltip"><a href="GameObjects.html">GameObjects</a><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#GameObject">Glossary</a></span></span></span>, dan mainkan pada <span class="tooltip"><a href="Textures.html">Texture</a><span class="tooltiptext">Gambar yang digunakan ketika membuat elemen GameObject, Sprite, atau UI. Tekstur sering diterapkan pada permukaan mesh untuk memberikan detail visual. <a href="class-TextureImporter.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#texture">Glossary</a></span></span></span> GameObject saat berjalan.</p> 
+       <p>screenshot di bawah ini menunjukkan komponen Video Player melekat pada spherical GameObject.</p> 
+       <p>Secara default, <strong>Material Property</strong> dari komponen Video Player diatur ke tekstur utama GameObject, yang berarti bahwa ketika komponen Video Player melekat pada GameObject yang memiliki Renderer, secara otomatis menetapkan dirinya ke Tekstur pada Renderer (karena ini adalah Tekstur utama untuk GameObject). Di sini, GameObject memiliki komponen Renderer <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a class="tooltipMoreInfoLink" href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Mesh">Glossary</a></span></span></span>, sehingga Video Player secara otomatis menetapkannya ke bidang Renderer, yang berarti Klip Video bermain pada Tekstur <span class="tooltip"><strong>Mesh Renderer</strong><span class="tooltiptext">Komponen mesh yang mengambil geometri dari Filter Mesh dan render di posisi yang ditentukan oleh komponen Transform objek. <a href="class-MeshRenderer.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#MeshRenderer">Glossary</a></span></span></span>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Video-1.png" alt="A Video Player component attached to a spherical GameObject, playing the Video Clip on the GameObject’s main Texture (in this case, the Texture of the Mesh Renderer)"> 
+        <figcaption>
+          Foto Komponen pemain melekat pada GameObject bulat, bermain Klip Video di Tekstur utama GameObject (dalam kasus ini, Tekstur Renderer Mesh) 
+        </figcaption> 
+       </figure> 
+       <p>Anda juga dapat mengatur target khusus untuk video untuk bermain, termasuk:</p> 
+       <ul> 
+        <li><p>Pesawat <a href="class-Camera.html">Kamera</a> plane</p></li> 
+        <li><p>A <a href="class-RenderTexture.html">Render Tekstur</a> </p></li> 
+        <li><p>Parameter Tekstur <span class="tooltip"><a class="tooltipMoreInfoLink" href="Materials.html">Material</a><span class="tooltiptext">Aset yang menentukan bagaimana permukaan harus diberikan. <a href="class-Material.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Material">Glossary</a></span></span></span> Texture parameter</p></li> 
+        <li><p>Setiap bidang <a href="class-TextureImporter.html">Texture</a> dalam komponen</p></li> 
+       </ul> 
+       <h2>Login Komponen pemain Login</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Video-2.png" alt="The Video Player component"> 
+        <figcaption>
+          Video Player komponen 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong><em>Property</em></strong></th> 
+          <th style="text-align:left;"></th> 
+          <th style="text-align:left;"></th> 
+          <th style="text-align:left;"><strong><em>Function</em></strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong>Source</strong></td> 
+          <td style="text-align:left;">Pilih jenis sumber untuk video Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2"><strong>Video Clip</strong></td> 
+          <td style="text-align:left;">Menetapkan <a href="class-VideoClip.html">Video Klip</a> ke Video Player.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"></td> 
+          <td style="text-align:left;"><strong>Video Clip</strong></td> 
+          <td style="text-align:left;">Gunakan bidang ini untuk menentukan Klip Video yang ditugaskan ke komponen Video Player. Seret-and-drop file video ke bidang ini, atau klik lingkaran ke kanan lapangan dan memilihnya dari daftar Aset jika berada di folder Proyek Anda. Ini tidak didukung dalam <span class="tooltip"><strong>WebGL</strong><span class="tooltiptext">Login API yang membuat grafis 2D dan 3D di browser web. Opsi build Unity WebGL memungkinkan Unity untuk mempublikasikan konten sebagai program JavaScript yang menggunakan teknologi HTML5 dan WebGL rendering API untuk menjalankan konten Unity di browser web. <a class="tooltipMoreInfoLink" href="webgl-gettingstarted.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#WebGL">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2"><strong>URL</strong></td> 
+          <td style="text-align:left;">Masukkan video dari URL (misalnya, http:// atau file). Unity membaca video dari URL ini tepat waktu.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"></td> 
+          <td style="text-align:left;"><strong>URL</strong></td> 
+          <td style="text-align:left;">Masukkan URL video yang ingin Anda tetapkan ke Video Player.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"></td> 
+          <td style="text-align:left;"><strong>Browse…</strong></td> 
+          <td style="text-align:left;">Klik ini untuk dengan cepat menavigasi sistem file lokal dan URL terbuka yang mulai file://.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><span class="tooltip"><strong>Play On Awake</strong><span class="tooltiptext">Mengatur ini untuk benar untuk membuat sumber audio mulai bermain pada wakee <a class="tooltipMoreInfoLink" href="class-AudioClip.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#PlayOnAwake">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Tick kotak cemen untuk bermain video saat peluncuran <strong>Play On Awake</strong>. Untick jika Anda ingin memicu pemutaran video pada titik lain selama waktu berjalan. Pemicu melalui scripting dengan perintah <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>.<code>Play()</code> command.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong>Wait For First Frame</strong></td> 
+          <td style="text-align:left;">Jika Anda mencentang kotak centang <strong>Wait For First Frame</strong>, tunggu Unity untuk bingkai pertama video sumber untuk siap untuk ditampilkan sebelum pertandingan dimulai. Jika Anda menuntick, beberapa bingkai pertama mungkin dibuang untuk menjaga waktu video di sinkronkan dengan sisa permainan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong>Loop</strong></td> 
+          <td style="text-align:left;">Ticking kotak cemen untuk membuat komponen Video Player loop video sumber ketika mencapai akhir. Jika ini dipulihkan, video berhenti bermain ketika mencapai akhir.<strong>Loop</strong> checkbox to make the Video Player component loop the source video when it reaches its end. If this is unticked, the video stops playing when it reaches the end.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong>Skip On Drop</strong></td> 
+          <td style="text-align:left;">Ketika Anda mengaktifkan opsi ini, dan komponen Video Player mendeteksi drift antara posisi pemutaran dan jam permainan, video Player melompat ke depan. Ketika Anda menonaktifkan opsi ini, VideoPlayer tidak mencoba untuk benar untuk drift dan sistematis memainkan semua bingkai.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong>Playback Speed</strong></td> 
+          <td style="text-align:left;">Bidang slider dan numerik ini mewakili multiplier untuk kecepatan pemutaran, sebagai nilai antara 0 dan 10. Ini diatur ke 1 (kecepatan normal) secara default. Jika lapangan diatur ke 2, video bermain pada dua kali kecepatan normalnya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong>Render Mode</strong></td> 
+          <td style="text-align:left;">Gunakan drop-down untuk menentukan bagaimana video diberikan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2"><strong>Camera Far Plane</strong></td> 
+          <td style="text-align:left;">Mengirimkan video pada <a href="class-Camera.html">pesawat jauh</a> Kamera.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2"><strong>Camera Near Plane</strong></td> 
+          <td style="text-align:left;">Mengirimkan video pada <a href="class-Camera.html">dekat pesawat</a> Kamera.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"></td> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Tentukan <a href="class-Camera.html">Kamera</a> menerima video.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"></td> 
+          <td style="text-align:left;"><strong>Alpha</strong></td> 
+          <td style="text-align:left;">Tingkat transparansi global ditambahkan ke video sumber. Ini memungkinkan elemen di balik pesawat terlihat melaluinya. Lihat dokumentasi tentang <a href="VideoTransparency.html">dukungan transparansi video</a> untuk informasi lebih lanjut tentang saluran alfa.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2"><span class="tooltip"><strong>Render Texture</strong><span class="tooltiptext">Jenis Tekstur khusus yang diciptakan dan diperbarui pada runtime. Untuk menggunakannya, pertama membuat Tekstur Render baru dan menunjuk salah satu Kamera Anda untuk membuatnya. Kemudian Anda dapat menggunakan Tekstur Render dalam Bahan seperti Tekstur biasa. <a class="tooltipMoreInfoLink" href="class-RenderTexture.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#RenderTexture">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Mengirimkan video ke dalam <a href="class-RenderTexture.html">Render Tekstur</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"></td> 
+          <td style="text-align:left;"><strong>Target Texture</strong></td> 
+          <td style="text-align:left;">Tentukan Tekstur Render di mana komponen Video Player membuat gambarnya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2"><strong>Material Override</strong></td> 
+          <td style="text-align:left;">Memberikan video menjadi properti Tekstur yang dipilih dari GameObject melalui <a href="../ScriptReference/Material.html">Material</a> Renderer.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"></td> 
+          <td style="text-align:left;"><strong>Renderer</strong></td> 
+          <td style="text-align:left;"><a href="../ScriptReference/Renderer.html">Renderer</a> di mana komponen Video Player membuat gambarnya. Ketika diatur ke <strong>None</strong>, <strong>Renderer</strong> pada GameObject yang sama sebagai komponen Video Player digunakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"></td> 
+          <td style="text-align:left;"><strong>Auto-Select Property</strong></td> 
+          <td style="text-align:left;">Ketika Anda mengaktifkan opsi ini, komponen Video Player memilih tekstur utama <a href="../ScriptReference/Renderer.html">Renderer</a> secara otomatis. Ketika Anda menonaktifkan opsi ini, Anda dapat mengatur opsi <strong>Material Property</strong> secara manual.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"></td> 
+          <td style="text-align:left;"><strong>Material Property</strong></td> 
+          <td style="text-align:left;">Nama <a href="../ScriptReference/Material.SetTexture.html">Bahan Properti Tekstur</a> yang menerima gambar komponen Video Player.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2"><strong>API Only</strong></td> 
+          <td style="text-align:left;">Mengirimkan video ke properti API Scripting <a href="../ScriptReference/Video.VideoPlayer-texture.html">VideoPlayer.texture</a>. Anda harus menggunakan scripting untuk menetapkan Tekstur ke tujuan yang dimaksudkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><span class="tooltip"><strong>Aspect Ratio</strong><span class="tooltiptext">Hubungan dimensi proporsional gambar, seperti lebar dan tingginya.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AspectRatio">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Rasio aspek gambar yang mengisi <strong>Camera Near Plane</strong>, <strong>Camera Far Plane</strong> atau <strong>Render Texture</strong> ketika <strong>Render Mode</strong> yang sesuai digunakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2"><strong>No Scaling</strong></td> 
+          <td style="text-align:left;">Tidak ada scaling digunakan. Video dipusatkan pada sudut tujuan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2"><strong>Fit Vertically</strong></td> 
+          <td style="text-align:left;">Skala sumber untuk menyesuaikan sudut tujuan secara vertikal, merajut sisi kiri dan kanan atau meninggalkan daerah hitam di setiap sisi jika perlu. Rasio aspek sumber dipertahankan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2"><strong>Fit Horizontally</strong></td> 
+          <td style="text-align:left;">Skala sumber untuk menyesuaikan sudut tujuan secara horizontal, merajut daerah atas dan bawah atau meninggalkan daerah hitam di atas dan di bawah jika diperlukan. Rasio aspek sumber dipertahankan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2"><strong>Fit Inside</strong></td> 
+          <td style="text-align:left;">Skala sumber agar sesuai dengan sudut tujuan tanpa harus merajut. Tinggalkan area hitam di sebelah kiri dan kanan atau di bawah sesuai kebutuhan. Rasio aspek sumber dipertahankan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2"><strong>Fit Outside</strong></td> 
+          <td style="text-align:left;">Skala sumber untuk menyesuaikan sudut tujuan tanpa meninggalkan daerah hitam di sebelah kiri dan kanan atau di bawah ini, dipotong sesuai kebutuhan. Rasio aspek sumber dipertahankan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2"><strong>Stretch</strong></td> 
+          <td style="text-align:left;">Skala secara horizontal atau vertikal sesuai dengan sudut tujuan. Rasio aspek sumber tidak dipertahankan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong>Audio Output Mode</strong></td> 
+          <td style="text-align:left;">Tentukan bagaimana trek audio sumber output.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2"><strong>None</strong></td> 
+          <td style="text-align:left;">Audio tidak dimainkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2"><span class="tooltip"><strong>Audio Source</strong><span class="tooltiptext">Komponen yang memainkan kembali Klip Audio dalam adegan ke pendengaran audio atau melalui mixer audio. <a class="tooltipMoreInfoLink" href="class-AudioSource.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AudioSource">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Sampel audio dikirim ke <a href="class-AudioSource.html">sumber audio</a> yang dipilih, memungkinkan pemrosesan audio Unity untuk diterapkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2"><strong>Direct</strong></td> 
+          <td style="text-align:left;">Sampel audio dikirim langsung ke perangkat keras output audio, memotong pemrosesan audio Unity.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2"><strong>API Only (Experimental)</strong></td> 
+          <td style="text-align:left;">Sampel audio dikirim ke <a href="../ScriptReference/Experimental.Audio.AudioSampleProvider.html">AudioSampleProvider</a> terkait.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong>Controlled Tracks</strong></td> 
+          <td style="text-align:left;">Jumlah trek audio dalam video.<br><br> <strong>Source</strong> adalah <strong>URL</strong>. Ketika <strong>Source</strong> adalah <strong>Video Clip</strong>, jumlah trek ditentukan dengan memeriksa file video.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="3"><strong>Track Enabled</strong></td> 
+          <td style="text-align:left;">Ketika diaktifkan dengan mencentang kotak centang yang relevan, trek audio yang terkait digunakan untuk pemutaran. Ini harus diatur sebelum pemutaran.<br><br> Teks ke kiri kotak centang memberikan informasi tentang trek audio, khususnya nomor trek, bahasa, dan jumlah saluran.<br><br> Sebagai contoh, di screenshot di atas, teks ini adalah Track 0 [und. 1 ch]. Ini berarti itu adalah trek pertama (Track 0), bahasa tidak ditentukan (und.), dan trek memiliki satu saluran (1 ch), yang berarti itu adalah jalur mono.<br><br> Ketika sumber adalah URL, informasi ini hanya tersedia selama pemutaran.<br><br> Properti ini hanya muncul jika sumber Anda adalah Klip Video yang memiliki trek audio (atau trek), atau sumber Anda adalah URL (memungkinkan Anda untuk menunjukkan berapa banyak trek yang diharapkan dari URL selama pemutaran).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2"><strong>Audio Source</strong></td> 
+          <td style="text-align:left;"><a href="class-AudioSource.html">sumber audio</a> di mana trek audio dimainkan. Sumber audio yang ditargetkan juga dapat memainkan Klip Audio.<br><br> Kontrol pemutaran sumber audio (<code>Play On Awake</code> dan <code>Play()</code> dalam skrip API) tidak berlaku untuk trek audio sumber video.<br><br> Properti ini hanya muncul ketika <strong>Audio Output Mode</strong> diatur ke <strong>Audio Source</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2"><strong>Mute</strong></td> 
+          <td style="text-align:left;">Mute trek audio yang terkait. Dalam mode <strong>Audio Source</strong>, kontrol sumber audio digunakan.<br><br> Properti ini hanya muncul ketika <strong>Audio Output Mode</strong> diatur ke <strong>Direct</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;" colspan="2"><strong>Volume</strong></td> 
+          <td style="text-align:left;">Volume trek audio yang terkait. Dalam mode <strong>Audio Source</strong>, volume sumber audio digunakan.<br><br> Properti ini hanya muncul ketika <strong>Audio Output Mode</strong> diatur ke <strong>Direct</strong>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Video Player Scripting Contoh</h2> 
+       <p>Script berikut menunjukkan beberapa fitur komponen VideoPlayer.</p> 
+       <pre><code>// Examples of VideoPlayer function
+
+using UnityEngine;
+
+public class Example : MonoBehaviour
+{
+    void Start()
+    {
+        // Will attach a VideoPlayer to the main camera.
+        GameObject camera = GameObject.Find("Main Camera");
+
+        // VideoPlayer automatically targets the camera backplane when it is added
+        // to a camera object, no need to change videoPlayer.targetCamera.
+        var videoPlayer = camera.AddComponent&lt;UnityEngine.Video.VideoPlayer&gt;();
+
+        // Play on awake defaults to true. Set it to false to avoid the url set
+        // below to auto-start playback since we're in Start().
+        videoPlayer.playOnAwake = false;
+
+        // By default, VideoPlayers added to a camera will use the far plane.
+        // Let's target the near plane instead.
+        videoPlayer.renderMode = UnityEngine.Video.VideoRenderMode.CameraNearPlane;
+
+        // This will cause our Scene to be visible through the video being played.
+        videoPlayer.targetCameraAlpha = 0.5F;
+
+        // Set the video to play. URL supports local absolute or relative paths.
+        // Here, using absolute.
+        videoPlayer.url = "/Users/graham/movie.mov";
+
+        // Skip the first 100 frames.
+        videoPlayer.frame = 100;
+
+        // Restart from beginning when done.
+        videoPlayer.isLooping = true;
+
+        // Each time we reach the end, we slow down the playback by a factor of 10.
+        videoPlayer.loopPointReached += EndReached;
+
+        // Start playback. This means the VideoPlayer may have to prepare (reserve
+        // resources, pre-load a few frames, etc.). To better control the delays
+        // associated with this preparation one can use videoPlayer.Prepare() along with
+        // its prepareCompleted event.
+        videoPlayer.Play();
+    }
+
+    void EndReached(UnityEngine.Video.VideoPlayer vp)
+    {
+        vp.playbackSpeed = vp.playbackSpeed / 10.0F;
+    }
+}
+</code></pre> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2017–05–07 Login</span></p></li> 
+        <li><p><span class="page-history">Fitur baru di Unity 5.6</span></p></li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="VideoPlayer.html"></a></span> 
+         <div class="tip">
+           Gambaran keseluruhan video 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="VideoPlayer-MigratingFromMovieTexture.html"></a></span> 
+         <div class="tip">
+           Migrating dari MovieTexture ke VideoPlayer 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

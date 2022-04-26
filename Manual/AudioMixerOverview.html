@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Gambaran keseluruhan konsep dan AudioMixer</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Audio.html">Audio</a></li> 
+         <li><a href="AudioMixer.html">Mixer Audio</a></li> 
+         <li>Gambaran keseluruhan konsep dan AudioMixer</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="AudioMixer.html"></a></span> 
+          <div class="tip">
+            Mixer Audio 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="AudioMixerSpecifics.html"></a></span> 
+          <div class="tip">
+            Spesifikasi di jendela AudioMixer 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Gambaran keseluruhan konsep dan AudioMixer</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>AudioMixer adalah Aset yang dapat direferensikan oleh AudioSources untuk memberikan routing yang lebih kompleks dan pencampuran sinyal audio yang dihasilkan dari AudioSources. Ini melakukan pencampuran berbasis kategori ini melalui hierarki AudioGroup yang dibangun oleh pengguna di dalam Aset.</p> 
+       <p>Efek DSP dan konsep audio mastering lainnya dapat diterapkan pada sinyal audio karena dialihkan dari AudioSource ke AudioListener.</p> 
+       <h2>Login Login</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AudioMixerView.jpg" alt=""> 
+       </figure> 
+       <ol> 
+        <li>Aset - Mengandung semua AudioGroups dan AudioSnapshots sebagai sub-assets.</li> 
+        <li>Tampilan Hierarchy - Ini berisi seluruh hirarki pencampuran AudioGroups dalam AudioMixer.</li> 
+        <li>Tampilan Mixer - Ini adalah daftar pengaturan visibilitas cache dari mixer. Setiap tampilan hanya menunjukkan sub-set dari seluruh hirarki di jendela mixer utama.</li> 
+        <li>Gambar - Ini adalah daftar semua AudioSnapshots dalam Aset AudioMixer. Snapshot menangkap state dari semua pengaturan parameter dalam AudioMixer, dan dapat dialihkan antara pada runtime.</li> 
+        <li>AudioMixer Output - AudioMixers dapat dialihkan ke AudioGroups dari AudioMixer lainnya. Bidang properti ini memungkinkan satu untuk menentukan output AudioGroup untuk rute sinyal AudioMixer ini menjadi.</li> 
+        <li>Sitemap Login Ini menunjukkan gambaran dari AudioGroup, termasuk tingkat VU saat ini, atenuasi (volume) pengaturan, Mute, Solo dan Pengaturan Bypass Efek dan daftar efek DSP dalam AudioGroup.</li> 
+        <li>Edit Dalam Bermain Mode - Ini adalah toggle yang memungkinkan Anda untuk mengedit AudioMixer selama mode bermain, atau mencegah edit dan memungkinkan runtime permainan untuk mengontrol keadaan AudioMixer.</li> 
+        <li>Parameter Terkenal - Ini menunjukkan daftar Parameter Terkendali ( parameter jerami dalam AudioMixer dapat terkena skrip melalui nama string) dan nama string yang sesuai.</li> 
+       </ol> 
+       <h2>AudioMixer Inspektur</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AudioMixerInspector.png" alt=""> 
+       </figure> 
+       <ol> 
+        <li>Pengaturan Pitch dan Ducking hadir di bagian atas semua AudioGroups.</li> 
+        <li>Contoh Mengirimkan Efek, diposisikan sebelum tempat atenuasi diterapkan.</li> 
+        <li>The Attenuation (pengaturan volume) dilakukan di sini untuk AudioGroup. Atenuasi dapat diterapkan di mana saja di tumpukan efek. Meter VU di sini menunjukkan tingkat volume pada titik itu pada tumpukan efek (different dari meter VU ditampilkan dalam tampilan AudioMixer yang menunjukkan tingkat sinyal karena meninggalkan AudioGroup.</li> 
+        <li>Contoh efek dengan parameter, dalam kasus ini Reverb. Parameter dapat terkena dengan mengklik kanan pada mereka dan memilih untuk mengekspos mereka.</li> 
+       </ol> 
+       <h2>Concepts</h2> 
+       <h3>Routing and Mixing</h3> 
+       <p> <a href="http://en.wikipedia.org/wiki/Audio_mixing">http://en.wikipedia.org/wiki/audio_mixing</a> </p> 
+       <p>Audio routing adalah proses mengambil sejumlah sinyal audio input dan output 1 atau lebih sinyal output. Istilah sinyal di sini mengacu pada aliran terus menerus data audio digital, yang dapat dipecahkan ke saluran audio digital (seperti stereo atau 5.1 (6 saluran)).</p> 
+       <p>Secara internal biasanya ada beberapa pekerjaan pada sinyal ini yang dilakukan, seperti pencampuran, menerapkan efek, atenuasi dll. Untuk berbagai alasan yang akan ditutup, ini adalah aspek penting dari pemrosesan audio dan ini adalah apa AudioMixer dirancang untuk memungkinkan Anda untuk melakukannya.</p> 
+       <p>Dengan pengecualian Pengirim dan Pengembalian (yang akan ditutup nanti), AudioMixer mengandung AudiosGroup yang memungkinkan sejumlah sinyal input, mencampur sinyal tersebut dan memiliki output 1 persis.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AudioMixerSignalPath.png" alt=""> 
+       </figure> 
+       <p>Di tanah pemrosesan audio, routing dan pencampuran ini biasanya dilakukan ORTHOGONAL ke hierarki grafik <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>, sebagai perilaku audio dan desainer berinteraksi dengan audio yang sangat berbeda untuk objek dan konsep yang ditunjukkan dalam adegan.</p> 
+       <p>Dalam versi sebelumnya Unity, konsep routing dan pencampuran tidak tersedia. Pengguna dapat menempatkan AudioSources dalam adegan, dan sinyal audio yang mereka produksi (melalui AudioClips misalnya) diarahkan langsung ke AudioListener, di mana semua sinyal audio dicampur bersama pada satu titik. Ingat di sini bahwa ini terjadi ortogonal ke grafik adegan dan tidak peduli di mana AudioSources Anda berada di tempat kejadian,</p> 
+       <p>AudioMixers sekarang duduk antara AudioSource dan AudioListener di ruang pemrosesan sinyal audio dan memungkinkan Anda untuk mengambil sinyal output dari AudioSource melakukan operasi routing dan pencampuran apa pun yang mereka inginkan sampai akhirnya semua audio output ke AudioListener dan didengar dari speaker.</p> 
+       <h4>Mengapa hal-hal ini?</h4> 
+       <p>Pencampuran dan routing memungkinkan Anda untuk mengkategorikan audio dalam permainan mereka ke dalam konsep apa pun yang mereka inginkan. Setelah suara dicampur bersama ke dalam kategori ini, efek dan operasi lain dapat diterapkan pada kategori ini secara keseluruhan. Ini kuat tidak hanya menerapkan perubahan logika permainan ke berbagai kategori suara, tetapi juga untuk memungkinkan desainer untuk mengubah berbagai aspek campuran untuk melakukan apa yang tahu sebagai "Mastering" dari seluruh soundscape secara dinamis pada runtime.</p> 
+       <h4>Hubungan ke 3D atenuasi spasial</h4> 
+       <p>Beberapa konsep suara terkait dengan grafik adegan dan dunia 3D. Yang paling jelas dari mereka adalah penerapan atenuasi berdasarkan jarak 3D, kecepatan relatif terhadap AudioListener dan efek Reverb lingkungan.</p> 
+       <p>Seperti operasi ini terkait dengan adegan dan bukan kategori suara dalam AudioMixer, efek diterapkan pada AudioSource, sebelum sinyal memasuki AudioMixer. Misalnya, atenuasi diterapkan pada AudioSource berdasarkan jaraknya dari AudioListener diterapkan pada sinyal sebelum meninggalkan AudioSource dan dialihkan ke AudioMixer.</p> 
+       <h3>Kategori Suara</h3> 
+       <p>Seperti yang tercantum di atas, AudioMixers memungkinkan Anda untuk secara efektif mengkategorikan jenis suara dan melakukan hal-hal untuk kategori ini. Ini adalah konsep penting, karena tanpa kategorisasi seperti itu, seluruh soundscape dengan cepat menjadi kekacauan kebisingan yang tidak dapat dibedakan setiap suara dimainkan kembali sama dan tanpa pencampuran yang diterapkan pada mereka. Dengan konsep seperti bebek, kategori suara juga dapat mempengaruhi satu sama lain, menambahkan kekayaan tambahan untuk campuran.</p> 
+       <p>Contoh operasi yang desainer mungkin ingin dilakukan pada kategori;</p> 
+       <ul> 
+        <li>Menerapkan atenuasi ke sekelompok ambiensi.</li> 
+        <li>Pemicu filter lowpass pada semua suara foley dalam permainan, simulasi di bawah air.</li> 
+        <li>Mengatasi semua suara dalam permainan kecuali musik Menu dan suara interaksi.</li> 
+        <li>Mengurangi volume semua senjata dan suara ledakan dalam permainan untuk memastikan bahwa NPC berbicara kepada Anda dapat didengar.</li> 
+        <li>etc…</li> 
+       </ul> 
+       <p>Kategori ini benar-benar cukup permainan spesifik dan bervariasi antara proyek yang berbeda, tetapi contoh dari kategorisasi tersebut mungkin dijelaskan sebagai berikut;</p> 
+       <ul> 
+        <li>Semua suara diarahkan ke dalam "Master" AudioGroup</li> 
+        <li>Dalam kelompok Guru, ada kategori untuk musik, Menu suara dan semua suara permainan</li> 
+        <li>Kelompok suara permainan rusak ke dialog dari NPC, suara lingkungan dari ambience dan suara foley lainnya seperti gunshots dan footsteps</li> 
+        <li>Kategori ini rusak lebih jauh sesuai kebutuhan</li> 
+       </ul> 
+       <p>Kategori hirarki tata letak ini akan terlihat seperti ini:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AudioMixerHierarchy.png" alt=""> 
+       </figure> 
+       <p>Perhatikan bahwa tata letak grafik adegan akan terlihat tidak seperti tata letak untuk kategori suara.</p> 
+       <h3>Moods dan Tema Campuran</h3> 
+       <p>Pencampuran dan routing dari suara game juga dapat digunakan untuk membuat perendaman desainer sedang mencari. Sebagai contoh, reverb dapat diterapkan pada semua suara permainan dan musik yang ditenuasi untuk menciptakan perasaan berada di gua.</p> 
+       <p>AudioMixer dapat digunakan secara efektif untuk menciptakan suasana hati dalam permainan. Menggunakan konsep seperti snapshots (dijelaskan nanti) dan mixer yang berbeda lainnya dalam permainan, permainan dapat transisi suasana hatinya dengan mudah dan mencurahkan pemain menjadi perasaan apa keinginan desainer, yang super kuat dalam perendaman permainan.</p> 
+       <h3>Campuran Global</h3> 
+       <p>AudioMixer digunakan untuk mengontrol campuran keseluruhan semua suara dalam permainan. AudioMixers ini mengontrol campuran global dan dapat dilihat sebagai campuran singleton statis yang instance suara diarahkan melalui.</p> 
+       <p>Di dunia lain, AudioMixers selalu hadir melalui seumur hidup adegan, dan instance suara diciptakan dan menghancurkan perkembangan game dan bermain melalui AudioMixers global ini.</p> 
+       <h3>Snapshots</h3> 
+       <p>Striptease memungkinkan Anda untuk menangkap keadaan AudioMixer, dan transisi antara negara-negara yang berbeda ini sebagai kemajuan permainan. Ini adalah cara yang bagus untuk menentukan suasana hati atau tema campuran dan memiliki mood berubah sebagai pemain berkembang melalui permainan.</p> 
+       <p>Snapshot menangkap nilai-nilai dari semua parameter dalam AudioMixer;</p> 
+       <ul> 
+        <li>Volume</li> 
+        <li>Pitch</li> 
+        <li>Tingkat Kirim</li> 
+        <li>Tingkat Campuran Basah</li> 
+        <li>Parameter Efek</li> 
+       </ul> 
+       <p>Menggabungkan Snapshots dengan logika permainan adalah cara yang bagus untuk mengubah banyak aspek dari soundscape.</p> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="AudioMixer.html"></a></span> 
+         <div class="tip">
+           Mixer Audio 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="AudioMixerSpecifics.html"></a></span> 
+         <div class="tip">
+           Spesifikasi di jendela AudioMixer 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

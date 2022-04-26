@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Login</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="Shaders.html">Shaders</a></li> 
+         <li><a href="shader-writing.html">Menu Menu</a></li> 
+         <li><a href="SL-ShaderPrograms.html">HLSL di Unity</a></li> 
+         <li>Shader semantics</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="SL-MultipleProgramVariants.html"></a></span> 
+          <div class="tip">
+            Mengatur dan menggunakan kata kunci naungan di HLSL 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="SL-PropertiesInPrograms.html"></a></span> 
+          <div class="tip">
+            Mengakses sifat naungan di Cg / HLSL 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Shader semantics</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Ketika menulis HLSL <a href="SL-ShaderPrograms.html">program warna</a>, input dan variabel output harus memiliki "intent" mereka yang ditunjukkan melalui <strong>semantics</strong>. Ini adalah konsep standar dalam bahasa naungan HLSL; lihat <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb509647.aspx">Dokumentasi semantik pada MSDN</a> untuk lebih detail.</p> 
+       <h2>Vertex naungan input semantik</h2> 
+       <p>Fungsi vertex <span class="tooltip"><strong>shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> utama (diindikasikan oleh arahan <code>#pragma vertex</code>) perlu memiliki semantik pada semua parameter input. Ini sesuai dengan elemen data <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-Mesh.html">Mesh</a><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mesh">Glossary</a></span></span></span> individual, seperti posisi simpul, mesh normal, dan koordinat tekstur. Lihat <a href="SL-VertexProgramInputs.html">input program vertex</a> untuk rincian lebih lanjut.</p> 
+       <p>Berikut ini contoh <span class="tooltip"><strong>vertex shader</strong><span class="tooltiptext">Program yang berjalan pada setiap simpul model 3D ketika model sedang diberikan. <a class="tooltipMoreInfoLink" href="SL-ShaderPrograms.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#vertexshader">Glossary</a></span></span></span> sederhana yang mengambil posisi simpul dan koordinat tekstur sebagai input. Naungan <span class="tooltip"><strong>pixel</strong><span class="tooltiptext">Unit terkecil dalam gambar komputer. Ukuran piksel tergantung pada resolusi layar Anda. Pencahayaan pixel dihitung pada setiap piksel layar. <a class="tooltipMoreInfoLink" href="ShadowPerformance.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#pixel">Glossary</a></span></span></span> memvisualisasikan koordinat tekstur sebagai warna.</p> 
+       <pre><code>Shader "Unlit/Show UVs"
+{
+    SubShader
+    {
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+
+            struct v2f {
+                float2 uv : TEXCOORD0;
+                float4 pos : SV_POSITION;
+            };
+
+            v2f vert (
+                float4 vertex : POSITION, // vertex position input
+                float2 uv : TEXCOORD0 // first texture coordinate input
+                )
+            {
+                v2f o;
+                o.pos = UnityObjectToClipPos(vertex);
+                o.uv = uv;
+                return o;
+            }
+
+            fixed4 frag (v2f i) : SV_Target
+            {
+                return fixed4(i.uv, 0, 0);
+            }
+            ENDCG
+        }
+    }
+}
+</code></pre> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/SL/SemanticsShowUVs.png" alt=""> 
+       </figure> 
+       <p>Alih-alih ejaan dari semua input individu satu per satu, itu juga dimungkinkan untuk menyatakan struktur mereka, dan menunjukkan semantik pada setiap variabel anggota individu dari bangunan.</p> 
+       <h2>Fragmen naungan output semantik</h2> 
+       <p>Paling sering fragmen (piksel) naungan menghasilkan warna, dan memiliki semantik <code>SV_Target</code>. Korporasi fragmen dalam contoh di atas apakah persis itu:</p> 
+       <pre><code>fixed4 frag (v2f i) : SV_Target
+</code></pre> 
+       <p>Fungsi <code>frag</code> memiliki jenis pengembalian <code>fixed4</code> (warna RGBA presisi rendah). Seperti hanya mengembalikan nilai tunggal, semantik ditunjukkan pada fungsi itu sendiri, <code>: SV_Target</code>.</p> 
+       <p>Hal ini juga dimungkinkan untuk mengembalikan struktur dengan output. Penyiraman fragmen di atas dapat ditulis ulang dengan cara ini juga, dan itu akan melakukan persis sama:</p> 
+       <pre><code>struct fragOutput {
+    fixed4 color : SV_Target;
+};
+fragOutput frag (v2f i)
+{
+    fragOutput o;
+    o.color = fixed4(i.uv, 0, 0);
+    return o;
+}
+</code></pre> 
+       <p>Struktur pengembalian dari naungan fragmen sebagian besar berguna bagi naungan yang tidak hanya mengembalikan satu warna. Obat tambahan yang didukung oleh output naungan fragmen adalah sebagai berikut.</p> 
+       <h4>SV_TargetN: Beberapa target render</h4> 
+       <p> <code>SV_Target1</code>, <code>SV_Target2</code>, dll: Ini adalah warna tambahan yang ditulis oleh naungan. Ini digunakan ketika rendering ke lebih dari satu target render sekaligus (dikenal sebagai teknik rendering Multiple Render Target, atau MRT). <code>SV_Target0</code> adalah sama dengan <code>SV_Target</code>.</p> 
+       <h4>SV_Depth: output kedalaman naungan piksel</h4> 
+       <p>Biasanya warna fragmen tidak menimpa nilai penyangga Z, dan nilai default digunakan dari segitiga biasa <span class="tooltip"><strong>rasterization</strong><span class="tooltiptext">Proses menghasilkan gambar dengan menghitung piksel untuk setiap poligon atau segitiga dalam geometri. Ini adalah alternatif untuk ray tracing.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Rasterization">Glossary</a></span></span></span>. Namun, untuk beberapa efek itu berguna untuk output nilai kedalaman penyangga Z kustom per pixel.</p> 
+       <p>Perhatikan bahwa pada banyak GPU ini mematikan beberapa optimasi <span class="tooltip"><strong>depth buffer</strong><span class="tooltiptext">Sebuah toko memori yang memegang kedalaman nilai z setiap pixel dalam gambar, di mana nilai z adalah kedalaman untuk setiap piksel yang diberikan dari pesawat proyeksi. <a class="tooltipMoreInfoLink" href="class-RenderTexture.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#depthbuffer">Glossary</a></span></span></span>, jadi jangan menimpa nilai buffer Z tanpa alasan yang baik. Biaya yang dikeluarkan oleh <code>SV_Depth</code> bervariasi tergantung pada arsitektur GPU, tetapi secara keseluruhan cukup mirip dengan biaya pengujian alfa (menggunakan fungsi <code>clip()</code> built-in di HLSL). Render naungan yang memodifikasi kedalaman setelah semua naungan buram biasa (misalnya, dengan menggunakan <code>AlphaTest</code> <a href="SL-SubShaderTags.html">rendering queue</a>.</p> 
+       <p>Nilai output kedalaman perlu menjadi satu <code>float</code>.</p> 
+       <h2>Output naungan Vertex dan input naungan fragmen</h2> 
+       <p>Sebuah naungan simpul perlu untuk output posisi ruang klip akhir dari simpul, sehingga GPU tahu di mana di layar untuk menjebaknya, dan pada kedalaman apa. Output ini perlu memiliki semantik <code>SV_POSITION</code>, dan menjadi tipe <code>float4</code>.</p> 
+       <p>Setiap output lain (“interpolators” atau “varyings”) yang diproduksi oleh naungan simpul adalah apa pun kebutuhan naungan khusus Anda. Nilai output dari naungan simpul akan diinterpolasi di seluruh wajah segitiga rendered, dan nilai-nilai pada setiap pixel akan dilewati sebagai masukan ke naungan fragmen.</p> 
+       <p>Banyak modern GPU tidak benar-benar peduli apa semantik variabel ini memiliki; namun beberapa sistem lama (paling, model naungan 2 GPU di Direct3D 9) memiliki aturan khusus tentang semantik:</p> 
+       <ul> 
+        <li> <code>TEXCOORD0</code>, <code>TEXCOORD1</code> dll digunakan untuk menunjukkan data presisi tinggi arbitrase seperti koordinat tekstur dan posisi.</li> 
+        <li> <code>COLOR0</code> dan <code>COLOR1</code> semantik pada output simpul dan input fragmen adalah untuk data low-precision, 0–1 range (seperti nilai warna sederhana).</li> 
+       </ul> 
+       <p>Untuk dukungan platform salib terbaik, output vertex label dan input fragmen sebagai semantik <code>TEXCOORDn</code>.</p> 
+       <h4>Batasan jumlah Interpolator</h4> 
+       <p>Ada batasan untuk berapa banyak variabel interpolator dapat digunakan secara total untuk melewati informasi dari simpul ke dalam naungan fragmen. Batas tergantung pada platform dan GPU, dan pedoman umum adalah:</p> 
+       <ul> 
+        <li> <strong>Up to 8 interpolators</strong>: OpenGL ES 2.0 (Android), Direct3D 11 9.x level (Windows Phone) dan Direct3D 9 model naungan 2.0 ( PC tua). Karena jumlah interpolator terbatas, tetapi setiap interpolator dapat menjadi vektor 4-komponen, beberapa hal paket naungan bersama untuk tetap dalam batas. Misalnya, dua koordinat tekstur dapat dilewatkan dalam satu variabel <code>float4</code> (.xy untuk satu koordinat, .zw untuk koordinat kedua).</li> 
+        <li> <strong>Up to 10 interpolators</strong>: Direct3D 9 model naungan 3.0 (<code>#pragma target 3.0</code>).</li> 
+        <li> <strong>Up to 16 interpolators</strong>: OpenGL ES 3.0 (Android), Logam (iOS).</li> 
+        <li> <strong>Up to 32 interpolators</strong>: Direct3D 10 model naungan 4.0 (<code>#pragma target 4.0</code>).</li> 
+       </ul> 
+       <p>Terlepas dari perangkat keras target tertentu Anda, umumnya merupakan ide yang baik untuk digunakan sebagai beberapa interpolator mungkin untuk alasan kinerja.</p> 
+       <h2>Semantik khusus lainnya</h2> 
+       <h4>Posisi piksel ruang layar: Login</h4> 
+       <p>Naungan fragmen dapat menerima posisi pixel yang diberikan sebagai semantik <code>VPOS</code> khusus. Fitur ini hanya ada yang dimulai dengan model naungan 3.0, sehingga naungan perlu memiliki directive kompilasi <code>#pragma target 3.0</code>.</p> 
+       <p>Di platform yang berbeda dari jenis dasar posisi ruang layar bervariasi, sehingga untuk portabilitas maksimum menggunakan tipe <code>UNITY_VPOS_TYPE</code> untuk itu (itu akan menjadi <code>float4</code> pada sebagian besar platform, dan float2 pada Direct3D 9).</p> 
+       <p>Selain itu, menggunakan posisi pixel semantik membuatnya sulit untuk memiliki posisi ruang klip (SV_POSITION) dan VPOS dalam struktur vertex-to-fragment yang sama. Jadi naungan simpul harus output posisi ruang klip sebagai variabel "out". Lihat contoh naungan di bawah ini:</p> 
+       <pre><code>Shader "Unlit/Screen Position"
+{
+    Properties
+    {
+        _MainTex ("Texture", 2D) = "white" {}
+    }
+    SubShader
+    {
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #pragma target 3.0
+
+            // note: no SV_POSITION in this struct
+            struct v2f {
+                float2 uv : TEXCOORD0;
+            };
+
+            v2f vert (
+                float4 vertex : POSITION, // vertex position input
+                float2 uv : TEXCOORD0, // texture coordinate input
+                out float4 outpos : SV_POSITION // clip space position output
+                )
+            {
+                v2f o;
+                o.uv = uv;
+                outpos = UnityObjectToClipPos(vertex);
+                return o;
+            }
+
+            sampler2D _MainTex;
+
+            fixed4 frag (v2f i, UNITY_VPOS_TYPE screenPos : VPOS) : SV_Target
+            {
+                // screenPos.xy will contain pixel integer coordinates.
+                // use them to implement a checkerboard pattern that skips rendering
+                // 4x4 blocks of pixels
+
+                // checker value will be negative for 4x4 blocks of pixels
+                // in a checkerboard pattern
+                screenPos.xy = floor(screenPos.xy * 0.25) * 0.5;
+                float checker = -frac(screenPos.r + screenPos.g);
+
+                // clip HLSL instruction stops rendering a pixel if value is negative
+                clip(checker);
+
+                // for pixels that were kept, read the texture and output it
+                fixed4 c = tex2D (_MainTex, i.uv);
+                return c;
+            }
+            ENDCG
+        }
+    }
+}
+</code></pre> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/SL/SemanticsScreenPosition.png" alt=""> 
+       </figure> 
+       <h4>Orientasi wajah: VFACE</h4> 
+       <p>Naungan fragmen dapat menerima variabel yang menunjukkan apakah permukaan rendered menghadap ke <span class="tooltip"><strong>camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span>, atau menghadap jauh dari kamera. Ini berguna ketika rendering geometri yang harus terlihat dari kedua sisi - sering digunakan pada daun dan benda tipis serupa. Variabel input semantik <code>VFACE</code> akan mengandung nilai positif untuk segitiga front-facing, dan nilai negatif untuk satu back-facing.</p> 
+       <p>Fitur ini hanya ada dari model naungan 3.0 seterusnya, sehingga naungan perlu memiliki directive kompilasi <code>#pragma target 3.0</code>.</p> 
+       <pre><code>Shader "Unlit/Face Orientation"
+{
+    Properties
+    {
+        _ColorFront ("Front Color", Color) = (1,0.7,0.7,1)
+        _ColorBack ("Back Color", Color) = (0.7,1,0.7,1)
+    }
+    SubShader
+    {
+        Pass
+        {
+            Cull Off // turn off backface culling
+
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #pragma target 3.0
+
+            float4 vert (float4 vertex : POSITION) : SV_POSITION
+            {
+                return UnityObjectToClipPos(vertex);
+            }
+
+            fixed4 _ColorFront;
+            fixed4 _ColorBack;
+
+            fixed4 frag (fixed facing : VFACE) : SV_Target
+            {
+                // VFACE input positive for frontbaces,
+                // negative for backfaces. Output one
+                // of the two colors depending on that.
+                return facing &gt; 0 ? _ColorFront : _ColorBack;
+            }
+            ENDCG
+        }
+    }
+}
+</code></pre> 
+       <p>Naungan di atas menggunakan state <a class="tooltipMoreInfoLink" href="SL-Cull.html">Cull</a> untuk mematikan culling backface (oleh segitiga back-facing default tidak diberikan sama sekali). Berikut ini adalah naungan yang diterapkan pada sekelompok mesh <span class="tooltip"><strong>Quad</strong><span class="tooltiptext">Objek primitif yang menyerupai pesawat tetapi tepinya hanya satu unit panjang, hanya menggunakan 4 simpul, dan permukaan berorientasi pada pesawat XY ruang koordinat lokal. <a href="PrimitiveObjects.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Quad">Glossary</a></span></span></span>, diputar pada orientasi yang berbeda:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/SL/SemanticsFaceOrientation.png" alt=""> 
+       </figure> 
+       <h4>Vertex ID: SV_VertexID</h4> 
+       <p>Naungan simpul dapat menerima variabel yang memiliki “nomor vertex” sebagai bilangan bulat yang tidak ditentukan. Ini sebagian besar berguna ketika Anda ingin mengambil data per-vertex tambahan dari tekstur atau <a href="class-ComputeShader.html">ComputeBuffers</a>.</p> 
+       <p>Fitur ini hanya ada dari DX10 (model bentuk 4.0) dan GLCore / OpenGL ES 3, sehingga warna perlu memiliki langsung kompilasi <code>#pragma target 3.5</code>.</p> 
+       <pre><code>Shader "Unlit/VertexID"
+{
+    SubShader
+    {
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #pragma target 3.5
+
+            struct v2f {
+                fixed4 color : TEXCOORD0;
+                float4 pos : SV_POSITION;
+            };
+
+            v2f vert (
+                float4 vertex : POSITION, // vertex position input
+                uint vid : SV_VertexID // vertex ID, needs to be uint
+                )
+            {
+                v2f o;
+                o.pos = UnityObjectToClipPos(vertex);
+                // output funky colors based on vertex ID
+                float f = (float)vid;
+                o.color = half4(sin(f/10),sin(f/100),sin(f/1000),0) * 0.5 + 0.5;
+                return o;
+            }
+
+            fixed4 frag (v2f i) : SV_Target
+            {
+                return i.color;
+            }
+            ENDCG
+        }
+    }
+}
+</code></pre> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/SL/SemanticsVertexID.png" alt=""> 
+       </figure> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="SL-MultipleProgramVariants.html"></a></span> 
+         <div class="tip">
+           Mengatur dan menggunakan kata kunci naungan di HLSL 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="SL-PropertiesInPrograms.html"></a></span> 
+         <div class="tip">
+           Mengakses sifat naungan di Cg / HLSL 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

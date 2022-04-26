@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Koroutines</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="ScriptingSection.html">Scripting</a></li> 
+         <li><a href="ScriptingConcepts.html">Konsep Scripting</a></li> 
+         <li>Coroutines</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="EventFunctions.html"></a></span> 
+          <div class="tip">
+            Fungsi Acara 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="Namespaces.html"></a></span> 
+          <div class="tip">
+            Namespaces 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Coroutines</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Koroutine memungkinkan Anda untuk menyebarkan tugas di beberapa bingkai. Dalam Unity, koroutine adalah metode yang dapat menghentikan eksekusi dan kembali kontrol ke Unity tetapi kemudian melanjutkan di mana kiri pada bingkai berikut.</p> 
+       <p>Dalam kebanyakan situasi, ketika Anda memanggil metode, itu berjalan untuk menyelesaikan dan kemudian kembali kontrol ke metode panggilan, ditambah nilai pengembalian opsional. Ini berarti bahwa setiap tindakan yang terjadi dalam metode harus terjadi dalam pembaruan bingkai tunggal.</p> 
+       <p>Dalam situasi di mana Anda ingin menggunakan metode panggilan untuk mengandung animasi prosedural atau urutan peristiwa seiring waktu, Anda dapat menggunakan koroutine.</p> 
+       <p>Namun, penting untuk diingat bahwa koroutines tidak benang. Operasi sinkron yang berjalan dalam koroutine masih mengeksekusi pada benang utama. Jika Anda ingin mengurangi jumlah waktu CPU yang dihabiskan pada benang utama, itu hanya penting untuk menghindari operasi penyumbatan dalam koroutines seperti dalam kode skrip lainnya. Jika Anda ingin menggunakan kode berganda dalam Unity, pertimbangkan <a href="JobSystem.html">Sistem Pekerjaan C#</a>.</p> 
+       <p>Yang terbaik untuk menggunakan koroutines jika Anda perlu berurusan dengan operasi asinkron panjang, seperti menunggu transfer HTTP, beban aset, atau file I / O untuk menyelesaikan.</p> 
+       <h2>Contoh koroutine</h2> 
+       <p>Sebagai contoh, pertimbangkan tugas secara bertahap mengurangi nilai alfa objek (opacity) sampai menjadi tidak terlihat:</p> 
+       <pre><code class="lang-csharp">void Fade()
+{
+    Color c = renderer.material.color;
+    for (float alpha = 1f; alpha &gt;= 0; alpha -= 0.1f)
+    {
+        c.a = alpha;
+        renderer.material.color = c;
+    }
+}
+</code></pre> 
+       <p>Dalam contoh ini, metode Fade tidak memiliki efek yang mungkin Anda harapkan. Untuk membuat fading terlihat, Anda harus mengurangi alfa fade atas urutan bingkai untuk menampilkan nilai-nilai menengah yang render Unity. Namun, metode contoh ini mengeksekusi keseluruhannya dalam pembaruan bingkai tunggal. Nilai menengah tidak pernah ditampilkan, dan objek menghilang secara instan.</p> 
+       <p>Untuk bekerja di sekitar situasi ini, Anda dapat menambahkan kode ke fungsi <code>Update</code> yang mengeksekusi fade berdasarkan frame-by-frame. Namun, bisa lebih nyaman untuk menggunakan koroutine untuk tugas semacam ini.</p> 
+       <p>Dalam C #, Anda menyatakan koroutine seperti ini:</p> 
+       <pre><code class="lang-csharp">IEnumerator Fade()
+{
+    Color c = renderer.material.color;
+    for (float alpha = 1f; alpha &gt;= 0; alpha -= 0.1f)
+    {
+        c.a = alpha;
+        renderer.material.color = c;
+        yield return null;
+    }
+}
+</code></pre> 
+       <p>Koroutine adalah metode yang Anda deklarasikan dengan tipe pengembalian <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerator">IEnumerator</a> dan dengan pernyataan pengembalian <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/yield">yield</a> termasuk suatu tempat di dalam tubuh. <code>yield return null</code>line adalah titik di mana jeda eksekusi dan resume dalam bingkai berikut. Untuk mengatur berjalan koroutine, Anda perlu menggunakan fungsi <a href="../ScriptReference/MonoBehaviour.StartCoroutine.html">StartCoroutine</a>:</p> 
+       <pre><code class="lang-csharp">void Update()
+{
+    if (Input.GetKeyDown("f"))
+    {
+        StartCoroutine(Fade());
+    }
+}
+</code></pre> 
+       <p>Counter loop dalam fungsi Fade mempertahankan nilai yang benar selama seumur hidup koroutine, dan variabel atau parameter apa pun dipertahankan antara pernyataan <code>yield</code>.</p> 
+       <h2>Penundaan waktu koroutine</h2> 
+       <p>Secara default, Unity melanjutkan koroutine pada bingkai setelah pernyataan <code>yield</code>. Jika Anda ingin memperkenalkan penundaan waktu, gunakan <a href="../ScriptReference/WaitForSeconds.html">WaitForSeconds</a>:</p> 
+       <pre><code class="lang-csharp">IEnumerator Fade()
+{
+    Color c = renderer.material.color;
+    for (float alpha = 1f; alpha &gt;= 0; alpha -= 0.1f)
+    {
+        c.a = alpha;
+        renderer.material.color = c;
+        yield return new WaitForSeconds(.1f);
+    }
+}
+</code></pre> 
+       <p>Anda dapat menggunakan <code>WaitForSeconds</code> untuk menyebarkan efek selama periode waktu, dan Anda dapat menggunakannya sebagai alternatif untuk termasuk tugas dalam metode <code>Update</code>. Unity memanggil metode <code>Update</code> beberapa kali per detik, jadi jika Anda tidak perlu tugas untuk diulang cukup begitu sering, Anda dapat menempatkannya dalam koroutine untuk mendapatkan pembaruan rutin tetapi tidak setiap bingkai tunggal.</p> 
+       <p>Misalnya, Anda mungkin memiliki alarm dalam aplikasi Anda yang memperingatkan pemain jika musuh dekat dengan kode berikut:</p> 
+       <pre><code class="lang-csharp">bool ProximityCheck()
+{
+    for (int i = 0; i &lt; enemies.Length; i++)
+    {
+        if (Vector3.Distance(transform.position, enemies[i].transform.position) &lt; dangerDistance) {
+                return true;
+        }
+    }
+
+    return false;
+}
+</code></pre> 
+       <p>Jika ada banyak musuh kemudian memanggil fungsi ini setiap bingkai mungkin memperkenalkan overhead yang signifikan. Namun, Anda bisa menggunakan koroutine untuk menyebutnya setiap puluhan detik:</p> 
+       <pre><code class="lang-csharp">IEnumerator DoCheck()
+{
+    for(;;)
+    {
+        if (ProximityCheck())
+        {
+            // Perform some action here
+        }
+        yield return new WaitForSeconds(.1f);
+    }
+}
+</code></pre> 
+       <p>Ini mengurangi jumlah pemeriksaan yang dilakukan Unity tanpa efek yang terlihat pada gameplay.</p> 
+       <h2>Menghentikan koroutines</h2> 
+       <p>Untuk menghentikan koroutine, gunakan <a class="tooltipMoreInfoLink" href="../ScriptReference/MonoBehaviour.StopCoroutine.html">StopCoroutine</a> dan <a href="../ScriptReference/MonoBehaviour.StopAllCoroutines.html">StopAllCoroutines</a>. Koroutine juga berhenti jika Anda telah mengatur <a href="../ScriptReference/GameObject.SetActive.html">SetActive</a> ke <code>false</code> untuk menonaktifkan <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> koroutine melekat. Memanggil <code>Destroy(example)</code> (di mana <code>example</code> adalah contoh <code>MonoBehaviour</code>) segera memicu <a href="../ScriptReference/MonoBehaviour.OnDisable.html">OnDisable</a> dan Proses Unity koroutine, secara efektif menghentikannya. Akhirnya, <code>OnDestroy</code> divoked pada akhir bingkai.</p> 
+       <p>Sitemap Jika Anda telah menonaktifkan <strong>Note:</strong> dengan mengatur <code>MonoBehaviour</code> ke <a href="ScriptReference:Behaviour-enabled">enabled</a>, Unity tidak menghentikan koroutines.<code>false</code>, Unity doesn’t stop coroutines.</p> 
+       <h2>Menganalisis koroutines</h2> 
+       <p>Koroutines mengeksekusi berbeda dari kode skrip lainnya. Kebanyakan kode skrip dalam Unity muncul dalam jejak kinerja di satu lokasi, selanbung panggilan tertentu. Namun, kode CPU koroutines selalu muncul di dua tempat di jejak.</p> 
+       <p>Semua kode awal dalam koroutine, dari awal metode koroutine sampai pernyataan <code>yield</code> pertama, muncul di jejak setiap Unity memulai koroutine. Kode awal paling sering muncul ketika metode <a href="../ScriptReference/MonoBehaviour.StartCoroutine.html">StartCoroutine</a> disebut. Koroutines bahwa callback Unity menghasilkan (seperti callback <code>Start</code> yang kembali pertama kali muncul dalam callback Unity masing-masing.<code>IEnumerator</code>) first appear within their respective Unity callback.</p> 
+       <p>Sisa kode koroutine (dari pertama kalinya ia melanjutkan sampai selesai mengeksekusi) muncul dalam garis <code>DelayedCallManager</code> yang berada di dalam loop utama Unity.</p> 
+       <p>Hal ini terjadi karena cara yang menginisiasi koroutin. Audi BMW Chevrolet Citroen Dacia Fiat Ford Honda Hyundai Kia Mazda Mercedes Mitsubishi Nissan Opel Peugeot Renault Seat Skoda Subaru Suzuki Toyota Volkswagen Volvo Unity kemudian menggunakan objek ini untuk melacak keadaan koroutine di beberapa panggilan metode tunggal. Karena variabel cakupan lokal dalam koroutine harus bertahan di panggilan <a href="overview-of-dot-net-in-unity.html">C# kompilacja</a>, Unity mengangkat variabel cakupan lokal ke dalam kelas yang dihasilkan, yang tetap dialokasikan pada tumpahan selama koroutine. Objek ini juga melacak keadaan internal koroutine: itu ingat di mana titik dalam kode koroutine harus melanjutkan setelah menghasilkan.<code>yield</code> calls, Unity hoists the local-scope variables into the generated class, which remain allocated on the heap during the coroutine. This object also tracks the internal state of the coroutine: it remembers at which point in the code the coroutine must resume after yielding.</p> 
+       <p>Karena ini, tekanan memori yang terjadi ketika awal koroutine sama dengan alokasi overhead tetap ditambah ukuran variabel ruang lingkup lokal.</p> 
+       <p>Kode yang memulai konstruksi koroutine dan memprovokasi objek, dan kemudian Unity <code>DelayedCallManager</code> membentang lagi setiap kondisi koroutine <code>yield</code> puas. Karena koroutines biasanya mulai di luar koroutin lain, ini membagi overhead eksekusi mereka antara panggilan <code>yield</code> dan <code>DelayedCallManager</code>.</p> 
+       <p>Anda dapat menggunakan Unity <span class="tooltip"><strong>Profiler</strong><span class="tooltiptext">Jendela yang membantu Anda untuk mengoptimalkan permainan Anda. Ini menunjukkan berapa banyak waktu yang dihabiskan di berbagai bidang permainan Anda. Sebagai contoh, dapat melaporkan persentase waktu yang dihabiskan <strong>rendering</strong>, aimating, atau dalam logika permainan Anda. <a class="tooltipMoreInfoLink" href="Profiler.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profiler">Glossary</a></span></span></span> untuk memeriksa dan memahami di mana Unity mengeksekusi koroutin dalam aplikasi Anda. Untuk melakukan ini, profil aplikasi Anda dengan <a href="ProfilerWindow.html#deep-profiling">Profil</a> diaktifkan, profil mana setiap bagian dari kode skrip Anda dan mencatat semua panggilan fungsi. Anda kemudian dapat menggunakan <a href="ProfilerCPU.html">Login Database</a> untuk menyelidiki koroutin dalam aplikasi Anda.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/coroutines-cpu-profiler.png" alt="Profiler session with a coroutine in a DelayedCall"> 
+        <figcaption>
+          Profiler sesi dengan koroutine di DelayedCall 
+        </figcaption> 
+       </figure> 
+       <p>Praktik terbaik untuk mengkondensasi serangkaian operasi ke sejumlah besar koroutin individu mungkin. Koroutine bersarang berguna untuk kejernihan kode dan pemeliharaan, tetapi mereka memaksakan overhead memori yang lebih tinggi karena benda-benda jejak koroutine.</p> 
+       <p>Jika koroutine berjalan setiap bingkai dan tidak <code>yield</code> pada operasi jangka panjang, lebih dilakukan untuk menggantikannya dengan callback <code>Update</code> atau <code>LateUpdate</code>. Ini berguna jika Anda memiliki koroutin yang panjang atau tak terbatas.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="EventFunctions.html"></a></span> 
+         <div class="tip">
+           Fungsi Acara 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="Namespaces.html"></a></span> 
+         <div class="tip">
+           Namespaces 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Resampling kurva Euler</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="models.html">Models</a></li> 
+         <li><a href="models-importing.html">Mengimpor model ke Unity</a></li> 
+         <li><a href="class-FBXImporter.html">Model Jendela Pengaturan impor</a></li> 
+         <li><a href="class-AnimationClip.html">Animasi tab</a></li> 
+         <li>Resampling kurva Euler</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="class-AnimationClip.html"></a></span> 
+          <div class="tip">
+            Animasi tab 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="Splittinganimations.html"></a></span> 
+          <div class="tip">
+            Mengekstrak klip animasi 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Resampling kurva Euler</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Rotasi dalam aplikasi 3D biasanya diwakili sebagai sudut <span class="tooltip"><strong>Quaternions</strong><span class="tooltiptext">Cara standar Unity mewakili rotasi sebagai data. Ketika menulis kode yang berhubungan dengan rotasi, Anda biasanya harus menggunakan kelas Quaternion dan metodenya. <a class="tooltipMoreInfoLink" href="QuaternionAndEulerRotationsInUnity.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Quaternion">Glossary</a></span></span></span> atau Euler. Untuk sebagian besar, Unity mewakili rotasi sebagai Quaternions internal; Namun, penting untuk memiliki pemahaman dasar dari <a href="QuaternionAndEulerRotationsInUnity.html">rotasi dan orientasi dalam Unity</a>.</p> 
+       <p>Ketika Anda mengimpor file yang mengandung animasi yang berasal dari sumber eksternal, file impor biasanya mengandung animasi <span class="tooltip"><strong>keyframe</strong><span class="tooltiptext">Bingkai yang menandai titik awal atau akhir transisi dalam animasi. Bingkai di antara bingkai kunci disebut inbetweens.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#keyframe">Glossary</a></span></span></span> dalam format Euler. Perilaku default Unity adalah untuk meresample animasi ini sebagai nilai Quaternion dan menghasilkan keyframe Quaternion baru untuk setiap bingkai dalam animasi. Ini meminimalkan perbedaan antara animasi sumber dan bagaimana muncul di Unity.</p> 
+       <p>Masih ada beberapa situasi di mana representasi quaternion dari animasi impor mungkin tidak cocok dengan cukup erat asli, bahkan dengan pengambilan sampel. Untuk alasan ini, Unity menyediakan opsi untuk mematikan pengambilan sampel animasi. Ini berarti bahwa Anda dapat menggunakan keyframe animasi Euler asli di run-time.</p> 
+       <p>Sitemap Anda hanya harus menyimpan kurva Euler sebagai resor terakhir, jika interpolasi Quaternion default antara bingkai memberikan hasil yang buruk dan menyebabkan masalah.<strong>Note:</strong> You should only keep the Euler curves as a last resort, if the default Quaternion interpolation between frames gives bad results and causes issues.</p> 
+       <h2>Menyimpan aslinya Kurva Euler pada animasi impor</h2> 
+       <p>Untuk menggunakan nilai kurva Euler asli dalam file animasi, hapus opsi <strong>Resample Curves</strong> di <a href="class-AnimationClip.html">Animasi tab</a>:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AnimationImportResampleRotations.png" alt="The Resample Curves option in the Animations tab"> 
+        <figcaption>
+          The Resample Curves pilihan di tab Animasi 
+        </figcaption> 
+       </figure> 
+       <p>Ketika Anda menonaktifkan opsi ini, Unity menjaga kurva rotasi dengan keyframe asli, dalam mode Euler atau Quaternion sesuai dengan jenis kurva.</p> 
+       <p>Sitemap FBX SDK secara otomatis mengubah kurva rotasi pada <strong>Note:</strong> yang memiliki pra- atau pasca-rotasi. Ini berarti bahwa Unity secara otomatis mengimpor mereka sebagai kurva Quaternion.<span class="tooltip"><strong>joint</strong><span class="tooltiptext">Komponen fisika yang memungkinkan koneksi dinamis antara komponen Rigidbody, biasanya memungkinkan beberapa tingkat pergerakan seperti engsel. <a class="tooltipMoreInfoLink" href="Joints.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#joint">Glossary</a></span></span></span> that has pre- or post-rotations. This means that Unity automatically imports them as Quaternion curves.</p> 
+       <p>Unity mendukung berbagai macam file impor dan upaya untuk menjaga kurva impor sedekat mungkin. Untuk mencapai ini, Unity mendukung semua normal (non-repeating) Pesanan rotasi Euler, dan kurva impor dalam pesanan rotasi aslinya.</p> 
+       <h3>Nilai Euler dan mesin Unity</h3> 
+       <p>Saat menggunakan rotasi Euler (non-resampled) asli, Anda dapat melihat perbedaan visual yang sangat sedikit dalam pemutaran animasi. Di bawah kap, toko Unity kurva ini dalam representasi Euler bahkan saat berjalan. Namun, Unity harus mengubah nilai rotasi ke Quaternions akhirnya, karena mesin hanya bekerja dengan Quaternions.</p> 
+       <p>Ketika Anda menonaktifkan opsi <strong>Resample Curves</strong>, Unity menjaga nilai rotasi sebagai nilai Euler hingga diterapkan pada <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span>. Ini berarti bahwa hasil akhir harus terlihat baik seperti aslinya, tetapi dengan peningkatan memori, karena kurva rotasi yang belum dipanggang dalam perangkat lunak penulis mengambil kurang memori.</p> 
+       <p><a name="RotationOrder"></a></p> 
+       <h3>Sitemap Order Euler di Inspektur Transform</h3> 
+       <p>Secara default, Unity menerapkan sudut Euler yang muncul di Transform <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span> di Z, X, pesanan Y.</p> 
+       <p>Ketika bermain kembali atau mengedit animasi impor yang menampilkan kurva Euler dengan urutan rotasi yang berbeda dari default Unity, Unity menampilkan indikator perbedaan di samping bidang rotasi:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AnimationEulerAlternateRotationOrderInInspector.png" alt="The inspector showing that a non-default rotation order is being used for the rotation animation on this object"> 
+        <figcaption>
+          Inspektur menunjukkan bahwa urutan rotasi non-standar digunakan untuk animasi rotasi pada objek ini 
+        </figcaption> 
+       </figure> 
+       <p>Ketika mengedit beberapa transformasi dengan pesanan rotasi yang berbeda, Unity menampilkan pesan peringatan yang diterapkan rotasi Euler yang sama akan memberikan hasil yang berbeda pada kurva dengan pesanan rotasi yang berbeda:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AnimationEulerMixedRotationOrderInInspector.png" alt="The inspector showing that a mixture of rotation orders are being used for the rotation animation on the selected group of objects"> 
+        <figcaption>
+          Inspektur menunjukkan bahwa campuran pesanan rotasi digunakan untuk animasi rotasi pada kelompok objek yang dipilih 
+        </figcaption> 
+       </figure> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="class-AnimationClip.html"></a></span> 
+         <div class="tip">
+           Animasi tab 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="Splittinganimations.html"></a></span> 
+         <div class="tip">
+           Mengekstrak klip animasi 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

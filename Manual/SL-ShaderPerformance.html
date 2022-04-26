@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Mengoptimalkan kinerja runtime naungan</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="Shaders.html">Shaders</a></li> 
+         <li><a href="shader-performance-debugging.html">Memahami kinerja naungan</a></li> 
+         <li>Mengoptimalkan kinerja runtime naungan</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="shader-performance-debugging.html"></a></span> 
+          <div class="tip">
+            Memahami kinerja naungan 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="SL-DebuggingD3D11ShadersWithVS.html"></a></span> 
+          <div class="tip">
+            Debugging naungan menggunakan Visual Studio 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Mengoptimalkan kinerja runtime naungan</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Platform yang berbeda memiliki kemampuan kinerja yang sangat berbeda; PC GPU high-end dapat menangani lebih banyak dalam hal grafis dan <span class="tooltip"><strong>shaders</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> dari GPU seluler low-end. Hal yang sama berlaku bahkan pada satu platform; GPU cepat lusinan kali lebih cepat dari GPU terintegrasi lambat.</p> 
+       <p>Kinerja GPU pada platform seluler dan PC low-end cenderung jauh lebih rendah daripada pada mesin pengembangan Anda. Disarankan bahwa Anda secara manual mengoptimalkan naungan Anda untuk mengurangi perhitungan dan tekstur membaca, untuk mendapatkan kinerja yang baik di seluruh mesin GPU low-end. Sebagai contoh, beberapa built-in <span class="tooltip"><strong>Shader objects</strong><span class="tooltiptext">Contoh kelas Shader, objek Shader adalah wadah untuk program naungan dan instruksi GPU, dan informasi yang memberi tahu Unity bagaimana menggunakannya. Gunakan mereka dengan bahan untuk menentukan penampilan adegan Anda. <a class="tooltipMoreInfoLink" href="shader-objects.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shaderobject">Glossary</a></span></span></span> memiliki ekuivalen "mobile" yang jauh lebih cepat, tetapi memiliki beberapa keterbatasan atau perkiraan.</p> 
+       <p>Halaman ini berisi informasi tentang mengoptimalkan naungan Anda untuk kinerja runtime.</p> 
+       <h2>Hanya menghitung apa yang Anda butuhkan</h2> 
+       <p>Semakin banyak perhitungan dan memproses kode naungan Anda harus dilakukan, semakin banyak itu akan mempengaruhi kinerja permainan Anda. Misalnya, warna pendukung per bahan bagus untuk membuat warna lebih fleksibel, tetapi jika Anda selalu meninggalkan set warna itu putih maka komputasi tidak berguna dilakukan untuk setiap simpul atau <span class="tooltip"><strong>pixel</strong><span class="tooltiptext">Unit terkecil dalam gambar komputer. Ukuran piksel tergantung pada resolusi layar Anda. Pencahayaan pixel dihitung pada setiap piksel layar. <a class="tooltipMoreInfoLink" href="ShadowPerformance.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#pixel">Glossary</a></span></span></span> yang diberikan di layar.</p> 
+       <p>Frekuensi perhitungan juga akan mempengaruhi kinerja permainan Anda. Biasanya ada banyak lebih banyak piksel yang dirender (dan selanjutnya lebih banyak eksekusi naungan pixel) daripada ada vertices (eksekusi naungan vertex), dan lebih simpul daripada objek yang diberikan. Bila memungkinkan, memindahkan komputasi dari kode naungan pixel ke dalam kode <span class="tooltip"><strong>vertex shader</strong><span class="tooltiptext">Program yang berjalan pada setiap simpul model 3D ketika model sedang diberikan. <a class="tooltipMoreInfoLink" href="SL-ShaderPrograms.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#vertexshader">Glossary</a></span></span></span>, atau memindahkannya dari naungan sepenuhnya dan menetapkan nilai dalam skrip.</p> 
+       <h2>Presisi komputasi</h2> 
+       <p>Ketika menulis naungan di Cg / HLSL, ada tiga jenis nomor dasar: <code>float</code>, <code>half</code> dan <code>fixed</code> (lihat <a href="SL-DataTypesAndPrecision.html">Jenis Data dan Presisi</a>).</p> 
+       <p>Untuk kinerja yang baik, selalu menggunakan presisi terendah yang mungkin. Ini sangat penting pada perangkat keras kelas bawah. Aturan yang baik dari thumb adalah:</p> 
+       <ul> 
+        <li>Untuk posisi ruang dunia dan koordinat tekstur, gunakan presisi <code>float</code>.</li> 
+        <li>Untuk segala sesuatu yang lain (warna, warna HDR, dll), mulai dengan presisi <code>half</code>. Meningkatkan hanya jika diperlukan.</li> 
+        <li>Untuk operasi yang sangat sederhana pada data tekstur, gunakan presisi <code>fixed</code>.</li> 
+       </ul> 
+       <p>Dalam prakteknya, persis jenis nomor mana yang harus Anda gunakan untuk tergantung pada platform dan GPU. Secara umum:</p> 
+       <ul> 
+        <li>Semua GPU desktop modern akan selalu mengimbangi segala sesuatu dalam presisi <code>float</code> penuh, sehingga <code>float/half/fixed</code> berakhir tepatnya bawahan yang sama. Hal ini dapat membuat pengujian sulit, karena lebih sulit untuk melihat apakah presisi setengah / diperbaiki benar-benar cukup, jadi selalu menguji naungan Anda pada perangkat target untuk hasil yang akurat.</li> 
+        <li>Mobile GPU memiliki dukungan presisi <code>half</code> yang sebenarnya. Ini biasanya lebih cepat, dan menggunakan daya kurang untuk melakukan perhitungan.</li> 
+        <li>Presisi <code>Fixed</code><code>fixed</code> umumnya hanya berguna untuk GPU seluler yang lebih tua. Kebanyakan GPU modern (yang dapat menjalankan OpenGL ES 3 atau Metal) secara internal memperlakukan <code>half</code> dan presisi persis sama.</li> 
+       </ul> 
+       <p>Lihat <a href="SL-DataTypesAndPrecision.html">Jenis Data dan Presisi</a> untuk rincian lebih lanjut.</p> 
+       <h2>Operasi matematika yang kompleks</h2> 
+       <p>Fungsi matematika transkendental (seperti <code>pow</code>, <code>exp</code>, <code>log</code>, <code>cos</code>, <code>sin</code>, <code>tan</code>) cukup intensif sumber daya, sehingga menghindari menggunakannya di mana mungkin pada perangkat keras low-end. Pertimbangkan menggunakan tekstur lookup sebagai alternatif perhitungan matematika yang kompleks jika berlaku.</p> 
+       <p>Hindari menulis operasi Anda sendiri (seperti <code>normalize</code>, <code>dot</code>, <code>inversesqrt</code>). Opsi bawaan unity memastikan bahwa pengemudi dapat menghasilkan kode yang jauh lebih baik. Ingat bahwa operasi Alpha Test (<code>discard</code>) sering membuat kerusakan Anda lebih lambat.</p> 
+       <h2>Permukaan Dioptimalkan Shaders</h2> 
+       <p><span class="tooltip"><a class="tooltipMoreInfoLink" href="SL-SurfaceShaders.html">Permukaan Shader</a><span class="tooltiptext">Cara merampingkan naungan menulis untuk Pipeline Render Built-in. <a href="SL-SurfaceShaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SurfaceShader">Glossary</a></span></span></span> bagus untuk menulis naungan yang berinteraksi dengan pencahayaan. Namun, opsi default mereka tuned untuk menutupi sejumlah besar kasus umum. Tweak ini untuk situasi tertentu untuk membuat naungan berjalan lebih cepat atau setidaknya lebih kecil:</p> 
+       <ul> 
+        <li>Kearah <code>approxview</code> untuk naungan yang menggunakan arah pandangan (misal) membuat arah pandangan normal per simpul bukan per pixel. Ini adalah perkiraan, tetapi sering cukup baik.</li> 
+        <li><code>halfasview</code> untuk jenis naungan spular bahkan lebih cepat. Half-vector (halfway antara arah pencahayaan dan melihat vektor) dihitung dan dinormalisasi per simpul, dan <a href="SL-SurfaceShaderLighting.html">fungsi pencahayaan</a> menerima semi-vector sebagai parameter daripada tampilan vektor.</li> 
+        <li> <code>noforwardadd</code> membuat lampu satu arah teduh di <span class="tooltip"><strong>Forward rendering</strong><span class="tooltiptext">Sebuah jalur rendering yang membuat setiap objek dalam satu atau lebih melewati, tergantung pada lampu yang mempengaruhi objek. Lampu sendiri juga diperlakukan berbeda dengan Rendering Maju, tergantung pada pengaturan dan intensitas mereka. <a class="tooltipMoreInfoLink" href="RenderTech-ForwardRendering.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ForwardRendering">Glossary</a></span></span></span> saja. Sisa lampu masih dapat memiliki efek sebagai lampu per-vertex atau harmonik bulat. Ini bagus untuk membuat naungan Anda lebih kecil dan pastikan selalu render dalam satu pass, bahkan dengan beberapa lampu hadir.</li> 
+        <li> <code>noambient</code> menonaktifkan pencahayaan ambient dan lampu harmonik bulat pada naungan. Ini dapat membuat kinerja sedikit lebih cepat.</li> 
+       </ul> 
+       <h2>Pengujian Alpha</h2> 
+       <p>Fungsi tetap <a href="SL-AlphaTest.html">AlphaTest</a> - atau setara programmable, <code>clip()</code> - memiliki karakteristik kinerja yang berbeda pada platform yang berbeda:</p> 
+       <ul> 
+        <li>Umumnya Anda mendapatkan keuntungan kecil ketika menggunakannya untuk menghapus piksel yang benar-benar transparan pada sebagian besar platform.</li> 
+        <li>Namun, pada PowerVR GPU ditemukan di iOS dan beberapa perangkat Android, pengujian alfa adalah intensif sumber daya. Jangan mencoba menggunakannya untuk optimasi kinerja pada platform ini, karena menyebabkan permainan untuk menjalankan lebih lambat dari biasanya.</li> 
+       </ul> 
+       <h2>Masker warna</h2> 
+       <p>Pada beberapa platform (paling GPU seluler yang ditemukan di perangkat iOS dan Android), menggunakan <a href="SL-Pass.html">ColorMask</a> untuk meninggalkan beberapa saluran (misalnya <code>ColorMask RGB</code>) dapat menjadi intensif sumber daya, jadi hanya menggunakannya jika benar-benar diperlukan.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="shader-performance-debugging.html"></a></span> 
+         <div class="tip">
+           Memahami kinerja naungan 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="SL-DebuggingD3D11ShadersWithVS.html"></a></span> 
+         <div class="tip">
+           Debugging naungan menggunakan Visual Studio 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

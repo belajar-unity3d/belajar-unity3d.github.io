@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Memperpanjang Pipa Render Built-in dengan CommandBuffers</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="render-pipelines.html">Pipa render</a></li> 
+         <li><a href="built-in-render-pipeline.html">Menggunakan Pipa Render Built-in</a></li> 
+         <li>Memperpanjang Pipa Render Built-in dengan CommandBuffers</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="RenderTech-VertexLit.html"></a></span> 
+          <div class="tip">
+            Vertex Lit Rendering Path 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="RenderTech-HardwareRequirements.html"></a></span> 
+          <div class="tip">
+            Persyaratan perangkat keras untuk Pipa Render Built-in 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Memperpanjang Pipa Render Built-in dengan CommandBuffers</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Halaman ini berisi informasi tentang menggunakan CommandBuffers di Built-in <span class="tooltip"><strong>Render Pipeline</strong><span class="tooltiptext">Rangkaian operasi yang mengambil isi dari Adegan, dan menampilkannya di layar. Unity memungkinkan Anda memilih dari pipa render yang dibangun sebelumnya, atau menulis sendiri. <a class="tooltipMoreInfoLink" href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span>. Untuk informasi tentang menggunakan CommandBuffers dalam membuat pipa berdasarkan Pipa Rendering Scriptable, lihat <a href="srp-using-scriptable-render-context.html">Penjadwalan dan mengeksekusi perintah rendering di Pipa Pengirim Scriptable</a>.</p> 
+       <h2>CommandBuffer fundamentals</h2> 
+       <p>Sebuah <a href="../ScriptReference/Rendering.CommandBuffer.html">CommandBuffer</a> memegang daftar perintah rendering (seperti mengatur target render, atau menggambar mesh tertentu). Anda dapat menginstruksikan Unity untuk menjadwalkan dan mengeksekusi perintah tersebut pada berbagai poin di Pipa Render Built-in, yang memungkinkan Anda untuk menyesuaikan dan memperluas fungsi rendering Unity.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/RenderingCommandBufferBlurryRefraction.jpg" alt="Blurry refraction, using Command Buffers."> 
+        <figcaption>
+          Blurry refraktori, menggunakan Command Buffers. 
+        </figcaption> 
+       </figure> 
+       <p>Anda dapat mengeksekusi CommandBuffers segera menggunakan API <a href="../ScriptReference/Graphics.ExecuteCommandBuffer.html">Grafik.ExecuteCommandBuffer</a>, atau Anda dapat menjadwalkannya sehingga mereka terjadi pada titik tertentu dalam pipa render. Untuk menjadwalkannya, gunakan API <a href="../ScriptReference/Camera.AddCommandBuffer.html">Kamera.AddCommandBuffer</a> dengan <a href="../ScriptReference/Rendering.CameraEvent.html">KameraEvent enum</a>, dan API <a href="../ScriptReference/Light.AddCommandBuffer.html">Light.AddCommandBuffer</a> dengan <a href="../ScriptReference/Rendering.LightEvent.html">LightEvent enum</a>. Untuk melihat kapan Unity mengeksekusi CommandBuffers yang Anda jadwalkan dengan cara ini, lihat <a href="#order-of-execution">Kamera dan Cahaya Urutan pelaksanaan</a>.</p> 
+       <p>Untuk daftar lengkap perintah yang dapat Anda eksekusi menggunakan CommandBuffers, lihat <a href="../ScriptReference/Rendering.CommandBuffer.html">Login API documentation</a>. Perhatikan bahwa beberapa perintah didukung hanya pada perangkat keras tertentu; misalnya, perintah yang berkaitan dengan <span class="tooltip"><strong>ray tracing</strong><span class="tooltiptext">Proses menghasilkan gambar dengan menahan sinar dari Kamera melalui setiap pixel dan merekam kontribusi warna pada titik hit. Ini adalah alternatif untuk rasterisasi. <span class="search-words">raytracing</span><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Raytracing">Glossary</a></span></span></span> didukung hanya dalam DX12.</p> 
+       <h2>Perintah Buffer contoh</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/RenderingCommandBufferDecalsScene.jpg" alt="Decals, using Command Buffers."> 
+        <figcaption>
+          Decals, menggunakan Buffer Perintah. 
+        </figcaption> 
+       </figure> 
+       <p>Posting blog Unity memperkenalkan CommandBuffers di Pipa Render Built-in. Ini menjelaskan cara menggunakan CommandBuffers untuk mencapai beberapa efek yang berbeda, dan berisi proyek sampel dan kode contoh. Proyek ini dibuat untuk versi Unity yang lebih tua, tetapi prinsip-prinsipnya sama.</p> 
+       <p><a name="order-of-execution"></a></p> 
+       <h2>Kamera dan Cahaya Pelaksanaan acara acara</h2> 
+       <h3>CameraEvent</h3> 
+       <p>Urutan pelaksanaan CameraEvent tergantung pada <span class="tooltip"><a class="tooltipMoreInfoLink" href="RenderingPaths.html">jalur rendering</a><span class="tooltiptext">Teknik yang menggunakan pipa render untuk membuat grafik. Memilih jalur rendering yang berbeda mempengaruhi bagaimana pencahayaan dan pembentukan dihitung. Beberapa jalur rendering lebih cocok untuk berbagai platform dan perangkat keras daripada yang lain. <a href="RenderingPaths.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#RenderingPath">Glossary</a></span></span></span> yang digunakan Proyek Anda.</p> 
+       <p><strong>Deferred rendering path</strong></p> 
+       <ul> 
+        <li></li> 
+        <li>Unity render geometri buram</li> 
+        <li></li> 
+        <li>Unity menyelesaikan kedalaman.</li> 
+        <li></li> 
+        <li>Unity render refleksi default, dan refleksi <span class="tooltip"><strong>Reflection Probe</strong><span class="tooltiptext">Komponen rendering yang menangkap pandangan bulat dari sekitarnya di semua arah, seperti kamera. Gambar yang ditangkap kemudian disimpan sebagai kubus yang dapat digunakan oleh benda dengan bahan reflektif. <a class="tooltipMoreInfoLink" href="class-ReflectionProbe.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ReflectionProbe">Glossary</a></span></span></span>.</li> 
+        <li></li> 
+        <li>Refleksi salinan Unity ke saluran Emissive G-buffer.</li> 
+        <li></li> 
+        <li>Perayaan bersatu. Sitemap<a href="#LightEvent">Urutan eksekusi yang ringan</a>.</li> 
+        <li></li> 
+        <li></li> 
+        <li>Proses unity lulus akhir.</li> 
+        <li></li> 
+        <li>(hanya disebut jika ada geometri buram yang tidak dapat diberikan menggunakan deferred)</li> 
+        <li>Satuan render geometri buram yang tidak dapat diberikan dengan rendering yang rusak.</li> 
+        <li>(hanya disebut jika ada geometri buram yang tidak dapat diberikan menggunakan deferred)</li> 
+        <li></li> 
+        <li>Unity membuat <span class="tooltip"><strong>skybox</strong><span class="tooltiptext">Jenis khusus Bahan yang digunakan untuk mewakili langit. Biasanya enam sisi. <a class="tooltipMoreInfoLink" href="class-Skybox.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Skybox">Glossary</a></span></span></span>.</li> 
+        <li></li> 
+        <li>Satuan render halos.</li> 
+        <li></li> 
+        <li>Unity menerapkan efek opaque-only <span class="tooltip"><strong>post-processing</strong><span class="tooltiptext">Proses yang meningkatkan visual produk dengan menerapkan filter dan efek sebelum gambar muncul di layar. Anda dapat menggunakan efek pasca proses untuk mensimulasikan kamera fisik dan sifat film, misalnya Bloom dan Kedalaman Lapangan. <a class="tooltipMoreInfoLink" href="PostProcessingOverview.html">More info</a> <span class="search-words">pemrosesan pos, pasca proses, pasca proses</span><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#post-processing">Glossary</a></span></span></span>.</li> 
+        <li></li> 
+        <li></li> 
+        <li>Unity render geometri transparan, dan Kanvas <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#UI">Glossary</a></span></span></span> dengan Mode rendering <strong>Screen Space - <span class="tooltip"><strong>Camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span></strong>.</li> 
+        <li></li> 
+        <li></li> 
+        <li>Unity renders <span class="tooltip"><strong>lens flares</strong><span class="tooltiptext">Komponen yang mensimulasikan efek pembiasan lampu di dalam lensa kamera. Gunakan Lens Flare untuk mewakili lampu yang sangat terang atau tambahkan suasana ke tempat kejadian Anda. <a class="tooltipMoreInfoLink" href="class-LensFlare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#LensFlare">Glossary</a></span></span></span>.</li> 
+        <li></li> 
+        <li></li> 
+        <li>Unity menerapkan efek pasca-olahan.</li> 
+        <li></li> 
+        <li></li> 
+        <li>Persatuan render UI Kanvas dengan Mode Rendering yang tidak <strong>Screen Space - Camera</strong>.</li> 
+       </ul> 
+       <p><strong>Forward rendering path</strong></p> 
+       <ul> 
+        <li></li> 
+        <li>Mempersatukan kedalaman untuk geometri buram.</li> 
+        <li></li> 
+        <li></li> 
+        <li>Unity renders kedalaman normal untuk geometri buram.</li> 
+        <li></li> 
+        <li>Perayaan bersatu. Sitemap<a href="#LightEvent">Urutan eksekusi yang ringan</a>.</li> 
+        <li></li> 
+        <li>Unity render geometri buram.</li> 
+        <li></li> 
+        <li></li> 
+        <li>Unity membuat skybox.</li> 
+        <li></li> 
+        <li>Satuan render halos.</li> 
+        <li></li> 
+        <li>Unity menerapkan efek pasca-olahan buram.</li> 
+        <li></li> 
+        <li></li> 
+        <li>Unity render geometri transparan, dan Kanvas UI dengan Mode rendering <strong>Screen Space - Camera</strong>.</li> 
+        <li></li> 
+        <li></li> 
+        <li>Peradangan lensa rendering unity.</li> 
+        <li></li> 
+        <li></li> 
+        <li>Unity menerapkan efek pasca-olahan.</li> 
+        <li></li> 
+        <li></li> 
+        <li>Persatuan render UI Kanvas dengan Mode Rendering yang tidak <strong>Screen Space - Camera</strong>.</li> 
+       </ul> 
+       <p><a name="LightEvent"></a></p> 
+       <h3>Urutan eksekusi yang ringan</h3> 
+       <p>Selama tahap “cairan render” di atas, untuk setiap lampu bayangan, Unity melakukan langkah-langkah ini:</p> 
+       <ul> 
+        <li><a href="../ScriptReference/Rendering.LightEvent.BeforeShadowMap.html">BeforeShadowMap</a></li> 
+        <li><a href="../ScriptReference/Rendering.LightEvent.BeforeShadowMapPass.html">BeforeShadowMapPass</a></li> 
+        <li>Unity membuat semua kasir bayangan untuk Pass saat ini</li> 
+        <li><a href="../ScriptReference/Rendering.LightEvent.AfterShadowMapPass.html">AfterShadowMapPass</a></li> 
+        <li>Unity mengulang tiga langkah terakhir, untuk setiap Pass</li> 
+        <li><a href="../ScriptReference/Rendering.LightEvent.AfterShadowMap.html">AfterShadowMap</a></li> 
+        <li><a href="../ScriptReference/Rendering.LightEvent.BeforeScreenSpaceMask.html">BeforeScreenSpaceMask</a></li> 
+        <li>Unity mengumpulkan peta bayangan ke ruang layar penyangga dan melakukan penyaringan * <a href="../ScriptReference/Rendering.LightEvent.AfterScreenSpaceMask.html">AfterScreenSpaceMask</a>%</li> 
+       </ul> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="RenderTech-VertexLit.html"></a></span> 
+         <div class="tip">
+           Vertex Lit Rendering Path 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="RenderTech-HardwareRequirements.html"></a></span> 
+         <div class="tip">
+           Persyaratan perangkat keras untuk Pipa Render Built-in 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

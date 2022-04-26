@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: CPU Database</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="analysis.html">Analysis</a></li> 
+         <li><a href="Profiler.html">Profiler</a></li> 
+         <li><a href="ProfilerWindow.html">WordPress.org</a></li> 
+         <li>Login Database</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="ProfilerAudio.html"></a></span> 
+          <div class="tip">
+            Modul Audio Profiler 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="profiler-file-access-module.html"></a></span> 
+          <div class="tip">
+            File Access Profiler module 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Login Database</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>CPU di CPU Penggunaan modul <span class="tooltip"><strong>Profiler</strong><span class="tooltiptext">Jendela yang membantu Anda untuk mengoptimalkan permainan Anda. Ini menunjukkan berapa banyak waktu yang dihabiskan di berbagai bidang permainan Anda. Sebagai contoh, dapat melaporkan persentase waktu yang dihabiskan <strong>rendering</strong>, aimating, atau dalam logika permainan Anda. <a class="tooltipMoreInfoLink" href="Profiler.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Profiler">Glossary</a></span></span></span> berisi grafik yang menampilkan di mana waktu dihabiskan dalam aplikasi Anda. Ini memberikan gambaran dari semua area yang signifikan di mana aplikasi Anda menghabiskan waktu, seperti pada rendering, <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span>, dan animasi. Bagian dokumentasi ini mencakup:</p> 
+       <ul> 
+        <li><a href="#charts">Kategori grafik</a></li> 
+        <li> <a href="#details-pane">Detail modul pane</a> 
+         <ul> 
+          <li><a href="#live-setting">Pengaturan langsung</a></li> 
+          <li><a href="#full-names-setting">Tampilkan Tampilkan Metode Scripting Penuh Nama Pengaturan</a></li> 
+         </ul> </li> 
+        <li> <a href="#timeline">Timeline view</a> 
+         <ul> 
+          <li><a href="#flow-events">Flow events</a></li> 
+         </ul> </li> 
+        <li><a href="#hierarchy">Tampilan Hierarchy dan Raw</a></li> 
+        <li><a href="#call-stacks">Allocation call stacks</a></li> 
+        <li><a href="#samples">Common markers</a></li> 
+       </ul> 
+       <p><a name="charts"></a></p> 
+       <h2>Kategori grafik</h2> 
+       <p>CPU di CPU Pemakaian Grafik modul profiler melacak waktu yang dihabiskan pada benang utama aplikasi. Waktu dibagi menjadi sembilan kategori. Untuk mengubah urutan kategori di grafik, Anda dapat menyeret dan menjatuhkannya di legenda grafik. Anda juga dapat mengklik legenda berwarna kategori untuk memotong tampilannya.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/profiler-cpu-window.png" alt="The CPU Usage Profiler module"> 
+        <figcaption>
+          Modul Profiler Penggunaan CPU 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Category</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Rendering</strong></td> 
+          <td style="text-align:left;">Berapa banyak waktu aplikasi Anda menghabiskan grafis rendering.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Scripts</strong></td> 
+          <td style="text-align:left;">Berapa banyak waktu aplikasi Anda menghabiskan pada menjalankan skrip.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Physics</strong></td> 
+          <td style="text-align:left;">Berapa banyak waktu aplikasi Anda menghabiskan pada <span class="tooltip"><strong>physics engine</strong><span class="tooltiptext">Sebuah sistem yang mensimulasikan aspek sistem fisik sehingga benda dapat mempercepat dengan benar dan dipengaruhi oleh tabrakan, gravitasi dan kekuatan lainnya. <a class="tooltipMoreInfoLink" href="PhysicsSection.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#PhysicsEngine">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Animation</strong></td> 
+          <td style="text-align:left;">Berapa banyak waktu aplikasi Anda menghabiskan pada aimating Skinned <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a class="tooltipMoreInfoLink" href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Mesh">Glossary</a></span></span></span> Renderers, <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#GameObject">Glossary</a></span></span></span> dan komponen lainnya dalam aplikasi Anda. Ini juga mencakup waktu yang dihabiskan pada perhitungan untuk sistem penggunaan Animasi dan <span class="tooltip"><strong>Animator components</strong><span class="tooltiptext">Komponen pada model yang merupakan model yang menggunakan sistem Animasi. Komponen ini memiliki referensi aset Animator Controller yang mengontrol animasi. <a href="class-AnimatorController.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnimatorComponent">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>GarbageCollector</strong></td> 
+          <td style="text-align:left;">Berapa banyak waktu aplikasi Anda menghabiskan pada menjalankan <a href="../ScriptReference/Scripting.GarbageCollector.html">Pengumpul Sampah</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><span class="tooltip"><strong>VSync</strong><span class="tooltiptext">Vertical synchronization (VSync) is a display setting that caps a game’s frame rate to match the refresh rate of a monitor, to prevent image tearing.<br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#VSync">Glossary</a></span></span></span></strong></td> 
+          <td style="text-align:left;">Berapa banyak waktu aplikasi Anda menghabiskan per bingkai menunggu <a href="../ScriptReference/Application-targetFrameRate.html">Login Login</a> atau <span class="tooltip"><strong>VBlank</strong><span class="tooltiptext">Interval kosong vertikal (VBlank) adalah waktu antara akhir garis terlihat akhir dari bingkai dan awal garis terlihat pertama dari bingkai berikutnya. Ini adalah interval refresh sebagaimana didefinisikan oleh tingkat refresh layar.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#VBlank">Glossary</a></span></span></span> berikutnya untuk menyinkronkan. Ini sesuai dengan nilai <a href="../ScriptReference/QualitySettings-vSyncCount.html">WordPress.org</a>, target membingungkan, atau pengaturan VSync yang default atau diberlakukan maksimum platform aplikasi Anda berjalan. Untuk informasi lebih lanjut tentang VSync, lihat bagian dalam dokumentasi ini pada <a href="#samples">Sampel rendering dan VSync</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><span class="tooltip"><strong>Global Illumination</strong><span class="tooltiptext">A group of techniques that model both direct and indirect lighting to provide realistic lighting results.<br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#globalillumination">Glossary</a></span></span></span></strong></td> 
+          <td style="text-align:left;">Berapa banyak waktu aplikasi Anda menghabiskan pada pencahayaan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Allows a user to interact with your application. Unity currently supports three UI systems. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UI">Glossary</a></span></span></span></strong></td> 
+          <td style="text-align:left;">Berapa banyak waktu aplikasi Anda menghabiskan pada menampilkan UI.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Others</strong></td> 
+          <td style="text-align:left;">Berapa banyak waktu aplikasi Anda menghabiskan kode yang tidak jatuh ke dalam kategori lain. Ini termasuk area seperti seluruh EditorLoop, atau Profiling overhead ketika Anda profil Play Mode di Editor.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="details-pane"></a></p> 
+       <h2>Detail modul pane</h2> 
+       <p>Ketika Anda memilih modul penggunaan CPU, detail pane di bawah ini menampilkan rincian di mana aplikasi menghabiskan waktu dalam bingkai yang dipilih. Anda dapat menampilkan data waktu sebagai tabel timeline atau hierarki. Untuk mengubah tampilan, gunakan dropdown kiri atas dalam pane rincian (set ke <strong>Timeline</strong> secara default). Tiga pandangan yang tersedia adalah:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>View</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><a href="#timeline">Timeline</a></td> 
+          <td style="text-align:left;">Menampilkan rincian waktu untuk bingkai tertentu, bersama sumbu waktu panjang bingkai. Ini adalah satu-satunya mode tampilan yang dapat Anda gunakan untuk melihat waktu pada semua benang sekaligus dan pada saat-saat di dalam bingkai di mana mereka terjadi, sehingga Anda dapat menukarkan waktu di seluruh benang (misalnya, benang pekerja <a href="JobSystem.html">Sistem Pekerjaan</a> dimulai setelah sistem pada jadwal benang utama mereka).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="#hierarchy">Hierarchy</a></td> 
+          <td style="text-align:left;">Kelompok data waktu oleh struktur hirarkis internal. Pilihan ini menampilkan elemen-elemen yang disebut dalam format daftar turun, dipesan oleh waktu yang dihabiskan secara default. Anda juga dapat memesan informasi dengan jumlah skrip memori yang dialokasikan (<strong>GC Alloc</strong>), atau jumlah panggilan. Untuk mengubah kolom yang memesan tabel, klik header kolom tabel.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="#hierarchy">Raw Hierarchy</a></td> 
+          <td style="text-align:left;">Menampilkan data waktu dalam struktur hirarkis yang mirip dengan tumpukan panggilan di mana waktu terjadi. Daftar persatuan setiap tumpukan panggilan secara terpisah dalam mode ini daripada merging mereka, karena itu tidak dalam tampilan <strong>Hierarchy</strong>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="live-setting"></a></p> 
+       <h3>Pengaturan langsung</h3> 
+       <p>Pengaturan <strong>Live</strong>, yang tersedia di setiap pandangan, menampilkan informasi tentang bingkai saat ini atau dipilih dalam pane detail modul ketika Anda mulai merekam data baru di Playmode atau Editor. Untuk mengaktifkan ini, klik tombol <strong>Live</strong> di sebelah dropdown detail modul. Secara default, pengaturan ini dinonaktifkan, dan pane detail modul kosong ketika Anda mencatat data. Login Pengaturan ini meningkatkan overhead <strong>Note:</strong> ketika jendela Profiler direpainted.<code>EditorLoop</code> when the Profiler window is repainted. </p> 
+       <p><a name="full-names-setting"></a></p> 
+       <h3>Tampilkan Metode Scripting Penuh Nama Pengaturan</h3> 
+       <p>Selain itu, dalam setiap pandangan, Anda dapat memilih menu <strong>More Items</strong> (Perusahaan) dan mengaktifkan <strong>Show Full Scripting Method Names</strong>, yang kemudian menampilkan nama yang sepenuhnya berkualitas untuk semua metode scripting (<code>Assembly::Class::MethodName</code>).</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/profiler-cpu-full-scripting-methods.png" alt="A: Scripting methods in the Hierarchy view and Timeline view without Show Full Scripting Method Names enabled<br/> B: Scripting methods in the Hierarchy view and Timeline view with Show Full Scripting Method Names enabled"> 
+        <figcaption>
+          Sitemap Metode Scripting dalam pandangan Hierarchy dan pandangan Timeline tanpa 
+         <strong>A:</strong> mengaktifkan metode Scripting 
+         <strong>Show Full Scripting Method Names</strong> enabled 
+         <br> dalam tampilan Hierarchy dan pandangan Timeline dengan 
+         <strong>B:</strong> diaktifkan 
+         <strong>Show Full Scripting Method Names</strong> enabled 
+        </figcaption> 
+       </figure> 
+       <p><a name="timeline"></a></p> 
+       <h2>Timeline view</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/profiler-cpu-timeline-view.png" alt="CPU Usage Profiler module with the Timeline view"> 
+        <figcaption>
+          Login Penggunaan modul Profiler dengan tampilan Timeline 
+        </figcaption> 
+       </figure> 
+       <p>Tampilan Timeline adalah tampilan default untuk modul Profiler Penggunaan CPU. Ini berisi ikhtisar di mana waktu dihabiskan dalam aplikasi Anda dan bagaimana waktu yang berhubungan satu sama lain.</p> 
+       <p>Tampilan Timeline menampilkan data profil dari semua benang di bagian mereka sendiri dan sepanjang sumbu waktu yang sama, tidak seperti pandangan Hierarchy. Pandangan Hierarchy hanya menampilkan data profil satu benang pada waktu, defaulting ke benang utama. Juga, pandangan ini hanya menunjukkan durasi sampel, sedangkan pandangan Timeline menunjukkan di mana kali setiap sampel terjadi.</p> 
+       <p>Anda dapat menggunakan tampilan Timeline untuk melihat bagaimana aktivitas pada benang yang berbeda berkorelasi satu sama lain dalam eksekusi paralel mereka. Anda dapat melihat berapa banyak atau sedikit Anda menggunakan benang yang berbeda, seperti benang pekerja <a href="JobSystem.html">Sistem Pekerjaan</a>, bagaimana bekerja pada benang diqueued up, dan jika benang apa pun yang disengaja (kuda sampel) atau menunggu benang lain atau pekerjaan untuk menyelesaikan (Karena sampel x).</p> 
+       <h3>Navigasi dan memilih item</h3> 
+       <p>Untuk memperbesar di daerah sumbu waktu, gunakan roda gulir pada mouse Anda, atau tekan dan menahan kunci Alt saat Anda menyeret dengan tombol mouse kanan menekan. Anda juga dapat menggunakan ujung gulir horisontal untuk memperbesar. Tekan tombol <strong>A</strong> pada keyboard Anda untuk mengatur ulang zoom sehingga seluruh waktu bingkai terlihat.</p> 
+       <p>Setiap kali Anda melihat panah putih di bagian bawah benang, Anda dapat mengkliknya untuk membuka benang untuk menunjukkan semua garis, atau klik lagi untuk menunjukkan hanya yang teratas. Anda juga dapat menyeret garis yang memisahkan benang untuk menyesuaikan berapa banyak garis yang dapat Anda lihat. Klik dua baris mengatur ketinggian bagian benang ke kedalaman maksimum tumpukan panggilan. Untuk memanci tampilan, tekan tombol mouse tengah, atau tahan kunci Alt (Kunci umum pada macOS) dan tekan tombol mouse kiri.</p> 
+       <p>Untuk runtuh dan memperluas kelompok benang, klik pada panah lipat di sebelah nama benang di sebelah kiri jauh dari pandangan.</p> 
+       <p>Untuk melihat kontribusi item pada grafik CPU, pilih dalam pane yang lebih rendah. Profiler menyoroti kontribusinya, dan mengurangi sisa grafik. Untuk memilih item, klik di tempat lain dalam tampilan. Tekan tombol <strong>F</strong> untuk memfokuskan sampel saat ini yang Anda pilih, atau untuk menunjukkan tingkat zoom default jika Anda telah memilih apa-apa.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/profiler-cpu-selected-module.png" alt="CPU Usage module in Timeline view, with a selected item"> 
+        <figcaption>
+          Login Modul penggunaan dalam tampilan Timeline, dengan item yang dipilih 
+        </figcaption> 
+       </figure> 
+       <p>Dalam gambar di atas, tooltip pada sampel yang dipilih memberikan rincian lebih lanjut, seperti jumlah instance dan total waktu sampel ini di semua benang. Anda dapat memilih teks di tooltip dan menyalinnya serta menggunakan tombol untuk berinteraksi dengan sampel lebih lanjut:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Operation</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Copy</strong></td> 
+          <td style="text-align:left;">Salin tumpukan panggilan dan seluruh konten tooltip ke clipboard Anda.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Show</strong></td> 
+          <td style="text-align:left;">Pilih dropdown ini untuk memilih dari opsi berikut:</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>Hierarchy</em></td> 
+          <td style="text-align:left;">Beralih ke sampel ini dalam tampilan <a href="#hierarchy">Hierarchy</a> view</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>Raw Hierarchy</em></td> 
+          <td style="text-align:left;">Beralih ke sampel ini dalam tampilan <a href="#hierarchy">Raw Hierarchy</a> view</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>Detail Lengkap untuk Stack Panggilan</em></td> 
+          <td style="text-align:left;">Unity catatan panggilan tumpukan sebagai daftar metode pointer alamat, yang digunakan untuk menampilkan nama metode, path file, dan nomor baris tumpukan. Setiap kali hanya alamat pointer hadir, Unity mengabaikannya untuk menghemat ruang layar untuk item yang dapat ditindaklanjuti yang memiliki informasi lebih lanjut yang tersedia. Aktifkan properti ini untuk melihat daftar lengkap alamat pointer metode dari tumpukan panggilan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><em>Stack Sampel Terpilih</em></td> 
+          <td style="text-align:left;">Lihat rincian tumpukan sampel. Unity membuka informasi ini di jendela terpisah. Anda kemudian dapat menyalin informasi tumpukan sampel ke clipboard Anda.<br><br> Tumpukan sampel berbeda dari tumpukan panggilan metode karena Unity tidak mengikat setiap sampel ke metode tertentu, atau mencatat setiap panggilan sebagai sampel. Jika Anda memilih sampel dalam bingkai yang berbeda dan tidak ada sampel dengan tumpukan sampel yang sama dalam bingkai yang ditampilkan, jendela ini menunjukkan tumpukan sampel dari seleksi asli, serta pemilihan perkiraan untuk bingkai ini.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Login Sampel Alloc muncul berwarna merah-magenta, dan menunjukkan ukuran alokasi.</p> 
+       <p>Untuk menunjukkan tumpukan panggilan yang dikelola di tooltip, arahkan ke <span class="tooltip"><strong>toolbar</strong><span class="tooltiptext">Se baris tombol dan kontrol dasar di bagian atas Editor Unity yang memungkinkan Anda untuk berinteraksi dengan Editor dengan berbagai cara (misalnya scaling, terjemahan). <a class="tooltipMoreInfoLink" href="Toolbar.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Toolbar">Glossary</a></span></span></span> jendela Profiler, dan pilih tombol Call Stacks. Anda harus mengaktifkan properti ini sebelum profil bingkai untuk menampilkan tumpukan panggilan untuk bingkai. Untuk informasi lebih lanjut, lihat bagian pada <a href="#call-stacks">call stacks</a>.</p> 
+       <p><a name="flow-events"></a></p> 
+       <h3>Flow Events</h3> 
+       <p>Untuk membantu Anda memvisualisasikan bagaimana jadwal kerja di benang, Anda dapat menggunakan pengaturan <strong>Flow Events</strong>. Pengaturan ini menampilkan hubungan antara sistem, pekerjaan dan benang. Untuk mengaktifkan pengaturan ini, pilih menu <strong>More</strong> (Perusahaan) di kanan atas pane tampilan Timeline, dan kemudian pilih <strong>Show Flow Events</strong>.</p> 
+       <p>Ketika Anda mengaktifkan pengaturan ini, Profiler menambahkan penanda acara putih ke <span class="tooltip"><strong>Profiler samples</strong><span class="tooltiptext">Satu set data yang terkait dengan penanda Profiler, bahwa Profiler telah mencatat dan dikumpulkan.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profilersample">Glossary</a></span></span></span> yang menjadwalkan pekerjaan, atau menunggu pekerjaan dijadwalkan untuk menyelesaikan. Ini juga mengeras sampel yang tidak terkait sehingga Anda dapat lebih mudah memvisualisasikan sampel yang Anda pilih.</p> 
+       <p>Ada tiga jenis panah Profiler menambahkan sampel:</p> 
+       <ul> 
+        <li>Turun panah: Menunjukkan awal aliran, dan bahwa sampel ini dijadwalkan beberapa pekerjaan.</li> 
+        <li>panah kanan: Menunjukkan item berikutnya dalam aliran, dan bahwa sampel yang berbeda dijadwalkan ini.</li> 
+        <li>panah atas: Menunjukkan akhir aliran, dan bahwa pekerjaan berakhir atau disinkronkan pada sampel ini.</li> 
+       </ul> 
+       <p>Ketika Anda memilih sampel, Profiler menghubungkan penanda acara aliran yang relevan bersama dengan garis. Garis yang lebih tebal menyoroti garis aliran tertentu yang Anda pilih. Misalnya, jika sampel <code>begin</code> poin untuk dua sampel <code>next</code> lainnya, ketika Anda mengklik salah satu sampel <code>next</code>, Profiler menarik garis yang lebih tebal untuk itu.</p> 
+       <p>Tampilan ini berguna untuk menemukan aliran pelaksanaan kode Anda, pekerjaan apa yang menunggu untuk menyelesaikan, dan membantu Anda mengungkap ketergantungan kode Anda dengan cara visual.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/profiler-flow-events.png" alt="The Timeline CPU Profiler view with Flow Events enabled and a sample selected."> 
+        <figcaption>
+          CPU di Timeline Tampilan profiler dengan Peristiwa Aliran diaktifkan dan sampel yang dipilih. 
+        </figcaption> 
+       </figure> 
+       <p><a name="hierarchy"></a></p> 
+       <h2>Tampilan Hierarchy dan Raw</h2> 
+       <p>Ketika Anda beralih ke tampilan <strong>Hierarchy</strong> atau <strong>Raw Hierarchy</strong>, pilihan Anda membawa lebih, selama sampel pada benang utama. Jika Anda tidak dapat segera menemukan pilihan Anda, tekan tombol F untuk memfokuskannya.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/profiler-cpu-hierarchy-view.png" alt="The CPU Usage Profiler module with the Hierarchy view"> 
+        <figcaption>
+          CPU di CPU Penggunaan modul Profiler dengan tampilan Hierarchy 
+        </figcaption> 
+       </figure> 
+       <p>Daftar pandangan <strong>Hierarchy</strong> semua sampel yang Anda miliki diprofilkan dan kelompok mereka bersama dengan tumpukan panggilan bersama mereka dan hierarki dari ProfilerMarkers. Tampilan <strong>Raw Hierarchy</strong> tidak ada sampel kelompok bersama-sama, yang membuatnya ideal untuk mencari sampel pada tingkat granular. Anda juga dapat menggunakan dropdown <strong>Thread</strong> untuk memilih benang tertentu, seperti Thread Utama atau Thread Render untuk memeriksa pandangan ini.</p> 
+       <p>Secara default, semua sampel EditorOnly runtuh dalam pandangan ini. Sampel editorOnly adalah sampel di Loop Pemain yang hanya terjadi karena pemeriksaan keamanan editor-only. Ketika sampel runtuh, GC mereka. Nilai Alloc tidak berkontribusi pada GC. Nilai Alloc sampel enclosing mereka. Untuk menampilkan sampel ini, pilih menu <strong>More Items</strong> (Perusahaan) di kanan atas pane rincian, dan kemudian menonaktifkan pengaturan <strong>Collapse EditorOnly Samples</strong>. Untuk informasi lebih lanjut, lihat bagian <a href="#editor-only">Editor hanya sampel</a> dokumentasi ini.</p> 
+       <p>Kedua pandangan menampilkan informasi rinci berikut untuk setiap item di Hierarchy, di samping setiap baris:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Total</strong></td> 
+          <td style="text-align:left;">Jumlah total waktu Unity yang dihabiskan pada fungsi tertentu, sebagai persentase.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Self</strong></td> 
+          <td style="text-align:left;">Jumlah total waktu Unity dihabiskan pada fungsi tertentu sebagai persentase, termasuk waktu Unity menghabiskan memanggil sub-fungsi. <br> <br> Misalnya, di tangkapan layar, 16.7% dari waktu yang dihabiskan dalam fungsi <code>Camera.Render</code>. Ini karena panggilan banyak fungsi menggambar dan penanaman. Namun, ketika Anda mengecualikan fungsi panggilan, hanya 0,2% dari waktu yang dihabiskan pada fungsi <code>Camera.Render</code> itu sendiri.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Calls</strong></td> 
+          <td style="text-align:left;">Jumlah panggilan yang dibuat untuk fungsi ini dalam bingkai ini. Pada <strong>Raw Hierarchy</strong> melihat nilai-nilai di kolom ini selalu 1 karena Profiler tidak menggabungkan hierarki sampel.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>GC Alloc</strong></td> 
+          <td style="text-align:left;">Berapa banyak scripting heap memori Unity telah dialokasikan dalam bingkai saat ini. <a href="performance-garbage-collector.html">kolektor sampah</a> mengelola memori skrip. <br> <br> Kapan pun Unity memanggil <code>GC.Collect()</code> atau ada alokasi skriping yang tidak pas dalam ukuran saat ini iaap, pemicu kolektor sampah. Ini menandai semua alokasi yang tidak memiliki referensi lebih untuk mereka dan mengumpulkannya. Proses ini muncul sebagai sampel <strong>GC.Collect</strong> di Profiler. <br> <br> Unity menjalankan kolektor garbage lebih sering karena aplikasi Anda mengalokasikan lebih banyak di heap. Sebagai landasan yang dikelola, dibutuhkan Unity lebih lama untuk menandai dan mengumpulkan memori. Seperti itu, Anda harus menyimpan nilai <strong>GC Alloc</strong> pada nol sementara aplikasi Anda berjalan, untuk mencegah kolektor sampah dari mempengaruhi framerate aplikasi Anda, dan untuk menjaga ukuran heap keseluruhan kecil.<br> <br> Untuk rincian lebih lanjut tentang heap yang berhasil melihat dokumentasi pada <a href="performance-managed-memory.html">Memahami Manajemen Memori Otomatis</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Time ms</strong></td> 
+          <td style="text-align:left;">Jumlah total waktu Unity yang dihabiskan pada fungsi tertentu, dalam mili detik. Jika aplikasi Anda menggunakan rendering <a href="JobSystem.html">Sistem Pekerjaan</a> atau multithreaded, informasi ini mungkin menyesatkan, karena hanya mengandung waktu Unity yang dihabiskan pada benang yang dipilih saat ini. Untuk mengubah benang, pilih dropdown <strong>Thread</strong> di bagian atas pane Hierarchy.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Self ms</strong></td> 
+          <td style="text-align:left;">Jumlah total waktu Unity yang dihabiskan pada fungsi tertentu, dalam mili detik, termasuk waktu Unity menghabiskan memanggil sub-fungsi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Warning</strong></td> 
+          <td style="text-align:left;">Diindikasikan oleh ikon peringatan, tampilan ini berapa kali aplikasi telah memicu peringatan selama bingkai saat ini. Untuk informasi lebih lanjut, lihat bagian <a href="#warnings">Peringatan kinerja</a> dokumentasi ini.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Untuk mendapatkan informasi lebih lanjut tentang di mana panggilan aplikasi Anda dan menggunakan fungsi yang diprofilkan, pilih dropdown <strong>Details</strong> di sudut kanan atas pane rincian modul dan pilih tampilan <strong>Related Data</strong> atau <strong>Calls</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/profiler-related-data.png" alt="Related Data panel"> 
+        <figcaption>
+          Related Data panel 
+        </figcaption> 
+       </figure> 
+       <p>Tampilan <strong>Related Data</strong> menampilkan daftar <code>UnityEngine.Objects</code> yang menggunakan overload <a class="tooltipMoreInfoLink" href="../ScriptReference/Unity.Profiling.ProfilerMarker.Begin.html">Begin()</a> dan dikaitkan dengan sampel Profiler. Beberapa sampel yang laporan Unity memiliki asosiasi ini dibangun, seperti <span class="tooltip"><strong>Camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span>. Sampel render yang terkait dengan Kamera GameObject yang melakukan rendering. Unity melaporkan objek ini melalui ID instance mereka dan menyelesaikannya ke nama di jendela Profiler, jika Anda profil di Editor.</p> 
+       <p>Ketika Anda mengklik salah satu objek ini, Unity mencoba untuk menemukan objek melalui hierarki <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> dan <a href="../ScriptReference/EditorGUIUtility.PingObject.html">ping</a> itu. Karena asosiasi menggunakan ID instance, pinging hanya bekerja ketika Anda mengakses aplikasi Anda di Editor, dan selama objek masih ada.</p> 
+       <p>Untuk sampel <code>GC.Alloc</code>, pandangan ini menampilkan daftar item <code>N/A</code>, satu untuk setiap alokasi yang terjadi pada tingkat hirarki ini, dengan ukuran alokasi yang tercantum dalam GC. kolom Alloc. Jika Anda profil aplikasi Anda dengan pengaturan <span class="tooltip"><strong>Call Stacks</strong><span class="tooltiptext">Daftar metode yang disebut pada waktu lari, diatur sebagai tumpukan pertama-out terakhir. <br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#callstack">Glossary</a></span></span></span> diaktifkan, ketika Anda memilih sampel <code>GC.Alloc</code> dalam pandangan ini, jendela Profiler menampilkan tumpukan panggilan untuk objek scripting yang dialokasikan yang Anda pilih, bahkan jika Anda tidak mengaktifkan pengaturan Deep Profileing. Untuk informasi lebih lanjut, lihat bagian <a href="#allocation-callstacks">Allocation call stacks</a> dokumentasi ini.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/profiler-show-calls.png" alt="Calls panel"> 
+        <figcaption>
+          Panel panggilan 
+        </figcaption> 
+       </figure> 
+       <p>Tampilan <strong>Calls</strong> menampilkan di mana sampel yang dipilih disebut dari serta fungsi lain yang disebut.</p> 
+       <p><a name="call-stacks"></a></p> 
+       <h2>Call stacks</h2> 
+       <p>memancarkan satu set sampel yang menggunakan Profiler untuk menampilkan dan mengatur informasi profil ke tampilan kronologi dan hirarkis yang berbeda. Setiap sampel yang ditampilkan di jendela Profiler adalah oleh karena itu bagian dari tumpukan sampel.</p> 
+       <p>Tumpukan sampel berbeda dari tumpukan panggilan metode karena Unity tidak mengikat setiap sampel ke metode tertentu, atau mencatat setiap panggilan sebagai sampel. <a href="ProfilerWindow.html#deep-profiling">Profil</a> menambahkan <code>ProfilerMarker</code> untuk setiap panggilan fungsi, tetapi tidak menambahkan kode asli, ditambah rekaman semua sampel ini dilengkapi dengan overhead yang berpotensi tinggi.</p> 
+       <p>Anda dapat mengaktifkan tumpukan panggilan penuh untuk sampel yang <strong>GC.Alloc</strong>, <strong>UnsafeUtility.Malloc</strong>, pemancar <strong>JobHandle.Complete</strong>. Ini berguna jika Anda ingin melacak di mana sampel ini terjadi, tanpa mengaktifkan Deep Profileing dan menemukan overhead yang tinggi. Untuk informasi lebih lanjut tentang penanda ini, lihat dokumentasi di <a href="profiler-markers.html">Penanda Profiler Umum</a>.</p> 
+       <p>Untuk mengaktifkan tumpukan panggilan penuh untuk sampel ini, arahkan ke bilah alat dari jendela Profiler dan mengaktifkan tombol <strong>Call Stacks</strong>. Secara default, ini memungkinkan tumpukan panggilan untuk sampel <strong>GC.Alloc</strong>. Untuk mengaktifkan tumpukan panggilan lainnya, pilih panah dropdown dan aktifkan penanda lain yang ingin Anda lihat tumpukan panggilan untuk.</p> 
+       <p>Anda dapat menggunakan fungsi ini apakah Anda profil di Editor atau pada pemain yang berjalan. Ini hanya berlaku untuk bingkai profil Anda setelah Anda mengubah opsi ini.</p> 
+       <p>Sebagai contoh, setiap skrip alokasi muncul sebagai GC. Alloc sampel dalam pandangan <strong>Hierarchy</strong> dan pandangan <strong>Timeline</strong>. Dalam pandangan Timeline, itu berwarna cerah magenta. Untuk melihat tumpukan panggilan, pilih modul Profiler CPU dan kemudian pilih GC. Sampel Alloc dalam tampilan Timeline. Tumpukan panggilan muncul di sorotan seleksi.</p> 
+       <p>Untuk menyalin tumpukan panggilan, pilih tombol <strong>Copy</strong> di tooltip. Anda juga dapat membuka file kode yang relevan dari tampilan ini jika path file disorot sebagai tautan biru. Klik pada tautan dan file terbuka di IDE default Anda. Login Informasi tumpukan panggilan tidak mengandung nomor garis yang tepat dalam metode itu tetapi hanya garis pada awal metode itu.<strong>Note:</strong> The call stack information does not contain the exact line number within that method but just the line at the beginning of that method.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/profiler-cpu-heirarchy-callstack.png" alt="Profiler window in Timeline view with GC.Alloc sample selected (top), and with the same sample selected in Hierarchy view."> 
+        <figcaption>
+          Jendela profiler dalam pandangan Timeline dengan GC. Sampel Alloc dipilih (top), dan dengan sampel yang sama yang dipilih dalam tampilan Hierarchy. 
+        </figcaption> 
+       </figure> 
+       <p>Anda juga dapat menggunakan dropdown <strong>Show</strong> untuk melihat GC. tumpukan sampel Alloc, rincian lengkapnya, atau beralih untuk melihatnya dalam tampilan <strong>Hierarchy</strong> atau <strong>Raw Hierarchy</strong>.</p> 
+       <p>Untuk melihat rincian tumpukan panggilan penuh, sementara dalam tampilan Hierarchy atau Raw Hierarchy, set pandangan <strong>Details</strong> ke <strong>Related Data</strong>. Tampilan ini mencantumkan metadata yang terkait dengan sampel ini, yang mungkin mencakup UnityEngine. Objek yang terkait. Untuk setiap entri metadata yang tidak terkait dengan UnityEngine. Objek, nama muncul sebagai <strong>N/A</strong> di panel ini. Ketika Anda memilih entri N / A, Profiler menampilkan data meta, termasuk tumpukan panggilan di bagian bawah dari tampilan detail.</p> 
+       <p>Untuk informasi lebih lanjut tentang alokasi yang dikelola, lihat dokumentasi di <a href="performance-managed-memory.html">Memahami Manajemen Memori Otomatis</a>.</p> 
+       <p><a name="samples"></a></p> 
+       <h2>Common markers</h2> 
+       <p>Kode Unity di instrumentasi dengan sejumlah besar <span class="tooltip"><strong>Profiler markers</strong><span class="tooltiptext">Ditempatkan dalam kode untuk menggambarkan acara CPU atau GPU yang kemudian ditampilkan di jendela Unity Profileer. Ditambahkan ke kode Unity secara default, atau Anda dapat menggunakan untuk menambahkan penanda kustom Anda sendiri. <a href="profiler-markers.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profilermarker">Glossary</a></span></span></span> yang memberi Anda wawasan tentang apa yang memakan waktu dalam aplikasi Anda. Untuk daftar lengkap penanda paling umum Anda mungkin melihat data profil Anda, lihat dokumentasi di <a href="profiler-markers.html">Penanda Profiler Umum</a>.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="ProfilerAudio.html"></a></span> 
+         <div class="tip">
+           Modul Audio Profiler 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="profiler-file-access-module.html"></a></span> 
+         <div class="tip">
+           File Access Profiler module 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

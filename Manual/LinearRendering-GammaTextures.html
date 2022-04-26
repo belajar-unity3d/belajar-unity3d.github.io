@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Login Tekstur dengan rendering linier</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="graphics-color.html">Color</a></li> 
+         <li><a href="LinearLighting.html">Ruang warna</a></li> 
+         <li>Tekstur Gamma dengan rendering linier</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="LinearRendering-LinearOrGammaWorkflow.html"></a></span> 
+          <div class="tip">
+            Aliran kerja Linear atau gamma 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="LinearRendering-LinearTextures.html"></a></span> 
+          <div class="tip">
+            Bekerja dengan Tekstur linier 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Tekstur Gamma dengan rendering linier</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Editor Unity memungkinkan Anda untuk bekerja dengan ruang warna gamma tradisional serta ruang warna linier. Anda dapat bekerja di ruang warna linier bahkan jika <span class="tooltip"><a class="tooltipMoreInfoLink" href="Textures.html">Textures</a><span class="tooltiptext">Gambar yang digunakan ketika membuat elemen GameObject, Sprite, atau UI. Tekstur sering diterapkan pada permukaan mesh untuk memberikan detail visual. <a href="class-TextureImporter.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#texture">Glossary</a></span></span></span> Anda berada di ruang warna gamma.</p> 
+       <p>Untuk membaca lebih lanjut, lihat dokumentasi tentang:</p> 
+       <ul> 
+        <li> <a href="LinearLighting.html">Gambaran keseluruhan rendering linier</a> untuk informasi latar belakang pada ruang warna linier dan gamma.</li> 
+        <li> <a href="LinearRendering-LinearOrGammaWorkflow.html">Aliran kerja Linear atau gamma</a> untuk informasi tentang memilih untuk bekerja di ruang warna linier atau gamma.</li> 
+        <li> <a href="LinearRendering-LinearTextures.html">Tekstur linier</a> untuk informasi tentang bekerja dengan Tekstur linier.</li> 
+       </ul> 
+       <p>Sitemap Jika Tekstur Anda berada di ruang warna linier, Anda perlu menonaktifkan sampling sRGB. Lihat dokumentasi tentang <strong>Note:</strong> untuk informasi lebih lanjut.<a href="LinearRendering-LinearTextures.html">Tekstur linier</a> for more information.</p> 
+       <p>rendering linier memberikan tampilan yang berbeda pada <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> yang diberikan. Ketika Anda telah memberi wewenang sebuah proyek untuk melihat baik ketika rendering di ruang gamma, tidak mungkin terlihat bagus ketika Anda berubah menjadi rendering linier. Karena ini, jika Anda pindah ke rendering linier dari rendering gamma itu dapat mengambil beberapa waktu untuk mengubah proyek sehingga terlihat bagus seperti sebelumnya. Namun, sakelar akhirnya memungkinkan rendering yang lebih konsisten dan realistis dan sehingga mungkin layak waktu yang dihabiskan di dalamnya. Anda cenderung memiliki tekstur, bahan dan lampu.</p> 
+       <h2>Lightmapping</h2> 
+       <p>Perhitungan pencahayaan di <span class="tooltip"><strong>lightmapper</strong><span class="tooltiptext">Alat dalam Unity yang bakes lightmap sesuai dengan pengaturan lampu dan geometri di tempat kejadian Anda. <a class="tooltipMoreInfoLink" href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Lightmapper">Glossary</a></span></span></span> selalu dilakukan di ruang linier (lihat dokumentasi pada <a href="lighting-window.html">jendela pencahayaan</a> untuk informasi lebih lanjut). Lightmaps selalu disimpan di ruang gamma. Ini berarti bahwa tekstur lightmap identik tidak peduli apakah Anda berada di ruang warna gamma atau linier.</p> 
+       <p>Ketika Anda berada di ruang warna linier, sampel tekstur diubah dari gamma ke ruang linier saat pengambilan tekstur. Ketika Anda berada di ruang warna gamma, tidak ada konversi yang diperlukan. Oleh karena itu, ketika Anda mengubah pengaturan ruang warna, Anda harus membake lightmaps: Ini terjadi secara otomatis ketika pencahayaan Unity diatur ke bake otomatis (yang merupakan default).</p> 
+       <h3>Importing lightmaps</h3> 
+       <p>Data dalam file Lightmap EXR yang dibuat oleh Unity berada di ruang linier. Ini akan dikonversi ke ruang gamma selama impor. Ketika membawa peta cahaya dari lightmapper eksternal, menandai peta cahaya sebagai <strong>Texture Type</strong>: <span class="tooltip"><strong>Lightmap</strong><span class="tooltiptext">Tekstur pra-render yang mengandung efek sumber cahaya pada objek statis di tempat kejadian. Lightmaps dilalui atas geometri adegan untuk menciptakan efek pencahayaan. <a class="tooltipMoreInfoLink" href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Lightmap">Glossary</a></span></span></span> di <a href="class-TextureImporter.html">Tekstur Importer</a>. Pengaturan ini memastikan sampling sRGB dilewati pada impor.</p> 
+       <h2>Platform didukung linier</h2> 
+       <p>rendering linier tidak didukung pada semua platform. Target build yang mendukung fitur ini adalah:</p> 
+       <ul> 
+        <li>Windows, Mac OS X dan Linux (Standalone)</li> 
+        <li>Android</li> 
+        <li>iOS</li> 
+        <li>WebGL</li> 
+       </ul> 
+       <p>Tidak ada fallback ke gamma ketika rendering linier tidak didukung oleh perangkat. Dalam situasi ini, pemain berhenti. Anda dapat memeriksa ruang warna aktif dari skrip dengan melihat <a href="../ScriptReference/QualitySettings-activeColorSpace.html">KualitasPengaturan.activeColorSpace</a>.</p> 
+       <p>Di Android, rendering linier membutuhkan setidaknya OpenGL ES 3.0 grafis API dan Android 4.3.</p> 
+       <p>Di iOS, rendering linier memerlukan API grafis Logam.</p> 
+       <p>Pada <span class="tooltip"><strong>WebGL</strong><span class="tooltiptext">Login API yang membuat grafis 2D dan 3D di browser web. Opsi build Unity WebGL memungkinkan Unity untuk mempublikasikan konten sebagai program JavaScript yang menggunakan teknologi HTML5 dan WebGL rendering API untuk menjalankan konten Unity di browser web. <a class="tooltipMoreInfoLink" href="webgl-gettingstarted.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#WebGL">Glossary</a></span></span></span>, rendering linier membutuhkan setidaknya WebGL 2.0 grafis API.</p> 
+       <p>Sampai persyaratan minimum puas, Editor mencegah Anda membangun Pemain dan menunjukkan pemberitahuan. Ini adalah untuk menghindari permainan yang akan membuat salah di perangkat pengguna yang digunakan untuk toko digital.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LinearRendering-UnityIncorrectRendering.png" alt="The Unity Editor prevents building a Player for games that would render incorrectly"> 
+        <figcaption>
+          Editor Unity mencegah membangun Pemain untuk permainan yang akan membuat benar 
+        </figcaption> 
+       </figure> 
+       <h2>Ruang warna linier dan HDR</h2> 
+       <p>Saat menggunakan <span class="tooltip"><strong>HDR</strong><span class="tooltiptext">kisaran dinamis tinggi<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#HDR">Glossary</a></span></span></span>, rendering dilakukan di ruang linier menjadi penyangga titik mengambang. Penyangga ini memiliki ketepatan yang cukup untuk tidak memerlukan konversi ke dan dari ruang gamma ketika penyangga diakses. Ini berarti bahwa ketika rendering dalam mode linier, framebuffers Anda menggunakan menyimpan warna di ruang linier. Oleh karena itu, semua campuran dan efek proses pasca secara implicit dilakukan di ruang linier. Ketika backbuffer terakhir ditulis ke, koreksi gamma diterapkan.</p> 
+       <h2>Ruang warna linier dan non-HDR</h2> 
+       <p>Ketika ruang warna linier diaktifkan dan HDR tidak diaktifkan, jenis bingkaibuffer khusus digunakan yang mendukung membaca sRGB dan menulis sRGB (convert dari gamma ke linier ketika membaca, mengkonversi dari linear ke gamma ketika menulis). Ketika bingkaibuffer ini digunakan untuk blending atau terikat sebagai Tekstur, nilai dikonversi ke ruang linier sebelum digunakan. Ketika penyangga ini ditulis, nilai yang ditulis diubah dari ruang linear ke ruang gamma. Jika Anda rendering dalam mode linier dan mode non-HDR, semua efek pasca-proses memiliki sumber mereka dan penyangga target yang dibuat dengan membaca sRGB dan menulis diaktifkan sehingga campuran <span class="tooltip"><strong>post-processing</strong><span class="tooltiptext">Proses yang meningkatkan visual produk dengan menerapkan filter dan efek sebelum gambar muncul di layar. Anda dapat menggunakan efek pasca proses untuk mensimulasikan kamera fisik dan sifat film, misalnya Bloom dan Kedalaman Lapangan. <a class="tooltipMoreInfoLink" href="PostProcessingOverview.html">More info</a> <span class="search-words">pemrosesan pos, pasca proses, pasca proses</span><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#post-processing">Glossary</a></span></span></span> dan pasca-proses terjadi di ruang linier.</p> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2017–06–19 Login</span></p></li> 
+        <li><p><span class="page-history">rendering linier untuk WebGL ditambahkan dalam <span class="search-words">NewIn20172</span></span></p></li> 
+       </ul> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="LinearRendering-LinearOrGammaWorkflow.html"></a></span> 
+         <div class="tip">
+           Aliran kerja Linear atau gamma 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="LinearRendering-LinearTextures.html"></a></span> 
+         <div class="tip">
+           Bekerja dengan Tekstur linier 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

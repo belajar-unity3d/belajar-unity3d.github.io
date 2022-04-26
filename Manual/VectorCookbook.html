@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Kelas Penting - Vektor</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="core" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Unity User Manual 2022.1 (beta)</a></li> 
+         <li><a href="ScriptingSection.html">Scripting</a></li> 
+         <li><a href="ScriptingImportantClasses.html">Kelas Penting</a></li> 
+         <li>Kelas Penting - Vektor</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="ScriptingTransform.html"></a></span> 
+          <div class="tip">
+            Kelas Penting - Transform 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="class-Quaternion.html"></a></span> 
+          <div class="tip">
+            Kelas Penting - Quaternion 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Kelas Penting - Vektor</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Vektor adalah konsep matematika mendasar yang memungkinkan Anda untuk menggambarkan arah dan kebesaran. Dalam permainan dan aplikasi, vektor sering digunakan untuk menggambarkan beberapa sifat mendasar seperti posisi karakter, kecepatan sesuatu bergerak, atau jarak antara dua benda.</p> 
+       <p>Vektor aritmatiketik mendasar untuk banyak aspek pemrograman komputer seperti grafis, fisika dan animasi, dan berguna untuk memahaminya dalam kedalaman untuk mendapatkan yang paling dari Unity.</p> 
+       <p>Vektor dapat diungkapkan dalam beberapa dimensi, dan Unity menyediakan kelas vektor2, vektor3 dan vektor4 untuk bekerja dengan 2D, 3D, dan 4D vektor. Tiga jenis kelas vektor ini semua berbagi banyak fungsi yang sama, seperti kebesaran, sehingga sebagian besar informasi di halaman ini berlaku untuk semua tiga jenis vektor kecuali ditentukan lain.</p> 
+       <p>Halaman ini memberikan gambaran dari kelas vektor dan kegunaan umum mereka ketika scripting dengan mereka. Untuk referensi knalpot dari setiap anggota kelas vektor, lihat halaman referensi skrip untuk <a href="../ScriptReference/Vector2.html">Vektor2</a>, <a href="../ScriptReference/Vector3.html">Vektor3</a> dan <a href="../ScriptReference/Vector4.html">Vektor4</a>.</p> 
+       <h2>Memahami Vektor Arithmetic</h2> 
+       <h3>Addition</h3> 
+       <p>Ketika dua vektor ditambahkan bersama, hasilnya setara dengan mengambil vektor asli sebagai “langkah”, satu setelah yang lain. Perhatikan bahwa urutan dua parameter tidak masalah, karena hasilnya adalah cara yang sama.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/VectorAdd.png" alt=""> 
+       </figure> 
+       <p>Jika vektor pertama diambil sebagai titik di ruang maka yang kedua dapat ditafsirkan sebagai offset atau “jump” dari posisi itu. Misalnya, untuk menemukan titik 5 unit di atas lokasi di tanah, Anda dapat menggunakan perhitungan berikut: -</p> 
+       <pre><code> var pointInAir = pointOnGround + new Vector2(0, 5);
+</code></pre> 
+       <p>Jika vektor mewakili kekuatan maka lebih intuitif untuk memikirkan mereka dalam hal arah dan kebesaran mereka (besaran menunjukkan ukuran kekuatan). Menambahkan dua vektor kekuatan hasil dalam vektor baru setara dengan kombinasi kekuatan. Konsep ini sering berguna ketika menerapkan kekuatan dengan beberapa komponen yang terpisah bertindak sekaligus (misalnya, roket yang didorong maju juga dapat dipengaruhi oleh lintasan).</p> 
+       <p>Meskipun contoh di sini menunjukkan vektor 2D, konsep yang sama berlaku untuk vektor 3D dan 4D.</p> 
+       <h3>Subtraction</h3> 
+       <p>Subtraksi vektor paling sering digunakan untuk mendapatkan arah dan jarak dari satu objek ke yang lain. Perhatikan bahwa urutan dua parameter <strong>does</strong> masalah dengan subtraksi:-</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/VectorSubtract.png" alt=""> 
+       </figure> 
+       <pre><code>// The vector d has the same magnitude as c but points in the opposite direction.
+var c = b - a;
+var d = a - b;
+
+</code></pre> 
+       <p>Seperti dengan angka, menambahkan negatif dari vektor sama dengan mengurangi positif.</p> 
+       <pre><code>// These both give the same result.
+var c = a - b;
+var c = a + -b;
+
+</code></pre> 
+       <p>negatif dari vektor memiliki besaran yang sama dengan garis asli dan poin di sepanjang garis yang sama tetapi pada arah yang berlawanan.</p> 
+       <h2>Arah dan Jarak dari Satu Objek ke Lain</h2> 
+       <p>Jika satu titik di ruang terganggu dari yang lain, maka hasilnya adalah vektor bahwa "titik" dari satu objek ke yang lain:</p> 
+       <pre><code>// Gets a vector that points from the player's position to the target's.
+var heading = target.position - player.position;
+
+</code></pre> 
+       <p>Serta menunjuk ke arah objek target, kebesaran vektor ini sama dengan jarak antara kedua posisi. Anda mungkin perlu vektor "normalisasi" memberikan arah ke target, tetapi dengan jarak tetap (kata untuk mengarahkan proyektil). Anda dapat menormalkan vektor dengan membaginya dengan kebesarannya sendiri:</p> 
+       <pre><code>var distance = heading.magnitude;
+var direction = heading / distance; // This is now the normalized direction.
+</code></pre> 
+       <p>Pendekatan ini lebih disukai untuk menggunakan sifat besar dan dinormalisasi secara terpisah, karena keduanya cukup CPU-hungry (mereka keduanya melibatkan menghitung akar persegi).</p> 
+       <p>Jika Anda hanya perlu menggunakan jarak untuk perbandingan (untuk cek dekat, katakanlah) maka Anda dapat menghindari perhitungan besar sama sekali. Properti sqrMagnudo memberikan persegi nilai besar, dan dihitung seperti kebesaran tetapi tanpa operasi akar persegi waktu. Dari membandingkan kebesaran terhadap jarak yang diketahui, Anda dapat membandingkan kebesaran persegi terhadap jarak persegi:-</p> 
+       <pre><code>if (heading.sqrMagnitude &lt; maxRange * maxRange) {
+    // Target is within range.
+}
+</code></pre> 
+       <p>Ini jauh lebih efisien daripada menggunakan kebesaran sejati dalam perbandingan.</p> 
+       <p>Kadang-kadang, ketika bekerja di 3D, Anda mungkin perlu “pemainan darat” ke target. Misalnya, bayangkan pemain berdiri di tanah yang perlu mendekati target mengambang di udara. Jika Anda mengalihkan posisi pemain dari target maka vektor yang dihasilkan akan menunjuk ke arah target. Ini tidak cocok untuk mengorientasikan transformasi pemain karena mereka juga akan menunjuk ke atas; apa yang benar-benar diperlukan adalah vektor dari posisi pemain ke posisi di tanah langsung di bawah target. Anda dapat memperoleh ini dengan mengambil hasil dari subtraksi dan mengatur koordinat Y ke nol:-</p> 
+       <pre><code>var heading = target.position - player.position;
+heading.y = 0;  // This is the overground heading.
+</code></pre> 
+       <h2>Multiplikasi dan Divisi Scalar</h2> 
+       <p>Ketika membahas vektor, hal ini umum untuk merujuk pada nomor biasa (misalnya, nilai pelampung) sebagai scalar. Arti dari ini adalah bahwa sebuah scalar hanya memiliki “skala” atau besar di mana vektor memiliki kebesaran dan arah.</p> 
+       <p>Menggandakan vektor dengan hasil scalar dalam vektor yang poin dalam arah yang sama seperti aslinya. Namun, kebesaran vektor baru sama dengan kebesaran asli yang dikalikan oleh nilai scalar.</p> 
+       <p>Demikian juga, pembagian scalar membagi besarnya vektor asli oleh perskalaan.</p> 
+       <p>Operasi ini berguna ketika vektor mewakili gerakan mengimbangi atau kekuatan. Mereka memungkinkan Anda untuk mengubah besarnya vektor tanpa mempengaruhi arahnya.</p> 
+       <p>Ketika setiap vektor dibagi dengan besarnya sendiri, hasilnya adalah vektor dengan besarnya 1, yang dikenal sebagai vektor normal. Jika vektor normal dikalikan dikalikan oleh scalar maka perbesaran hasilnya akan sama dengan nilai scalar. Ini berguna ketika arah gaya konstan tetapi kekuatannya dikontrol (misalnya, kekuatan dari roda mobil selalu mendorong ke depan tetapi daya dikendalikan oleh pengemudi).</p> 
+       <h2>Produk</h2> 
+       <p>Produk titik mengambil dua vektor dan mengembalikan skala. Penskalaan ini sama dengan besarnya dua vektor yang dikalikan bersama-sama dan hasilnya dikalikan oleh kosin sudut antara vektor. Ketika kedua vektor dinormalkan, kosin pada dasarnya menyatakan seberapa jauh vektor pertama meluas ke arah kedua (atau sebaliknya - urutan parameter tidak masalah).</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/DotProduct.png" alt=""> 
+       </figure> 
+       <p>Di bawah ini Anda dapat melihat perbandingan bagaimana vektor berbagai sudut dibandingkan dengan vektor referensi kembali nilai produk titik antara 1 dan -1:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/CosineValues.png" alt=""> 
+       </figure> 
+       <p>Produk dot adalah operasi yang lebih sederhana secara matematika daripada menghitung cosine, sehingga dapat digunakan di tempat Mathf. Fungsi cos atau operasi magnudo vektor dalam beberapa keadaan (tidak melakukan hal yang sama tetapi kadang-kadang efeknya setara). Namun, menghitung fungsi produk titik membutuhkan waktu CPU yang jauh lebih sedikit dan sehingga dapat menjadi optimasi yang berharga.</p> 
+       <p>Produk dot berguna jika Anda ingin menghitung jumlah satu besarnya vektor yang terletak di arah vektor lain.</p> 
+       <p>Misalnya, speedometer mobil biasanya bekerja dengan mengukur kecepatan rotasi roda. Mobil mungkin tidak bergerak langsung ke depan (dapat skidding sideways, misalnya) di mana bagian kasus gerakan tidak akan masuk ke arah mobil menghadap - dan jadi tidak akan diukur oleh speedometer. Pembesaran vektor <span class="tooltip"><strong>rigidbody</strong><span class="tooltiptext">Komponen yang memungkinkan GameObject untuk dipengaruhi oleh gravitasi simulasi dan kekuatan lainnya. <a class="tooltipMoreInfoLink" href="class-Rigidbody.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Rigidbody">Glossary</a></span></span></span>.velocity objek akan memberikan kecepatan ke arah gerakan keseluruhan tetapi untuk mengisolasi kecepatan ke arah depan, Anda harus menggunakan produk dot:</p> 
+       <pre><code>var fwdSpeed = Vector3.Dot(rigidbody.velocity, transform.forward);
+</code></pre> 
+       <p>Secara alami, arah dapat apa pun yang Anda suka tetapi vektor arah harus selalu dinormalisasi untuk perhitungan ini. Tidak hanya adalah hasil yang lebih benar daripada besarnya kecepatan, itu juga menghindari operasi akar persegi lambat yang terlibat dalam menemukan kebesaran.</p> 
+       <h2>Produk Cross</h2> 
+       <p>Produk salib hanya bermakna untuk vektor 3D. Ini mengambil dua vektor 3D sebagai input dan mengembalikan vektor 3D lain sebagai hasilnya.</p> 
+       <p>vektor hasil tegak lurus dengan dua vektor input. Anda dapat menggunakan aturan sekrup tangan yang tepat untuk mengingat arah vektor output dari pemesanan vektor input. Jika Anda dapat menyembuhkan jari Anda dalam urutan vektor input, poin thumb Anda ke arah vektor output. Jika urutan parameter terbalik maka vektor yang dihasilkan akan menunjuk ke arah berlawanan yang tepat tetapi akan memiliki besarsi yang sama.</p> 
+       <p>Kebesaran hasil sama dengan besarnya vektor input yang dikalikan bersama-sama dan kemudian nilai yang dikalikan oleh sinus sudut antara mereka. Beberapa nilai yang berguna dari fungsi sinus ditunjukkan di bawah ini:-</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SineValues.png" alt=""> 
+       </figure> 
+       <p>Produk salib tampaknya rumit karena menggabungkan beberapa potongan informasi yang berguna dalam nilai pengembaliannya. Namun, seperti produk dot, sangat efisien secara matematika dan dapat digunakan untuk mengoptimalkan kode yang akan tergantung pada fungsi transkendental yang lebih lambat seperti sinus dan cosine.</p> 
+       <h2>Mengkomputasikan vektor normal / tegak lurus</h2> 
+       <p>vektor "normal" (yaitu vektor tegak lurus ke pesawat) diperlukan sering selama generasi <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a class="tooltipMoreInfoLink" href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mesh">Glossary</a></span></span></span> dan juga berguna dalam hal jalur dan situasi lainnya. Mengingat tiga poin di pesawat, mengatakan titik sudut segitiga jala, Anda dapat menemukan normal sebagai berikut: - Pilih salah satu dari tiga poin - Mengalihkannya dari masing-masing dari dua poin lain secara terpisah (meningkatkan dalam dua vektor baru, "Side 1" dan "Side 2") - Hitung produk salib dari vektor "Side 1" dan "Side 2" - Hasil produk salib adalah vektor baru yang tegak lurus ke pesawat tiga poin asli berbaring - "normal".</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/CalculateNormal.png" alt=""> 
+       </figure> 
+       <pre><code>Vector3 a;
+Vector3 b;
+Vector3 c;
+
+Vector3 side1 = b - a;
+Vector3 side2 = c - a;
+
+Vector3 normal = Vector3.Cross(side1, side2);
+</code></pre> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/LeftHandRuleDiagram.png" alt=""> 
+       </figure> 
+       <p>“pengaturan tangan kiri” dapat digunakan untuk memutuskan pesanan di mana dua vektor harus dilewatkan ke fungsi produk silang. Seperti yang Anda lihat di sisi atas permukaan (dari mana yang normal akan menunjuk ke luar) vektor pertama harus menyapu sekitar searah jarum jam ke detik:</p> 
+       <p>Hasilnya akan menunjuk ke arah yang berlawanan jika urutan vektor input terbalik.</p> 
+       <p>Untuk jala, vektor normal juga harus dinormalkan. Ini dapat dilakukan dengan properti normal, tetapi ada trik lain yang kadang-kadang berguna. Anda juga dapat menormalkan vektor tegak lurus dengan membaginya dengan kebesarannya:-</p> 
+       <pre><code>float perpLength = perp.magnitude;
+perp /= perpLength;
+</code></pre> 
+       <p>Catatan berguna lainnya adalah bahwa luas segitiga sama dengan perpLength / 2. Ini berguna jika Anda perlu menemukan luas permukaan seluruh mesh atau ingin memilih segitiga secara acak dengan probabilitas berdasarkan daerah kerabat mereka.</p> 
+       <!-- area:core --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="ScriptingTransform.html"></a></span> 
+         <div class="tip">
+           Kelas Penting - Transform 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="class-Quaternion.html"></a></span> 
+         <div class="tip">
+           Kelas Penting - Quaternion 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

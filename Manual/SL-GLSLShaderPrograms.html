@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: GLSL di Unity</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="Shaders.html">Shaders</a></li> 
+         <li><a href="shader-writing.html">Menu Menu</a></li> 
+         <li>GLSL di Unity</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="SL-SamplerStates.html"></a></span> 
+          <div class="tip">
+            Menggunakan state sampler 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="shader-writing-vertex-fragment.html"></a></span> 
+          <div class="tip">
+            Contoh naungan 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>GLSL di Unity</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Juga menulis program <a class="tooltipMoreInfoLink" href="SL-ShaderPrograms.html">HLSL program naungan</a>, Anda juga dapat menulis OpenGL Shading Language mentah (GLSL) <span class="tooltip"><strong>shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> di Unity.</p> 
+       <p>Sitemap Ini tidak dianjurkan atau diperlukan sebagai bagian dari alur kerja normal; Mengomset silang Anda untuk dioptimalkan GLSL ketika diperlukan. Penggunaan GLSL mentah hanya disarankan untuk pengujian, atau untuk mendukung proyek pada platform yang menggunakan GLSL.<strong>Note:</strong> This is not recommended or needed as part of a normal workflow; Unity cross-compiles your HLSL into optimized GLSL when needed. The use of raw GLSL is only recommended for testing, or for supporting projects on platforms that use GLSL.</p> 
+       <h2>GLSL snippets</h2> 
+       <p>GLSL program snippets ditulis antara kata kunci <code>GLSLPROGRAM</code> dan <code>ENDGLSL</code>.</p> 
+       <p>Di GLSL, semua titik masuk fungsi naungan harus disebut <code>main()</code>. Ketika Unity memuat naungan GLSL, itu memuat sumber sekali untuk program simpul, dengan preprocessor <code>VERTEX</code> mendefinisikan, dan sekali lagi untuk program fragmen, dengan preprocessor <code>FRAGMENT</code> mendefinisikan. Jadi cara untuk memisahkan vertex dan bagian program fragmen di snippet GLSL adalah untuk mengelilinginya dengan <code>#ifdef VERTEX .. #endif</code> dan <code>#ifdef FRAGMENT .. #endif</code>. Setiap cuplikan GLSL harus berisi program simpul dan program fragmen.</p> 
+       <p>Standar termasuk file yang cocok untuk warna Cg / HLSL; mereka hanya memiliki ekstensi <code>.glslinc</code>:</p> 
+       <pre><code>UnityCG.glslinc
+</code></pre> 
+       <p>Input naungan Vertex berasal dari variabel GLSL yang telah ditentukan (<code>gl_Vertex</code>, <code>gl_MultiTexCoord0</code>, ...) atau atribut yang ditentukan pengguna. Biasanya hanya vektor tangen membutuhkan atribut yang ditentukan pengguna:</p> 
+       <pre><code>attribute vec4 Tangent;
+</code></pre> 
+       <p>Data dari vertex ke program fragmen dilewatkan melalui variabel <em>varying</em>, misalnya:</p> 
+       <pre><code>varying vec3 lightDir; // vertex shader computes this, fragment shader uses this
+</code></pre> 
+       <h3>Tekstur OES eksternal</h3> 
+       <p>Unity melakukan beberapa preprocessing selama kompilasi Shader; misalnya, fungsi <code>texture2D/texture2DProj</code> dapat diganti menjadi <code>texture/textureProj</code>, berdasarkan API grafis (GlES3, GLCore). Beberapa ekstensi tidak mendukung konvensi baru, paling tidak bisa <a href="https://www.khronos.org/registry/gles/extensions/OES/OES_EGL_image_external.txt"><code>GL_OES_EGL_image_external</code></a>.</p> 
+       <p>Jika Anda ingin sampel tekstur eksternal di naungan GLSL, gunakan panggilan <code>textureExternal/textureProjExternal</code> bukan <code>texture2D/texture2DProj</code>.</p> 
+       <p>Contoh:</p> 
+       <pre><code>gl_FragData[0] = textureExternal(_MainTex, uv);
+</code></pre> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="SL-SamplerStates.html"></a></span> 
+         <div class="tip">
+           Menggunakan state sampler 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="shader-writing-vertex-fragment.html"></a></span> 
+         <div class="tip">
+           Contoh naungan 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

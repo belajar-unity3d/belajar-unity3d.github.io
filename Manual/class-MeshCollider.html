@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Mesh Collider</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="PhysicsSection.html">Physics</a></li> 
+         <li><a href="Physics3DReference.html">Referensi Fisika 3D</a></li> 
+         <li>Mesh Collider</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="class-HingeJoint.html"></a></span> 
+          <div class="tip">
+            Engsel Bersama 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="class-Rigidbody.html"></a></span> 
+          <div class="tip">
+            Rigidbody 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Mesh Collider</h1> 
+       <!--BeginSwitchLink--> 
+       <a href="../ScriptReference/MeshCollider.html" title="Go to MeshCollider page in the Scripting Reference" class="switch-link gray-btn sbtn left">Switch to Scripting</a> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p><strong>Mesh Collider</strong> mengambil <a class="tooltipMoreInfoLink" href="class-Mesh.html">Aset Mesh</a> dan membangun <span class="tooltip"><strong>Collider</strong><span class="tooltiptext">Bentuk tak terlihat yang digunakan untuk menangani tabrakan fisik untuk objek. Seorang sari tidak perlu menjadi bentuk yang sama dengan jala objek - perkiraan kasar sering lebih efisien dan tidak dapat dibedakan dalam gameplay. <a href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Collider">Glossary</a></span></span></span> berdasarkan Mesh itu. Lebih akurat untuk deteksi <span class="tooltip"><strong>collision</strong><span class="tooltiptext">tabrakan terjadi ketika mesin fisika mendeteksi bahwa tabrakan dari dua GameObjects membuat kontak atau tumpang tindih, ketika setidaknya satu memiliki komponen kaku dan bergerak. <a href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Collision">Glossary</a></span></span></span> daripada menggunakan primitif untuk Mesh yang rumit. Mesh Colliders yang ditandai sebagai <strong>Convex</strong> dapat dilipat dengan Collider Mesh lainnya.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Inspector-MeshCollider.png" alt=""> 
+       </figure> 
+       <h2>Properties</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong><em>Property</em></strong></th> 
+          <th style="text-align:left;"><strong><em>Function</em></strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Convex</strong></td> 
+          <td style="text-align:left;">Aktifkan kotak centang untuk membuat Mesh Collider collide dengan Mesh Collider lainnya. <strong>Convex</strong> Mesh Collider terbatas pada 255 segitiga.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Is Trigger</strong></td> 
+          <td style="text-align:left;">Aktifkan kotak centang ini untuk membuat Unity menggunakan Collider ini untuk memicu peristiwa, dan <span class="tooltip"><strong>physics engine</strong><span class="tooltiptext">Sebuah sistem yang mensimulasikan aspek sistem fisik sehingga benda dapat mempercepat dengan benar dan dipengaruhi oleh tabrakan, gravitasi dan kekuatan lainnya. <a class="tooltipMoreInfoLink" href="PhysicsSection.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#PhysicsEngine">Glossary</a></span></span></span> mengabaikannya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Cooking Options</strong></td> 
+          <td style="text-align:left;">Aktifkan atau menonaktifkan opsi <a href="#cooking">Memasak jala</a> yang mempengaruhi bagaimana proses mesin fisika Mesh.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>None</strong></td> 
+          <td style="text-align:left;">Diaktifkan semua <strong>Cooking Options</strong> yang tercantum di bawah ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Everything</strong></td> 
+          <td style="text-align:left;">Aktifkan semua <strong>Cooking Options</strong> yang tercantum di bawah ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Cook for Faster Simulation</strong></td> 
+          <td style="text-align:left;">Membuat mesin fisika masak Mesh untuk simulasi lebih cepat. Ketika diaktifkan, ini menjalankan beberapa langkah tambahan untuk menjamin Mesh yang dihasilkan optimal untuk kinerja berjalan-waktu. Ini mempengaruhi kinerja pertanyaan fisika dan generasi kontak. Ketika pengaturan ini dinonaktifkan, mesin fisika menggunakan waktu memasak yang lebih cepat, dan menghasilkan hasil secepat mungkin. Akibatnya, Collider Mesh yang dimasak mungkin tidak optimal.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Enable Mesh Cleaning</strong></td> 
+          <td style="text-align:left;">Membuat mesin fisika bersih Mesh. Ketika diaktifkan, proses memasak mencoba untuk menghilangkan <a class="tooltipMoreInfoLink" href="https://en.wikipedia.org/wiki/Degeneracy_(mathematics)#Triangle">degenerasi segitiga</a> dari Mesh, serta artefak geometris lainnya. Hasil ini dalam Mesh yang lebih cocok untuk digunakan dalam <span class="tooltip"><strong>collision detection</strong><span class="tooltiptext">Proses otomatis yang dilakukan oleh Unity yang menentukan apakah yang bergerak GameObject dengan komponen kaku dan collider telah masuk ke kontak dengan sari lainnya. <a href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#CollisionDetection">Glossary</a></span></span></span> dan cenderung menghasilkan poin hit yang lebih akurat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Weld Colocated Vertices</strong></td> 
+          <td style="text-align:left;">Membuat mesin fisika menghilangkan simpul yang sama di Mesh. Ketika diaktifkan, mesin fisika menggabungkan simpul yang memiliki posisi yang sama. Ini penting untuk umpan balik tabrakan yang terjadi pada waktu berjalan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Use Fast Midphase</strong></td> 
+          <td style="text-align:left;">Membuat mesin fisika menggunakan struktur percepatan fase menengah tercepat dan algoritma yang tersedia untuk platform output Anda. Ketika Anda mengaktifkan opsi ini, mesin fisika menggunakan algoritma yang lebih cepat yang tidak memerlukan R-Trees untuk akses spasial. Jika Anda mengalami masalah fase pertengahan pada runtime pada beberapa platform, Anda masih dapat menonaktifkan opsi ini untuk menggunakan algoritma mid-phase legacy yang lebih lambat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><span class="tooltip"><strong>Material</strong><span class="tooltiptext">Aset yang menentukan bagaimana permukaan harus diberikan. <a class="tooltipMoreInfoLink" href="class-Material.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Material">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Referensi ke <a href="class-PhysicMaterial.html">Bahan Fisika</a> yang menentukan bagaimana Collider ini berinteraksi dengan orang lain.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a class="tooltipMoreInfoLink" href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mesh">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Referensi ke Mesh untuk digunakan untuk tabrakan.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Details</h2> 
+       <p>The Mesh Collider membangun representasi tabrakan dari <a class="tooltipMoreInfoLink" href="class-Mesh.html">Mesh</a> melekat pada <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span>, dan membaca sifat-sifat yang melekat <a href="class-Transform.html">Transform</a> untuk mengatur posisi dan skala dengan benar. Manfaat ini adalah bahwa Anda dapat membuat bentuk Collider persis sama dengan bentuk Mesh yang terlihat untuk GameObject, yang menciptakan tabrakan yang lebih tepat dan otentik. Namun, ketepatan ini datang dengan overhead pemrosesan yang lebih tinggi daripada tabrakan yang melibatkan tabrakan primitif (seperti Sphere, Box, dan Kapsul), sehingga yang terbaik untuk menggunakan Mesh Colliders sparingly.</p> 
+       <p>Wajah di jala tabrakan adalah satu sisi. Ini berarti GameObjects dapat melewati mereka dari satu arah, tetapi tabrakan dengan mereka dari yang lain.</p> 
+       <p>Rincian tentang algoritma dan struktur data yang mendasari digunakan oleh sari jala dapat ditemukan pada <a href="https://docs.nvidia.com/gameworks/content/gameworkslibrary/physx/guide/Manual/Geometry.html">Login Dokumentasi X</a>.</p> 
+       <p><a name="cooking"></a></p> 
+       <h2>Memasak jala</h2> 
+       <p>Mesh memasak mengubah Mesh normal menjadi Mesh yang dapat Anda gunakan di mesin fisika. Memasak membangun struktur pencarian spasial untuk pertanyaan fisika, seperti <a href="../ScriptReference/Physics.Raycast.html">Fisika.Raycast</a>, serta struktur pendukung untuk generasi kontak. Unity memasak semua Mesh sebelum menggunakannya dalam deteksi tabrakan. Ini dapat terjadi pada waktu impor (<strong>Import Settings &gt; Model &gt; Generate Colliders</strong>) atau pada waktu yang berjalan.</p> 
+       <p>Ketika Anda menghasilkan Mesh pada waktu lari (misalnya, untuk permukaan prosedural), berguna untuk mengatur <strong>Cooking Options</strong> untuk menghasilkan hasil yang lebih cepat, dan menonaktifkan langkah pembersihan data tambahan pembersihan. Kelemahan adalah bahwa Anda perlu menghasilkan tidak ada segitiga degenerasi dan tidak ada simpul yang dialokasikan, tetapi karya memasak lebih cepat.</p> 
+       <p>Jika Anda menonaktifkan <strong>Enable Mesh Cleaning</strong> atau <strong>Weld Colocated Vertices</strong>, Anda perlu memastikan Anda tidak menggunakan data bahwa algoritma tersebut akan menyaring. Pastikan Anda tidak memiliki simpul yang dialokasikan jika Anda telah dinonaktifkan <strong>Weld Colocated Vertices</strong>, dan ketika Anda mengaktifkan <strong>Enable Mesh Cleaning</strong>, pastikan tidak ada segitiga kecil yang daerah dekat dengan nol, tidak ada segitiga tipis, dan tidak ada segitiga besar yang daerah dekat dengan ketidakpastian.</p> 
+       <p> <strong>Note</strong>: Ketika Anda mengatur <strong>Cooking Options</strong> untuk nilai lain dari pengaturan default, itu berarti Mesh Collider harus menggunakan Mesh yang memiliki nilai <a href="../ScriptReference/Mesh-isReadable.html">isReadable</a> <code>true</code>.</p> 
+       <h2>Limitations</h2> 
+       <p>Ada keterbatasan ketika menggunakan Mesh Collider:</p> 
+       <p>GameObjects yang memiliki komponen <span class="tooltip"><strong>Rigidbody</strong><span class="tooltiptext">Komponen yang memungkinkan GameObject untuk dipengaruhi oleh gravitasi simulasi dan kekuatan lainnya. <a class="tooltipMoreInfoLink" href="class-Rigidbody.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Rigidbody">Glossary</a></span></span></span> hanya mendukung Collider Mesh yang memiliki opsi <strong>Convex</strong> diaktifkan: mesin fisika hanya dapat mensimulasikan tabrakan mesh cembung.</p> 
+       <p>Untuk Collider Mesh untuk bekerja dengan benar, Mesh harus membaca / menulis diaktifkan dalam keadaan ini:</p> 
+       <ul> 
+        <li>The Mesh Collider's Transform memiliki scaling negatif (misalnya, (–1, 1, 1)) dan Mesh cembung.</li> 
+        <li>Perubahan Mesh Collider adalah skewed atau sheared (misalnya, ketika transformasi yang diputar memiliki transformasi induk berskala).</li> 
+        <li>Bendera <strong>Cooking Options</strong> Mesh Collider diatur ke nilai apapun selain default.</li> 
+       </ul> 
+       <p>Anda tidak boleh memodifikasi geometri mesh yang digunakan untuk tabrakan karena mesin fisika harus membangun kembali struktur percepatan tabrakan mesh internal setiap kali Anda mengubah jala. Ini menyebabkan overhead kinerja yang substansial. Untuk jala yang perlu tabrakan dan perubahan pada runtime, sering lebih baik untuk memperkirakan bentuk jala dengan tabrakan primitif seperti kapsul, bidang dan kotak.</p> 
+       <p>Sitemap Jika Mesh Collider hanya menggunakan Mesh, Anda dapat menonaktifkan <strong>Optimization tip:</strong> dalam <span class="tooltip"><strong>Normals</strong><span class="tooltiptext">Arah tegak lurus ke permukaan jala, diwakili oleh vektor. Unity menggunakan normal untuk menentukan orientasi objek dan menerapkan pencukur. <a class="tooltipMoreInfoLink" href="VectorCookbook.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Normal">Glossary</a></span></span></span>, karena sistem fisika tidak memerlukannya.<strong>Import Settings</strong>, because the physics system doesn’t need them.</p> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-history">Batasan Mesh Collider yang diperbarui pada 2018.3</span></p></li> 
+        <li><p><span class="page-edit">2018-10-12 Login</span></p></li> 
+        <li><p><span class="page-history">Memasak Mesh Pilihan ditambahkan dalam <span class="search-words">NewIn20173</span></span></p></li> 
+        <li><p><span class="page-history">Diperbarui fungsi di 2018.1</span></p></li> 
+        <li><p><span class="page-history">Batasan yang diperbarui berkaitan dengan membaca/ tulis pengaturan aktif pada 2017. Sitemap</span></p></li> 
+        <li><p><span class="page-history">Login Mesh yang diuraikan pada 2018.3 karena algoritma komputasi hull cembung baru (Quickhull) lebih toleran terhadap ketidaksempurnaan dalam mesh input.</span></p></li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="class-HingeJoint.html"></a></span> 
+         <div class="tip">
+           Engsel Bersama 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="class-Rigidbody.html"></a></span> 
+         <div class="tip">
+           Rigidbody 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

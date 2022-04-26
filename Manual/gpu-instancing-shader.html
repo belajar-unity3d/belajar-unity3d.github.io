@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Menciptakan naungan yang mendukung sikap GPU</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="graphics-performance-profiling.html">Kinerja grafis dan profil</a></li> 
+         <li><a href="optimizing-draw-calls.html">Mengoptimalkan panggilan menggambar</a></li> 
+         <li><a href="GPUInstancing.html">GPU instancing</a></li> 
+         <li>Menciptakan naungan yang mendukung sikap GPU</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="GPUInstancing.html"></a></span> 
+          <div class="tip">
+            GPU instancing 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="DrawCallBatching.html"></a></span> 
+          <div class="tip">
+            Gambar batching panggilan 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h2>Menciptakan naungan yang mendukung sikap GPU</h2> 
+       <p>Halaman ini berisi informasi tentang cara menambahkan dukungan GPUSicing ke Unity kustom <span class="tooltip"><strong>shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Shader">Glossary</a></span></span></span>. Ini pertama menjelaskan kata kunci naungan, variabel, dan fungsi naungan Unity kustom perlu mendukung GPU tenggelam. Kemudian termasuk contoh cara menambahkan data per-instance untuk kedua kantung <span class="tooltip"><strong>surface shaders</strong><span class="tooltiptext">Cara merampingkan naungan menulis untuk Pipeline Render Built-in. <a href="SL-SurfaceShaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SurfaceShader">Glossary</a></span></span></span> dan vertex/fragment.</p> 
+       <h3>Kompatibilitas pipa Render</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature</strong></th> 
+          <th style="text-align:left;"><strong>Built-in <span class="tooltip"><strong>Render Pipeline</strong><span class="tooltiptext">A series of operations that take the contents of a Scene, and displays them on a screen. Unity lets you choose from pre-built render pipelines, or write your own. <a class="tooltipMoreInfoLink" href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span></strong></th> 
+          <th style="text-align:left;"><strong>Universal Render Pipeline (URP)</strong></th> 
+          <th style="text-align:left;"><strong>High Definition Render Pipeline (HDRP)</strong></th> 
+          <th style="text-align:left;"><strong>Custom Scriptable Render Pipeline (SRP)</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Custom GPU instanced shaders</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>Modifikasi Shader</h3> 
+       <p>Bagian ini berisi informasi tentang penambahan naungan yang berkaitan dengan GPU.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Addition</th> 
+          <th style="text-align:left;">Description</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>#pragma multi_compile_instancing</code></td> 
+          <td style="text-align:left;">Hasilkan varian yang tidak tepat. Ini diperlukan untuk fragmen dan <span class="tooltip"><strong>vertex shaders</strong><span class="tooltiptext">Program yang berjalan pada setiap simpul model 3D ketika model sedang diberikan. <a class="tooltipMoreInfoLink" href="SL-ShaderPrograms.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#vertexshader">Glossary</a></span></span></span>. Ini adalah opsional untuk Permukaan Shaders.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <a name="pragma-instancing_options"></a><code>#pragma instancing_options</code> </td> 
+          <td style="text-align:left;">Tentukan pilihan yang digunakan Unity misalnya. Untuk informasi pada sakelar opsi yang tersedia, lihat <span class="externalcitation">[#brincar_pilihan]</span> (#Instancing_pilihan).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>UNITY_VERTEX_INPUT_INSTANCE_ID</code></td> 
+          <td style="text-align:left;">Tentukan ID instance di struktur input / output naungan simpul. Untuk menggunakan macro ini, aktifkan kata kunci naungan INSTANCING_ON. Jika tidak, Unity tidak mengatur ID instance. Login Untuk mengakses ID instance, gunakan <br> di dalam #ifdef INSTANCING_ Login Jika Anda tidak menggunakan blok ini, varian gagal untuk dikompilasi.<code>vertexInput.instanceID</code> inside an #ifdef INSTANCING_ON block. If you don’t use this block, variants fail to compile.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>UNITY_INSTANCING_BUFFER_START(bufferName)</code></td> 
+          <td style="text-align:left;">Tentukan awal penyangga konstan per-instance bernama <code>bufferName</code>. Gunakan makro ini dengan <code>UNITY_INSTANCING_BUFFER_END</code> untuk membungkus deklarasi properti yang ingin Anda unik untuk setiap kasus. Tentukan sifat di dalam penyangga menggunakan <code>UNITY_DEFINE_INSTANCED_PROP</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>UNITY_INSTANCING_BUFFER_END(bufferName)</code></td> 
+          <td style="text-align:left;">Tentukan akhir penyangga konstan per-instance bernama <code>bufferName</code>. Gunakan makro ini dengan <code>UNITY_INSTANCING_BUFFER_START</code> untuk membungkus deklarasi properti yang ingin Anda unik untuk setiap kasus. Tentukan sifat di dalam penyangga menggunakan <code>UNITY_DEFINE_INSTANCED_PROP</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>UNITY_DEFINE_INSTANCED_PROP(type, propertyName)</code></td> 
+          <td style="text-align:left;">Tentukan properti naungan per-instance dengan tipe dan nama yang ditentukan. Dalam contoh di bawah ini, properti <code>_Color</code> unik.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>UNITY_SETUP_INSTANCE_ID(v);</code></td> 
+          <td style="text-align:left;">Memungkinkan fungsi naungan untuk mengakses ID instance. Untuk naungan simpul, makro ini diperlukan pada awal. Untuk warna fragmen, penambahan ini opsional. Sebagai contoh, lihat <a href="#vertex-and-fragment-shader">Vertex dan warna fragmen</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>UNITY_TRANSFER_INSTANCE_ID(v, o);</code></td> 
+          <td style="text-align:left;">Salin ID instance dari struktur input ke struktur output di naungan simpul. Gunakan makro ini jika Anda perlu mengakses data per-instance di naungan fragmen.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>UNITY_ACCESS_INSTANCED_PROP(bufferName, propertyName)</code></td> 
+          <td style="text-align:left;">Mengakses properti naungan per-instance dalam penyangga konstan. Unity menggunakan ID instance untuk indeks ke array data instance. <code>bufferName</code> harus sesuai dengan nama penyangga konstan yang mengandung properti yang ditentukan. Ini makro kompilasi berbeda untuk INSTANCING_ ON dan varian non-instancing.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Ketika Anda menggunakan beberapa properti per-instance, Anda tidak perlu mengisi semua objek <code>MaterialPropertyBlock</code>. Juga, jika satu kasus kekurangan properti, Unity mengambil nilai default dari bahan yang direferensikan. Jika bahan tidak memiliki nilai default untuk properti, Unity menetapkan nilai menjadi 0. Jangan meletakkan sifat non-instanced di <code>MaterialPropertyBlock</code>, karena disables ini. Alih-alih, menciptakan bahan yang berbeda untuk mereka.</p> 
+       <p><a name="instancing_options-switches"></a></p> 
+       <h3>Instancing_pilihan switch</h3> 
+       <p><span class="externalcitation">[#brincar_pilihan]</span> (#pragma-instancing_pilihan) arahan dapat menggunakan sakelar berikut:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Switch</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <code>forcemaxcount:batchSize</code> dan <code>maxcount:batchSize</code> </td> 
+          <td style="text-align:left;">Pada sebagian besar platform, Unity secara otomatis menghitung ukuran array data. Ini membagi ukuran penyangga konstan maksimum pada perangkat target dengan ukuran struktur yang mengandung semua sifat per-instance. Umumnya, Anda tidak perlu khawatir tentang ukuran batch. Namun, beberapa platform membutuhkan ukuran array tetap. Untuk menentukan ukuran batch untuk platform tersebut, gunakan opsi <code>maxcount</code>. Platform lain mengabaikan opsi ini. Jika Anda ingin memaksa ukuran batch untuk semua platform, gunakan <code>forcemaxcount</code>. Ini berguna ketika, misalnya, proyek Anda menggunakan DrawMeshInstanced untuk mengeluarkan panggilan dengan 256 <span class="tooltip"><strong>sprites</strong><span class="tooltiptext">Objek grafis 2D. Jika Anda digunakan untuk bekerja di 3D, Sprites pada dasarnya hanya tekstur standar tetapi ada teknik khusus untuk menggabungkan dan mengelola tekstur sprite untuk efisiensi dan kenyamanan selama perkembangan. <a class="tooltipMoreInfoLink" href="Sprites.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Sprite">Glossary</a></span></span></span>. Nilai default untuk dua pilihan adalah 500.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>assumeuniformscaling</code></td> 
+          <td style="text-align:left;">Membangun Unity untuk mengasumsikan bahwa semua kasus memiliki skala seragam (skala yang sama untuk semua X, Y, dan sumbu Z).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>nolodfade</code></td> 
+          <td style="text-align:left;">Membuat Unity tidak menerapkan GPU ke nilai fade <span class="tooltip"><a class="tooltipMoreInfoLink" href="LevelOfDetail.html">LOD</a><span class="tooltiptext">Teknik <em>Tingkat Detail</em> (LOD) adalah optimasi yang mengurangi jumlah segitiga yang dimiliki Unity untuk membuat GameObject ketika jaraknya dari kamera meningkat. <a href="LevelOfDetail.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#LOD">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>nolightprobe</code></td> 
+          <td style="text-align:left;">Mencegah Kesatuan dari menerapkan nilai GPU pada nilai <span class="tooltip"><a class="tooltipMoreInfoLink" href="LightProbes.html">Probe Cahaya</a><span class="tooltiptext">probe cahaya menyimpan informasi tentang bagaimana cahaya melewati ruang di tempat kejadian Anda. Koleksi probe cahaya yang diatur dalam ruang tertentu dapat meningkatkan pencahayaan pada objek bergerak dan pemandangan LOD statis dalam ruang itu. <a href="LightProbes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#LightProbe">Glossary</a></span></span></span> dan data oklusi mereka. Menyiapkan opsi ini untuk <code>ON</code> dapat meningkatkan kinerja jika proyek Anda tidak mengandung <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> yang menggunakan baik GPUSicing dan Light Probe.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>nolightmap</code></td> 
+          <td style="text-align:left;">Mencegah Unity dari menerapkan GPU ke nilai informasi dilas <span class="tooltip"><strong>lightmap</strong><span class="tooltiptext">Tekstur pra-render yang mengandung efek sumber cahaya pada objek statis di tempat kejadian. Lightmaps dilalui atas geometri adegan untuk menciptakan efek pencahayaan. <a class="tooltipMoreInfoLink" href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Lightmap">Glossary</a></span></span></span>. Menyiapkan opsi ini untuk <code>ON</code> dapat meningkatkan kinerja jika proyek Anda tidak mengandung GameObjects yang menggunakan GPUlawcing dan lightmaps.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>procedural:FunctionName</code></td> 
+          <td style="text-align:left;">Hasilkan varian tambahan untuk digunakan dengan <a href="Graphics.DrawMeshInstancedIndirect">Grafik.DrawMeshInstancedIndirect</a>. Pada awal tahap naungan simpul, Unity memanggil fungsi yang ditentukan setelah usus. Untuk mengatur data instance secara manual, tambahkan data per-instance ke fungsi ini dengan cara yang sama Anda biasanya akan menambahkan data per-instance ke naungan. Unity juga memanggil fungsi ini pada awal naungan fragmen jika salah satu sifat instance yang dipetik disertakan dalam naungan fragmen.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>Menggunakan varian naungan dengan GPU Suspensioncing</h3> 
+       <p>Unity menghasilkan Permukaan naungan dengan tayangan <a href="SL-MultipleProgramVariants.html">variants</a> secara default, kecuali Anda menentukan <code>noinstancing</code> secara langsung. Unity mengabaikan penggunaan #pragma multi_compile_instancing dalam naungan permukaan.<code>#pragma</code> directive. Unity ignores uses of #pragma multi_compile_instancing in a surface shader.</p> 
+       <p>Unity's Standard and StandardSpecular shaders memiliki dukungan penyedap secara default, tetapi tanpa sifat per-instance selain transformasi.</p> 
+       <p>Jika <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> Anda tidak mengandung GameObjects dengan GPU rincing diaktifkan, maka Unity strips teduh varian. Untuk menimpa perilaku pengupasan:</p> 
+       <ol> 
+        <li>Pengaturan Proyek Terbuka (menu: <strong>Edit</strong> &gt; <strong>Project Settings</strong>).</li> 
+        <li>Go to <strong>Graphics</strong>.</li> 
+        <li>Pada bagian <strong>Shader Stripping</strong>, set <strong>Instancing Variants</strong> ke <strong>Keep All</strong>.</li> 
+       </ol> 
+       <h3>Menambahkan sifat per-instance ke teduh GPU</h3> 
+       <p>Secara default, instance GPU Unity GameObjects dengan <a href="class-Transform.html">Transforms</a> yang berbeda dalam setiap panggilan penarikan yang dicontoh. Untuk menambahkan lebih banyak variasi pada kasus, memodifikasi naungan untuk menambahkan sifat per-sifat sementara seperti warna. Anda dapat melakukan ini baik di naungan permukaan dan di naungan simpul/fragment.</p> 
+       <p>Pedagang kustom tidak perlu data per-instance, tetapi mereka memerlukan ID instance karena manset dunia membutuhkan satu fungsi dengan benar. Naungan permukaan secara otomatis mengatur ID instance, tetapi simpul kustom dan naungan fragmen tidak. Untuk mengatur ID untuk vertex kustom dan warna fragmen, gunakan UNITY_SETUP_INSTANCE_ID pada awal naungan. Contoh cara melakukan ini, lihat <a href="#vertex-and-fragment-shader">Vertex dan warna fragmen</a>.</p> 
+       <p>Ketika Anda menyatakan properti yang dicontoh, Unity mengumpulkan semua nilai properti dari objek MaterialPropertyBlock yang ditetapkan pada GameObjects menjadi panggilan tunggal. Sebagai contoh cara menggunakan benda MaterialPropertyBlock untuk mengatur data per-instance pada runtime, lihat <a href="#changing-per-instanced-data-at-runtime">Mengubah data per-instance pada runtime</a>.</p> 
+       <p>Ketika menambahkan data per-instance ke naungan multi-pass, menjaga berikut dalam pikiran:</p> 
+       <ul> 
+        <li>Jika teduh multi-pass memiliki lebih dari dua pass, Unity hanya contoh lulus pertama. Ini karena render Unity kemudian melewati satu objek, yang memaksa perubahan material.</li> 
+        <li>Jika Anda menggunakan Forward <span class="tooltip"><strong>rendering path</strong><span class="tooltiptext">Teknik yang menggunakan pipa render untuk membuat grafik. Memilih jalur rendering yang berbeda mempengaruhi bagaimana pencahayaan dan pembentukan dihitung. Beberapa jalur rendering lebih cocok untuk berbagai platform dan perangkat keras daripada yang lain. <a class="tooltipMoreInfoLink" href="RenderingPaths.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#RenderingPath">Glossary</a></span></span></span> di Pipeline Render Built-in, Unity tidak dapat secara efisien objek instance yang dipengaruhi oleh beberapa lampu. Unity hanya dapat menggunakan tempat kejadian secara efektif untuk lulus dasar, tidak untuk melewati tambahan. Untuk informasi lebih lanjut tentang umpan pencahayaan, lihat dokumentasi pada <a href="RenderTech-ForwardRendering.html">Meneruskan Rendering dan Pass Tags</a>.</li> 
+       </ul> 
+       <h4>Contoh warna permukaan</h4> 
+       <p>Contoh berikut menunjukkan cara membuat Shader Permukaan yang dicontoh dengan nilai warna yang berbeda untuk setiap kasus.</p> 
+       <pre><code>Shader "Custom/InstancedColorSurfaceShader" 
+{
+    Properties 
+    {
+        _Color ("Color", Color) = (1,1,1,1)
+        _MainTex ("Albedo (RGB)", 2D) = "white" {}
+        _Glossiness ("Smoothness", Range(0,1)) = 0.5
+        _Metallic ("Metallic", Range(0,1)) = 0.0
+    }
+
+    SubShader
+    {
+        Tags { "RenderType"="Opaque" }
+        LOD 200
+        CGPROGRAM
+        // Uses the physically based standard lighting model with shadows enabled for all light types.
+        #pragma surface surf Standard fullforwardshadows
+        // Use Shader model 3.0 target
+        #pragma target 3.0
+        sampler2D _MainTex;
+        struct Input 
+        {
+            float2 uv_MainTex;
+        };
+        half _Glossiness;
+        half _Metallic;
+        UNITY_INSTANCING_BUFFER_START(Props)
+           UNITY_DEFINE_INSTANCED_PROP(fixed4, _Color)
+        UNITY_INSTANCING_BUFFER_END(Props)
+        void surf (Input IN, inout SurfaceOutputStandard o) {
+            fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * UNITY_ACCESS_INSTANCED_PROP(Props, _Color);
+            o.Albedo = c.rgb;
+            o.Metallic = _Metallic;
+            o.Smoothness = _Glossiness;
+            o.Alpha = c.a;
+        }
+        ENDCG
+    }
+    FallBack "Diffuse"
+}
+</code></pre> 
+       <p><a name="vertex-and-fragment-shader"></a></p> 
+       <h4>Vertex dan fragmen naungan contoh</h4> 
+       <p>Contoh berikut menunjukkan cara membuat simpul dan naungan fragmen yang dicontoh dengan nilai warna yang berbeda untuk setiap kasus. Tidak seperti permukaan naungan, ketika Anda membuat simpul dan fragmen Anda harus menggunakan UNITY_SETUP_INSTANCE_ID untuk mengatur secara manual ID.</p> 
+       <pre><code>Shader "Custom/SimplestInstancedShader"
+{
+    Properties
+    {
+        _Color ("Color", Color) = (1, 1, 1, 1)
+    }
+
+    SubShader
+    {
+        Tags { "RenderType"="Opaque" }
+        LOD 100
+
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #pragma multi_compile_instancing
+            #include "UnityCG.cginc"
+
+            struct appdata
+            {
+                float4 vertex : POSITION;
+                UNITY_VERTEX_INPUT_INSTANCE_ID
+            };
+
+            struct v2f
+            {
+                float4 vertex : SV_POSITION;
+                UNITY_VERTEX_INPUT_INSTANCE_ID // use this to access instanced properties in the fragment shader.
+            };
+
+            UNITY_INSTANCING_BUFFER_START(Props)
+                UNITY_DEFINE_INSTANCED_PROP(float4, _Color)
+            UNITY_INSTANCING_BUFFER_END(Props)
+
+            v2f vert(appdata v)
+            {
+                v2f o;
+
+                UNITY_SETUP_INSTANCE_ID(v);
+                UNITY_TRANSFER_INSTANCE_ID(v, o);
+                o.vertex = UnityObjectToClipPos(v.vertex);
+                return o;
+            }
+
+            fixed4 frag(v2f i) : SV_Target
+            {
+                UNITY_SETUP_INSTANCE_ID(i);
+                return UNITY_ACCESS_INSTANCED_PROP(Props, _Color);
+            }
+            ENDCG
+        }
+    }
+}
+</code></pre> 
+       <p><a name="changing-per-instanced-data-at-runtime"></a></p> 
+       <h4>Mengubah data per-instance pada contoh runtime</h4> 
+       <p>Contoh berikut menunjukkan cara menggunakan benda MaterialPropertyBlock untuk mengatur data per-instance untuk kelompok GameObjects pada runtime. Ini menetapkan properti <code>_Color</code> dari contoh warna di atas untuk warna acak.</p> 
+       <p> <strong>Important</strong>: BahanPropertyBlocks memecah SRP Kompatibilitas batcher. Untuk informasi lebih lanjut, lihat <a href="GPUInstancing.html#requirements-and-compatibility">Login: Persyaratan dan Kompatibilitas</a>.</p> 
+       <pre><code>using UnityEngine;
+
+public class MaterialPropertyBlockExample : MonoBehaviour
+{
+    public GameObject[] objects;
+
+    void Start()
+    {
+        MaterialPropertyBlock props = new MaterialPropertyBlock();
+        MeshRenderer renderer;
+
+        foreach (GameObject obj in objects)
+        {
+            float r = Random.Range(0.0f, 1.0f);
+            float g = Random.Range(0.0f, 1.0f);
+            float b = Random.Range(0.0f, 1.0f);
+            props.SetColor("_Color", new Color(r, g, b));
+
+            renderer = obj.GetComponent&lt;MeshRenderer&gt;();
+            renderer.SetPropertyBlock(props);
+        }
+    }
+}
+</code></pre> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="GPUInstancing.html"></a></span> 
+         <div class="tip">
+           GPU instancing 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="DrawCallBatching.html"></a></span> 
+         <div class="tip">
+           Gambar batching panggilan 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

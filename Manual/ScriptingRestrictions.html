@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Pembatasan Scripting</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="ScriptingSection.html">Scripting</a></li> 
+         <li><a href="unity-architecture.html">Arsitektur persatuan</a></li> 
+         <li><a href="scripting-backends.html">Scripting backends</a></li> 
+         <li>Batasan Scripting</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="IL2CPP-managed-stack-traces.html"></a></span> 
+          <div class="tip">
+            Jejak stack terkelola dengan IL2CPP 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="ManagedCodeStripping.html"></a></span> 
+          <div class="tip">
+            Dikelola kode pengupasan 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Batasan Scripting</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Unity menyediakan API scripting umum dan pengalaman di semua platform yang mendukungnya. Namun, beberapa platform memiliki batasan yang melekat. Untuk membantu Anda memahami pembatasan ini, tabel berikut menjelaskan pembatasan yang berlaku untuk setiap platform dan <span class="tooltip"><strong>scripting backend</strong><span class="tooltiptext">Kerangka kerja yang skrip di Unity. Unity mendukung tiga backend scripting yang berbeda tergantung pada platform target: Mono, .NET dan IL2CPP. Platform Windows Universal, namun hanya mendukung dua: .NET dan IL2CPP. <a class="tooltipMoreInfoLink" href="windowsstore-il2cpp.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ScriptingBackend">Glossary</a></span></span></span>:</p> 
+       <h2>.NET 4.x setara scripting runtime</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Platform (scripting backend)</strong></th> 
+          <th style="text-align:left;"><strong>Ahead-of-time compile</strong></th> 
+          <th style="text-align:left;"><strong>No threads</strong></th> 
+          <th style="text-align:left;"><strong>.NET Core class libraries subset</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Android (IL2CPP)</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Android (Mono)</td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">iOS (IL2CPP)</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Standalone (IL2CPP)</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Standalone (Mono)</td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Universal Windows Platform</strong><span class="tooltiptext">Fitur IAP yang mendukung simulator Pembelian Aplikasi Microsoft, yang memungkinkan Anda untuk menguji aliran pembelian IAP pada perangkat sebelum menerbitkan aplikasi Anda. <a class="tooltipMoreInfoLink" href="UnityIAPUniversalWindows.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UniversalWindowsPlatform">Glossary</a></span></span></span> (IL2CPP)</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Platform Windows Universal (.NET)</td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">✔</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>WebGL</strong><span class="tooltiptext">Login API yang membuat grafis 2D dan 3D di browser web. Opsi build Unity WebGL memungkinkan Unity untuk mempublikasikan konten sebagai program JavaScript yang menggunakan teknologi HTML5 dan WebGL rendering API untuk menjalankan konten Unity di browser web. <a class="tooltipMoreInfoLink" href="webgl-gettingstarted.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#WebGL">Glossary</a></span></span></span> (IL2CPP)</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;" colspan="2"></td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="AOT"></a></p> 
+       <h2>Ahead-of-time compile</h2> 
+       <p>Beberapa platform tidak memungkinkan generasi kode runtime. Oleh karena itu, setiap kode terkelola yang tergantung pada kompilasi tepat waktu (JIT) pada perangkat target akan gagal. Sebagai gantinya, Anda harus mengkompilasi semua kode yang dikelola terlebih dahulu (AOT). Seringkali, perbedaan ini tidak masalah, tetapi dalam beberapa kasus tertentu, platform AOT memerlukan pertimbangan tambahan.</p> 
+       <h3>Sistem.Reflection. Login</h3> 
+       <p>Platform AOT tidak dapat mengimplementasikan metode di ruang nama <code>System.Reflection.Emit</code>. Sisa <code>System.Reflection</code> diterima, selama kompiler dapat mengganggu bahwa kode yang digunakan melalui refleksi perlu ada di runtime.</p> 
+       <h3>Serial</h3> 
+       <p>Platform AOT mungkin menghadapi masalah dengan serialisasi dan deserialisasi karena penggunaan refleksi. Jika jenis atau metode hanya digunakan melalui refleksi sebagai bagian dari serialisasi atau deserialisasi, kompilator AOT tidak dapat mendeteksi bahwa perlu menghasilkan kebutuhan kode untuk jenis atau metode.</p> 
+       <h3>Metode virtual generik</h3> 
+       <p>Jika Anda menggunakan metode generik, kompiler harus melakukan beberapa pekerjaan tambahan untuk memperluas kode tertulis Anda ke kode yang dieksekusi pada perangkat. Misalnya, Anda perlu kode yang berbeda untuk <code>List</code> dengan <code>int</code> atau <code>double</code>. Jika Anda menggunakan metode virtual, di mana perilaku ditentukan pada runtime daripada waktu kompilasi, kompiler dapat dengan mudah memerlukan generasi kode runtime di tempat-tempat di mana tidak sepenuhnya jelas dari kode sumber.</p> 
+       <p>Contoh kode berikut bekerja persis seperti yang diharapkan pada platform JIT (contohnya mencetak “nilai pengukuran: Nol” ke konsol sekali):</p> 
+       <pre><code class="lang-csharp">using UnityEngine;
+using System;
+
+public class AOTProblemExample : MonoBehaviour, IReceiver
+{
+    public enum AnyEnum 
+    {
+        Zero,
+        One,
+    }
+
+    void Start() 
+    {
+        // Subtle trigger: The type of manager *must* be
+        // IManager, not Manager, to trigger the AOT problem.
+        IManager manager = new Manager();
+        manager.SendMessage(this, AnyEnum.Zero);
+    }
+
+    public void OnMessage&lt;T&gt;(T value) 
+    {
+        Debug.LogFormat("Message value: {0}", value);
+    }
+}
+
+public class Manager : IManager 
+{
+    public void SendMessage&lt;T&gt;(IReceiver target, T value) {
+        target.OnMessage(value);
+    }
+}
+
+public interface IReceiver
+{
+    void OnMessage&lt;T&gt;(T value);
+}
+
+public interface IManager 
+{
+    void SendMessage&lt;T&gt;(IReceiver target, T value);
+}
+</code></pre> 
+       <p>Namun, ketika Anda mengeksekusi kode ini pada platform AOT dengan backend scripting <span class="tooltip"><strong>IL2CPP</strong><span class="tooltiptext">Back-end scripting bersatu yang dapat Anda gunakan sebagai alternatif untuk Mono ketika proyek bangunan untuk beberapa platform. <a class="tooltipMoreInfoLink" href="IL2CPP.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#IL2CPP">Glossary</a></span></span></span>, pengecualian ini terjadi:</p> 
+       <pre><code>ExecutionEngineException: Attempting to call method 'AOTProblemExample::OnMessage&lt;AOTProblemExample+AnyEnum&gt;' for which no ahead of time (AOT) code was generated.
+  at Manager.SendMessage[T] (IReceiver target, .T value) [0x00000] in &lt;filename unknown&gt;:0 
+  at AOTProblemExample.Start () [0x00000] in &lt;filename unknown&gt;:0 
+</code></pre> 
+       <p>Demikian juga, backend skrip Mono memberikan pengecualian serupa ini:</p> 
+       <pre><code>  ExecutionEngineException: Attempting to JIT compile method 'Manager:SendMessage&lt;AOTProblemExample/AnyEnum&gt; (IReceiver,AOTProblemExample/AnyEnum)' while running with --aot-only.
+  at AOTProblemExample.Start () [0x00000] in &lt;filename unknown&gt;:0 
+</code></pre> 
+       <p>compiler AOT tidak mengenali bahwa harus menghasilkan kode untuk metode generik <code>OnMessage</code> dengan <code>T</code> <code>AnyEnum</code>, sehingga terus, melewatkan metode ini. Ketika metode itu disebut, dan runtime tidak dapat menemukan kode yang tepat untuk dieksekusi, itu mengembalikan pesan kesalahan ini.</p> 
+       <p>Untuk bekerja di sekitar masalah AOT seperti ini, Anda dapat memaksa kompiler untuk menghasilkan kode yang tepat. Untuk melakukan ini, tambahkan metode contoh berikut ke kelas <code>AOTProblemExample</code>:</p> 
+       <pre><code class="lang-csharp">public void UsedOnlyForAOTCodeGeneration() 
+{
+    // IL2CPP needs only this line.
+    OnMessage(AnyEnum.Zero);
+
+    // Mono also needs this line. Note that we are
+    // calling directly on the Manager, not the IManager interface.
+    new Manager().SendMessage(null, AnyEnum.Zero);
+
+    // Include an exception so we can be sure to know if this method is ever called.
+    throw new InvalidOperationException("This method is used for AOT code generation only. Do not call it at runtime.");
+}
+</code></pre> 
+       <p>Ketika kompilator menemukan panggilan eksplisit ke <code>OnMessage</code> dengan <code>T</code> <code>AnyEnum</code>, itu menghasilkan kode yang tepat untuk runtime untuk dijalankan. Metode <code>UsedOnlyForAOTCodeGeneration</code> tidak perlu disebut; itu hanya perlu ada untuk kompiler untuk mengenalinya.</p> 
+       <h3>Memanggil metode yang dikelola dari kode asli</h3> 
+       <p>Metode yang terkelola yang perlu dihadirkan ke pointer fungsi C sehingga mereka dapat dipanggil dari kode asli memiliki beberapa pembatasan pada platform AOT:</p> 
+       <ul> 
+        <li>Metode yang dikelola harus menjadi metode statis</li> 
+        <li>Metode yang dikelola harus memiliki atribut <code>[MonoPInvokeCallback]</code> attribute</li> 
+       </ul> 
+       <p><a name="threads"></a></p> 
+       <h2>Tidak ada benang</h2> 
+       <p>Beberapa platform tidak mendukung penggunaan benang, sehingga setiap kode yang berhasil yang menggunakan namespace <code>System.Threading</code> gagal pada runtime. Juga, beberapa bagian perpustakaan kelas .NET tidak bergantung pada benang. Contoh yang sering digunakan adalah kelas <code>System.Timers.Timer</code>, yang tergantung pada dukungan untuk benang.</p> 
+       <h2>Kecuali filter</h2> 
+       <p>IL2CPP tidak mendukung filter pengecualian C#. Anda harus memodifikasi kode yang tergantung pada filter pengecualian ke blok <code>catch</code> yang tepat.</p> 
+       <h2>TypedReference</h2> 
+       <p>IL2CPP tidak mendukung tipe <code>System.TypedReference</code> atau kata kunci <code>__makeref</code> C#.</p> 
+       <h2>MarshalAs dan atribut FieldOffset</h2> 
+       <p>IL2CPP tidak mendukung refleksi atribut <code>MarhsalAs</code> dan <code>FieldOffset</code> pada runtime. Ini tidak mendukung atribut ini pada waktu kompilasi. Anda harus menggunakan ini untuk <a href="https://docs.microsoft.com/en-us/dotnet/framework/interop/marshaling-data-with-platform-invoke">WordPress.org</a> yang tepat.</p> 
+       <h2>Kata kunci dinamis</h2> 
+       <p>IL2CPP tidak mendukung kata kunci C# <code>dynamic</code>. Kata kunci ini membutuhkan kompilasi JIT, yang tidak mungkin dengan IL2CPP.</p> 
+       <h2>Login Login</h2> 
+       <p>IL2CPP tidak mendukung metode API <code>Marshal.Prelink</code> atau <code>Marshal.PrelinkAll</code>.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="IL2CPP-managed-stack-traces.html"></a></span> 
+         <div class="tip">
+           Jejak stack terkelola dengan IL2CPP 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="ManagedCodeStripping.html"></a></span> 
+         <div class="tip">
+           Dikelola kode pengupasan 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

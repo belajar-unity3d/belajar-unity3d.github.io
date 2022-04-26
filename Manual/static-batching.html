@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: batching statis</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="graphics-performance-profiling.html">Kinerja grafis dan profil</a></li> 
+         <li><a href="optimizing-draw-calls.html">Mengoptimalkan panggilan menggambar</a></li> 
+         <li><a href="DrawCallBatching.html">Gambar batching panggilan</a></li> 
+         <li>batching statis</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="DrawCallBatching.html"></a></span> 
+          <div class="tip">
+            Gambar batching panggilan 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="dynamic-batching.html"></a></span> 
+          <div class="tip">
+            batching dinamis 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>batching statis</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>batching statis adalah metode <a class="tooltipMoreInfoLink" href="DrawCallBatching.html">draw call batching</a> yang menggabungkan jala yang tidak bergerak untuk mengurangi <a href="optimizing-draw-calls.html">draw calls</a>. Ini mengubah mesh gabungan menjadi ruang dunia dan membangun satu simpul bersama dan penyangga indeks untuk mereka. Kemudian, untuk mesh yang terlihat, Unity melakukan serangkaian panggilan penarikan sederhana, dengan hampir tidak ada perubahan negara antara masing-masing. <span class="tooltip"><strong>Static batching</strong><span class="tooltiptext">Teknik Unity menggunakan untuk menggambar GameObjects di layar yang menggabungkan static (non-moving) GameObjects ke Big Meshes, dan render mereka dengan cara yang lebih cepat. <a href="DrawCallBatching.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#StaticBatching">Glossary</a></span></span></span> tidak mengurangi jumlah panggilan penarikan, tetapi alih-alih mengurangi jumlah perubahan state render antara mereka.</p> 
+       <p>batching statis lebih efisien daripada <span class="tooltip"><a class="tooltipMoreInfoLink" href="dynamic-batching.html">batching dinamis</a><span class="tooltiptext">Proses Unity otomatis yang mencoba untuk membuat beberapa jala seolah-olah mereka adalah satu mesh untuk kinerja grafis yang dioptimalkan. Teknik mengubah semua simpul GameObject pada CPU dan kelompok banyak simpul serupa bersama. <a href="DrawCallBatching.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#DynamicBatching">Glossary</a></span></span></span> karena batching statis tidak mengubah simpul pada CPU. Untuk informasi lebih lanjut tentang implikasi kinerja untuk batching statis, lihat <a href="#performance-implications">Performance implications</a>.</p> 
+       <h2>Persyaratan dan kompatibilitas</h2> 
+       <p>Bagian ini mencakup informasi tentang kompatibilitas <span class="tooltip"><strong>render pipeline</strong><span class="tooltiptext">Rangkaian operasi yang mengambil isi dari Adegan, dan menampilkannya di layar. Unity memungkinkan Anda memilih dari pipa render yang dibangun sebelumnya, atau menulis sendiri. <a class="tooltipMoreInfoLink" href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span> statis batching.</p> 
+       <h3>Kompatibilitas pipa Render</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature</strong></th> 
+          <th style="text-align:left;"><strong>Built-in Render Pipeline</strong></th> 
+          <th style="text-align:left;"><strong>Universal Render Pipeline (URP)</strong></th> 
+          <th style="text-align:left;"><strong>High Definition Render Pipeline (HDRP)</strong></th> 
+          <th style="text-align:left;"><strong>Custom Scriptable Render Pipeline (SRP)</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Static Batching</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Menggunakan batching statis</h2> 
+       <p>Unity dapat melakukan batching statis pada waktu build dan pada runtime. Sebagai aturan umum, jika <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#GameObject">Glossary</a></span></span></span> ada dalam <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> sebelum Anda membangun aplikasi Anda, gunakan <a href="#editor">Editor</a> untuk batch GameObjects Anda pada waktu membangun. Jika Anda membuat GameObjects dan jala mereka pada runtime, gunakan <a href="#runtime">API</a>.</p> 
+       <p>Ketika Anda menggunakan API runtime, Anda dapat mengubah sifat transformasi akar batch statis. Ini berarti bahwa Anda dapat bergerak, memutar, atau mengukur seluruh kombinasi jala yang membuat batch statis. Anda tidak dapat mengubah sifat transformasi dari jala individu.</p> 
+       <p>Untuk menggunakan batching statis untuk satu set GameObjects, GameObjects harus memenuhi syarat untuk batching statis. Selain kriteria yang dijelaskan dalam <a href="DrawCallBatching.html#using-draw-call-batching">informasi penggunaan umum</a>, pastikan bahwa:</p> 
+       <ul> 
+        <li>GameObject aktif.</li> 
+        <li>GameObject memiliki komponen <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-MeshFilter.html">Filter Mesh</a><span class="tooltiptext">Komponen jala yang mengambil mesh dari aset Anda dan melewatinya ke Mesh Renderer untuk rendering di layar. <a href="class-MeshFilter.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#MeshFilter">Glossary</a></span></span></span>, dan komponen tersebut diaktifkan.</li> 
+        <li>Komponen Filter Mesh memiliki referensi ke <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-Mesh.html">Mesh</a><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mesh">Glossary</a></span></span></span>.</li> 
+        <li>Jaring dibaca / menulis diaktifkan.</li> 
+        <li>Mesh memiliki jumlah vertex lebih besar dari 0.</li> 
+        <li>Mesh belum dikombinasikan dengan Mesh lain.</li> 
+        <li>GameObject memiliki komponen <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-MeshRenderer.html">Mesh Renderer</a><span class="tooltiptext">Komponen mesh yang mengambil geometri dari Filter Mesh dan render di posisi yang ditentukan oleh komponen Transform objek. <a href="class-MeshRenderer.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#MeshRenderer">Glossary</a></span></span></span>, dan komponen tersebut diaktifkan.</li> 
+        <li>Komponen Mesh Renderer tidak menggunakan Material dengan <span class="tooltip"><strong>shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> yang memiliki tag <code>DisableBatching</code> yang ditetapkan untuk benar.</li> 
+        <li>Mesh yang ingin Anda batch bersama menggunakan atribut simpul yang sama. Misalnya Unity dapat batch mesh yang menggunakan posisi simpul, vertex normal, dan satu UV dengan satu sama lain, tetapi tidak dengan jala yang menggunakan posisi simpul, vertex normal, UV0, UV1, dan tangensi simpul.</li> 
+       </ul> 
+       <p>Untuk informasi tentang implikasi kinerja untuk batching statis, lihat <a href="#performance-implications">Performance implications</a>.</p> 
+       <p><a name="editor"></a></p> 
+       <h3>batching statis pada waktu membangun</h3> 
+       <p>Anda dapat mengaktifkan batching statis pada waktu build di Editor.</p> 
+       <p>Untuk melakukan batching statis pada waktu membangun:</p> 
+       <ol> 
+        <li><strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Player</strong>.</li> 
+        <li>Di <strong>Other Settings</strong>, memungkinkan <strong>Static Batching</strong>.</li> 
+        <li>Dalam pandangan Adegan atau Hierarchy, pilih GameObject yang ingin Anda batch dan melihatnya di Inspector.<br><strong>Tip</strong>: Anda dapat memilih beberapa GameObjects pada saat yang sama untuk mengaktifkan batching statis untuk semua dari mereka.</li> 
+        <li>Pada <a href="StaticObjects.html">Bendera Editor Statis</a> GameObject, aktifkan <strong>Batching Static</strong>.</li> 
+       </ol> 
+       <p>Unity secara otomatis mengedepankan jala statis tertentu ke panggilan penarikan yang sama jika mereka memenuhi kriteria yang dijelaskan dalam <a href="DrawCallBatching.html#using-draw-call-batching">informasi penggunaan umum</a>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/StaticTagInspector.png" alt="The Static Editor Flags checkbox in the Inspector for a GameObject."> 
+        <figcaption>
+          Kotak centang Bendera Editor Statis di Inspektur untuk GameObject. 
+        </figcaption> 
+       </figure> 
+       <p> <strong>Note</strong>: Jika Anda melakukan batching statis pada waktu membangun, Unity tidak menggunakan sumber daya CPU kapan saja untuk menghasilkan data mesh untuk batch statis.</p> 
+       <p><a name="runtime"></a></p> 
+       <h3>batching statis pada runtime</h3> 
+       <p>Untuk batch static meshes pada runtime, Unity menyediakan kelas <a href="../ScriptReference/StaticBatchingUtility.html">StaticBatchingUtility</a>. Metode static <a href="../ScriptReference/StaticBatchingUtility.Combine.html">StatisBatchingUtility.Combine</a> menggabungkan GameObjects yang Anda lewatkan dan menyiapkannya untuk batching statis. Ini sangat berguna untuk jala yang Anda hasilkan pada waktu yang runtime.</p> 
+       <p>Tidak seperti batching statis pada waktu membangun, batching pada runtime tidak memerlukan Anda untuk mengaktifkan Pengaturan Pemain <strong>Static Batching</strong>. Untuk informasi tentang cara menggunakan API ini, lihat <a href="../ScriptReference/StaticBatchingUtility.html">StaticBatchingUtility</a>.</p> 
+       <p><a name="performance-implications"></a></p> 
+       <h2>Performance implications</h2> 
+       <p>Menggunakan batching statis memerlukan memori CPU tambahan untuk menyimpan geometri gabungan. Jika beberapa GameObjects menggunakan mesh yang sama, Unity membuat salinan mesh untuk setiap GameObject, dan masukkan setiap salinan ke dalam mesh gabungan. Ini berarti bahwa geometri yang sama muncul dalam mesh gabungan beberapa kali. Unity melakukan ini terlepas dari apakah Anda menggunakan <a href="#editor">editor</a> atau <a href="#runtime">API</a> untuk menyiapkan GameObjects untuk batching statis. Jika Anda ingin menyimpan jejak memori yang lebih kecil, Anda mungkin harus mengorbankan kinerja rendering dan menghindari batching statis untuk beberapa GameObjects. Misalnya, menandai pohon sebagai statis di lingkungan hutan padat dapat memiliki dampak memori yang serius.</p> 
+       <p> <strong>Note</strong>: Ada batasan jumlah vertik batch statis dapat mencakup. Setiap batch statis dapat mencakup hingga 64000 vertik. Jika ada lebih, Unity menciptakan batch lain.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="DrawCallBatching.html"></a></span> 
+         <div class="tip">
+           Gambar batching panggilan 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="dynamic-batching.html"></a></span> 
+         <div class="tip">
+           batching dinamis 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

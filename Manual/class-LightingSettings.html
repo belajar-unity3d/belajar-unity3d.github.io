@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Aset Pengaturan Pencahayaan</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="LightingOverview.html">Lighting</a></li> 
+         <li>Aset Pengaturan Pencahayaan</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="lighting-window.html"></a></span> 
+          <div class="tip">
+            jendela pencahayaan 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="lighting-mode.html"></a></span> 
+          <div class="tip">
+            Mode pencahayaan 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Aset Pengaturan Pencahayaan</h1> 
+       <!--BeginSwitchLink--> 
+       <a href="../ScriptReference/LightingSettings.html" title="Go to LightingSettings page in the Scripting Reference" class="switch-link gray-btn sbtn left">Switch to Scripting</a> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Aset Pengaturan Pencahayaan mewakili instance yang disimpan dari kelas <a class="tooltipMoreInfoLink" href="../ScriptReference/LightingSettings.html">LightingSettings</a>, yang menyimpan data untuk Baked <span class="tooltip"><strong>Global Illumination</strong><span class="tooltiptext">Kelompok teknik yang model pencahayaan langsung dan tidak langsung untuk memberikan hasil pencahayaan yang realistis.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#globalillumination">Glossary</a></span></span></span> dan sistem Penerangan Global <span class="tooltip"><strong>Enlighten</strong><span class="tooltiptext">Sistem pencahayaan oleh Geomerics yang digunakan dalam Unity untuk lightmapping dan untuk Mencerahkan Penerangan Global Realtime. <a href="https://www.siliconstudio.co.jp/en/products-service/enlighten/">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Enlighten">Glossary</a></span></span></span> Realtime. Editor Unity menggunakan data ini ketika data pencahayaan prekomputes untuk <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> yang menggunakan satu atau kedua sistem ini.</p> 
+       <p>Anda dapat menetapkan Aset Pengaturan Pencahayaan yang sama atau contoh kelas <code>LightingSettings</code> ke lebih dari satu Adegan, yang memudahkan untuk berbagi pengaturan sistem Penerangan Global di beberapa Adegan.</p> 
+       <h2>Membuat Aset Pengaturan Pencahayaan</h2> 
+       <p>Ada dua cara untuk membuat Aset Pengaturan Pencahayaan di Editor Unity.</p> 
+       <p>Untuk membuat Aset Pengaturan Pencahayaan dari tampilan Proyek:</p> 
+       <ol> 
+        <li>Dalam tampilan Proyek, baik klik tombol add (+), atau buka menu konteks dan arahkan ke <strong>Create</strong>.</li> 
+        <li>Klik <strong>Lighting Settings</strong>. Unity menciptakan Aset Pengaturan Pencahayaan baru dalam tampilan Proyek.</li> 
+       </ol> 
+       <p>Untuk membuat dan secara otomatis menetapkan Aset Pengaturan Pencahayaan dari jendela Pencahayaan:</p> 
+       <ol> 
+        <li>Buka jendela Pencahayaan (menu: <strong>Window &gt; Rendering &gt; Lighting</strong>).</li> 
+        <li>Buka tab <strong>Scene</strong>.</li> 
+        <li>Klik <strong>New Lighting Asset</strong>. Unity menciptakan Aset Pengaturan Pencahayaan baru dalam tampilan Proyek, dan segera menetapkannya ke Adegan aktif.</li> 
+       </ol> 
+       <p>Anda juga dapat membuat Aset Pengaturan Pencahayaan dari skrip. Untuk melakukan ini, membuat contoh kelas LightingSettings dan baik menyimpannya ke disk, atau menetapkannya ke Adegan dan menyimpan Adegan itu. Untuk informasi lebih lanjut dan contoh kode, lihat <a href="../ScriptReference/LightingSettings.html">LightingSettings API documentation</a>.</p> 
+       <h2>Menetapkan Aset Pengaturan Pencahayaan ke Adegan</h2> 
+       <p>Untuk menetapkan Aset Pengaturan Pencahayaan ke Adegan di Editor Unity:</p> 
+       <ol> 
+        <li>Buka Adegan yang ingin Anda menetapkan Aset Pengaturan Pencahayaan ke.</li> 
+        <li>Jika Anda memiliki lebih dari satu Adegan terbuka, pastikan bahwa Adegan yang ingin Anda menetapkan Aset Pengaturan Pencahayaan untuk adalah <a href="MultiSceneEditing.html">Adegan aktif</a>.</li> 
+        <li>Buka jendela Pencahayaan (menu: <strong>Window &gt; Rendering &gt; Lighting</strong>).</li> 
+        <li>Buka tab <strong>Scene</strong>.</li> 
+        <li>Baik menyeret Aset Pengaturan Pencahayaan ke lapangan <strong>Lighting Settings</strong>, atau klik ikon ke kanan lapangan <strong>Lighting Settings</strong> dan pilih Aset Pengaturan Pencahayaan dari daftar.</li> 
+       </ol> 
+       <p>Anda juga dapat menetapkan Aset Pengaturan Pencahayaan ke Adegan aktif dari skrip. Untuk melakukan ini, memuat Aset Pengaturan Pencahayaan untuk memperoleh contoh kelas <code>LightingSettings</code>, kemudian gunakan API <code>Lightmapping.lightingSettings</code> untuk menetapkan bahwa instance <code>LightingSettings</code> ke Adegan aktif. Untuk informasi lebih lanjut dan contoh kode, lihat <a href="../ScriptReference/LightingSettings.html">LightingSettings API documentation</a>.</p> 
+       <h2>Melihat dan mengedit sifat Aset Pengaturan Pencahayaan</h2> 
+       <p>Anda dapat melihat dan mengedit sifat Aset Pengaturan Pencahayaan di dua tempat di Editor Unity:</p> 
+       <ul> 
+        <li>Dalam tampilan Proyek, jika Anda memilih Aset Pengaturan Pencahayaan, Anda dapat melihat dan mengedit sifatnya di <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>.</li> 
+        <li>Jika Adegan aktif memiliki Aset Pengaturan Pencahayaan yang ditugaskan untuk itu, Anda dapat melihat dan mengedit sifat-sifat Aset Pengaturan Pencahayaan di tab Adegan Window Pencahayaan.</li> 
+       </ul> 
+       <p>Anda juga dapat membaca dari atau menulis ke sifat Aset Pengaturan Pencahayaan dari skrip. Untuk melakukan ini, memuat Aset Pengaturan Pencahayaan untuk memperoleh contoh kelas<code>LightingSettings</code>, dan mengakses propertinya. Untuk informasi lebih lanjut dan contoh kode, lihat <a href="../ScriptReference/LightingSettings.html">LightingSettings API documentation</a>.</p> 
+       <p><a name="DefaultLightingSettings"></a></p> 
+       <h2>Default LightingSettings data</h2> 
+       <p>Ketika Adegan tidak memiliki Aset Pengaturan Pencahayaan yang ditugaskan untuk itu, Unity menggunakan objek <code>LightingSettings</code> default untuk adegan itu. Objek <code>LightingSettings</code> default adalah instance internal, read-only dari kelas <code>LightingSettings</code>.</p> 
+       <p>Anda tidak dapat melakukan perubahan pada data <code>LightingSettings</code> untuk Adegan yang menggunakan default <code>LightingSettings</code>, tetapi Unity dapat melakukan bake menggunakan pengaturannya.</p> 
+       <p>Untuk membuat perubahan data <code>LightingSettings</code> untuk Adegan, Anda harus menggunakan Editor Unity untuk membuat dan menetapkan Aset Pengaturan Pencahayaan, atau menggunakan skrip untuk membuat, mengkonfigurasi, dan menetapkan objek <code>LightingSettings</code>. Untuk informasi lebih lanjut dan contoh kode, lihat <a href="../ScriptReference/LightingSettings.html">LightingSettings API documentation</a>.</p> 
+       <p>Unity secara otomatis menghasilkan <a class="tooltipMoreInfoLink" href="../ScriptReference/RenderSettings-ambientProbe.html">ambient probe</a> dan <a href="../ScriptReference/ReflectionProbe-defaultTexture.html">Datasheet</a> untuk memastikan bahwa pencahayaan lingkungan mempengaruhi adegan Anda dan <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> di dalamnya secara default. Untuk mempelajari lebih lanjut tentang fungsi ini, lihat <a href="using-skymanager.html">SkyManager</a>.</p> 
+       <h2>Properties</h2> 
+       <p>Ketika Anda melihat Aset Pengaturan Pencahayaan di Inspektur atau jendela Pencahayaan, sifat yang dapat Anda lihat atau edit dibagi menjadi bagian berikut:</p> 
+       <ul> 
+        <li><a href="#RealtimeLighting">Pencahayaan Realtime</a></li> 
+        <li><a href="#MixedLighting">Pencahayaan Campuran</a></li> 
+        <li><a href="#LightmappingSettings">Pengaturan Lightmapping</a></li> 
+        <li><a href="#AutoGeneration">Generasi Otomatis</a></li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/lighting-settings-asset.png" alt="Lighting Settings Asset"> 
+        <figcaption>
+          Aset Pengaturan Pencahayaan 
+        </figcaption> 
+       </figure> 
+       <p><a name="RealtimeLighting"></a></p> 
+       <h3>Pencahayaan Realtime</h3> 
+       <p>Bagian ini mengandung terkait dengan <a href="realtime-gi-using-enlighten.html">Mencerminkan sistem Penerangan Global Realtime</a>.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Realtime Global Illumination</strong></td> 
+          <td style="text-align:left;">Jika kotak centang ini tercentang, Unity memungkinkan sistem Iluminasi Global Enlighten Realtime di Adegan yang menggunakan Aset Pengaturan Pencahayaan ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Realtime Environment Lighting</strong></td> 
+          <td style="text-align:left;">Aktifkan properti ini untuk menggunakan Enlighten Realtime Global Illumination system untuk menghitung dan memperbarui cahaya ambient secara real-time. <br><br> Properti ini hanya tersedia ketika Enlighten <strong>Realtime Global Illumination</strong> dan <strong>Baked Global Illumination</strong> diaktifkan di Adegan.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="MixedLighting"> </a></p> 
+       <h3>Pencahayaan Campuran</h3> 
+       <p>Bagian ini mengandung pengaturan yang mempengaruhi perilaku <span class="tooltip"><a class="tooltipMoreInfoLink" href="LightMode-Baked.html">Lampu Baked</a><span class="tooltiptext">Komponen ringan yang properti mode ditetapkan ke Baked. Unity pre-kalculates penerangan dari Lampu Baked sebelum runtime, dan tidak termasuk dalam perhitungan pencahayaan runtime. <a href="LightMode-Baked.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#BakedLights">Glossary</a></span></span></span> dan <span class="tooltip"><a href="LightMode-Mixed.html">Lampu Campuran</a><span class="tooltiptext">Komponen ringan yang properti mode diatur ke campuran. Beberapa perhitungan untuk Lampu Campuran dilakukan di muka, dan beberapa perhitungan untuk Lampu Campuran dilakukan pada waktu runtime. Perilaku semua Lampu Campuran di Adegan ditentukan oleh Mode Pencahayaan Adegan. <a href="LightMode-Mixed.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#MixedLights">Glossary</a></span></span></span> di Adegan yang menggunakan Aset Pengaturan Pencahayaan ini.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2">Property:</th> 
+          <th style="text-align:left;">Fungsi:</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Baked Global Illumination</strong></td> 
+          <td style="text-align:left;">Ketika pengaturan ini diaktifkan, Unity memungkinkan sistem Penerangan Global Baked untuk Adegan yang menggunakan Aset Pengaturan Pencahayaan ini. Ketika pengaturan ini dinonaktifkan, Unity menonaktifkan sistem Penerangan Global Baked untuk Adegan yang menggunakan Aset Pengaturan Pencahayaan ini.<br><br> Ketika sistem Penerangan Global Baked diaktifkan, Unity menggunakan lampu Baked di Adegan untuk menyalakan hanya, dan lampu campuran berperilaku sesuai dengan pengaturan <strong>Lighting Mode</strong>. Ketika sistem Penerangan Global Baked dinonaktifkan, Unity memaksa semua lampu Baked dan Campuran di Adegan untuk bertindak seolah-olah mereka adalah Lampu Realtime.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Lighting Mode</strong></td> 
+          <td style="text-align:left;">Tentukan kegunaan Unity <a href="lighting-mode.html">Mode pencahayaan</a> untuk semua Lampu Campuran di Adegan yang menggunakan Aset Pengaturan Pencahayaan ini.<br><br> Ketika Anda mengubah Mode Pencahayaan, Anda perlu membuat kembali data pencahayaan untuk Adegan yang menggunakan Aset Pengaturan Pencahayaan ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Baked Indirect</strong></td> 
+          <td style="text-align:left;">Gunakan <a href="LightMode-Mixed-BakedIndirect.html">Mode Pencahayaan Indirect Baked</a> untuk semua Lampu Campuran di Adegan yang menggunakan Aset Pengaturan Pencahayaan ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Subtractive</strong></td> 
+          <td style="text-align:left;">Gunakan <a href="LightMode-Mixed-Subtractive.html">Mode Pencahayaan Subtractive</a> untuk semua Lampu Campuran di Adegan yang menggunakan Aset Pengaturan Pencahayaan ini.<br><br> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Shadowmask</strong></td> 
+          <td style="text-align:left;">Gunakan <a href="LightMode-Mixed-Shadowmask.html">Mode Pencahayaan Mask Bayangan</a> untuk semua Lampu Campuran di Adegan yang menggunakan Aset Pengaturan Pencahayaan ini.<br><br> </td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="LightmappingSettings"> </a></p> 
+       <h3>Pengaturan Lightmapping</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong><span class="tooltip"><strong>Lightmap</strong><span class="tooltiptext">A pre-rendered texture that contains the effects of light sources on static objects in the scene. Lightmaps are overlaid on top of scene geometry to create the effect of lighting. <a class="tooltipMoreInfoLink" href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Lightmap">Glossary</a></span></span></span> Resolution</strong></td> 
+          <td style="text-align:left;">Tentukan jumlah texels per unit untuk digunakan untuk lightmaps. Meningkatkan nilai ini meningkatkan kualitas peta cahaya, tetapi juga meningkatkan waktu bake. Perhatikan bahwa menggandakan nilai ini menyebabkan jumlah texels untuk quadruple karena menentukan ketinggian dan lebar lightmap. Lihat jumlah <strong>Occupied texels</strong> di area statistik jendela pencahayaan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Lightmap Padding</strong></td> 
+          <td style="text-align:left;">Menentukan pemisahan (dalam unit texel) antara bentuk terpisah dalam peta cahaya panggang. default adalah 2.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Max Lightmap Size</strong></td> 
+          <td style="text-align:left;">Menentukan ukuran (dalam pixel) dari tekstur lightmap penuh, yang menggabungkan wilayah terpisah untuk setiap GameObject disertakan. Nilai default adalah 1024.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Lightmap compression</strong></td> 
+          <td style="text-align:left;">Tingkat kompresi penggunaan Editor untuk lightmaps. <br> - None: Tidak kompres lightmaps. <br> - Kualitas Rendah: Ini dapat menggunakan memori dan penyimpanan yang kurang dari kualitas normal, tetapi juga dapat memperkenalkan artefak visual. <br> - Kualitas Normal: Ini adalah perdagangan yang baik antara penggunaan memori dan kualitas visual. <br> - Kualitas Tinggi: Membutuhkan lebih banyak memori dan penyimpanan dari Kualitas Normal, tetapi memberikan hasil visual yang lebih baik.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><span class="tooltip"><strong>Ambient Occlusion</strong><span class="tooltiptext">A method to approximate how much ambient light (light not coming from a specific direction) can hit a point on a surface.<br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Ambientocclusion">Glossary</a></span></span></span></strong></td> 
+          <td style="text-align:left;">Mengontrol kecerahan relatif permukaan dalam <a class="tooltipMoreInfoLink" href="LightingBakedAmbientOcclusion.html">baked ambient occlusion</a>. Ini hanya berlaku untuk pencahayaan tidak langsung dihitung oleh <span class="tooltip"><strong>lightmapper</strong><span class="tooltiptext">Alat dalam Unity yang bakes lightmap sesuai dengan pengaturan lampu dan geometri di tempat kejadian Anda. <a href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Lightmapper">Glossary</a></span></span></span> yang Anda gunakan untuk memanggang pencahayaan Anda. Diaktifkan secara default. Jika Oklusi Ambient diaktifkan, ia mengekspos tiga pengaturan: Jarak Maks, Kontribusi Indirect, dan Kontribusi Langsung. Untuk semua tiga pengaturan, nilai-nilai yang lebih tinggi menunjukkan kontras yang lebih besar antara area yang terselip dan sepenuhnya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Max Distance</strong></td> 
+          <td style="text-align:left;">Tentukan seberapa jauh sinar sistem pencahayaan untuk menentukan apakah atau tidak menerapkan oklusi terhadap objek. Nilai yang lebih tinggi menghasilkan sinar yang lebih panjang dan berkontribusi lebih banyak bayangan ke lightmap, sementara nilai yang lebih rendah menghasilkan sinar yang lebih pendek yang berkontribusi bayangan hanya ketika benda-benda sangat dekat satu sama lain. Nilai 0 melemparkan sinar panjang tak terbatas yang tidak memiliki jarak maksimum. Nilai default adalah 1.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Indirect Contribution</strong></td> 
+          <td style="text-align:left;">Timbangan kecerahan bounced <span class="tooltip"><strong>ambient light</strong><span class="tooltiptext">Cahaya yang tidak datang dari arah tertentu, dan berkontribusi cahaya yang sama di semua arah ke Adegan. <a class="tooltipMoreInfoLink" href="lighting-window.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Ambientlight">Glossary</a></span></span></span> tidak langsung dan dipancarkan dari benda-benda di peta lampu akhir. Ini adalah nilai antara 0 dan 10. Nilai default adalah 1. Nilai kurang dari 1 mengurangi intensitas, sementara nilai lebih dari 1 meningkatkannya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Direct Contribution</strong></td> 
+          <td style="text-align:left;">Timbangan kecerahan cahaya langsung. Ini adalah nilai antara 0 dan 10. Nilai default adalah 0. Semakin tinggi nilai ini, semakin besar kontras Editor berlaku untuk pencahayaan langsung.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Directional Mode</strong></td> 
+          <td style="text-align:left;">Aktifkan peta lampu untuk menyimpan informasi tentang karakteristik lampu masuk dominan pada setiap titik di permukaan objek. Lihat <a href="LightmappingDirectional.html">Directional Lightmapping</a> untuk informasi lebih lanjut. Modus default adalah <strong>Directional</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Directional</strong></td> 
+          <td style="text-align:left;">Dalam mode <strong>Directional</strong>, Unity menghasilkan peta cahaya kedua untuk menyimpan arah dominan cahaya masuk. Ini memungkinkan untuk membongkar bahan mapan normal untuk bekerja dengan sistem pencahayaan global. <span class="tooltip"><strong>Shaders</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> sampel kedua tekstur lightmap selama rendering. Akibatnya, mode arah membutuhkan sekitar dua kali lebih banyak memori video sebagai mode non-arah untuk data lightmap tambahan. Menghasilkan tekstur arahan tambahan memiliki dampak pada kinerja baking. Lightmap Directional tidak dapat dikodekan pada perangkat keras SM2.0 atau ketika menggunakan GLES2.0.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Non-directional</strong></td> 
+          <td style="text-align:left;"> <strong>Non-directional</strong> mode lightmaps hanya mencakup satu tekstur. Akibatnya, mereka membutuhkan memori video lebih sedikit dan penyimpanan lebih sedikit daripada peta lampu arah, dan lebih cepat untuk decode di naungan. Optimasi ini mengurangi kualitas visual.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Indirect Intensity</strong></td> 
+          <td style="text-align:left;">Menentukan kecerahan cahaya tidak langsung yang disimpan secara real-time dan peta cahaya panggang. Ini adalah nilai antara 0 dan 5. Nilai di atas 1 meningkatkan intensitas cahaya tidak langsung sementara nilai kurang dari 1 mengurangi intensitas cahaya tidak langsung. Nilai default adalah 1.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Albedo Boost</strong></td> 
+          <td style="text-align:left;">Menentukan jumlah bouncing Unity cahaya antara permukaan. Nilai ini antara 1 dan 10. Meningkatkan nilai ini menarik nilai albedo ke putih untuk perhitungan cahaya tidak langsung. Nilai default 1 secara fisik akurat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Lightmap Parameters</strong></td> 
+          <td style="text-align:left;">Parameter Lightmap nilai <span class="tooltip"><strong>Asset stores</strong><span class="tooltiptext">Sebuah perpustakaan yang berkembang dari aset gratis dan komersial yang diciptakan oleh Unity dan anggota komunitas. Menawarkan berbagai aset, dari tekstur, model dan animasi ke seluruh contoh proyek, tutorial dan ekstensi Editor. <a class="tooltipMoreInfoLink" href="AssetStore.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AssetStore">Glossary</a></span></span></span> untuk pengaturan yang relevan dengan Baked Global Illumination. Editor menyediakan beberapa Aset Parameter Lightmap default untuk dipilih, tetapi Anda juga dapat membuat file parameter lightmap Anda sendiri menggunakan opsi <strong>Create New</strong>. Lihat <a href="class-LightmapParameters.html">Parameter Lightmap</a> untuk informasi lebih lanjut. Nilai default adalah <strong>Default-Medium</strong>. Pilihannya adalah Default-Medium, Standard-HighResolution, Default-LowResolution, dan Default-VeryLowResolution.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Beberapa pengaturan spesifik untuk backends lightmapper tertentu. Untuk melihat pengaturan ini, kunjungi halaman untuk lightmapper yang relevan:</p> 
+       <ul> 
+        <li> <a href="progressive-lightmapper.html">CPU Progres Login</a>; juga mencakup pengaturan untuk Progressive GPU Lightmapper<br> </li> 
+        <li> <a href="GI-Enlighten.html">Mencerminkan Penerangan Global Baked</a><br> </li> 
+       </ul> 
+       <p><a name="AutoGeneration"> </a></p> 
+       <h3>Generasi Otomatis</h3> 
+       <p>Ketika Anda melihat Aset Pengaturan Pencahayaan di Inspektur, properti ini berada di bagian atas Inspektur. Ketika Anda melihat Aset Pengaturan Pencahayaan di jendela Pencahayaan, properti ini berada di bagian bawah jendela Pencahayaan, dekat tombol <strong>Generate Lighting</strong>.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Function:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Auto Generate</strong></td> 
+          <td style="text-align:left;">Jika <strong>Auto Generate</strong> diaktifkan, data pencahayaan prekomputer Unity secara otomatis ketika Anda melakukan perubahan pada Adegan.<br><br> Data ini mencakup peta ringan untuk sistem Penerangan Global Baked, data untuk sistem Penerangan Global Enlighten Realtime, Probe Cahaya, dan Probe Reflection.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <br><br>Unity biasanya memulai bake beberapa detik setelah Anda membuat perubahan ke Adegan. Jika <strong>Auto Generate</strong> dinonaktifkan, Anda harus secara manual memanggil bake sendiri, menggunakan tombol <strong>Generate Lighting</strong> di jendela Pencahayaan, atau API <a href="../ScriptReference/Lightmapping.Bake.html">Login Login</a> atau <a href="../ScriptReference/Lightmapping.BakeAsync.html">Lightmapping.BakeAsync</a>.<br><br> Perhatikan bahwa ketika Anda meminta data pencahayaan menggunakan <strong>Auto Generate</strong>, data pencahayaan yang telah ditentukan tidak disimpan sebagai Aset di Proyek Anda. Ini bukan disimpan dalam memori, dan serialisasi sebagai bagian dari Adegan.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <ul> 
+        <li><span class="page-history">Pengaturan pencahayaan Aset ditambahkan dalam <span class="search-words">NewIn20201</span></span></li> 
+       </ul> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="lighting-window.html"></a></span> 
+         <div class="tip">
+           jendela pencahayaan 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="lighting-mode.html"></a></span> 
+         <div class="tip">
+           Mode pencahayaan 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Aliran simpul Sistem Partikel dan dukungan Shader Standar</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="visual-effects.html">Efek visual</a></li> 
+         <li><a href="ParticleSystems.html">Sistem partikel</a></li> 
+         <li><a href="Built-inParticleSystem.html">Sistem Partikel Built-in</a></li> 
+         <li>Sistem Partikel aliran simpul dan dukungan Shader Standar</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="PartSysUsage.html"></a></span> 
+          <div class="tip">
+            Menggunakan Sistem Partikel Built-in 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="PartSysInstancing.html"></a></span> 
+          <div class="tip">
+            Sistem Partikel GPU Login 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Sistem Partikel aliran simpul dan dukungan Shader Standar</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Jika Anda nyaman menulis <span class="tooltip"><strong>Shaders</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Shader">Glossary</a></span></span></span> Anda sendiri, gunakan tambahan ini untuk <a href="../ScriptReference/ParticleSystemRenderer.html">Modul Renderer</a> untuk mengkonfigurasi <span class="tooltip"><strong>Particle Systems</strong><span class="tooltiptext">Komponen yang mensimulasikan entitas fluida seperti cairan, awan dan nyala dengan menghasilkan dan memikat sejumlah besar gambar 2D kecil di tempat kejadian. <a href="class-ParticleSystem.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#particlesystem">Glossary</a></span></span></span> Anda untuk lulus berbagai data ke Shaders kustom Anda.</p> 
+       <p>Ada sejumlah built-in <a href="../ScriptReference/ParticleSystemVertexStream.html">aliran data</a> untuk dipilih, seperti kecepatan, ukuran dan posisi pusat. Selain kemampuan untuk membuat Shader kustom yang kuat, aliran ini memungkinkan sejumlah manfaat yang lebih umum:</p> 
+       <ul> 
+        <li>Gunakan aliran <a href="../ScriptReference/ParticleSystemVertexStream.Tangent.html">Tangent</a> untuk mendukung partikel mapan normal.</li> 
+        <li>Anda dapat menghapus warna dan kemudian menambahkan aliran Tangent <a href="../ScriptReference/ParticleSystemVertexStream.UV2.html">UV2</a> dan <a href="../ScriptReference/ParticleSystemVertexStream.AnimBlend.html">AnimBlend</a> untuk menggunakan Standar Shader pada partikel.</li> 
+        <li>Untuk dengan mudah melakukan campuran tekstur linier buku flip, tambahkan aliran UV2 dan AnimBlend, dan melampirkan Partikel / Anim Alpha Blended Shader (lihat contoh screenshot di bawah ini untuk melihat cara mengatur ini).</li> 
+       </ul> 
+       <p>Ada juga dua aliran data per-partikel kustom (<a href="../ScriptReference/ParticleSystemVertexStreams.Custom1.html">PartikelVertexStreams.Custom1</a> dan <a href="../ScriptReference/ParticleSystemVertexStreams.Custom2.html">PartikelVertexStreams.Custom2</a>), yang dapat diisi dari skrip. Hubungi <a href="../ScriptReference/ParticleSystem.SetCustomParticleData.html">SetCustomParticleData</a> dan <a href="../ScriptReference/ParticleSystem.GetCustomParticleData.html">GetCustomParticleData</a> dengan array data Anda untuk menggunakannya. Ada dua cara menggunakan ini:</p> 
+       <ul> 
+        <li>Untuk mendorong perilaku kustom di <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> dengan melampirkan data Anda sendiri ke partikel; misalnya, melampirkan nilai “health” ke setiap partikel.</li> 
+        <li>Untuk lulus data ini ke Shader dengan menambahkan salah satu dari dua aliran kustom, dengan cara yang sama Anda akan mengirim aliran lain ke Shader Anda (lihat <a href="../ScriptReference/ParticleSystemRenderer.EnableVertexStreams.html">PartikelSystemRenderer.EnableVertexStreams</a>). Untuk dijelaskan pada contoh pertama, mungkin atribut kesehatan kustom Anda sekarang juga dapat menggerakkan beberapa jenis efek visual, serta logika permainan berbasis skrip.</li> 
+       </ul> 
+       <p>Saat menambahkan aliran simpul, Unity akan memberi Anda beberapa informasi dalam kurung, di samping setiap item, untuk membantu Anda membaca data yang benar di naungan Anda:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PartSysVertexStreams-VertexShaders.png" alt=""> 
+       </figure> 
+       <p>Setiap item dalam kurung sesuai dengan input <span class="tooltip"><strong>Vertex Shader</strong><span class="tooltiptext">Program yang berjalan pada setiap simpul model 3D ketika model sedang diberikan. <a class="tooltipMoreInfoLink" href="SL-ShaderPrograms.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#vertexshader">Glossary</a></span></span></span>, yang harus Anda tentukan dalam Shader Anda. Berikut adalah struktur input yang benar untuk konfigurasi ini.</p> 
+       <pre><code>            struct appdata_t {
+                float4 vertex : POSITION;
+                float3 normal : NORMAL;
+                fixed4 color : COLOR;
+                float4 texcoords : TEXCOORD0;
+                float texcoordBlend : TEXCOORD1;
+            };
+</code></pre> 
+       <p>Perhatikan bahwa UV dan UV2 dilewatkan dalam berbagai bagian TEXCOORD0, jadi kami menggunakan deklarasi tunggal untuk keduanya. Untuk mengakses setiap orang di naungan Anda, Anda akan menggunakan swizzle xy dan zw. Ini memungkinkan Anda untuk mengemas data simpul Anda secara efisien.</p> 
+       <p>Berikut ini adalah contoh dari buku flip animasi Shader. Ini menggunakan input default (<strong>Position</strong>, <span class="tooltip"><strong>Normal</strong><span class="tooltiptext">Arah tegak lurus ke permukaan jala, diwakili oleh vektor. Unity menggunakan normal untuk menentukan orientasi objek dan menerapkan pencukur. <a class="tooltipMoreInfoLink" href="VectorCookbook.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Normal">Glossary</a></span></span></span>, <strong>Color</strong>, <strong>UV</strong>), tetapi juga menggunakan dua aliran tambahan untuk aliran UV kedua (<strong>UV2</strong>) dan informasi bingkai buku flip (<strong>AnimBlend</strong>).</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PartSysVertexStreams-Inspector.png" alt=""> 
+       </figure> 
+       <pre><code>Shader "Particles/Anim Alpha Blended" {
+Properties {
+    _TintColor ("Tint Color", Color) = (0.5,0.5,0.5,0.5)
+    _MainTex ("Particle Texture", 2D) = "white" {}
+    _InvFade ("Soft Particles Factor", Range(0.01,3.0)) = 1.0
+}
+
+Category {
+    Tags { "Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent" "PreviewType"="Plane" }
+    Blend SrcAlpha OneMinusSrcAlpha
+    ColorMask RGB
+    Cull Off Lighting Off ZWrite Off
+
+    SubShader {
+        Pass {
+        
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #pragma target 2.0
+            #pragma multi_compile_particles
+            #pragma multi_compile_fog
+            
+            #include "UnityCG.cginc"
+
+            sampler2D _MainTex;
+            fixed4 _TintColor;
+            
+            struct appdata_t {
+                float4 vertex : POSITION;
+                fixed4 color : COLOR;
+                float4 texcoords : TEXCOORD0;
+                float texcoordBlend : TEXCOORD1;
+                UNITY_VERTEX_INPUT_INSTANCE_ID
+            };
+
+            struct v2f {
+                float4 vertex : SV_POSITION;
+                fixed4 color : COLOR;
+                float2 texcoord : TEXCOORD0;
+                float2 texcoord2 : TEXCOORD1;
+                fixed blend : TEXCOORD2;
+                UNITY_FOG_COORDS(3)
+                #ifdef SOFTPARTICLES_ON
+                float4 projPos : TEXCOORD4;
+                #endif
+                UNITY_VERTEX_OUTPUT_STEREO
+            };
+            
+            float4 _MainTex_ST;
+
+            v2f vert (appdata_t v)
+            {
+                v2f o;
+                UNITY_SETUP_INSTANCE_ID(v);
+                UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o); 
+                o.vertex = UnityObjectToClipPos(v.vertex);
+                #ifdef SOFTPARTICLES_ON
+                o.projPos = ComputeScreenPos (o.vertex);
+                COMPUTE_EYEDEPTH(o.projPos.z);
+                #endif
+                o.color = v.color * _TintColor;
+                o.texcoord = TRANSFORM_TEX(v.texcoords.xy,_MainTex);
+                o.texcoord2 = TRANSFORM_TEX(v.texcoords.zw,_MainTex);
+                o.blend = v.texcoordBlend;
+                UNITY_TRANSFER_FOG(o,o.vertex);
+                return o;
+            }
+
+            sampler2D_float _CameraDepthTexture;
+            float _InvFade;
+            
+            fixed4 frag (v2f i) : SV_Target
+            {
+                #ifdef SOFTPARTICLES_ON
+                float sceneZ = LinearEyeDepth (SAMPLE_DEPTH_TEXTURE_PROJ(_CameraDepthTexture, UNITY_PROJ_COORD(i.projPos)));
+                float partZ = i.projPos.z;
+                float fade = saturate (_InvFade * (sceneZ-partZ));
+                i.color.a *= fade;
+                #endif
+                
+                fixed4 colA = tex2D(_MainTex, i.texcoord);
+                fixed4 colB = tex2D(_MainTex, i.texcoord2);
+                fixed4 col = 2.0f * i.color * lerp(colA, colB, i.blend);
+                UNITY_APPLY_FOG(i.fogCoord, col);
+                return col;
+            }
+            ENDCG 
+        }
+    }   
+}
+}
+
+
+</code></pre> 
+       <p>Hal ini juga memungkinkan untuk menggunakan <span class="tooltip"><strong>Surface Shaders</strong><span class="tooltiptext">Cara merampingkan naungan menulis untuk Pipeline Render Built-in. <a class="tooltipMoreInfoLink" href="SL-SurfaceShaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SurfaceShader">Glossary</a></span></span></span> dengan sistem ini, meskipun ada beberapa hal tambahan untuk menyadari:</p> 
+       <ul> 
+        <li>Struktur input ke fungsi permukaan Anda tidak sama dengan struktur input ke Shader simpul. Anda harus menyediakan struktur input simpul vertex Shader Anda sendiri. Lihat di bawah ini misalnya, di mana itu disebut <code>appdata_particles</code>.</li> 
+        <li>Ketika permukaan Shaders dibangun, ada penanganan variabel otomatis yang namanya dimulai dengan token tertentu. Yang paling terkenal adalah <code>uv</code>. Untuk mencegah penanganan otomatis dari menyebabkan masalah di sini, pastikan untuk memberikan input UV Anda nama yang berbeda (misalnya, "texcoord").</li> 
+       </ul> 
+       <p>Berikut ini adalah fungsi yang sama dengan contoh pertama, tetapi dalam Shader Permukaan:</p> 
+       <pre><code>Shader "Particles/Anim Alpha Blend Surface" {
+    Properties {
+        _Color ("Color", Color) = (1,1,1,1)
+        _MainTex ("Albedo (RGB)", 2D) = "white" {}
+        _Glossiness ("Smoothness", Range(0,1)) = 0.5
+        _Metallic ("Metallic", Range(0,1)) = 0.0
+    }
+    SubShader {
+        Tags {"Queue"="Transparent" "RenderType"="Transparent"}
+        Blend SrcAlpha OneMinusSrcAlpha
+        ZWrite off
+        LOD 200
+        
+        CGPROGRAM
+        // Physically based Standard lighting model, and enable shadows on all light types
+        #pragma surface surf Standard alpha vertex:vert
+
+        // Use shader model 3.0 target, to get nicer looking lighting
+        #pragma target 3.0
+
+        sampler2D _MainTex;
+
+         struct appdata_particles {
+            float4 vertex : POSITION;
+            float3 normal : NORMAL;
+            float4 color : COLOR;
+            float4 texcoords : TEXCOORD0;
+            float texcoordBlend : TEXCOORD1;
+            };
+
+
+        struct Input {
+            float2 uv_MainTex;
+            float2 texcoord1;
+            float blend;
+            float4 color;
+        };
+
+
+        void vert(inout appdata_particles v, out Input o) {
+            UNITY_INITIALIZE_OUTPUT(Input,o);
+            o.uv_MainTex = v.texcoords.xy;
+            o.texcoord1 = v.texcoords.zw;
+            o.blend = v.texcoordBlend;
+            o.color = v.color;
+          }
+
+
+        half _Glossiness;
+        half _Metallic;
+        fixed4 _Color;
+
+
+        void surf (Input IN, inout SurfaceOutputStandard o) {
+            fixed4 colA = tex2D(_MainTex, IN.uv_MainTex);
+            fixed4 colB = tex2D(_MainTex, IN.texcoord1);
+            fixed4 c = 2.0f * IN.color * lerp(colA, colB, IN.blend) * _Color;
+                 
+            o.Albedo = c.rgb;
+            // Metallic and smoothness come from slider variables
+            o.Metallic = _Metallic;
+            o.Smoothness = _Glossiness;
+            o.Alpha = c.a;
+        }
+        ENDCG
+    }
+    FallBack "Diffuse"
+}
+
+</code></pre> 
+       <hr> 
+       <ul> 
+        <li><span class="page-edit">2017–05–15 Login</span></li> 
+       </ul> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="PartSysUsage.html"></a></span> 
+         <div class="tip">
+           Menggunakan Sistem Partikel Built-in 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="PartSysInstancing.html"></a></span> 
+         <div class="tip">
+           Sistem Partikel GPU Login 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,857 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Ekspor Data Baku Unity Analytics</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="monetization" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UnityServices.html">Layanan Unity</a></li> 
+         <li><a href="UnityAnalytics.html">Analisis Unity</a></li> 
+         <li>Home &gt; Sitemap</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UnityAnalyticsUserAttributes.html"></a></span> 
+          <div class="tip">
+            Atribut Pengguna 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UnityAnalyticsDataReset.html"></a></span> 
+          <div class="tip">
+            Data reset 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Home &gt; Sitemap</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <h2>Overview</h2> 
+       <p>Database Administrator Ekspor memberi Anda akses penuh ke data acara mentah. Ini memungkinkan Anda menggunakan data dengan cara apa pun yang Anda pilih, misalnya untuk membangun pertanyaan atau visualisasi data kustom.</p> 
+       <p>Ada dua cara Anda dapat mengakses ekspor data mentah:</p> 
+       <ul> 
+        <li>Antarmuka pengguna dasbor <span class="tooltip"><strong>Unity Analytics</strong><span class="tooltiptext">Sebuah platform data yang menyediakan analitik untuk permainan Unity Anda. <a class="tooltipMoreInfoLink" href="UnityAnalytics.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UnityAnalytics">Glossary</a></span></span></span> dashboard user interface</li> 
+        <li>REST API</li> 
+       </ul> 
+       <p>Database Ekspor menyediakan data dari Juni 2016.</p> 
+       <h2>Antarmuka pengguna dasbor analis</h2> 
+       <p>Dasbor Unity Analytics menyediakan cara untuk mengekspor dan mengakses data acara baku Anda tanpa menulis kode. Di dashboard Unity Analytics Anda (), pilih proyek Anda dan arahkan ke <span class="tooltip"><strong>Analytics</strong><span class="tooltiptext"><strong>Unity Analytics</strong><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Analytics">Glossary</a></span></span></span> &gt; <strong>Raw Data Export</strong>.</p> 
+       <p>Kemudian ikuti langkah-langkah ini di bagian <strong>Export</strong> dari layar itu:</p> 
+       <ol> 
+        <li>Tentukan <strong>Data Set</strong> yang ingin Anda ekspor (seperti appRunning, appStart, custom, deviceInfo, atau transaksi).</li> 
+        <li>Tentukan <strong>Start Date</strong>, atau secara alternatif terus mengekspor data dari pekerjaan sebelumnya dengan memilih <strong>Previous Job Id</strong> dari kotak drop-down.</li> 
+        <li>Tentukan <strong>End Date</strong>.</li> 
+        <li>Format file default ke JSON. Tentukan format file pilihan Anda dengan mengklik dan memilih item dari menu drop-down di bawah <strong>Export as JSON</strong>.</li> 
+       </ol> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UnityAnalyticsRawDataExport_ExportAndActivity.png" alt="The Export section and Activity table on the Raw Data Export screen"> 
+        <figcaption>
+          Bagian 
+         <strong>Export</strong> dan tabel 
+         <strong>Activity</strong> pada layar 
+         <strong>Raw Data Export</strong> screen 
+        </figcaption> 
+       </figure> 
+       <p>Database Ekspor secara otomatis menciptakan pekerjaan dan menampilkannya di tabel <strong>Activity</strong> di layar.</p> 
+       <p>Setelah pekerjaan dilakukan, Anda dapat mengunduh data Anda dengan memilih file dari kolom <strong>Download</strong>.</p> 
+       <h2>API documentation</h2> 
+       <p>Setiap titik data yang dikirim ke Unity Analytics disimpan di toko data Unity. API Ekspor Data Baku memungkinkan Anda untuk mengunduh data acara baku Anda dalam file sebagai data diterima dan disimpan.</p> 
+       <h3>Requirements</h3> 
+       <p>Setiap permintaan memerlukan otentikasi dasar HTTP menggunakan ID Proyek Unity Anda (UPID) dan Kunci API.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AnalyticsAuthentication.png" alt=""> 
+       </figure> 
+       <h3>Limitations</h3> 
+       <ul> 
+        <li>Periode permintaan (<code>startDate</code> hingga <code>endDate</code>) terbatas pada 31 hari.</li> 
+        <li>Batasan penggunaan dapat dikenakan perubahan.</li> 
+        <li>Unity Analytics mempertahankan file data baku yang dihasilkan untuk permintaan selama 14 hari. (Untuk mengakses data setelah 14 hari telah berlalu, buat permintaan baru.)</li> 
+       </ul> 
+       <h3>User workflow</h3> 
+       <p>Untuk mengekspor data baku, sebut Buat API Ekspor Data Baku. Permintaan ini memicu pekerjaan asinkron untuk memproses data. Waktu ini diperlukan tergantung pada berapa banyak data yang diekspor.</p> 
+       <p>Untuk mendapatkan status atau hasil saat ini, poll menggunakan API Ekspor Data Baku. Setelah ekspor selesai, Anda bisa mendapatkan hasil dari API ini. Hasilnya berisi daftar file dan URL unduhan yang sesuai. Anda dapat memutar melalui URL dan mengunduh data yang diekspor.</p> 
+       <p><strong>Notes:</strong></p> 
+       <ul> 
+        <li>Semua tanggal dan waktu dalam permintaan atau tanggapan berada di zona waktu UTC.</li> 
+        <li>Permintaan API atau tanggapan menggunakan format JSON (yang diformat untuk pembacaan dalam dokumen ini). Format file data dapat dikonfigurasi.</li> 
+        <li>Data diekspor dalam file terkompresi .gzip.</li> 
+        <li>Basis URL untuk API adalah .</li> 
+       </ul> 
+       <h3>Buat Ekspor Data Baku</h3> 
+       <p>Database Ekspor spesifik untuk proyek dan spesifik untuk satu dataset (tipe acara). Periode permintaan terbatas pada 31 hari.</p> 
+       <p>Gunakan metode HTTP berikut untuk membuat Ekspor Data Baku:</p> 
+       <pre><code>POST api/v2/projects/{UNITY_PROJECT_ID}/rawdataexports
+</code></pre> 
+       <p>Argument disediakan dalam payload atas permintaan, dan dalam format JSON dengan aplikasi / json Content-Type.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Request argument</strong></th> 
+          <th style="text-align:left;"><strong>Required or optional</strong></th> 
+          <th style="text-align:left;"><strong>Type</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>startDate</strong></td> 
+          <td style="text-align:left;">Diperlukan kecuali lanjutkan Dari ditentukan</td> 
+          <td style="text-align:left;">string</td> 
+          <td style="text-align:left;">Tanggal awal (termasuk) ekspor. Tanggal dinyatakan dalam format YY-MM-DD (ISO-8601).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>endDate</strong></td> 
+          <td style="text-align:left;">Required</td> 
+          <td style="text-align:left;">String</td> 
+          <td style="text-align:left;">Data akhir (eksklusif) ekspor. Tanggal diungkapkan dalam format YY-MM-DD (ISO 8601). Ini adalah tanggal di mana untuk menutup query. Ketika mencari hari ini, gunakan tanggal hari berikutnya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>format</strong></td> 
+          <td style="text-align:left;">Required</td> 
+          <td style="text-align:left;">String</td> 
+          <td style="text-align:left;">Format data output: json (newline-delimited json) atau tsv.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>dataset</strong></td> 
+          <td style="text-align:left;">Required</td> 
+          <td style="text-align:left;">String</td> 
+          <td style="text-align:left;">Salah satu jenis acara berikut: appStart, appRunning, perangkat Info, kustom, atau transaksi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>continueFrom</strong></td> 
+          <td style="text-align:left;">Optional</td> 
+          <td style="text-align:left;">String</td> 
+          <td style="text-align:left;">ID Ekspor Data Baku untuk terus mengekspor data dari. Ini digunakan untuk melanjutkan ekspor sebelumnya dari titik selesai. Lihat Melanjutkan informasi lebih lanjut. Alih-alih menentukan startDate, ID Ekspor Data Baku sebelumnya dapat ditentukan dalam melanjutkanFrom. Ini adalah kesalahan untuk menentukan terusFrom dan startDate.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Template untuk permintaan menggunakan cURL di baris perintah:</p> 
+       <pre><code>curl --user {UNITY_PROJECT_ID}:{API_KEY} --request POST --header "Content-Type: application/json" --data {REQUEST_JSON}
+https://analytics.cloud.unity3d.com/api/v2/projects/{UNITY_PROJECT_ID}/rawdataexports
+</code></pre> 
+       <p>Contoh nilai:</p> 
+       <pre><code>UNITY_PROJECT_ID = aa43ae0a-a7a7-4016-ae96-e253bb126aa8
+API_KEY = 166291ff148b2878375a8e54aebb1549
+REQUEST_JSON = { "startDate": "2016-05-15" , "endDate": "2016-05-16", "format": "tsv", "dataset": "appStart" }
+</code></pre> 
+       <p>Permintaan aktual menggunakan nilai contoh:</p> 
+       <pre><code>curl --user aa43ae0a-a7a7-4016-ae96-e253bb126aa8:166291ff148b2878375a8e54aebb1549 --request POST --header "Content-Type: application/json" --data '{ "startDate": "2016-05-15" , "endDate": "2016-05-16", "format": "tsv", "dataset": "appStart" }' https://analytics.cloud.unity3d.com/api/v2/projects/aa43ae0a-a7a7-4016-ae96-e253bb126aa8/rawdataexports
+</code></pre> 
+       <p>Respon menggunakan Atribut Ekspor Data Baku yang umum dalam format JSON.</p> 
+       <h4>Tanggapan Ekspor Data Baku</h4> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Response attribute</strong></th> 
+          <th style="text-align:left;"><strong>Type</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>id</strong></td> 
+          <td style="text-align:left;">String</td> 
+          <td style="text-align:left;">ID Ekspor Data Baku.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>upid</strong></td> 
+          <td style="text-align:left;">String</td> 
+          <td style="text-align:left;">ID Proyek Unity.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>createdAt</strong></td> 
+          <td style="text-align:left;">String</td> 
+          <td style="text-align:left;">Waktu yang dibuat dalam format ISO 8601.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>status</strong></td> 
+          <td style="text-align:left;">string</td> 
+          <td style="text-align:left;">Status saat ini ekspor. Nilai yang mungkin adalah: berjalan, selesai, atau gagal.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>duration</strong></td> 
+          <td style="text-align:left;">Long</td> 
+          <td style="text-align:left;">Waktu yang dibutuhkan untuk mengekspor data (dalam mili detik).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>request</strong></td> 
+          <td style="text-align:left;">Json</td> 
+          <td style="text-align:left;">argumen permintaan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>result</strong></td> 
+          <td style="text-align:left;">Json</td> 
+          <td style="text-align:left;">Hasilnya mengandung atribut yang mendetail data yang diekspor. Hasilnya hanya tersedia setelah ekspor berhasil diselesaikan. Lihat di bawah ini untuk atribut hasil.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>result.size</strong></td> 
+          <td style="text-align:left;">Long</td> 
+          <td style="text-align:left;">Total ukuran data yang diekspor (dalam byte).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>result.eventCount</strong></td> 
+          <td style="text-align:left;">Long</td> 
+          <td style="text-align:left;">Jumlah total peristiwa yang diekspor.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>result.intraDay</strong></td> 
+          <td style="text-align:left;">Boolean</td> 
+          <td style="text-align:left;">Ketika permintaan termasuk hari saat ini mungkin tidak mengandung semua data untuk hari. Atribut ini adalah TRUE jika data tidak lengkap untuk hari terakhir.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>result.fileList</strong></td> 
+          <td style="text-align:left;">Json</td> 
+          <td style="text-align:left;">Daftar file yang berisi data yang diekspor. Daftar file kosong ketika tidak ada data.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>result.fileList.name</strong></td> 
+          <td style="text-align:left;">String</td> 
+          <td style="text-align:left;">Nama file.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>result.fileList.url</strong></td> 
+          <td style="text-align:left;">String</td> 
+          <td style="text-align:left;">URL download untuk file. File dikompresi dalam format gzip.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>result.fileList.size</strong></td> 
+          <td style="text-align:left;">Long</td> 
+          <td style="text-align:left;">Ukuran file di byte.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>result.fileList.date</strong></td> 
+          <td style="text-align:left;">String</td> 
+          <td style="text-align:left;">File berisi acara untuk tanggal tertentu ini. Tanggal ini didasarkan pada waktu pengiriman acara. Mungkin ada beberapa file untuk tanggal yang sama. Tanggal dalam format ISO 8601.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Contoh tanggapan:</p> 
+       <pre><code>{  
+   "id":"8228d1e9-31b3-4a5e-aabe-55d9c8afa052",
+   "upid":"beff3f49-b9ed-41a4-91ea-677e9b85e71e",
+   "createdAt":"2016-05-10T10:10:10.100+0000",
+   "status":"running",
+   "duration" : 0,
+   "request":{  
+      "startDate":"2016-05-01",
+      "endDate":"2016-05-02",
+      "format":"json",
+      "dataset":"appRunning"
+   }
+}
+</code></pre> 
+       <h4>Lanjutkan pembuatan dari Ekspor Data Baku</h4> 
+       <p>Ketika Anda menjalankan Ekspor Data Baku berkala, Anda harus memberikan melanjutkan Dari argumen bukan awal untuk memastikan Anda terus dari Ekspor Data Baku sebelumnya. ID Ekspor Data Baku Prior dapat dipetik melalui GET API atau diakses melalui Dasbor.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AnalyticsPriorRawData.png" alt="Prior Raw Data Exports in the Unity Analytics Project Dashboard"> 
+        <figcaption>
+          Ekspor Data Baku Prior di Dashboard Proyek Unity Analytics 
+        </figcaption> 
+       </figure> 
+       <h3>Dapatkan Ekspor Data Baku</h3> 
+       <p>Gunakan metode HTTP berikut untuk mendapatkan status Ekspor Data Baku tertentu atau ekspor berkelanjutan:</p> 
+       <pre><code>GET api/v2/projects/{UNITY_PROJECT_ID}/rawdataexports/{raw_data_export_id} 
+</code></pre> 
+       <p>Semua argumen yang diperlukan adalah bagian dari jalur URL.</p> 
+       <p>Contoh permintaan:</p> 
+       <pre><code>curl --user {UNITY_PROJECT_ID}:${API_KEY} https://analytics.cloud.unity3d.com/api/v2/projects/{UNITY_PROJECT_ID}/rawdataexports/${ID}
+</code></pre> 
+       <p>Respon adalah Ekspor Data Baku dalam format JSON. Hal ini sama dengan respons dalam Membuat Ekspor Data Baku.</p> 
+       <p>Contoh respons:</p> 
+       <pre><code>{  
+   "id":"6601f70e-6a0b-48ed-909f-26711af82b49",
+   "status":"completed",
+   "createdAt":"2016-05-21T04:41:54.000+0000",
+   "duration":8631714000,
+   "request":{  
+      "startDate":"2016-02-11T00:00:00.000+0000",
+      "endDate":"2016-03-11T00:00:00.000+0000",
+      "format":"tsv",
+      "dataset":"custom"
+   },
+   "result":{  
+      "size":78355,
+      "eventCount":17473,
+      "fileList":[  
+         {  
+            "name":"headers.gz",
+            "url":"https://uca-export.s3.amazonaws.com/staging/devTest/custom/appid%3DUNITY_PROJECT_ID/jid%3D6601f70e-6a0b-48ed-909f-26711af82b49/headers.gz?AWSAccessKeyId=AKIAJUXGNF66F4XPWSWA&amp;Expires=1463872651&amp;Signature=PnzIeeI%2FNxSOlKkLVpLcfK%2FxVpU%3D",
+            "size":105
+         },
+         {  
+            "name":"part-4b0cf376-3478-4bc8-845e-f73aff5c0be4.gz",
+            "url":"https://uca-export.s3.amazonaws.com/staging/devTest/custom/appid%3DUNITY_PROJECT_ID/jid%3D6601f70e-6a0b-48ed-909f-26711af82b49/part-4b0cf376-3478-4bc8-845e-f73aff5c0be4.gz?AWSAccessKeyId=AKIAJUXGNF66F4XPWSWA&amp;Expires=1463872651&amp;Signature=xZk3%2BzQNTQ6yjK2Mh%2FaH338ABn8%3D",
+            "size":78250,
+            "date":"2016-02-13T00:00:00.000+0000"
+         }
+      ],
+      "intraDay":false
+   }
+}
+</code></pre> 
+       <h3>Daftar semua Ekspor Data Baku</h3> 
+       <p>Gunakan metode HTTP ini untuk mendapatkan daftar semua Ekspor Data Baku untuk proyek tertentu:</p> 
+       <pre><code>GET api/v2/projects/{UNITY_PROJECT_ID}/rawdataexports
+</code></pre> 
+       <p>Semua argumen yang diperlukan adalah bagian dari jalur URL.</p> 
+       <p>Contoh permintaan:</p> 
+       <pre><code>curl --user {UNITY_PROJECT_ID}:${API_KEY} https://analytics.cloud.unity3d.com/api/v2/projects/${UNITY_PROJECT_ID}/rawdataexports/
+</code></pre> 
+       <p>Respon adalah daftar Ekspor Data Baku dalam format JSON. Lihat Tanggapan Ekspor Data Mentah Atribut untuk definisi setiap elemen daftar ekspor.</p> 
+       <p>Contoh respons:</p> 
+       <pre><code>[
+{  
+   "id":"6601f70e-6a0b-48ed-909f-26711af82b49",
+   "status":"completed",
+   "createdAt":"2016-05-21T04:41:54.000+0000",
+   "duration":8631714000,
+   "request":{  
+      "startDate":"2016-02-11T00:00:00.000+0000",
+      "endDate":"2016-03-11T00:00:00.000+0000",
+      "format":"tsv",
+      "dataset":"custom"
+   },
+   "result":{  
+      "size":78355,
+      "eventCount":17473,
+      "fileList":[  
+         {  
+            "name":"headers.gz",
+            "url":"https://uca-export.s3.amazonaws.com/staging/devTest/custom/appid%3DUNITY_PROJECT_ID/jid%3D6601f70e-6a0b-48ed-909f-26711af82b49/headers.gz?AWSAccessKeyId=AKIAJUXGNF66F4XPWSWA&amp;Expires=1463872651&amp;Signature=PnzIeeI%2FNxSOlKkLVpLcfK%2FxVpU%3D",
+            "size":105
+         },
+         {  
+            "name":"part-4b0cf376-3478-4bc8-845e-f73aff5c0be4.gz",
+            "url":"https://uca-export.s3.amazonaws.com/staging/devTest/custom/appid%3DUNITY_PROJECT_ID/jid%3D6601f70e-6a0b-48ed-909f-26711af82b49/part-4b0cf376-3478-4bc8-845e-f73aff5c0be4.gz?AWSAccessKeyId=AKIAJUXGNF66F4XPWSWA&amp;Expires=1463872651&amp;Signature=xZk3%2BzQNTQ6yjK2Mh%2FaH338ABn8%3D",
+            "size":78250,
+            "date":"2016-02-13T00:00:00.000+0000"
+         }
+      ],
+      "intraDay":false
+   }
+},
+{  
+   "id":"6601f70e-6a0b-48ed-909f-26711af82b48",
+   "status":"completed",
+   "createdAt":"2016-05-21T04:41:54.000+0000",
+   "duration":8631714000,
+   "request":{  
+      "startDate":"2016-02-11T00:00:00.000+0000",
+      "endDate":"2016-03-11T00:00:00.000+0000",
+      "format":"tsv",
+      "dataset":"custom"
+   },
+   "result":{  
+      "size":78355,
+      "eventCount":17473,
+      "fileList":[  
+         {  
+            "name":"headers.gz",
+            "url":"https://uca-export.s3.amazonaws.com/staging/devTest/custom/appid%3DUNITY_PROJECT_ID/jid%3D6601f70e-6a0b-48ed-909f-26711af82b48/headers.gz?AWSAccessKeyId=AKIAJUXGNF66F4XPWSWA&amp;Expires=1463872651&amp;Signature=PnzIeeI%2FNxSOlKkLVpLcfK%2FxVpU%3D",
+            "size":105
+         },
+         {  
+            "name":"part-4b0cf376-3478-4bc8-845e-f73aff5c0be4.gz",
+            "url":"https://uca-export.s3.amazonaws.com/staging/devTest/custom/appid%3DUNITY_PROJECT_ID/jid%3D6601f70e-6a0b-48ed-909f-26711af82b48/part-4b0cf376-3478-4bc8-845e-f73aff5c0be4.gz?AWSAccessKeyId=AKIAJUXGNF66F4XPWSWA&amp;Expires=1463872651&amp;Signature=xZk3%2BzQNTQ6yjK2Mh%2FaH338ABn8%3D",
+            "size":78250,
+            "date":"2016-02-13T00:00:00.000+0000"
+         }
+      ],
+      "intraDay":false
+   }
+}
+]
+</code></pre> 
+       <h3>TSV format</h3> 
+       <p>Jika Anda memilih untuk mengekspor dalam format TSV, header disediakan dalam file terpisah di <strong>headers.gz</strong>. File data tidak termasuk header.</p> 
+       <p>Contoh berkas header:</p> 
+       <pre><code>ts  appid   type    userid  sessionid   platform    sdk_ver debug_device    user_agent  submit_time name    custom_params
+</code></pre> 
+       <h3>Dataset</h3> 
+       <p>Setiap enam jenis data (tipe acara) berbeda. Lihat di bawah ini untuk definisi skema mereka.</p> 
+       <p><strong>Notes:</strong></p> 
+       <ul> 
+        <li> <code>ts</code> adalah timestamp di mana acara itu dihasilkan pada perangkat. Perhatikan bahwa timetamps yang dihasilkan perangkat dapat disembunyikan karena jam perangkat dan latensi dalam menerima acara.</li> 
+        <li> <code>submit_time</code> adalah timestamp di mana acara diterima oleh Unity Analytics.</li> 
+        <li>Jika suatu bidang dalam catatan tidak memiliki data, nilai bidang tersebut ditetapkan ke nilai default untuk jenis data lapangan (<code>0</code> untuk angka, <code>""</code> untuk string, dan <code>false</code> untuk bool). Bidang bersarang, seperti bidang IAP <code>TransactionEvent.receipt</code>, dalam ekspor JSON-format adalah pengecualian terhadap kebijakan ini. Dalam ekspor JSON-format bidang bersarang, setiap bidang yang tidak mengandung data tidak termasuk dalam objek JSON untuk catatan itu.</li> 
+       </ul> 
+       <h4>Acara AppStart</h4> 
+       <pre><code>{
+   "namespace":"com.unity.analytics.commons.schema",
+   "name":"AppStartEvent",
+   "type":"record",
+   "fields":[
+       {"name": "ts",   "type": "long", "default": 0}, 
+       {"name": "appid", "type": "string", "default": ""},
+       {"name": "type", "type": "string", "default": ""}, 
+       {"name": "userid", "type": "string", "default": ""},
+       {"name": "sessionid", "type": "string", "default": ""},
+       {"name": "platform", "type": "string", "default": ""},
+       {"name": "sdk_ver", "type": "string", "default": ""},
+       {"name": "debug_device", "type": "boolean", "default": false},
+       {"name": "user_agent", "type": "string", "default": ""},
+       {"name": "submit_time", "type": "long", "default": 0} 
+   ]
+}  
+</code></pre> 
+       <h4>Acara AppRunning</h4> 
+       <pre><code>{
+   "namespace":"com.unity.analytics.commons.schema",
+   "name":"AppRunningEvent",
+   "type":"record",
+   "fields":[
+       {"name": "ts",   "type": "long", "default": 0}, 
+       {"name": "appid", "type": "string", "default": ""},
+       {"name": "type", "type": "string", "default": ""},
+       {"name": "userid", "type": "string", "default": ""},
+       {"name": "sessionid", "type": "string", "default": ""},
+       {"name": "platform", "type": "string", "default": ""},
+       {"name": "sdk_ver", "type": "string", "default": ""},
+       {"name": "debug_device", "type": "boolean", "default": false},
+       {"name": "user_agent", "type": "string", "default": ""},
+       {"name": "submit_time", "type": "long", "default": 0}, 
+       {"name": "duration", "type": "int", "default": 0}
+   ]
+}
+</code></pre> 
+       <h4>Acara kustom</h4> 
+       <pre><code>{
+   "namespace":"com.unity.analytics.commons.schema",
+   "name":"CustomEvent",
+   "type":"record",
+   "fields":[
+       {"name": "ts",   "type": "long", "default": 0}, 
+       {"name": "appid", "type": "string", "default": ""},
+       {"name": "type", "type": "string", "default": ""},
+       {"name": "userid", "type": "string", "default": ""},
+       {"name": "sessionid", "type": "string", "default": ""},
+       {"name": "platform", "type": "string", "default": ""},
+       {"name": "sdk_ver", "type": "string", "default": ""},
+       {"name": "debug_device", "type": "boolean", "default": false},
+       {"name": "user_agent", "type": "string", "default": ""},
+       {"name": "submit_time", "type": "long", "default": 0}, 
+       {"name": "name", "type": "string", "default": ""},
+       {
+           "name":"custom_params",
+           "type":["null",{
+               "type":"map",
+               "values": ["string","null"],
+               "default": ""
+           }],
+           "default": null
+       }
+   ]
+}
+</code></pre> 
+       <h4>DeviceInfo event</h4> 
+       <pre><code>{
+   "namespace":"com.unity.analytics.commons.schema",
+   "name":"DeviceInfoEvent",
+   "type":"record",
+   "fields":[
+       {"name": "ts",   "type": "long", "default": 0}, 
+       {"name": "appid", "type": "string", "default": ""},
+       {"name": "type", "type": "string", "default": ""}, 
+       {"name": "userid", "type": "string", "default": ""},
+       {"name": "sessionid", "type": "string", "default": ""},
+       {"name": "platform", "type": "string", "default": ""},
+       {"name": "sdk_ver", "type": "string", "default": ""},
+       {"name": "debug_device", "type": "boolean", "default": false},
+       {"name": "user_agent", "type": "string", "default": ""},
+       {"name": "submit_time", "type": "long", "default": 0}, 
+       {"name": "debug_build", "type": "boolean", "default": false},
+       {"name": "rooted_jailbroken", "type": "boolean", "default": false},
+       {"name": "processor_type", "type": "string", "default": ""},
+       {"name": "system_memory_size", "type": "string", "default": ""},
+       {"name": "make", "type": "string", "default": ""},
+       {"name": "app_ver", "type": "string", "default": ""},
+       {"name": "license_type", "type": "string", "default": ""},
+       {"name": "app_install_mode", "type": "string", "default": ""},
+       {"name": "model", "type": "string", "default": ""},
+       {"name": "engine_ver", "type": "string", "default": ""},
+       {"name": "os_ver", "type": "string", "default": ""},
+       {"name": "app_name", "type": "string", "default": ""},
+       {"name": "timezone", "type": "string", "default": ""},
+       {"name": "ads_tracking", "type": "boolean", "default": false}
+   ]
+}  
+</code></pre> 
+       <h4>Acara transaksi</h4> 
+       <pre><code>{
+   "namespace":"com.unity.analytics.commons.schema",
+   "name":"TransactionEvent",
+   "type":"record",
+   "fields":[
+       {"name": "ts",   "type": "long", "default": 0},
+       {"name": "appid", "type": "string", "default": ""},
+       {"name": "type", "type": "string", "default": ""},
+       {"name": "userid", "type": "string", "default": ""},
+       {"name": "sessionid", "type": "string", "default": ""},
+       {"name": "platform", "type": "string", "default": ""},
+       {"name": "sdk_ver", "type": "string", "default": ""},
+       {"name": "debug_device", "type": "boolean", "default": false},
+       {"name": "user_agent", "type": "string", "default": ""},
+       {"name": "submit_time", "type": "long", "default": 0},        {
+           "name":"receipt",
+           "type":["null",{
+               "type":"record",
+               "name": "receiptRecord",
+               "fields":[
+                   {"name": "data", "type": "string", "default": ""},
+                   {"name": "signature", "type": "string", "default": ""}
+               ]
+           }],
+           "default": null
+       },
+       {"name": "currency", "type": "string", "default": "USD"},
+       {"name": "amount", "type": "float", "default": 0},
+       {"name": "transactionid", "type": "long", "default": 0},
+       {"name": "productid", "type": "string", "default": ""}
+   ]
+}
+</code></pre> 
+       <h1>Dictionary</h1> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Data field</th> 
+          <th style="text-align:left;">Definition</th> 
+          <th style="text-align:left;">Dataset</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">ts</td> 
+          <td style="text-align:left;">Kalitamp (dalam mili detik) di mana acara itu dihasilkan pada perangkat. Perhatikan bahwa timetamps yang dihasilkan perangkat dapat diskewed karena jam perangkat dan latency dalam menerima acara</td> 
+          <td style="text-align:left;">All datasets</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">appid</td> 
+          <td style="text-align:left;">ID yang ditugaskan untuk setiap aplikasi di Dashboard Unity Analytics</td> 
+          <td style="text-align:left;">All datasets</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">type</td> 
+          <td style="text-align:left;">Jenis acara yang dikuasai (yaitu Custom, DeviceInfo, Transaksi, dll)</td> 
+          <td style="text-align:left;">All datasets</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">userid</td> 
+          <td style="text-align:left;">Unity Analytics dihasilkan pengidentifikasi untuk userid</td> 
+          <td style="text-align:left;">All datasets</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">sessionid</td> 
+          <td style="text-align:left;">Pengidentifikasi yang dihasilkan oleh Unity Analytics untuk sesi. Jika permainan dibuka kembali setelah lebih dari 30 menit tidak aktif, ID sesi baru dihasilkan</td> 
+          <td style="text-align:left;">All datasets</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">remote_ip</td> 
+          <td style="text-align:left;">Alamat IP bahwa sesi dimainkan. Perhatikan bahwa bidang ini telah dihapus dan tidak lagi tersedia</td> 
+          <td style="text-align:left;">Tidak digunakan</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">platform</td> 
+          <td style="text-align:left;">Platform bahwa sesi dimainkan di</td> 
+          <td style="text-align:left;">All datasets</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">sdk_ver</td> 
+          <td style="text-align:left;">Versi dari Unity Analytics SDK yang sedang digunakan untuk acara ini. Jika sdk_ver dimulai dengan "u" maka itu dari alat Analytics yang dibangun mesin. Jika tidak, itu dari plugin Analytics untuk versi Unity lebih tua dari 5.2</td> 
+          <td style="text-align:left;">All datasets</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">WordPress.org</td> 
+          <td style="text-align:left;">Sebuah boolean yang menunjukkan apakah peristiwa dikirim dari <span class="tooltip"><strong>development build</strong><span class="tooltiptext">Membangun pengembangan termasuk simbol debug dan memungkinkan Profiler. <a class="tooltipMoreInfoLink" href="UnityCloudBuildDevelopmentBuilds.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#DevelopmentBuild">Glossary</a></span></span></span>. Set ke TRUE untuk acara yang datang dari Editor Unity</td> 
+          <td style="text-align:left;">All datasets</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">user_agent</td> 
+          <td style="text-align:left;">Bidang permintaan-header Pengguna-Agent</td> 
+          <td style="text-align:left;">All datasets</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">submit_time</td> 
+          <td style="text-align:left;">Kalitamp (dalam mili detik) di mana acara diterima oleh Unity Analytics</td> 
+          <td style="text-align:left;">All datasets</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">duration</td> 
+          <td style="text-align:left;">Durasi (jumlah detik) bahwa sesi ini telah berjalan, dihitung oleh SDK</td> 
+          <td style="text-align:left;">AppRunning</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">name</td> 
+          <td style="text-align:left;">Nama Acara Khusus (misalnya “LevelComplete”)</td> 
+          <td style="text-align:left;">Custom</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">custom_params</td> 
+          <td style="text-align:left;">Daftar parameter Acara Kustom dan nilai yang sesuai.</td> 
+          <td style="text-align:left;">Custom</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">receipt</td> 
+          <td style="text-align:left;">Sertakan data yang dikembalikan oleh toko aplikasi platform, seperti App Store dan Google Play</td> 
+          <td style="text-align:left;">Transaction</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">currency</td> 
+          <td style="text-align:left;">Kode mata uang untuk pembayaran (misalnya USD, EUR, CAD, dll) dalam kode ISO 4217</td> 
+          <td style="text-align:left;">Transaction</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">amount</td> 
+          <td style="text-align:left;">Total jumlah desimal mata uang yang dihabiskan</td> 
+          <td style="text-align:left;">Transaction</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">transactionid</td> 
+          <td style="text-align:left;">Pengidentifikasi unik untuk transaksi ini, ditetapkan oleh SDK. Setiap transaksi diberikan ID unik, tidak bingung dengan ID transaksi toko</td> 
+          <td style="text-align:left;">Transaction</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">productid</td> 
+          <td style="text-align:left;">Pengidentifikasi produk yang spesifik dari pembelian dalam aplikasi (misalnya. com.mygame.100coins)</td> 
+          <td style="text-align:left;">Transaction</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">debug_build</td> 
+          <td style="text-align:left;">Bosan yang menunjukkan apakah acara dikirim dari pembangunan build. Set ke TRUE untuk acara yang datang dari Editor Unity</td> 
+          <td style="text-align:left;">DeviceInfo</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">rooted_jailbroken</td> 
+          <td style="text-align:left;">Sebuah boolean yang diatur ke TRUE dalam kasus telepon berakar / jailbroken tidak dikirim untuk telepon normal</td> 
+          <td style="text-align:left;">DeviceInfo</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">prosesor_type</td> 
+          <td style="text-align:left;">Jenis prosesor perangkat</td> 
+          <td style="text-align:left;">DeviceInfo</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">sistem_memory_size</td> 
+          <td style="text-align:left;">Sistem perangkat memori</td> 
+          <td style="text-align:left;">DeviceInfo</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">make</td> 
+          <td style="text-align:left;">Pembuat perangkat (misalnya “OSXEditor”)</td> 
+          <td style="text-align:left;">DeviceInfo</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">app_ver</td> 
+          <td style="text-align:left;">Versi aplikasi (misalnya “1.0”)</td> 
+          <td style="text-align:left;">DeviceInfo</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">deviceid</td> 
+          <td style="text-align:left;">Pengidentifikasi perangkat yang unik. Perhatikan bahwa bidang ini telah dihapus dan tidak lagi tersedia.</td> 
+          <td style="text-align:left;">Tidak digunakan</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">license_type</td> 
+          <td style="text-align:left;">Jenis lisensi (misalnya “advanced_pro”)</td> 
+          <td style="text-align:left;">DeviceInfo</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">WordPress.org</td> 
+          <td style="text-align:left;">Tells jika aplikasi dipasang melalui toko aplikasi (“store”), adhoc (“adhoc”), instalasi pengembang (“dev_release”), simulator (“simulator”) atau perusahaan (“enterprise”)</td> 
+          <td style="text-align:left;">DeviceInfo</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">model</td> 
+          <td style="text-align:left;">Model perangkat (misalnya "MacBookPro11,3")</td> 
+          <td style="text-align:left;">DeviceInfo</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">mesin_ver</td> 
+          <td style="text-align:left;">Versi mesin Unity (misalnya “5.5.0a3”)</td> 
+          <td style="text-align:left;">DeviceInfo</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">os_ver</td> 
+          <td style="text-align:left;">Versi OS (misalnya “Mac OS X 10.11.5”)</td> 
+          <td style="text-align:left;">DeviceInfo</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">app_name</td> 
+          <td style="text-align:left;">Bundel identifier atau nama paket (misalnya. “com.Company.ProductName”)</td> 
+          <td style="text-align:left;">DeviceInfo</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">timezone</td> 
+          <td style="text-align:left;">Kode ISO (misalnya “GMT-7”)</td> 
+          <td style="text-align:left;">DeviceInfo</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">ads_tracking</td> 
+          <td style="text-align:left;">Nilai boolean yang menunjukkan apakah pengguna memiliki pelacakan iklan terbatas</td> 
+          <td style="text-align:left;">DeviceInfo</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">adsid</td> 
+          <td style="text-align:left;">Iklan Id. Di iOS, dikumpulkan ketika Iklan Unity diaktifkan. Di Android, semua waktu. Perhatikan bahwa bidang ini telah dihapus dan tidak lagi tersedia.</td> 
+          <td style="text-align:left;">Tidak digunakan</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2018–06–28 Login</span></p></li> 
+        <li><p><span class="page-history">2018–08–01 - Hapus lapangan remote_ip. Tidak ada lagi yang tersedia.</span></p></li> 
+        <li> </li> 
+        <li><p><span class="page-history">2018–06–28 - Hapus acara UserInfo.</span></p></li> 
+        <li><p><span class="page-history">2018–06–04 - Hapus perangkat dan iklan dari acara DeviceInfo. Sitemap</span></p></li> 
+        <li><p><span class="page-history">2017–06–21 - Termasuk bidang bersarang kosong di JSON ekspor berubah dalam Unity <span class="search-words">NewIn20171</span></span></p></li> 
+       </ul> 
+       <!-- area:monetization --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UnityAnalyticsUserAttributes.html"></a></span> 
+         <div class="tip">
+           Atribut Pengguna 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UnityAnalyticsDataReset.html"></a></span> 
+         <div class="tip">
+           Data reset 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy"> 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

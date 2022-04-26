@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Modul Profiler Fisika</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="analysis.html">Analysis</a></li> 
+         <li><a href="Profiler.html">Profiler</a></li> 
+         <li><a href="ProfilerWindow.html">WordPress.org</a></li> 
+         <li>Modul Profiler Fisika</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="ProfilerMemory.html"></a></span> 
+          <div class="tip">
+            Modul Profiler Memori 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="profiler-2d-physics-profiler-module.html"></a></span> 
+          <div class="tip">
+            2D Modul Profiler Fisika 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Modul Profiler Fisika</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Fisika modul <span class="tooltip"><strong>Profiler</strong><span class="tooltiptext">Jendela yang membantu Anda untuk mengoptimalkan permainan Anda. Ini menunjukkan berapa banyak waktu yang dihabiskan di berbagai bidang permainan Anda. Sebagai contoh, dapat melaporkan persentase waktu yang dihabiskan <strong>rendering</strong>, aimating, atau dalam logika permainan Anda. <a class="tooltipMoreInfoLink" href="Profiler.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Profiler">Glossary</a></span></span></span> menampilkan informasi tentang fisika bahwa sistem fisika telah diproses dalam proyek Anda <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>. Informasi ini dapat membantu Anda mendiagnosis dan menyelesaikan masalah kinerja atau perbedaan yang tak terduga terkait dengan fisika di adegan proyek Anda. Anda juga dapat menggunakan <a href="PhysicsDebugVisualization.html">Fisika Debug Visualisasi</a> untuk debug lebih lanjut dan memahami masalah dengan fisika dalam aplikasi Anda.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/profiler-physics-module.png" alt="Physics Profiler module"> 
+        <figcaption>
+          Modul Profiler Fisika 
+        </figcaption> 
+       </figure> 
+       <h2>Kategori grafik</h2> 
+       <p>Grafik Profiler modul melacak waktu aplikasi Anda menghabiskan fisika. Waktu dibagi menjadi kategori grafik yang berbeda. Untuk mengubah urutan kategori di grafik, Anda dapat menyeretnya di legenda grafik. Anda juga dapat mengklik legenda berwarna kategori untuk memotong tampilannya. Ketika Anda mengklik grafik, Anda dapat melihat nilai numerik yang tepat dari setiap kategori grafik dalam pane detail modul di bawah grafik.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Chart</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Physics Used Memory</strong></td> 
+          <td style="text-align:left;">Jumlah total memori yang modul fisika telah digunakan</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Active Dynamic Bodies</strong></td> 
+          <td style="text-align:left;">Jumlah komponen <span class="tooltip"><a class="tooltipMoreInfoLink" href="../ScriptReference/Rigidbody.html">Rigidbody</a><span class="tooltiptext">Komponen yang memungkinkan GameObject untuk dipengaruhi oleh gravitasi simulasi dan kekuatan lainnya. <a href="class-Rigidbody.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Rigidbody">Glossary</a></span></span></span> dan komponen <a href="../ScriptReference/ArticulationBody.html">Login Login</a> yang tidak dalam keadaan <a href="RigidbodiesOverview.html">sleep</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Active Kinematic Bodies</strong></td> 
+          <td style="text-align:left;">Jumlah komponen Kinematik kaku aktif. kaku Kinematik aktif ketika <a href="../ScriptReference/Rigidbody.MovePosition.html">MovePosition</a> atau <a href="../ScriptReference/Rigidbody.MoveRotation.html">MoveRotation</a> disebut dalam bingkai, dan tetap aktif dalam bingkai berikutnya.<br><br><strong>Note</strong>: Unity might process Kinematic Rigidbody components that have joints attached multiple times per frame, and this contributes to the value displayed.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Dynamic Bodies</strong></td> 
+          <td style="text-align:left;">Jumlah komponen kaku dan komponen ArticulationBody.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Overlaps</strong></td> 
+          <td style="text-align:left;">Jumlah acara tumpang tindih. Acara tumpang tindih adalah ketika tumpang tindih <span class="tooltip"><a class="tooltipMoreInfoLink" href="../ScriptReference/Collider.html">colliders</a><span class="tooltiptext">Bentuk tak terlihat yang digunakan untuk menangani tabrakan fisik untuk objek. Seorang sari tidak perlu menjadi bentuk yang sama dengan jala objek - perkiraan kasar sering lebih efisien dan tidak dapat dibedakan dalam gameplay. <a href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Collider">Glossary</a></span></span></span> satu sama lain.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Trigger Overlaps</strong></td> 
+          <td style="text-align:left;">Jumlah acara tumpang tindih dengan tabrakan pemicu (dihitungkan).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Discreet Overlaps</strong></td> 
+          <td style="text-align:left;">Jumlah peristiwa tumpang tindih yang digunakan Unity diskrit deteksi <span class="tooltip"><strong>collision</strong><span class="tooltiptext">tabrakan terjadi ketika mesin fisika mendeteksi bahwa tabrakan dari dua GameObjects membuat kontak atau tumpang tindih, ketika setidaknya satu memiliki komponen kaku dan bergerak. <a class="tooltipMoreInfoLink" href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Collision">Glossary</a></span></span></span> untuk memecahkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Continuous Overlaps</strong></td> 
+          <td style="text-align:left;">Jumlah acara tumpang tindih yang digunakan Unity <span class="tooltip"><strong>collision detection</strong><span class="tooltiptext">Proses otomatis yang dilakukan oleh Unity yang menentukan apakah yang bergerak GameObject dengan komponen kaku dan collider telah masuk ke kontak dengan sari lainnya. <a class="tooltipMoreInfoLink" href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#CollisionDetection">Glossary</a></span></span></span> terus menerus untuk memecahkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Physics Queries</strong></td> 
+          <td style="text-align:left;">Jumlah total pertanyaan fisika, seperti <a href="../ScriptReference/Physics.Raycast.html">Raycasts</a> dan bentuk.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Detail modul pane</h2> 
+       <p>Ketika Anda mengklik modul Profiler Fisika, detail modul pane menampilkan informasi lebih lanjut tentang fisika di adegan proyek Anda.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Statistic</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Physics Used Memory</strong></td> 
+          <td style="text-align:left;">Jumlah total memori yang modul fisika digunakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Dynamic Bodies</strong></td> 
+          <td style="text-align:left;">Jumlah komponen <a href="../ScriptReference/Rigidbody.html">Rigidbody</a> dan komponen <a href="../ScriptReference/ArticulationBody.html">Login Login</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Articulation Bodies</strong></td> 
+          <td style="text-align:left;">Jumlah komponen ArticulationBody di tempat kejadian</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Active Dynamic Bodies</strong></td> 
+          <td style="text-align:left;">Jumlah komponen kaku dan komponen ArticulationBody yang tidak dalam keadaan <a href="RigidbodiesOverview.html">sleep</a>..</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Active Kinematic Bodies</strong></td> 
+          <td style="text-align:left;">Jumlah komponen Kinematik kaku aktif. kaku Kinematik aktif ketika <a href="../ScriptReference/Rigidbody.MovePosition.html">MovePosition</a> atau <a href="../ScriptReference/Rigidbody.MoveRotation.html">MoveRotation</a> disebut dalam bingkai, dan tetap aktif dalam bingkai berikutnya.<br><br><strong>Note</strong>: Unity might process Kinematic Rigidbody components that have joints attached multiple times per frame, and this contributes to the value displayed.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Static Colliders</strong></td> 
+          <td style="text-align:left;">Jumlah <a href="../ScriptReference/Collider.html">colliders</a> yang tidak memiliki komponen kaku atau ArticulationBody</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Colliders Synced</strong></td> 
+          <td style="text-align:left;">Jumlah sari yang disinkronkan dengan <a href="../ScriptReference/Transform.html">Transforms</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Rigidbodies Synced</strong></td> 
+          <td style="text-align:left;">Jumlah komponen kaku yang disinkronkan dengan Transforms.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Physics Queries</strong></td> 
+          <td style="text-align:left;">Jumlah total pertanyaan fisika, seperti <a href="../ScriptReference/Physics.Raycast.html">Raycasts</a> dan bentuk.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Total Overlaps</strong></td> 
+          <td style="text-align:left;">Jumlah acara tumpang tindih. Acara yang tumpang tindih adalah ketika sari tumpang tindih satu sama lain.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Discreet</td> 
+          <td style="text-align:left;">Jumlah acara tumpang tindih yang digunakan Unity <span class="tooltip"><strong>discrete collision detection</strong><span class="tooltiptext">Metode deteksi tabrakan yang menghitung dan menyelesaikan tabrakan berdasarkan pose objek pada akhir setiap langkah simulasi fisika. <a class="tooltipMoreInfoLink" href="class-Rigidbody.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#discretecollisiondetection">Glossary</a></span></span></span> untuk memecahkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Continuous</td> 
+          <td style="text-align:left;">Jumlah acara tumpang tindih yang digunakan Unity <span class="tooltip"><strong>continuous collision detection</strong><span class="tooltiptext">Metode deteksi tabrakan yang menghitung dan menyelesaikan tabrakan di seluruh langkah simulasi fisika. Ini dapat mencegah benda-benda yang bergerak cepat dari terowongan melalui dinding selama langkah simulasi. <a class="tooltipMoreInfoLink" href="ContinuousCollisionDetection.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#continuouscollisiondetection">Glossary</a></span></span></span> untuk memecahkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Trigger</td> 
+          <td style="text-align:left;">Jumlah acara tumpang tindih dengan tabrakan pemicu (dihitungkan).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Modified</td> 
+          <td style="text-align:left;">Jumlah acara tumpang tindih yang Unity menggunakan API <a href="../ScriptReference/Physics.ContactModifyEvent.html">Contact Modification</a> untuk memodifikasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Broadphase Adds/Removes</strong></td> 
+          <td style="text-align:left;">Jumlah total tabrakan yang ditambahkan atau dihapus.<a href="https://docs.nvidia.com/gameworks/content/gameworkslibrary/physx/guide/3.3.4/Manual/RigidBodyCollision.html#broad-phase-algorithms">algoritma fase yang luas</a> either added or removed.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Narrowphase Touches</strong></td> 
+          <td style="text-align:left;">Jumlah total peristiwa tabrakan yang hilang atau muncul seperti baru karena bingkai sebelumnya.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Jumlah yang ditampilkan dalam Profiler mungkin tidak sesuai dengan jumlah yang tepat dari <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> dengan komponen fisika di Adegan Anda. Ini karena proses Unity beberapa komponen fisika pada tingkat yang berbeda tergantung pada komponen lain mempengaruhinya (misalnya, komponen Joint yang terpasang). Untuk menghitung jumlah yang tepat dari GameObjects dengan komponen fisika tertentu yang melekat, Anda harus menulis skrip kustom dengan fungsi <a href="../ScriptReference/Object.FindObjectsOfType.html">FindObjectsOfType</a>.</p> 
+       <p>Modul Profiler Fisika tidak menampilkan jumlah komponen kaku tidur. Ini adalah komponen yang tidak terlibat dengan sistem fisika, sehingga Profiler tidak memprosesnya. Untuk informasi lebih lanjut tentang komponen kaku tidur, lihat dokumentasi di <a href="RigidbodiesOverview.html">Rigidbody</a>.</p> 
+       <h2>Memahami masalah kinerja fisika</h2> 
+       <p>Simulasi fisika berjalan pada siklus pembaruan frekuensi tetap terpisah dari loop pembaruan logika utama, dan hanya dapat maju waktu melalui panggilan <a href="../ScriptReference/Time-fixedDeltaTime.html">Time.fixedDeltaTime</a> per. Ini mirip dengan perbedaan antara <a href="../ScriptReference/MonoBehaviour.Update.html">Update</a> dan <a href="../ScriptReference/MonoBehaviour.FixedUpdate.html">FixedUpdate</a>. Untuk informasi lebih lanjut tentang ini, lihat dokumentasi pada <a href="class-TimeManager.html">Time window</a>.</p> 
+       <p>Ketika logika berat atau bingkai grafis membutuhkan waktu yang lama, Profiler harus memanggil simulasi fisika beberapa kali per bingkai. Ini berarti bahwa bingkai yang sudah intensif mengambil lebih banyak waktu dan sumber daya. Ini mungkin menyebabkan simulasi fisika untuk berhenti sementara sesuai dengan nilai <strong>Maximum Allowed Timestep</strong>, yang dapat Anda set di jendela Pengaturan Proyek (menu: <strong>Edit &gt; Project Settings &gt; Time</strong>)</p> 
+       <p>Untuk mendeteksi ini di Proyek Anda, pilih <a href="ProfilerCPU.html">Login Database</a> dan periksa jumlah panggilan untuk <strong>Physics.Processing</strong> atau <strong>Physics.Simulate</strong> di bagian Ikhtisar dalam tampilan <strong>Hierarchy</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/profiler-physics-cpu-module.png" alt="CPU Usage Profiler with the value of 2 in the Calls column"> 
+        <figcaption>
+          Login Pemakaian Profiler dengan nilai 2 di kolom 
+         <strong>Calls</strong> column 
+        </figcaption> 
+       </figure> 
+       <p>Dalam contoh ini gambar, nilai 2 di kolom Panggilan menunjukkan bahwa simulasi fisika disebut dua kali selama bingkai logis terakhir.</p> 
+       <p>Jumlah panggilan dekat 10 mungkin menunjukkan masalah. Sebagai solusi pertama, mengurangi frekuensi simulasi fisika, dan jika masalah berlanjut, periksa apa yang mungkin telah menyebabkan bingkai berat sebelum sistem fisika harus menggunakan banyak panggilan simulasi untuk menangkap waktu pertandingan. Kadang-kadang, bingkai grafis berat mungkin menyebabkan lebih banyak panggilan simulasi fisika kemudian di Adegan.</p> 
+       <p>Untuk informasi lebih rinci tentang simulasi fisika di Adegan Anda, pilih kotak pencarian di bagian atas pane detail modul, mencari <strong>Physics.Processing</strong>, dan kemudian pilih <strong>Calls</strong> dari dropdown di kanan atas pane. Ini menampilkan nama-nama tugas sistem fisika yang berjalan untuk memperbarui Adegan Anda. Dua nama yang paling umum yang Anda lihat adalah:</p> 
+       <ul> 
+        <li> <strong>Pxs:</strong> pendek untuk 'PhysX pemecahan', yang merupakan tugas sistem fisika yang <span class="tooltip"><strong>joints</strong><span class="tooltiptext">Komponen fisika yang memungkinkan koneksi dinamis antara komponen Rigidbody, biasanya memungkinkan beberapa tingkat pergerakan seperti engsel. <a class="tooltipMoreInfoLink" href="Joints.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#joint">Glossary</a></span></span></span> memerlukan serta menyelesaikan kontak untuk komponen Overlapping Rigidbody.</li> 
+        <li> <strong>ScScene:</strong> digunakan untuk tugas-tugas yang memperbarui Adegan, menjalankan fase yang luas dan fase sempit, dan mengintegrasikan komponen-komponen kaku (memindahkan mereka di ruang karena kekuatan dan impuls). Untuk informasi lebih lanjut, lihat <a href="http://planning.cs.uiuc.edu/node214.html">Steven M. LaValle bekerja pada Perencanaan Algorithms</a> untuk definisi pada fase deteksi tabrakan dua fase.</li> 
+       </ul> 
+       <h2>Fisika Legacy Catalog</h2> 
+       <p>Anda dapat beralih ke mode <strong>Legacy</strong> untuk melihat versi yang lebih tua dari modul Profiler Fisika, yang merupakan modul default dalam versi Unity yang lebih tua. Untuk melakukan ini, pilih <strong>Legacy</strong> dari menu dropdown di sebelah kanan atas pane rincian modul Profiler.</p> 
+       <p>Dalam mode ini, Anda dapat memuat dan memeriksa data Profiler yang disimpan dalam versi Unity yang lebih tua. Jika Anda beralih ke mode ini untuk memeriksa data yang ditangkap dalam versi Unity yang lebih baru, maka data yang ditampilkan tidak dapat diandalkan dan tidak akurat. Anda harus selalu menggunakan mode <strong>Current</strong> untuk memeriksa data Profiler Fisika baru.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/profiler-physics-legacy-module.png" alt="CPU Usage Profiler in Legacy mode"> 
+        <figcaption>
+          Login Pemakaian Profiler dalam mode Legacy 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Statistic</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Active Dynamic</strong></td> 
+          <td style="text-align:left;">Jumlah komponen kaku non-Kinematik aktif. kaku aktif adalah salah satu yang tidak <a href="RigidbodiesOverview.html">sleeping</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Active Kinematic</strong></td> 
+          <td style="text-align:left;">Jumlah komponen Kinematik kaku aktif. Kinematic Rigidbody aktif ketika <a href="../ScriptReference/Rigidbody.MovePosition.html">MovePosition</a> atau <a href="../ScriptReference/Rigidbody.MoveRotation.html">MoveRotation</a> disebut dalam bingkai, dan tetap aktif dalam bingkai berikutnya.<br><br><strong>Note:</strong> Unity mungkin memproses komponen Kinematic Rigidbody yang memiliki sendi terpasang beberapa kali per bingkai, dan ini berkontribusi pada nilai yang ditampilkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Static Colliders</strong></td> 
+          <td style="text-align:left;">Jumlah komponen Collider pada GameObjects yang tidak memiliki komponen kaku yang melekat pada GameObjects atau GameObjects induk mereka.<br><br>Collider komponen pada GameObjects atau parent GameObjects yang memiliki komponen kaku tidak dihitung sebagai Collider Statis. Ini disebut Senyawa Colliders. Senyawa Colliders mengatur beberapa Colliders dari tubuh dengan cara yang mudah, daripada memiliki semua Collider pada GameObject yang sama sebagai komponen Rigidbody.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Rigidbody</strong></td> 
+          <td style="text-align:left;">Jumlah komponen kaku yang diproses oleh sistem fisika, terlepas dari keadaan tidur komponen.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Trigger Overlaps</strong></td> 
+          <td style="text-align:left;">Jumlah pemicu tumpang tindih (dihitungkan).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Active Constraints</strong></td> 
+          <td style="text-align:left;">Jumlah kendala primitif sistem fisika telah diproses. Kontras digunakan sebagai blok bangunan Sendi serta respon tabrakan. Sebagai contoh, membatasi tingkat kebebasan linier atau rotasi sebesar <a href="../ScriptReference/ConfigurableJoint.html">ConfigurableJoint</a> melibatkan batasan primitif per setiap pembatasan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Contacts</strong></td> 
+          <td style="text-align:left;">Jumlah total pasangan kontak antara semua Colliders di Adegan, termasuk jumlah memicu pasangan tumpang tindih. Kontak adalah sepasang Collider yang baik menyentuh atau tumpang tindih. Catatan: Unity menciptakan pasangan kontak per pasangan Collider setelah jarak antara mereka berada di bawah batas yang dapat dikonfigurasi pengguna tertentu. Seperti itu, Anda mungkin melihat kontak yang dihasilkan untuk komponen kaku yang belum menyentuh atau tumpang tindih. Lihat dokumentasi tentang <a href="../ScriptReference/Collider-contactOffset.html">WordPress.org</a> dan <a href="../ScriptReference/ContactPoint-separation.html">ContactPoint.separation</a> untuk rincian lebih lanjut.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="ProfilerMemory.html"></a></span> 
+         <div class="tip">
+           Modul Profiler Memori 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="profiler-2d-physics-profiler-module.html"></a></span> 
+         <div class="tip">
+           2D Modul Profiler Fisika 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

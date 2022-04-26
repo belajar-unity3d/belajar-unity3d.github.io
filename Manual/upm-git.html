@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Ketergantungan git</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="PackagesList.html">Paket dan set fitur</a></li> 
+         <li><a href="Packages.html">Manajer Paket Unity</a></li> 
+         <li><a href="upm-manifestPrj.html">Lookbook</a></li> 
+         <li>Ketergantungan git</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="upm-embed.html"></a></span> 
+          <div class="tip">
+            Ketergantungan tertanam 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="upm-localpath.html"></a></span> 
+          <div class="tip">
+            folder lokal atau jalur tarball 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Ketergantungan git</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Ketika Manajer Paket mengambil paket dari repositori Git, menambahkan paket secara lokal ke proyek Anda. Ini memungkinkan Anda untuk menguji perubahan yang tidak dipublikasikan, tetapi Anda tidak dapat menggunakannya untuk berkontribusi pada repositori Git. Untuk mengatur repositori Git lokal yang ada sebagai ketergantungan dalam proyek Anda, gunakan <a href="upm-localpath.html">jalan ke lokal Anda Git repositori</a>.</p> 
+       <p> <strong>Note</strong>: Anda tidak dapat menentukan file <span class="tooltip"><strong>Git dependencies</strong><span class="tooltiptext">Manajer Paket mengambil Ketergantungan git dari repositori Git langsung daripada dari registry paket. Ketergantungan Git menggunakan referensi URL Git bukan versi, dan tidak ada jaminan tentang kualitas paket, stabilitas, validitas, atau bahkan apakah versi yang tercantum dalam berkas <code>package.json</code> menghormati aturan Versi Semantic sehubungan dengan rilis resmi paket ini. <a class="tooltipMoreInfoLink" href="upm-concepts.html#Git">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Gitdependency">Glossary</a></span></span></span> dalam <a href="upm-manifestPkg.html">paket.json</a> karena Manajer Paket tidak mendukung ketergantungan Git antara paket. Ini hanya mendukung ketergantungan Git untuk proyek, sehingga Anda hanya dapat mendeklarasikan ketergantungan Git dalam file <a href="upm-manifestPrj.html">manifest.json</a> proyek.</p> 
+       <p> <strong>Tip</strong>: Jika Anda ingin memperbarui ketergantungan Git Anda ke versi tertentu (<a href="#revision">revision</a>) dari repositori, lihat <a href="#git-locks">Ketergantungan Git yang dikunci</a>.</p> 
+       <p>Bagian ini mencakup topik berikut:</p> 
+       <ul> 
+        <li><a href="#req">Requirements</a></li> 
+        <li> <a href="#syntax">URL Git dan sintaks yang diperpanjang</a> 
+         <ul> 
+          <li><a href="#Git-HTTPS">Menggunakan protokol HTTP/HTTPS</a></li> 
+          <li><a href="#Git-SSH">Menggunakan protokol SSH</a></li> 
+          <li><a href="#Git-FILE">Menggunakan protokol FILE</a></li> 
+          <li><a href="#Git-GIT">Menggunakan protokol GIT</a></li> 
+          <li> <a href="#revision">Menargetkan revisi tertentu</a> 
+           <ul> 
+            <li><a href="#subfolder">Menentukan paket dalam subfolder repositori</a></li> 
+            <li><a href="#paths-and-revisions">Menggunakan jalur dan revisi pada saat yang sama</a></li> 
+           </ul> </li> 
+          <li><a href="#subfolder">Menentukan paket dalam subfolder</a></li> 
+         </ul> </li> 
+        <li><a href="#git-locks">Ketergantungan Git yang dikunci</a></li> 
+        <li><a href="#git-lfs">Login Sitemap</a></li> 
+       </ul> 
+       <p><br></p> 
+       <p><a name="req"></a></p> 
+       <h2>Requirements</h2> 
+       <p>Untuk menggunakan dependensi Git dalam proyek, pastikan <a href="https://git-scm.com/">Git client</a> (versi minimum 2.14.0) dipasang pada mesin Anda dan bahwa Anda telah menambahkan jalur Git yang dapat dieksekusi ke variabel lingkungan sistem PATH.</p> 
+       <p>Sitemap Manajer Paket telah diuji untuk bekerja dengan Git 2.14.0 dan di atas. Unity tidak dapat menjamin hasil jika Anda menggunakan versi Git di bawah 2.14.0.<strong>Warning:</strong> The Package Manager has been tested to work with Git 2.14.0 and above. Unity cannot guarantee the results if you use Git versions below 2.14.0.</p> 
+       <p>Jika file track repositori dengan <a href="https://git-lfs.github.com/">Git LFS</a>, pastikan klien Git LFS juga dipasang pada mesin Anda. Jika tidak diinstal, Manajer Paket <a href="upm-errors.html#git-lfs">tidak dapat mengambil file yang disimpan di server LFS</a> dan bukan memeriksa file pointer LFS tanpa kesalahan atau pesan peringatan.</p> 
+       <p>Anda dapat menggunakan jendela Paket Manager untuk menginstal paket langsung dari repositori Git. Untuk informasi lebih lanjut, lihat <a href="upm-ui-giturl.html">Menginstal dari URL Git</a>.</p> 
+       <p><a name="syntax"></a></p> 
+       <h2>URL Git dan sintaks yang diperpanjang</h2> 
+       <p>Manajer Paket mendukung semua <a class="tooltipMoreInfoLink" href="https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols">protokol Git</a>, dengan pengecualian jalur file lokal. Untuk menentukan URL Git sebagai ketergantungan, tambahkan nama paket untuk menambahkan dengan URL Git bukan nomor versi atau path file lokal ke <span class="tooltip"><strong>project manifest</strong><span class="tooltiptext">Setiap proyek Unity memiliki <em>manifestasi proyek</em>, yang bertindak sebagai titik masuk untuk Manajer Paket. File ini harus tersedia di direktori <code>&lt;project&gt;/Packages</code>. Manajer Paket menggunakannya untuk mengkonfigurasi banyak hal, termasuk daftar dependensi untuk proyek itu, serta repositori paket untuk permintaan. <a href="upm-manifestPrj.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Projectmanifest">Glossary</a></span></span></span>. Misalnya, ini menunjukkan cara menentukan jarak jauh Git menggunakan protokol yang berbeda:</p> 
+       <pre><code class="lang-json">{
+  "dependencies": {
+    "com.mycompany.mypackage1": "https://github.example.com/myuser/myrepository1.git",
+    "com.mycompany.mypackage2": "ssh://git@github.example.com/myuser/myrepository2.git",
+    "com.mycompany.mypackage3": "file://localhost/github.example.com/myuser/myrepository3.git",
+    "com.mycompany.mypackage4": "git://github.example.com/myuser/myrepository4.git",
+    etc.
+  }
+}
+</code></pre> 
+       <p>The Package Manager menyadari bahwa ketergantungan diformat sebagai URL adalah URL Git dengan mencari ekstensi file <code>.git</code> pada akhir jalur repositori. Sitemap Layanan hosting repositori Git tidak mendukung URL dengan ekstensi ini sementara yang lain menegakkannya. Untuk alasan ini, sintaksis ketergantungan Git memungkinkan Anda untuk mengosongkan ekstensi jika Anda menggunakan <a href="#Git-GIT">protokol GIT</a>, atau jika Anda menambahkan prefiks <code>git+</code> khusus untuk URL <a href="#Git-HTTPS">HTTP/HTTPS</a>, <a href="#Git-SSH">SSH</a>, atau <a href="#Git-FILE">FILE</a>.</p> 
+       <p>Sitemap Prefix <strong>Note:</strong> adalah penanda khusus dalam file <code>git+</code> yang menunjukkan bahwa ketergantungan berbasis Git. Paket Mengelola tidak melewatinya ke Git ketika membekukan repositori.<code>manifest.json</code> file that indicates that the dependency is Git-based. The Package Manages does not pass it to Git when cloning the repository.</p> 
+       <p>Untuk informasi lebih lanjut tentang format URL yang didukung Git, lihat dokumentasi untuk perintah git <a href="https://git-scm.com/docs/git-clone#_git_urls_a_id_urls_a">clone</a>. Untuk gambaran tentang perbedaan antara protokol yang digunakan Git, lihat <a href="https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols">Dokumentasi Git untuk menggunakan protokol</a>.</p> 
+       <p>Selain itu, ketergantungan Git menggunakan sintaks yang diperpanjang:</p> 
+       <ul> 
+        <li> <p>Jika paket yang Anda inginkan bukan di akar repositori, Anda dapat menentukan jalan ke subfolder di repositori di mana paket berada. Ini hanya diperlukan jika paket yang Anda inginkan bukan di akar repositori. Contohnya, string <code>?path=/folder1/folder2</code> dalam:</p> <p> <code>"https://github.example.com/myuser/myrepository.git?path=/folder1/folder2"</code>.</p> <p>Untuk informasi lebih lanjut, lihat <a href="#subfolder">Menentukan paket dalam subfolder</a>.</p> </li> 
+        <li> <p>Anda dapat menentukan revisi Git, yang dapat menjadi tag, nama cabang, atau hash berkomitmen khusus untuk mengunci. Ini memastikan bahwa Manajer Paket selalu memuat revisi yang tepat. Jika Anda tidak menentukan revisi, Manajer Paket mengacaukan repositori di cabang default dan berkomitmen dan kunci terbaru ke revisi tersebut. Contohnya, string <code>#v2.0.0</code> dalam:</p> <p><code>"https://github.example.com/myuser/myrepository.git#v2.0.0"</code></p> <p>Untuk informasi lebih lanjut, lihat <a href="#revision">Menargetkan revisi tertentu</a>.</p> </li> 
+       </ul> 
+       <p><a name="Git-HTTPS"></a></p> 
+       <h3>Menggunakan protokol HTTP/HTTPS</h3> 
+       <p>Anda dapat menggunakan protokol HTTPS dengan URL penuh:</p> 
+       <pre><code class="lang-json">{
+  "dependencies": {
+    "com.mycompany.mypackage": "https://github.example.com/myuser/myrepository.git"
+  }
+}
+</code></pre> 
+       <p>Sitemap Server Git tidak mendukung ekstensi <code>.git</code>, Anda dapat menambahkan awalan <code>git+</code> khusus, dengan atau tanpa ekstensi:</p> 
+       <pre><code class="lang-json">{
+  "dependencies": {
+    "com.mycompany.mypackage1": "git+https://github.example.com/myuser/myrepository1.git",
+    "com.mycompany.mypackage2": "git+https://github.example.com/myuser/myrepository2"
+  }
+}
+</code></pre> 
+       <p> <strong>Note</strong>: Atau, Anda dapat menggunakan protokol GIT bukan awal <code>git+</code>. Untuk informasi lebih lanjut, lihat <a href="#Git-GIT">Menggunakan protokol GIT</a>.</p> 
+       <p>Jika repositori dapat diakses secara publik, HTTPS adalah skema yang disarankan untuk berbagi URL Git dengan pengguna karena Anda dapat menyalin dan menempel URL langsung dari halaman web layanan hosting Git repositori.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/upm-git-cloning.png" alt="Copy the URL from the package repository"> 
+        <figcaption>
+          Salin URL dari repositori paket 
+        </figcaption> 
+       </figure> 
+       <p>Jika repositori tidak dapat diakses secara publik dan Anda menggunakan HTTPS, server repositori gagal untuk otentikasi Anda karena Anda tidak dapat berinteraksi dengan server untuk memberikan kredensial Anda. Dalam hal ini, Editor memberi tahu Anda bahwa otentikasi gagal.</p> 
+       <p>Untuk bekerja di sekitar masalah otentikasi ini, Anda dapat menggunakan <a href="https://git-scm.com/docs/gitcredentials">Penolong kredensial</a> untuk otentikasi sebelum tangan, atau menggunakan <a href="#Git-SSH">protokol SSH</a> bukan. Jika Anda mengatur dan mengkonfigurasi pasangan kunci SSH dengan layanan hosting repositori Git, Manajer Paket dapat mengotentikkan permintaan secara mulus atas nama Anda.</p> 
+       <p><a name="Git-SSH"></a></p> 
+       <h3>Menggunakan protokol SSH</h3> 
+       <p>Anda dapat menggunakan protokol SSH dengan URL penuh:</p> 
+       <pre><code class="lang-json">{
+  "dependencies": {
+    "com.mycompany.mypackage": "ssh://git@mycompany.github.com/gitproject/com.mycompany.mypackage.git"
+  }
+}
+</code></pre> 
+       <p>Sitemap Server Git tidak mendukung ekstensi <code>.git</code>, Anda dapat menambahkan awalan <code>git+</code> khusus, dengan atau tanpa ekstensi:</p> 
+       <pre><code class="lang-json">{
+  "dependencies": {
+    "com.mycompany.mypackage1": "git+ssh://git@github.example.com/myuser/myrepository1.git",
+    "com.mycompany.mypackage2": "git+ssh://git@github.example.com/myuser/myrepository2"
+  }
+}
+</code></pre> 
+       <p> <strong>Note</strong>: Atau, Anda dapat menggunakan protokol GIT bukan awal <code>git+</code>. Untuk informasi lebih lanjut, lihat <a href="#Git-GIT">Menggunakan protokol GIT</a>.</p> 
+       <p>Anda juga dapat menggunakan celana pendek SCP, yang Manajer Paket selalu mengenali sebagai ketergantungan Git:</p> 
+       <pre><code class="lang-json">{
+  "dependencies": {
+    "com.mycompany.mypackage": "git@mycompany.github.com:gitproject/com.mycompany.mypackage.git"
+  }
+}
+</code></pre> 
+       <h4>Menggunakan PuTTY di Windows</h4> 
+       <p>Git menggunakan kunci di lokasi default ketika Anda menggunakan SSH untuk otentikasi. Namun, jika Anda menggunakan <a href="https://www.putty.org/">PuTTY</a> sebagai klien SSH di Windows, Anda perlu mengkonfigurasi variabel lingkungan <code>GIT_SSH</code> untuk membuatnya menunjuk ke <code>plink.exe</code>.</p> 
+       <h4>Otentikasi dengan SSH</h4> 
+       <p>Jika Anda ingin menggunakan protokol SSH, Anda perlu mengatur kunci SSH di luar Unity. Untuk informasi lebih lanjut tentang mengatur otentikasi untuk host tertentu, lihat halaman bantuan untuk <a href="https://support.atlassian.com/bitbucket-cloud/docs/set-up-an-ssh-key/">Bitbucket</a>, <a href="https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html">GitLab</a>, dan <a href="https://github.com/settings/tokens">GitHub</a>.</p> 
+       <p> <strong>Note</strong>: Jika Anda mengenkripsi kunci SSH Anda dengan kata sandi, Manajer Paket tidak dapat mengambil paket, karena tidak memberikan cara untuk memasukkan kata sandi di terminal atau garis perintah. Dalam hal ini, Editor memberi tahu Anda bahwa otentikasi gagal. Untuk membantu dengan menggunakan <strong>ssh-agent</strong> untuk otentikasi, lihat <a href="upm-errors.html#ssh-add">Solusi untuk SSH</a>.</p> 
+       <p><a name="Git-FILE"></a></p> 
+       <h3>Menggunakan protokol FILE</h3> 
+       <p>Manajer Paket tidak mengenali URL Git dengan awalan <code>file:</code> sebagai ketergantungan Git kecuali diformat dengan benar. Ini berarti Anda harus menggunakan protokol <code>git+file:</code>, atau suffix <code>.git</code> dengan protokol <code>file:</code>:</p> 
+       <pre><code class="lang-json">{
+  "dependencies": {
+    "com.mycompany.mypackage1": "git+file://github.example.com/myuser/myrepository1",
+    "com.mycompany.mypackage2": "git+file:///github.example.com/myuser/myrepository2",
+    "com.mycompany.mypackage3": "file:///github.example.com/myuser/myrepository3.git"
+  }
+}
+</code></pre> 
+       <p> <strong>Note</strong>: Atau, Anda dapat menggunakan protokol GIT bukan awal <code>git+</code>. Untuk informasi lebih lanjut, lihat <a href="#Git-GIT">Menggunakan protokol GIT</a>.</p> 
+       <p>Manajer Paket menafsirkan sintaks lain sebagai <a href="upm-localpath.html">jalur lokal</a>.</p> 
+       <p><a name="Git-GIT"></a></p> 
+       <h3>Menggunakan protokol GIT</h3> 
+       <p>Manajer Paket mengenali protokol <code>git:</code>, dengan atau tanpa suffix jalur <code>.git</code>:</p> 
+       <pre><code class="lang-json">{
+  "dependencies": {
+    "com.mycompany.mypackage1": "git://github.example.com/myuser/myrepository1.git",
+    "com.mycompany.mypackage2": "git://github.example.com/myuser/myrepository2"
+  }
+}
+</code></pre> 
+       <p>Protokol GIT tidak perlu atau mendukung prefiks <code>git+</code>.</p> 
+       <p><a name="revision"></a></p> 
+       <h3>Menargetkan revisi tertentu</h3> 
+       <p>Untuk mendeklarasikan revisi tertentu yang Anda inginkan Manajer Paket untuk menginjak, tambahkan revisi yang ditetapkan oleh tanda nomor (<code>#</code>) pada akhir URL:</p> 
+       <pre><code class="lang-json">{
+  "dependencies": {
+    "com.mycompany.mypackage1": "https://github.example.com/myuser/myrepository1.git#revision",
+    "com.mycompany.mypackage2": "git+https://github.example.com/myuser/myrepository2#revision"
+  }
+}
+</code></pre> 
+       <p>Revisi dapat berupa tag, cabang atau hash. Anda harus memberikan hash berkomitmen penuh. Unity tidak mendukung bijaksana SHA–1. Tabel ini menunjukkan contoh untuk menentukan revisi:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Syntax:</strong></th> 
+          <th style="text-align:left;"><strong>URL example</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Cabang default terbaru</td> 
+          <td style="text-align:left;"><code>"https://github.example.com/myuser/myrepository.git"</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Cabang khusus</td> 
+          <td style="text-align:left;"><code>"https://github.example.com/myuser/myrepository.git#my-branch"</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Versi spesifik</td> 
+          <td style="text-align:left;"><code>"https://github.example.com/myuser/myrepository.git#v2.0.0"</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Commit hash</td> 
+          <td style="text-align:left;"><code>"https://github.example.com/myuser/myrepository.git#9e72f9d5a6a3dadc38d813d8399e1b0e86781a49"</code></td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="subfolder"></a></p> 
+       <h4>Menentukan paket dalam subfolder repositori</h4> 
+       <p>Jika Anda menentukan repositori menggunakan sintaks URL Git, Manajer Paket mengasumsikan bahwa paket harus berakar repositori. Namun, beberapa paket tidak terletak di tingkat akar repositori mereka, dan beberapa repositories mengandung lebih dari satu paket.</p> 
+       <p>Anda dapat menggunakan parameter query <code>path</code> di URL Git untuk memberitahukan Manajer Paket di mana untuk menemukan paket. Jalan yang Anda tentukan harus relatif terhadap akar repositori, dan subfolder yang Anda tentukan harus mengandung file <span class="tooltip"><strong>package manifest</strong><span class="tooltiptext">Setiap paket memiliki <em>manifest</em>, yang menyediakan informasi tentang paket ke Manajer Paket. Manifest mengandung informasi seperti nama paket, versinya, deskripsi untuk pengguna, ketergantungan pada paket lain (jika ada), dan rincian lainnya. <a class="tooltipMoreInfoLink" href="upm-manifestPkg.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Packagemanifest">Glossary</a></span></span></span> (<code>package.json</code>).</p> 
+       <p>Untuk menentukan subfolder repositori untuk ketergantungan Git, gunakan parameter query <code>path</code>:</p> 
+       <pre><code class="lang-json">{
+  "dependencies": {
+    "com.mycompany.mypackage": "https://github.example.com/myuser/myrepository.git?path=/subfolder"
+  }
+}
+</code></pre> 
+       <p>Dalam hal ini, Manajer Paket hanya mendaftarkan paket yang terletak di subfolder repositori yang ditentukan dan mengabaikan sisa repositori.</p> 
+       <p>Terkadang repositori berisi beberapa paket terkait. Jika Anda ingin menambahkan lebih dari satu paket dari repositori yang sama, Anda harus menambahkan dua entri terpisah untuk manifestasi proyek Anda:</p> 
+       <pre><code class="lang-json">{
+  "dependencies": {
+    "com.mycompany.mypackage1": "https://github.example.com/myuser/myrepository.git?path=/subfolder1",
+    "com.mycompany.mypackage3": "https://github.example.com/myuser/myrepository.git?path=/subfolder2/subfolder3"
+  }
+}
+</code></pre> 
+       <p> <strong>Note</strong>: Jika Anda menentukan beberapa kali repositori yang sama, Manajer Paket mengacaukan beberapa kali repositori yang sama, yang menyebabkan kinerja berkurang dan penggunaan jaringan tambahan.</p> 
+       <p><a name="paths-and-revisions"></a></p> 
+       <h4>Menggunakan jalur dan revisi pada saat yang sama</h4> 
+       <p>Parameter query <code>path</code> selalu mengutamakan jangkar revisi. Order terbalik gagal. Ini adalah contoh dari urutan yang benar untuk digunakan:</p> 
+       <pre><code class="lang-json">{
+  "dependencies": {
+    "com.mycompany.mypackage": "https://github.example.com/myuser/myrepository.git?path=/example/folder#v1.2.3"
+  }
+}
+</code></pre> 
+       <p><a name="git-locks"></a></p> 
+       <h2>Ketergantungan Git yang dikunci</h2> 
+       <p>Salah satu prinsip inti dari Manajer Paket adalah determinisme. Jika Anda berbagi proyek Anda dengan pengguna lain, Manajer Paket harus menginstal set dependensi paket yang sama dan versi, dan yang mencakup paket yang gatal dari Git. Untuk mencapai ini, Manajer Paket menggunakan <a href="upm-conflicts-auto.html">lock file</a>, yang melacak yang memiliki ketergantungan Git digunakan.</p> 
+       <p>Ketika Anda menambahkan ketergantungan Git dengan revisi yang ditetapkan ke cabang atau tag, Manajer Paket memetik hash berkomitmen yang sesuai untuk disimpan dalam file kunci. Seiring waktu, cabang-cabang dan tag dapat menunjuk ke berbagai berkomitmen pada repositori Git. Sebagai contoh, cabang dapat memiliki komisaris baru ditambahkan ke dalamnya.</p> 
+       <p>Untuk memperbarui paket ke berbagai berkomitmen bahwa cabang atau tag poin ke, gunakan tombol <a href="upm-ui-giturl.html">Tambahkan paket dari git URL</a> dan masukkan URL Git. Anda dapat menggunakan URL Git yang sama, karena Manajer Paket mengabaikan hash yang terkunci ketika Anda mengajukan permintaan baru. Namun, Anda juga dapat menentukan nomor revisi baru, tag, atau cabang sebagai <a href="#revision">revision</a>.</p> 
+       <p>Atau, Anda dapat membuat skrip dengan metode API <a href="../ScriptReference/PackageManager.Client.Add.html">Login Login</a> C# dengan Git URL.</p> 
+       <p><br></p> 
+       <p><a name="git-lfs"></a></p> 
+       <h2>Login Sitemap</h2> 
+       <p>Paket Manager mendukung Ketergantungan git dengan repositories menggunakan Git LFS. Karena Git LFS telah dirancang untuk bekerja dengan overhead konfigurasi minimal, mendukung HTTPS dan SSH <a href="#authentication">authentication</a>. Retrieval file yang disimpan di server LFS gagal jika pengguna harus diotentikkan dan tidak memiliki kredensial yang valid dengan izin untuk mengakses repositori jarak jauh.</p> 
+       <p>Paket penulis dapat membantu klien Git LFS menemukan Server LFS dengan menyediakannya dengan URL dalam file konfigurasi <code>.lfsconfig</code> di repositori. Ada dua cara untuk melakukan ini:</p> 
+       <pre><code class="lang-json"># Option 1: global setting
+[lfs]
+  url = ssh://git@HOSTNAME/path/to/repo.git
+
+# Option 2: per-remote setting
+[remote "origin"]
+  lfsurl = ssh://git@HOSTNAME/path/to/repo.git
+</code></pre> 
+       <p>Jika repositori berisi file <code>.lfsconfig</code>, pastikan Anda memasukkannya dalam file <code>.npmignore</code> untuk menghindari termasuk dalam rilis yang diterbitkan dari paket.</p> 
+       <h3>Git LFS cache</h3> 
+       <p>Sebagai Unity 2021.2, Anda dapat mengaktifkan cache Git LFS untuk Manajer Paket untuk digunakan ketika memeriksa dependensi berbasis Git. Ini menghindari harus mengunduh file yang sama setiap kali Anda memeriksa revisi yang berbeda dari repositori.</p> 
+       <p>Cache Git LFS untuk Manajer Paket berbeda dari cache Git LFS di folder .git / rak repositori Git Anda. Manajer Paket tidak dapat menggunakan cache Git default karena tidak menyimpan repositori yang dikloning setelah paket telah disalin ke cache proyek.</p> 
+       <p>Untuk mengaktifkan cache Git LFS untuk Manajer Paket, pilih salah satu opsi berikut:</p> 
+       <ul> 
+        <li>Untuk mengaktifkan cache Git LFS dan gunakan subfolder <code>git-lfs</code> di bawah <a href="upm-cache.html">default global cache akar</a> sebagai lokasinya, atur variabel lingkungan <code>UPM_ENABLE_GIT_LFS_CACHE</code> ke nilai (non-empty).</li> 
+        <li>Untuk mengaktifkan cache Git LFS dan gunakan lokasi kustom untuk itu, atur variabel lingkungan <code>UPM_GIT_LFS_CACHE_PATH</code> ke jalur kustom. Ketika Anda mengatur lokasi, opsi cache Git LFS diaktifkan secara otomatis.</li> 
+       </ul> 
+       <p>Untuk informasi lebih lanjut tentang cara mengatur variabel lingkungan untuk cache global, lihat <a href="upm-config-cache.html">Sesuaikan lokasi cache global</a>.</p> 
+       <p>Sitemap Optimasi ini membutuhkan ruang disk ekstra saat menggunakan paket Git LFS-enabled. Anda harus memutuskan mana manfaat yang lebih besar: Git LFS file caching biaya ruang disk tetapi menghemat pada mengunduh kembali file yang sama. Namun, beberapa situasi tidak dapat menggunakan cache dan menggunakan ruang disk tanpa menggunakan kembali file. Misalnya, Anda Ketergantungan Git mungkin menyelesaikan revisi yang merujuk pada konten file LFS-tracked yang berbeda, seperti skenario ini:<strong>Note:</strong> This optimization requires extra disk space when using Git LFS-enabled packages. You need to decide which is the greater benefit: Git LFS file caching costs disk space but saves on re-downloading the same files. However, some situations can’t make use of the cache and use up disk space without re-using the files. For example, your Git dependencies might resolve to revisions that reference different LFS-tracked file content, such as these scenarios:</p> 
+       <ul> 
+        <li>Menggunakan berbeda Revisi git dalam ketergantungan dalam beberapa proyek</li> 
+        <li>Sering memperbarui paket untuk revisi yang mengandung file LFS yang berubah yang berbeda</li> 
+       </ul> 
+       <p><br></p> 
+       <hr> 
+       <p><br></p> 
+       <ul> 
+        <li><span class="page-history">Kunci file ditambahkan dalam Unity <span class="search-words">NewIn20194</span></span></li> 
+        <li><span class="page-history">Ketergantungan git dalam subfolder ditambahkan dalam Unity <span class="search-words">NewIn20194</span></span></li> 
+        <li><span class="page-history">Git LFS caching untuk ketergantungan Git ditambahkan dalam Unity <span class="search-words">NewIn20194</span></span></li> 
+       </ul> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="upm-embed.html"></a></span> 
+         <div class="tip">
+           Ketergantungan tertanam 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="upm-localpath.html"></a></span> 
+         <div class="tip">
+           folder lokal atau jalur tarball 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Menggunakan UDP dengan layanan lain</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityServices.html">Layanan Unity</a></li> 
+         <li><a href="udp.html">Portal Distribusi Unity</a></li> 
+         <li>Menggunakan UDP dengan layanan lain</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="udp-managing-and-publishing.html"></a></span> 
+          <div class="tip">
+            Mengelola dan menerbitkan permainan Anda di konsol UDP 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="udp-firebase.html"></a></span> 
+          <div class="tip">
+            Menggunakan Firebase dengan build UDP 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Menggunakan UDP dengan layanan lain</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <h2>Layanan game Google Play di Gedung UDP</h2> 
+       <h3>Overview</h3> 
+       <p>Menerapkan <a href="https://developers.google.com/games/services/console/enabling">Layanan permainan Google Play</a> dalam game Android Anda memungkinkan Anda memanfaatkan lapisan layanan Google untuk fitur seperti pencapaian dan papan peringkat. Jika permainan Anda menerapkan layanan permainan Google Play, konfigurasi tambahan diperlukan untuk mendukung build yang menciptakan untuk toko yang berbeda.</p> 
+       <p>Ketika permainan Anda invokes Layanan Google Play game, layanan Google Play game memeriksa bahwa rincian berikut cocok dengan informasi yang terdaftar di Google Play Console:</p> 
+       <ul> 
+        <li><strong>package name</strong> aplikasi</li> 
+        <li><strong>certificate</strong> aplikasi ditandatangani dengan</li> 
+       </ul> 
+       <p>Jika mereka tidak cocok, pemain tidak bisa masuk ke aplikasi dengan layanan permainan Google Play.</p> 
+       <p>Untuk toko-toko tertentu yang Anda publikasikan permainan Anda melalui UDP, UDP menambahkan suffix khusus untuk nama paket. Selain itu, jika Anda tidak menggunakan kunci pribadi Anda sendiri untuk menghasilkan sertifikat, UDP menghasilkan sertifikat untuk setiap membangun yang dikemas ulang. Peristiwa ini akan menyebabkan sertifikat dan/atau nama paket untuk tidak lagi mencocokkan informasi di Google Play Console. Ini akan mencegah pengguna masuk ke permainan dengan layanan permainan Google Play.</p> 
+       <p>Bagian berikut menjelaskan bagaimana menyelesaikan masalah ini.</p> 
+       <h3>Mengkonfigurasi layanan game Google Play untuk membangun UDP</h3> 
+       <p>Bagian ini menjelaskan cara menghubungkan versi UDP Anda ke aplikasi Google Play sehingga layanan game Google Play dapat bekerja sama dengan mereka.</p> 
+       <ol> 
+        <li>Di Google Play Console, pergi ke aplikasi target.</li> 
+        <li><strong>Play Games Services</strong> &gt; <strong>Setup and management</strong> &gt; <strong>Configuration</strong>. 
+         <ul> 
+          <li>Jika permainan Google Play Anda memiliki layanan Google Play game yang diimplementasikan, permainan Anda sudah dikaitkan dengan proyek layanan Google Play game. Dalam hal ini: 
+           <ol> 
+            <li>Pilih <strong>Use an existing Play Games Services project</strong>.</li> 
+            <li>Pilih proyek game Anda dan pilih <strong>Use</strong>.</li> 
+            <li>Ikuti langkah-langkah di <a href="#link">Tautan aplikasi UDP ke layanan permainan Anda</a>.</li> 
+           </ol> </li> 
+          <li>Jika permainan Google Play Anda tidak memiliki layanan Google Play game yang diimplementasikan: 
+           <ol> 
+            <li>Di halaman Pengaturan Layanan Game Play, pilih <strong>Yes, my game already uses Google APIs</strong> atau <strong>No, my game doesn’t use Google APIs</strong>.</li> 
+            <li>Ikuti langkah-langkah di <a href="#create">Membuat dan menghubungkan proyek layanan permainan Google Play</a>.</li> 
+           </ol> </li> 
+         </ul> </li> 
+       </ol> 
+       <p><a name="create"></a></p> 
+       <h4>Membuat dan menghubungkan proyek layanan permainan Google Play</h4> 
+       <p>Bagian ini menjelaskan bagaimana membuat proyek layanan game Google Play dan menghubungkannya ke proyek cloud baru atau yang ada.</p> 
+       <p>Jika Anda memilih <strong>Yes, my game already uses Google APIs</strong> di halaman Pengaturan Layanan Play Games:</p> 
+       <ol> 
+        <li>Pilih proyek cloud.</li> 
+        <li>Pilih Gunakan untuk membuat proyek Play Games Services baru dan menghubungkannya ke proyek cloud Anda yang ada.</li> 
+       </ol> 
+       <p>Jika Anda memilih <strong>No, my game doesn’t use Google APIs</strong> di halaman Pengaturan Layanan Play Games:</p> 
+       <ol> 
+        <li>Masukkan nama permainan.</li> 
+        <li>Pilih Buat untuk membuat proyek Play Games Services baru dan menghubungkannya ke proyek cloud baru.</li> 
+       </ol> 
+       <p>Ketika Anda membuat proyek Play Games Services baru, tautan <strong>Add credential</strong> dinonaktifkan.</p> 
+       <ol> 
+        <li>Pilih <strong>Configure OAuth consent screen</strong>.</li> 
+        <li>Di layar konfigurasi Play Games Services, pilih Refresh.<br> Opsi kredensial Tambahkan sekarang diaktifkan.</li> 
+        <li>Pilih <strong>Add credential</strong>.<br> Ini membuka halaman Tambahkan kredensial.</li> 
+        <li>Pada halaman Tambahkan kredensial: 
+         <ol> 
+          <li>Pilih <strong>Android</strong> sebagai <strong>Type</strong>.</li> 
+          <li>Set <strong>Enable anti-piracy</strong> untuk <strong>Off</strong>. Ini memungkinkan pengguna mengakses permainan Anda jika mereka telah menginstalnya dari toko aplikasi yang berbeda dari Google Play.</li> 
+          <li>Pada bagian Otorisasi, pilih <strong>Create OAuth client</strong>. Ini membuka popup.</li> 
+          <li>Pilih <strong>Create OAuth Client ID</strong> dan gunakan detail dari popup untuk menyelesaikan formulir.</li> 
+         </ol> </li> 
+       </ol> 
+       <p>Ketika Anda telah menyelesaikan langkah-langkah di atas, permainan Google Play Anda dikaitkan dengan layanan permainan Google Play. Langkah selanjutnya adalah <a href="#link">menghubungkan UDP Anda membangun layanan permainan</a>.</p> 
+       <p><a name="link"></a></p> 
+       <h4>Menghubungkan aplikasi UDP ke layanan permainan Anda</h4> 
+       <p>Ketika Anda telah menghubungkan aplikasi Anda ke layanan Google Play game Anda dapat menghubungkan aplikasi lain (UDP) ke layanan game.</p> 
+       <ol> 
+        <li>Di Google Play Console, pilih <strong>Play Games Services</strong> &gt; <strong>Setup and management</strong> &gt; <strong>Configuration</strong>. 
+         <ol> 
+          <li>Di halaman konfigurasi Play Games Services, pilih <strong>Add credential</strong>.</li> 
+         </ol> </li> 
+        <li>Pada halaman Tambahkan kredensial: 
+         <ol> 
+          <li>Pilih <strong>Android</strong>.</li> 
+          <li>Sitemap Ini memungkinkan pengguna mengakses permainan Anda jika mereka telah menginstalnya dari toko aplikasi yang berbeda dari Google Play.<strong>Enable anti-piracy to off</strong>. This lets users access your game if they have installed it from a different app store than Google Play.</li> 
+          <li>Pada bagian <strong>Authorization</strong>, pilih <strong>Create OAuth client</strong>. Ini membuka popup.</li> 
+          <li>Pilih <strong>Create OAuth Client ID</strong> dan gunakan detail dari popup untuk menyelesaikan formulir.</li> 
+         </ol> </li> 
+        <li>Dalam bentuk Buat ID klien OAuth, masukkan rincian yang diperlukan untuk membuat entri untuk salah satu build UDP Anda. 
+         <ol> 
+          <li>Di bidang <strong>Name</strong>, nama build setelah toko yang sesuai, misalnya “versi Samsung”.</li> 
+          <li>Dalam bidang <strong>Package name</strong>, tentukan nama paket untuk membangun terdaftar dengan toko yang sesuai melalui konsol UDP. Login Nama paket khusus toko ditampilkan di konsol UDP: <br>The store-specific package name is displayed in the UDP console: 
+           <ol> 
+            <li>Pergi ke Game Saya &gt; Publish tab.</li> 
+            <li>Pilih <strong>Advanced</strong> untuk toko yang sesuai. Login Nama paket ditampilkan di bagian Informasi Dasar.<br>The package name is displayed in the Basic Information section.</li> 
+           </ol> </li> 
+          <li>Dalam bidang sertifikat, gunakan sertifikat yang digunakan untuk toko UDP yang sesuai. UDP menandatangani aplikasi dengan sertifikat baru setelah operasi Repack. Login Sertifikat khusus toko ditampilkan di konsol UDP: <br>The store-specific certificate is displayed in the UDP console: 
+           <ol> 
+            <li>Pergi ke Game Saya &gt; Publish tab.</li> 
+            <li>Pilih <strong>Advanced</strong> untuk toko yang sesuai. Login Sertifikat ditampilkan di bagian Informasi Dasar.<br><br><strong>Note</strong><br><code>openssl x509 -in [downloaded-pem-filepath] -fingerprint -noout</code>%</li> 
+            <li>Salin SHA–1 dari konsol UDP ke bidang sertifikat.</li> 
+           </ol> </li> 
+         </ol> </li> 
+        <li>Ketika Anda telah menyelesaikan formulir, pilih <strong>Create</strong> dan kembali ke Google Play Console.</li> 
+        <li>Pilih <strong>Refresh OAuth clients</strong>.</li> 
+        <li>Pilih klien OAuth baru Anda. 
+         <ol> 
+          <li>Pilih <strong>Save changes</strong> untuk menyimpan kredensial.</li> 
+         </ol> </li> 
+        <li>Ulangi langkah-langkah di atas untuk setiap bangunan UDP khusus yang ingin Anda link ke aplikasi Google Play Anda.</li> 
+       </ol> 
+       <p>Anda dapat melihat UDP membangun Anda telah terhubung ke aplikasi Google Play Anda di Google Cloud Platform &gt; Google API &amp; Layanan dashboard, di bawah Credentials.</p> 
+       <p>Langkah-langkah ini memungkinkan layanan game Google Play untuk bekerja dengan sukses pada semua versi toko UDP yang terhubung dengan cara itu, termasuk Mi GetApps (whose SDK mengintegrasikan versi lama Layanan Google Mobile, yang menciptakan konflik).</p> 
+       <p> <strong>Note</strong>: Setiap perubahan sistem Google dapat mempengaruhi solusi yang dijelaskan di atas. Untuk informasi lebih lanjut tentang informasi pemecahan masalah Google, lihat <a href="https://www.google.com/url?q=https://developers.google.com/games/services/android/troubleshooting&amp;sa=D&amp;ust=1611571996561000&amp;usg=AOvVaw00u3uXWmm9qmGpqo4yuFQX">Dokumentasi Google</a>.</p> 
+       <h2>Menggunakan Cloud Build dengan UDP</h2> 
+       <p>Anda dapat menggunakan <span class="tooltip"><span class="tooltiptext">Layanan integrasi berkelanjutan untuk proyek Unity yang mengotomatiskan proses pembuatan build pada server Unity. <a href="UnityCloudBuild.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#CloudBuild">Glossary</a></span></span></span> untuk menyebarkan permainan Anda ke konsol UDP dalam cara berikut:</p> 
+       <ul> 
+        <li> <a href="#upload">Unggah APK Anda ke Build Cloud</a>, dan menyebarkannya ke UDP dari sana</li> 
+        <li> <a href="#build">Bangun permainan Anda dengan Build Cloud</a>, dan menyebarkannya ke UDP dari sana</li> 
+       </ul> 
+       <p><a name="upload"></a></p> 
+       <h2>Mendorong build ke konsol UDP melalui Cloud Build</h2> 
+       <p>Bagian ini menjelaskan cara menggunakan Cloud Build untuk mendorong permainan Anda ke UDP. Dalam Editor Unity, aktifkan Build Cloud di jendela <span class="tooltip"><strong>Project Settings</strong><span class="tooltiptext">Pengumpulan yang luas dari pengaturan yang memungkinkan Anda untuk mengkonfigurasi bagaimana Fisika, Audio, Jaringan, Grafik, Input dan banyak bidang lain dari jangkauan proyek Anda. <a class="tooltipMoreInfoLink" href="comp-ManagerGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span>.</p> 
+       <h3>Menggunakan Cloud Build di Editor untuk menyebarkan permainan Anda ke UDP</h3> 
+       <p>Untuk menyebarkan permainan Anda ke UDP melalui fitur Build Cloud di Editor Unity, Anda perlu mengunggah build UDP Anda dan mendorongnya ke UDP.</p> 
+       <ol> 
+        <li>Pada tab <strong>Cloud Build</strong> dari jendela Pengaturan Proyek, jika Anda belum mengunggah build sebelum, pilih <strong>Upload Build</strong>.<br> </li> 
+        <li><strong>FILE</strong>:<br> 
+         <ul> 
+          <li>Pilih <span class="tooltip"><strong>APK</strong><span class="tooltiptext">Format paket Android output oleh Unity. Sebuah APK secara otomatis digunakan untuk perangkat Anda ketika Anda memilih File &gt; Build &amp; Run. <a class="tooltipMoreInfoLink" href="android-BuildProcess.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#APK">Glossary</a></span></span></span> dari build UDP Anda</li> 
+          <li>Masukkan ruang <strong>LABEL</strong>% yang berguna</li> 
+          <li>Mengatur bidang <strong>PLATFORM</strong> ke Android.<br> </li> 
+         </ul> </li> 
+        <li>Pilih <strong>UPLOAD</strong>, dan biarkan menyelesaikan proses unggah.</li> 
+        <li>Pada tab <strong>Cloud Build</strong> dari jendela Pengaturan Proyek, cari build yang diinginkan dari build <strong>History</strong> timeline dan pilih <strong>Push to Unity Distribution Portal</strong>. 
+         <ol> 
+          <li>Verifikasi bahwa Anda ingin mendorong, dan bahwa tindakan selesai.<br> <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UDPUsingCloudBuild_03.png" alt=""> </li> 
+         </ol> </li> 
+       </ol> 
+       <h3>Menggunakan Dashboard Unity untuk menyebarkan permainan Anda ke UDP</h3> 
+       <p>Untuk menyebarkan permainan Anda ke UDP melalui fitur Build Cloud di Dashboard Unity, Anda perlu mengunggah UDP Anda membangun ke Dashboard Unity dan mendorongnya dari sana ke UDP.</p> 
+       <ol> 
+        <li>Di, arahkan ke <strong>Cloud Build</strong> Proyek Anda &gt; <strong>History</strong>.</li> 
+        <li>Pilih <strong>Upload</strong>, lalu pilih file APK Anda.</li> 
+        <li>Di bidang <strong>Platform</strong>, pilih <strong>Android</strong>.</li> 
+        <li>Pilih <strong>Upload</strong>.</li> 
+        <li>Pilih menu Lainnya di sebelah build Anda untuk memperluas menu drop-down.</li> 
+        <li>Pilih <strong>Push to Unity Distribution Portal</strong>.</li> 
+       </ol> 
+       <p><a name="build"></a></p> 
+       <h2>Membangun dan menyebarkan melalui Build Cloud</h2> 
+       <p>Jika Anda menggunakan Tim Unity Lanjutan, Anda dapat .</p> 
+       <p>Di tab Build Cloud dari jendela Pengaturan Proyek:</p> 
+       <ol> 
+        <li>Pilih <strong>Manage Build Targets</strong> &gt; <strong>Add new build target</strong> </li> 
+        <li>Di jendela <strong>TARGET SETUP</strong>, set kolom <strong>PLATFORM</strong> ke Android dan masukkan <strong>TARGET LABEL</strong> yang berguna.</li> 
+        <li>Pilih <strong>Next: Save</strong>.</li> 
+        <li>Pilih <strong>Start Cloud Build</strong>, lalu pilih target build yang Anda buat.</li> 
+       </ol> 
+       <p>Push build Anda ke UDP langsung melalui Unity Cloud Build Developer Dashboard (seperti yang ditunjukkan di atas).</p> 
+       <h2>Layanan interoperabilitas</h2> 
+       <p>UDP dapat memberitahu layanan lain yang digunakan oleh permainan Anda yang toko adalah permainan yang diunduh dari.</p> 
+       <p>Informasi ini dapat digunakan dalam banyak cara, dengan layanan Unity serta layanan pihak ketiga atau layanan Anda sendiri.</p> 
+       <p>Misalnya, memungkinkan Anda menyetel pengaturan permainan Anda berdasarkan aturan yang Anda mendefinisikan, seperti yang menyimpan permainan diunduh.</p> 
+       <p>Bagian ini menjelaskan cara membiarkan layanan lain mendapatkan akses ke informasi ini, dan termasuk <a href="#example">example</a>.</p> 
+       <h3>Bagaimana cara kerjanya?</h3> 
+       <p>Ketika permainan pertama Anda meluncurkan pada perangkat pemain, UDP menciptakan dan menjatuhkan file <code>udp.json</code> di Jalur Data Persistent game. File ini berisi bidang <code>udpStore</code>, yang menunjukkan bahwa menyimpan permainan diunduh. Perhatikan bahwa informasi untuk menggunakannya cara yang Anda maksudkan.</p> 
+       <p>Sitemap Ini tidak menambahkan izin baru ke dalam manifestasi permainan Anda.<strong>Note:</strong> This doesn’t add any new permission into your game manifest.</p> 
+       <h3>Locating udp.json</h3> 
+       <p>File <code>udp.json</code> disimpan dalam:</p> 
+       <p><code>Application.PersistentDataPath + '/Unity' + /Application.CloudProjectID + /udp/udp.json</code></p> 
+       <p>Where:</p> 
+       <ul> 
+        <li> <code>Application.PersistentDataPath</code> adalah jalur data persistent permainan Anda</li> 
+        <li> <code>Application.CloudProjectID</code> adalah ID proyek Unity permainan Anda</li> 
+       </ul> 
+       <p>Berikut adalah contoh path ke file <code>udp.json</code>:</p> 
+       <p><code>path/storage/emulated/0/Android/data/com.mystudio.mygame/files/Unity/c83d2de2-de74-4b75-83fc-ade948bda064/udp/udp.json</code></p> 
+       <p>Where:</p> 
+       <ul> 
+        <li> <code>Application.PersistentDataPath</code>= <code>path/storage/emulated/0/Android/data/com.mystudio.mygame</code> </li> 
+        <li> <code>Application.CloudProjectID</code>= <code>c83d2de2-de74-4b75-83fc-ade948bda064</code> </li> 
+       </ul> 
+       <h3>WordPress.org</h3> 
+       <p>File <code>udp.json</code> berisi informasi berikut:</p> 
+       <pre><code>{"key":"UDP","udpStore":"StoreName","udpClientId":"value_of_udpClientId","CloudProjectId":"value_of_CloudProjectId"}
+</code></pre> 
+       <p>Bidang <code>udpStore</code> mengandung nilai UDP menyimpan permainan Anda diunduh.</p> 
+       <p>Berikut adalah contoh file <code>udp.json</code>:</p> 
+       <pre><code>{"key":"UDP","udpStore":"Huawei","udpClientId":"icjaB7wmu_q7AOjrSLH8yw","cloudProjectId":"bc2be074-09f3-450f-8e98-a0f79c9746f7"}
+</code></pre> 
+       <p>Dalam contoh ini, permainan diunduh dari HUAWEI AppGallery.</p> 
+       <p> <strong>Tip:</strong> menggunakan <code>JSONUtility.FromJsonOverwrite</code> untuk membaca isi file sebagai aset teks.</p> 
+       <p><a name="udp-values"></a></p> 
+       <h3>Login Nilai toko</h3> 
+       <p>Tabel di bawah daftar nilai <code>udpStore</code> yang dapat Anda harapkan untuk toko yang tersedia di UDP.</p> 
+       <p>Ini sensitif terhadap kasus.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Toko (nama saluran pada UDP)</th> 
+          <th style="text-align:left;">Nilai untuk udp Login</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">UDP Sandbox (untuk build UDP generik)</td> 
+          <td style="text-align:left;">UdpSandbox</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">ONE store</td> 
+          <td style="text-align:left;">OneStore</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Login Login</td> 
+          <td style="text-align:left;">Apptutti</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Mi GetApps (Xiaomi)</td> 
+          <td style="text-align:left;">XiaomiStore</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Appstore</td> 
+          <td style="text-align:left;">Huawei</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Toko Game QooApp</td> 
+          <td style="text-align:left;">QooApp</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Uptodown</td> 
+          <td style="text-align:left;">Uptodown</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">SHAREit</td> 
+          <td style="text-align:left;">ShareIt</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">JioGames</td> 
+          <td style="text-align:left;">JioGames</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Legion Store</td> 
+          <td style="text-align:left;">Legion</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="example"></a></p> 
+       <h3>Menggunakan udpStore dengan Konfigurasi Jarak Jauh</h3> 
+       <p>memungkinkan Anda menyetel pengaturan permainan Anda tanpa menyebarkan versi baru dari aplikasi Anda. Ketika pemain meluncurkan permainan Anda, Remote Config mendeteksi atribut kontekstual yang digunakan sebagai kondisi Rule (berdasarkan Unity, aplikasi, pengguna, atau kriteria khusus yang Anda tentukan). Layanan kemudian mengembalikan pengaturan yang disesuaikan untuk setiap pemain sesuai dengan Peraturan yang berlaku untuk mereka.</p> 
+       <p>Gunakan <code>udpStore</code> sebagai atribut dalam kondisi Rule Anda, sehingga Anda dapat menentukan pengaturan permainan yang tergantung pada mana UDP menyimpan permainan diunduh dari.</p> 
+       <p>Untuk menerapkan udpStore dengan Remote Config, ikuti langkah-langkah ini.</p> 
+       <ol> 
+        <li>Unduh dan instal paket UDP.</li> 
+        <li>Unduh dan instal paket Config <span class="tooltip"><strong>Unity Remote</strong><span class="tooltiptext">Aplikasi yang dapat diunduh dirancang untuk membantu pengembangan Android, iOS, dan TVOS. Aplikasi ini terhubung dengan Unity sementara Anda menjalankan proyek Anda dalam Mode Bermain dari Editor Unity. <a class="tooltipMoreInfoLink" href="UnityRemote5.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UnityRemote">Glossary</a></span></span></span>. Sitemap</li> 
+        <li>Buat sebuah AppAttributes struct, yang setidaknya memiliki parameter, “udpStore”:<br> <code> public struct AppAttributes { public string udpStore; } </code> </li> 
+        <li>Dalam kode permainan, menerapkan Remote ConfigManager. Login</li> 
+        <li>Ketika memanggil FetchConfigs, membuat instance baru dari AppAttributes struct, membaca file data toko UDP dari: Aplikasi. PersistentDataPath + '/Unity' + / Aplikasi.CloudProject Sitemap Gunakan JSONUtility.DariJsonOverwrite untuk membaca isi file sebagai aset teks.<br> <code> { string udpFilePath = System.IO.Path.Combine(Application.persistentDataPath, "Unity", Application.cloudProjectId, "udp", "udp.json"); string udpFileContents = System.IO.File.ReadAllText(udpFilePath); var appAttr = JsonUtility.FromJson&amp;lt;AppAttributes&amp;gt;(udpFileContents); Unity.RemoteConfig.ConfigManager.FetchCompleted += ConfigManager_FetchCompleted; Unity.RemoteConfig.ConfigManager.FetchConfigs(null, appAttr); } </code> </li> 
+        <li>Pastikan struct AppAttributes digunakan di ConfigManager. Login</li> 
+        <li>Buka pengaturan <strong>Remote Config</strong> (<strong>Services</strong> &gt; <strong>Remote Config</strong> &gt; <strong>Configure</strong>), dan buat parameter yang ingin Anda ubah berdasarkan toko UDP.</li> 
+        <li>Ketika parameter diatur, dan berperang dalam kode permainan, buat aturan untuk setiap toko di jendela Remote Config.</li> 
+        <li>Dalam setiap kondisi aturan, masukkan: aplikasi.udpStore == "[storeName]"<br> 
+         <ul> 
+          <li><a href="#udp-values">nilai untuk udp Login</a><br> <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UDPServiceInteroperability_01.png" alt=""> </li> 
+         </ul> </li> 
+        <li>Untuk mengaktifkan pengaturan, pilih kotak centang di sebelah nama aturan di panel kiri dalam pengaturan Konfigurasi Jarak Jauh.</li> 
+        <li>Membangun aplikasi ke perangkat dan memastikan aturan diterapkan dengan benar, dan mengirimkannya.</li> 
+       </ol> 
+       <p><a name="iap"></a></p> 
+       <h2>Menerapkan item IAP untuk UDP dengan Unity IAP</h2> 
+       <p>Jika Anda ingin menerapkan UDP menggunakan <span class="tooltip"><strong>Unity IAP</strong><span class="tooltiptext">Unity <strong>In App Purchase</strong><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UnityIAP">Glossary</a></span></span></span>, pertama.</p> 
+       <p> <strong>Note</strong>: Jika Anda memilih untuk mengimplementasikan UDP dengan versi Unity IAP 1.22.0-1.23.5 (dalam menggunakan paket UDP) kemudian menerapkan melalui Unity IAP hanya.</p> 
+       <p>Unity IAP secara otomatis menangani berikut:</p> 
+       <ul> 
+        <li>UDP</li> 
+        <li>Querying persediaan produk IAP toko</li> 
+        <li>Meminta untuk membeli produk</li> 
+        <li>Mengumpulkan barang yang dibeli</li> 
+       </ul> 
+       <p>Namun, permainan Anda harus menggunakan fungsi serupa Unity IAP (seperti awalisasi dan pembelian) sesuai dengan .</p> 
+       <p>Ketika Anda telah menerapkan pembelian dalam aplikasi permainan Anda dengan Unity IAP, mengambil langkah-langkah berikut untuk mengatur UDP dengan Unity IAP.</p> 
+       <p><a name="query-iap"></a></p> 
+       <h3>IAP Inventaris</h3> 
+       <h4>Dengan Unity IAP (pengimplementasikanan kode)</h4> 
+       <h5>Mencapai produk IAP didefinisikan dalam Editor</h5> 
+       <p>Ketika mengambil produk IAP untuk lulus ke metode <code>queryInventory</code>, invoke <code>ProductCatalog.LoadDefaultCatalog()</code>. Ini mengembalikan produk IAP yang didefinisikan dalam <strong>IAP Catalog</strong> Editor (<strong>Services</strong> &gt; <strong>Unity IAP</strong> &gt; <strong>IAP Catalog</strong>).</p> 
+       <p>Contohnya:</p> 
+       <pre><code>var catalog = ProductCatalog.LoadDefaultCatalog();
+
+foreach (var product in catalog.allValidProducts)
+{
+   if (product.allStoreIDs.Count &gt; 0)
+   {
+       var ids = new IDs();
+       foreach (var storeID in product.allStoreIDs)
+       {
+           ids.Add(storeID.id, storeID.store);
+       }
+       builder.AddProduct(product.id, product.type, ids);
+   }
+   else
+   {
+       builder.AddProduct(product.id, product.type);
+   }
+}
+</code></pre> 
+       <h5>Mencapai informasi produk IAP dari konsol UDP</h5> 
+       <p>Jika Anda berencana untuk memodifikasi Katalog IAP permainan Anda di Konsol UDP, siapkan permainan Anda untuk mengambil informasi produk IAP dari Konsol UDP.</p> 
+       <p>Ketika mengambil produk IAP untuk lulus ke metode <code>queryInventory</code>, invoke builder. TambahkanProduk untuk mengambil produk IAP tertentu yang didefinisikan dari konsol UDP:</p> 
+       <p><code>builder.AddProduct(product.id, product.type, new IDs{})</code></p> 
+       <p>Untuk menampilkan harga produk, diformat dengan mata uang, gunakan <code>productInfo.Value.Price</code>.</p> 
+       <h5>Mencapai IAP Katalog dari konsol UDP</h5> 
+       <p>Untuk mengambil semua produk IAP yang didefinisikan pada Konsol UDP, jangan beri metode pengambilan produk IAP. Game Anda kemudian akan mengambil seluruh Katalog IAP dari Konsol UDP.</p> 
+       <p>Catatan: Unggah file CSV produk IAP di Konsol UDP sepenuhnya menimpa Katalog IAP Anda.</p> 
+       <h4>Mengisi di Katalog IAP dengan paket Unity IAP</h4> 
+       <p>Menambahkan dan mengkonfigurasi pembelian dalam aplikasi Anda untuk UDP.<a href="udp.html#iap-catalog">Catalog</a> all your in-app purchases for UDP. </p> 
+       <p> <strong>Note</strong>: Jika Anda tidak menggunakan Katalog IAP di klien game Anda (misalnya, Anda mempertahankan item IAP Anda hanya pada server game Anda) Anda harus tetap <a href="udp-implementing-iap.html#create">membuat IAP Anda Katalog di konsol UDP</a>.</p> 
+       <ol> 
+        <li>Di Editor Unity, pilih <strong>Services</strong> &gt; <strong>Unity IAP</strong> &gt; <strong>IAP Catalog</strong>.</li> 
+        <li>Pilih <strong>Add Product</strong> dan masukkan rincian untuk setiap produk IAP. 
+         <ol> 
+          <li>Tambahkan harga untuk item IAP di bawah Konfigurasi Portal Distribusi Unity. <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/UDPGamesWithIAP_09.png" alt=""> </li> 
+         </ol> </li> 
+        <li>Untuk menyimpan produk IAP Anda ke konsol UDP, pilih <strong>Sync to UDP</strong>. Apakah ini untuk setiap produk IAP yang Anda buat.</li> 
+       </ol> 
+       <p>Untuk memastikan Katalog IAP disimpan dengan benar, periksa bahwa item yang ditambahkan ditampilkan di konsol UDP.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="udp-managing-and-publishing.html"></a></span> 
+         <div class="tip">
+           Mengelola dan menerbitkan permainan Anda di konsol UDP 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="udp-firebase.html"></a></span> 
+         <div class="tip">
+           Menggunakan Firebase dengan build UDP 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Debug C# kode di Unity</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="ScriptingSection.html">Scripting</a></li> 
+         <li><a href="ScriptingSettingUp.html">Menyiapkan Lingkungan Scripting Anda</a></li> 
+         <li>Debug C# kode dalam Unity</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="ScriptingToolsIDEs.html"></a></span> 
+          <div class="tip">
+            Lingkungan pengembangan terintegrasi (IDE) dukungan 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="StackTrace.html"></a></span> 
+          <div class="tip">
+            Stack trace logging 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Debug C# kode dalam Unity</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Anda dapat menggunakan debugger untuk memeriksa kode sumber Anda saat aplikasi Anda berjalan. Unity mendukung editor kode berikut ke kode debug C #:</p> 
+       <ul> 
+        <li>Visual Studio (dengan Alat Studio Visual untuk plug-in Unity)</li> 
+        <li>Visual Studio untuk Mac</li> 
+        <li>Jetbrains Rider</li> 
+        <li>Visual Studio Code (experimental)</li> 
+       </ul> 
+       <p>Meskipun editor kode ini bervariasi sedikit dalam fitur debugging mereka mendukung, mereka semua menyediakan fungsi dasar seperti titik istirahat, langkah tunggal, dan inspeksi variabel. Anda dapat melampirkan editor kode ini ke <a href="#DebugInEditor">Unity Editor</a> atau <a href="#DebugInPlayer">Pemain Unity</a> ke debug kode Anda.</p> 
+       <p>Kode terkelola debugging dalam pekerjaan Unity di semua platform kecuali <span class="tooltip"><strong>WebGL</strong><span class="tooltiptext">Login API yang membuat grafis 2D dan 3D di browser web. Opsi build Unity WebGL memungkinkan Unity untuk mempublikasikan konten sebagai program JavaScript yang menggunakan teknologi HTML5 dan WebGL rendering API untuk menjalankan konten Unity di browser web. <a class="tooltipMoreInfoLink" href="webgl-gettingstarted.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#WebGL">Glossary</a></span></span></span>. Ini bekerja dengan kedua <span class="tooltip"><a href="Mono.html">Mono</a><span class="tooltiptext">Backend scripting digunakan dalam Unity. <a href="IL2CPP.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Mono">Glossary</a></span></span></span> dan <span class="tooltip"><a href="IL2CPP.html">IL2CPP</a><span class="tooltiptext">Back-end scripting bersatu yang dapat Anda gunakan sebagai alternatif untuk Mono ketika proyek bangunan untuk beberapa platform. <a href="IL2CPP.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#IL2CPP">Glossary</a></span></span></span> <span class="tooltip"><strong>scripting backends</strong><span class="tooltiptext">Kerangka kerja yang skrip di Unity. Unity mendukung tiga backend scripting yang berbeda tergantung pada platform target: Mono, .NET dan IL2CPP. Platform Windows Universal, namun hanya mendukung dua: .NET dan IL2CPP. <a href="windowsstore-il2cpp.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ScriptingBackend">Glossary</a></span></span></span>.</p> 
+       <h2>Sitemap Konfigurasikan editor kode<a name="Configure"></a> Configure the code editor</h2> 
+       <h3>Visual Studio (Windows)</h3> 
+       <p>Installer Editor Unity mencakup opsi untuk menginstal Studio Visual dengan <a class="tooltipMoreInfoLink" href="https://docs.microsoft.com/en-us/visualstudio/gamedev/unity/get-started/getting-started-with-visual-studio-tools-for-unity?pivots=windows">Alat Studio Visual untuk Unity</a> <strong><span class="tooltip"><strong>plug-in</strong><span class="tooltiptext">A set of code created outside of Unity that creates functionality in Unity. There are two kinds of plug-ins you can use in Unity: Managed plug-ins (managed .NET assemblies created with tools like Visual Studio) and Native plug-ins (platform-specific native code libraries). <a href="Plugins.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Plug-in">Glossary</a></span></span></span></strong>. Ini adalah cara yang disarankan untuk mengatur Studio Visual untuk debugging dengan Unity.</p> 
+       <p>Jika Visual Studio sudah dipasang di komputer Anda, buka dan bukalah ke <strong>Tools</strong> &gt; <strong>Get Tools and Features…</strong> untuk menemukan dan instal plug-in <strong>Visual Studio Tools for Unity</strong>.</p> 
+       <h3>Visual Studio untuk Mac</h3> 
+       <p>Installer Editor Unity mencakup opsi untuk menginstal Studio Visual untuk Mac. Ini adalah cara yang disarankan untuk mengatur Visual Studio untuk Mac untuk debugging dengan Unity.</p> 
+       <p>Jika Visual Studio untuk Mac sudah diinstal pada komputer Anda, buka dan bukalah ke <strong>Visual Studio</strong> &gt; <strong>Extensions</strong> &gt; <strong>Install from file…</strong> untuk menemukan dan instal Visual Studio Tools untuk Unity plug-in.</p> 
+       <h3>JetBrains Rider</h3> 
+       <p>Anda dapat menggunakan instalasi default JetBrains Rider ke kode debug di Unity di Windows atau Mac. Kunjungi <a href="https://www.jetbrains.com/help/rider/Unity.html">Situs Web JetBrains</a> untuk menginstalnya.</p> 
+       <h3>Visual Studio Kode</h3> 
+       <p>Untuk debug dalam Unity menggunakan Visual Studio Code, Anda perlu menginstal ekstensi. Visual Studio Code's <a href="https://code.visualstudio.com/docs/other/unity">dokumentasi untuk mengkonfigurasi Kode Visual Studio sebagai editor kode untuk proyek Unity Anda</a>. Ikuti Visual Studio Code's <a href="https://marketplace.visualstudio.com/items?itemName=Unity.unity-debug">instruksi spesifik untuk Debugger untuk ekstensi Unity</a> untuk menginstalnya. Dukungan Unity untuk Kode Visual Studio bereksperimen sebagai Unity tidak secara resmi mendukung Debugger untuk ekstensi Unity.</p> 
+       <h2>Tentukan Editor Script Eksternal di Unity</h2> 
+       <p>Setelah Anda menginstal editor kode, open Unity, pergi ke <strong>Preferences</strong> &gt; <strong>External Tools</strong> dan mengatur <strong>External Script Editor</strong> ke editor kode Anda.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/external-tools.png" alt="The External Tools settings"> 
+        <figcaption>
+          Pengaturan Alat Eksternal 
+        </figcaption> 
+       </figure> 
+       <h2>Breakpoints</h2> 
+       <p>Breakpoints memungkinkan Anda untuk menentukan poin dalam kode Anda di mana Anda ingin menghentikan eksekusinya. Dalam editor kode eksternal Anda, Anda dapat mengatur breakpoint pada garis kode di mana Anda ingin debugger untuk berhenti. Sementara editor kode berada di breakpoint, Anda dapat melihat isi variabel langkah demi langkah.</p> 
+       <p>Jika Anda telah memasang editor kode Anda ke Editor Unity (lihat <a href="#AttachToEditor">Pasang editor kode Anda ke Editor Unity</a>), Editor Unity menjadi tidak responsif sampai Anda memilih opsi terus dalam editor kode Anda, atau menghentikan mode debugging.</p> 
+       <p>Untuk melihat bagaimana Anda dapat mengatur breakpoints di Visual Studio melihat <a href="#BreakpointsVS">Set breakpoints di Visual Studio</a>.</p> 
+       <h2>Sitemap Debug di Editor Unity<a name="DebugInEditor"></a> Debug in the Unity Editor</h2> 
+       <p>Anda dapat debug C# kode saat berjalan di Editor Unity sementara Editor Unity dalam Mode Bermain.</p> 
+       <p>Untuk debug di Editor, Anda perlu mengatur mode Optimisasi Kode Editor ke <strong>Debug Mode</strong>, maka Anda dapat <a href="#AttachToEditor">melampirkan editor kode dengan fitur debugging</a>.</p> 
+       <p>Untuk mengubah mode Optimisasi Kode, pilih tombol Debug di kanan bawah <strong>Unity Editor Status Bar</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/debug-mode.png" alt="The Debug Button in the bottom right of the Unity Editor Status Bar"> 
+        <figcaption>
+          Tombol Debug di bagian bawah kanan Bar Status Editor Unity 
+        </figcaption> 
+       </figure> 
+       <p>Pengaturan Optimasi Kode Unity memiliki dua mode:</p> 
+       <ul> 
+        <li> <strong>Debug Mode</strong>, yang dapat Anda gunakan untuk melampirkan perangkat lunak debugger eksternal, tetapi memberikan kinerja C# yang lebih lambat ketika Anda menjalankan Proyek Anda di Play Mode di Editor.</li> 
+        <li> <strong>Release Mode</strong>, yang memberikan kinerja C# yang lebih cepat ketika Anda menjalankan Proyek Anda di Play Mode di Editor, tetapi Anda tidak dapat melampirkan debugger eksternal.</li> 
+       </ul> 
+       <p>Ketika Anda mengklik tombol Debug di bar status, jendela pop-up kecil terbuka yang berisi tombol yang dapat Anda gunakan untuk beralih mode. Jendela juga menampilkan informasi tentang mode saat ini, dan menjelaskan apa yang terjadi jika Anda beralih mode.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/debug-popup.png" alt="The Debug Mode popup, which shows the current mode, allows you to switch modes, and describes what happens if you switch mode."> 
+        <figcaption>
+          Debug Mode popup, yang menunjukkan mode saat ini, memungkinkan Anda untuk beralih mode, dan menggambarkan apa yang terjadi jika Anda beralih mode. 
+        </figcaption> 
+       </figure> 
+       <p>Untuk mengubah mode Unity Editor mulai dari, pergi ke <strong>Edit</strong> (macOS: <strong>Unity</strong>) &gt; <strong>Preferences</strong> &gt; <strong>General</strong> &gt; <strong>Code Optimization On Startup</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/code-op-startup.png" alt="In Preferences, you can change the Code Optimization mode that Unity starts in."> 
+        <figcaption>
+          Di Preferensi, Anda dapat mengubah mode Optimasi Kode yang dimulai pada Unity. 
+        </figcaption> 
+       </figure> 
+       <p>Untuk mengontrol pengaturan ini menggunakan script, gunakan API berikut:</p> 
+       <ul> 
+        <li><a href="../ScriptReference/Scripting.ManagedDebugger.html">ManagedDebugger</a></li> 
+        <li><a href="../ScriptReference/Compilation.CompilationPipeline-codeOptimization.html">Kompilasi.CompilationPipeline-codeOptimisasi</a></li> 
+        <li><a href="../ScriptReference/Compilation.CodeOptimization.html">Kompilasi.CodeOptimisasi.</a></li> 
+       </ul> 
+       <p>Anda juga dapat menimpa mode bahwa Editor dimulai, atau mematikan soket mendengarkan debugger. Untuk melakukan ini, gunakan <a href="CommandLineArguments.html">perintah baris argumen</a> berikut ketika Anda meluncurkan Editor:</p> 
+       <ul> 
+        <li> <code>-releaseCodeOptimization</code>. Mulai Editor dalam mode optimasi kode <strong>Release</strong>.</li> 
+        <li> <code>-debugCodeOptimization</code>. Mulai Editor dalam mode optimasi kode <strong>Debug</strong>.</li> 
+        <li> <code>-disableManagedDebugger</code>. Mulai Editor dengan soket mendengarkan debugger dinonaktifkan.</li> 
+       </ul> 
+       <h3>Sitemap Pasang editor kode Anda ke Editor Unity<a name="AttachToEditor"></a> Attach your code editor to the Unity Editor</h3> 
+       <p>Cara untuk melampirkan editor kode Anda ke Editor Unity tergantung pada editor kode apa yang Anda gunakan, dan sering merupakan pilihan yang berbeda dari proses debugging normal editor kode Anda. Beberapa editor kode memungkinkan Anda untuk memilih contoh Unity ke debug. Untuk instruksi spesifik untuk editor kode Anda, lihat <a href="#ExternalDocs">Editor kode dokumentasi eksternal</a>. Untuk melihat bagaimana Anda dapat melakukan ini di Visual Studio, lihat <a href="#AttachVSToEditor">Pasang Visual Studio ke Editor Unity</a>.</p> 
+       <p>Ketika Anda telah memasang editor kode ke Editor Unity dan Anda siap untuk memulai debugging, kembali ke Editor Unity dan masukkan Mode Play.</p> 
+       <h2>Sitemap Debug di Pemain Unity<a name="DebugInPlayer"></a> Debug in the Unity Player</h2> 
+       <p>Untuk mengkompilasi Pemain Unity untuk Anda ke debug:</p> 
+       <ol> 
+        <li><strong>File</strong> &gt; <strong>Build Settings</strong>.</li> 
+        <li>Aktifkan opsi <strong><span class="tooltip"><strong>Development Build</strong><span class="tooltiptext">A development build includes debug symbols and enables the Profiler. <a class="tooltipMoreInfoLink" href="UnityCloudBuildDevelopmentBuilds.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#DevelopmentBuild">Glossary</a></span></span></span></strong> dan <strong>Script Debugging</strong> sebelum Anda membangun Pemain. Anda juga dapat mengaktifkan opsi <strong>Wait For Managed Debugger</strong> untuk membuat Pemain menunggu debugger untuk dilampirkan sebelum Pemain mengeksekusi kode skrip.</li> 
+        <li>Pilih <strong>Build And Run</strong>.</li> 
+       </ol> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/debug-build.png" alt="The Build Settings menu with Development Build, Script Debugging, and Wait for Managed Debugger enabled."> 
+        <figcaption>
+          Menu 
+         <strong>Build Settings</strong> dengan 
+         <strong>Development Build</strong>, 
+         <strong>Script Debugging</strong>, dan 
+         <strong>Wait for Managed Debugger</strong> diaktifkan. 
+        </figcaption> 
+       </figure> 
+       <h3>Pasang editor kode Anda ke Pemain Unity</h3> 
+       <p>Untuk melampirkan editor kode Anda ke Unity Player, di editor kode Anda, pilih alamat IP (atau nama mesin) dan port Pemain Anda. Sebagai contoh di mana untuk menemukan ini di Visual Studio, lihat <a href="#AttachVSToEditor">Pasang Visual Studio ke Editor Unity</a>.</p> 
+       <p> <strong>Note</strong>: Editor kode Anda akan menunjukkan semua kasus Unity yang tersedia untuk debug. Pastikan Anda melampirkan editor kode ke instance yang benar dari Pemain Unity, dan tidak ke Editor Unity jika keduanya berjalan.</p> 
+       <p>Ketika Anda telah memasang debugger, Anda dapat mulai debugging biasanya. Untuk instruksi tentang cara melampirkan Unity Player ke editor kode spesifik Anda, lihat <a href="#ExternalDocs">Editor kode dokumentasi eksternal</a>. Contoh cara melampirkan Unity Player yang berjalan pada perangkat mobile ke Visual Studio, lihat <a href="#DebugMobile">Debug Android dan perangkat iOS dengan Visual Studio</a>.</p> 
+       <h2>Sitemap Set breakpoints di Visual Studio<a name="BreakpointsVS"></a> Set breakpoints in Visual Studio</h2> 
+       <p>Untuk mengatur breakpoint di Visual Studio, klik pada kolom ke kiri kode Anda, di garis Anda ingin menghentikan debugger. Lingkaran merah muncul di sebelah nomor garis dan garis disorot.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/vs-breakpoint.png" alt="A breakpoint in Visual Studio."> 
+        <figcaption>
+          A breakpoint di Visual Studio. 
+        </figcaption> 
+       </figure> 
+       <h2>Sitemap Pasang Visual Studio ke Editor Unity<a name="AttachVSToEditor"></a> Attach Visual Studio to the Unity Editor</h2> 
+       <p>Untuk melampirkan Editor Unity ke skrip Visual Studio Anda, buka Studio Visual, buka <strong>Debug</strong> &gt; <strong>Attach Unity Debugger</strong> dan pilih contoh Editor Unity yang ingin Anda debug.</p> 
+       <p>Dalam contoh berikut gambar, ada satu contoh Unity berjalan di Editor dan satu contoh Unity berjalan sebagai Android Player</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/attach-vs-to-editor.png" alt="Visual Studio lists the current instances of Unity that are available to debug."> 
+        <figcaption>
+          Visual Studio daftar instance Unity saat ini yang tersedia untuk debug. 
+        </figcaption> 
+       </figure> 
+       <h2>Sitemap Debug Android dan perangkat iOS dengan Visual Studio<a name="DebugMobile"></a> Debug Android and iOS devices with Visual Studio</h2> 
+       <h3>Android</h3> 
+       <p>Untuk debug pemain Unity berjalan pada perangkat Android, hubungkan ke perangkat menggunakan USB atau TCP. Sebagai contoh, untuk terhubung ke perangkat Android di Visual Studio, pilih opsi <strong>Debug</strong> &gt; <strong>Attach Unity Debugger</strong>. Daftar perangkat yang menjalankan instance Pemain muncul.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/debug-android.png" alt=""> 
+       </figure> 
+       <p>Dalam contoh ini, perangkat android terhubung menggunakan USB dan Wi-Fi di jaringan yang sama sebagai workstation menjalankan Editor Unity dan Visual Studio.</p> 
+       <h4>Android</h4> 
+       <p>Unity tidak dapat secara otomatis menemukan perangkat Chrome OS. Untuk memulai koneksi, terhubung ke perangkat melalui Android Debug Bridge (adb). Untuk informasi lebih lanjut tentang cara menggunakan <span class="tooltip"><strong>adb</strong><span class="tooltiptext">Jembatan Debug Android (ADB). Anda dapat menggunakan ADB untuk menyebarkan paket Android (APK) secara manual setelah bangunan. <a class="tooltipMoreInfoLink" href="https://developer.android.com/studio/command-line/adb.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ADB">Glossary</a></span></span></span>, lihat <a href="https://developer.android.com/studio/command-line/adb">Panduan Pengguna Android Studio</a>.</p> 
+       <h3>iOS</h3> 
+       <p>Untuk debug pemain Unity berjalan pada perangkat iOS, hubungkan ke perangkat menggunakan TCP. Sebagai contoh, untuk terhubung ke perangkat iOS di Visual Studio untuk Mac, pilih <strong>Debug</strong> &gt; <strong>Attach Unity Debugger</strong>. Daftar perangkat yang menjalankan instance Pemain muncul.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/debug-ios.png" alt=""> 
+       </figure> 
+       <p>Pastikan bahwa perangkat hanya memiliki satu antarmuka jaringan aktif (Wi-Fi dianjurkan, mematikan data seluler) dan bahwa tidak ada firewall antara IDE dan perangkat memblokir port TCP (nomor pelabuhan 56000 di atas screenshot).</p> 
+       <p> <strong>Important</strong>: iOS tidak mendukung debugging di atas USB.</p> 
+       <h2>Pemecahan debugger</h2> 
+       <p>Sebagian besar masalah dengan debugger terjadi karena editor kode tidak dapat menemukan Editor Unity atau Pemain Unity. Ini berarti bahwa Editor Unity atau Pemain tidak dapat melampirkan debugger dengan benar. Karena debugger menggunakan koneksi TCP ke Editor atau Pemain, masalah koneksi sering disebabkan oleh jaringan. Berikut adalah beberapa langkah yang dapat Anda ambil untuk memecahkan masalah koneksi dasar.</p> 
+       <h3>Pastikan Anda melampirkan debugger ke instance Unity yang benar</h3> 
+       <p>Anda dapat melampirkan editor kode Anda untuk setiap kasus Editor Unity atau Pemain Unity di jaringan lokal yang mengaktifkan debugging. Ketika Anda melampirkan debugger, pastikan Anda menempelkannya ke instance Unity yang benar. Jika Anda tahu alamat IP atau nama mesin perangkat di mana Anda menjalankan Unity Player, ini membantu untuk menemukan instance yang benar.</p> 
+       <h3>Verifikasi koneksi jaringan ke instance Unity</h3> 
+       <p>Editor kode menggunakan mekanisme yang sama untuk menemukan instance Unity untuk debug sebagai Unity <span class="tooltip"><strong>Profiler</strong><span class="tooltiptext">Jendela yang membantu Anda untuk mengoptimalkan permainan Anda. Ini menunjukkan berapa banyak waktu yang dihabiskan di berbagai bidang permainan Anda. Sebagai contoh, dapat melaporkan persentase waktu yang dihabiskan <strong>rendering</strong>, aimating, atau dalam logika permainan Anda. <a class="tooltipMoreInfoLink" href="Profiler.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profiler">Glossary</a></span></span></span>. Jika editor kode tidak dapat menemukan instance Unity yang Anda harapkan, cobalah untuk melampirkan Profiler Unity ke instance itu. Jika Unity Profileer tidak dapat menemukan instance Unity baik, mungkin ada firewall pada mesin Anda menjalankan editor kode atau instance Unity. Jika firewall ada di tempat, lihat <a href="#Firewall">Periksa pengaturan firewall</a>.</p> 
+       <h3>Pastikan perangkat hanya memiliki satu antarmuka jaringan aktif</h3> 
+       <p>Banyak perangkat memiliki beberapa antarmuka jaringan. Misalnya, ponsel mungkin memiliki koneksi seluler aktif dan koneksi Wi-Fi aktif. Untuk benar menghubungkan debugger ke instance Unity menggunakan TCP, IDE perlu membuat koneksi jaringan ke antarmuka yang benar di perangkat. Jika Anda berencana untuk debug melalui Wi-Fi, misalnya, pastikan Anda menempatkan perangkat dalam mode pesawat untuk menonaktifkan semua antarmuka lain, maka aktifkan Wi-Fi.</p> 
+       <p>Anda dapat menentukan alamat IP Unity Player memberitahu IDE untuk digunakan dengan melihat di <span class="tooltip"><strong>Player Log</strong><span class="tooltiptext">File .log yang dibuat oleh Pemain Standalone yang berisi catatan acara, seperti waktu eksekusi skrip, versi compiler, dan waktu AsetImport. Masuk file dapat membantu mendiagnosis masalah. <a class="tooltipMoreInfoLink" href="LogFiles.html#Player">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#PlayerLog">Glossary</a></span></span></span>. Cari bagian log seperti ini:</p> 
+       <p><code>Multi-casting "[IP] 10.0.1.152 [Port] 55000 [Flags] 3 [Guid] 2575380029 [EditorId] 4264788666 [Version] 1048832 [Id] iPhonePlayer(Example-iPhone):56000 [Debug] 1 [PackageName] iPhonePlayer" to [225.0.0.222:54997]...</code></p> 
+       <p>Pesan ini menunjukkan IDE akan mencoba menggunakan alamat IP 10.0.1.152 dan port 56000 untuk terhubung ke perangkat. Alamat IP dan port ini harus dapat dicapai dari komputer yang menjalankan IDE.</p> 
+       <h3>Sitemap Periksa pengaturan firewall<a name="Firewall"></a> Check the firewall settings</h3> 
+       <p>Contoh Unity berkomunikasi dengan editor kode menggunakan koneksi TCP. Pada sebagian besar platform Unity, koneksi TCP ini terjadi pada port yang dipilih secara sewenang-wenang. Biasanya, Anda tidak perlu tahu port ini, karena editor kode harus mendeteksinya secara otomatis. Jika tidak bekerja, gunakan alat analisis jaringan untuk menentukan port mana yang mungkin diblokir baik di mesin di mana Anda menjalankan editor kode, atau mesin atau perangkat di mana Anda menjalankan instance Unity. Ketika Anda menemukan port, pastikan firewall Anda memungkinkan akses ke port di kedua mesin yang menjalankan editor kode, dan mesin yang menjalankan instance Unity.</p> 
+       <h3>Verifikasi informasi debugging yang dikelola tersedia</h3> 
+       <p>Jika debugger melampirkan ke instance Unity tetapi breakpoints tidak memuat, debugger mungkin tidak dapat menemukan informasi debugging yang dikelola untuk kode. Dikelola kode debugging informasi disimpan dalam file bernama .pdb, di sebelah perakitan yang dikelola (.dll file) di disk.</p> 
+       <p>Ketika Anda mengaktifkan preferensi yang benar dan membangun opsi (lihat <a href="#Configure">Konfigurasikan editor kode</a>), Unity menghasilkan informasi debugging ini secara otomatis. Namun, Unity tidak dapat menghasilkan informasi debugging untuk plugin yang dikelola di proyek Anda. Anda hanya bisa kode debug dari plugin yang dikelola jika file .pdb terkait di sebelah plugin yang dikelola di proyek Unity di disk.</p> 
+       <h3>Mencegah perangkat dari penguncian</h3> 
+       <p>Nonaktifkan kunci layar pada perangkat yang Anda gunakan untuk debug aplikasi Anda. Kunci layar menyebabkan debugger untuk memutuskan, dan mencegahnya dari koneksi kembali. Jangan mengunci layar selama debugging kode yang dikelola. Jika kunci layar, restart aplikasi pada perangkat sehingga debugger dapat terhubung lagi.</p> 
+       <h2>Sitemap Editor kode dokumentasi eksternal<a name="ExternalDocs"></a> Code editor external documentation</h2> 
+       <ul> 
+        <li>Visual Studio - <a href="https://docs.microsoft.com/en-us/visualstudio/gamedev/unity/get-started/using-visual-studio-tools-for-unity?pivots=windows#unity-debugging">Menggunakan Alat Studio Visual untuk Unity (Windows)</a> </li> 
+        <li>Visual Studio untuk Mac - <a href="https://docs.microsoft.com/en-us/visualstudio/gamedev/unity/get-started/using-visual-studio-tools-for-unity?pivots=macos#unity-debugging">Menggunakan Alat Studio Visual untuk Unity (macOS)</a> </li> 
+        <li>Jetbrains Rider - <a href="https://www.jetbrains.com/help/rider/Debugging_Unity_Applications.html">Aplikasi Unity Debug</a> </li> 
+       </ul> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="ScriptingToolsIDEs.html"></a></span> 
+         <div class="tip">
+           Lingkungan pengembangan terintegrasi (IDE) dukungan 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="StackTrace.html"></a></span> 
+         <div class="tip">
+           Stack trace logging 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

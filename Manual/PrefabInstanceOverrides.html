@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Login</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="CreatingGameplay.html">Membuat Gameplay</a></li> 
+         <li><a href="Prefabs.html">Prefabs</a></li> 
+         <li>Instance overrides</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="EditingInPrefabMode.html"></a></span> 
+          <div class="tip">
+            Mengedit Prefab dalam Mode Prefab 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="EditingPrefabViaInstance.html"></a></span> 
+          <div class="tip">
+            Mengedit Prefab melalui contohnya 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Instance overrides</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p> <strong>Instance overrides</strong> memungkinkan Anda untuk membuat variasi antara instance <span class="tooltip"><strong>Prefab</strong><span class="tooltiptext">Jenis aset yang memungkinkan Anda untuk menyimpan GameObject lengkap dengan komponen dan properti. Prefab bertindak sebagai template dari mana Anda dapat membuat instance objek baru di tempat kejadian. <a class="tooltipMoreInfoLink" href="Prefabs.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Prefab">Glossary</a></span></span></span>, sementara masih menghubungkan instance tersebut ke Aset Prefab yang sama.</p> 
+       <p>Ketika Anda memodifikasi Aset Prefab, perubahan tercermin dalam semua kasusnya. Namun, Anda juga dapat membuat modifikasi langsung ke instance individu. Melakukan ini menciptakan <strong>instance override</strong> pada contoh tertentu.</p> 
+       <p>Contohnya adalah jika Anda memiliki Aset Prefab “Robot”, yang Anda letakkan dalam beberapa tingkat dalam permainan Anda. Namun, setiap kasus "Robot" memiliki nilai kecepatan yang berbeda, dan yang berbeda <span class="tooltip"><strong>audio clip</strong><span class="tooltiptext">Sebuah wadah untuk data audio dalam Unity. Unity mendukung aset audio mono, stereo dan multichannel (hingga delapan saluran). Unity dapat mengimpor .aif, .wav, .mp3, dan format file audio .ogg, dan .xm, .mod, .it, dan format modul pelacak .s3m. <a class="tooltipMoreInfoLink" href="class-AudioClip.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AudioClip">Glossary</a></span></span></span> ditugaskan.</p> 
+       <p>Ada empat jenis <strong>instance override</strong> yang berbeda:</p> 
+       <ul> 
+        <li><p>Mempertahankan nilai properti</p></li> 
+        <li><p>Menambahkan komponen</p></li> 
+        <li><p>Menghapus komponen</p></li> 
+        <li><p>Menambahkan permainan anakObject</p></li> 
+       </ul> 
+       <p>Ada beberapa batasan dengan instance Prefab: Anda tidak dapat mengeluarkan <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> yang merupakan bagian dari Prefab, dan Anda tidak dapat menghapus GameObject yang merupakan bagian dari Prefab. Namun, Anda dapat menonaktifkan GameObject, yang merupakan pengganti yang baik untuk menghapus GameObject (perhitungan ini sebagai override properti).</p> 
+       <p>Dalam jendela <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>, contoh overrides ditunjukkan dengan label nama mereka di <strong>bold</strong>, dan dengan garis biru dalam margin kiri. Ketika Anda menambahkan komponen baru instance Prefab, garis biru dalam margin mencakup seluruh komponen.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PrefabsOverridesIndicators1.png" alt="The inspector windows showing a Prefab instance with overridden Is Trigger property and a Rigidbody component added as an override."> 
+        <figcaption>
+          Jendela inspektur menunjukkan instance Prefab dengan overridden "Is Trigger" properti dan komponen kaku ditambahkan sebagai override. 
+        </figcaption> 
+       </figure> 
+       <p>Komponen yang ditambahkan dan dihapus juga memiliki lencana plus dan minus pada ikon mereka di Inspektur, dan menambahkan GameObjects memiliki lencana plus pada ikon mereka di Hierarchy.</p> 
+       <p>Dalam jendela Hierarchy, instance Prefab dengan nilai overridden atau non-standar memiliki indikator override untuk menunjukkan bahwa mereka telah diedit, yang menampilkan Unity dengan garis biru dalam margin kiri dengan penampilan yang sama sebagai garis misalnya overrides di jendela Inspector. Untuk informasi lebih lanjut, lihat <a href="Hierarchy.html#OverrideIndicator">Hierarchy</a>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PrefabsAddedObjectIndicator1.png" alt="The Hierarchy window showing a Prefab instance with a child GameObject called GermOBlaster added as an override."> 
+        <figcaption>
+          Jendela Hierarchy menunjukkan instance Prefab dengan anak GameObject disebut "GermOBlaster" ditambahkan sebagai override. 
+        </figcaption> 
+       </figure> 
+       <p><a name="Precedence"></a></p> 
+       <h2>Overrides mengambil precedence</h2> 
+       <p>Nilai properti overridden pada instance Prefab selalu mengambil precedence atas nilai dari Aset Prefab. Ini berarti bahwa jika Anda mengubah properti di Aset Prefab, tidak memiliki efek pada kasus di mana properti itu overridden.</p> 
+       <p>Jika Anda membuat perubahan Aset Prefab, dan itu tidak memperbarui semua kasus seperti yang diharapkan, Anda harus memeriksa apakah properti itu overridden pada kasus. Ini terbaik untuk hanya menggunakan override instance ketika benar-benar diperlukan, karena jika Anda memiliki sejumlah besar kasus overrides sepanjang Anda Proyek, sulit untuk memberitahu apakah perubahan Anda ke Aset Prefab akan atau tidak akan memiliki efek pada semua kasus.</p> 
+       <p><a name="Alignment"></a></p> 
+       <h2>Alignment spesifik untuk instance Prefab</h2> 
+       <p><strong>alignment</strong> dari instance Prefab adalah kasus khusus, dan ditangani berbeda dengan sifat lain. Nilai <strong>alignment</strong> tidak pernah dilakukan dari Aset Prefab ke instance Prefab. Ini berarti mereka selalu dapat berbeda dari penyelarasan Aset Prefab tanpa menjadi contoh eksplisit override. Secara spesifik, penyelarasan berarti sifat <strong>Position</strong> dan <strong>Rotation</strong> pada <span class="tooltip"><strong>root Transform</strong><span class="tooltiptext">Transform di bagian atas hirarki Transforms. Dalam Prefab, transformasi akar adalah Transform paling atas di Prefab. Dalam karakter humanoid animasi, Root Transform adalah proyeksi di bidang Y Body Transform dan bersaing pada waktu yang berjalan. Pada setiap bingkai, perubahan dalam Root Transform dikomputasikan, dan kemudian ini diterapkan pada GameObject untuk membuatnya bergerak. <a class="tooltipMoreInfoLink" href="RootMotion.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#RootTransform">Glossary</a></span></span></span> instance Prefab, dan untuk Transform ini juga mencakup <strong>Width</strong>, <strong>Height</strong>, <strong>Margins</strong>, <span class="tooltip"><strong>Anchors</strong><span class="tooltiptext">Alat tata letak UI yang memperbaiki elemen UI ke elemen induk. Jangkar ditampilkan sebagai empat pegangan segitiga kecil di Tampilan Adegan dan informasi jangkar juga ditampilkan dalam Inspektur. <a href="UIBasicLayout.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Anchor">Glossary</a></span></span></span> dan sifat <strong>Pivot</strong>.</p> 
+       <p>Ini karena sangat jarang untuk membutuhkan beberapa kasus Prefab untuk mengambil pada posisi dan rotasi yang sama. Lebih umum, Anda akan menginginkan instance prefab Anda untuk berada pada posisi dan rotasi yang berbeda, sehingga Unity tidak menghitung ini sebagai overrides Prefab.</p> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2018–07–31 Sitemap</span></p></li> 
+        <li><p><span class="page-history">Bersarang Prefab dan Varian Prefab ditambahkan pada 2018.3</span></p></li> 
+       </ul> 
+       <!-- area:none --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="EditingInPrefabMode.html"></a></span> 
+         <div class="tip">
+           Mengedit Prefab dalam Mode Prefab 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="EditingPrefabViaInstance.html"></a></span> 
+         <div class="tip">
+           Mengedit Prefab melalui contohnya 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

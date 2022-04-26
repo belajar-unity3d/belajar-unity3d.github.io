@@ -1,0 +1,807 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: ShaderLab: menetapkan tag ke SubShader</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="Shaders.html">Shaders</a></li> 
+         <li><a href="shader-writing.html">Menu Menu</a></li> 
+         <li><a href="SL-Reference.html">ShaderLab</a></li> 
+         <li><a href="SL-SubShader.html">ShaderLab: mendefinisikan SubShader</a></li> 
+         <li>ShaderLab: menetapkan tag ke SubShader</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="SL-SubShader.html"></a></span> 
+          <div class="tip">
+            ShaderLab: mendefinisikan SubShader 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="SL-ShaderLOD.html"></a></span> 
+          <div class="tip">
+            ShaderLab: menetapkan nilai LOD ke SubShader 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>ShaderLab: menetapkan tag ke SubShader</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Halaman ini berisi informasi tentang menggunakan blok <code>Tags</code> pada kode <span class="tooltip"><strong>ShaderLab</strong><span class="tooltiptext">Bahasa Unity untuk mendefinisikan struktur benda-benda Shader. <a class="tooltipMoreInfoLink" href="SL-Shader.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ShaderLab">Glossary</a></span></span></span> Anda untuk menetapkan tag ke SubShader.</p> 
+       <p>Untuk informasi tentang mendefinisikan SubShader, lihat <a class="tooltipMoreInfoLink" href="SL-SubShader.html">ShaderLab: mendefinisikan SubShader</a>. Untuk informasi tentang bagaimana objek <span class="tooltip"><strong>Shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Shader">Glossary</a></span></span></span> bekerja, dan hubungan antara benda-benda Shader, SubShaders dan Passes, lihat <span class="tooltip"><a href="shader-objects.html">Shader objects</a><span class="tooltiptext">Contoh kelas Shader, objek Shader adalah wadah untuk program naungan dan instruksi GPU, dan informasi yang memberi tahu Unity bagaimana menggunakannya. Gunakan mereka dengan bahan untuk menentukan penampilan adegan Anda. <a href="shader-objects.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shaderobject">Glossary</a></span></span></span>.</p> 
+       <h2>Overview</h2> 
+       <p>Tags adalah pasangan data nilai kunci. Unity menggunakan kunci dan nilai yang telah ditentukan untuk menentukan bagaimana dan ketika menggunakan SubShader yang diberikan, atau Anda juga dapat membuat tag SubShader kustom Anda sendiri dengan nilai kustom. Anda dapat mengakses tag SubShader dari kode C#.</p> 
+       <h2>Kompatibilitas pipa Render</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature name</strong></th> 
+          <th style="text-align:left;"><strong>Built-in <span class="tooltip"><strong>Render Pipeline</strong><span class="tooltiptext">A series of operations that take the contents of a Scene, and displays them on a screen. Unity lets you choose from pre-built render pipelines, or write your own. <a class="tooltipMoreInfoLink" href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span></strong></th> 
+          <th style="text-align:left;"><strong>Universal Render Pipeline (URP)</strong></th> 
+          <th style="text-align:left;"><strong>High Definition Render Pipeline (HDRP)</strong></th> 
+          <th style="text-align:left;"><strong>Custom SRP</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>ShaderLab: SubShader Tags block</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>ShaderLab: RenderPipeline SubShader tag</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>ShaderLab: Queue SubShader tag</strong></td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes<br><br> </td> 
+          <td style="text-align:left;">Ya<br><br><strong>Note:</strong> dalam SRP kustom, Anda dapat menentukan pesanan rendering Anda sendiri dan memilih apakah atau tidak menggunakan queue render. Untuk informasi lebih lanjut, lihat DrawingSettings dan SortingCriteria.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>ShaderLab: RenderType SubShader tag</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>ShaderLab: DisableBatching SubShader tag</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>ShaderLab: ForceNoShadowCasting SubShader tag</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Sitemap Ini menonaktifkan bayangan biasa, tetapi tidak berpengaruh pada kontak bayangan.<br><br>This disables regular shadows, but has no effect on contact shadows.</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>ShaderLab: CanUseSpriteAtlas SubShader tag</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>ShaderLab: PreviewType SubShader tag</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Menggunakan blok Tag di SubShader</h2> 
+       <p>Di ShaderLab, Anda menetapkan tag ke SubShader dengan menempatkan blok <code>Tags</code> di dalam blok <code>SubShader</code>.</p> 
+       <p>Perhatikan bahwa kedua SubShaders dan Passes menggunakan blok <code>Tags</code>, tetapi mereka bekerja berbeda. Menetapkan tag SubShader ke Pass tidak berpengaruh, dan sebaliknya. Perbedaannya adalah di mana Anda menempatkan blok <code>Tags</code>:</p> 
+       <ul> 
+        <li>Untuk menentukan tag Pass, letakkan blok <code>Tags</code> di dalam blok <code>Pass</code>.</li> 
+        <li>Untuk menentukan tag SubShader, letakkan blok <code>Tags</code> di dalam blok <code>SubShader</code> tetapi di luar blok <code>Pass</code>.</li> 
+       </ul> 
+       <p>Untuk informasi tentang menetapkan tag ke Pass, lihat <a href="SL-Pass.html">Menetapkan tag ke Pass</a>.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Signature</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Kata kunci { "[name1]" = "[value1]" "[name2]" = "[value2]"}</td> 
+          <td style="text-align:left;">Berlaku tag yang diberikan kepada SubShader.<br><br> Anda dapat mendefinisikan banyak tag yang Anda sukai.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Menggunakan tag SubShader dengan kode C#</h2> 
+       <p>Anda dapat membaca tag SubShader dari skrip C# menggunakan API <a href="../ScriptReference/Material.GetTag.html">Bahan.GetTag</a>, seperti ini:</p> 
+       <pre><code class="c#">using UnityEngine;
+
+public class Example : MonoBehaviour
+{
+    // Attach this to a gameObject that has a Renderer component
+    string tagName = "ExampleTagName";
+
+    void Start()
+    {
+        Renderer myRenderer = GetComponent&lt;Renderer&gt;();
+        string tagValue = myRenderer.material.GetTag(ExampleTagName, true, "Tag not found");
+        Debug.Log(tagValue);
+    }
+}
+</code></pre> 
+       <h2>WordPress.org</h2> 
+       <p>Tag <code>RenderPipeline</code> memberi tahu Unity apakah SubShader kompatibel dengan Pipa Render Universal (URP) atau Pipa Render Definisi Tinggi (HDRP).</p> 
+       <h3>Syntax dan nilai yang valid</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Signature</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">"RenderPipeline" = "[name]"</td> 
+          <td style="text-align:left;">Tells Unity apakah SubShader ini kompatibel dengan URP atau HDRP.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Parameter</strong></th> 
+          <th style="text-align:left;"><strong>Value</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">[url]</td> 
+          <td style="text-align:left;">Login Login</td> 
+          <td style="text-align:left;">SubShader ini kompatibel dengan URP saja.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">HighDefinitionRenderPipeline</td> 
+          <td style="text-align:left;">SubShader ini kompatibel dengan HDRP saja.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">(nilai lain, atau tidak dinyatakan)</td> 
+          <td style="text-align:left;">SubShader ini tidak kompatibel dengan URP atau HDRP.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>Examples</h3> 
+       <p>Kode contoh ini menyatakan bahwa SubShader kompatibel dengan URP:</p> 
+       <pre><code>Shader "ExampleShader" {
+    SubShader {
+        Tags { "RenderPipeline" = "UniversalRenderPipeline" }
+        Pass {
+            …
+        }
+    }
+}
+</code></pre> 
+       <h2>Tag antrian</h2> 
+       <p>Tag <code>Queue</code> memberi tahu Unity yang membuat antrian untuk digunakan untuk geometri yang render. Antri render adalah salah satu faktor yang menentukan urutan geometri Unity.</p> 
+       <h3>Syntax dan nilai yang valid</h3> 
+       <p>Anda dapat menggunakan tag <code>Queue</code> dalam dua cara: Anda dapat memberi tahu Unity untuk menggunakan antrian render bernama, atau antrian render yang tidak dinamik yang diberikan setelah antrian render bernama.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Signature</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">“Queue” = “[nama antrian]”</td> 
+          <td style="text-align:left;">Gunakan antrian render bernama.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">"Queue" = "[ nama antrian] + [offset]"</td> 
+          <td style="text-align:left;">Gunakan antrian yang tidak dinamik, pada offset yang diberikan dari antrian bernama.<br><br> Contoh ketika ini berguna dalam kasus air transparan, yang harus Anda tarik setelah benda buram tetapi sebelum benda transparan.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Signature</strong></th> 
+          <th style="text-align:left;"><strong>Value</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">[queue name]</td> 
+          <td style="text-align:left;">Background</td> 
+          <td style="text-align:left;">Tentukan antrian render Latar Belakang.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Geometry</td> 
+          <td style="text-align:left;">Menentukan antrian render Geometry.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">AlphaTest</td> 
+          <td style="text-align:left;">Menentukan Alpha Uji queue.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Transparent</td> 
+          <td style="text-align:left;">Tentukan antrian render Transparan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Overlay</td> 
+          <td style="text-align:left;">Tentukan antrian render Overlay.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">[offset]</td> 
+          <td style="text-align:left;">integer</td> 
+          <td style="text-align:left;">Tentukan indeks di mana Unity membuat antrian yang tidak dinamik, relatif terhadap antrian yang dinamakan.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>Menggunakan tag ini dengan kode C#</h3> 
+       <p>Anda dapat menggunakan <a href="../ScriptReference/Shader-renderQueue.html">Shader.renderQueue</a> untuk membaca nilai tag Queue dari SubShader aktif objek Shader.</p> 
+       <p>Secara default, geometri render Unity dalam antrian render yang ditentukan dalam tag [Queue]. Anda dapat menimpa nilai ini berdasarkan per materi. Dalam Editor Unity, Anda dapat melakukan ini di <a href="class-Material.html">Bahan Inspektur</a> dengan mengatur properti <strong>Render Queue</strong>. Dalam skrip C#, Anda dapat melakukan ini dengan menetapkan nilai <a href="../ScriptReference/Material-renderQueue.html">Bahan.renderQueue</a> menggunakan <a href="../ScriptReference/Rendering.RenderQueue.html">Login Login</a> enum.</p> 
+       <h3>Examples</h3> 
+       <p>Kode contoh ini menciptakan SubShader yang membuat geometri sebagai bagian dari antrian render Transparan:</p> 
+       <pre><code>Shader "ExampleShader" {
+    SubShader {
+        Tags { "Queue" = "Transparent" }
+        Pass {
+            …
+        }
+    }
+}
+</code></pre> 
+       <p>Kode contoh ini menciptakan SubShader yang membuat geometri dalam antrian yang tidak dinamik, setelah antrian Geometry.</p> 
+       <pre><code>Shader "ExampleShader" {
+    SubShader {
+        Tags { "Queue" = "Geometry+1" }
+        Pass {
+            …
+        }
+    }
+}
+</code></pre> 
+       <h2>Tag RenderType</h2> 
+       <p>Gunakan tag <code>RenderType</code> untuk menimpa perilaku objek Shader.</p> 
+       <p>Di Pipeline Render Built-in, Anda dapat menukar SubShaders pada runtime menggunakan teknik yang disebut <a href="SL-ShaderReplacement.html">pengganti warna</a>. Teknik ini bekerja dengan mengidentifikasi SubShaders yang memiliki nilai tag <code>RenderType</code>. Ini digunakan dalam beberapa kasus untuk menghasilkan <a href="SL-CameraDepthTexture.html">tekstur kedalaman kamera</a>.</p> 
+       <p>Dalam pipa render berdasarkan Pipa Render Scriptable, Anda dapat menimpa state render yang didefinisikan dalam objek Shader menggunakan struktur <code>RenderStateBlock</code>. Anda dapat menggunakan nilai tag <code>RenderType</code> untuk mengidentifikasi SubShaders ke override.</p> 
+       <h3>Syntax dan nilai yang valid</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Signature</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">"RenderType" = "[renderType]"</td> 
+          <td style="text-align:left;">Mengatur nilai RenderType untuk SubShader ini.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Signature</strong></th> 
+          <th style="text-align:left;"><strong>Value</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">[renderType]</td> 
+          <td style="text-align:left;">String</td> 
+          <td style="text-align:left;">Tidak ada nilai set untuk parameter ini. Untuk mengidentifikasi nilai RenderType untuk SubShader yang ingin Anda ganti, buka file sumber naungannya.<br><br> Tag SubShader <code>RenderType</code> untuk naungan built-in berkebun Unity tercantum pada <a href="SL-ShaderReplacement.html">halaman pengganti warna</a>.<br><br> Anda juga dapat membuat nilai Anda sendiri untuk SubShader kustom Anda.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>Menggunakan tag ini dengan kode C#</h3> 
+       <p>Untuk informasi tentang penggantian naungan di Pipeline Render Built-in, lihat <a href="SL-ShaderReplacement.html">penggantian Shader</a>. Untuk informasi tentang menggunakan RenderStateBlock di Pipa Render Scriptable, lihat dokumentasi API untuk <a href="../ScriptReference/Rendering.ScriptableRenderContext.DrawRenderers.html">ScriptableRenderContext.DrawRenderers</a>.</p> 
+       <h3>Examples</h3> 
+       <p>Kode contoh ini menciptakan SubShader dengan nilai RenderType dari <code>TransparentCutout</code>:</p> 
+       <pre><code>Shader "ExampleShader" {
+    SubShader {
+        Tags { "RenderType" = "TransparentCutout" }
+        Pass {
+            …
+        }
+    }
+}
+</code></pre> 
+       <h2>WordPress.org</h2> 
+       <p>Tag <code>ForceNoShadowCasting</code> mencegah geometri di SubShader dari casting (dan kadang-kadang menerima) bayangan. Perilaku yang tepat tergantung pada pipa render dan <span class="tooltip"><strong>rendering path</strong><span class="tooltiptext">Teknik yang menggunakan pipa render untuk membuat grafik. Memilih jalur rendering yang berbeda mempengaruhi bagaimana pencahayaan dan pembentukan dihitung. Beberapa jalur rendering lebih cocok untuk berbagai platform dan perangkat keras daripada yang lain. <a class="tooltipMoreInfoLink" href="RenderingPaths.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#RenderingPath">Glossary</a></span></span></span>.</p> 
+       <p>Ini dapat berguna jika Anda menggunakan <a href="SL-ShaderReplacement.html">pengganti warna</a>, tetapi Anda tidak ingin menginherikan bayangan yang lewat dari SubShader lain.</p> 
+       <h3>Syntax dan nilai yang valid</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Signature</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">"ForceNoShadowCasting" = "[state]"</td> 
+          <td style="text-align:left;">Apakah untuk mencegah pengecoran bayangan (dan kadang-kadang menerima) untuk semua geometri yang menggunakan SubShader ini.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Signature</strong></th> 
+          <th style="text-align:left;"><strong>Value</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">[state]</td> 
+          <td style="text-align:left;">True</td> 
+          <td style="text-align:left;">Unity mencegah geometri di SubShader ini dari bayangan casting.<br><br> Di Dibangun di Render Pipeline, dengan Maju, Legacy Vertex Lit atau jalur rendering Legacy Deferred, Unity juga mencegah geometri di SubShader ini dari menerima bayangan.<br><br> Di HDRP, ini tidak mencegah geometri dari bayangan kontak casting.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">False</td> 
+          <td style="text-align:left;">Unity tidak mencegah geometri di SubShader ini dari pengecoran atau menerima bayangan. Ini adalah nilai default.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>Examples</h3> 
+       <p>Kode contoh ini membuat SubShader dengan nilai ForceNoShadowCasting sebesar <code>True</code>:</p> 
+       <pre><code>Shader "ExampleShader" {
+    SubShader {
+        Tags { "ForceNoShadowCasting" = "True" }
+        Pass {
+            …
+        }
+    }
+}
+</code></pre> 
+       <h2>Tag DisableBatching</h2> 
+       <p>Tag SubShader <code>DisableBatching</code> mencegah Unity dari menerapkan <span class="tooltip"><a class="tooltipMoreInfoLink" href="DrawCallBatching.html">Batching dinamis</a><span class="tooltiptext">Proses Unity otomatis yang mencoba untuk membuat beberapa jala seolah-olah mereka adalah satu mesh untuk kinerja grafis yang dioptimalkan. Teknik mengubah semua simpul GameObject pada CPU dan kelompok banyak simpul serupa bersama. <a href="DrawCallBatching.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#DynamicBatching">Glossary</a></span></span></span> ke geometri yang menggunakan SubShader ini.</p> 
+       <p>Ini berguna untuk program naungan yang melakukan operasi ruang objek. Batching dinamis mengubah semua geometri ke ruang dunia, yang berarti bahwa program naungan tidak bisa lagi mengakses ruang objek. Program-program Shader yang bergantung pada ruang objek oleh karena itu tidak render dengan benar. Untuk menghindari masalah ini, gunakan SubShader Tag ini untuk mencegah Unity dari menerapkan Dynamic Batching.</p> 
+       <h3>Syntax dan nilai yang valid</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Signature</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">“Tabel” = “[state]”</td> 
+          <td style="text-align:left;">Apakah Unity mencegah Batching Dinamis untuk semua geometri yang menggunakan SubShader ini.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Signature</strong></th> 
+          <th style="text-align:left;"><strong>Value</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">[state]</td> 
+          <td style="text-align:left;">True</td> 
+          <td style="text-align:left;">Unity mencegah Batching Dinamis untuk geometri yang menggunakan SubShader ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">False</td> 
+          <td style="text-align:left;">Unity tidak mencegah batching dinamis untuk geometri yang menggunakan SubShader ini. Ini adalah nilai default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">LODFading</td> 
+          <td style="text-align:left;">mencegah persatuan Batching dinamis untuk semua geometri yang merupakan bagian dari nilai Mode Fade yang tidak None. Jika tidak, Unity tidak mencegah batching dinamis.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>Examples</h3> 
+       <p>Kode contoh ini menciptakan SubShader dengan nilai DisableBatching <code>True</code>:</p> 
+       <pre><code>Shader "ExampleShader" {
+    SubShader {
+        Tags { "DisableBatching" = "True" }
+        Pass {
+            …
+        }
+    }
+}
+</code></pre> 
+       <h2>IgnoreProjector tag</h2> 
+       <p>Dalam Render Pipeline built-in, tag SubShader <code>IgnoreProjector</code> memberi tahu Unity apakah geometri dipengaruhi oleh <a href="class-Projector.html">Proyektor</a>. Ini sebagian besar berguna untuk tidak termasuk geometri semi transparan, yang Proyektor tidak kompatibel.</p> 
+       <p>Tag ini tidak memiliki efek dalam pipa render lainnya.</p> 
+       <h3>Syntax dan nilai yang valid</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Signature</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">"IgnoreProjector" = "[state]"</td> 
+          <td style="text-align:left;">Apakah mengabaikan Unity Proyektor saat membuat geometri ini.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Signature</strong></th> 
+          <th style="text-align:left;"><strong>Value</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">[state]</td> 
+          <td style="text-align:left;">True</td> 
+          <td style="text-align:left;">Abaikan Unity Proyektor saat membuat geometri ini.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">False</td> 
+          <td style="text-align:left;">Unity tidak mengabaikan Proyektor saat membuat geometri ini. Ini adalah nilai default.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>Examples</h3> 
+       <p>Kode contoh ini menciptakan SubShader dengan nilai IgnoreProjectors <code>True</code>:</p> 
+       <pre><code>Shader "ExampleShader" {
+    SubShader {
+        Tags { "IgnoreProjector" = "True" }
+        Pass {
+            …
+        }
+    }
+}
+</code></pre> 
+       <h2>Lookbook</h2> 
+       <p>Tag SubShader <code>PreviewType</code> memberi tahu Editor Unity bagaimana menampilkan materi yang menggunakan SubShader ini dalam Bahan <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>.</p> 
+       <h3>Syntax dan nilai yang valid</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Signature</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">"PreviewType" = "[shape]"</td> 
+          <td style="text-align:left;">Bentuk mana Editor Unity menggunakan untuk menampilkan pratinjau materi yang menggunakan SubShader ini.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Signature</strong></th> 
+          <th style="text-align:left;"><strong>Value</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">[shape]</td> 
+          <td style="text-align:left;">Sphere</td> 
+          <td style="text-align:left;">Tampilkan materi di bidang. Ini adalah nilai default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">Plane</td> 
+          <td style="text-align:left;">Tampilkan materi di pesawat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Skybox</strong><span class="tooltiptext">Jenis khusus Bahan yang digunakan untuk mewakili langit. Biasanya enam sisi. <a class="tooltipMoreInfoLink" href="class-Skybox.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Skybox">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Tampilkan materi di skybox.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>Examples</h3> 
+       <p>Kode contoh ini menciptakan SubShader dengan nilai PreviewType <code>Plane</code>:</p> 
+       <pre><code>Shader "ExampleShader" {
+    SubShader {
+        Tags { "PreviewType" = "Plane" }
+        Pass {
+            …
+        }
+    }
+}
+</code></pre> 
+       <h2>CanUseSpriteAtlas tag</h2> 
+       <p>Gunakan tag SubShader ini dalam proyek yang menggunakan <a href="SpritePacker.html">Legacy Sprite Packer</a> untuk memperingatkan pengguna bahwa naungan Anda bergantung pada koordinat tekstur asli, dan bahwa mereka harus tidak mengemas teksturnya ke dalam lase.</p> 
+       <h3>Syntax dan nilai yang valid</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Signature</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">"CanUseSpriteAtlas" = "[state]"</td> 
+          <td style="text-align:left;">Apakah Sprites yang menggunakan SubShader ini kompatibel dengan Paket Legacy <span class="tooltip"><strong>Sprite</strong><span class="tooltiptext">Objek grafis 2D. Jika Anda digunakan untuk bekerja di 3D, Sprites pada dasarnya hanya tekstur standar tetapi ada teknik khusus untuk menggabungkan dan mengelola tekstur sprite untuk efisiensi dan kenyamanan selama perkembangan. <a class="tooltipMoreInfoLink" href="Sprites.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Sprite">Glossary</a></span></span></span>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Signature</strong></th> 
+          <th style="text-align:left;"><strong>Value</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">[state]</td> 
+          <td style="text-align:left;">True</td> 
+          <td style="text-align:left;">Sprites yang menggunakan SubShader ini kompatibel dengan Legacy <span class="tooltip"><strong>Sprite Packer</strong><span class="tooltiptext">Fasilitas yang mengemas grafis dari beberapa tekstur sprite secara ketat bersama dalam satu tekstur yang dikenal sebagai atlas. Unity menyediakan utilitas Sprite Packer untuk mengotomatiskan proses pembuatan dilase dari tekstur sprite individu. <a class="tooltipMoreInfoLink" href="SpritePacker.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SpritePacker">Glossary</a></span></span></span>. Ini adalah nilai default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;">False</td> 
+          <td style="text-align:left;">Sprit yang menggunakan SubShader ini tidak kompatibel dengan Legacy Sprite Packer.<br><br> Ketika SubShader dengan nilai <code>CanUseSpriteAtlas</code> <code>False</code> digunakan dengan Sprite yang memiliki tag kemasan Legacy Sprite Packer, Unity menunjukkan pesan kesalahan dalam Inspektur.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>CanUseSpriteAtlas tag kode contoh</h3> 
+       <p>Kode contoh ini menciptakan SubShader dengan nilai CanUseSpriteAtlas dari <code>False</code>:</p> 
+       <pre><code>Shader "ExampleShader" {
+    SubShader {
+        Tags { "CanUseSpriteAtlas" = "False" }
+        Pass {
+            …
+        }
+    }
+}
+</code></pre> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="SL-SubShader.html"></a></span> 
+         <div class="tip">
+           ShaderLab: mendefinisikan SubShader 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="SL-ShaderLOD.html"></a></span> 
+         <div class="tip">
+           ShaderLab: menetapkan nilai LOD ke SubShader 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

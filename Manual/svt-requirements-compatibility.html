@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Streaming Virtual Texturing persyaratan dan kompatibilitas Virtual</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="Textures.html">Textures</a></li> 
+         <li><a href="svt-streaming-virtual-texturing.html">Streaming Tekstur Virtual</a></li> 
+         <li>Streaming Virtual Persyaratan Tekstur dan kompatibilitas</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="svt-streaming-virtual-texturing.html"></a></span> 
+          <div class="tip">
+            Streaming Tekstur Virtual 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="svt-how-it-works.html"></a></span> 
+          <div class="tip">
+            Bagaimana Streaming Virtual Texturing bekerja 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Streaming Virtual Persyaratan Tekstur dan kompatibilitas</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <h2>Render pipa dukungan</h2> 
+       <p>Dalam Anda dapat menggunakan Streaming Virtual Texturing (SVT) dalam <span class="tooltip"><strong>Shaders</strong><span class="tooltiptext">Program yang berjalan di GPU. <a href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> yang Anda buat.</p> 
+       <h2>Persyaratan sistem</h2> 
+       <h3>Persyaratan GPU</h3> 
+       <ul> 
+        <li>GPU compute</li> 
+        <li>Tekstur2DArrays</li> 
+        <li>AsyncReadBack</li> 
+       </ul> 
+       <h3>Platform yang didukung</h3> 
+       <ul> 
+        <li>Windows</li> 
+        <li>Mac</li> 
+        <li>Linux</li> 
+       </ul> 
+       <h3>Grafik yang didukung API</h3> 
+       <ul> 
+        <li>WinZip 11</li> 
+        <li>DirectX 12</li> 
+        <li>Metal</li> 
+        <li>Vulkan</li> 
+       </ul> 
+       <h2>Tekstur kompatibilitas</h2> 
+       <ul> 
+        <li><p>SVT dibangun di atas <a href="../ScriptReference/Texture2D.html">Tekstur2D</a>. Login Tekstur melalui importir yang sama, yang membatasi ukuran tekstur maksimum. SVT tidak mendukung tekstur lebih besar dari 16K x 16K. Ini juga tidak mendukung UDIM Tekstur, atau merging file gambar ubin menjadi satu tekstur besar.</p></li> 
+        <li> <p>SVT tidak mendukung semua format grafis Tekstur. Format yang didukung adalah:</p> 
+         <ul> 
+          <li><code>GraphicsFormat::kFormatRGBA_DXT1_SRGB</code></li> 
+          <li><code>GraphicsFormat::kFormatRGBA_DXT1_UNorm</code></li> 
+          <li><code>GraphicsFormat::kFormatRGBA_DXT3_SRGB</code></li> 
+          <li><code>GraphicsFormat::kFormatRGBA_DXT3_UNorm</code></li> 
+          <li><code>GraphicsFormat::kFormatR_BC4_UNorm</code></li> 
+          <li><code>GraphicsFormat::kFormatRG_BC5_UNorm</code></li> 
+          <li><code>GraphicsFormat::kFormatRGB_BC6H_SFloat</code></li> 
+          <li><code>GraphicsFormat::kFormatRGB_BC6H_UFloat</code></li> 
+          <li><code>GraphicsFormat::kFormatRGBA_BC7_SRGB</code></li> 
+          <li><code>GraphicsFormat::kFormatRGBA_BC7_UNorm</code></li> 
+          <li><code>GraphicsFormat::kFormatR8_SRGB</code></li> 
+          <li><code>GraphicsFormat::kFormatR8_UNorm</code></li> 
+          <li><code>GraphicsFormat::kFormatR8G8_SRGB</code></li> 
+          <li><code>GraphicsFormat::kFormatR8G8_UNorm</code></li> 
+          <li><code>GraphicsFormat::kFormatR8G8B8_SRGB</code></li> 
+          <li><code>GraphicsFormat::kFormatR8G8B8_UNorm</code></li> 
+          <li><code>GraphicsFormat::kFormatR8G8B8A8_SRGB</code></li> 
+          <li><code>GraphicsFormat::kFormatR8G8B8A8_UNorm</code></li> 
+          <li><code>GraphicsFormat::kFormatR16_SFloat</code></li> 
+          <li><code>GraphicsFormat::kFormatR16_UNorm</code></li> 
+          <li><code>GraphicsFormat::kFormatR16G16_SFloat</code></li> 
+          <li><code>GraphicsFormat::kFormatR16G16_UNorm</code></li> 
+          <li><code>GraphicsFormat::kFormatR16G16B16A16_SFloat</code></li> 
+          <li><code>GraphicsFormat::kFormatR16G16B16A16_UNorm</code></li> 
+          <li><code>GraphicsFormat::kFormatR32_SFloat</code></li> 
+          <li><code>GraphicsFormat::kFormatR32G32_SFloat</code></li> 
+          <li><code>GraphicsFormat::kFormatR32G32B32A32_SFloat</code></li> 
+          <li><code>GraphicsFormat::kFormatA2B10G10R10_UNormPack32</code></li> 
+         </ul> </li> 
+        <li> <p>SVT tidak mendukung berikut:</p> 
+         <ul> 
+          <li>Mode pembungkus cermin.</li> 
+          <li>Penjepitan sumbu per (misalnya, mengulang secara horizontal sambil menjepit secara vertikal).</li> 
+          <li>Tekstur dengan resolusi yang tidak merupakan kekuatan dua.</li> 
+         </ul> </li> 
+        <li><p>Tekstur dalam SVT tidak memiliki mipmaps lebih kecil dari ukuran ubin (128 x 128 piksel). SVT menjepit sampling ke mip ini, sehingga Anda dapat melihat aliasing untuk konten tertentu pada jarak.</p></li> 
+        <li><p>SVT hanya mendukung penyaringan trilinear di Pemain, dan tidak di Editor.</p></li> 
+        <li><p>SVT hanya mendukung streaming dari disk di Pemain, dan tidak di Editor.</p></li> 
+        <li><p>Tingkat penyaringan anisotropic maksimum adalah 8. Ini karena setiap ubin memiliki batas 8-pixel.</p></li> 
+        <li><p>Anda tidak dapat mengatur Tekstur yang merupakan bagian dari tumpukan secara dinamis di Pemain. Di Pemain, Anda tidak dapat memanggil <code>Material.SetTexture</code> atau <code>Renderer.SetPropertyBlock</code> untuk memodifikasi Stack Tekstur.</p></li> 
+       </ul> 
+       <h2>Kompatibilitas fitur unity</h2> 
+       <ul> 
+        <li> <p>SVT tidak mendukung berikut:</p> 
+         <ul> 
+          <li>AsetBundles, termasuk Alamat dan Tautan Langsung.</li> 
+          <li>Scriptable Membangun Pipeline (SBP) dan Subscenes.</li> 
+          <li>Crunch <span class="tooltip"><strong>compression</strong><span class="tooltiptext">Metode menyimpan data yang mengurangi jumlah ruang penyimpanan yang dibutuhkan. <a href="class-TextureImporterOverride.html">Kompresi Tekstur</a>, <a href="class-AnimationClip.html#AssetProperties">Kompresi Animasi</a>, <a href="class-AudioClip.html">Kompresi Audio</a>, <a href="ReducingFilesize.html">Membangun Kompresi</a>.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#compression">Glossary</a></span></span></span>.</li> 
+         </ul> </li> 
+        <li><p><span class="tooltip"><strong>aspect ratios</strong><span class="tooltiptext">Hubungan dimensi proporsional gambar, seperti lebar dan tingginya.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AspectRatio">Glossary</a></span></span></span> lapisan stack harus cocok.</p></li> 
+       </ul> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="svt-streaming-virtual-texturing.html"></a></span> 
+         <div class="tip">
+           Streaming Tekstur Virtual 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="svt-how-it-works.html"></a></span> 
+         <div class="tip">
+           Bagaimana Streaming Virtual Texturing bekerja 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

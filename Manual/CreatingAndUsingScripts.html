@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Membuat dan Menggunakan Script</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="core" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="ScriptingSection.html">Scripting</a></li> 
+         <li><a href="ScriptingConcepts.html">Konsep Scripting</a></li> 
+         <li>Membuat dan Menggunakan Script</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="ScriptingConcepts.html"></a></span> 
+          <div class="tip">
+            Konsep Scripting 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="VariablesAndTheInspector.html"></a></span> 
+          <div class="tip">
+            Variabel dan Inspektur 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Membuat dan Menggunakan Script</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Perilaku <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#GameObject">Glossary</a></span></span></span> dikendalikan oleh <span class="tooltip"><strong>Components</strong><span class="tooltiptext">Bagian fungsional dari GameObject. GameObject dapat mengandung sejumlah komponen. Unity memiliki banyak komponen built-in, dan Anda dapat membuat Anda sendiri dengan menulis skrip yang berwarisi dari MonoBehaviour. <a href="UsingComponents.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#component">Glossary</a></span></span></span> yang melekat pada mereka. Meskipun Komponen bawaan Unity dapat sangat serbaguna, Anda akan segera menemukan Anda perlu melampaui apa yang dapat mereka berikan untuk menerapkan fitur gameplay Anda sendiri. Unity memungkinkan Anda untuk membuat Komponen Anda sendiri menggunakan <strong>scripts</strong>. Ini memungkinkan Anda untuk memicu peristiwa permainan, memodifikasi sifat Komponen seiring waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai.</p> 
+       <p>Unity mendukung bahasa pemrograman C # secara asli. C# (ucapkan C-sharp) adalah bahasa standar industri yang mirip dengan Java atau C++.</p> 
+       <p>Selain ini, banyak lainnya. Bahasa NET dapat digunakan dengan Unity jika mereka dapat mengkompilasi DLL yang kompatibel - lihat <a href="UsingDLL.html">here</a> untuk rincian lebih lanjut.</p> 
+       <p>Belajar seni pemrograman dan penggunaan bahasa tertentu ini di luar ruang lingkup pengenalan ini. Namun, ada banyak buku, tutorial dan sumber daya lain untuk belajar bagaimana program dengan Unity. Lihat situs web kami untuk rincian lebih lanjut.</p> 
+       <h2>Membuat Script</h2> 
+       <p>Tidak seperti aset lain, skrip biasanya dibuat dalam Unity secara langsung. Anda dapat membuat skrip baru dari menu Buat di sebelah kiri atas panel Proyek atau dengan memilih <strong>Assets &gt; Create &gt; C# Script</strong> dari menu utama.</p> 
+       <p>Skrip baru akan dibuat di folder mana pun yang telah Anda pilih di panel Proyek. Nama file script baru akan dipilih, meminta Anda untuk memasukkan nama baru.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/NewScriptIcon.png" alt=""> 
+       </figure> 
+       <p>Ini adalah ide yang baik untuk memasukkan nama skrip baru pada titik ini daripada mengeditnya nanti. Nama yang Anda masukkan akan digunakan untuk membuat teks awal di dalam file, seperti yang dijelaskan di bawah ini.</p> 
+       <h2>Anatomi file Script</h2> 
+       <p>Ketika Anda klik dua kali skrip Aset dalam Unity, itu akan dibuka dalam editor teks. Secara default, Unity akan menggunakan Visual Studio, tetapi Anda dapat memilih editor apa pun yang Anda sukai dari panel <strong>External Tools</strong> dalam preferensi Unity (go to <strong>Unity</strong> &gt; <strong>Preferences</strong>).</p> 
+       <p>Konten awal dari file akan terlihat seperti ini:</p> 
+       <pre><code>using UnityEngine;
+using System.Collections;
+
+public class NewBehaviourScript : MonoBehaviour {
+
+    // Use this for initialization
+    void Start () {
+    
+    }
+    
+    // Update is called once per frame
+    void Update () {
+    
+    }
+}
+
+</code></pre> 
+       <p>Skrip membuat hubungannya dengan kerja internal Unity dengan menerapkan kelas yang berasal dari kelas built-in yang disebut <strong>MonoBehaviour</strong>. Anda dapat memikirkan kelas sebagai jenis cetak biru untuk membuat jenis Komponen baru yang dapat melekat pada GameObjects. Setiap kali Anda melampirkan komponen skrip ke GameObject, itu menciptakan contoh objek baru yang ditentukan oleh cetak biru. Nama kelas diambil dari nama yang Anda berikan ketika file dibuat. Nama kelas dan nama file harus sama untuk mengaktifkan komponen skrip untuk dilampirkan ke GameObject.</p> 
+       <p>Hal utama untuk dicatat, namun, adalah dua fungsi yang didefinisikan dalam kelas. Fungsi <strong>Update</strong> adalah tempat untuk menempatkan kode yang akan menangani pembaruan bingkai untuk GameObject. Ini mungkin termasuk gerakan, memicu tindakan dan menanggapi input pengguna, pada dasarnya apa pun yang perlu ditangani seiring waktu selama gameplay. Untuk mengaktifkan fungsi Update untuk melakukan pekerjaannya, seringkali berguna untuk dapat mengatur variabel, membaca preferensi dan membuat koneksi dengan GameObjects lain sebelum tindakan permainan terjadi. Fungsi <strong>Start</strong> akan disebut oleh Unity sebelum gameplay dimulai (yaitu, sebelum fungsi Update disebut untuk pertama kalinya) dan merupakan tempat yang ideal untuk melakukan initialisasi.</p> 
+       <p>Catatan untuk programmer berpengalaman: Anda mungkin terkejut bahwa penginisialisasi objek tidak dilakukan menggunakan fungsi konstror. Ini karena pembangunan objek ditangani oleh editor dan tidak terjadi pada awal permainan saat Anda mungkin mengharapkan. Jika Anda mencoba untuk mendefinisikan konstror untuk komponen skrip, itu akan mengganggu operasi normal Unity dan dapat menyebabkan masalah utama dengan proyek.</p> 
+       <h2>Mengontrol GameObject</h2> 
+       <p>Seperti disebutkan di atas, skrip hanya mendefinisikan cetak biru untuk Komponen dan tidak ada kodenya akan diaktifkan sampai contoh skrip melekat pada GameObject. Anda dapat melampirkan skrip dengan menyeret aset skrip ke GameObject di panel hirarki atau ke <span class="tooltip"><strong>inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span> dari GameObject yang saat ini dipilih. Ada juga submenu Script di menu Komponen yang akan berisi semua skrip yang tersedia dalam proyek, termasuk yang telah Anda buat sendiri. Contoh skrip terlihat seperti komponen lain dalam Inspektur:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ScriptInInspector.png" alt=""> 
+       </figure> 
+       <p>Setelah terpasang, script akan mulai bekerja ketika Anda menekan Play dan menjalankan permainan. Anda dapat memeriksa ini dengan menambahkan kode berikut dalam fungsi Start:-</p> 
+       <pre><code>// Use this for initialization
+void Start () 
+{
+    Debug.Log("Hello world!");
+}
+
+</code></pre> 
+       <p> <strong>Debug.Log</strong> adalah perintah sederhana yang hanya mencetak pesan ke output konsol Unity. Jika Anda menekan Play sekarang, Anda harus melihat pesan di bagian bawah jendela editor Unity utama dan di jendela Konsol (menu: <strong>Window</strong> &gt; <strong>General</strong> &gt; <span class="tooltip"><strong>Console</strong><span class="tooltiptext"><strong>game console</strong><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#console">Glossary</a></span></span></span>).</p> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2018-10-19 Login</span></p></li> 
+        <li><p><span class="page-history">MonoDevelop digantikan oleh Visual Studio dari 2018.1</span></p></li> 
+       </ul> 
+       <!-- area:core --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="ScriptingConcepts.html"></a></span> 
+         <div class="tip">
+           Konsep Scripting 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="VariablesAndTheInspector.html"></a></span> 
+         <div class="tip">
+           Variabel dan Inspektur 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

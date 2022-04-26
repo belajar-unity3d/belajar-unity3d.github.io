@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Kelas AppCallbacks</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="platforms" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Unity User Manual 2022.1 (beta)</a></li> 
+         <li><a href="PlatformSpecific.html">Pengembangan platform</a></li> 
+         <li><a href="WindowsStore.html">Windows Server</a></li> 
+         <li>Kelas AppCallbacks</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="windowsstore-assocation-launching.html"></a></span> 
+          <div class="tip">
+            Platform Windows Universal: Peluncuran Asosiasi 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="windowsstore-scripts.html"></a></span> 
+          <div class="tip">
+            Platform Windows Universal: WinRT API dalam skrip C# 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Kelas AppCallbacks</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Anda dapat memanggil kelas AppCallbacks jembatan antara aplikasi utama Anda dan mesin Unity. Di sini, kami akan mencoba untuk menjelaskan apa setiap panggilan ke AppCallbacks persis. Mari kita membangun solusi dan menjelajahi App.xaml.cpp dan MainPage.xaml.cpp file.</p> 
+       <pre><code>App::App()
+{
+    InitializeComponent();
+    SetupOrientation();
+    m_AppCallbacks = ref new AppCallbacks();
+}
+
+void App::OnLaunched(LaunchActivatedEventArgs^ e)
+{
+    m_SplashScreen = e-&gt;SplashScreen;
+    InitializeUnity(e-&gt;Arguments);
+}
+
+void App::InitializeUnity(String^ args)
+{
+    ApplicationView::GetForCurrentView()-&gt;SuppressSystemOverlays = true;
+
+    m_AppCallbacks-&gt;SetAppArguments(args);
+    auto rootFrame = safe_cast&lt;Frame^&gt;(Window::Current-&gt;Content);
+
+    // Do not repeat app initialization when the Window already has content,
+    // just ensure that the window is active
+    if (rootFrame == nullptr &amp;&amp; !m_AppCallbacks-&gt;IsInitialized())
+    {
+        rootFrame = ref new Frame();
+        Window::Current-&gt;Content = rootFrame;
+#if !UNITY_HOLOGRAPHIC
+        Window::Current-&gt;Activate();
+#endif
+
+        rootFrame-&gt;Navigate(TypeName(MainPage::typeid ));
+    }
+
+    Window::Current-&gt;Activate();
+}
+</code></pre> 
+       <pre><code>MainPage::MainPage()
+{
+    m_SplashScreenRemovalEventToken.Value = 0;
+    m_OnResizeRegistrationToken.Value = 0;
+
+    InitializeComponent();
+    NavigationCacheMode = ::NavigationCacheMode::Required;
+
+    auto appCallbacks = AppCallbacks::Instance;
+
+    bool isWindowsHolographic = false;
+
+#if UNITY_HOLOGRAPHIC
+    // If application was exported as Holographic check if the device actually supports it,
+    // otherwise we treat this as a normal XAML application
+    isWindowsHolographic = AppCallbacks::IsMixedRealitySupported();
+#endif
+
+    if (isWindowsHolographic)
+    {
+        appCallbacks-&gt;InitializeViewManager(Window::Current-&gt;CoreWindow);
+    }
+    else
+    {
+        m_SplashScreenRemovalEventToken = appCallbacks-&gt;RenderingStarted += ref new RenderingStartedHandler(this, &amp;MainPage::RemoveSplashScreen);
+
+        appCallbacks-&gt;SetSwapChainPanel(m_DXSwapChainPanel);
+        appCallbacks-&gt;SetCoreWindowEvents(Window::Current-&gt;CoreWindow);
+        appCallbacks-&gt;InitializeD3DXAML();
+
+        m_SplashScreen = safe_cast&lt;App^&gt;(App::Current)-&gt;GetSplashScreen();
+
+        auto dispatcher = CoreWindow::GetForCurrentThread()-&gt;Dispatcher;
+        ThreadPool::RunAsync(ref new WorkItemHandler([this, dispatcher](IAsyncAction^)
+        {
+            GetSplashBackgroundColor(dispatcher);
+        }));
+
+        OnResize();
+
+        m_OnResizeRegistrationToken = Window::Current-&gt;SizeChanged += ref new WindowSizeChangedEventHandler([this](Object^, WindowSizeChangedEventArgs^)
+        {
+            OnResize();
+        });
+    }
+}
+</code></pre> 
+       <p><strong>m_AppCallbacks = ref new AppCallbacks();</strong></p> 
+       <p>Mari kita lihat lebih dekat kelas AppCallbacks. Ketika Anda membuatnya, Unity menciptakan benang baru yang disebut “AppThread”. Hal ini dilakukan karena ada pembatasan dari Microsoft - jika aplikasi Anda tidak menjadi responsif setelah 5 detik Anda akan gagal untuk lulus WACK (Windows Application Certification). (Anda dapat membaca lebih lanjut di sini - <a class="tooltipMoreInfoLink" href="http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh184840(v=vs.105).aspx">http://msdn.microsoft.com/en-us/library/windowsphone/develop/h184840(v=vs.105).aspx</a>) Bayangkan jika tingkat pertama Anda cukup besar dan membutuhkan waktu yang signifikan untuk memuat. Karena aplikasi Anda berjalan pada benang <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span>, UI akan tidak responsif sampai tingkat Anda dimuat sepenuhnya. Itu sebabnya Unity selalu menjalankan permainan Anda pada benang yang berbeda.</p> 
+       <p>Baca lebih lanjut pada benang UI di sini - <a href="http://msdn.microsoft.com/en-us/library/windows/apps/hh994635.aspx">http://msdn.microsoft.com/en-us/library/windows/apps/hh994635.aspx</a> </p> 
+       <p>Anda juga dapat melewati argumen baris perintah kustom sebagai array string ke dalam konstruktor AppCallbacks.</p> 
+       <p>Sitemap Kode yang terletak di App.xaml.cpp, MainPage.xaml.c [[ selalu berjalan pada benang UI, kecuali disebut dari fungsi InvokeOnAppThread.<strong>Note:</strong> Code located in App.xaml.cpp, MainPage.xaml.c[[ is always running on UI thread, unless called from InvokeOnAppThread function.</p> 
+       <p><strong>appCallbacks-&gt;SetSwapChainPanel(m_DXSwapChainPanel);</strong></p> 
+       <p>Ini hanya melewati kontrol XAML ke Unity yang akan digunakan sebagai target render untuk DirectX 11.</p> 
+       <p><strong>appCallbacks-&gt;SetCoreWindowEvents(Window::Current-&gt;CoreWindow);</strong></p> 
+       <p>Mengatur jendela inti untuk Unity, Pelanggan Unity ke acara berikut (mereka mungkin lebih, tergantung pada ketika informasi ini diperbarui):</p> 
+       <ul> 
+        <li>Login Login</li> 
+        <li>Closed</li> 
+        <li>PointerCursor</li> 
+        <li>SizeChanged</li> 
+        <li>Activated</li> 
+        <li>CharacterReceived</li> 
+        <li>PointerPressed</li> 
+        <li>PointerReleased</li> 
+        <li>PointerMoved</li> 
+        <li>PointerCaptureLost</li> 
+        <li>PointerWheelChanged</li> 
+        <li>AcceleratorKeyActivated</li> 
+       </ul> 
+       <p><strong>appCallbacks-&gt;InitializeD3DXAML();</strong></p> 
+       <p>Ini adalah fungsi awalisasi utama untuk Unity, hal-hal berikut:</p> 
+       <ul> 
+        <li>Memperas perangkat DirectX 11</li> 
+        <li>Beban tingkat pertama</li> 
+       </ul> 
+       <p>Pada titik ini, ketika selesai Unity memuat tingkat pertama, itu memasuki loop utama.</p> 
+       <h2>Fungsi lain</h2> 
+       <ul> 
+        <li><strong>void InvokeOnAppThread(AppCallbackItem item, bool waitUntilDone)</strong></li> 
+       </ul> 
+       <p>Menggabungkan delegasi pada benang aplikasi, yang berguna ketika Anda ingin mengeksekusi fungsi skrip Anda dari benang UI.</p> 
+       <ul> 
+        <li><strong>void InvokeOnUIThread(AppCallbackItem item, bool waitUntilDone)</strong></li> 
+       </ul> 
+       <p>Menjelajahi delegasi pada benang UI, berguna ketika Anda ingin membatalkan sesuatu API spesifik XAML dari <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> Anda.</p> 
+       <ul> 
+        <li><strong>bool RunningOnAppThread()</strong></li> 
+       </ul> 
+       <p>Kembali benar, jika Anda saat ini berjalan di benang aplikasi.</p> 
+       <ul> 
+        <li><strong>bool RunningOnUIThread()</strong></li> 
+       </ul> 
+       <p>Kembali benar, jika Anda saat ini berjalan di benang UI.</p> 
+       <ul> 
+        <li><strong>void InitializeD3DWindow()</strong></li> 
+       </ul> 
+       <p>Fungsi awalisasi untuk aplikasi D3D.</p> 
+       <ul> 
+        <li><strong>void Run()</strong></li> 
+       </ul> 
+       <p>Fungsi yang digunakan oleh aplikasi D3D, untuk memasuki loop utama.</p> 
+       <ul> 
+        <li><strong>bool IsInitialized()</strong></li> 
+       </ul> 
+       <p>Kembali benar, ketika tingkat pertama penuh dimuat.</p> 
+       <ul> 
+        <li><strong>void AddCommandLineArg(string arg)</strong></li> 
+       </ul> 
+       <p>Mengatur argumen baris perintah untuk aplikasi, harus disebut sebelum InitializeD3DWindow, InitializeD3DXAML.</p> 
+       <ul> 
+        <li> <strong>void SetAppArguments(string arg)</strong> / <strong>string GetAppArguments()</strong> </li> 
+       </ul> 
+       <p>Mengatur argumen aplikasi, yang kemudian dapat diakses dari Unity API - <strong>UnityEngine.WSA.Application.arguments</strong>.</p> 
+       <ul> 
+        <li><strong>void LoadGfxNativePlugin(string pluginFileName)</strong></li> 
+       </ul> 
+       <p>Fungsi ini usang dan tidak ada. Dalam versi sebelumnya Unity, ini diperlukan untuk mendaftarkan plugin asli untuk callback seperti UnityRenderEvent. Semua plugin sekarang terdaftar secara otomatis. Fungsi ini akan dihapus dalam pembaruan masa depan.</p> 
+       <ul> 
+        <li><strong>void ParseCommandLineArgsFromFiles(string fileName)</strong></li> 
+       </ul> 
+       <p>Mengatur argumen baris perintah dari file, argumen harus dipisahkan oleh ruang putih.</p> 
+       <ul> 
+        <li><strong>bool UnityPause(int pause)</strong></li> 
+       </ul> 
+       <p>Jeda Unity jika Anda lulus 1, tidak digunakan jika Anda melewati 0, berguna jika Anda ingin membekukan permainan Anda sementara, untuk ex., ketika permainan Anda terkunci.</p> 
+       <ul> 
+        <li><strong>void UnitySetInput(bool enabled)</strong></li> 
+       </ul> 
+       <p>Aktifkan / menonaktifkan input.</p> 
+       <ul> 
+        <li><strong>bool UnityGetInput()</strong></li> 
+       </ul> 
+       <p>Kembali benar, jika Unity akan memproses input masuk.</p> 
+       <ul> 
+        <li><strong>void SetKeyboardTriggerControl(Windows.UI.Xaml.Controls.Control ctrl)</strong></li> 
+       </ul> 
+       <p>Mengatur kontrol untuk digunakan untuk memicu keyboard layar. Kontrol ini hanya akan menerima fokus, ketika di keyboard layar diminta dalam skrip. Harus disebut dengan kontrol, yang tidak terbuka keyboard pada fokus.</p> 
+       <ul> 
+        <li><strong>Windows.UI.Xaml.Controls.Control GetKeyboardTriggerControl()</strong></li> 
+       </ul> 
+       <p>Kontrol pengembalian, saat ini digunakan kontrol untuk memicu input keyboard. Lihat SetKeyboardTriggerControl.</p> 
+       <ul> 
+        <li><strong>void SetCursor(Windows.UI.Core.CoreCursor cursor)</strong></li> 
+       </ul> 
+       <p>Mengatur kursor sistem. Kurosr yang diberikan diatur untuk sumber input intiWindow dan independen (jika digunakan).</p> 
+       <ul> 
+        <li><strong>void SetCustomCursor(unsigned int id)</strong></li> 
+       </ul> 
+       <p>Mengatur kursor sistem untuk kustom. Parameter adalah ID sumber daya kursor. Cursor diatur untuk sumber input CoreWindow dan independen (jika digunakan).</p> 
+       <!-- area:platforms --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="windowsstore-assocation-launching.html"></a></span> 
+         <div class="tip">
+           Platform Windows Universal: Peluncuran Asosiasi 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="windowsstore-scripts.html"></a></span> 
+         <div class="tip">
+           Platform Windows Universal: WinRT API dalam skrip C# 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

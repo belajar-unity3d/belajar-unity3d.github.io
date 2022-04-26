@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: tab model</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="models.html">Models</a></li> 
+         <li><a href="models-importing.html">Mengimpor model ke Unity</a></li> 
+         <li><a href="class-FBXImporter.html">Model Jendela Pengaturan impor</a></li> 
+         <li>tab model</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="class-FBXImporter.html"></a></span> 
+          <div class="tip">
+            Model Jendela Pengaturan impor 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="FBXImporter-Rig.html"></a></span> 
+          <div class="tip">
+            Rig tab 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>tab model</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p><strong>Import Settings</strong> untuk tab <span class="tooltip"><strong>Model file</strong><span class="tooltiptext">File yang berisi data 3D, yang dapat mencakup definisi untuk jaring, tulang, animasi, bahan dan tekstur. <a class="tooltipMoreInfoLink" href="3D-formats.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Modelfile">Glossary</a></span></span></span> muncul di tab <span class="tooltip"><strong>Model</strong><span class="tooltiptext">representasi model 3D dari objek, seperti karakter, bangunan, atau sepotong furnitur. <a href="3D-formats.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Model">Glossary</a></span></span></span> dari jendela <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span> ketika Anda memilih Model. Pengaturan ini mempengaruhi berbagai elemen dan sifat yang disimpan di dalam Model. Unity menggunakan pengaturan ini untuk mengimpor setiap Aset, sehingga Anda dapat menyesuaikan pengaturan untuk menerapkan Aset yang berbeda dalam Proyek Anda.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/FBXImporter-Model.png" alt="Import settings for the Model"> 
+        <figcaption>
+          Pengaturan impor untuk Model 
+        </figcaption> 
+       </figure> 
+       <p>Bagian ini memberikan informasi tentang setiap bagian di tab Model:</p> 
+       <p> <strong>(A)</strong> <span class="tooltip"><a class="tooltipMoreInfoLink" href="#sceneprops">Scene</a><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>-level properti, seperti apakah untuk mengimpor Lampu dan Kamera, dan faktor skala apa yang digunakan.</p> 
+       <p>Sitemap Properti spesifik untuk <strong>(B)</strong>.<a href="#meshprops">Meshes</a>.</p> 
+       <p> <strong>(C)</strong> <a href="#geoprops">Geometry</a> terkait sifat, untuk berurusan dengan topology, UV, dan normal.</p> 
+       <p><a name="sceneprops"></a></p> 
+       <h2>Scene</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Scale Factor</strong></td> 
+          <td style="text-align:left;">Mengatur nilai ini untuk menerapkan skala global pada Model impor setiap kali skala file asli (dari file Model) tidak sesuai dengan skala yang dimaksudkan dalam Proyek Anda. Sistem fisika Unity mengharapkan 1 meter di dunia permainan menjadi 1 unit dalam file impor.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <a name="ConvertUnits"></a><strong>Convert Units</strong> </td> 
+          <td style="text-align:left;">Aktifkan opsi ini untuk mengubah <a href="CreatingDCCAssets.html#Scaling">Model scaling</a> didefinisikan dalam file Model ke skala Unity.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Bake Axis Conversion</strong></td> 
+          <td style="text-align:left;">Aktifkan properti ini untuk memanggang hasil konversi sumbu langsung ke data aset aplikasi Anda (misalnya, vertex atau data animasi) ketika Anda mengimpor Model yang menggunakan sistem sumbu yang berbeda dari Unity. Cacat properti ini untuk mengkompensasi <span class="tooltip"><strong>Transform component</strong><span class="tooltiptext">Komponen Transform menentukan Posisi, Rotasi, dan Skala setiap objek di tempat kejadian. Setiap GameObject memiliki Transform. <a class="tooltipMoreInfoLink" href="class-Transform.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#TransformComponent">Glossary</a></span></span></span> akar <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> pada runtime untuk mensimulasikan konversi sumbu.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Import BlendShapes</strong></td> 
+          <td style="text-align:left;">Aktifkan properti ini untuk memungkinkan Unity untuk mengimpor bentuk campuran dengan Mesh Anda. Lihat <a href="#BlendShapesImportProperties">Mengimpor bentuk campuran</a> di bawah ini untuk rincian.<br><br><strong>Note</strong>: Mengimpor bentuk campuran normal membutuhkan kelompok halus dalam file FBX.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Import Visibility</strong></td> 
+          <td style="text-align:left;">Mengimpor pengaturan FBX yang menentukan apakah atau tidak komponen MeshRenderer diaktifkan (lihat). Lihat <a href="#VisibilityImportProperties">Mengimpor Visibilitas</a> di bawah untuk rincian.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Import Cameras</strong></td> 
+          <td style="text-align:left;">Kamera impor dari file .FBX Anda. Lihat <a href="#CameraImportProperties">Kamera impor</a> di bawah untuk rincian.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Import Lights</strong></td> 
+          <td style="text-align:left;">Lampu impor dari file .FBX Anda. Lihat <a href="#LightImportProperties">Lampu Impor</a> di bawah untuk rincian.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Preserve Hierarchy</strong></td> 
+          <td style="text-align:left;">Selalu buat akar prefab eksplisit, bahkan jika model ini hanya memiliki akar tunggal. Biasanya, strip impor FBX setiap node akar kosong dari model sebagai strategi optimasi. Namun, jika Anda memiliki beberapa file FBX dengan bagian hierarki yang sama Anda dapat menggunakan opsi ini untuk melestarikan hierarki asli. <br><br> Sebagai contoh, file1.fbx mengandung rig dan Mesh dan file2. fbx mengandung rig yang sama tetapi hanya animasi untuk rig itu. Jika Anda mengimpor file2.fbx tanpa mengaktifkan opsi ini, Unity strip simpul akar, hierarki tidak cocok, dan istirahat animasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Sort Hierarchy By Name</strong></td> 
+          <td style="text-align:left;">Aktifkan properti ini untuk memilah GameObjects dengan urutan abjad dalam hirarki. Disable properti ini untuk melestarikan pesanan hirarki yang didefinisikan dalam file FBX.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="BlendShapesImportProperties"></a></p> 
+       <h3>Mengimpor bentuk campuran</h3> 
+       <p>Unity mendukung bentuk campuran (morf) dan dapat mengimpor bentuk campuran dari file FBX dan DAE diekspor dari aplikasi pemodelan 3D. Anda juga dapat mengimpor animasi dari file FBX. Unity mendukung animasi level vertex untuk bentuk campuran pada vertices, normal dan tangents.</p> 
+       <p>Bentuk kulit dan campuran dapat mempengaruhi Mesh pada saat yang sama. Ketika Unity mengimpor Mesh yang mengandung bentuk campuran, itu menggunakan komponen <a href="class-SkinnedMeshRenderer.html">SkinnedMeshRenderer</a> (dalam komponen <a href="class-MeshRenderer.html">MeshRenderer</a>), terlepas dari apakah itu memiliki kulit atau tidak.</p> 
+       <p>Unity mengimpor campuran bentuk animasi sebagai bagian dari animasi biasa: itu animates campuran bentuk berat pada SkinnedMeshRenderers.</p> 
+       <p>Pilih metode ini untuk mengimpor bentuk campuran dengan normal:</p> 
+       <ul> 
+        <li> <p>Mengatur properti <a href="#blendshapenormals">Bentuk Campuran Normal</a> untuk <strong>Import</strong> sehingga Unity menggunakan normal dari file FBX. Untuk informasi lebih lanjut, lihat dokumentasi properti <a href="#blendshapenormals">Bentuk Campuran Normal</a> di bawah ini.</p> <p><em>OR</em></p> </li> 
+        <li><p>Mengatur properti <a class="tooltipMoreInfoLink" href="#blendshapenormals">Bentuk Campuran Normal</a> untuk <strong>Calculate</strong> sehingga Unity menggunakan logika yang sama untuk menghitung normal pada bentuk <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mesh">Glossary</a></span></span></span> dan campuran.</p></li> 
+       </ul> 
+       <p>Sitemap Jika Anda ingin tangents pada bentuk campuran Anda kemudian mengatur pengaturan impor <strong>Note:</strong> ke <a href="#Tangents">Tangents</a>.<strong>Calculate</strong>.</p> 
+       <p><a name="VisibilityImportProperties"></a></p> 
+       <h3>Mengimpor visibilitas</h3> 
+       <p>Unity dapat membaca sifat visibilitas dari file FBX dengan properti <strong>Import Visibility</strong>. Nilai dan <span class="tooltip"><strong>animation curves</strong><span class="tooltiptext">Memungkinkan Anda untuk menambahkan data ke klip impor sehingga Anda dapat menghidupkan waktu item lain berdasarkan keadaan animator. Misalnya, untuk set permainan dalam kondisi icy, Anda dapat menggunakan kurva animasi ekstra untuk mengontrol tingkat emisi sistem partikel untuk menunjukkan napas kondensor pemain di udara dingin. <a class="tooltipMoreInfoLink" href="AnimationCurvesOnImportedClips.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnimationCurves">Glossary</a></span></span></span> dapat mengaktifkan atau menonaktifkan komponen MeshRenderer dengan mengendalikan properti <a href="../ScriptReference/Renderer-enabled.html">Renderer.enabled</a>.</p> 
+       <p>Inheritance Visbilitas benar secara default tetapi bisa overridden. Sebagai contoh, jika visibilitas pada Parent Mesh diatur ke 0, semua renderer pada anak-anaknya juga dinonaktifkan. Dalam hal ini, satu kurva animasi diciptakan untuk setiap properti <code>Renderer.enabled</code> anak.</p> 
+       <p>Beberapa aplikasi pemodelan 3D baik tidak mendukung atau memiliki batasan mengenai sifat visibilitas. Untuk informasi lebih lanjut, lihat:</p> 
+       <ul> 
+        <li><a href="HOWTO-ImportObjectsFrom3DApps.html#Maya">Batasan pada mengimpor Model ke Unity dari Autodesk® Maya®</a></li> 
+        <li><a href="HOWTO-ImportObjectsFrom3DApps.html#Blender">Batasan pada mengimpor Model ke Unity dari Blender</a></li> 
+       </ul> 
+       <p><a name="CameraImportProperties"></a></p> 
+       <h3>Kamera impor</h3> 
+       <p>Unity mendukung sifat berikut ketika mengimpor kamera dari . FBX file:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property:</strong></th> 
+          <th style="text-align:left;"><strong>Function:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Projection</strong>-Modus</td> 
+          <td style="text-align:left;">Ortops atau perspektif. Tidak mendukung animasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Field of View</strong></td> 
+          <td style="text-align:left;">Mendukung animasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Semua sifat <strong>Physical Camera</strong> properties</td> 
+          <td style="text-align:left;">Jika Anda mengimpor Kamera dengan Sifat Fisik (misalnya, dari Maya), Unity menciptakan Kamera dengan properti <strong>Physical Camera</strong> diaktifkan dan <strong>Focal Length</strong>, <strong>Sensor Type</strong>, <strong>Sensor Size</strong>, <strong>Lens Shift</strong>, <strong>Gate Fit</strong>, dan nilai <br><strong><em>Note:</em></strong><em>Gerbang Fit</em><strong>None</strong> Tidak semua aplikasi pemodelan 3D memiliki konsep . Ketika tidak didukung oleh aplikasi pemodelan 3D, nilai default dalam Unity adalah .</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Near</strong> dan <strong>Far</strong> <span class="tooltip"><strong>Clipping Plane</strong><span class="tooltiptext">Pesawat yang membatasi seberapa jauh atau menutup kamera dapat melihat dari posisi saat ini. Berbagai tampilan kamera adalah antara pesawat klip jauh dan dekat. Lihat pesawat klip jauh dan dekat pesawat kliping. <a class="tooltipMoreInfoLink" href="class-Camera.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#clippingplane">Glossary</a></span></span></span> jarak</td> 
+          <td style="text-align:left;">Unity tidak mengimpor setiap animasi pada properti ini. Ketika mengekspor dari 3ds Max, memungkinkan pengaturan <strong>Clip Manually</strong>; jika nilai default diterapkan pada impor.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Target Cameras</strong></td> 
+          <td style="text-align:left;">Jika Anda mengimpor Kamera Target, Unity menciptakan kamera dengan batasan <a href="class-LookAtConstraint.html">LookAt</a> menggunakan objek target sebagai sumber.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="LightImportProperties"></a></p> 
+       <h3>Lampu impor</h3> 
+       <p>Jenis cahaya berikut didukung:</p> 
+       <ul> 
+        <li>Omni</li> 
+        <li>Spot</li> 
+        <li>Directional</li> 
+        <li>Area</li> 
+       </ul> 
+       <p>Sifat cahaya berikut didukung:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property:</strong></th> 
+          <th style="text-align:left;"><strong>Function:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Range</strong></td> 
+          <td style="text-align:left;"><strong>FarAttenuationEndValue</strong> digunakan jika <strong>UseFarAttenuation</strong> diaktifkan. <strong>FarAttenuationEndValue</strong> tidak mendukung animasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Color</strong></td> 
+          <td style="text-align:left;">Mendukung animasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Intensity</strong></td> 
+          <td style="text-align:left;">Mendukung animasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Spot Angle</strong></td> 
+          <td style="text-align:left;">Mendukung animasi. Hanya tersedia untuk Spot Lights.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p> <strong>Note</strong>: Dalam 3ds Max, nilai default yang diekspor adalah nilai properti pada bingkai yang dipilih saat ini. Untuk menghindari kebingungan, memindahkan playhead ke bingkai 0 ketika mengekspor.</p> 
+       <h4>Limitations</h4> 
+       <p>Beberapa aplikasi pemodelan 3D menerapkan scaling pada sifat ringan. Misalnya, Anda dapat meningkatkan Spot Light dengan hirarki dan mempengaruhi kerucut cahaya. Unity tidak melakukan ini, yang dapat menyebabkan lampu terlihat berbeda dalam Unity.</p> 
+       <p>Format FBX tidak menentukan lebar dan tinggi lampu daerah. Beberapa aplikasi pemodelan 3D tidak memiliki properti ini dan hanya memungkinkan Anda untuk menggunakan scaling untuk menentukan persegi panjang atau area disk. Karena ini, lampu daerah selalu memiliki ukuran 1 ketika diimpor.</p> 
+       <p>Animasi cahaya yang ditargetkan tidak didukung kecuali animasi mereka dipanggang.</p> 
+       <p><a name="meshprops"></a></p> 
+       <h2>Bagian properti Meshes</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Mesh Compression</strong></td> 
+          <td style="text-align:left;">Mengatur tingkat rasio kompresi untuk mengurangi ukuran file Mesh. Meningkatkan rasio kompresi menurunkan ketepatan Mesh dengan menggunakan batas jala dan kedalaman bit yang lebih rendah per komponen untuk mengompresi data mesh.<br><br> Ini terbaik untuk mengubahnya setinggi mungkin tanpa Mesh terlihat terlalu berbeda dari versi yang tidak terkompresi. Ini berguna untuk <a href="ReducingFilesize.html">mengoptimalkan ukuran permainan</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Off</strong></td> 
+          <td style="text-align:left;">Jangan gunakan <span class="tooltip"><strong>compression</strong><span class="tooltiptext">Metode menyimpan data yang mengurangi jumlah ruang penyimpanan yang dibutuhkan. <a href="class-TextureImporterOverride.html">Kompresi Tekstur</a>, <a href="class-AnimationClip.html#AssetProperties">Kompresi Animasi</a>, <a href="class-AudioClip.html">Kompresi Audio</a>, <a href="ReducingFilesize.html">Membangun Kompresi</a>.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#compression">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Low</strong></td> 
+          <td style="text-align:left;">Gunakan rasio kompresi rendah.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Medium</strong></td> 
+          <td style="text-align:left;">Gunakan rasio kompresi menengah.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>High</strong></td> 
+          <td style="text-align:left;">Gunakan rasio kompresi tinggi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Read/Write Enabled</strong></td> 
+          <td style="text-align:left;">Ketika Anda mengaktifkan opsi ini, Unity meng-upload data Mesh ke memori GPU-addressable, tetapi juga menyimpannya dalam memori yang dapat digunakan CPU. Ini berarti bahwa Unity dapat mengakses data Mesh pada waktu yang berjalan, dan Anda dapat mengaksesnya dari skrip Anda. Misalnya, Anda mungkin ingin melakukan ini jika Anda menghasilkan Mesh yang disebabkan, atau jika Anda ingin menyalin beberapa data dari Mesh. <br><br> Ketika opsi ini dinonaktifkan, Unity meng-upload data Mesh ke memori GPU-addressable, dan kemudian menghapusnya dari memori yang dapat dihadapi CPU. <br><br> Secara default, opsi ini dinonaktifkan. Dalam kebanyakan kasus, untuk menghemat penggunaan memori runtime, biarkan opsi ini dinonaktifkan. Untuk informasi saat mengaktifkan Read/Write Enabled, lihat <a href="../ScriptReference/Mesh-isReadable.html">Mesh.isReadable</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Optimize Mesh</strong></td> 
+          <td style="text-align:left;">Menentukan urutan di mana segitiga tercantum dalam Mesh untuk kinerja GPU yang lebih baik.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Nothing</strong></td> 
+          <td style="text-align:left;">Tidak ada optimasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Everything</strong></td> 
+          <td style="text-align:left;">Biarkan Reorder simpul dan indeks untuk poligon dan vertik. Ini adalah default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Polygon Order</strong></td> 
+          <td style="text-align:left;">Reorder hanya poligon.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Vertex Order</strong></td> 
+          <td style="text-align:left;">Reorder hanya simpul.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Generate Colliders</strong></td> 
+          <td style="text-align:left;">Aktifkan untuk mengimpor Mesh Anda dengan Mesh <span class="tooltip"><strong>Colliders</strong><span class="tooltiptext">Bentuk tak terlihat yang digunakan untuk menangani tabrakan fisik untuk objek. Seorang sari tidak perlu menjadi bentuk yang sama dengan jala objek - perkiraan kasar sering lebih efisien dan tidak dapat dibedakan dalam gameplay. <a class="tooltipMoreInfoLink" href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Collider">Glossary</a></span></span></span> secara otomatis terpasang. Ini berguna untuk dengan cepat menghasilkan mesh <span class="tooltip"><strong>collision</strong><span class="tooltiptext">tabrakan terjadi ketika mesin fisika mendeteksi bahwa tabrakan dari dua GameObjects membuat kontak atau tumpang tindih, ketika setidaknya satu memiliki komponen kaku dan bergerak. <a href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Collision">Glossary</a></span></span></span> untuk geometri lingkungan, tetapi harus dihindari untuk geometri Anda bergerak.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="geoprops"></a></p> 
+       <h2>Bagian properti Geometry</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Keep Quads</strong></td> 
+          <td style="text-align:left;">Aktifkan ini untuk menghentikan Unity dari mengkonversi poligon yang memiliki empat simpul ke segitiga. Misalnya, jika Anda menggunakan <a href="SL-SurfaceShaderTessellation.html">Tesselilasi Shaders</a>, Anda mungkin ingin mengaktifkan opsi ini karena kuadrat tessellating mungkin lebih efisien daripada tessellating poligon. <br><br>Unity dapat mengimpor jenis poligon (sudut ke N-gon). Polygons yang memiliki <em>more</em> dari empat simpul selalu dikonversi ke segitiga terlepas dari pengaturan ini. Namun, jika mesh memiliki quad dan segitiga (atau N-gon yang dikonversi ke segitiga), Unity menciptakan dua submesh untuk kuadrat dan segitiga terpisah. Setiap submesh mengandung segitiga atau quad hanya. <br><br><strong>Tip:</strong> Jika Anda ingin mengimpor quad ke Unity dari 3ds Max, Anda harus mengekspornya sebagai Poli yang Dapat Diedit.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Weld Vertices</strong></td> 
+          <td style="text-align:left;">Menggabungkan simpul yang berbagi posisi yang sama di ruang, asalkan mereka berbagi sifat yang sama secara keseluruhan (termasuk, UV, Normal, Tangents, dan VertexColor). <br><br> Ini mengoptimalkan jumlah vertex pada Mesh dengan mengurangi jumlah keseluruhan mereka. Opsi ini diaktifkan secara default. <br><br> Dalam beberapa kasus, Anda mungkin perlu mengganti optimasi ini ketika mengimpor Mesh Anda. Misalnya, jika Anda sengaja memiliki simpul vertices yang menempati posisi yang sama di Mesh Anda, Anda mungkin lebih suka menggunakan scripting untuk membaca atau memanipulasi simpul individu dan data segitiga.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Index Format</strong></td> 
+          <td style="text-align:left;">Tentukan ukuran penyangga indeks Mesh. <br><br><strong>Note:</strong> Untuk bandwidth dan ukuran memori penyimpanan alasan, Anda umumnya ingin menjaga indeks <strong>16 bit</strong> sebagai default, dan hanya menggunakan <strong>32 bit</strong> ketika perlu, yang adalah apa opsi <strong>Auto</strong> digunakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Auto</strong></td> 
+          <td style="text-align:left;">Mari Unity memutuskan apakah menggunakan indeks 16 atau 32 bit ketika mengimpor Mesh, tergantung pada jumlah simpul Mesh. Ini adalah default untuk aset yang ditambahkan pada Unity 2017.3 dan seterusnya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>16 bit</strong></td> 
+          <td style="text-align:left;">Gunakan indeks 16 bit ketika mengimpor Mesh. Jika Mesh lebih besar, maka dibagi menjadi &lt;64k vertex chunks. Ini adalah pengaturan default untuk Proyek yang dibuat pada Unity 2017.2 atau sebelumnya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>32 bit</strong></td> 
+          <td style="text-align:left;">Gunakan indeks 32 bit ketika mengimpor Mesh. Jika Anda menggunakan pipa rendering berbasis GPU (misalnya dengan perhitungan segitiga warna compute), menggunakan indeks 32 bit memastikan bahwa semua Mesh menggunakan format indeks yang sama. Ini mengurangi kompleksitas <span class="tooltip"><strong>shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span>, karena mereka hanya perlu menangani satu format.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Legacy Blend Shape Normals</strong></td> 
+          <td style="text-align:left;">Aktifkan opsi ini untuk menghitung normal berdasarkan nilai <strong>Smoothing Angle</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"> <a name="Normals"></a><span class="tooltip"><strong>Normals</strong><span class="tooltiptext">Arah tegak lurus ke permukaan jala, diwakili oleh vektor. Unity menggunakan normal untuk menentukan orientasi objek dan menerapkan pencukur. <a class="tooltipMoreInfoLink" href="VectorCookbook.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Normal">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Tentukan jika dan bagaimana normal harus dihitung. Ini berguna untuk <a href="ReducingFilesize.html">mengoptimalkan ukuran permainan</a>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Import</strong></td> 
+          <td style="text-align:left;">Impor normal dari file. Ini adalah opsi default. Jika file tidak mengandung normal, mereka akan dihitung.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Calculate</strong></td> 
+          <td style="text-align:left;">Hitung normal berdasarkan <strong>Normals Mode</strong>, <strong>Smoothness Source</strong>, dan <strong>Smoothing Angle</strong> (di bawah).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>None</strong></td> 
+          <td style="text-align:left;">Memungkinkan normal. Gunakan opsi ini jika Mesh tidak dipetakan normal atau dipengaruhi oleh pencahayaan real-time.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"> <a name="blendshapenormals"></a><strong>Blend Shape Normals</strong> </td> 
+          <td style="text-align:left;">Tentukan jika dan bagaimana Unity harus menghitung normal untuk bentuk campuran. Nilai ini harus sesuai dengan nilai properti <strong>Normals</strong>.<br><br> Properti ini hanya terlihat ketika <strong>Legacy Blend Shape Normals</strong> dinonaktifkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Import</strong></td> 
+          <td style="text-align:left;">Impor normal dari file. Jika bentuk campuran tidak mengandung normal, FBX SDK menggunakan metode sendiri untuk menghitung normal, menghasilkan nilai normal yang biasanya berbeda dari nilai normal yang dibuat Unity dengan opsi <strong>Calculate</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Calculate</strong></td> 
+          <td style="text-align:left;">Hitung normal berdasarkan <strong>Normals Mode</strong>, <strong>Smoothness Source</strong>, dan <strong>Smoothing Angle</strong> (di bawah).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>None</strong></td> 
+          <td style="text-align:left;">Bentuk campuran normal tidak berkontribusi pada bentuk dasar.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Normals Mode</strong></td> 
+          <td style="text-align:left;">Tentukan bagaimana normal dihitung oleh Unity. Ini hanya tersedia ketika <strong>Normals</strong> diatur ke <strong>Calculate</strong> atau <strong>Import</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Unweighted Legacy</strong></td> 
+          <td style="text-align:left;">Metode warisan komputasi normal (prior to version 2017.1). Dalam beberapa kasus ia memberikan hasil yang sedikit berbeda dibandingkan dengan implementasi saat ini. Ini adalah default untuk semua FBX <span class="tooltip"><strong>prefabs</strong><span class="tooltiptext">Jenis aset yang memungkinkan Anda untuk menyimpan GameObject lengkap dengan komponen dan properti. Prefab bertindak sebagai template dari mana Anda dapat membuat instance objek baru di tempat kejadian. <a class="tooltipMoreInfoLink" href="Prefabs.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Prefab">Glossary</a></span></span></span> yang diimpor sebelum migrasi Proyek ke versi Unity terbaru.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Unweighted</strong></td> 
+          <td style="text-align:left;">normal tidak berbobot.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Area Weighted</strong></td> 
+          <td style="text-align:left;">Normalnya bobot dengan area wajah.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Angle Weighted</strong></td> 
+          <td style="text-align:left;">Normalnya bobot oleh sudut simpul di setiap wajah.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Area and Angle Weighted</strong></td> 
+          <td style="text-align:left;">Normalnya bobot oleh area wajah dan sudut simpul di setiap wajah. Ini adalah opsi default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Smoothness Source</strong></td> 
+          <td style="text-align:left;">Mengatur cara menentukan perilaku halus (yang tepi harus halus dan yang harus keras).<br><br> Properti ini hanya terlihat ketika <strong>Legacy Blend Shape Normals</strong> dinonaktifkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Prefer Smoothing Groups</strong></td> 
+          <td style="text-align:left;">Gunakan kelompok halus dari file Model, di mana mungkin.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>From Smoothing Groups</strong></td> 
+          <td style="text-align:left;">Gunakan kelompok halus dari file Model hanya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>From Angle</strong></td> 
+          <td style="text-align:left;">Gunakan nilai <strong>Smoothing Angle</strong> untuk menentukan tepi mana harus halus.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>None</strong></td> 
+          <td style="text-align:left;">Jangan membagi setiap simpul di tepi keras.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Smoothing Angle</strong></td> 
+          <td style="text-align:left;">Kontrol apakah vertices dibagi untuk tepi keras: biasanya nilai-nilai yang lebih tinggi menghasilkan simpul yang lebih sedikit. <br><br><strong>Note:</strong> Gunakan pengaturan ini hanya pada organik yang sangat halus atau model poli yang sangat tinggi. Jika tidak, Anda lebih baik dari kelancaran manual di perangkat lunak pemodelan 3D Anda dan kemudian mengimpor opsi <strong>Normals</strong> yang diatur ke <strong>Import</strong> (di atas). Karena dasar Unity tepi keras pada satu sudut dan tidak ada yang lain, Anda mungkin berakhir dengan menghaluskan pada beberapa bagian dari Model oleh kesalahan.<br><br> Hanya tersedia jika <strong>Normals</strong> diatur ke <strong>Calculate</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"> <a name="Tangents"></a><strong>Tangents</strong> </td> 
+          <td style="text-align:left;">Tentukan bagaimana tangents simpul harus diimpor atau dihitung. Ini hanya tersedia ketika <strong>Normals</strong> diatur ke <strong>Calculate</strong> atau <strong>Import</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Import</strong></td> 
+          <td style="text-align:left;">Impor tangents vertex dari file FBX jika <strong>Normals</strong> diatur ke <strong>Import</strong>. Jika Mesh tidak memiliki tangents, itu tidak akan bekerja dengan naungan yang dipetakan normal.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Calculate Tangent Space</strong></td> 
+          <td style="text-align:left;">Hitung tangents menggunakan MikkTSpace. Ini adalah opsi default jika <strong>Normals</strong> diatur ke <strong>Calculate</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Calculate Legacy</strong></td> 
+          <td style="text-align:left;">Hitung tangents dengan algoritma legacy.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Calculate Legacy - Split Tangent</strong></td> 
+          <td style="text-align:left;">Hitung tangents dengan algoritma legacy, dengan membagi grafik UV. Gunakan ini jika pencahayaan <span class="tooltip"><strong>normal map</strong><span class="tooltiptext">Jenis tekstur Peta Bump yang memungkinkan Anda untuk menambahkan detail permukaan seperti benjolan, alur, dan goresan ke model yang menangkap cahaya seolah-olah mereka diwakili oleh geometri nyata.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Normalmap">Glossary</a></span></span></span> rusak oleh jahitan di Mesh Anda. Ini biasanya hanya berlaku untuk karakter.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>None</strong></td> 
+          <td style="text-align:left;">Jangan mengimpor tangents simpul. Mesh tidak memiliki tangents, jadi ini tidak bekerja dengan naungan yang dipetakan normal.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Swap UVs</strong></td> 
+          <td style="text-align:left;">Swap saluran UV di Mesh Anda. Gunakan opsi ini jika Tekstur diffuse Anda menggunakan UV dari <span class="tooltip"><strong>lightmap</strong><span class="tooltiptext">Tekstur pra-render yang mengandung efek sumber cahaya pada objek statis di tempat kejadian. Lightmaps dilalui atas geometri adegan untuk menciptakan efek pencahayaan. <a class="tooltipMoreInfoLink" href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Lightmap">Glossary</a></span></span></span>. Unity mendukung hingga delapan saluran UV tetapi tidak semua aplikasi model 3D ekspor lebih dari dua.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Generate Lightmap UVs</strong></td> 
+          <td style="text-align:left;">Buat saluran UV kedua untuk Lightmapping. Lihat dokumentasi tentang <a href="LightingGiUvs-GeneratingLightmappingUVs.html">menghasilkan UV Lightmap</a> untuk informasi lebih lanjut.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <hr> 
+       <ul> 
+        <li><span class="page-history"><strong>Normals Mode</strong>, <strong>Light</strong> dan opsi impor <span class="tooltip"><strong>Camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span> ditambahkan dalam Unity <a href="../Manual/30_search.html?q=newin20171">2017.1</a> <span class="search-words">NewIn20171</span></span></li> 
+        <li><span class="page-history"><span class="tooltip"><strong>Materials</strong><span class="tooltiptext">Aset yang menentukan bagaimana permukaan harus diberikan. <a class="tooltipMoreInfoLink" href="class-Material.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Material">Glossary</a></span></span></span> tab ditambahkan dalam <span class="search-words">NewIn20172</span></span></li> 
+        <li><span class="page-history"><strong>Index Format</strong> properti ditambahkan dalam <span class="search-words">NewIn20173</span></span></li> 
+        <li><span class="page-history">Deskripsi terbaru dari read/write pengaturan aktif dan meja properti reorganisasi, untuk mencocokkan peningkatan Unity <a href="../Manual/30_search.html?q=newin20173">2017.3</a> <span class="search-words">NewIn20173</span></span></li> 
+        <li><span class="page-history">Ditambahkan sifat <strong>Legacy Blend Shape Normals</strong> dan <strong>Sort Hierarchy By Name</strong> di Unity <a href="../Manual/30_search.html?q=newin20193">2019.3</a> <span class="search-words">NewIn20193</span></span></li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="class-FBXImporter.html"></a></span> 
+         <div class="tip">
+           Model Jendela Pengaturan impor 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="FBXImporter-Rig.html"></a></span> 
+         <div class="tip">
+           Rig tab 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Buat jendela editor kustom</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UIToolkits.html"></a></li> 
+         <li><a href="UIElements.html"></a></li> 
+         <li><a href="UIE-examples.html">Examples</a></li> 
+         <li>Buat jendela editor kustom</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UIE-examples.html"></a></span> 
+          <div class="tip">
+            Examples 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UIE-transition-example.html"></a></span> 
+          <div class="tip">
+            Buat transisi di jendela editor kustom 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Buat jendela editor kustom</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Jendela Editor kustom memungkinkan Anda untuk memperluas Unity dengan menerapkan editor dan alur kerja Anda sendiri. Panduan ini mencakup membuat jendela Editor melalui kode, bereaksi terhadap input pengguna, membuat <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span> dapat diubah dan menangani pemuatan panas.</p> 
+       <p>Dalam tutorial ini, Anda akan membuat browser <span class="tooltip"><strong>sprite</strong><span class="tooltiptext">Objek grafis 2D. Jika Anda digunakan untuk bekerja di 3D, Sprites pada dasarnya hanya tekstur standar tetapi ada teknik khusus untuk menggabungkan dan mengelola tekstur sprite untuk efisiensi dan kenyamanan selama perkembangan. <a class="tooltipMoreInfoLink" href="Sprites.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Sprite">Glossary</a></span></span></span>, yang menemukan dan menampilkan semua kecambah dalam proyek, dan menunjukkan mereka sebagai daftar. Memilih sprite dalam daftar akan menampilkan gambar di sisi kanan jendela.</p> 
+       <p>Anda dapat menemukan contoh lengkap di bagian <a href="#finalCode">skrip jendela editor</a>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-customeditor-window-final.png" alt="Custom sprite browser"> 
+        <figcaption>
+          Browser sprite 
+        </figcaption> 
+       </figure> 
+       <h2>Prerequisites</h2> 
+       <p>Panduan ini adalah untuk pengembang yang akrab dengan Unity, tetapi baru ke UI Toolkit. Disarankan untuk memiliki pemahaman dasar dari Unity dan C# scripting.</p> 
+       <p>Panduan ini juga merujuk pada konsep berikut:</p> 
+       <ul> 
+        <li><a href="UIE-VisualTree.html">Pohon Visual</a></li> 
+        <li><a href="UIE-Controls.html">Controls</a></li> 
+       </ul> 
+       <h2>Content</h2> 
+       <p><strong>Controls used in this guide:</strong></p> 
+       <ul> 
+        <li><a href="../ScriptReference/UIElements.ListView.html">ListView</a></li> 
+        <li><a href="../ScriptReference/UIElements.TwoPaneSplitView.html">TwoPaneSplitView</a></li> 
+        <li><a href="../ScriptReference/UIElements.Label.html">Label</a></li> 
+        <li><a href="../ScriptReference/UIElements.Image.html">Image</a></li> 
+       </ul> 
+       <p>Dalam panduan ini, Anda akan melakukan hal berikut:</p> 
+       <ul> 
+        <li>Buat skrip jendela Editor.</li> 
+        <li>Buat entri menu untuk membuka jendela.</li> 
+        <li>Tambahkan kontrol UI ke jendela.</li> 
+        <li>Tulis kode untuk menanggapi pilihan pengguna.</li> 
+        <li>Buat UI yang dapat disesuaikan.</li> 
+        <li>Mendukung pemuatan panas di Editor.</li> 
+       </ul> 
+       <h2>Buat skrip jendela Editor</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Tip</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Anda dapat menghasilkan kode yang diperlukan untuk membuat skrip jendela Editor di Editor Unity. Dari jendela Proyek, klik kanan dan pilih <strong>Create</strong> &gt; <strong>UI Toolkit</strong> &gt; <strong>Editor Window</strong>. Untuk panduan ini silakan menonaktifkan kotak centang UXML dan USS. Anda mungkin juga harus menambahkan petunjuk <code>using</code> tambahan di bagian atas file, seperti yang ditunjukkan di bawah ini.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Anda dapat membuat jendela Editor melalui C# <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> dalam proyek Anda. Jendela editor kustom adalah kelas yang berasal dari kelas <code>EditorWindow</code>.</p> 
+       <p>Buat file skrip baru <code>MyCustomEditor.cs</code> di bawah folder <strong>Assets/Editor</strong>. Tempel kode berikut ke script:</p> 
+       <pre><code class="lang-csharp">using System.Collections.Generic;
+using System.Linq;
+using UnityEditor;
+using UnityEngine;
+using UnityEngine.UIElements;
+
+public class MyCustomEditor : EditorWindow
+{
+}
+</code></pre> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Note</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Ini adalah jendela Editor-only yang mencakup ruang nama <code>UnityEditor</code>, sehingga file harus ditempatkan di bawah <code>Editor</code>, atau di dalam Definisi Perakitan Editor-only.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Buat entri menu untuk membuka jendela</h2> 
+       <p>Untuk membuka jendela Editor baru, Anda harus membuat entri di menu Editor.</p> 
+       <p>Tambahkan atribut <code>MenuItem</code> ke metode statis. Dalam contoh ini, nama metode statis adalah <code>ShowMyEditor()</code>.</p> 
+       <p>Di dalam <code>ShowMyEditor()</code>, sebut metode <a href="../ScriptReference/EditorWindow.GetWindow.html">EditorWindow.GetWindow()</a> untuk membuat dan menampilkan jendela. Ini mengembalikan objek <a href="../ScriptReference/EditorWindow.html">EditorWindow</a>. Untuk mengatur judul jendela, mengubah properti <a href="../ScriptReference/EditorWindow.titleContent.html">WordPress.org</a>.</p> 
+       <p>Tambahkan fungsi berikut di dalam kelas <code>MyCustomEditor</code> yang dibuat pada langkah sebelumnya.</p> 
+       <pre><code class="lang-csharp">[MenuItem("Tools/My Custom Editor")]
+public static void ShowMyEditor()
+{
+  // This method is called when the user selects the menu item in the Editor
+  EditorWindow wnd = GetWindow&lt;MyCustomEditor&gt;();
+  wnd.titleContent = new GUIContent("My Custom Editor");
+}
+</code></pre> 
+       <p>Uji jendela baru Anda dengan membukanya melalui menu Unity Editor <strong>Tools</strong> &gt; <strong>My Custom Editor</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-customeditor-window-title.png" alt="Editor window with custom title"> 
+        <figcaption>
+          Jendela editor dengan judul kustom 
+        </figcaption> 
+       </figure> 
+       <h2>Tambahkan kontrol UI ke jendela</h2> 
+       <p>UI Toolkit menggunakan metode <a href="../ScriptReference/EditorWindow.CreateGUI.html">CreateGUI</a> untuk menambahkan kontrol ke Editor UI, dan Unity memanggil metode <code>CreateGUI</code> secara otomatis ketika jendela perlu ditampilkan. Metode ini bekerja sama seperti metode seperti <code>Awake</code> atau <code>Update</code>.</p> 
+       <p>Anda dapat menambahkan kontrol UI ke UI dengan menambahkan elemen visual ke pohon visual. Metode <a href="../ScriptReference/UIElements.VisualElement.Add.html">Login Login</a> digunakan untuk menambahkan anak ke elemen visual yang ada. <a href="UIE-VisualTree.html">pohon visual</a> dari jendela Editor diakses melalui properti <code>rootvisualElement</code>.</p> 
+       <p>Untuk memulai, tambahkan fungsi <code>CreateGUI()</code> ke kelas editor kustom Anda dan tambahkan label 'Hello':</p> 
+       <pre><code class="lang-csharp">public void CreateGUI()
+{
+  rootVisualElement.Add(new Label("Hello"));
+}
+</code></pre> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-customeditor-window-hello.png" alt="Window with Hello label"> 
+        <figcaption>
+          Jendela dengan label 'Hello' 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Note</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Untuk menyajikan daftar kecambah, gunakan fungsi <code>AssetDatabase</code> untuk menemukan semua kecambah dalam proyek.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Ganti kode di dalam <code>CreateGUI()</code> dengan kode di bawah untuk menghitung semua kecambah dalam proyek.</p> 
+       <pre><code class="lang-csharp">public void CreateGUI()
+{
+  // Get a list of all sprites in the project
+  var allObjectGuids = AssetDatabase.FindAssets("t:Sprite");
+  var allObjects = new List&lt;Sprite&gt;();
+  foreach (var guid in allObjectGuids)
+  {
+    allObjects.Add(AssetDatabase.LoadAssetAtPath&lt;Sprite&gt;(AssetDatabase.GUIDToAssetPath(guid)));
+  }
+}
+</code></pre> 
+       <p>Untuk browser sprite, elemen visual tingkat atas akan menjadi <a href="../ScriptReference/UIElements.TwoPaneSplitView.html">TwoPaneSplitView</a>. Kontrol ini membagi ruang jendela yang tersedia menjadi dua panci: satu ukuran tetap dan satu ukuran fleksibel. Ketika Anda mengubah ukuran jendela, hanya pane fleksibel resizes, sementara pane ukuran tetap tetap tetap ukuran yang sama.</p> 
+       <p>Untuk kontrol <code>TwoPaneSplitView</code> untuk bekerja, perlu memiliki dua anak. Tambahkan kode di dalam <code>CreateGUI()</code> untuk membuat <code>TwoPaneSplitview</code>, kemudian tambahkan dua elemen anak sebagai placeholder untuk kontrol yang berbeda.</p> 
+       <pre><code class="lang-csharp">// Create a two-pane view with the left pane being fixed with
+var splitView = new TwoPaneSplitView(0, 250, TwoPaneSplitViewOrientation.Horizontal);
+
+// Add the view to the visual tree by adding it as a child to the root element
+rootVisualElement.Add(splitView);
+
+// A TwoPaneSplitView always needs exactly two child elements
+var leftPane = new VisualElement();
+splitView.Add(leftPane);
+var rightPane = new VisualElement();
+splitView.Add(rightPane);
+</code></pre> 
+       <p>Gambar di bawah ini menunjukkan jendela kustom dengan dua panel kosong. Bar divider dapat dipindahkan.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-customeditor-window-splitPane.png" alt="Window with two split panes"> 
+        <figcaption>
+          Jendela dengan dua panci split 
+        </figcaption> 
+       </figure> 
+       <p>Untuk peramban sprite, pane kiri akan menjadi daftar yang berisi nama semua kecambah yang ditemukan di proyek. Skema kontrol <a href="../ScriptReference/UIElements.ListView.html">ListView</a> dari <code>VisualElement</code>, sehingga mudah untuk memodifikasi kode untuk menggunakan <code>ListView</code> bukan <code>VisualElement</code> kosong.</p> 
+       <p>Modifikasi kode di dalam fungsi <code>CreateGUI()</code> untuk membuat kontrol <code>ListView</code> untuk pane kiri bukan <code>VisualElement</code>.</p> 
+       <pre><code class="lang-csharp">public void CreateGUI()
+{
+  ...
+  var leftPane = new ListView();
+  splitView.Add(leftPane);
+  ...
+}
+</code></pre> 
+       <p>Kontrol <a href="../ScriptReference/UIElements.ListView.html">ListView</a> menampilkan daftar item yang dapat dipilih. Dioptimalkan untuk membuat elemen yang cukup untuk menutupi area yang terlihat, dan kolam renang dan mendaur ulang elemen visual saat Anda menggulir daftar. Ini mengoptimalkan kinerja dan mengurangi jejak memori, bahkan dalam daftar yang memiliki banyak item.</p> 
+       <p>Untuk mengambil keuntungan dari ini, <code>ListView</code> harus benar diinisialisasikan dengan berikut:</p> 
+       <ul> 
+        <li>Berbagai item data.</li> 
+        <li>Fungsi callback untuk membuat entri daftar visual individu dalam daftar.</li> 
+        <li>Fungsi mengikat yang menginisialisasi entri daftar visual dengan item dari array data.</li> 
+       </ul> 
+       <p>Anda dapat membuat struktur UI yang kompleks untuk setiap elemen dalam daftar, tetapi contoh ini menggunakan label teks sederhana untuk menampilkan nama sprite.</p> 
+       <p>Tambahkan kode ke fungsi bawah <code>CreateGUI()</code> yang menginisialisasikan <code>ListView</code>.</p> 
+       <pre><code class="lang-csharp">public void CreateGUI()
+{
+  ...
+  // Initialize the list view with all sprites' names
+  leftPane.makeItem = () =&gt; new Label();
+  leftPane.bindItem = (item, index) =&gt; { (item as Label).text = allObjects[index].name; };
+  leftPane.itemsSource = allObjects;
+}
+</code></pre> 
+       <p>Gambar di bawah ini menunjukkan jendela Editor dengan tampilan daftar yang dapat digulir dan item yang dapat dipilih.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-customeditor-listView.png" alt="ListView with sprite names"> 
+        <figcaption>
+          DaftarView dengan nama sprite 
+        </figcaption> 
+       </figure> 
+       <p>Untuk referensi, di bawah ini adalah kode saat ini untuk fungsi <code>CreateGUI()</code> dalam keseluruhannya:</p> 
+       <pre><code class="lang-csharp">public void CreateGUI()
+{
+  // Get a list of all sprites in the project
+  var allObjectGuids = AssetDatabase.FindAssets("t:Sprite");
+  var allObjects = new List&lt;Sprite&gt;();
+  foreach (var guid in allObjectGuids)
+  {
+    allObjects.Add(AssetDatabase.LoadAssetAtPath&lt;Sprite&gt;(AssetDatabase.GUIDToAssetPath(guid)));
+  }
+
+  // Create a two-pane view with the left pane being fixed with
+  var splitView = new TwoPaneSplitView(0, 250, TwoPaneSplitViewOrientation.Horizontal);
+
+  // Add the panel to the visual tree by adding it as a child to the root element
+  rootVisualElement.Add(splitView);
+
+  // A TwoPaneSplitView always needs exactly two child elements
+  var leftPane = new ListView();
+  splitView.Add(leftPane);
+  var rightPane = new VisualElement();
+  splitView.Add(rightPane);
+
+  // Initialize the list view with all sprites' names
+  leftPane.makeItem = () =&gt; new Label();
+  leftPane.bindItem = (item, index) =&gt; { (item as Label).text = allObjects[index].name; };
+  leftPane.itemsSource = allObjects;
+}
+</code></pre> 
+       <h2>Tambahkan callback</h2> 
+       <p>Ketika Anda memilih sprite dari daftar di pane kiri, gambarnya harus ditampilkan pada pane yang tepat. Untuk melakukan ini Anda perlu memberikan fungsi callback yang dapat dihubungi <code>ListView</code> ketika pengguna membuat pilihan. Kontrol <code>ListView</code> memiliki properti <code>onSelectionChange</code> untuk tujuan ini.</p> 
+       <p>Fungsi callback menerima daftar yang berisi item atau item yang dipilih oleh pengguna. Mungkin untuk mengkonfigurasi <code>ListView</code> untuk memungkinkan multi-selection, tetapi secara default mode pemilihan terbatas pada satu item.</p> 
+       <p>Tambahkan fungsi callback ketika pengguna mengubah pilihan dari daftar di pane kiri.</p> 
+       <pre><code class="lang-csharp">public void CreateGUI()
+{
+  ...
+
+  // React to the user's selection
+  leftPane.onSelectionChange += OnSpriteSelectionChange;
+}
+
+private void OnSpriteSelectionChange(IEnumerable&lt;object&gt; selectedItems)
+{
+}
+</code></pre> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Note</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Jika Anda kehilangan jendela Anda dan menu tidak membuka kembali, tutup semua panel mengambang melalui menu di bawah <strong>Window</strong> &gt; <strong>Panels</strong>, atau mengatur ulang tata letak jendela Anda.<strong>Close all floating panels</strong>, or reset your window layout.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Untuk menampilkan gambar sprite yang dipilih di sisi kanan jendela, fungsi harus dapat mengakses pane tangan kanan dari <code>TwoPaneSplitView</code>. Anda dapat membuat kontrol ini variabel anggota kelas untuk dapat mengaksesnya di dalam fungsi callback.</p> 
+       <p>Mengubah <code>rightPane</code> dibuat dalam <code>CreateGUI()</code> menjadi variabel anggota.</p> 
+       <pre><code class="lang-csharp">private VisualElement m_RightPane;
+
+public void CreateGUI()
+{
+  ...
+
+  m_RightPane = new VisualElement();
+  splitView.Add(m_RightPane);
+
+  ...
+}
+</code></pre> 
+       <p>Dengan referensi ke <code>TwoPaneSplitView</code>, Anda dapat mengakses pane yang tepat melalui properti <code>flexedPane</code>. Sebelum membuat kontrol <code>Image</code> baru pada pane yang tepat, gunakan <code>VisualElement.Clear()</code> untuk menghapus gambar sebelumnya. Metode ini menghilangkan semua anak-anak dari elemen visual yang ada.</p> 
+       <p>Jelaskan pane yang tepat dari semua konten sebelumnya dan buat kontrol Gambar baru untuk sprite yang dipilih.</p> 
+       <pre><code class="lang-csharp">private void OnSpriteSelectionChange(IEnumerable&lt;object&gt; selectedItems)
+{
+  // Clear all previous content from the pane
+  m_RightPane.Clear();
+
+  // Get the selected sprite
+  var selectedSprite = selectedItems.First() as Sprite;
+  if (selectedSprite == null)
+    return;
+
+  // Add a new Image control and display the sprite
+  var spriteImage = new Image();
+  spriteImage.scaleMode = ScaleMode.ScaleToFit;
+  spriteImage.sprite = selectedSprite;
+
+  // Add the Image control to the right-hand pane
+  m_RightPane.Add(spriteImage);
+}
+</code></pre> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Note</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Pastikan untuk menyertakan <code>using System.Linq;</code> di bagian atas file Anda untuk menggunakan metode <code>First()</code> pada parameter <code>selectedItems</code>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Uji browser sprite Anda di Editor. Gambar di bawah ini menunjukkan jendela editor kustom dalam tindakan.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-customeditor-window-final.png" alt="Sprite browser in action"> 
+        <figcaption>
+          Peramban Sprite dalam aksi 
+        </figcaption> 
+       </figure> 
+       <h2>Membuat UI dapat disesuaikan</h2> 
+       <p>Windows editor dapat diakses dalam dimensi minimum dan maksimum yang diperbolehkan. Anda dapat mengatur dimensi ini di C# ketika membuat jendela dengan menulis ke properti <a href="../ScriptReference/EditorWindow.minSize.html">WordPress.org</a> dan <a href="../ScriptReference/EditorWindow.maxSize.html">WordPress.org</a>. Untuk mencegah jendela dari resizing, menetapkan dimensi yang sama untuk kedua properti.</p> 
+       <p>Batasi ukuran jendela editor kustom Anda dengan menambahkan garis-garis berikut ke bagian bawah fungsi <code>ShowMyEditor()</code>:</p> 
+       <pre><code class="lang-csharp">[MenuItem("Tools/My Custom Editor")]
+public static void ShowMyEditor()
+{
+  // This method is called when the user selects the menu item in the Editor
+  EditorWindow wnd = GetWindow&lt;MyCustomEditor&gt;();
+  wnd.titleContent = new GUIContent("My Custom Editor");
+
+  // Limit size of the window
+  wnd.minSize = new Vector2(450, 200);
+  wnd.maxSize = new Vector2(1920, 720);
+}
+</code></pre> 
+       <p>Untuk situasi di mana dimensi jendela terlalu kecil untuk menampilkan seluruh UI, Anda harus menggunakan elemen <code>ScrollView</code> untuk menyediakan gulir untuk jendela, atau konten mungkin menjadi tidak dapat diakses.</p> 
+       <p><code>ListView</code> pada pane kiri menggunakan <code>ScrollView</code> internal, tetapi pane yang tepat adalah <code>VisualElement</code> biasa. Mengubah ini ke kontrol <code>ScrollView</code> secara otomatis menampilkan scrollbars ketika jendela terlalu kecil untuk menyesuaikan seluruh gambar dalam ukuran aslinya.</p> 
+       <p>Tukar pane yang tepat <code>VisualElement</code> untuk gulir dua arah.<code>ScrollView</code> with bidirectional scrolling.</p> 
+       <pre><code class="lang-csharp">public void CreateGUI()
+{
+  ...
+
+  m_RightPane = new ScrollView(ScrollViewMode.VerticalAndHorizontal);
+  splitView.Add(m_RightPane);
+
+  ...
+}
+</code></pre> 
+       <p>Gambar di bawah ini menunjukkan jendela browser sprite dengan scrollbars.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-customeditor-window-scrollbars.png" alt="Editor window with scrollbars"> 
+        <figcaption>
+          Jendela editor dengan scrollbars 
+        </figcaption> 
+       </figure> 
+       <p>Tutup dan buka kembali jendela editor kustom Anda untuk menguji batas ukuran baru.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Note</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Pada Unity 2021.2 dan atas, Unity tidak menghormati sifat <code>minSize</code> dan <code>maxSize</code> ketika jendela didermaga. Ini memungkinkan pengguna untuk mengubah ukuran area dock tanpa batasan. Pertimbangkan membuat <code>ScrollView</code> sebagai salah satu elemen tingkat atas Anda dan letakkan semua UI di dalamnya untuk membuat UI Anda responsif mungkin.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Mendukung pemuatan panas di Editor</h2> 
+       <p>Jendela Editor yang tepat harus bekerja dengan alur kerja yang memuat panas yang terjadi di Editor Unity. Reload domain C# terjadi ketika skrip recompile atau ketika editor memasuki mode Play. Anda dapat mempelajari lebih lanjut tentang topik ini di halaman <a href="script-Serialization.html">Serialisasi Script</a>.</p> 
+       <p>Untuk melihat ini dalam aksi di jendela Editor Anda hanya diciptakan, buka browser sprite, pilih sprite, dan kemudian masukkan mode Play. Reset jendela, dan pilihan hilang.</p> 
+       <p>Karena objek <code>VisualElement</code> tidak serializable, UI harus dibuat kembali setiap kali reload terjadi pada Unity. Ini berarti bahwa metode <code>CreateGUI()</code> divoked setelah reload selesai. Ini memungkinkan Anda mengembalikan state UI sebelum reload dengan menyimpan data yang diperlukan dalam kelas <code>EditorWindow</code> Anda.</p> 
+       <p>Tambahkan variabel anggota untuk menyimpan indeks yang dipilih dalam daftar sprite.</p> 
+       <pre><code class="lang-csharp">public class MyCustomEditor : EditorWindow
+{
+    [SerializeField] private int m_SelectedIndex = -1;
+
+    ....
+}
+</code></pre> 
+       <p>Ketika Anda membuat pilihan, indeks seleksi baru dari tampilan daftar dapat disimpan di dalam variabel anggota ini. Anda dapat mengembalikan indeks seleksi selama penciptaan UI di dalam fungsi <code>CreateGUI()</code>.</p> 
+       <p>Tambahkan kode ke akhir fungsi <code>CreateGUI()</code> untuk menyimpan dan mengembalikan indeks daftar yang dipilih.</p> 
+       <pre><code class="lang-csharp">public void CreateGUI()
+{
+  ...
+
+  // Restore the selection index from before the hot reload
+  leftPane.selectedIndex = m_SelectedIndex;
+
+  // Store the selection index when the selection changes
+  leftPane.onSelectionChange += (items) =&gt; { m_SelectedIndex = leftPane.selectedIndex; };
+}
+</code></pre> 
+       <p>Pilih sprite dari daftar dan masukkan mode Play untuk menguji beban panas.</p> 
+       <p><a name="finalCode"></a></p> 
+       <h2>skrip jendela editor</h2> 
+       <p>Kode di bawah ini adalah skrip terakhir dari jendela Editor yang dibuat selama panduan ini. Anda dapat menempelkan kode langsung ke file yang disebut <code>MyCustomEdtior.cs</code> di dalam folder <strong>Assets/Editor</strong> untuk melihatnya di Editor Unity.</p> 
+       <pre><code class="lang-csharp">using System.Collections.Generic;
+using System.Linq;
+using UnityEditor;
+using UnityEngine;
+using UnityEngine.UIElements;
+
+public class MyCustomEditor : EditorWindow
+{
+  [SerializeField] private int m_SelectedIndex = -1;
+  private VisualElement m_RightPane;
+
+  [MenuItem("Tools/My Custom Editor")]
+  public static void ShowMyEditor()
+  {
+    // This method is called when the user selects the menu item in the Editor
+    EditorWindow wnd = GetWindow&lt;MyCustomEditor&gt;();
+    wnd.titleContent = new GUIContent("My Custom Editor");
+
+    // Limit size of the window
+    wnd.minSize = new Vector2(450, 200);
+    wnd.maxSize = new Vector2(1920, 720);
+  }
+
+  public void CreateGUI()
+  {
+    // Get a list of all sprites in the project
+    var allObjectGuids = AssetDatabase.FindAssets("t:Sprite");
+    var allObjects = new List&lt;Sprite&gt;();
+    foreach (var guid in allObjectGuids)
+    {
+      allObjects.Add(AssetDatabase.LoadAssetAtPath&lt;Sprite&gt;(AssetDatabase.GUIDToAssetPath(guid)));
+    }
+
+    // Create a two-pane view with the left pane being fixed with
+    var splitView = new TwoPaneSplitView(0, 250, TwoPaneSplitViewOrientation.Horizontal);
+
+    // Add the panel to the visual tree by adding it as a child to the root element
+    rootVisualElement.Add(splitView);
+
+    // A TwoPaneSplitView always needs exactly two child elements
+    var leftPane = new ListView();
+    splitView.Add(leftPane);
+    m_RightPane = new ScrollView(ScrollViewMode.VerticalAndHorizontal);
+    splitView.Add(m_RightPane);
+
+    // Initialize the list view with all sprites' names
+    leftPane.makeItem = () =&gt; new Label();
+    leftPane.bindItem = (item, index) =&gt; { (item as Label).text = allObjects[index].name; };
+    leftPane.itemsSource = allObjects;
+
+    // React to the user's selection
+    leftPane.onSelectionChange += OnSpriteSelectionChange;
+
+    // Restore the selection index from before the hot reload
+    leftPane.selectedIndex = m_SelectedIndex;
+
+    // Store the selection index when the selection changes
+    leftPane.onSelectionChange += (items) =&gt; { m_SelectedIndex = leftPane.selectedIndex; };
+  }
+
+  private void OnSpriteSelectionChange(IEnumerable&lt;object&gt; selectedItems)
+  {
+    // Clear all previous content from the pane
+    m_RightPane.Clear();
+
+    // Get the selected sprite
+    var selectedSprite = selectedItems.First() as Sprite;
+    if (selectedSprite == null)
+      return;
+
+    // Add a new Image control and display the sprite
+    var spriteImage = new Image();
+    spriteImage.scaleMode = ScaleMode.ScaleToFit;
+    spriteImage.sprite = selectedSprite;
+
+    // Add the Image control to the right-hand pane
+    m_RightPane.Add(spriteImage);
+  }
+}
+
+</code></pre> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UIE-examples.html"></a></span> 
+         <div class="tip">
+           Examples 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UIE-transition-example.html"></a></span> 
+         <div class="tip">
+           Buat transisi di jendela editor kustom 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy"> 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

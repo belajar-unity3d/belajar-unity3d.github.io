@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Tips Sistem Pekerjaan C# dan pemecahan masalah</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="core" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="ScriptingSection.html">Scripting</a></li> 
+         <li><a href="JobSystem.html">Sistem Pekerjaan C#</a></li> 
+         <li>C# Kiat Sistem Pekerjaan dan pemecahan masalah</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="JobSystemParallelForTransformJobs.html"></a></span> 
+          <div class="tip">
+            ParalelForTransform 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UNet.html"></a></span> 
+          <div class="tip">
+            Multiplayer dan Jaringan 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>C# Kiat Sistem Pekerjaan dan pemecahan masalah</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Saat menggunakan Sistem Kerja Unity C#, pastikan Anda mematuhi berikut:</p> 
+       <h2>Jangan mengakses data statis dari pekerjaan</h2> 
+       <p>Mengakses data statis dari tempat kerja semua sistem keamanan. Jika Anda mengakses data yang salah, Anda mungkin crash Unity, sering dengan cara yang tidak terduga. Misalnya, mengakses <a href="../ScriptReference/MonoBehaviour.html">MonoBehaviour</a> dapat menyebabkan crash pada reload domain.</p> 
+       <p> <strong>Note</strong>: Karena risiko ini, versi masa depan Unity akan mencegah akses variabel global dari pekerjaan yang menggunakan <a href="https://www.youtube.com/watch?v=VxeC7WFfg3Q">Analisis statis</a>. Jika Anda mengakses data statis dalam pekerjaan, Anda harus mengharapkan kode Anda untuk memecahkan versi Unity masa depan.</p> 
+       <h2>Flush scheduled batches</h2> 
+       <p>Ketika Anda ingin pekerjaan Anda untuk memulai executing, maka Anda dapat membilas batch dijadwalkan dengan <a href="../ScriptReference/Unity.Jobs.JobHandle.ScheduleBatchedJobs.html">JobHandle.ScheduleBatchedJobs</a>. Perhatikan bahwa memanggil metode ini dapat mempengaruhi kinerja negatif. Tidak menyiram batch menunda penjadwalan sampai benang kontrol menunggu hasilnya. Dalam semua kasus lain menggunakan <a href="../ScriptReference/Unity.Jobs.JobHandle.Complete.html">JobHandle.Complete</a> untuk memulai proses eksekusi.</p> 
+       <p> <strong>Note</strong>: Dalam (ECS) batch disengaja untuk Anda, sehingga memanggil <code>JobHandle.ScheduleBatchedJobs</code> tidak diperlukan.</p> 
+       <h2>Jangan mencoba untuk memperbarui konten NativeContainer</h2> 
+       <p>Karena kekurangan <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/ref-returns">ref kembali</a>, tidak mungkin untuk secara langsung mengubah konten <a href="../ScriptReference/Unity.Collections.LowLevel.Unsafe.NativeContainerAttribute.html">NativeContainer</a>. Sebagai contoh, <code>nativeArray[0]++;</code> adalah sama seperti menulis <code>var temp = nativeArray[0]; temp++;</code> yang tidak memperbarui nilai dalam <code>nativeArray</code>.</p> 
+       <p>Sebaliknya, Anda harus menyalin data dari indeks ke salinan sementara setempat, memodifikasi salinan itu, dan menyimpannya kembali, seperti:</p> 
+       <pre><code>MyStruct temp = myNativeArray[i];
+temp.memberVariable = 0;
+myNativeArray[i] = temp;
+</code></pre> 
+       <h2>Sitemap Kepemilikan regain</h2> 
+       <p>Memperkuat kepemilikan data memerlukan ketergantungan untuk menyelesaikan sebelum benang kontrol dapat menggunakannya lagi. Tidak cukup untuk memeriksa <a href="../ScriptReference/Unity.Jobs.JobHandle.IsCompleted.html">JobHandle.IsCompleted</a>. Anda harus memanggil metode <code>JobHandle.Complete</code> untuk mendapatkan kembali kepemilikan jenis <code>NativeContainer</code> ke benang kontrol. Memanggil <code>Complete</code> juga membersihkan keadaan dalam sistem keamanan. Tidak melakukannya memperkenalkan kebocoran memori. Proses ini juga berlaku jika Anda menjadwalkan pekerjaan baru setiap bingkai yang memiliki ketergantungan pada pekerjaan bingkai sebelumnya.</p> 
+       <h2>Gunakan Jadwal dan Lengkap di benang kontrol</h2> 
+       <p>Anda hanya dapat memanggil <a href="../ScriptReference/Unity.Jobs.IJobExtensions.Schedule.html">Schedule</a> dan <code>Complete</code> dari benang kontrol yang sama. Jika satu pekerjaan tergantung pada yang lain, gunakan <code>JobHandle</code> untuk mengelola ketergantungan daripada mencoba untuk menjadwalkan pekerjaan dalam pekerjaan.</p> 
+       <h2>Gunakan Jadwal dan Lengkap pada waktu yang tepat</h2> 
+       <p>Call <code>Schedule</code> pada pekerjaan segera setelah Anda memiliki data yang dibutuhkan, dan jangan sebut <code>Complete</code> di atasnya sampai Anda membutuhkan hasilnya. Ini adalah praktik yang baik untuk menjadwalkan pekerjaan yang Anda tidak perlu menunggu ketika tidak bersaing dengan pekerjaan lain yang berjalan. Misalnya, jika Anda memiliki periode antara akhir satu bingkai dan awal bingkai berikutnya di mana tidak ada pekerjaan yang berjalan, dan satu latency bingkai dapat diterima, Anda dapat menjadwalkan pekerjaan ke ujung bingkai dan menggunakan hasilnya dalam bingkai berikut. Atau, jika permainan Anda disatukan bahwa periode perubahan dengan pekerjaan lain, dan ada periode yang dimanfaatkan besar di suatu tempat lain dalam bingkai, lebih efisien untuk menjadwalkan pekerjaan Anda di sana.</p> 
+       <h2>Mark NativeContainer jenis sebagai read-only</h2> 
+       <p>Ingat bahwa pekerjaan telah membaca dan menulis akses ke jenis <code>NativeContainer</code> secara default. Gunakan atribut <code>[ReadOnly]</code> ketika tepat untuk meningkatkan kinerja.</p> 
+       <h2>Periksa ketergantungan data</h2> 
+       <p>Di jendela Unity <span class="tooltip"><strong>Profiler</strong><span class="tooltiptext">Jendela yang membantu Anda untuk mengoptimalkan permainan Anda. Ini menunjukkan berapa banyak waktu yang dihabiskan di berbagai bidang permainan Anda. Sebagai contoh, dapat melaporkan persentase waktu yang dihabiskan <strong>rendering</strong>, aimating, atau dalam logika permainan Anda. <a class="tooltipMoreInfoLink" href="Profiler.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profiler">Glossary</a></span></span></span>, penanda "WaitForJobGroup" pada benang kontrol menunjukkan bahwa Unity menunggu pekerjaan pada benang pekerja untuk menyelesaikan. Penanda ini bisa berarti bahwa Anda telah memperkenalkan ketergantungan data di suatu tempat yang harus Anda hadapi. Cari tahu <code>JobHandle.Complete</code> untuk melacak di mana Anda memiliki ketergantungan data yang memaksakan benang kontrol untuk menunggu.</p> 
+       <h2>Pekerjaan debugging</h2> 
+       <p>Pekerjaan memiliki fungsi <a href="../ScriptReference/Unity.Jobs.IJobExtensions.Run.html">Run</a> yang dapat Anda gunakan di tempat <code>Schedule</code> untuk segera melaksanakan pekerjaan pada benang kontrol. Anda dapat menggunakan ini untuk tujuan debugging.</p> 
+       <h2>Jangan mengalokasikan memori yang dikelola dalam pekerjaan</h2> 
+       <p>Mengalokasikan memori yang dikelola dalam pekerjaan sangat lambat, dan pekerjaan tidak dapat menggunakan Unity <a href="https://www.youtube.com/watch?v=NF6kcNS6U80&amp;t=2s">Burst compiler</a> untuk meningkatkan kinerja. Burst adalah teknologi kompilator backend berbasis <a href="https://en.wikipedia.org/wiki/LLVM">LLVM</a> baru yang memudahkan Anda. Dibutuhkan C# pekerjaan dan menghasilkan kode mesin yang sangat dioptimalkan memanfaatkan kemampuan khusus platform Anda.</p> 
+       <h2>Informasi lebih lanjut</h2> 
+       <ul> 
+        <li>Lihat daftar putar <a href="https://www.youtube.com/playlist?list=PLX2vGYjWbI0RuXtGMYKqChoZC2b-H4tck">Unity GDC 2018: C# Sistem Kerja</a>.</li> 
+        <li>Untuk informasi lebih lanjut tentang bagaimana Sistem Kerja C# berkaitan dengan ECS, lihat .</li> 
+        <li>Untuk diskusi lebih lanjut dan pemecahan masalah, lihat .</li> 
+       </ul> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2018–06–15 Sitemap</span></p></li> 
+        <li><p> <span class="page-history">Sistem Kerja C# terkena <span class="search-words">Oktober 2018</span></span> </p></li> 
+       </ul> 
+       <!-- area:core --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="JobSystemParallelForTransformJobs.html"></a></span> 
+         <div class="tip">
+           ParalelForTransform 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UNet.html"></a></span> 
+         <div class="tip">
+           Multiplayer dan Jaringan 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

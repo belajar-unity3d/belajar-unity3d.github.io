@@ -1,0 +1,886 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Membuat UI runtime pertama Anda</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UIToolkits.html"></a></li> 
+         <li><a href="UIElements.html"></a></li> 
+         <li><a href="UIE-Getting-Started.html">Mulai dengan UI Toolkit</a></li> 
+         <li>Membuat UI runtime pertama Anda</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UIE-HowTo-CreateCustomInspector.html"></a></span> 
+          <div class="tip">
+            Buat Inspektur Kustom 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UIE-VisualTree.html"></a></span> 
+          <div class="tip">
+            Pohon Visual 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Membuat UI runtime pertama Anda</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Halaman ini akan memandu Anda melalui langkah-langkah untuk mengatur layar pemilihan karakter sederhana menggunakan <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#UI">Glossary</a></span></span></span> Toolkit. Ini mencakup penciptaan elemen UI dan template, pengaturan <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>, dan cara menghubungkan logika skrip ke UI. Panduan ini tidak akan menutupi styling melalui USS, dan hanya menggunakan gaya default dan mereka.</p> 
+       <p>Anda dapat menemukan kode sumber akhir panduan ini di bagian bawah halaman ini <a href="#finalCode">here</a>.</p> 
+       <p><strong>Topics covered:</strong> UI Builder, <a href="../ScriptReference/UIElements.ListView.html">ListView</a>, <a href="../ScriptReference/UIElements.Label.html">Label</a>, <a href="../ScriptReference/UIElements.PanelSettings.html">PanelSettings</a>, <a href="../ScriptReference/UIElements.UIDocument.html">UIDocument</a>, penanganan seleksi</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-finalMainView.png" alt=""> 
+       </figure> 
+       <p>Panduan ini akan membawa Anda melalui langkah-langkah berikut:</p> 
+       <ul> 
+        <li>Buat tampilan UI utama</li> 
+        <li>Pengaturan adegan</li> 
+        <li>Buat data sampel untuk ditampilkan</li> 
+        <li>Buat controller untuk tampilan utama</li> 
+        <li>Buat template UI entri daftar</li> 
+        <li>Buat controller untuk entri daftar</li> 
+        <li>Reaktor</li> 
+       </ul> 
+       <h2>Buat tampilan UI utama</h2> 
+       <p>Layar UI akhir terdiri dari dua template UI individu (UXML). Templat tampilan utama berisi daftar dengan nama karakter, panel yang lebih kecil untuk menampilkan detail karakter yang dipilih, dan tombol. Di bagian ini Anda akan mengatur template ini menggunakan UI Builder.</p> 
+       <p> <strong>Note</strong>: Jika Anda akrab dengan UI Builder dan ingin melewatkan langkah ini, Anda dapat menyalin kode UXML untuk <a href="#finalCode_mainView"><strong>main view</strong></a> dari bagian bawah halaman ini dan menempel ke file baru langsung. Simpan sebagai <strong>Assets/UI/MainView.uxml</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-mainView.png" alt="The UI layout setup for the main view"> 
+        <figcaption>
+          Pengaturan tata letak UI untuk tampilan utama 
+        </figcaption> 
+       </figure> 
+       <p>Buka jendela UI Builder melalui menu <strong>Window &gt; UI Toolkit &gt; UI Builder</strong>. Buat dokumen UX baru menggunakan menu file di sebelah kiri atas viewport.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-fileMenu.png" alt="UI Builder file menu"> 
+        <figcaption>
+          UI Builder menu 
+        </figcaption> 
+       </figure> 
+       <p>Ketika mengembangkan UI permainan, selalu pastikan untuk memilih <code>Unity Default Runtime Theme</code> di kanan atas <span class="tooltip"><strong>viewport</strong><span class="tooltiptext">Area tampilan pengguna aplikasi di layar mereka.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Viewport">Glossary</a></span></span></span> UI Builder. Ukuran dan warna font standar berbeda antara tema Editor dan Runtime dan yang mempengaruhi tata letak Anda.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-UIBuilderTheme.png" alt="Create new elements by dragging from the Library"> 
+        <figcaption>
+          Buat elemen baru dengan menyeret dari Perpustakaan 
+        </figcaption> 
+       </figure> 
+       <p>Pilih file UX baru di kotak cek <strong>Hierarchy</strong> dan mengaktifkan kotak cemen. Anda mungkin perlu mengatur Editor Unity Anda ke resolusi lansekap jika Anda belum.<strong>Match Game View</strong> checkbox. You might need to set your Unity Editor to a landscape resolution if you haven’t already.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-matchGameView.png" alt="Enabling Match Game View"> 
+        <figcaption>
+          Sitemap Tampilan Game 
+        </figcaption> 
+       </figure> 
+       <p>Sekarang saatnya membuat elemen UI! Buat VisualElement baru dengan menyeretnya dari <strong>Library</strong> ke dalam <strong>Hierarchy</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-newVisualElement.png" alt="Create new elements by dragging from the Library"> 
+        <figcaption>
+          Buat elemen baru dengan menyeret dari Perpustakaan 
+        </figcaption> 
+       </figure> 
+       <p>Elemen baru perlu menutupi seluruh layar, sehingga Anda perlu mengatur properti <code>flex-grow</code> menjadi 1. Pilih elemen dari hirarki dan temukan lipatan label <strong>Flex</strong> di panel <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span> di sebelah kanan. Ubah nilai untuk <strong>Grow</strong> dari 0 sampai 1.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-flexGrow.png" alt="Setting the Flex property"> 
+        <figcaption>
+          Menyiapkan properti Flex 
+        </figcaption> 
+       </figure> 
+       <p>Untuk pusat semua anak-anak dari VisualElement ini di tengah layar, mengubah sifat <strong>Align</strong> dari VisualElement. Anda harus mengatur kedua <strong>Align Items</strong> dan <strong>Justify Content</strong> untuk <em>center</em>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-alignCenter.png" alt="Centering children"> 
+        <figcaption>
+          Berpusat anak-anak 
+        </figcaption> 
+       </figure> 
+       <p>Terakhir, Anda dapat memilih warna latar belakang di bawah <strong>Background &gt; Color</strong>. Langkah ini adalah opsional. Contoh ini menggunakan <code>#732526</code> sebagai warna.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-backgroundColor.png" alt="Root element background color"> 
+        <figcaption>
+          Warna latar belakang elemen akar 
+        </figcaption> 
+       </figure> 
+       <p>Selanjutnya, buat VisualElement baru di bawah yang ada. Ini akan menjadi wadah induk untuk bagian kiri dan kanan UI.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-secondaryContainer.png" alt="Add a child VisualElement"> 
+        <figcaption>
+          Tambahkan VisualElement anak 
+        </figcaption> 
+       </figure> 
+       <p>Mengatur properti <code>flex-direction</code> untuk <code>row</code> untuk elemen baru ini (secara default ke kolom). Anda juga perlu mengatur ketinggian tetap 350 <span class="tooltip"><strong>pixels</strong><span class="tooltiptext">Unit terkecil dalam gambar komputer. Ukuran piksel tergantung pada resolusi layar Anda. Pencahayaan pixel dihitung pada setiap piksel layar. <a class="tooltipMoreInfoLink" href="ShadowPerformance.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#pixel">Glossary</a></span></span></span>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-centerContainer.png" alt="Center container properties"> 
+        <figcaption>
+          Properti kontainer pusat 
+        </figcaption> 
+       </figure> 
+       <p>Ini adalah apa UI saat ini harus terlihat seperti. Perhatikan bahwa layar Anda mungkin terlihat berbeda tergantung pada resolusi dan <span class="tooltip"><strong>aspect ratio</strong><span class="tooltiptext">Hubungan dimensi proporsional gambar, seperti lebar dan tingginya.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AspectRatio">Glossary</a></span></span></span> dari <strong>Game View</strong> Anda.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-intermediate01.png" alt="Background container with empty element inside"> 
+        <figcaption>
+          Wadah latar belakang dengan elemen kosong di dalam 
+        </figcaption> 
+       </figure> 
+       <p>Untuk membuat daftar nama karakter, pilih kontrol <strong>ListView</strong> dari <strong>Library</strong> dan menambahkannya sebagai anak di bawah VisualElement yang Anda buat. Pilih elemen dan menetapkan nama <code>CharacterList</code> dalam inspektur. Hal ini diperlukan sehingga Anda dapat mengakses daftar ini melalui skrip pengontrol kemudian.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-setElementName.png" alt="Background container with empty element inside"> 
+        <figcaption>
+          Wadah latar belakang dengan elemen kosong di dalam 
+        </figcaption> 
+       </figure> 
+       <p>Mengatur daftar untuk memiliki lebar tetap 230 piksel. Juga memberikan margin lebar 6 px di sebelah kanan, untuk menukar beberapa jarak ke elemen berikutnya yang akan Anda buat.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-sizeAndMargin.png" alt="Size and Margin foldouts for the character list"> 
+        <figcaption>
+          Ukuran dan lipatan Margin untuk daftar karakter 
+        </figcaption> 
+       </figure> 
+       <p>Anda juga dapat menetapkan warna latar belakang dan menetapkan batas bulat untuk daftar. Panduan ini menggunakan <code>#6E3925</code> untuk latar belakang dan <code>#311A11</code> untuk warna perbatasan, dengan batas lebar 4px dan radius 15px. Langkah ini adalah opsional.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-characterListStyling.png" alt="Styled character list"> 
+        <figcaption>
+          Daftar karakter gaya 
+        </figcaption> 
+       </figure> 
+       <p>Tambahkan VisualElement baru di bawah induk yang sama dengan <code>CharacterList</code>. Ini akan memegang panel detail karakter dan tombol. Di bawah lipatan <strong>Align</strong>, ubah pengaturan untuk <strong>Align Items</strong> ke <code>flex-end</code>, dan <strong>Justify Content</strong> ke <code>space-between</code>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-justifySpaceBetween.png" alt="Justify content property"> 
+        <figcaption>
+          Membenarkan properti konten 
+        </figcaption> 
+       </figure> 
+       <p>Tambahkan VisualElement baru ke wadah baru ini. Ini akan menjadi panel detail karakter. Ketika pengguna memilih karakter dari daftar di sebelah kiri, itu akan menampilkan potret karakter, nama, dan kelas.</p> 
+       <p>Tetapkan lebar 276 piksel untuk elemen, dan beralih <strong>Align Items</strong> dan <strong>Justify Content</strong> ke <em>center</em>. Juga tambahkan bantalan lebar 8 piksel untuk elemen, sehingga anak-anak akan menjaga jarak minimum ke perbatasan wadah.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-characterDetailsProperties.png" alt="Properties of the charcter details container"> 
+        <figcaption>
+          Properti dari wadah rincian charcter 
+        </figcaption> 
+       </figure> 
+       <p>Anda dapat menata panel dengan mengatur warna latar belakang <code>#AA5939</code> dan warna perbatasan <code>#311A11</code> dengan batas lebar 4px dan radius 15px. Langkah ini adalah opsional.</p> 
+       <p>Tata letak UI Anda sekarang harus terlihat mirip dengan gambar di bawah ini.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-intermediate02.png" alt="Empty character details panel"> 
+        <figcaption>
+          Panel rincian karakter kosong 
+        </figcaption> 
+       </figure> 
+       <p>Selanjutnya Anda akan menambahkan kontrol UI individu ke rincian karakter. Pertama adalah potret karakter. Ini terdiri dari dua elemen - bingkai di latar belakang dan gambar di latar belakang.</p> 
+       <p>Tambahkan VisualElement baru ke wadah detail karakter untuk bingkai latar belakang terlebih dahulu. Masukkan ukuran tetap 120 × 120 piksel, dan bantalan 4 piksel sehingga gambar yang terkandung tidak akan langsung menyentuh perbatasan.</p> 
+       <p>Anda dapat menggunakan batas radius 2px-wide, 15px dengan warna <code>#311A11</code> dan warna latar belakang <code>#FF8554</code> untuk memberi gaya elemen. Jangan ragu untuk menerapkan warna dan styling Anda sendiri.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-pictureFrame.png" alt="Background frame for the character portrait"> 
+        <figcaption>
+          Bingkai latar belakang untuk potret karakter 
+        </figcaption> 
+       </figure> 
+       <p>Untuk gambar aktual menambahkan VisualElement baru sebagai anak ke bingkai yang Anda buat. Nama itu <code>CharacterPortrait</code> sehingga Anda dapat mengaksesnya di skrip pengontrol kemudian.</p> 
+       <p>Set <strong>Flex &gt; Grow</strong> ke 1, sehingga gambar menggunakan semua ruang yang tersedia. Juga pastikan untuk mengubah mode scaling di bawah <strong>Background &gt; Scale Mode</strong> ke <code>scale-to-fit</code>, sehingga Anda dapat mengukur gambar sesuai dengan ukuran elemen, sambil menjaga rasio aspek yang benar.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-portraitElement.png" alt="VisualElement for the portrait image"> 
+        <figcaption>
+          Login Elemen untuk gambar potret 
+        </figcaption> 
+       </figure> 
+       <p>Selanjutnya, tambahkan dua kontrol label ke wadah detail karakter, yang kemudian Anda gunakan untuk menampilkan nama dan kelas karakter yang dipilih. Nama mereka <code>CharacterName</code> dan <code>CharacterClass</code>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-characterLabels.png" alt="Add labels for name and class"> 
+        <figcaption>
+          Tambahkan label untuk nama dan kelas 
+        </figcaption> 
+       </figure> 
+       <p>Untuk membuat nama karakter menonjol lebih dari kelas, mengubah ukuran font label menjadi 18, dan mengatur gaya ke <em>bold</em>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-labelSettings.png" alt="Change font settings"> 
+        <figcaption>
+          Mengubah pengaturan font 
+        </figcaption> 
+       </figure> 
+       <p>Layar UI Anda sekarang harus terlihat mirip dengan gambar di bawah ini.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-intermediate03.png" alt="Finished character details panel"> 
+        <figcaption>
+          Panel detail karakter jadi 
+        </figcaption> 
+       </figure> 
+       <p>Terakhir, tambahkan kontrol tombol ke wadah UI sisi kanan. Anda kemudian akan mengakses tombol ini di script controller dan mengaktifkan atau menonaktifkannya ketika karakter dipilih atau dipilih. Nama tombol <code>SelectCharButton</code> dan memberikan lebar tetap 150px. Anda juga harus mengatur teks label dari tombol ke <code>Select Character</code>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-selectButton.png" alt="Add button for character selection"> 
+        <figcaption>
+          Tambahkan tombol untuk pemilihan karakter 
+        </figcaption> 
+       </figure> 
+       <p>Untuk memberi gaya tombol, atur warna latar belakang <code>#FF8554</code>, dan perbatasan 2px dengan warna <code>#311A11</code>. Langkah ini adalah opsional.</p> 
+       <p>Tampilan utama selesai Anda harus terlihat mirip dengan gambar di bawah ini.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-finalMainView.png" alt="Final main view layout"> 
+        <figcaption>
+          Tata letak tampilan utama akhir 
+        </figcaption> 
+       </figure> 
+       <p>Simpan template UXML sebagai <strong>Assets/UI/MainView.uxml</strong>. Anda juga dapat menemukan kode UXML terakhir untuk template ini di bagian bawah halaman <a href="#finalCode_mainView">here</a>.</p> 
+       <h2>Pengaturan adegan</h2> 
+       <p>Di bagian ini Anda akan belajar cara memuat dan menampilkan template UI yang Anda buat di bagian sebelumnya dalam permainan Anda saat ini.</p> 
+       <p>Untuk memulai Anda perlu membuat aset <a href="../ScriptReference/UIElements.PanelSettings.html">PanelSettings</a>. aset ini akan menentukan pengaturan layar Anda, seperti mode scaling dan urutan rendering. Ini juga akan menentukan nama di mana UI Anda akan muncul di UI Toolkit Debugger.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-newPanelSettings.png" alt="Create a new panel settings asset"> 
+        <figcaption>
+          Buat aset pengaturan panel baru 
+        </figcaption> 
+       </figure> 
+       <p>Buat <code>Panel Settings Asset</code> baru dengan klik kanan dalam tampilan proyek. Pilih <strong>Create &gt; UI Toolkit &gt; Panel Settings Asset</strong>. Nama file yang baru dibuat <code>GameUI_Panel</code>. Untuk panduan ini Anda dapat meninggalkan semua pengaturan pada nilai default mereka.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-PanelSettingsDefaults.png" alt="No need to change the default PanelSettings"> 
+        <figcaption>
+          Tidak perlu mengubah PanelSettings default 
+        </figcaption> 
+       </figure> 
+       <p>Untuk menampilkan templat UI tampilan utama dari bagian sebelumnya Anda perlu membuat <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> baru di tempat kejadian. Pasang komponen <a href="../ScriptReference/UIElements.UIDocument.html">UIDocument</a> untuk itu.</p> 
+       <p><code>UIDocument</code> akan secara otomatis memuat <code>VisualTreeAsset</code> yang ditugaskan saat memasukkan mode Play di Unity. A <code>VisualTreeAsset</code> adalah template UXML. Masukkan pengaturan panel <code>MainView.uxml</code> dan panel <code>GameUI_Panel</code> baru ke komponen.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-UIDocument.png" alt="The UI Document component"> 
+        <figcaption>
+          Komponen Dokumen UI 
+        </figcaption> 
+       </figure> 
+       <p> <strong>Note</strong>: Jika Anda tidak menetapkan aset <code>PanelSettings</code> ke komponen Dokumen UI Anda, akan secara otomatis mencari proyek dan menggunakan Aset Pengaturan Panel pertama yang ditemukan secara otomatis. Ingatlah hal ini ketika renaming atau bergerak aset.</p> 
+       <p>Anda sekarang dapat memasukkan mode Play di Editor Unity dan lihat UI Anda ditampilkan dalam tampilan permainan.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-playModeFirstLook.png" alt="UI displayed at runtime"> 
+        <figcaption>
+          UI ditampilkan di runtime 
+        </figcaption> 
+       </figure> 
+       <p> <strong>Note</strong>: Jika Anda memiliki beberapa Dokumen UI di tempat kejadian Anda, Anda dapat menetapkan aset pengaturan panel yang sama untuk semua. Ini akan menyebabkan semua UI yang akan diberikan pada panel yang sama, mengoptimalkan kinerja.</p> 
+       <h2>Buat data sampel untuk ditampilkan</h2> 
+       <p>Di bagian ini Anda akan membuat beberapa data sampel yang akan digunakan untuk mengisi daftar karakter di UI dengan data.</p> 
+       <p>Untuk daftar karakter Anda perlu kelas sederhana yang memegang nama karakter, kelas, dan gambar potret. Buat script ScriptableObject baru <strong>Assets/<span class="tooltip"><strong>Scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span>/CharacterData.cs</strong> dan paste kode berikut ke file:</p> 
+       <pre><code class="lang-csharp">using UnityEngine;
+
+public enum ECharacterClass
+{
+    Knight, Ranger, Wizard
+}
+
+[CreateAssetMenu]
+public class CharacterData : ScriptableObject
+{
+    public string m_CharacterName;
+    public ECharacterClass m_Class;
+    public Sprite m_PortraitImage;
+}
+</code></pre> 
+       <p>Atribut <code>[CreateAssetMenu]</code> akan secara otomatis menambahkan entri ke menu <strong>Create</strong>. Klik kanan ke folder dalam tampilan Proyek untuk membuat instance dari ScriptableObject baru.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-createCharacterData.png" alt="New Create menu entry"> 
+        <figcaption>
+          Login menu 
+        </figcaption> 
+       </figure> 
+       <p>Sekarang Anda perlu membuat beberapa contoh <code>CharacterData</code> dan mengisinya dengan data acak. Tempatkan semua di folder <strong>Resources/Characters</strong>. Anda akan menulis script yang secara otomatis parses dan memuat semua data karakter dari folder ini nanti.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-characterDataProperties.png" alt="Create a few sample characters"> 
+        <figcaption>
+          Buat beberapa karakter sampel 
+        </figcaption> 
+       </figure> 
+       <h2>Buat template UI entri daftar</h2> 
+       <p>Di bagian ini Anda akan membuat template UI untuk entri individu dalam daftar. Pada runtime, skrip pengontrol akan membuat instance UI ini untuk setiap karakter dan menambahkannya ke daftar. UI untuk entri daftar karakter terdiri dari bingkai latar belakang berwarna dan nama karakter.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-listEntryFinal.png" alt="List entry showing the character name"> 
+        <figcaption>
+          Daftar masuk menunjukkan nama karakter 
+        </figcaption> 
+       </figure> 
+       <p> <strong>Note</strong>: Jika Anda ingin melewatkan langkah ini, Anda dapat menyalin kode UXML untuk <a href="#finalCode_listEntry"><strong>list entry</strong></a> dari bagian bawah halaman ini dan menempel ke file baru langsung. Simpan sebagai <strong>Assets/UI/ListEntry.uxml</strong>.</p> 
+       <p>Buka jendela UI Builder melalui menu <strong>Window &gt; UI Toolkit &gt; UI Builder</strong>. Buat template UX baru dengan memilih <strong>File &gt; New</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-fileMenu.png" alt="Create a new UXML template in UI Builder"> 
+        <figcaption>
+          Buat template UX baru di UI Builder 
+        </figcaption> 
+       </figure> 
+       <p>Tambahkan VisualElement untuk latar belakang, dan atur heigth tetap 41px. Karena teks di dalam entri harus disampingkan dan ditempatkan di tengah elemen, buka lipatan <strong>Align</strong> dan set <strong>Align Items</strong> ke <em>left</em>, dan <strong>Justify Content</strong> ke <em>center</em>. Juga mengatur bantalan kiri 10px, untuk membuat label memiliki jarak minimum ke perbatasan kiri bingkai.</p> 
+       <p>Untuk styling, Anda dapat menggunakan <code>#AA5939</code> untuk warna latar belakang dan menambahkan batas lebar 2px, dengan radius 15px dan warna <code>#311A11</code>. Langkah ini adalah opsional dan Anda dapat menerapkan warna dan styling Anda sendiri.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-listEntryBackground.png" alt="The background VisualElement"> 
+        <figcaption>
+          Latar belakang VisualElement 
+        </figcaption> 
+       </figure> 
+       <p>Tambahkan label sebagai anak ke VisualElement yang ada dan nama <code>CharacterName</code>, sehingga Anda dapat mengaksesnya nanti di skrip pengontrol. Mengatur <strong>Font Style</strong> ke <em>bold</em> dan ukuran font ke 18.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-listEntryLabel.png" alt="Add label for the characters name"> 
+        <figcaption>
+          Tambahkan label untuk nama karakter 
+        </figcaption> 
+       </figure> 
+       <p>Simpan template UXML sebagai <strong>Assets/UI/ListEntry.uxml</strong>. Anda juga dapat menemukan kode UXML terakhir untuk template ini di bagian bawah halaman <a href="#finalCode_listEntry">here</a>.</p> 
+       <h2>Buat controller untuk entri daftar</h2> 
+       <p>Di bagian ini Anda akan membuat skrip pengontrol untuk entri daftar. Tujuan dari script adalah untuk menampilkan data instance karakter di UI entri daftar. Perlu mengakses label untuk nama karakter dan mengaturnya untuk menampilkan nama instance karakter yang diberikan.</p> 
+       <p>Buat skrip baru <strong>Assets/Scripts/UI/CharacterListEntryController.cs</strong> dan tempelkan kode berikut ke dalamnya:</p> 
+       <pre><code class="lang-csharp">using UnityEngine.UIElements;
+
+public class CharacterListEntryController
+{
+    Label m_NameLabel;
+
+    public void SetVisualElement(VisualElement visualElement)
+    {
+        m_NameLabel = visualElement.Q&lt;Label&gt;("CharacterName");
+    }
+
+    public void SetCharacterData(CharacterData characterData)
+    {
+        m_NameLabel.text = characterData.m_CharacterName;
+    }
+}
+</code></pre> 
+       <p>Ada dua fungsi di kelas ini, dan keduanya adalah fungsi <code>Set</code>.</p> 
+       <p>Sitemap Fungsi ini akan menerima elemen visual yang merupakan contoh template UI <code>SetVisualElement(VisualElement visualElement)</code> yang Anda buat di bagian sebelumnya. Pengontrol tampilan utama akan membuat instance ini. Tujuan dari fungsi ini adalah untuk mengambil referensi ke label nama karakter di dalam elemen UI.<code>ListEntry</code> UI template you created in the previous section. The main view controller will create this instance. The purpose of this function is to retrieve a reference to the character name label inside the UI element.</p> 
+       <p>Sitemap Fungsi ini menerima karakter yang namanya elemen daftar ini seharusnya ditampilkan. Karena elemen-elemen daftar dalam <code>SetCharacterData(CharacterData characterData)</code> di kolamkan dan digunakan kembali, perlu memiliki fungsi <code>ListView</code> untuk mengubah data karakter yang ditampilkan.<code>Set</code> function to change which character’s data to display.</p> 
+       <p>Catatan bahwa kelas <code>CharacterListEntry</code> bukan <code>MonoBehaviour</code>. Karena elemen visual dalam UI Toolkit bukan GameObjects, Anda tidak dapat melampirkan komponen kepada mereka. Sebagai gantinya, kelas ini akan melekat pada properti <code>userData</code> di bagian berikutnya.</p> 
+       <h2>Buat controller untuk tampilan utama</h2> 
+       <p>Di bagian ini Anda akan membuat skrip pengontrol untuk daftar karakter dalam pandangan utama, dan skrip MonoBehaviour yang mengintip dan menetapkannya ke pohon visual.</p> 
+       <p>Untuk memulai, buat skrip baru di bawah <strong>Assets/Scripts/UI/CharacterListController.cs</strong> dan tempelkan kode berikut ke dalamnya.</p> 
+       <pre><code class="lang-csharp">using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UIElements;
+
+public class CharacterListController
+{
+    public void InitializeCharacterList(VisualElement root, VisualTreeAsset listElementTemplate)
+    {
+    }
+}
+</code></pre> 
+       <p>Anda akan mengisi metode <code>InitializeCharacterList()</code> akhir, tetapi penting untuk menambahkan metode kosong sekarang, sehingga Anda dapat menyebutnya di bagian berikutnya.</p> 
+       <p><strong>Attach the controller script to the main view</strong></p> 
+       <p>Sama seperti <code>CharacterListEntryController</code>, <code>CharacterListController</code> bukan <code>MonoBehaviour</code>, dan perlu melekat pada pohon visual dengan cara yang berbeda. Anda perlu membuat skrip MonoBehaviour yang dapat dilampirkan ke GameObject yang sama sebagai <code>UIDocument</code>. Ini akan melelahkan <code>CharacterListController</code> dan melampirkannya ke Pohon Visual.</p> 
+       <p>Buat skrip baru <strong>Assets/Scripts/UI/MainView.cs</strong> dan tempelkan kode berikut ke dalamnya:</p> 
+       <pre><code class="lang-csharp">using UnityEngine;
+using UnityEngine.UIElements;
+
+public class MainView : MonoBehaviour
+{
+    [SerializeField]
+    VisualTreeAsset m_ListEntryTemplate;
+
+    void OnEnable()
+    {
+        // The UXML is already instantiated by the UIDocument component
+        var uiDocument = GetComponent&lt;UIDocument&gt;();
+
+        // Initialize the character list controller
+        var characterListController = new CharacterListController();
+        characterListController.InitializeCharacterList(uiDocument.rootVisualElement, m_ListEntryTemplate);
+    }
+}
+</code></pre> 
+       <p>Pergi ke Editor Unity dan melampirkan skrip ke GameObject yang sama yaitu <code>UIDocument</code>. Menetapkan properti <code>ListEntry.uxml</code> ke <strong>List Entry Template</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-assignListEntry.png" alt="Add main view script and assign reference"> 
+        <figcaption>
+          Tambahkan skrip pandangan utama dan menetapkan referensi 
+        </figcaption> 
+       </figure> 
+       <p>Tidak ada kebutuhan untuk komponen skrip Anda untuk mengikut UXML MainView, karena ini dilakukan secara otomatis dalam komponen <code>UIDocument</code> pada GameObject yang sama. Skrip <code>MainView</code> mengakses komponen Kardiocument untuk mendapatkan referensi Pohon Visual yang sudah sesaat. Ini kemudian membuat contoh <code>CharacterListController</code> dan melewati elemen akar pohon visual dan template UXML yang digunakan untuk elemen daftar individu.</p> 
+       <p> <strong>Note</strong>: Ketika UI diisi ulang, pendamping komponen MonoBehaviour pada GameObject yang sama yang mengandung komponen <code>UIDocument</code> akan dinonaktifkan sebelum reload, dan kemudian diperbaharui kembali setelah reload. Oleh karena itu praktik yang baik untuk menempatkan kode yang berinteraksi dengan UI dalam metode <code>OnEnable</code> dan <code>OnDisable</code> MonoBehaviours ini.</p> 
+       <p><strong>Enumerate all character data instances</strong></p> 
+       <p>Fungsi pertama yang harus Anda tambahkan ke skrip pengontrol adalah fungsi yang mengakibatkan semua instance data karakter yang Anda buat sebelumnya. Ini akan digunakan untuk mengisi daftar.</p> 
+       <p>Salin kode di bawah ke kelas <code>CharacterListController</code>.</p> 
+       <pre><code class="lang-csharp">List&lt;CharacterData&gt; m_AllCharacters;
+
+void EnumerateAllCharacters()
+{
+    m_AllCharacters = new List&lt;CharacterData&gt;();
+    m_AllCharacters.AddRange(Resources.LoadAll&lt;CharacterData&gt;("Characters"));
+}
+</code></pre> 
+       <p> <strong>Note</strong>: Kode ini mengasumsikan bahwa Anda membuat instance karakter di folder <strong>Resources/Characters</strong>. Anda mungkin perlu menyesuaikan nama folder sesuai jika Anda menempatkan karakter dalam folder yang berbeda.</p> 
+       <p>Sekarang Anda perlu memanggil metode <code>EnumerateAllCharacter</code> selama awalisasi. Tambahkan panggilan ke atas metode <code>InitializeCharacterList</code>:</p> 
+       <pre><code class="lang-csharp">public void InitializeCharacterList(VisualElement root, VisualTreeAsset listElementTemplate)
+{
+    EnumerateAllCharacters();
+}
+</code></pre> 
+       <p><strong>Get references to the UI elements</strong></p> 
+       <p>Di bagian ini Anda akan mengisi konten metode <code>InitializeCharacterList</code>. Hal pertama metode ini perlu dilakukan adalah memperoleh referensi untuk semua UI individu mengontrol itu perlu untuk mengakses informasi tampilan. Gunakan keluarga <a href="UIE-UQuery.html">UQuery</a> API untuk mengambil kontrol UI individu dengan nama, kelas AS, jenis, atau kombinasi dari ini.</p> 
+       <p>Memperpanjang kode di dalam kelas <code>CharacterListController</code> dengan kode di bawah ini:</p> 
+       <pre><code class="lang-csharp">// UXML template for list entries
+VisualTreeAsset m_ListEntryTemplate;
+
+// UI element references
+ListView m_CharacterList;
+Label m_CharClassLabel;
+Label m_CharNameLabel;
+VisualElement m_CharPortrait;
+Button m_SelectCharButton;
+
+public void InitializeCharacterList(VisualElement root, VisualTreeAsset listElementTemplate)
+{
+    EnumerateAllCharacters();
+
+    // Store a reference to the template for the list entries
+    m_ListEntryTemplate = listElementTemplate;
+
+    // Store a reference to the character list element
+    m_CharacterList = root.Q&lt;ListView&gt;("CharacterList");
+
+    // Store references to the selected character info elements
+    m_CharClassLabel = root.Q&lt;Label&gt;("CharacterClass");
+    m_CharNameLabel = root.Q&lt;Label&gt;("CharacterName");
+    m_CharPortrait = root.Q&lt;VisualElement&gt;("CharacterPortrait");
+
+    // Store a reference to the select button
+    m_SelectCharButton = root.Q&lt;Button&gt;("SelectCharButton");
+}
+</code></pre> 
+       <p><strong>Fill the list with entries</strong></p> 
+       <p>Selanjutnya Anda perlu mengisi daftar di layar dengan karakter yang Anda anggap dan dimuat sebelumnya. Untuk melakukannya Anda perlu membuat metode baru <code>FillCharacterList</code> di dalam kelas <code>CharacterListController</code>.</p> 
+       <p>Mengisi <a href="../ScriptReference/UIElements.ListView.html">ListView</a> dengan elemen membutuhkan 4 langkah:</p> 
+       <ol> 
+        <li>Buat fungsi <code>makeItem</code> function</li> 
+        <li>Buat fungsi <code>bindItem</code> function</li> 
+        <li>Mengatur tinggi item</li> 
+        <li>Mengatur sumber item</li> 
+       </ol> 
+       <p>Tujuan dari fungsi callback <a href="../ScriptReference/UIElements.BaseVerticalCollectionView-makeItem.html">Login Artikel</a> adalah untuk membuat pohon visual kecil mewakili UI satu item daftar, dan mengembalikan visualElement akar pohon ini.</p> 
+       <p>Dalam kasus ini, callback <code>makeItem</code> perlu mengulang template UXML yang Anda buat untuk entri daftar. Ini juga perlu membuat contoh skrip pengontrol <code>CharacterListEntryController</code>, yang mengurus mengisi UI dengan data dari <code>CharacterData</code>.</p> 
+       <p>Buat metode <code>FillCharacterList</code> di dalam kelas dan tempelkan kode di bawah ini.</p> 
+       <pre><code class="lang-csharp">void FillCharacterList()
+{
+    // Set up a make item function for a list entry
+    m_CharacterList.makeItem = () =&gt;
+    {
+        // Instantiate the UXML template for the entry
+        var newListEntry = m_ListEntryTemplate.Instantiate();
+
+        // Instantiate a controller for the data
+        var newListEntryLogic = new CharacterListEntryController();
+
+        // Assign the controller script to the visual element
+        newListEntry.userData = newListEntryLogic;
+
+        // Initialize the controller script
+        newListEntryLogic.SetVisualElement(newListEntry);
+
+        // Return the root of the instantiated visual tree
+        return newListEntry;
+    };
+}
+</code></pre> 
+       <p>Sebagai bagian dari callback <code>makeItem</code>, Anda menyimpan skrip pengontrol di dalam properti <code>userData</code> elemen visual instan. Ini memungkinkan Anda untuk mengakses skrip pada waktu kemudian dan menetapkan karakter yang berbeda ke elemen daftar.</p> 
+       <pre><code class="lang-csharp">// Assign the controller script to the visual element
+newListEntry.userData = newListEntryLogic;
+</code></pre> 
+       <p>Sebagai pengoptimalan memori dan kinerja, elemen daftar reuses <code>ListView</code> bukan seketika satu elemen untuk setiap entri dalam daftar. Ini menciptakan elemen visual yang cukup untuk mengisi area yang terlihat, dan kemudian kolam renang dan menggunakannya sebagai daftar digulir.</p> 
+       <p>Untuk alasan ini Anda perlu memberikan callback <a href="../ScriptReference/UIElements.BaseVerticalCollectionView-bindItem.html">Login Artikel</a> yang mengikat instance data Anda (dalam kasus ini <code>CharacterData</code>) ke elemen daftar individu.</p> 
+       <p>Memperpanjang metode <code>FillCharacterList</code> dengan menambahkan kode di bawah.</p> 
+       <pre><code class="lang-csharp">// Set up bind function for a specific list entry
+m_CharacterList.bindItem = (item, index) =&gt;
+{
+    (item.userData as CharacterListEntryController).SetCharacterData(m_AllCharacters[index]);
+};
+</code></pre> 
+       <p>Callback <code>bindItem</code> menerima referensi ke elemen visual akar untuk pohon visual entri daftar, dan indeks untuk data. Karena Anda menyimpan referensi ke <code>CharacterListEntryController</code> di properti <code>userData</code> elemen visual, kode dapat mengaksesnya dan langsung mengatur <code>CharacterData</code>.</p> 
+       <p>Terakhir Anda perlu mengatur tinggi item elemen dan memberikan referensi ke sumber data untuk daftar. Ini memberi tahu daftar berapa banyak elemen yang mengandung.</p> 
+       <p>Memperpanjang metode <code>FillCharacterList</code> dengan menambahkan kode di bawah.</p> 
+       <pre><code class="lang-csharp">// Set a fixed item height
+m_CharacterList.fixedItemHeight = 45;
+
+// Set the actual item's source list/array
+m_CharacterList.itemsSource = m_AllCharacters;
+</code></pre> 
+       <p>Akhirnya, Anda perlu memanggil metode <code>FillCharacterList</code> di akhir awalisasi. Tambahkan panggilan ke bagian bawah metode <code>InitializeCharacterList</code> seperti yang ditunjukkan di bawah ini:</p> 
+       <pre><code class="lang-csharp">FillCharacterList();
+</code></pre> 
+       <p>Jika Anda memasukkan <strong>Play Mode</strong> sekarang, daftar karakter akan mengisi nama karakter yang Anda buat.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-playModeListView.png" alt="The character list is no longer empty"> 
+        <figcaption>
+          Daftar karakter tidak lagi kosong 
+        </figcaption> 
+       </figure> 
+       <p>Anda dapat menemukan kode akhir untuk script <code>CharacterListController</code> di bagian bawah panduan ini, <strong><a href="#finalCode_characterListController">here</a></strong> </p> 
+       <h2>Reaktor</h2> 
+       <p>Ketika pengguna memilih karakter, rincian karakter - yaitu potret, nama lengkap dan kelas - perlu ditampilkan di bagian detail karakter di sisi kanan layar. Juga, ketika karakter dipilih, tombol seleksi perlu diaktifkan. Ketika tidak ada karakter yang dipilih, tombol harus menonaktifkan lagi.</p> 
+       <p>Perhatikan bahwa Anda sudah bisa klik dan pilih karakter dalam daftar Anda. Fungsi untuk pemilihan dan menyoroti adalah bagian dari kontrol <a href="../ScriptReference/UIElements.ListView.html">ListView</a>. Yang perlu Anda tambahkan adalah fungsi callback untuk bereaksi ketika pengguna mengubah pilihan dalam daftar. Kontrol <code>ListView</code> berisi acara <code>onSelectionChange</code> untuk tujuan ini:</p> 
+       <p>Tambahkan kode berikut ke bagian bawah metode <code>InitializeCharacterList</code>:</p> 
+       <pre><code class="lang-csharp">// Register to get a callback when an item is selected
+m_CharacterList.onSelectionChange += OnCharacterSelected;
+</code></pre> 
+       <p>Sekarang Anda perlu menerapkan fungsi callback <code>OnCharacterSelected</code> yang Anda set up di kode di atas. Fungsi ini akan menerima daftar semua item yang dipilih dalam daftar. Namun, karena Anda hanya mengizinkan pemilihan item tunggal, Anda dapat mengakses item yang dipilih langsung melalui properti <a href="../ScriptReference/UIElements.BaseVerticalCollectionView-selectedItem.html">Login Artikel</a> daftar.</p> 
+       <p>Salin kode di bawah ke kelas Anda:</p> 
+       <pre><code class="lang-chsarp">void OnCharacterSelected(IEnumerable&lt;object&gt; selectedItems)
+{
+    // Get the currently selected item directly from the ListView
+    var selectedCharacter = m_CharacterList.selectedItem as CharacterData;
+}
+</code></pre> 
+       <p>Properti <code>selectedItem</code> bisa kembali null. Ini adalah kasus jika tidak ada yang dipilih, atau pengguna menekan tombol <code>ESC</code> untuk memilih segalanya. Kasus ini perlu ditangani terlebih dahulu.</p> 
+       <p>Memperpanjang metode <code>OnCharacterSelected</code> seperti yang ditunjukkan di bawah ini:</p> 
+       <pre><code class="lang-csharp">void OnCharacterSelected(IEnumerable&lt;object&gt; selectedItems)
+{
+    // Get the currently selected item directly from the ListView
+    var selectedCharacter = m_CharacterList.selectedItem as CharacterData;
+
+    // Handle none-selection (Escape to deselect everything)
+    if (selectedCharacter == null)
+    {
+        // Clear
+        m_CharClassLabel.text = "";
+        m_CharNameLabel.text = "";
+        m_CharPortrait.style.backgroundImage = null;
+
+        // Disable the select button
+        m_SelectCharButton.SetEnabled(false);
+
+        return;
+    }
+}
+</code></pre> 
+       <p>Jika seleksi valid, Anda perlu menampilkan rincian karakter di UI. Anda dapat mengakses label dan elemen visual gambar potret melalui referensi yang Anda ambil dalam metode <code>InitializeCharacterList</code> kelas Anda.</p> 
+       <p>Salin kode di bawah ke metode <code>OnCharacterSelected</code>:</p> 
+       <pre><code class="lang-csharp">// Fill in character details
+m_CharClassLabel.text = selectedCharacter.m_Class.ToString();
+m_CharNameLabel.text = selectedCharacter.m_CharacterName;
+m_CharPortrait.style.backgroundImage = new StyleBackground(selectedCharacter.m_PortraitImage);
+
+// Enable the select button
+m_SelectCharButton.SetEnabled(true);
+</code></pre> 
+       <p>Anda sekarang dapat memasukkan <strong>Play Mode</strong> dan melihat daftar pilihan karakter Anda dalam tindakan. Tekan tombol <code>Escape</code> untuk memilih karakter.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/uie-howto-runtimeUI-final.png" alt="Final runtime UI"> 
+        <figcaption>
+          UI 
+        </figcaption> 
+       </figure> 
+       <h2>Sitemap skrip akhir<a name="finalCode"></a>Final scripts</h2> 
+       <p>Di bawah ini Anda dapat menemukan kode sumber penuh untuk semua file yang dibuat dalam panduan ini.</p> 
+       <h3> <a name="finalCode_mainView"></a>MainView.uxml</h3> 
+       <pre><code class="lang-uxml">&lt;ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False"&gt;
+    &lt;ui:VisualElement style="flex-grow: 1; align-items: center; justify-content: center; background-color: rgb(115, 37, 38);"&gt;
+        &lt;ui:VisualElement style="flex-direction: row; height: 350px;"&gt;
+            &lt;ui:ListView focusable="true" name="CharacterList" style="width: 230px; border-left-color: rgb(49, 26, 17); border-right-color: rgb(49, 26, 17); border-top-color: rgb(49, 26, 17); border-bottom-color: rgb(49, 26, 17); border-left-width: 4px; border-right-width: 4px; border-top-width: 4px; border-bottom-width: 4px; background-color: rgb(110, 57, 37); border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px; margin-right: 6px;" /&gt;
+            &lt;ui:VisualElement style="justify-content: space-between; align-items: flex-end;"&gt;
+                &lt;ui:VisualElement style="align-items: center; background-color: rgb(170, 89, 57); border-left-width: 4px; border-right-width: 4px; border-top-width: 4px; border-bottom-width: 4px; border-left-color: rgb(49, 26, 17); border-right-color: rgb(49, 26, 17); border-top-color: rgb(49, 26, 17); border-bottom-color: rgb(49, 26, 17); border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px; width: 276px; justify-content: center; padding-left: 8px; padding-right: 8px; padding-top: 8px; padding-bottom: 8px;"&gt;
+                    &lt;ui:VisualElement style="border-left-color: rgb(49, 26, 17); border-right-color: rgb(49, 26, 17); border-top-color: rgb(49, 26, 17); border-bottom-color: rgb(49, 26, 17); border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; height: 120px; width: 120px; border-top-left-radius: 13px; border-bottom-left-radius: 13px; border-top-right-radius: 13px; border-bottom-right-radius: 13px; padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 4px; background-color: rgb(255, 133, 84);"&gt;
+                        &lt;ui:VisualElement name="CharacterPortrait" style="flex-grow: 1; -unity-background-scale-mode: scale-to-fit;" /&gt;
+                    &lt;/ui:VisualElement&gt;
+                    &lt;ui:Label text="Label" name="CharacterName" style="-unity-font-style: bold; font-size: 18px;" /&gt;
+                    &lt;ui:Label text="Label" display-tooltip-when-elided="true" name="CharacterClass" style="margin-top: 2px; margin-bottom: 8px; padding-top: 0; padding-bottom: 0;" /&gt;
+                &lt;/ui:VisualElement&gt;
+                &lt;ui:Button text="Select Character" display-tooltip-when-elided="true" name="SelectCharButton" style="width: 150px; border-left-color: rgb(49, 26, 17); border-right-color: rgb(49, 26, 17); border-top-color: rgb(49, 26, 17); border-bottom-color: rgb(49, 26, 17); background-color: rgb(255, 133, 84); border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;" /&gt;
+            &lt;/ui:VisualElement&gt;
+        &lt;/ui:VisualElement&gt;
+    &lt;/ui:VisualElement&gt;
+&lt;/ui:UXML&gt;
+</code></pre> 
+       <h3> <a name="finalCode_listEntry"></a>ListEntry.uxml</h3> 
+       <pre><code class="lang-uxml">&lt;ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False"&gt;
+    &lt;ui:VisualElement style="height: 41px; align-items: flex-start; justify-content: center; padding-left: 10px; background-color: rgba(170, 89, 57, 255); border-left-color: rgba(49, 26, 17, 255); border-right-color: rgba(49, 26, 17, 255); border-top-color: rgba(49, 26, 17, 255); border-bottom-color: rgba(49, 26, 17, 255); border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px;"&gt;
+        &lt;ui:Label text="Label" display-tooltip-when-elided="true" name="CharacterName" style="-unity-font-style: bold; font-size: 18px;" /&gt;
+    &lt;/ui:VisualElement&gt;
+&lt;/ui:UXML&gt;
+</code></pre> 
+       <h3>CharacterData.cs</h3> 
+       <pre><code class="lang-csharp">using UnityEngine;
+
+public enum ECharacterClass
+{
+    Knight, Ranger, Wizard
+}
+
+[CreateAssetMenu]
+public class CharacterData : ScriptableObject
+{
+    public string m_CharacterName;
+    public ECharacterClass m_Class;
+    public Sprite m_PortraitImage;
+}
+</code></pre> 
+       <h3>CharacterListEntryController.cs</h3> 
+       <pre><code class="lang-csharp">using UnityEngine.UIElements;
+
+public class CharacterListEntryController
+{
+    Label m_NameLabel;
+
+    public void SetVisualElement(VisualElement visualElement)
+    {
+        m_NameLabel = visualElement.Q&lt;Label&gt;("CharacterName");
+    }
+
+    public void SetCharacterData(CharacterData characterData)
+    {
+        m_NameLabel.text = characterData.m_CharacterName;
+    }
+}
+</code></pre> 
+       <h3>MainView.cs</h3> 
+       <pre><code class="lang-csharp">using UnityEngine;
+using UnityEngine.UIElements;
+
+public class MainView : MonoBehaviour
+{
+    [SerializeField]
+    VisualTreeAsset m_ListEntryTemplate;
+
+    void OnEnable()
+    {
+        // The UXML is already instantiated by the UIDocument component
+        var uiDocument = GetComponent&lt;UIDocument&gt;();
+
+        // Initialize the character list controller
+        var characterListController = new CharacterListController();
+        characterListController.InitializeCharacterList(uiDocument.rootVisualElement, m_ListEntryTemplate);
+    }
+}
+</code></pre> 
+       <h3> <a name="finalCode_characterListController"></a>CharacterListController.cs</h3> 
+       <pre><code class="lang-csharp">using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UIElements;
+
+public class CharacterListController
+{
+    // UXML template for list entries
+    VisualTreeAsset m_ListEntryTemplate;
+
+    // UI element references
+    ListView m_CharacterList;
+    Label m_CharClassLabel;
+    Label m_CharNameLabel;
+    VisualElement m_CharPortrait;
+    Button m_SelectCharButton;
+
+    public void InitializeCharacterList(VisualElement root, VisualTreeAsset listElementTemplate)
+    {
+        EnumerateAllCharacters();
+
+        // Store a reference to the template for the list entries
+        m_ListEntryTemplate = listElementTemplate;
+
+        // Store a reference to the character list element
+        m_CharacterList = root.Q&lt;ListView&gt;("CharacterList");
+
+        // Store references to the selected character info elements
+        m_CharClassLabel = root.Q&lt;Label&gt;("CharacterClass");
+        m_CharNameLabel = root.Q&lt;Label&gt;("CharacterName");
+        m_CharPortrait = root.Q&lt;VisualElement&gt;("CharacterPortrait");
+
+        // Store a reference to the select button
+        m_SelectCharButton = root.Q&lt;Button&gt;("SelectCharButton");
+
+        FillCharacterList();
+
+        // Register to get a callback when an item is selected
+        m_CharacterList.onSelectionChange += OnCharacterSelected;
+    }
+
+    List&lt;CharacterData&gt; m_AllCharacters;
+
+    void EnumerateAllCharacters()
+    {
+        m_AllCharacters = new List&lt;CharacterData&gt;();
+        m_AllCharacters.AddRange(Resources.LoadAll&lt;CharacterData&gt;("Characters"));
+    }
+
+    void FillCharacterList()
+    {
+        // Set up a make item function for a list entry
+        m_CharacterList.makeItem = () =&gt;
+        {
+            // Instantiate the UXML template for the entry
+            var newListEntry = m_ListEntryTemplate.Instantiate();
+
+            // Instantiate a controller for the data
+            var newListEntryLogic = new CharacterListEntryController();
+
+            // Assign the controller script to the visual element
+            newListEntry.userData = newListEntryLogic;
+
+            // Initialize the controller script
+            newListEntryLogic.SetVisualElement(newListEntry);
+
+            // Return the root of the instantiated visual tree
+            return newListEntry;
+        };
+
+        // Set up bind function for a specific list entry
+        m_CharacterList.bindItem = (item, index) =&gt;
+        {
+            (item.userData as CharacterListEntryController).SetCharacterData(m_AllCharacters[index]);
+        };
+
+        // Set a fixed item height
+        m_CharacterList.fixedItemHeight = 45;
+
+        // Set the actual item's source list/array
+        m_CharacterList.itemsSource = m_AllCharacters;
+    }
+
+    void OnCharacterSelected(IEnumerable&lt;object&gt; selectedItems)
+    {
+        // Get the currently selected item directly from the ListView
+        var selectedCharacter = m_CharacterList.selectedItem as CharacterData;
+
+        // Handle none-selection (Escape to deselect everything)
+        if (selectedCharacter == null)
+        {
+            // Clear
+            m_CharClassLabel.text = "";
+            m_CharNameLabel.text = "";
+            m_CharPortrait.style.backgroundImage = null;
+
+            // Disable the select button
+            m_SelectCharButton.SetEnabled(false);
+
+            return;
+        }
+
+        // Fill in character details
+        m_CharClassLabel.text = selectedCharacter.m_Class.ToString();
+        m_CharNameLabel.text = selectedCharacter.m_CharacterName;
+        m_CharPortrait.style.backgroundImage = new StyleBackground(selectedCharacter.m_PortraitImage);
+
+        // Enable the select button
+        m_SelectCharButton.SetEnabled(true);
+    }
+}
+</code></pre> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UIE-HowTo-CreateCustomInspector.html"></a></span> 
+         <div class="tip">
+           Buat Inspektur Kustom 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UIE-VisualTree.html"></a></span> 
+         <div class="tip">
+           Pohon Visual 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy"> 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

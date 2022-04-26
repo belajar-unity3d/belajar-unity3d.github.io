@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Membuat panel detail modul kustom</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="analysis.html">Analysis</a></li> 
+         <li><a href="Profiler.html">Profiler</a></li> 
+         <li><a href="Profiler-customizing.html">Sesuaikan Profiler</a></li> 
+         <li>Membuat panel detail modul kustom</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="profiler-module-editor.html"></a></span> 
+          <div class="tip">
+            Profiler Modul Editor 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="LowLevelNativePluginProfiler.html"></a></span> 
+          <div class="tip">
+            rendah-level asli plug-in Profiler API 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Membuat panel detail modul kustom</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Panel detail modul muncul di bagian bawah jendela <span class="tooltip"><strong>Profiler</strong><span class="tooltiptext">Jendela yang membantu Anda untuk mengoptimalkan permainan Anda. Ini menunjukkan berapa banyak waktu yang dihabiskan di berbagai bidang permainan Anda. Sebagai contoh, dapat melaporkan persentase waktu yang dihabiskan <strong>rendering</strong>, aimating, atau dalam logika permainan Anda. <a class="tooltipMoreInfoLink" href="Profiler.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profiler">Glossary</a></span></span></span> ketika Anda memilih modul. Anda dapat menyesuaikan bagian ini untuk menunjukkan rincian tambahan yang relevan dengan modul Anda atau untuk menampilkan visualisasi kustom data kinerja Anda.</p> 
+       <p>Untuk membuat panel detail modul kustom untuk modul Profiler Anda:</p> 
+       <ul> 
+        <li> <a href="#create-details-view-controller">Buat detail modul panel Controller script</a> untuk menggambar panel detail modul kustom.</li> 
+        <li>Buat skrip modul Profiler ke <a href="#connect-details-view-controller">hubungkan pengontrol panel detail modul kustom Anda ke modul profiler kustom Anda</a> .</li> 
+       </ul> 
+       <p><a name="create-details-view-controller"></a></p> 
+       <h3>Membuat skrip untuk mengontrol panel detail modul</h3> 
+       <p>Anda dapat menggunakan kelas dasar untuk menyesuaikan panel detail modul di jendela profiler. Untuk melakukan ini, buat skrip yang mengontrol apa yang muncul di panel detail modul ketika Anda memilih modul tertentu.</p> 
+       <p>Script yang Anda buat untuk menyesuaikan panel detail modul harus:</p> 
+       <ul> 
+        <li>Tentukan konstruktor publik untuk pengontrol tampilan yang memanggil konstruktor dasar <code>base(profilerWindow)</code>.</li> 
+        <li>Override <code>CreateView</code> untuk membangun panel detail modul kustom.</li> 
+       </ul> 
+       <p>Contoh:</p> 
+       <pre><code class="lang-csharp">
+ public class CustomDetailsViewController : ProfilerModuleViewController
+ {   
+    public CustomDetailsViewController(ProfilerWindow profilerWindow) : base(profilerWindow) { }
+
+    protected override VisualElement CreateView()
+    {
+        // Create your UI.
+    }
+}
+</code></pre> 
+       <p>Sebagai contoh dari modul lengkap detail panel controller script, lihat <a href="#details-view-controller-script">modul rincian panel controller script contoh</a>.</p> 
+       <p><a name="details-view-controller-script"></a></p> 
+       <h4>Detail modul panel controller script contoh</h4> 
+       <p>Skrip contoh di bawah ini menciptakan pengontrol panel detail modul yang menarik label tunggal di panel detail modul yang menampilkan teks:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Profiler_tank_details_basic.png" alt=""> 
+       </figure> 
+       <p>Detail modul ini panel controller script contoh melakukan berikut:</p> 
+       <ul> 
+        <li>Tentukan dan buat label untuk menampilkan nilai yang ingin Anda ambil, dan tambahkan label ini ke panel detail modul.</li> 
+        <li>Tentukan konstruktor untuk mengontrol panel detail modul dan menggunakan CreateView untuk membangun panel detail modul kustom.</li> 
+        <li>Populasi label dengan data dari bingkai saat ini, dan memperbarui label setelah setiap bingkai.</li> 
+        <li>Fetches nilai counter sebagai string yang dapat Anda tampilkan di panel detail modul.</li> 
+        <li>Tentukan teks untuk ditampilkan di panel detail modul, dan beri tahu Profiler untuk secara otomatis memperbaruinya setiap bingkai.</li> 
+       </ul> 
+       <pre><code class="lang-csharp">
+ using UnityEditor;
+ using UnityEditorInternal;
+ using Unity.Profiling.Editor;
+ using UnityEngine.UIElements;
+ 
+ public class TankEffectsDetailsViewController : ProfilerModuleViewController
+ {
+    // Define a label, which will display the total particle count for tank trails in the selected frame.
+    Label m_TankTrailParticleCountLabel;
+
+
+    // Define a constructor for the view controller, which calls the base constructor with the Profiler Window passed from the module.
+    public TankEffectsDetailsViewController(ProfilerWindow profilerWindow) : base(profilerWindow) { }
+ 
+    // Override CreateView to build the custom module details panel.6666666667reateView()
+    {
+        var view = new VisualElement();
+
+        // Create the label and add it to the view.
+        m_TankTrailParticleCountLabel = new Label() { style = { paddingTop = 8, paddingLeft = 8 } };
+        view.Add(m_TankTrailParticleCountLabel);
+
+        // Populate the label with the current data for the selected frame. 
+        ReloadData();
+
+        // Be notified when the selected frame index in the Profiler Window changes, so we can update the label.
+        ProfilerWindow.SelectedFrameIndexChanged += OnSelectedFrameIndexChanged;
+
+        return view;
+    }
+
+    // Override Dispose to do any cleanup of the view when it is destroyed. This is a standard C# Dispose pattern.
+    protected override void Dispose(bool disposing)
+    {
+        if (!disposing)
+            return;
+
+        // Unsubscribe from the Profiler window event that we previously subscribed to.
+        ProfilerWindow.SelectedFrameIndexChanged -= OnSelectedFrameIndexChanged;
+
+        base.Dispose(disposing);
+    }
+
+    void ReloadData()
+    {
+        // Retrieve the TankTrailParticleCount counter value from the Profiler as a formatted string.
+        var selectedFrameIndexInt32 = System.Convert.ToInt32(ProfilerWindow.selectedFrameIndex);
+        var value = ProfilerDriver.GetFormattedCounterValue(selectedFrameIndexInt32, GameStatistics.TanksCategory.Name, GameStatistics.TankTrailParticleCountName);
+
+        // Update the label's text with the value.
+        m_TankTrailParticleCountLabel.text = $"The value of '{GameStatistics.TankTrailParticleCountName}' in the selected frame is {value}.";
+    }
+
+    void OnSelectedFrameIndexChanged(long selectedFrameIndex)
+    {
+        // Update the label with the current data for the newly selected frame.
+        ReloadData();
+    }
+}
+</code></pre> 
+       <h4>Membuat elemen UI kustom di panel detail modul</h4> 
+       <p>Anda dapat menggunakan UIToolkit Unity untuk membangun <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span> kustom untuk panel detail modul. Untuk informasi lebih lanjut, lihat <a href="UIElements.html">UI Toolkit</a>.</p> 
+       <p>Gambar berikut menunjukkan panel detail modul kustom yang termasuk modul kustom:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Adaptive_performance_Profiler.png" alt=""> 
+       </figure> 
+       <p><a name="connect-details-view-controller"></a></p> 
+       <h3>Hubungkan panel detail modul kustom ke modul Profiler</h3> 
+       <p>Untuk menampilkan panel detail modul kustom, Anda perlu mengulangi pengontrol panel detail modul Anda ketika Anda memilih modul Profiler Anda. Untuk melakukan ini, override <code>CreateDetailsViewController</code> untuk membuat dan menarik modul baru detail panel controller. Unity kemudian memanggil metode ini ketika menampilkan panel detail modul Anda.</p> 
+       <p>Contoh kode berikut menyusut panel detail modul kustom untuk modul yang disebut <code>TankEffectsProfilerModule</code>:</p> 
+       <pre><code class="lang-csharp">
+ using Unity.Profiling.Editor;
+
+ [System.Serializable]
+ [ProfilerModuleMetadata("Tank Effects")]
+ public class TankEffectsProfilerModule : ProfilerModule
+ {
+    static readonly ProfilerCounterDescriptor[] k_Counters = new ProfilerCounterDescriptor[]
+    {
+        new ProfilerCounterDescriptor(GameStatistics.TankTrailParticleCountName, GameStatistics.TanksCategory),
+        new ProfilerCounterDescriptor(GameStatistics.ShellExplosionParticleCountName, GameStatistics.TanksCategory),
+        new ProfilerCounterDescriptor(GameStatistics.TankExplosionParticleCountName, GameStatistics.TanksCategory),
+    };
+
+    public TankEffectsProfilerModule() : base(k_Counters) { }
+
+    public override ProfilerModuleViewController CreateDetailsViewController()
+    {
+        return new TankEffectsDetailsViewController(ProfilerWindow);
+    }
+}
+</code></pre> 
+       <h2>Visualisasi counter tambahan di panel detail modul</h2> 
+       <p>Anda dapat menampilkan counter di panel detail modul yang tidak disertakan dalam tampilan grafik modul Anda. Ini berguna ketika Anda ingin menunjukkan data tambahan untuk bingkai yang Anda pilih.</p> 
+       <p>Profiler secara otomatis menangkap kategori semua counter yang termasuk tampilan grafik modul saat modul aktif. Untuk menangkap counter tambahan, tulis skrip untuk memberitahu Profiler untuk menangkap kategori tertentu ketika modul Anda aktif.</p> 
+       <p>Sebagai contoh, script di bawah ini menggunakan argumen konstror <code>autoEnabledCategoryNames</code> untuk menentukan kategori <span class="tooltip"><strong>Scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> dan Memori. Ini memungkinkan kategori ini ketika modul aktif:</p> 
+       <pre><code class="lang-csharp"> 
+ using Unity.Profiling;
+ using Unity.Profiling.Editor;
+
+ [System.Serializable]
+ [ProfilerModuleMetadata("Tank Effects")]
+ public class TankEffectsProfilerModule : ProfilerModule
+ {
+    static readonly ProfilerCounterDescriptor[] k_Counters = new ProfilerCounterDescriptor[]
+    {
+        new ProfilerCounterDescriptor(GameStatistics.TankTrailParticleCountName, ProfilerCategory.Scripts),
+        new ProfilerCounterDescriptor(GameStatistics.ShellExplosionParticleCountName, ProfilerCategory.Scripts),
+        new ProfilerCounterDescriptor(GameStatistics.TankExplosionParticleCountName, ProfilerCategory.Scripts),
+    };
+
+    // Enable the ProfilerCategory.Scripts and ProfilerCategory.Memory categories when the module is active.
+    static readonly string[] k_AutoEnabledCategoryNames = new string[]
+    {
+        ProfilerCategory.Scripts.Name,
+        ProfilerCategory.Memory.Name
+    };
+
+    // Pass the auto-enabled category names to the base constructor.
+    public TankEffectsProfilerModule() : base(k_Counters, autoEnabledCategoryNames: k_AutoEnabledCategoryNames) { }
+</code></pre> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="profiler-module-editor.html"></a></span> 
+         <div class="tip">
+           Profiler Modul Editor 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="LowLevelNativePluginProfiler.html"></a></span> 
+         <div class="tip">
+           rendah-level asli plug-in Profiler API 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Menggunakan Dashboard Pengembang Unity untuk mengkonfigurasi Build Cloud untuk Git</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="cloud" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UnityServices.html">Layanan Unity</a></li> 
+         <li><a href="UnityCloudBuild.html">Build di Unity Cloud</a></li> 
+         <li><a href="UnityCloudBuildSettingUp.html">Menyiapkan Build Cloud</a></li> 
+         <li>Menggunakan Dashboard Pengembang Unity untuk mengkonfigurasi Build Cloud untuk Git</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UnityCloudBuildSettingUp.html"></a></span> 
+          <div class="tip">
+            Menyiapkan Build Cloud 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UnityCloudBuildVcsMercurial.html"></a></span> 
+          <div class="tip">
+            Menggunakan Dashboard Pengembang Unity untuk mengkonfigurasi Build Cloud untuk Mercurial 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Menggunakan Dashboard Pengembang Unity untuk mengkonfigurasi Build Cloud untuk Git</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Cloud Build mendukung proyek yang disimpan dalam repositori Git. Repositori Anda dapat dihosting pada <a href="https://github.com/">GitHub</a>, <a href="https://about.gitlab.com/">GitLab</a>, <a href="https://bitbucket.org/">Bitbucket</a>, atau server pribadi.</p> 
+       <p>Penutup topik ini:</p> 
+       <ul> 
+        <li><p><a href="#configure">Mengkonfigurasi GIT di Dasbor</a></p></li> 
+        <li><p><a href="#private">Menggunakan repositories pribadi</a></p></li> 
+        <li><p><a href="#target">Menyiapkan platform membangun target</a></p></li> 
+        <li><p><a href="#submodules">Menggunakan modul Git</a></p></li> 
+       </ul> 
+       <p><a name="configure"></a></p> 
+       <h2>Mengkonfigurasi Git di Dasbor</h2> 
+       <p>Untuk mengkonfigurasi Cloud Membangun Proyek Anda dari repositori GitHub:</p> 
+       <ol> 
+        <li>Masuk ke .</li> 
+        <li>Pada halaman <span class="tooltip"><strong>Projects</strong><span class="tooltiptext">Dalam Unity, Anda menggunakan proyek untuk merancang dan mengembangkan permainan. Proyek menyimpan semua file yang terkait dengan permainan, seperti file aset dan Adegan. <a class="tooltipMoreInfoLink" href="2Dor3D.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Project">Glossary</a></span></span></span>, pilih Proyek Anda.</li> 
+        <li><strong>DevOps</strong> &gt; <strong>Cloud Build</strong> &gt; <strong>Build History</strong>.</li> 
+        <li>Di jendela <strong>Build History</strong>, klik <strong>Set up Cloud Build</strong>.</li> 
+       </ol> 
+       <p>Anda dapat mengkonfigurasi akses ke repositori Anda menggunakan protokol otorisasi berikut:</p> 
+       <ul> 
+        <li>OAuth (default)</li> 
+        <li>SSH</li> 
+       </ul> 
+       <p>Untuk mengkonfigurasi Cloud Build untuk menggunakan OAuth untuk mengakses repositori Anda:</p> 
+       <ol> 
+        <li>Di jendela <strong>Source Control</strong>, klik <strong>GitHub</strong>, <strong>Bitbucket</strong>, atau ubin <strong>GitLab</strong>.</li> 
+        <li>Menerapkan akses ke akun Anda sesuai dengan layanan kontrol kode sumber yang dipilih.</li> 
+        <li>Di jendela <strong>Select a Repository</strong>, pilih repositori dari mana untuk membangun Proyek dan kemudian klik tombol <strong>NEXT: TARGET SETUP</strong>.</li> 
+       </ol> 
+       <p> <strong>Note</strong>: Cloud Build menggunakan kredensial Anda saat ini untuk mengambil daftar repositori jika Anda saat ini masuk ke layanan manajemen kode sumber. Untuk mengkonfigurasi Proyek yang mengambil repositori dari akun yang berbeda, menandatangani layanan manajemen kode sumber pertama, kemudian mengkonfigurasi Proyek.</p> 
+       <p>Untuk langkah berikutnya, lihat <a href="#target">Menyiapkan platform membangun target</a>.</p> 
+       <p>Untuk mengkonfigurasi Cloud Build untuk menggunakan SSH untuk mengakses repositori Anda:</p> 
+       <ol> 
+        <li><p>Di jendela <strong>Source Control</strong>, klik tab <strong>Manual</strong>.</p></li> 
+        <li> <p>Dalam bidang <strong>SCM URL</strong>, masukkan URL server Git Anda dalam format berikut:</p> 
+         <ul> 
+          <li>Non-SSL: host: pelabuhan</li> 
+          <li>WordPress.org</li> 
+         </ul> </li> 
+        <li><p>Untuk menghubungkan ke repositori Anda, Anda harus menentukan URL ke server Git Anda. Untuk informasi tentang format URL, lihat <strong>URL syntax</strong>. Sitemap Jika Anda hosting Git di server pribadi, Anda harus menggunakan SSH untuk terhubung ke repositori Anda.<strong>Note</strong>: If you are hosting Git on a private server, you must use SSH to connect to your repository.</p></li> 
+        <li><p>Dari menu drop-down <strong>SCM Type</strong>, pilih <strong>GIT</strong>.</p></li> 
+        <li><p>Klik tombol <strong>NEXT: ACCESS</strong>.</p></li> 
+       </ol> 
+       <p>Ketika Cloud Build terhubung ke situs hosting, secara otomatis mendeteksi apakah repositori Anda adalah publik atau pribadi. Jika repositori Anda adalah publik, Cloud Build secara otomatis terhubung ke dalamnya, dan Anda dapat melewatkan ke <a href="#target">Menyiapkan platform membangun target</a>. Jika repositori Anda pribadi, lihat bagian <a href="#private">Menggunakan repositories pribadi</a>.</p> 
+       <h3>URL</h3> 
+       <p>Untuk menghubungkan ke repositori Anda, Anda harus menentukan URL ke server Git Anda. Anda dapat menentukan URL untuk menggunakan protokol https://.</p> 
+       <p> <strong>Note</strong>: Login Jika Anda terhubung melalui SSH, ada langkah keamanan baru. Lihat <a href="https://github.blog/2021-09-01-improving-git-protocol-security-github/#no-more-unauthenticated-git">Meningkatkan keamanan protokol Git di GitHub</a> untuk informasi lebih lanjut.</p> 
+       <p>Berikut ini adalah contoh URL untuk <a href="https://github.com/">GitHub</a>, <a href="https://bitbucket.org/">bitbucket</a>, dan <a href="https://about.gitlab.com/">GitLab</a>:</p> 
+       <ul> 
+        <li>url https://github.com/youraccount/yourrepo</li> 
+        <li>git@bitbucket.org</li> 
+        <li>git@gitlab.com</li> 
+       </ul> 
+       <p> <strong>Note</strong>: Jika Anda hosting Git di server pribadi, Anda harus menggunakan SSH untuk terhubung ke repositori Anda.</p> 
+       <p>Unity Cloud Build secara otomatis menulis ulang URL ke format itu perlu.</p> 
+       <p><a name="private"></a></p> 
+       <h2>Menggunakan repositories pribadi</h2> 
+       <p>Jika repositori Anda pribadi, Build Cloud harus menggunakan SSH untuk terhubung kenya. Ketika Cloud Build mendeteksi bahwa repositori adalah pribadi, itu menampilkan layar <strong>Grant us access to your source control</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/dashgit_1.jpg" alt=""> 
+       </figure> 
+       <h3>Menyiapkan kunci SSH Anda di GitHub</h3> 
+       <p>Untuk menambahkan kunci SSH Anda ke proyek Anda di GitHub:</p> 
+       <ol> 
+        <li><p>Masuk ke <a href="https://github.com/">GitHub</a>.</p></li> 
+        <li><p>Di sudut kanan atas halaman GitHub, klik foto profil Anda, lalu klik profil Anda.</p></li> 
+        <li><p>Pada halaman profil Anda, klik <strong>Repositories</strong>, lalu klik nama repositori Anda.</p></li> 
+        <li><p>Di repositori Anda, klik tab <strong>Settings</strong>.</p></li> 
+        <li><p>Di sidebar, klik <strong>Deploy Keys</strong>, lalu klik tombol <strong>Add deploy key</strong>.</p></li> 
+        <li><p>Dalam kotak teks <strong>Title</strong>, nama tipe untuk mengidentifikasi kunci ini.</p></li> 
+        <li><p>Di bidang <strong>Key</strong>, tempel di kunci publik Anda dari jendela <strong>Grant us access to your source control</strong>, dan kemudian klik <strong>Add key </strong>button.</p></li> 
+       </ol> 
+       <p>Untuk informasi lebih lanjut tentang menggunakan kunci, lihat <a href="https://developer.github.com/v3/guides/managing-deploy-keys/">Mengelola Kunci Deploy</a> dalam dokumentasi GitHub.</p> 
+       <p>Anda juga dapat menambahkan kunci SSH ke akun GitHub Anda sehingga semua repositories di akun Anda dapat diakses oleh Cloud Build. Untuk informasi lebih lanjut, lihat <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/">Menambahkan kunci SSH baru ke akun GitHub Anda</a> dalam dokumentasi GitHub.</p> 
+       <h3>Menyiapkan kunci SSH Anda di Bitbucket</h3> 
+       <p>Untuk menambahkan kunci SSH Anda ke akun Bitbucket Anda:</p> 
+       <ol> 
+        <li><p>Login ke <a href="https://bitbucket.org/">Bitbucket</a>.</p></li> 
+        <li><p>Klik <span class="tooltip"><strong>avatar</strong><span class="tooltiptext">Antarmuka untuk penargetan ulang animasi dari satu rig ke yang lain. <a class="tooltipMoreInfoLink" href="ConfiguringtheAvatar.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Avatar">Glossary</a></span></span></span> Anda di sebelah kiri bawah halaman.</p></li> 
+        <li><p>Klik <strong>Bitbucket settings</strong>.</p></li> 
+        <li><p>Pada bagian <strong>Settings page</strong>, di bagian <strong>SECURITY</strong>, klik <strong>SSH Keys</strong>.</p></li> 
+        <li><p>Pada <strong>SSH Keys</strong>, klik tombol <strong>Add key</strong>.</p></li> 
+        <li><p>Dalam bidang <strong>Label</strong>, masukkan nama yang dapat dikenal untuk kunci (seperti <span class="tooltip"><strong>Unity Cloud Build</strong><span class="tooltiptext">Layanan integrasi berkelanjutan untuk proyek Unity yang mengotomatiskan proses pembuatan build pada server Unity. <a class="tooltipMoreInfoLink" href="UnityCloudBuild.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UnityCloudBuild">Glossary</a></span></span></span>.)</p></li> 
+        <li><p>Tempel kunci Unity Cloud Build SSH dari jendela <strong>Grant us access to your source control</strong> ke bidang <strong>Key</strong>.</p></li> 
+        <li><p>Klik <strong>Add Key</strong>.</p></li> 
+       </ol> 
+       <p>Pada jendela <strong>Grant us access to your source control</strong>, klik <strong>Next: Target Setup</strong>.</p> 
+       <p><a name="target"></a></p> 
+       <h2>Menyiapkan platform membangun target</h2> 
+       <p>Di dasbor, di jendela <strong>NEW BUILD TARGET: BASIC INFO</strong>:</p> 
+       <ol> 
+        <li><p>Dalam bidang <strong>Target Label</strong>, masukkan nama untuk membangun.</p></li> 
+        <li><p>Jika folder akar repositori Anda tidak mengandung Aset dan <span class="tooltip"><strong>Project settings</strong><span class="tooltiptext">Pengumpulan yang luas dari pengaturan yang memungkinkan Anda untuk mengkonfigurasi bagaimana Fisika, Audio, Jaringan, Grafik, Input dan banyak bidang lain dari jangkauan proyek Anda. <a class="tooltipMoreInfoLink" href="comp-ManagerGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span> Anda, di bidang <strong>Project Subfolder</strong>, masukkan URL folder yang berisi Aset dan Pengaturan Proyek Anda.</p></li> 
+        <li><p>Dari menu drop-down <strong>Unity Version</strong>, pilih versi Unity yang harus membangun Proyek.</p></li> 
+        <li><p>Jika Anda tidak ingin Proyek untuk secara otomatis membangun setiap repositori Anda diperbarui, klik toggle <strong>Auto-build</strong> untuk menonaktifkan fitur ini.</p></li> 
+       </ol> 
+       <p>Jika Anda membangun platform iOS atau Android, langkah berikutnya Anda adalah memasukkan kredensial untuk membangun. Klik <strong>Next: Credentials</strong>. Untuk semua platform lain, klik <strong>Next: Build</strong> untuk menyelesaikan konfigurasi dan memulai build awal.</p> 
+       <h3>Android</h3> 
+       <p>Di jendela <strong>SIGNING CREDS</strong>, memberikan informasi berikut:</p> 
+       <ul> 
+        <li><p>Sebuah <strong>Bundle ID</strong> untuk mengidentifikasi aplikasi Anda secara unik di perangkat dan di Google Play Store.</p></li> 
+        <li><p>Masukkan kredensial <span class="tooltip"><strong>Android keystore</strong><span class="tooltiptext">Sistem Android yang memungkinkan Anda menyimpan entri kunci kriptografi untuk keamanan perangkat yang ditingkatkan. <a class="tooltipMoreInfoLink" href="class-PlayerSettingsAndroid.html#keystore">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AndroidKeystore">Glossary</a></span></span></span> atau pilih <strong>Auto Generated Debug Keystore</strong> untuk menggunakan keystore pengembangan. Untuk informasi lebih lanjut tentang keystore Android, lihat <a href="https://developer.android.com/training/articles/keystore.html">Sistem Keystore Android</a>.</p></li> 
+       </ul> 
+       <h3>Facebook Twitter</h3> 
+       <p>Di jendela iOS <strong>SIGNING CREDS</strong> menyediakan informasi berikut:</p> 
+       <ul> 
+        <li><p>A <strong>Bundle ID</strong> untuk mengidentifikasi aplikasi Anda secara unik di perangkat.</p></li> 
+        <li><p>Versi Xcode yang untuk membangun aplikasi.</p></li> 
+        <li><p>Masukkan kredensial IOS Anda. Untuk informasi lebih lanjut tentang kredensial iOS, lihat <a href="UnityCloudBuildiOS.html">API</a>.</p></li> 
+       </ul> 
+       <p><a name="submodules"></a></p> 
+       <h2>Menggunakan modul Git</h2> 
+       <p>Jika proyek Anda menggunakan pribadi Submodul Git, pastikan bahwa URL yang ada dalam file <em>.gitmodules</em> Anda menggunakan sintaks <code>git@</code> bukan <code>https://</code>.</p> 
+       <p>Contoh:</p> 
+       <ul> 
+        <li><p>git@github.com:youraccount/yourrepo.git (untuk GitHub)</p></li> 
+        <li><p>git@bitbucket.org</p></li> 
+        <li><p>git@gitlab.com</p></li> 
+       </ul> 
+       <hr> 
+       <p><span class="page-edit">2018–07–16 Login</span></p> 
+       <!-- area:cloud --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UnityCloudBuildSettingUp.html"></a></span> 
+         <div class="tip">
+           Menyiapkan Build Cloud 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UnityCloudBuildVcsMercurial.html"></a></span> 
+         <div class="tip">
+           Menggunakan Dashboard Pengembang Unity untuk mengkonfigurasi Build Cloud untuk Mercurial 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

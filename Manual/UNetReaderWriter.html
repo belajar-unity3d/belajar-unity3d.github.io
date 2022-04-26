@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: JaringanReader dan JaringanWriter serializers</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="cloud" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UNet.html">Multiplayer dan Jaringan</a></li> 
+         <li><a href="UNetUsingHLAPI.html">Multiplayer API</a></li> 
+         <li><a href="UNetUsingTransport.html">Menggunakan API Layer Transportasi</a></li> 
+         <li>JaringanReader dan serializer JaringanWriter</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UNetUsingTransport.html"></a></span> 
+          <div class="tip">
+            Menggunakan API Layer Transportasi 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UnityMultiplayerSettingUp.html"></a></span> 
+          <div class="tip">
+            Menyiapkan Multiplayer Unity 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>JaringanReader dan serializer JaringanWriter</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Important</strong>: UNet adalah solusi yang diuraikan, dan Solusi Multiplayer baru dan <span class="tooltip"><strong>Networking</strong><span class="tooltiptext">Sistem Unity yang memungkinkan game multiplayer di jaringan komputer. <a class="tooltipMoreInfoLink" href="UNetOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Networking">Glossary</a></span></span></span> (Netcode untuk GameObjects) sedang berkembang. Untuk informasi lebih lanjut dan langkah selanjutnya melihat informasi di .</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Gunakan kelas <a href="../ScriptReference/Networking.NetworkReader.html">NetworkReader</a> dan <a href="../ScriptReference/Networking.NetworkWriter.html">NetworkWriter</a> untuk menulis data ke aliran byte.</p> 
+       <p>Multiplayer <span class="tooltip"><a class="tooltipMoreInfoLink" href="UNetUsingHLAPI.html">API</a><span class="tooltiptext">Sistem untuk membangun kemampuan multiplayer untuk permainan Unity. Ini dibangun di atas lapisan komunikasi real-time transportasi tingkat bawah, dan menangani banyak tugas umum yang diperlukan untuk permainan multiplayer. <a href="UNetUsingHLAPI.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#HighLevelAPI">Glossary</a></span></span></span> dibangun menggunakan kelas ini, dan menggunakannya secara luas. Namun, Anda dapat menggunakannya langsung jika Anda ingin menerapkan fungsi transportasi khusus Anda sendiri. Mereka memiliki fungsi serialisasi khusus untuk banyak tipe Unity (Lihat <a href="../ScriptReference/Networking.NetworkWriter.Write.html">Login Login</a> untuk daftar penuh jenis).</p> 
+       <p>Untuk menggunakan kelas, membuat instance penulis, dan menulis variabel individu ke dalamnya. Ini serialisasi secara internal ke array byte, dan ini dapat dikirim melalui jaringan. Di sisi penerima penting bahwa instance pembaca untuk array byte membaca kembali variabel dalam urutan yang sama mereka ditulis.</p> 
+       <p>Ini dapat digunakan dengan kelas <a href="../ScriptReference/Networking.MessageBase.html">MessageBase</a> untuk membuat array byte yang berisi pesan jaringan serial.</p> 
+       <pre><code>void SendMessage(short msgType, MessageBase msg, int channelId)
+{
+    // write the message to a local buffer
+    NetworkWriter writer = new NetworkWriter();
+    writer.StartMessage(msgType);
+    msg.Serialize(writer);
+    writer.FinishMessage();
+
+    myClient.SendWriter(writer, channelId);
+}
+</code></pre> 
+       <p>Pesan ini diformat dengan benar sehingga fungsi handler pesan dapat diinvoked untuk itu.</p> 
+       <h2>Menggunakan kelas NetworkReader dan NetworkWriter dengan kelas NetworkServerSimple dan NetworkClient</h2> 
+       <p>Sampel kode berikut adalah demonstrasi tingkat yang agak rendah, menggunakan kelas tingkat terendah dari API tingkat tinggi untuk mengatur konektivitas.</p> 
+       <p>Ini adalah kode untuk menghubungkan klien dan server bersama:</p> 
+       <pre><code>using UnityEngine;
+using UnityEngine.Networking;
+public class Serializer : MonoBehaviour {
+    NetworkServerSimple m_Server;
+    NetworkClient m_Client;
+    const short k_MyMessage = 100;
+
+    // When using a server instance like this it must be pumped manually
+    void Update() {
+        if (m_Server != null)
+            m_Server.Update();
+    }
+
+    void StartServer() {
+        m_Server = new NetworkServerSimple();
+        m_Server.RegisterHandler(k_MyMessage, OnMyMessage);
+        if (m_Server.Listen(5555))
+            Debug.Log("Started listening on 5555");
+    }
+
+    void StartClient() {
+        m_Client = new NetworkClient();
+        m_Client.RegisterHandler(MsgType.Connect, OnClientConnected);
+        m_Client.Connect("127.0.0.1", 5555);
+    }
+
+    void OnClientConnected(NetworkMessage netmsg) {
+        Debug.Log("Client connected to server");
+        SendMessage();
+    }
+}
+</code></pre> 
+       <p>Bagian berikutnya dari kode mengirim pesan menggunakan pembaca jaringan dan penulis jaringan, tetapi menggunakan handler pesan yang dibangun ke kelas ini:</p> 
+       <pre><code>void SendMessage() {
+    NetworkWriter writer = new NetworkWriter();
+    writer.StartMessage(k_MyMessage);
+    writer.Write(42);
+    writer.Write("What is the answer");
+    writer.FinishMessage();
+    m_Client.SendWriter(writer, 0);
+}
+
+void OnMyMessage(NetworkMessage netmsg) {
+    Debug.Log("Got message, size=" + netmsg.reader.Length);
+    var someValue = netmsg.reader.ReadInt32();
+    var someString = netmsg.reader.ReadString();
+    Debug.Log("Message value=" + someValue + " Message string='" + someString + "'");
+}
+</code></pre> 
+       <p>Ketika mengatur pesan untuk penuntut pesan, Anda harus selalu menggunakan <code>NetworkWriter.StartMessage()</code> (dengan ID jenis pesan) dan JaringanWriter. FinishMesssage() panggilan. Ketika tidak menggunakan array byte, Anda dapat melewatkan langkah itu.</p> 
+       <!-- area:cloud --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UNetUsingTransport.html"></a></span> 
+         <div class="tip">
+           Menggunakan API Layer Transportasi 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UnityMultiplayerSettingUp.html"></a></span> 
+         <div class="tip">
+           Menyiapkan Multiplayer Unity 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy"> 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

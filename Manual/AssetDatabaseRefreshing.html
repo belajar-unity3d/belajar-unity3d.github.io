@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Database</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="AssetWorkflow.html">Arus kerja aset</a></li> 
+         <li><a href="AssetDatabase.html">The Asset Database</a></li> 
+         <li>Refreshing the Asset Database</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="AssetDatabase.html"></a></span> 
+          <div class="tip">
+            The Asset Database 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="AssetDatabaseBatching.html"></a></span> 
+          <div class="tip">
+            Batching dengan AssetDatabase 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Refreshing the Asset Database</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Unity menyegarkan Database Aset dalam situasi berikut:</p> 
+       <ul> 
+        <li>Ketika fokus Regains Editor Unity (jika Anda telah mengaktifkan <a href="Preferences.html">Auto-Refresh</a> di jendela Preferensi)</li> 
+        <li>Saat Anda memilih <strong>Assets &gt; Refresh</strong> dari menu</li> 
+        <li>Ketika Anda memanggil <a href="../ScriptReference/AssetDatabase.Refresh.html">AssetDatabase.Refresh</a> dari C#</li> 
+       </ul> 
+       <p>Beberapa API Aset lain memicu Refresh() tetapi hanya untuk Aset yang Anda tentukan. Contoh <a href="../ScriptReference/AssetDatabase.CreateAsset.html">CreateAsset()</a> dan <a href="../ScriptReference/AssetDatabase.ImportAsset.html">ImportAsset()</a>.</p> 
+       <p>Unity melakukan langkah-langkah berikut selama Database Aset segar:</p> 
+       <ol> 
+        <li>Hal ini terlihat untuk perubahan pada file Aset, dan kemudian memperbarui Database Aset Sumber</li> 
+        <li>Ini mengimpor dan mengkompilasi file terkait kode seperti .dll, .asmdef, .asmref, .rsp, dan file .cs.</li> 
+        <li>Kemudian reloads domain, jika <a href="../ScriptReference/AssetDatabase.Refresh.html">Refresh</a> tidak divokasi dari skrip.</li> 
+        <li>Ini memproses semua aset untuk file terkait kode impor</li> 
+        <li>Kemudian impor aset yang terkait dengan kode dan pasca proses semua aset impor yang tersisa</li> 
+        <li>Kemudian <a href="#hotreloading">reload panas</a> Aset</li> 
+       </ol> 
+       <h2>Aset Database</h2> 
+       <p>Unity melakukan langkah-langkah yang dijelaskan di bagian sebelumnya selama Aset Database refresh. Bagian ini menjelaskan proses ini secara lebih rinci. Langkah-langkah ini terjadi di dalam lingkaran, dan beberapa langkah mungkin menyebabkan proses refresh untuk restart (misalnya, jika mengimpor Aset menciptakan Aset lain yang Unity juga perlu impor).</p> 
+       <p>Unity restart loop refresh database Asset di bawah kondisi berikut:</p> 
+       <ul> 
+        <li>Jika, setelah impor, file yang digunakan importir telah berubah pada disk.</li> 
+        <li>Jika, di OnPostProcess AllAssets, Anda menyebut salah satu berikut: 
+         <ul> 
+          <li></li> 
+          <li></li> 
+          <li>Sitemap Database API yang memanjang Refresh tambahan, seperti MoveAsset, CreateAsset dan ImportAsset</li> 
+         </ul> </li> 
+        <li>Jika timestamp dari file yang sedang diimpor perubahan sementara itu diimpor, file diqueued untuk re-import</li> 
+        <li>Ketika importir membuat file di tengah impor (misalnya, model FBX dapat restart Refresh dengan mengekstrak Tekstur mereka dari model).</li> 
+       </ul> 
+       <h3>Lihat perubahan pada disk</h3> 
+       <p>Ketika Unity mencari perubahan pada disk, itu memindai folder <code>Assets</code> dan <code>Packages</code> di Anda Proyek untuk memeriksa apakah file apa pun telah ditambahkan, dimodifikasi, atau dihapus sejak pemindaian terakhir. Ini mengumpulkan perubahan dalam daftar untuk memproses dalam langkah berikutnya.</p> 
+       <h3>Update source Asset Database</h3> 
+       <p>Setelah Unity mengumpulkan daftar file, kemudian mendapatkan hashe file untuk file yang telah ditambahkan atau dimodifikasi. Ini kemudian memperbarui Database Aset dengan GUID untuk file-file tersebut, dan menghapus entri untuk file yang terdeteksi sebagai dihapus.</p> 
+       <h3>Pelacakan ketergantungan</h3> 
+       <p>Aset Database melacak dua jenis dependensi aset: <strong>static dependencies</strong> dan <strong>dynamic dependencies</strong>. Jika ada ketergantungan perubahan Aset, Unity memicu reimpor aset itu.</p> 
+       <h5>Ketergantungan statis</h5> 
+       <p>Ketergantungan statis adalah nilai, pengaturan atau properti yang diimpor tergantung pada. Ketergantungan statis dikenal sebelum Aset diimpor, dan tidak dipengaruhi oleh perilaku importir selama proses impor. Jika ketergantungan statis dari perubahan Aset, Transportasi ulang Unity yang Aset.</p> 
+       <p>Beberapa ketergantungan statis umum adalah:</p> 
+       <ul> 
+        <li>Nama Aset</li> 
+        <li>ID importir yang terkait dengan Aset</li> 
+        <li>Versi importir</li> 
+        <li>Saat ini memilih membangun platform target</li> 
+       </ul> 
+       <h5>Ketergantungan dinamis</h5> 
+       <p>Unity biasanya menemukan ketergantungan dinamis aset selama proses impor. Ini karena ketergantungan ini didefinisikan oleh konten aset sumber. Sebagai contoh, <span class="tooltip"><strong>Shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Shader">Glossary</a></span></span></span> dapat merujuk Shader lain, dan <span class="tooltip"><strong>Prefab</strong><span class="tooltiptext">Jenis aset yang memungkinkan Anda untuk menyimpan GameObject lengkap dengan komponen dan properti. Prefab bertindak sebagai template dari mana Anda dapat membuat instance objek baru di tempat kejadian. <a href="Prefabs.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Prefab">Glossary</a></span></span></span> mungkin tergantung pada Prefab lain.</p> 
+       <p>Importir mungkin juga menggunakan state global berdasarkan konten aset sumber, dalam hal itu juga menjadi ketergantungan dinamis. Contoh ini adalah platform target, ruang warna Proyek, API grafis, versi runtime scripting, atau state <span class="tooltip"><strong>compression</strong><span class="tooltiptext">Metode menyimpan data yang mengurangi jumlah ruang penyimpanan yang dibutuhkan. <a href="class-TextureImporterOverride.html">Kompresi Tekstur</a>, <a href="class-AnimationClip.html#AssetProperties">Kompresi Animasi</a>, <a href="class-AudioClip.html">Kompresi Audio</a>, <a href="ReducingFilesize.html">Membangun Kompresi</a>.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#compression">Glossary</a></span></span></span> Tekstur.</p> 
+       <p>Unity menyimpan ketergantungan dinamis aset dalam <a href="../ScriptReference/AssetImporters.AssetImportContext.html">Aset Impor Konteks</a>.</p> 
+       <h3>Mengimpor dan menyusun file terkait kode</h3> 
+       <p>Dalam daftar file yang berubah atau ditambahkan, Unity mengumpulkan yang berkaitan dengan kode, dan mengirimkannya ke pipa kompilasi skrip. compiler menghasilkan rakitan dari file skrip dan file definisi perakitan di Proyek Anda. Untuk informasi lebih lanjut tentang langkah ini, lihat dokumentasi di .</p> 
+       <h3>Muat ulang domain</h3> 
+       <p>Jika Unity mendeteksi perubahan skrip, isi ulang domain C#. Hal ini karena pengimpor Scripted baru dapat diciptakan, dan logika mereka berpotensi dapat mempengaruhi hasil impor aset dalam antrian Refresh. Langkah ini restart Refresh() untuk memastikan pengelola Scripted baru mengambil efek.</p> 
+       <h3>Aset terkait non-kode impor</h3> 
+       <p>Setelah Unity mengimpor semua aset terkait kode dan memuat ulang domain, kemudian bergerak ke Aset yang tersisa. Sitemap Proses impor aset yang jenis aset, dan mengidentifikasi jenis file yang harus diimpor berdasarkan ekstensi nama file. Misalnya, TextureImporter bertanggung jawab untuk mengimpor .jpg, .png dan .psd file, antara lain.</p> 
+       <p>Ada dua jenis importir:</p> 
+       <ul> 
+        <li>Importir asli: Unity <a href="BuiltInImporters.html">importir built-in</a>.</li> 
+        <li> <a href="ScriptedImporters.html">Scripted importers</a>: Importir khusus yang memperluas kemampuan impor Unity. Ini ditulis dalam C#.</li> 
+       </ul> 
+       <p>Proses unity semua importir asli pertama, dan kemudian semua importir skrip dalam fase terpisah.</p> 
+       <p>Ketika importir mengimpor file aset, Unity menghasilkan <strong>AssetImportContext</strong>. AsetImportContext melaporkan Ketergantungan Statis aset.</p> 
+       <p>Juga, selama langkah impor, ada sejumlah callback yang terjadi.</p> 
+       <p>Impor Aset Preprocess Sitemap</p> 
+       <ul> 
+        <li><a href="../ScriptReference/AssetPostprocessor.OnPreprocessAsset.html"><code>OnPreprocessAsset</code></a></li> 
+        <li><a href="../ScriptReference/AssetPostprocessor.OnPreprocessAnimation.html"><code>OnPreprocessAnimation</code></a></li> 
+        <li><a href="../ScriptReference/AssetPostprocessor.OnPreprocessAudio.html"><code>OnPreprocessAudio</code></a></li> 
+        <li><a href="../ScriptReference/AssetPostprocessor.OnPreprocessModel.html"><code>OnPreprocessModel</code></a></li> 
+        <li><a href="../ScriptReference/AssetPostprocessor.OnPreprocessSpeedTree.html"><code>OnPreprocessSpeedTree</code></a></li> 
+        <li><a href="../ScriptReference/AssetPostprocessor.OnPreprocessTexture.html"><code>OnPreprocessTexture</code></a></li> 
+       </ul> 
+       <p>Postprocess Asset Importir Panggilan:</p> 
+       <ul> 
+        <li><a href="../ScriptReference/AssetPostprocessor.OnAssignMaterialModel.html"><code>OnAssignMaterialModel</code></a></li> 
+        <li><a href="../ScriptReference/AssetPostprocessor.OnPostprocessAnimation.html"><code>OnPostprocessAnimation</code></a></li> 
+        <li><a href="../ScriptReference/AssetPostprocessor.OnPostprocessAssetbundleNameChanged.html"><code>OnPostprocessAssetbundleNameChanged</code></a></li> 
+        <li><a href="../ScriptReference/AssetPostprocessor.OnPostprocessAudio.html"><code>OnPostprocessAudio</code></a></li> 
+        <li><a href="../ScriptReference/AssetPostprocessor.OnPostprocessCubemap.html"><code>OnPostprocessCubemap</code></a></li> 
+        <li><a href="../ScriptReference/AssetPostprocessor.OnPostprocessGameObjectWithAnimatedUserProperties.html"><code>OnPostprocessGameObjectWithAnimatedUserProperties</code></a></li> 
+        <li><a href="../ScriptReference/AssetPostprocessor.OnPostprocessGameObjectWithUserProperties.html"><code>OnPostprocessGameObjectWithUserProperties</code></a></li> 
+        <li><a href="../ScriptReference/AssetPostprocessor.OnPostprocessMaterial.html"><code>OnPostprocessMaterial</code></a></li> 
+        <li><a href="../ScriptReference/AssetPostprocessor.OnPostprocessMeshHierarchy.html"><code>OnPostprocessMeshHierarchy</code></a></li> 
+        <li><a href="../ScriptReference/AssetPostprocessor.OnPostprocessModel.html"><code>OnPostprocessModel</code></a></li> 
+        <li><a href="../ScriptReference/AssetPostprocessor.OnPostprocessSpeedTree.html"><code>OnPostprocessSpeedTree</code></a></li> 
+        <li><a href="../ScriptReference/AssetPostprocessor.OnPostprocessSprites.html"><code>OnPostprocessSprites</code></a></li> 
+        <li><a href="../ScriptReference/AssetPostprocessor.OnPostprocessTexture.html"><code>OnPostprocessTexture</code></a></li> 
+       </ul> 
+       <p>Satu panggilan pemrosesan pasca akhir yang dipicu setelah semua impor selesai.</p> 
+       <p>Ada sejumlah hal yang dapat terjadi yang akan me-restart proses refresh pada folder Aset, beberapa dari mereka menjadi:</p> 
+       <ul> 
+        <li><p>Jika impor aset gagal</p></li> 
+        <li><p>Jika aset dimodifikasi selama fase impor Refresh. Sebagai contoh, jika file dalam daftar akan dimodifikasi sehingga tanggal modifikasinya tidak apa yang ada dalam refresh sebelumnya. Ini dapat terjadi jika Anda mulai menarik file dari sistem <span class="tooltip"><strong>Version Control</strong><span class="tooltiptext">Sistem untuk mengelola perubahan file. Anda dapat menggunakan Unity bersama dengan alat kontrol versi yang paling umum, termasuk Perforce, Git, Mercurial dan PlasticSCM. <a class="tooltipMoreInfoLink" href="VersionControl.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#VersionControl">Glossary</a></span></span></span> sementara Editor memiliki fokus.</p></li> 
+        <li><p>Jika Aset menciptakan aset lain selama impor. Contoh: Ketika mengimpor FBX, tekstur dapat diekstrak dari FBX dan ditempatkan ke proyek, dan ini berarti bahwa Unity harus mengimpor tekstur (dan setiap artefak yang mereka hasilkan).</p></li> 
+        <li><p>Jika Anda memaksa re-import file selama salah satu callback proses pre/post atau dalam OnPostProcessAllAssets, misalnya, menggunakan <code>AssetDatabase.ForceReserializeAssets</code> atau <code>AssetImport.SaveAndReimport</code>. Catatan, Anda harus berhati-hati tidak menyebabkan loop reimport tak terbatas jika Anda melakukan ini.</p></li> 
+        <li><p>Jika Reload Majelis terjadi setelah membandingkan <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span>. Jika Anda menghasilkan file C# selama proses refresh, bahwa file baru harus dikompilasi, jadi Unity restart menyegarkan.</p></li> 
+        <li><p>Jika Anda menyimpan aset sebagai "Satu teks" tetapi Aset harus serialisasi sebagai biner, restart akan terjadi. (Sebagai contoh, Adegan dengan Terrains di dalamnya harus di serialisasi sebagai Binary, karena data terrain akan tidak berubah jika dipandang sebagai array karakter dalam file teks.)</p></li> 
+       </ul> 
+       <p><a name="hotreloading"></a></p> 
+       <h4>Reloading panas</h4> 
+       <p>Reloading panas mengacu pada proses di mana impor Unity dan menerapkan perubahan pada skrip dan aset saat Editor terbuka. Ini mungkin terjadi saat Editor berada di Play Mode atau di luar Play Mode. Anda tidak harus me-restart aplikasi Anda atau Editor untuk perubahan untuk mengambil efek.</p> 
+       <p>Ketika Anda mengubah dan menyimpan skrip, beban panas Unity semua data skrip proyek. Toko pertama semua nilai variabel serializable di semua skrip yang dimuat, memuat ulang skrip, kemudian mengembalikan nilai. Semua data yang disimpan dalam variabel non-serializable hilang selama reload panas.</p> 
+       <p>Sitemap Aset impor unity yang diimpor oleh (built-in DefaultImporter) [BuiltInImporters] pertama, dan kemudian aset skrip, sehingga tidak menyebut PostProcess yang ditentukan skrip SemuaAssets untuk aset default.<strong>Note:</strong> Unity imports assets imported by the (built-in DefaultImporter)[BuiltInImporters] first, and then script assets, so it does not call any script-defined PostProcessAllAssets for default assets.</p> 
+       <h4>End of Refresh</h4> 
+       <p>Setelah semua langkah ini selesai, <code>Refresh()</code> selesai. <strong>Artifact Database</strong> diperbarui dengan informasi yang relevan, dan file hasil impor yang diperlukan dihasilkan pada disk.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="AssetDatabase.html"></a></span> 
+         <div class="tip">
+           The Asset Database 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="AssetDatabaseBatching.html"></a></span> 
+         <div class="tip">
+           Batching dengan AssetDatabase 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

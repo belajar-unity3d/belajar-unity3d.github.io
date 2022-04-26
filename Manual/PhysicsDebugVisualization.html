@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Fisika Debug Visualisasi</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="PhysicsSection.html">Physics</a></li> 
+         <li><a href="PhysicsOverview.html">Fisika 3D untuk proyek berorientasi objek</a></li> 
+         <li>Fisika Debug Visualisasi</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="physics-multi-scene.html"></a></span> 
+          <div class="tip">
+            Multi-scene fisika 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="Physics3DReference.html"></a></span> 
+          <div class="tip">
+            Referensi Fisika 3D 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Fisika Debug Visualisasi</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Fisika Debug Visualiser memungkinkan Anda untuk memeriksa geometri <span class="tooltip"><a class="tooltipMoreInfoLink" href="CollidersOverview.html">Collider</a><span class="tooltiptext">Bentuk tak terlihat yang digunakan untuk menangani tabrakan fisik untuk objek. Seorang sari tidak perlu menjadi bentuk yang sama dengan jala objek - perkiraan kasar sering lebih efisien dan tidak dapat dibedakan dalam gameplay. <a href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Collider">Glossary</a></span></span></span> dalam skenario berbasis fisika Anda, dan profil. Ini menyediakan visualisasi yang harus dilakukan oleh <span class="tooltip"><a href="CreatingScenes.html">Scene</a><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Scene">Glossary</a></span></span></span> dan tidak boleh saling bertabrakan. Ini sangat berguna ketika ada banyak Colliders di Adegan Anda, atau jika <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> dan <a href="class-MeshRenderer.html">Render</a> keluar dari sinkronisasi.<a href="class-MeshCollider.html">Mesh Collision</a> are out of sync.</p> 
+       <p>Untuk panduan lebih lanjut tentang meningkatkan kinerja fisika dalam proyek Anda, lihat dokumentasi pada <a href="ProfilerPhysics.html">Profiler Fisika</a>.</p> 
+       <p>Untuk membuka jendela Debug Fisika di Editor Unity, buka <strong>Window </strong>&gt; <strong>Analysis</strong> &gt; <strong>Physics Debugger</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PhysicsDebugVizImage0.jpg" alt="Default Physics Debug Visualization settings and a Cube primitive"> 
+        <figcaption>
+          Database Pengaturan Visualisasi debug dan primitive kubus 
+        </figcaption> 
+       </figure> 
+       <p>Dari jendela ini, Anda dapat menyesuaikan pengaturan visual dan menentukan jenis GameObjects yang ingin Anda lihat atau bersembunyi di visualizer.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PhysicsDebugVizImage1.jpg" alt="Physics Debug window with fold-out options and overlay panel "> 
+        <figcaption>
+          Jendela Debug Fisika dengan opsi lipat-out dan panel overlay 
+        </figcaption> 
+       </figure> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PhysicsDebugVizImage2.png" alt="The Physics Debug overlay panel"> 
+        <figcaption>
+          Panel overlay Debug Fisika 
+        </figcaption> 
+       </figure> 
+       <p> <strong>Hide Selected Items</strong> adalah mode default. Ini berarti bahwa setiap item muncul dalam visualizer, dan Anda perlu mencentang kotak centang untuk setiap item untuk menyembunyikannya. Untuk mengubah ini menjadi <strong>Show Selected Items</strong>, gunakan drop-down di bagian atas jendela. Ini berarti bahwa tidak ada item yang muncul dalam visualizer, dan Anda perlu mencentang kotak centang untuk setiap item untuk menampilkannya.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Reset</strong></td> 
+          <td style="text-align:left;">Klik tombol ini untuk mengatur ulang jendela Debug Fisika kembali ke pengaturan default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Hide Layers</strong></td> 
+          <td style="text-align:left;">Gunakan menu dropdown untuk menentukan apakah atau tidak menampilkan Collider dari <span class="tooltip"><a class="tooltipMoreInfoLink" href="Layers.html">Layers</a><span class="tooltiptext">Lapisan dalam Unity dapat digunakan untuk memilih kelompok GameObjects secara selektif atau keluar dari proses atau perhitungan tertentu. Ini termasuk rendering kamera, pencahayaan, tabrakan fisika, atau perhitungan kustom dalam kode Anda sendiri. <a href="Layers.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Layer">Glossary</a></span></span></span> yang dipilih.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Hide Static Colliders</strong></td> 
+          <td style="text-align:left;">Tick kotak centang ini untuk menghilangkan Collider statis (Colliders tanpa komponen kaku) dari visualisasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Hide Triggers</strong></td> 
+          <td style="text-align:left;">Tick kotak centang ini untuk menghapus Collider yang juga memicu dari visualisasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Hide Rigidbodies</strong></td> 
+          <td style="text-align:left;">Tick kotak centang ini untuk menghilangkan <a href="class-Rigidbody.html">komponen kaku</a> dari visualisasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Hide Kinematic Bodies</strong></td> 
+          <td style="text-align:left;">Tick kotak centang ini untuk menghapus Collider dengan komponen <strong>Kinematic </strong>Rigidbody (yang tidak dikendalikan oleh mesin fisika) dari visualisasi. Lihat dokumentasi tentang <a href="RigidbodiesOverview.html">komponen kaku</a> untuk rincian lebih lanjut.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Hide Sleeping Bodies</strong></td> 
+          <td style="text-align:left;">Tick kotak centang ini untuk menghapus Collider dengan komponen <strong>Sleeping</strong> <span class="tooltip"><strong>Rigidbody</strong><span class="tooltiptext">Komponen yang memungkinkan GameObject untuk dipengaruhi oleh gravitasi simulasi dan kekuatan lainnya. <a class="tooltipMoreInfoLink" href="class-Rigidbody.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Rigidbody">Glossary</a></span></span></span> (yang saat ini tidak terlibat dengan mesin fisika) dari visualisasi. Lihat dokumentasi tentang <a href="RigidbodiesOverview.html">Komponen kaku: Login</a> untuk rincian lebih lanjut.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Collider Types</strong></td> 
+          <td style="text-align:left;">Gunakan opsi ini untuk menghilangkan jenis Collider tertentu dari visualisasi fisika.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Hide <br>&nbsp;&nbsp;&nbsp;&nbsp;BoxColliders</td> 
+          <td style="text-align:left;">Tick kotak centang ini untuk menghilangkan <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-BoxCollider.html">Kotak Colliders</a><span class="tooltiptext">Komponen collider berbentuk kubus yang menangani tabrakan untuk GameObjects seperti dadu dan es batu. <a href="class-BoxCollider.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#boxcollider">Glossary</a></span></span></span> dari visualisasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Sembunyikan <br> SphereColliders</td> 
+          <td style="text-align:left;">Tick kotak centang ini untuk menghilangkan <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-SphereCollider.html">Sphere Colliders</a><span class="tooltiptext">Komponen collider berbentuk sphere yang menangani tabrakan untuk GameObjects seperti bola atau hal-hal lain yang dapat kira-kira perkiraan sebagai bidang untuk tujuan fisika. <a href="class-SphereCollider.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SphereCollider">Glossary</a></span></span></span> dari visualisasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Sembunyikan <br> KapsulColliders</td> 
+          <td style="text-align:left;">Tick kotak centang ini untuk menghilangkan <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-CapsuleCollider.html">Kapsul Colliders</a><span class="tooltiptext">Komponen collider berbentuk kapsul yang menangani tabrakan untuk GameObjects seperti barel dan tungkai karakter. <a href="class-CapsuleCollider.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#capsulecollider">Glossary</a></span></span></span> dari visualisasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Sembunyikan <br> MeshColliders <br> (convex)</td> 
+          <td style="text-align:left;">Tick checkbox ini untuk menghilangkan <strong>convex</strong> <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-MeshCollider.html">Mesh Collider</a><span class="tooltiptext">Komponen collider bentuk bebas yang menerima referensi jala untuk menentukan bentuk permukaan tabrakannya. <a href="class-MeshCollider.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#MeshCollider">Glossary</a></span></span></span> dari visualisasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Sembunyikan <br> MeshColliders <br> (concave)</td> 
+          <td style="text-align:left;">Tick checkbox ini untuk menghilangkan <strong>concave</strong> <a href="class-MeshCollider.html">Mesh Collider</a> dari visualisasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Hide <br>&nbsp;&nbsp;&nbsp;&nbsp;TerrainColliders</td> 
+          <td style="text-align:left;">Tick kotak centang ini untuk menghilangkan <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-TerrainCollider.html">Catalog</a><span class="tooltiptext">Komponen collider berbentuk medan yang menangani tabrakan untuk permukaan tabrakan dengan bentuk yang sama dengan objek Terrain melekat pada. <a href="class-TerrainCollider.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#TerrainCollider">Glossary</a></span></span></span> dari visualisasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Hide None</strong></td> 
+          <td style="text-align:left;">Klik <strong>Hide None</strong> untuk membersihkan semua kriteria penyaringan dan menampilkan semua jenis Collider dalam visualisasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Hide All</strong></td> 
+          <td style="text-align:left;">Klik <strong>Hide All</strong> untuk mengaktifkan semua filter dan menghapus semua jenis Collider dari visualisasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Colors</strong></td> 
+          <td style="text-align:left;">Gunakan pengaturan ini untuk menentukan bagaimana fitur Unity komponen fisika dalam visualisasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Statis <br> Colliders</td> 
+          <td style="text-align:left;">Gunakan pemilih warna ini untuk menentukan warna mana yang menunjukkan Collider statis (Colliders tanpa komponen kaku) dalam visualisasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Triggers</td> 
+          <td style="text-align:left;">Gunakan pemilih warna ini untuk menentukan warna yang menunjukkan Collider yang juga memicu visualisasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Rigidbodies</td> 
+          <td style="text-align:left;">Gunakan pemilih warna ini untuk menentukan warna yang menunjukkan komponen kaku dalam visualisasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Kinematik <br> Bodies</td> 
+          <td style="text-align:left;">Gunakan pemilih warna ini untuk menentukan warna mana yang menunjukkan komponen <strong>Kinematic </strong>Rigidbody (yang tidak dikendalikan oleh mesin fisika) dari visualisasi. Lihat dokumentasi tentang <a href="RigidbodiesOverview.html">komponen kaku</a> untuk rincian lebih lanjut.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Tidur <br> Bodies</td> 
+          <td style="text-align:left;">Gunakan pemilih warna ini untuk menentukan warna mana yang menunjukkan komponen <strong>Sleeping </strong>Rigidbody (yang saat ini tidak terlibat dengan mesin fisika) dari visualisasi. Lihat dokumentasi tentang <a href="RigidbodiesOverview.html">Komponen kaku: Login</a> untuk rincian lebih lanjut.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Variation</td> 
+          <td style="text-align:left;">Gunakan slider untuk mengatur nilai antara 0 dan 1. Ini mendefinisikan berapa banyak campuran warna pilihan Anda dengan warna acak. Gunakan Collider yang terpisah secara visual dengan warna, dan untuk melihat struktur GameObjects.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Rendering</strong></td> 
+          <td style="text-align:left;">Gunakan pengaturan ini untuk menentukan bagaimana render Unity dan menampilkan visualisasi fisika.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Transparency</td> 
+          <td style="text-align:left;">Gunakan slider untuk mengatur nilai antara 0 dan 1. Ini mendefinisikan transparansi geometri <span class="tooltip"><strong>collision</strong><span class="tooltiptext">tabrakan terjadi ketika mesin fisika mendeteksi bahwa tabrakan dari dua GameObjects membuat kontak atau tumpang tindih, ketika setidaknya satu memiliki komponen kaku dan bergerak. <a class="tooltipMoreInfoLink" href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Collision">Glossary</a></span></span></span> yang ditarik dalam visualisasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Force <br>&nbsp;&nbsp;&nbsp;&nbsp;Overdraw</td> 
+          <td style="text-align:left;">Geometri render normal kadang-kadang dapat mengaburkan Collider (misalnya, pesawat Mesh Collider di bawah lantai). Tick kotak centang <strong>Force Overdraw</strong> untuk membuat geometri renderer visualisasi menggambar geometri Collider di atas geometri render.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Lihat Jarak <br>&nbsp;&nbsp;&nbsp;&nbsp;Distance</td> 
+          <td style="text-align:left;">Gunakan ini untuk mengatur jarak pandang visualisasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Terrain <br> Ubin Max</td> 
+          <td style="text-align:left;">Gunakan ini untuk mengatur jumlah maksimum ubin Terrain dalam visualisasi.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Panel overlay memiliki opsi lebih lanjut:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PhysicsDebugVizImage2.png" alt="The Physics Debug overlay panel"> 
+        <figcaption>
+          Panel overlay Debug Fisika 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Collision Geometry</strong></td> 
+          <td style="text-align:left;">Tick kotak centang ini untuk mengaktifkan visualisasi geometri tabrakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Mouse Select</strong></td> 
+          <td style="text-align:left;">Tick kotak centang ini untuk mengaktifkan sorotan mouse dan pemilihan mouse. Ini dapat berguna jika Anda memiliki GameObjects besar yang menghalangi satu sama lain dalam visualizer.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>Profil</h3> 
+       <p>Anda dapat menggunakan Fisika Debug ke profil dan pemecahan aktivitas fisika dalam permainan Anda. Anda dapat menyesuaikan jenis komponen Colliders atau Rigidbody yang dapat Anda lihat dalam visualiser, untuk membantu Anda menemukan sumber aktivitas. Dua yang paling membantu adalah:</p> 
+       <p> <strong>To see active Rigidbody components only</strong>: Untuk melihat hanya komponen kaku yang aktif dan oleh karena itu menggunakan sumber CPU / GPU, tick <strong>Hide Static Colliders</strong> dan <strong>Hide Sleeping Bodies</strong>.</p> 
+       <p>Sitemap Non-convex (dasar segitiga) Mesh Collider cenderung menghasilkan kontak yang paling ketika komponen kaku melekat mereka sangat dekat tabrakan dengan orang lain atau Collider. Untuk memvisualisasikan hanya Collider Mesh non-convex, atur jendela ke mode <strong>To see non-convex <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a class="tooltipMoreInfoLink" href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span> Colliders only:</strong>, klik tombol <strong>Show Selected Items</strong>, lalu centang kotak cemen.<strong>Select None</strong> button, then tick the <strong>Show MeshColliders (concave)</strong> checkbox.</p> 
+       <h3>API documentation Login</h3> 
+       <p>Lihat API Scripting Unity Indeks untuk:</p> 
+       <ul> 
+        <li><p><a href="../ScriptReference/PhysicsDebugWindow.html">FisikaDebugWindow</a></p></li> 
+        <li><p><a href="../ScriptReference/PhysicsVisualizationSettings.html">PhysicsVisualizationSettings</a></p></li> 
+       </ul> 
+       <p><br></p> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2017–06–01 Login</span></p></li> 
+        <li><p><span class="page-history">Fisika Debug Visualization adalah fitur baru dalam Unity 5.6</span></p></li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="physics-multi-scene.html"></a></span> 
+         <div class="tip">
+           Multi-scene fisika 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="Physics3DReference.html"></a></span> 
+         <div class="tip">
+           Referensi Fisika 3D 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

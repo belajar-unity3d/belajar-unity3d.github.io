@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Menggunakan CCD melalui antarmuka baris perintah</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UnityServices.html">Layanan Unity</a></li> 
+         <li><a href="UnityCCD.html">Pengiriman Konten Cloud Unity</a></li> 
+         <li>Menggunakan CCD melalui antarmuka baris perintah</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UnityCCDDashboard.html"></a></span> 
+          <div class="tip">
+            Sitemap Kembangkan Dasbor 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UnityIAP.html"></a></span> 
+          <div class="tip">
+            ﻿Unity IAP 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Menggunakan CCD melalui antarmuka baris perintah</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Important</strong>: Dokumentasi Pengiriman Konten Cloud Unity telah pindah ke . Silakan kunjungi situs baru untuk informasi terbaru tentang CCD Unity.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Bagian ini berisi contoh penuh tentang cara menggunakan Pengiriman Konten Cloud (CCD) melalui antarmuka baris perintah (CLI), termasuk topik berikut:</p> 
+       <ul> 
+        <li><a href="#authentication">Authentication</a></li> 
+        <li><a href="#creating-a-bucket">Membuat ember</a></li> 
+        <li><a href="#creating-entries-in-the-bucket">Membuat entri dari satu set file lokal</a></li> 
+        <li><a href="#creating-a-release">Membuat rilis</a></li> 
+        <li><a href="#managing-badges">Mengelola lencana</a></li> 
+       </ul> 
+       <h2>Authentication<a name="authentication"></a> </h2> 
+       <p>Masuk ke layanan menggunakan kunci API Anda. Lihat bagian <a href="UnityCCDCLI.html#getting-started">Getting started</a> jika Anda memerlukan bantuan locating kunci API Anda.</p> 
+       <pre><code>$ ucd auth login XXXXXXXXXXXX
+Login successful.
+</code></pre> 
+       <p>Verifikasi apakah Anda login dengan perintah <code>auth info</code>.</p> 
+       <pre><code>$ ucd auth info
+Current user: Joe Smith
+</code></pre> 
+       <h2>Membuat bucket<a name="creating-a-bucket"></a> </h2> 
+       <p>Buat ember pertama Anda. Bucket dikaitkan dengan satu proyek. ID Proyek untuk contoh ini adalah <code>e1942cea-12df-4220-aa6d-f8c9c3ab7526</code>, tetapi Anda perlu menggunakan salah satu ID Proyek Anda yang sebenarnya. Lihat bagian <a href="UnityCCDCLI.html#getting-started">Getting started</a> jika Anda memerlukan bantuan untuk menemukan ID Proyek Anda.</p> 
+       <p>Daftar ember (yang harus kosong pada titik ini) untuk proyek ini.</p> 
+       <pre><code>$ ucd buckets list e1942cea-12df-4220-aa6d-f8c9c3ab7526
+No buckets found for project.
+</code></pre> 
+       <p>Buat ember yang disebut <code>example_bucket</code> untuk proyek ini:</p> 
+       <pre><code>$ ucd buckets create e1942cea-12df-4220-aa6d-f8c9c3ab7526 example_bucket
+Created bucket: example_bucket (aee9ee5f-fa01-46d3-a293-731d15f066cf)
+</code></pre> 
+       <p>Nama ember dan entri sensitif kasus.</p> 
+       <p>Untuk melihat ember yang baru dibuat, daftar ember lagi untuk proyek ini:</p> 
+       <pre><code>$ ucd buckets list e1942cea-12df-4220-aa6d-f8c9c3ab7526
+Buckets for project (e1942cea-12df-4220-aa6d-f8c9c3ab7526):
+- example_bucket (aee9ee5f-fa01-46d3-a293-731d15f066cf)
+</code></pre> 
+       <p>Untuk memudahkan untuk bekerja dengan membuat entri dan rilis, menyimpan ember yang baru dibuat ke konfigurasi lokal (tidak menyediakannya sebagai parameter ke CLI untuk setiap operasi). Salin GUID ember (bukan namanya) dari pesan pembuatan ember di atas (<code>aee9ee5f-fa01-46d3-a293-731d15f066cf</code> dalam contoh ini):</p> 
+       <pre><code>$ ucd config set bucket aee9ee5f-fa01-46d3-a293-731d15f066cf
+Successfully switched to bucket aee9ee5f-fa01-46d3-a293-731d15f066cf.
+Currently active project: e1942cea-12df-4220-aa6d-f8c9c3ab7526.
+Currently active bucket: aee9ee5f-fa01-46d3-a293-731d15f066cf (example_bucket).
+</code></pre> 
+       <p>CCD secara otomatis melakukan perintah apa pun yang berkaitan dengan entri dan rilis pada ember yang Anda tentukan.</p> 
+       <h2>Membuat entri di ruang ember<a name="creating-entries-in-the-bucket"></a>%</h2> 
+       <p>Daftar entri di ember baru diciptakan ini (harusnya kosong):</p> 
+       <pre><code>$ ucd entries list
+No Entries found for current bucket.
+</code></pre> 
+       <p>Sinkronisasikan semua file dalam folder lokal yang mengandung Aset yang dihasilkan:</p> 
+       <pre><code>$ ucd entries sync ./ServerData/StandaloneOSX
+Calculating...
+Added Entry: catalog_2019.07.30.18.24.34.hash
+Added Entry: catalog_2019.07.30.18.24.34.json
+Added Entry: remotedemodata_green.bundle
+Added Entry: remotedemodata_mat1.bundle
+Added Entry: remotedemodata_sphere.bundle
+Added Entry: remotedemodata_unitylogo.bundle
+Added Entry: remotedemodata_unitylogoprefab.bundle
+Added Entry: remotedemodata_scenes_scene2.bundle
+Added Entry: remotedemodata_scenes_scene.bundle
+Added Entry: spaceshooterdata_done_asteroid01.bundle
+Added Entry: spaceshooterdata_done_asteroid02.bundle
+Added Entry: spaceshooterdata_done_asteroid03.bundle
+Added Entry: spaceshooterdata_done_bolt-enemy.bundle
+Added Entry: spaceshooterdata_done_bolt.bundle
+Added Entry: spaceshooterdata_done_enemyship.bundle
+Added Entry: spaceshooterdata_done_player.bundle
+Added Entry: spaceshooterdata_engines_enemy.bundle
+Added Entry: spaceshooterdata_engines_player.bundle
+Added Entry: spaceshooterdata_explosion_asteroid.bundle
+Added Entry: spaceshooterdata_explosion_enemy.bundle
+Added Entry: spaceshooterdata_explosion_player.bundle
+Added Entry: spaceshooterdata_starfield.bundle
+Complete! Bytes uploaded: 5346781
+</code></pre> 
+       <p>Ini menambahkan file sebagai entri ke ember. Anda dapat mencantumkan konten bucket dan melihat beberapa informasi dasar tentang setiap entri:</p> 
+       <pre><code>$ ucd entries list
+22 entries for current bucket (aee9ee5f-fa01-46d3-a293-731d15f066cf):
+2019-08-21 14:27:03       167915 spaceshooterdata_starfield.bundle
+2019-08-21 14:27:00       573539 spaceshooterdata_explosion_player.bundle
+2019-08-21 14:26:56       412235 spaceshooterdata_explosion_enemy.bundle
+2019-08-21 14:26:52       382630 spaceshooterdata_explosion_asteroid.bundle
+2019-08-21 14:26:49       177018 spaceshooterdata_engines_player.bundle
+2019-08-21 14:26:45       157215 spaceshooterdata_engines_enemy.bundle
+2019-08-21 14:26:42      1085518 spaceshooterdata_done_player.bundle
+2019-08-21 14:26:38      1070297 spaceshooterdata_done_enemyship.bundle
+2019-08-21 14:26:34        27178 spaceshooterdata_done_bolt.bundle
+2019-08-21 14:26:31        28362 spaceshooterdata_done_bolt-enemy.bundle
+2019-08-21 14:26:28       231658 spaceshooterdata_done_asteroid03.bundle
+2019-08-21 14:26:24       221450 spaceshooterdata_done_asteroid02.bundle
+2019-08-21 14:26:20       227842 spaceshooterdata_done_asteroid01.bundle
+2019-08-21 14:26:17        23016 remotedemodata_scenes_scene.bundle
+2019-08-21 14:26:13        23064 remotedemodata_scenes_scene2.bundle
+2019-08-21 14:26:10        10568 remotedemodata_unitylogoprefab.bundle
+2019-08-21 14:26:07       462522 remotedemodata_unitylogo.bundle
+2019-08-21 14:26:03         7864 remotedemodata_sphere.bundle
+2019-08-21 14:26:00         6320 remotedemodata_mat1.bundle
+2019-08-21 14:25:57         6320 remotedemodata_green.bundle
+2019-08-21 14:25:53        44218 catalog_2019.07.30.18.24.34.json
+2019-08-21 14:25:50           32 catalog_2019.07.30.18.24.34.hash
+</code></pre> 
+       <p>Untuk mendapatkan informasi lebih rinci tentang entri tertentu, gunakan perintah <code>entries info</code> dengan jalur entri:</p> 
+       <pre><code>$ ucd entries info spaceshooterdata_starfield.bundle`
+
+Entry Info:
+Path: spaceshooterdata_starfield.bundle
+Id: 8ac46783-be01-4a47-b23e-74233fc7cc09
+Last Modified: 2019-08-21 14:27:03
+  Content Size: 167915
+  Content Hash: 4a3ad5b69bd489699d1909e8868a7cb1
+  Content Type: application/octet-stream
+  Content Link: …
+  Labels:
+  Metadata:
+  Current Version: aa0304db-fd9f-4772-9549-dfeb44cc6d6f
+</code></pre> 
+       <p>Klien game Anda sekarang dapat meminta konten untuk file individu di ember menggunakan path yang terkait dengan entri. Buat semua permintaan klien game ke subdomain spesifik proyek Anda pada <code>&lt;project_guid&gt;.client-api.unity3dusercontent.com</code>. URL yang dimulai dengan /client_api/v1/ di jalur permintaan. Tidak ada permintaan klien ini memerlukan otentikasi.</p> 
+       <p>Untuk mendapatkan konten entri, seperti <code>spaceshooterdata_starfield.bundle</code>, dengan path, masukkan:</p> 
+       <p><code>https://&lt;project_guid&gt;.client-api.unity3dusercontent.com/client_api/v1/buckets/aee9ee5f-fa01-46d3-a293-731d15f066cf/entry_by_path/content/?path=spaceshooterdata_starfield.bundle</code></p> 
+       <p>Atau untuk mendapatkan konten entri dengan Masuk ID, masukkan:</p> 
+       <p><code>https://&lt;project_guid&gt;.client-api.unity3dusercontent.com/client_api/v1/buckets/aee9ee5f-fa01-46d3-a293-731d15f066cf/entries/8ac46783-be01-4a47-b23e-74233fc7cc09/content/</code></p> 
+       <h2>Membuat rilis <a name="creating-a-release"></a> </h2> 
+       <p>Buat rilis dari keadaan entri Anda saat ini:</p> 
+       <pre><code>$ ucd releases create
+Created release (#1) in bucket (aee9ee5f-fa01-46d3-a293-731d15f066cf).
+  Id: 80653663-eb39-45e7-9323-e34b23df0d75
+  Created: 2019-08-21 14:27:30
+  ...
+</code></pre> 
+       <p>Ini memungkinkan Anda untuk menggunakan versi yang tepat dari entri tersebut ketika meminta konten, bahkan jika Anda memperbarui atau menghapus entri tersebut nanti.</p> 
+       <p>Untuk mendapatkan informasi lebih rinci tentang rilis, gunakan perintah <code>releases info</code> dan memberikan ID rilis yang Anda buat:</p> 
+       <pre><code>$ ucd releases info 80653663-eb39-45e7-9323-e34b23df0d75
+
+Release #1:
+  Id: 80653663-eb39-45e7-9323-e34b23df0d75
+  Created: 2019-08-21 14:27:30
+  Content Size: 123456
+  Content Hash: b62343cb3582a7de1286dd3cf23c3592
+  Notes:
+  Metadata: 
+  Entries:
+  - remotedemodata_scenes_scene2.bundle  (version: d7c69bc0-5c0b-4625-8a7d-94a4972aa236)
+  - remotedemodata_unitylogo.bundle  (version: 97d3659f-0b74-403a-be67-02641ce2dc91)
+  - spaceshooterdata_done_enemyship.bundle  (version: edcedc81-80b6-4006-9732-0444898fcffa)
+  - remotedemodata_unitylogoprefab.bundle  (version: 4edfa2be-7fae-44c9-bb45-f601cc1130db)
+  - spaceshooterdata_done_bolt-enemy.bundle  (version: ef36bfa8-8b24-4b81-a329-b3fad0a0939b)
+  ...
+</code></pre> 
+       <p>Untuk mendapatkan daftar semua rilis yang Anda hasilkan dalam ember ini, masukkan:</p> 
+       <pre><code>$ ucd releases list
+Releases for current bucket (aee9ee5f-fa01-46d3-a293-731d15f066cf): 
+  2019-08-21 14:27:30  #1 (80653663-eb39-45e7-9323-e34b23df0d75)
+</code></pre> 
+       <p>Anda sekarang dapat secara langsung merujuk konten yang terkandung dalam rilis ini. Ini memastikan Anda mendapatkan set konten yang tepat yang digunakan CCD untuk menghasilkan rilis bahkan jika Anda mengubah entri nanti dalam ember.</p> 
+       <p>Untuk mendapatkan konten entri, seperti <code>spaceshooterdata_starfield.bundle</code>, dengan path, masukkan:</p> 
+       <p><code>https://&lt;project_guid&gt;.client-api.unity3dusercontent.com/client_api/v1/buckets/aee9ee5f-fa01-46d3-a293-731d15f066cf/releases/80653663-eb39-45e7-9323-e34b23df0d75/entry_by_path/content/?path=spaceshooterdata_starfield.bundle</code></p> 
+       <p>Atau untuk mendapatkan konten entri dengan Masuk ID, masukkan:</p> 
+       <p><code>https://&lt;project_guid&gt;.client-api.unity3dusercontent.com/client_api/v1/buckets/aee9ee5f-fa01-46d3-a293-731d15f066cf/releases/80653663-eb39-45e7-9323-e34b23df0d75/entries/8ac46783-be01-4a47-b23e-74233fc7cc09/content/</code></p> 
+       <p>Anda juga dapat meminta konten yang sesuai dengan rilis terbaru di ember, sehingga klien tidak perlu mengubah setiap kali CCD menghasilkan rilis baru. Untuk melakukan ini, memperbarui permintaan untuk menggunakan rute <code>release_by_badge</code> dan menentukan nama lencana <code>latest</code> (lihat <a href="#managing-badges">Mengelola lencana</a>). Contoh:</p> 
+       <p><code>https://&lt;project_guid&gt;.client-api.unity3dusercontent.com/client_api/v1/buckets/aee9ee5f-fa01-46d3-a293-731d15f066cf/release_by_badge/latest/entry_by_path/content/?path=spaceshooterdata_starfield.bundle</code></p> 
+       <h2>Mengelola lencana <a name="managing-badges"></a> </h2> 
+       <p>Setelah menghasilkan rilis, Anda dapat menerapkan lencana yang unik mengidentifikasi rilis. Lencana hanya dapat menunjuk ke rilis tunggal dalam ember, tetapi Anda dapat memindahkan lencana antara rilis. Pada runtime, Anda dapat meminta konten menggunakan nama lencana daripada ID rilis tertentu, memungkinkan untuk lebih banyak fleksibilitas dalam alur kerja.</p> 
+       <p>Misalnya, Anda mungkin menerapkan lencana yang disebut <code>qa_latest</code> untuk rilis terbaru untuk tim QA Anda untuk menggunakan, dan memindahkan lencana ke setiap rilis baru sebagai bagian dari proses (manual atau otomatis).</p> 
+       <p>Untuk menambahkan lencana bernama <code>my_first_badge</code> untuk rilis yang Anda hasilkan dalam <a href="#creating-a-release">Membuat rilis</a>, masukkan:</p> 
+       <pre><code>$ ucd badges add my_first_badge 80653663-eb39-45e7-9323-e34b23df0d75
+Added badge 'my_first_badge' to release (80653663-eb39-45e7-9323-e34b23df0d75).
+</code></pre> 
+       <p>Untuk mencantumkan semua lencana Anda diterapkan di ember ini:</p> 
+       <pre><code>$ ucd badges list
+Badges for current bucket (aee9ee5f-fa01-46d3-a293-731d15f066cf): 
+  2020-01-07 12:55:41  my_first_badge  (80653663-eb39-45e7-9323-e34b23df0d75)
+</code></pre> 
+       <p>Konten yang terkait dengan rilis bahwa referensi lencana siap untuk diunduh. Anda dapat melakukan ini dengan cara yang sama untuk mengunduh konten langsung dengan Masuk ID.</p> 
+       <p>Untuk mendapatkan konten untuk masuk, seperti <code>spaceshooterdata_starfield.bundle</code>, dengan path, masukkan:</p> 
+       <p><code>https://&lt;project_guid&gt;.client-api.unity3dusercontent.com/client_api/v1/buckets/aee9ee5f-fa01-46d3-a293-731d15f066cf/release_by_badge/my_first_badge/entry_by_path/content/?path=spaceshooterdata_starfield.bundle</code></p> 
+       <p>Atau untuk mendapatkan konten entri dengan Masuk ID, masukkan:</p> 
+       <p><code>https://&lt;project_guid&gt;.client-api.unity3dusercontent.com/client_api/v1/buckets/aee9ee5f-fa01-46d3-a293-731d15f066cf/release_by_badge/my_first_badge/entries/8ac46783-be01-4a47-b23e-74233fc7cc09/content/</code></p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UnityCCDDashboard.html"></a></span> 
+         <div class="tip">
+           Sitemap Kembangkan Dasbor 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UnityIAP.html"></a></span> 
+         <div class="tip">
+           ﻿Unity IAP 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

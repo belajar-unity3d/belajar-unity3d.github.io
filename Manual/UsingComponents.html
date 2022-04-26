@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Menggunakan Komponen</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="CreatingGameplay.html">Membuat Gameplay</a></li> 
+         <li><a href="GameObjects.html">GameObjects</a></li> 
+         <li>Menggunakan Komponen</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="Components.html"></a></span> 
+          <div class="tip">
+            Pengantar komponen 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="PrimitiveObjects.html"></a></span> 
+          <div class="tip">
+            objek pemegang saham Primitive dan placeholder 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Menggunakan Komponen</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p> <strong>Components</strong> adalah mur &amp; baut benda dan perilaku dalam permainan. Mereka adalah potongan fungsional dari setiap <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span>. Jika Anda belum memahami hubungan antara Komponen dan GameObjects, baca halaman <a href="GameObjects.html">GameObjects</a> sebelum pergi lagi.</p> 
+       <p>GameObject adalah wadah untuk berbagai Komponen. Secara default, semua GameObjects secara otomatis memiliki komponen <strong>Transform</strong>. Ini karena Transformasi menentukan di mana GameObject terletak, dan bagaimana diputar dan berskala. Tanpa Komponen Transform, GameObject tidak akan memiliki lokasi di dunia. Coba buat GameObject kosong sekarang sebagai contoh. Klik item menu <strong>GameObject-&gt;Create Empty</strong>. Pilih GameObject baru, dan lihat <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/EmptyGO1.png" alt="Even empty GameObjects have a Transform Component"> 
+        <figcaption>
+          Bahkan kosong GameObjects memiliki Komponen Transform 
+        </figcaption> 
+       </figure> 
+       <p>Inspektur untuk melihat Komponen mana yang melekat pada GameObject yang dipilih. Sebagai Komponen ditambahkan dan dihapus, Inspektur akan selalu menunjukkan kepada Anda yang saat ini terpasang. Anda akan menggunakan Inspektur untuk mengubah semua sifat Komponen (termasuk skrip).</p> 
+       <h2>Komponen Menambahkan</h2> 
+       <p>Anda dapat menambahkan Komponen ke GameObject yang dipilih melalui menu Komponen. Kami akan mencoba ini sekarang dengan menambahkan <span class="tooltip"><strong>Rigidbody</strong><span class="tooltiptext">Komponen yang memungkinkan GameObject untuk dipengaruhi oleh gravitasi simulasi dan kekuatan lainnya. <a class="tooltipMoreInfoLink" href="class-Rigidbody.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Rigidbody">Glossary</a></span></span></span> ke GameObject kosong yang kami buat. Pilih dan pilih <strong>Component-&gt;Physics-&gt;Rigidbody</strong> dari menu. Ketika Anda melakukan, Anda akan melihat sifat-sifat kaku muncul di Inspektur. Jika Anda menekan <strong>Play</strong> sementara GameObject kosong masih dipilih, Anda mungkin mendapatkan sedikit kejutan. Cobalah dan perhatikan bagaimana orang yang kaku telah menambahkan fungsi ke GameObject yang tidak kosong. (Ukuran Y dari transformasi GameObject mulai berkurang. Ini karena mesin fisika di Unity menyebabkan GameObject jatuh di bawah gravitasi.)</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/RigidBodyGO1.png" alt="An empty GameObject with a Rigidbody Component attached"> 
+        <figcaption>
+          Sebuah GameObject kosong dengan Komponen Rigidbody terpasang 
+        </figcaption> 
+       </figure> 
+       <p>Pilihan lain adalah menggunakan <strong>Component Browser</strong>, yang dapat diaktifkan dengan tombol <strong>Add Component</strong> dalam inspektur objek.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ComponentBrowser1.png" alt="The Component Browser"> 
+        <figcaption>
+          Web Browser 
+        </figcaption> 
+       </figure> 
+       <p>Browser memungkinkan Anda menavigasi komponen dengan mudah berdasarkan kategori dan juga memiliki kotak pencarian yang dapat Anda gunakan untuk mencari komponen berdasarkan nama.</p> 
+       <p>Anda dapat melampirkan setiap jumlah atau kombinasi Komponen ke GameObject tunggal. Beberapa Komponen bekerja terbaik dalam kombinasi dengan yang lain. Sebagai contoh, kaku bekerja dengan setiap <span class="tooltip"><strong>Collider</strong><span class="tooltiptext">Bentuk tak terlihat yang digunakan untuk menangani tabrakan fisik untuk objek. Seorang sari tidak perlu menjadi bentuk yang sama dengan jala objek - perkiraan kasar sering lebih efisien dan tidak dapat dibedakan dalam gameplay. <a class="tooltipMoreInfoLink" href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Collider">Glossary</a></span></span></span>. Yang kaku mengontrol Transformasi melalui <strong>NVIDIA PhysX</strong> <span class="tooltip"><strong>physics engine</strong><span class="tooltiptext">Sebuah sistem yang mensimulasikan aspek sistem fisik sehingga benda dapat mempercepat dengan benar dan dipengaruhi oleh tabrakan, gravitasi dan kekuatan lainnya. <a href="PhysicsSection.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#PhysicsEngine">Glossary</a></span></span></span>, dan Collider memungkinkan orang kaku untuk tabrakan dan berinteraksi dengan Collider lainnya.</p> 
+       <p>Jika Anda ingin tahu lebih banyak tentang menggunakan Komponen tertentu, Anda dapat membaca tentang salah satu dari mereka di halaman Referensi Komponen yang relevan. Anda juga dapat mengakses halaman referensi untuk Komponen dari Unity dengan mengklik <strong>?</strong> kecil di header Komponen di Inspektur.</p> 
+       <h2>Komponen Editing</h2> 
+       <p>Salah satu aspek besar Komponen adalah fleksibilitas. Ketika Anda melampirkan Komponen ke GameObject, ada nilai yang berbeda atau <strong>Properties</strong> di Komponen yang dapat disesuaikan dalam editor sambil membangun permainan, atau oleh <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> ketika menjalankan permainan. Ada dua jenis utama Properti: <strong>Values</strong> dan <strong>References</strong>.</p> 
+       <p>Lihat gambar di bawah ini. Ini adalah GameObject kosong dengan Komponen <span class="tooltip"><strong>Audio Source</strong><span class="tooltiptext">Komponen yang memainkan kembali Klip Audio dalam adegan ke pendengaran audio atau melalui mixer audio. <a class="tooltipMoreInfoLink" href="class-AudioSource.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AudioSource">Glossary</a></span></span></span>. Semua nilai <strong>Audio Source</strong> dalam Inspektur adalah nilai default.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AudioGO1.png" alt=""> 
+       </figure> 
+       <p>Komponen ini berisi properti Referensi tunggal, dan tujuh properti Nilai. <span class="tooltip"><strong>Audio Clip</strong><span class="tooltiptext">Sebuah wadah untuk data audio dalam Unity. Unity mendukung aset audio mono, stereo dan multichannel (hingga delapan saluran). Unity dapat mengimpor .aif, .wav, .mp3, dan format file audio .ogg, dan .xm, .mod, .it, dan format modul pelacak .s3m. <a class="tooltipMoreInfoLink" href="class-AudioClip.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AudioClip">Glossary</a></span></span></span> adalah properti Referensi. Ketika sumber audio ini mulai bermain, itu akan mencoba untuk bermain file audio yang direferensikan di properti <strong>Audio Clip</strong>. Jika tidak ada referensi yang dibuat, kesalahan akan terjadi karena tidak ada audio yang akan dimainkan. Anda harus merujuk file dalam Inspektur. Ini semudah menyeret file audio dari Project View ke Referensi Property atau menggunakan Object Selector.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AudioReference1.png" alt="Now a sound effect file is referenced in the Audio Clip property"> 
+        <figcaption>
+          Sekarang file efek suara direferensikan di properti Audio Clip 
+        </figcaption> 
+       </figure> 
+       <p>Komponen dapat mencakup referensi ke jenis komponen lainnya, GameObjects, atau Aset. Anda dapat membaca lebih lanjut tentang menetapkan referensi di halaman sekitar <a href="EditingValueProperties.html">Mengedit Properti</a>.</p> 
+       <p>Sifat yang tersisa pada Klip Audio adalah semua properti Nilai. Ini dapat disesuaikan langsung di Inspektur. Properti Nilai pada Klip Audio adalah semua toggles, nilai numerik, bidang drop-down, tetapi properti nilai juga dapat string teks, warna, kurva, dan jenis lainnya. Anda dapat membaca lebih banyak tentang sifat nilai pengeditan ini di halaman sekitar <a href="EditingValueProperties.html">sifat nilai edit</a>.</p> 
+       <h2>Komponen Context Login</h2> 
+       <p>Menu konteks untuk komponen memiliki sejumlah perintah yang berguna.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ComponentContextMenu1.png" alt="The Component Context Menu"> 
+        <figcaption>
+          The Component Context Menu 
+        </figcaption> 
+       </figure> 
+       <p>Perintah yang sama juga tersedia dari menu kebab (3 titik vertikal) ikon di kanan atas yang ekstrem dari panel komponen dalam inspektur.</p> 
+       <h3>Reset</h3> 
+       <p>Perintah ini mengembalikan nilai-nilai properti komponen sebelum sesi pengeditan terbaru.</p> 
+       <h3>Remove</h3> 
+       <p>Perintah <strong>Remove Component</strong> tersedia untuk kasus di mana Anda tidak perlu lagi komponen yang melekat pada GameObject. Perhatikan bahwa ada beberapa kombinasi komponen yang tergantung pada satu sama lain (misalnya, <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-HingeJoint.html">Engsel Bersama</a><span class="tooltiptext">Bersamaan bahwa kelompok bersama dua komponen kaku, melatih mereka untuk bergerak seperti mereka terhubung dengan engsel. Sangat cocok untuk pintu, tetapi juga dapat digunakan untuk model rantai, pendulum dan sebagainya. <a href="class-HingeJoint.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#HingeJoint">Glossary</a></span></span></span> hanya bekerja ketika <a href="class-Rigidbody.html">Rigidbody</a> juga terpasang); Anda akan melihat pesan peringatan jika Anda mencoba untuk menghapus komponen yang lain tergantung pada.</p> 
+       <h3>Move Up/Down</h3> 
+       <p>Gunakan perintah <strong>Move Up</strong> dan <strong>Move Down</strong> untuk mengatur ulang urutan komponen GameObject di Inspector.</p> 
+       <p> <strong>Tip</strong>: Atau, klik dan tarik nama komponen naik atau turun di jendela Inspektur, dan kemudian menjatuhkannya.</p> 
+       <h3>Fotokopi/Paste</h3> 
+       <p>Perintah <strong>Copy Component</strong> menyimpan pengaturan properti tipe dan arus dari komponen. Ini kemudian dapat disisipkan ke komponen lain dari jenis yang sama dengan <strong>Paste Component Values</strong>. Anda juga dapat membuat komponen baru dengan nilai yang disalin pada objek dengan menggunakan <strong>Paste Component As New</strong> </p> 
+       <h2>Pengujian Properti</h2> 
+       <p>Meskipun permainan Anda berada di <strong>Play Mode</strong>, Anda bebas untuk mengubah properti di Inspektur GameObject. Misalnya, Anda mungkin ingin bereksperimen dengan ketinggian melompat yang berbeda. Jika Anda membuat properti <strong>Jump Height</strong> dalam skrip, Anda dapat memasukkan Mode Play, mengubah nilai, dan tekan tombol melompat untuk melihat apa yang terjadi. Kemudian tanpa keluar Play Mode Anda dapat mengubahnya lagi dan melihat hasilnya dalam beberapa detik. Ketika Anda keluar Play Mode, sifat Anda akan mengalihkan nilai-nilai mode pra-Play mereka, jadi Anda tidak kehilangan pekerjaan apa pun. Aliran kerja ini memberi Anda kekuatan yang luar biasa untuk bereksperimen, menyesuaikan, dan memperbaiki permainan Anda tanpa menginvestasikan banyak waktu dalam siklus iterasi. Cobalah dengan properti di Play Mode. Kami pikir Anda akan terkesan.</p> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2018–09–18 Login</span></p></li> 
+        <li><p><span class="page-history">Kemampuan untuk menyeret dan menjatuhkan komponen di jendela Inspektur ditambahkan di 5.6</span></p></li> 
+       </ul> 
+       <!-- area:none --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="Components.html"></a></span> 
+         <div class="tip">
+           Pengantar komponen 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="PrimitiveObjects.html"></a></span> 
+         <div class="tip">
+           objek pemegang saham Primitive dan placeholder 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

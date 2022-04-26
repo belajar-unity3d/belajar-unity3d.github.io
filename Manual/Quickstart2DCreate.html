@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Membuat permainan 2D</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Unity2D.html">2D</a></li> 
+         <li><a href="Quickstart2D.html">2D permainan pengembangan panduan cepatstart</a></li> 
+         <li>Membuat permainan 2D</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="Quickstart2DSetup.html"></a></span> 
+          <div class="tip">
+            Pengaturan awal untuk game 2D 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="2DSorting.html"></a></span> 
+          <div class="tip">
+            2D Sorting 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Membuat permainan 2D</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Sebelum Anda membuat permainan 2D, Anda perlu memutuskan pada <a href="Quickstart2DPerspective.html">perspektif permainan</a> dan <a href="Quickstart2DArt.html">gaya seni</a>.</p> 
+       <p>Untuk membuat game 2D, <a href="Quickstart2DSetup.html">mendirikan proyek Unity Anda</a> dan kemudian membiasakan diri dengan konsep yang relevan dalam urutan berikut:</p> 
+       <ol> 
+        <li><p><a href="#Fundamentals">Fundamentals</a></p></li> 
+        <li><p><a href="#Scripting">Scripting</a></p></li> 
+        <li><p><span class="tooltip"><a class="tooltipMoreInfoLink" href="#Sprites">Sprites</a><span class="tooltiptext">Objek grafis 2D. Jika Anda digunakan untuk bekerja di 3D, Sprites pada dasarnya hanya tekstur standar tetapi ada teknik khusus untuk menggabungkan dan mengelola tekstur sprite untuk efisiensi dan kenyamanan selama perkembangan. <a href="Sprites.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Sprite">Glossary</a></span></span></span></p></li> 
+        <li><p><a href="#Environment">Membangun lingkungan dalam game</a></p></li> 
+        <li><p><a href="#Animation">Animasi karakter</a></p></li> 
+        <li><p> <a href="#Graphics">Graphics</a> </p></li> 
+        <li><p><a href="#Physics">Fisika 2D</a></p></li> 
+        <li><p><a href="#Audio">Audio</a></p></li> 
+        <li><p><a href="#UI">Antarmuka pengguna</a></p></li> 
+        <li><p><a href="#Profiling">Profil, mengoptimalkan dan pengujian</a></p></li> 
+        <li><p><a href="#Publishing">Publishing</a></p></li> 
+       </ol> 
+       <p><a name="Fundamentals"></a></p> 
+       <h2>Fundamentals</h2> 
+       <p><span class="tooltip"><a class="tooltipMoreInfoLink" href="GameObjects.html">GameObjects</a><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> adalah objek mendasar dalam Unity yang mewakili karakter, props, pemandangan, dan banyak lagi. Setiap objek dalam permainan Anda adalah GameObject.</p> 
+       <p>GameObjects mewakili item dalam permainan Anda; ruang di mana Anda menempatkan mereka untuk membangun tingkat Anda disebut <span class="tooltip"><a class="tooltipMoreInfoLink" href="CreatingScenes.html">scene</a><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>. Adegan di Unity selalu 3D; ketika Anda membuat permainan 2D di Unity, Anda biasanya memilih untuk mengabaikan dimensi ketiga (sumbu z) tetapi Anda juga dapat menggunakannya dalam kasus khusus, misalnya ketika membuat permainan 2.5D.</p> 
+       <p>Perilaku GameObjects didefinisikan oleh blok fungsi yang disebut komponen. Komponen berikut adalah fundamental untuk game 2D:</p> 
+       <ul> 
+        <li><p> <a class="tooltipMoreInfoLink" href="class-Transform.html">Transform</a>: <span class="tooltip"><strong>Transform component</strong><span class="tooltiptext">Komponen Transform menentukan Posisi, Rotasi, dan Skala setiap objek di tempat kejadian. Setiap GameObject memiliki Transform. <a href="class-Transform.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#TransformComponent">Glossary</a></span></span></span> menentukan Posisi, Rotasi, dan Timbangan setiap GameObject di tempat kejadian. Setiap GameObject memiliki komponen Transform.</p></li> 
+        <li><p><span class="tooltip"><a class="tooltipMoreInfoLink" href="class-SpriteRenderer.html">Sprite Renderer</a><span class="tooltiptext">Komponen yang memungkinkan Anda menampilkan gambar sebagai Sprites untuk digunakan di kedua adegan 2D dan 3D. <a href="class-SpriteRenderer.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SpriteRenderer">Glossary</a></span></span></span>: komponen Sprite Renderer membuat Sprite dan mengontrol bagaimana terlihat dalam sebuah adegan.</p></li> 
+        <li><p><span class="tooltip"><a class="tooltipMoreInfoLink" href="class-Camera.html">Kamera</a><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span>: perangkat yang menangkap dan menampilkan dunia ke pemain. Menandai Kamera sebagai <strong>Orthographic</strong> menghilangkan semua perspektif dari tampilan Kamera. Ini sebagian besar berguna untuk membuat isometric atau 2D permainan.</p></li> 
+        <li><p> <a class="tooltipMoreInfoLink" href="Collider2D.html">Catalog 2D</a>: komponen ini mendefinisikan bentuk 2D GameObject untuk tujuan fisik <span class="tooltip"><strong>collisions</strong><span class="tooltiptext">tabrakan terjadi ketika mesin fisika mendeteksi bahwa tabrakan dari dua GameObjects membuat kontak atau tumpang tindih, ketika setidaknya satu memiliki komponen kaku dan bergerak. <a href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Collision">Glossary</a></span></span></span>. Sitemap<a href="class-Physics2DManager.html">2D Fisika</a>. </p></li> 
+       </ul> 
+       <p>Komponen adalah representasi <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span> dari kelas C#; Anda dapat menggunakan skrip untuk mengubah dan berinteraksi dengan komponen, atau membuat yang baru. Lihat bagian <a href="#Scripting">Scripting</a> untuk detail lebih lanjut.</p> 
+       <p><a name="Scripting"></a></p> 
+       <h2>Scripting</h2> 
+       <p>Semua game 2D perlu <span class="tooltip"><a class="tooltipMoreInfoLink" href="ScriptingSection.html">scripts</a><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span>. Script merespon input dari pemain dan mengatur acara di gameplay untuk terjadi ketika mereka harus.</p> 
+       <p>Untuk detail tentang cara menggunakan skrip di Unity melihat <a href="ScriptingConcepts.html">Scripting Overview</a>. Juga lihat kursus Unity Learn.</p> 
+       <p>Script dilampirkan ke GameObjects, dan skrip yang Anda buat mengherankan dari kelas <a href="../ScriptReference/MonoBehaviour.html">MonoBehaviour</a>.</p> 
+       <p><a name="Sprites"></a></p> 
+       <h2>Sprites</h2> 
+       <p> <a href="Sprites.html">Sprites</a> adalah benda grafis 2D. Anda menggunakan Sprites untuk semua jenis game 2D. Misalnya, Anda dapat mengimpor gambar karakter utama Anda sebagai Sprite.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/quickstart-sprite-2d.png" alt="A character Sprite"> 
+        <figcaption>
+          Karakter Sprite 
+        </figcaption> 
+       </figure> 
+       <p>Anda juga dapat menggunakan koleksi Sprite untuk membangun karakter. Ini memungkinkan Anda kontrol yang lebih besar atas pergerakan dan animasi karakter Anda.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/quickstart-sprite-editor-2d.png" alt="Multiple Sprites that make up the parts of a character, displayed in the Sprite Editor"> 
+        <figcaption>
+          Beberapa Sprites yang membuat bagian dari karakter, ditampilkan dalam Editor Sprite 
+        </figcaption> 
+       </figure> 
+       <h3>Mengimpor dan mengatur Sprites</h3> 
+       <p>Mengimpor Sprites Anda dengan pengaturan yang disarankan Unity; lihat <a href="Sprites.html">Mengimpor dan Menyiapkan Sprites</a>.</p> 
+       <h3>Rendering Sprites</h3> 
+       <p>Gunakan komponen <a href="class-SpriteRenderer.html">Sprite Renderer</a> untuk membuat Sprites Anda. Misalnya, Anda dapat menggunakan Sprite Renderer untuk mengubah warna dan opacity Sprite.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/quickstart-sprite-renderer-2d.png" alt="Adjusting the color of a Sprite with the Sprite Renderer"> 
+        <figcaption>
+          Menyesuaikan warna Sprite dengan Sprite Renderer 
+        </figcaption> 
+       </figure> 
+       <p>Sitemap Sitemap Dengan mengatur Sprites dalam lapisan, Anda dapat membuat ilusi kedalaman. Anda dapat memilah Sprites sesuai dengan banyak strategi. Lihat <a href="Sprites.html">Sorting Sprites</a> untuk rincian lengkap. Misalnya, Anda mungkin memilah Sprites di sepanjang sumbu y, sehingga Sprites yang lebih tinggi diurutkan di belakang Sprites yang lebih rendah, untuk membuat Sprites yang lebih tinggi muncul lebih jauh daripada Sprites yang lebih rendah.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/quickstart-sort-sprites-2d.png" alt="Sprites sorted along the y-axis"> 
+        <figcaption>
+          Sprites diurutkan di sepanjang sumbu y 
+        </figcaption> 
+       </figure> 
+       <p>Untuk mengatur urutan overlay Sprites, gunakan <a href="class-TagManager.html">Lapisan Sortasi</a>.</p> 
+       <p>Untuk kelompok GameObjects dengan <a href="class-SpriteRenderer.html">Sprite Renderers</a>, dan kontrol urutan di mana mereka membuat Sprites mereka, gunakan <a href="class-SortingGroup.html">Sorting Groups</a>.</p> 
+       <h3>Atlas Asni</h3> 
+       <p>Anda dapat menggunakan <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-SpriteAtlas.html">Atlas Asni</a><span class="tooltiptext">Tekstur yang terdiri dari beberapa tekstur yang lebih kecil. Juga disebut sebagai atlas tekstur, sprite gambar, sprite sheet atau tekstur dikemas. <a href="class-SpriteAtlas.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#spriteatlas">Glossary</a></span></span></span> untuk mengkonsolidasikan beberapa Tekstur menjadi Tekstur gabungan tunggal. Ini mengoptimalkan permainan Anda dan menyimpan memori. Sebagai contoh, Anda dapat menambahkan semua Sprites Anda yang terkait dengan karakter atau tujuan tertentu untuk Sprite Atlas.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/quickstart-sprite-atlas-2d.png" alt="A Sprite Atlas"> 
+        <figcaption>
+          Atlas Asni 
+        </figcaption> 
+       </figure> 
+       <p>See the .</p> 
+       <p><a name="Environment"></a></p> 
+       <h2>Membangun lingkungan dalam game</h2> 
+       <p>Desain lingkungan mengacu pada proses membangun tingkat dan lingkungan permainan Anda. Anda dapat menggabungkan alat desain lingkungan di bagian ini dengan cara mana pun yang masuk akal untuk permainan Anda; misalnya, Anda dapat membuat permainan top-down hanya menggunakan 9-slice, atau Anda dapat membuat sisi pada platformer dengan Tilemap dan SpriteShape.</p> 
+       <p><a name="Slicing"></a></p> 
+       <h3>9-pengirisan</h3> 
+       <p>9-slicing adalah teknik 2D yang memungkinkan Anda untuk menggunakan kembali gambar pada berbagai ukuran tanpa perlu menyiapkan beberapa aset. Unity dapat secara dinamis meregangkan dan ubin bagian yang ditunjuk Sprite untuk memungkinkan satu Sprite untuk melayani sebagai perbatasan atau latar belakang untuk elemen UI dari banyak ukuran. Sitemap<a href="9SliceSprites.html">9-slicing kecambah</a>.</p> 
+       <p>Sebagai contoh, Anda dapat menggunakan 9-slicing untuk meregangkan Sprite untuk membentuk ketika Anda membangun tingkat 2D.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/quickstart-9-slice-2d.png" alt="A 9-sliced Sprite, split into nine sections"> 
+        <figcaption>
+          Sprite 9-sliced, dibagi menjadi sembilan bagian 
+        </figcaption> 
+       </figure> 
+       <p>See the .</p> 
+       <p><a name="Tilemap"></a></p> 
+       <h3>Tilemap</h3> 
+       <p>Komponen <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-Tilemap.html">Tilemap</a><span class="tooltiptext">GameObject yang memungkinkan Anda untuk dengan cepat membuat tingkat 2D menggunakan ubin dan overlay grid. <a href="class-Tilemap.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Tilemap">Glossary</a></span></span></span> adalah sistem yang menyimpan dan menangani Aset ubin untuk menciptakan tingkat 2D. Gunakan paket <a href="class-Tilemap.html">2D Foto Editor</a> (diinstal secara default) untuk menggunakan Tilemaps.</p> 
+       <p>Misalnya, Anda dapat menggunakan Tilemaps ke tingkat cat menggunakan alat ubin dan sikat dan menentukan aturan untuk bagaimana ubin berperilaku.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/quickstart-tilemap-2d.png" alt="The Tile Palette window, used to edit Tilemaps"> 
+        <figcaption>
+          Jendela palet ubin, digunakan untuk mengedit Tilemaps 
+        </figcaption> 
+       </figure> 
+       <p>See the .</p> 
+       <h4>2D Tilemap Extras</h4> 
+       <p>Untuk menambahkan beberapa aset Tilemap tambahan ke Proyek Anda, instal paket. Paket ini berisi skrip 2D dan Tilemap Editor yang dapat Anda gunakan untuk Proyek Anda sendiri. Anda dapat menyesuaikan perilaku skrip untuk membuat Sikat baru yang sesuai dengan skenario yang berbeda.</p> 
+       <p><a name="Isometric"></a></p> 
+       <h4>Isometric Tilemaps</h4> 
+       <p>Untuk permainan dengan perspektif isometrik, Anda dapat membuat <a href="Tilemap-Isometric.html">Isometric Tilemaps</a>.</p> 
+       <h3>SpriteShape</h3> 
+       <p>Dengan cara yang mirip dengan alat gambar vektor, SpriteShape menyediakan cara yang lebih fleksibel untuk menciptakan Sprites yang lebih besar, seperti lanskap dan jalur yang terlihat organik. Sitemap</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/quickstart-spriteshape-path-2d.png" alt="A path created in SpriteShape"> 
+        <figcaption>
+          Jalan yang dibuat di SpriteShape 
+        </figcaption> 
+       </figure> 
+       <p>See the .</p> 
+       <p><a name="Animation"></a></p> 
+       <h2>Animasi karakter</h2> 
+       <p>Ada tiga cara yang berbeda yang dapat Anda animate karakter 2D:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Jenis animasi 2D</th> 
+          <th style="text-align:left;">Digunakan untuk</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Frame-by-frame</td> 
+          <td style="text-align:left;">Alasan artistik, jika Anda ingin permainan Anda memiliki gaya seni animasi klasik. Animasi bingkai-by-frame relatif intensif sumber daya, baik untuk membuat dan menjalankan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Cutout</td> 
+          <td style="text-align:left;">Animasi kerangka halus, ketika karakter tidak memerlukan artikulasi realistis.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Skeletal</td> 
+          <td style="text-align:left;">Animasi kerangka halus di mana Sprites membungkuk sesuai dengan struktur tulang. Gunakan ini ketika karakter membutuhkan nuansa organik lebih.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>Frame-by-frame</h3> 
+       <p>Animasi bingkai-by-frame didasarkan pada teknik animasi cel tradisional menggambar setiap saat animasi sebagai gambar individu, yang dimainkan dalam urutan cepat, seperti halaman flipping pada buku flip.</p> 
+       <p>Untuk melakukan animasi bingkai-by-frame, ikuti .</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/quickstart-frame-by-frame-2d.png" alt="Frame-by-frame animation in the Sprite Editor"> 
+        <figcaption>
+          Animasi bingkai-by-frame dalam Editor Sprite 
+        </figcaption> 
+       </figure> 
+       <p>See the .</p> 
+       <h3>Cutout</h3> 
+       <p>Dalam animasi cutout, beberapa Sprites membuat tubuh karakter, dan setiap bagian bergerak untuk memberikan efek visual dari seluruh karakter bergerak. Gaya animasi ini mirip dengan animasi skeletal (lihat di bawah), kecuali bahwa Sprites tidak menekuk.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/quickstart-cutout-2d.png" alt="Cutout animation in the Sprite Editor"> 
+        <figcaption>
+          WordPress.org 
+        </figcaption> 
+       </figure> 
+       <h3>Skeletal</h3> 
+       <p>Dengan animasi skeletal, Anda memetakan Sprite atau sekelompok Sprites ke kerangka animasi. Anda dapat membuat dan mendefinisikan tulang animasi untuk karakter dan benda-benda, yang menentukan bagaimana mereka harus menekuk dan bergerak. Pendekatan ini memungkinkan tulang untuk menekuk dan merusak Sprites, untuk gaya gerakan yang lebih alami. Untuk menggunakan animasi kerangka, Anda perlu menggunakan paket <a href="com.unity.2d.animation.html">Animasi 2D</a> (diinstal secara default).</p> 
+       <p>Untuk alur kerja Animasi 2D, termasuk panduan untuk bekerja dengan Editor Tulang, lihat .</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/quickstart-skeletal-2d.png" alt="A character with bones in the Bone Editor"> 
+        <figcaption>
+          Karakter dengan tulang di Editor Tulang 
+        </figcaption> 
+       </figure> 
+       <p><a name="Graphics"></a></p> 
+       <h2>Graphics</h2> 
+       <p>Bagian ini menjelaskan pilihan grafis Anda saat menggunakan Universal <span class="tooltip"><strong>Render Pipeline</strong><span class="tooltiptext">Rangkaian operasi yang mengambil isi dari Adegan, dan menampilkannya di layar. Unity memungkinkan Anda memilih dari pipa render yang dibangun sebelumnya, atau menulis sendiri. <a class="tooltipMoreInfoLink" href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span> (URP).</p> 
+       <h3>Lighting</h3> 
+       <p>Karena Anda menggunakan URP dengan Renderer 2D, Anda dapat menggunakan komponen Light 2D untuk menerapkan pencahayaan 2D yang dioptimalkan ke Sprites. Untuk rincian, lihat .</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/quickstart-lighting-2d.png" alt="These two images show the same scene; in the image on the left, 2D Lights are disabled, and in the image on the right, 2D lights are enabled. With 2D Lights, you can use the same Sprites to create different weather conditions or moods."> 
+        <figcaption>
+          Dua gambar ini menunjukkan adegan yang sama; dalam gambar di sebelah kiri, Lampu 2D dinonaktifkan, dan dalam gambar di kanan, lampu 2D diaktifkan. Dengan Lampu 2D, Anda dapat menggunakan Sprites yang sama untuk menciptakan kondisi cuaca atau suasana hati yang berbeda. 
+        </figcaption> 
+       </figure> 
+       <p>Untuk mengatur pencahayaan:</p> 
+       <ol> 
+        <li><p>Siapkan Anda Sprit untuk penerangan. Untuk rincian, lihat .</p></li> 
+        <li><p>Mengatur Tekstur <span class="tooltip"><strong>normal map</strong><span class="tooltiptext">Jenis tekstur Peta Bump yang memungkinkan Anda untuk menambahkan detail permukaan seperti benjolan, alur, dan goresan ke model yang menangkap cahaya seolah-olah mereka diwakili oleh geometri nyata.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Normalmap">Glossary</a></span></span></span> dan masker. Lampu 2D dapat berinteraksi dengan peta normal dan tekstur masker terkait Sprites untuk menciptakan efek pencahayaan canggih, seperti <a href="https://en.wikipedia.org/wiki/Normal_mapping">pemetaan normal</a>. Sitemap</p></li> 
+        <li><p>Buat GameObject 2D Light; lihat.</p></li> 
+        <li><p>Konfigurasikan aset Data Renderer 2D; lihat.</p></li> 
+        <li><p>(Opsional) jika Anda ingin menerapkan efek 2D Light untuk permainan seni <span class="tooltip"><strong>pixel</strong><span class="tooltiptext">Unit terkecil dalam gambar komputer. Ukuran piksel tergantung pada resolusi layar Anda. Pencahayaan pixel dihitung pada setiap piksel layar. <a class="tooltipMoreInfoLink" href="ShadowPerformance.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#pixel">Glossary</a></span></span></span>, lihat.</p></li> 
+       </ol> 
+       <p>See the .</p> 
+       <h3>Shadows</h3> 
+       <p>Untuk menentukan bentuk dan sifat yang digunakan Cahaya untuk menentukan bayangan itu, gunakan. Meningkatkan <strong>Shadow Intensity</strong> Cahaya di atas nol.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/quickstart-shadows-2d.png" alt="A shadow intensity of 0.5 in the Shadow Caster 2D component"> 
+        <figcaption>
+          Sebuah intensitas bayangan 0,5 di komponen Bayangan Caster 2D 
+        </figcaption> 
+       </figure> 
+       <h3>Tampilan dan nuansa yang ditingkatkan</h3> 
+       <p>Sistem partikel dan <span class="tooltip"><strong>post-processing</strong><span class="tooltiptext">Proses yang meningkatkan visual produk dengan menerapkan filter dan efek sebelum gambar muncul di layar. Anda dapat menggunakan efek pasca proses untuk mensimulasikan kamera fisik dan sifat film, misalnya Bloom dan Kedalaman Lapangan. <a class="tooltipMoreInfoLink" href="PostProcessingOverview.html">More info</a> <span class="search-words">pemrosesan pos, pasca proses, pasca proses</span><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#post-processing">Glossary</a></span></span></span> adalah alat opsional yang dapat Anda gunakan untuk menambahkan poles ke permainan Anda.</p> 
+       <h4>Sistem partikel</h4> 
+       <p>Anda dapat menggunakan sistem partikel untuk membuat benda dinamis seperti api, asap atau cairan, sebagai alternatif untuk menggunakan Sprite. Sprites lebih cocok untuk objek fisik. Sitemap<span class="tooltip"><a class="tooltipMoreInfoLink" href="ParticleSystems.html">Sistem partikel</a><span class="tooltiptext">Komponen yang mensimulasikan entitas fluida seperti cairan, awan dan nyala dengan menghasilkan dan memikat sejumlah besar gambar 2D kecil di tempat kejadian. <a href="class-ParticleSystem.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#particlesystem">Glossary</a></span></span></span>. </p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/quickstart-particle-system-2d.png" alt="A fire effect, created with the Particle System and Shader Graph for 2D"> 
+        <figcaption>
+          Efek api, dibuat dengan Sistem Partikel dan Grafik Shader untuk 2D 
+        </figcaption> 
+       </figure> 
+       <h4>Post-processing</h4> 
+       <p>Anda dapat menggunakan efek pasca proses dan efek layar penuh untuk secara signifikan meningkatkan penampilan permainan Anda. Misalnya, Anda dapat menggunakan efek ini untuk mensimulasikan kamera fisik atau sifat film, atau untuk membuat visual bergaya.</p> 
+       <p>URP memiliki implementasi pasca prosesnya sendiri. Sitemap</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/quickstart-post-processing-2d.png" alt="The Lost Crypt demo uses the bloom and vignette post-processing effects"> 
+        <figcaption>
+          Demo Crypt yang hilang menggunakan efek pasca proses mekar dan vignette 
+        </figcaption> 
+       </figure> 
+       <p><a name="Physics"></a></p> 
+       <h2>Fisika 2D</h2> 
+       <p>Pengaturan Fisika 2D menentukan batas pada akurasi simulasi fisik dalam permainan 2D Anda. Sitemap<a href="class-Physics2DManager.html">2D Fisika</a>. </p> 
+       <p><a href="https://www.youtube.com/watch?v=Xxbs9x2qB7Y&amp;feature=youtu.be">video</a> ini memberikan gambaran dari fitur fisika 2D pada Unity 2020.1.</p> 
+       <p>Untuk mempelajari cara menggunakan Unity 2D <span class="tooltip"><strong>physics engine</strong><span class="tooltiptext">Sebuah sistem yang mensimulasikan aspek sistem fisik sehingga benda dapat mempercepat dengan benar dan dipengaruhi oleh tabrakan, gravitasi dan kekuatan lainnya. <a class="tooltipMoreInfoLink" href="PhysicsSection.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#PhysicsEngine">Glossary</a></span></span></span>, lihat .</p> 
+       <p>Alat fisika 2D berikut berguna untuk game 2D.</p> 
+       <ul> 
+        <li><p><a href="#Rigidbody">kaku 2D</a></p></li> 
+        <li><p><a href="#Collider">Catalog 2D</a></p></li> 
+        <li><p><a href="#Triggers">Triggers</a></p></li> 
+        <li><p><a href="#Joints">2D Sendi</a></p></li> 
+        <li><p><a href="#Effectors">Efektor 2D</a></p></li> 
+       </ul> 
+       <h3>kaku 2D<a name="Rigidbody"></a> </h3> 
+       <p>Komponen 2D <span class="tooltip"><strong>Rigidbody</strong><span class="tooltiptext">Komponen yang memungkinkan GameObject untuk dipengaruhi oleh gravitasi simulasi dan kekuatan lainnya. <a class="tooltipMoreInfoLink" href="class-Rigidbody.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Rigidbody">Glossary</a></span></span></span> menempatkan GameObject di bawah kendali mesin fisika. Sitemap<a href="class-Rigidbody2D.html">kaku 2D</a>. </p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/quickstart-rigidbody-component-2d.png" alt="The Rigidbody 2D component"> 
+        <figcaption>
+          Komponen 2D Rigidbody 
+        </figcaption> 
+       </figure> 
+       <h3>Collider 2D<a name="Collider"></a> </h3> 
+       <p>Komponen Collider 2D mendefinisikan bentuk GameObject 2D untuk tujuan tabrakan fisik. Anda juga dapat menggunakan komponen <span class="tooltip"><strong>Collider</strong><span class="tooltiptext">Bentuk tak terlihat yang digunakan untuk menangani tabrakan fisik untuk objek. Seorang sari tidak perlu menjadi bentuk yang sama dengan jala objek - perkiraan kasar sering lebih efisien dan tidak dapat dibedakan dalam gameplay. <a class="tooltipMoreInfoLink" href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Collider">Glossary</a></span></span></span> 2D untuk deteksi masukan. Sebagai contoh, dalam game mobile Anda dapat menggunakannya untuk membuat Sprites dapat dipilih.</p> 
+       <p>Jenis Collider 2D yang dapat Anda gunakan dengan Rigidbody 2D adalah:</p> 
+       <ul> 
+        <li><p><a href="class-CircleCollider2D.html">Lingkaran Collider 2D</a></p></li> 
+        <li><p><a href="class-BoxCollider2D.html">Kotak Collider 2D</a></p></li> 
+        <li><p><a href="class-PolygonCollider2D.html">Poligon Collider 2D</a></p></li> 
+        <li><p><a href="class-EdgeCollider2D.html">Tepi Collider 2D</a></p></li> 
+        <li><p><a href="class-CapsuleCollider2D.html">Kapsul Collider 2D</a></p></li> 
+        <li><p><a href="class-CompositeCollider2D.html">Komposit Collider 2D</a></p></li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/quickstart-circle-collider-component.png" alt="The Circle Collider 2D component"> 
+        <figcaption>
+          Lingkaran Collider 2D komponen 
+        </figcaption> 
+       </figure> 
+       <h3>Triggers<a name="Triggers"></a> </h3> 
+       <p>Ketika Anda mengatur Collider 2D sebagai Pemicu (dengan mengaktifkan properti <strong>Is Trigger</strong>nya), tidak lagi berperilaku sebagai objek fisik, dan dapat mengganggu Collider lain tanpa menyebabkan tabrakan. Sebagai gantinya, ketika Collider memasuki ruangnya, Unity memanggil fungsi <code>OnTriggerEnter</code> pada script GameObject.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/quickstart-is-trigger-2d.png" alt="The Circle Collider 2D component with Is Trigger selected"> 
+        <figcaption>
+          Lingkaran Collider 2D komponen dengan 
+         <strong>Is Trigger</strong> dipilih 
+        </figcaption> 
+       </figure> 
+       <h3>Sitemap Sitemap<a name="Joints"></a> </h3> 
+       <p>Sendi melampirkan GameObjects bersama. Anda hanya dapat melampirkan 2D <span class="tooltip"><strong>joints</strong><span class="tooltiptext">Komponen fisika yang memungkinkan koneksi dinamis antara komponen Rigidbody, biasanya memungkinkan beberapa tingkat pergerakan seperti engsel. <a class="tooltipMoreInfoLink" href="Joints.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#joint">Glossary</a></span></span></span> ke GameObjects yang memiliki komponen Rigidbody 2D terpasang, atau ke posisi tetap di ruang dunia. Sitemap<a href="Joints2D.html">2D Sendi</a>. </p> 
+       <h3>2D Effectors<a name="Effectors"></a> </h3> 
+       <p>Gunakan Effector 2D <span class="tooltip"><a class="tooltipMoreInfoLink" href="UsingComponents.html">components</a><span class="tooltiptext">Bagian fungsional dari GameObject. GameObject dapat mengandung sejumlah komponen. Unity memiliki banyak komponen built-in, dan Anda dapat membuat Anda sendiri dengan menulis skrip yang berwarisi dari MonoBehaviour. <a href="UsingComponents.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#component">Glossary</a></span></span></span> dengan komponen <a href="Collider2D.html">Catalog 2D</a> untuk mengarahkan kekuatan <a href="PhysicsSection.html">fisika</a> dalam adegan Anda ketika <a href="GameObjects.html">GameObject</a> Collider datang ke kontak satu sama lain. Sitemap<a href="Effectors2D.html">Efektor 2D</a>.</p> 
+       <p><a name="Audio"></a></p> 
+       <h2>Audio</h2> 
+       <p>Anda dapat menambahkan musik latar belakang dan efek suara untuk permainan Anda di Unity; lihat <a href="AudioOverview.html">Gambaran Keseluruhan Audio</a>. Gunakan perangkat lunak pihak ketiga untuk membuat audio dan impor Anda menjadi Unity dengan pengaturan yang disarankan.</p> 
+       <p><a name="UI"></a></p> 
+       <h2>Antarmuka pengguna</h2> 
+       <p>Jika Anda ingin menambahkan menu atau membantu permainan Anda, Anda perlu mengatur <a href="UIToolkits.html">antarmuka pengguna</a>. Untuk mengatur antarmuka pengguna, gunakan.</p> 
+       <p><a name="Profiling"></a></p> 
+       <h2>Profil, mengoptimalkan dan menguji build</h2> 
+       <h3>Profil</h3> 
+       <p>Profil memungkinkan Anda untuk melihat bagaimana sumber daya intensif bagian yang berbeda dari permainan Anda. Anda harus selalu profil permainan Anda di platform rilis target; lihat <a href="profiler-profiling-applications.html">Profil aplikasi Anda</a>.</p> 
+       <h3>Optimizing</h3> 
+       <p>Setelah profil, Anda dapat menggunakan hasil untuk membuat peningkatan kinerja dan optimasi. Sitemap<a href="BestPracticeUnderstandingPerformanceInUnity.html">Memahami optimasi dalam Unity</a>.</p> 
+       <h3>Testing</h3> 
+       <p>Uji permainan Anda dan kode Anda dengan Kerangka Uji Unity; lihat.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/quickstart-testing-2d.png" alt="The Test Runner window"> 
+        <figcaption>
+          Jendela Uji Runner 
+        </figcaption> 
+       </figure> 
+       <h2>Penerbitan<a name="Publishing"></a> </h2> 
+       <p>Ketika Anda telah menyelesaikan permainan Anda, Anda siap untuk mempublikasikannya. Sitemap<a href="PublishingBuilds.html">Build di Penerbit</a>. </p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/quickstart-build-settings.png" alt="The Build Settings window"> 
+        <figcaption>
+          Jendela Pengaturan Build 
+        </figcaption> 
+       </figure> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="Quickstart2DSetup.html"></a></span> 
+         <div class="tip">
+           Pengaturan awal untuk game 2D 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="2DSorting.html"></a></span> 
+         <div class="tip">
+           2D Sorting 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

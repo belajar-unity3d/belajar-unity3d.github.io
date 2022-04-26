@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Membangun Pohon Pertama Anda</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="CreatingEnvironments.html">Bangunan dunia</a></li> 
+         <li><a href="class-Tree.html">Editor Pohon</a></li> 
+         <li>Membangun Pohon Pertama Anda</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="class-Tree.html"></a></span> 
+          <div class="tip">
+            Editor Pohon 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="tree-Structure.html"></a></span> 
+          <div class="tip">
+            Dasar Pohon 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Membangun Pohon Pertama Anda</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Sekarang kita akan berjalan melalui penciptaan pohon pertama Anda dengan alat pembuatan pohon.</p> 
+       <h2>Menambahkan Pohon baru</h2> 
+       <p>Untuk membuat aset <span class="tooltip"><strong>Tree</strong><span class="tooltiptext">Komponen GameObject dan terkait yang memungkinkan Anda untuk menambahkan aset pohon ke Adegan Anda. Anda dapat menambahkan tingkat cabang dan daun ke pohon di jendela Inspektur Pohon. <a class="tooltipMoreInfoLink" href="class-Tree.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Tree">Glossary</a></span></span></span> baru, pilih <strong>GameObject &gt; 3D Object &gt; Tree</strong>. Anda akan melihat aset Pohon baru dibuat di Tampilan Proyek Anda, dan disaat ini terbuka Adegan. Pohon baru ini sangat dasar dengan hanya satu cabang, jadi mari tambahkan beberapa karakter untuk itu.</p> 
+       <h2>Adding Branches</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TreeCreator-BasicBranch.png" alt="A brand new tree in your scene"> 
+        <figcaption>
+          Pohon baru merek di tempat kejadian Anda 
+        </figcaption> 
+       </figure> 
+       <p>Pilih pohon untuk melihat jendela <strong>Tree</strong> di <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>. Antarmuka ini menyediakan semua alat untuk membentuk dan memupuk pohon Anda. Anda akan melihat jendela <strong>Tree Hierarchy</strong> dengan dua node hadir: node <strong>Tree Root</strong> dan satu node <strong>Branch Group</strong>, yang kita akan memanggil batang pohon.</p> 
+       <p>Pada <strong>Tree Hierarchy</strong>, pilih <strong>Branch Group</strong>, yang bertindak sebagai batang pohon. Klik pada tombol <strong>Add Branch Group</strong> dan Anda akan melihat <strong>Branch Group</strong> baru tampak terhubung ke Cabang Utama. Sekarang Anda dapat bermain dengan pengaturan di <strong>Branch Group Properties</strong> untuk melihat perubahan cabang yang melekat pada batang pohon.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TreeCreator-AddingBranches1.jpg" alt="Adding branches to the tree trunk."> 
+        <figcaption>
+          Menambahkan cabang ke batang pohon. 
+        </figcaption> 
+       </figure> 
+       <p>Setelah membuat cabang-cabang yang melekat pada batang, kita sekarang dapat menambahkan ranting yang lebih kecil ke cabang yang baru dibuat dengan melampirkan simpul <strong>Branch Group</strong> lain. Pilih <strong>Branch Group</strong> sekunder dan klik tombol <strong>Add Branch Group</strong> lagi. Tweak nilai-nilai kelompok ini untuk membuat lebih banyak cabang yang melekat pada cabang sekunder.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TreeCreator-AddingBranches2.jpg" alt="Adding branches to the secondary branches."> 
+        <figcaption>
+          Menambahkan cabang ke cabang sekunder. 
+        </figcaption> 
+       </figure> 
+       <p>Sekarang struktur cabang pohon berada di tempat. Game kami tidak terjadi pada waktu musim dingin, jadi kami juga harus menambahkan beberapa <strong>Leaves</strong> ke cabang yang berbeda, tepat?</p> 
+       <h2>Menambahkan Daun</h2> 
+       <p>Kami menghias pohon kami dengan daun dengan menambahkan <strong>Leaf Groups</strong>, yang pada dasarnya bekerja sama dengan kelompok Cabang yang telah kami gunakan. Pilih node Group Cabang sekunder Anda dan kemudian klik tombol <strong>Add Leaf Group</strong>. Jika Anda benar-benar hardcore, Anda dapat menambahkan kelompok daun lain ke cabang tersibuk di pohon juga.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TreeCreator-AddingLeaves.jpg" alt="Leaves added to the secondary and smallest branches"> 
+        <figcaption>
+          Daun ditambahkan ke cabang sekunder dan terkecil 
+        </figcaption> 
+       </figure> 
+       <p>Sekarang daun yang tepat diberikan sebagai pesawat buram. Ini karena kita ingin menyesuaikan nilai daun (ukuran, posisi, rotasi, dll) sebelum kita menambahkan bahan untuk mereka. Tweak nilai Daun sampai Anda menemukan beberapa pengaturan yang Anda suka.</p> 
+       <h2>Menambahkan Bahan</h2> 
+       <p>Untuk membuat pohon terlihat realistis kami, kami perlu menerapkan <span class="tooltip"><strong>Materials</strong><span class="tooltiptext">Aset yang menentukan bagaimana permukaan harus diberikan. <a class="tooltipMoreInfoLink" href="class-Material.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Material">Glossary</a></span></span></span> untuk cabang dan daun. Buat Bahan baru dalam proyek Anda menggunakan <strong>Assets &gt; Create &gt; Material</strong>. Namainya ke “My Tree Bark”, dan pilih <strong>Nature &gt; Tree Creator Bark</strong> dari drop-down Shader. Dari sini Anda dapat menetapkan <span class="tooltip"><strong>Textures</strong><span class="tooltiptext">Gambar yang digunakan ketika membuat elemen GameObject, Sprite, atau UI. Tekstur sering diterapkan pada permukaan mesh untuk memberikan detail visual. <a href="class-TextureImporter.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#texture">Glossary</a></span></span></span> yang disediakan dalam Paket Pencipta Pohon ke Basis, Normalmap, dan sifat Gloss dari Bahan Bark. Kami merekomendasikan menggunakan tekstur “BigTree_bark_diffuse” untuk properti Basis dan Gloss, dan “BigTree_bark_normal” untuk properti Normalmap.</p> 
+       <p>Sekarang kita akan mengikuti langkah yang sama untuk membuat Bahan Daun. Membuat Bahan baru dan menetapkan naungan sebagai <strong>Nature &gt; Tree Creator Leaves</strong>. Menetapkan slot tekstur dengan tekstur daun dari Paket Pencipta Pohon.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TreeCreator-LeavesMaterial.png" alt="Material for the Leaves"> 
+        <figcaption>
+          Bahan untuk Daun 
+        </figcaption> 
+       </figure> 
+       <p>Ketika kedua Materi diciptakan, kami akan menetapkan mereka ke Node Group yang berbeda dari Pohon. Pilih Pohon Anda dan klik Node Cabang atau Daun, lalu kembangkan bagian <strong>Geometry</strong> dari <strong>Branch Group Properties</strong>. Anda akan melihat slot tugas Material untuk jenis node yang Anda pilih. Menetapkan Materi yang relevan yang Anda buat dan melihat hasilnya.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TreeCreator-AddingMaterialToLeaves.jpg" alt="Setting the leaves material"> 
+        <figcaption>
+          Menyiapkan bahan daun 
+        </figcaption> 
+       </figure> 
+       <p>Untuk menyelesaikan pohon, menetapkan Bahan Anda untuk semua node <strong>Branch</strong> dan <strong>Leaf Group</strong> di Pohon. Sekarang Anda siap untuk menempatkan pohon pertama Anda ke permainan!</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TreeCreator-FinalTree.jpg" alt="Tree with materials on leaves and branches."> 
+        <figcaption>
+          Pohon dengan bahan pada daun dan cabang. 
+        </figcaption> 
+       </figure> 
+       <h2>Hints</h2> 
+       <ul> 
+        <li>Membuat pohon adalah proses percobaan dan kesalahan.</li> 
+        <li>Jangan membuat terlalu banyak daun / cabang karena ini dapat mempengaruhi kinerja permainan Anda.</li> 
+       </ul> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="class-Tree.html"></a></span> 
+         <div class="tip">
+           Editor Pohon 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="tree-Structure.html"></a></span> 
+         <div class="tip">
+           Dasar Pohon 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

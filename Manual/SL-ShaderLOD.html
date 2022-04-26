@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: ShaderLab: menetapkan nilai LOD ke SubShader</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="Shaders.html">Shaders</a></li> 
+         <li><a href="shader-writing.html">Menu Menu</a></li> 
+         <li><a href="SL-Reference.html">ShaderLab</a></li> 
+         <li><a href="SL-SubShader.html">ShaderLab: mendefinisikan SubShader</a></li> 
+         <li>ShaderLab: menetapkan nilai LOD ke SubShader</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="SL-SubShaderTags.html"></a></span> 
+          <div class="tip">
+            ShaderLab: menetapkan tag ke SubShader 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="SL-Pass.html"></a></span> 
+          <div class="tip">
+            ShaderLab: mendefinisikan Pass 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>ShaderLab: menetapkan nilai LOD ke SubShader</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Halaman ini berisi informasi tentang menggunakan blok <code>LOD</code> pada kode <span class="tooltip"><strong>ShaderLab</strong><span class="tooltiptext">Bahasa Unity untuk mendefinisikan struktur benda-benda Shader. <a class="tooltipMoreInfoLink" href="SL-Shader.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#ShaderLab">Glossary</a></span></span></span> Anda untuk menetapkan nilai <span class="tooltip"><strong>LOD</strong><span class="tooltiptext">Teknik <em>Tingkat Detail</em> (LOD) adalah optimasi yang mengurangi jumlah segitiga yang dimiliki Unity untuk membuat GameObject ketika jaraknya dari kamera meningkat. <a href="LevelOfDetail.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#LOD">Glossary</a></span></span></span> (tingkat detail) ke SubShader.</p> 
+       <h2>Overview</h2> 
+       <p>Anda dapat menetapkan nilai LOD ke SubShader. Nilai ini menunjukkan bagaimana menuntutnya.</p> 
+       <p>Pada runtime, Anda dapat mengatur nilai <strong><span class="tooltip"><strong>shader</strong><span class="tooltiptext">A program that runs on the GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#Shader">Glossary</a></span></span></span> LOD</strong> untuk satu <span class="tooltip"><strong>Shader object</strong><span class="tooltiptext">Contoh kelas Shader, objek Shader adalah wadah untuk program naungan dan instruksi GPU, dan informasi yang memberi tahu Unity bagaimana menggunakannya. Gunakan mereka dengan bahan untuk menentukan penampilan adegan Anda. <a href="shader-objects.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shaderobject">Glossary</a></span></span></span>, atau untuk semua objek Shader. Unity kemudian memprioritaskan SubShaders yang memiliki nilai LOD yang lebih rendah. Untuk informasi tentang bagaimana Unity memilih ketika menggunakan SubShaders, lihat <a href="shader-objects.html#order-of-operations">Objek-objek shader: Order operasi selama rendering</a>.</p> 
+       <p>Sitemap Meskipun teknik ini dinamakan setelah fitur LOD untuk rendering meshes, ada perbedaan penting: shader LOD tidak berhubungan dengan jarak dari <strong>Note:</strong>, dan Unity tidak menghitung warna LOD secara otomatis. Anda harus mengatur LOD warna maksimum secara manual.<span class="tooltip"><strong>Camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span>, and Unity does not calculate shader LOD automatically. You must set the maximum shader LOD manually.</p> 
+       <h2>Overview</h2> 
+       <p>Gunakan teknik ini untuk kinerja naungan halus pada perangkat keras yang berbeda. Ini berguna ketika SubShader secara teoritis didukung oleh perangkat keras pengguna, tetapi perangkat keras tidak mampu menjalankannya dengan baik.</p> 
+       <h2>Kompatibilitas pipa Render</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature name</strong></th> 
+          <th style="text-align:left;"><strong>Built-in <span class="tooltip"><strong>Render Pipeline</strong><span class="tooltiptext">A series of operations that take the contents of a Scene, and displays them on a screen. Unity lets you choose from pre-built render pipelines, or write your own. <a class="tooltipMoreInfoLink" href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span></strong></th> 
+          <th style="text-align:left;"><strong>Universal Render Pipeline (URP)</strong></th> 
+          <th style="text-align:left;"><strong>High Definition Render Pipeline (HDRP)</strong></th> 
+          <th style="text-align:left;"><strong>Custom SRP</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>ShaderLab: SubShader LOD block</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">Yes</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Menggunakan blok LOD</h2> 
+       <p>Di ShaderLab, Anda menetapkan nilai LOD ke SubShader dengan menempatkan blok <code>LOD</code> di dalam blok <code>SubShader</code>.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Signature</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">LOD [value]</td> 
+          <td style="text-align:left;">Menetapkan nilai LOD yang diberikan kepada SubShader.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p> <strong>Note</strong>: Di dalam blok <code>Shader</code> Anda, Anda harus menempatkan SubShaders Anda dalam urutan LOD. Misalnya, jika Anda memiliki SubShaders dengan nilai LOD 200, 100, dan 500, Anda harus menempatkan SubShader dengan nilai LOD 500 pertama, diikuti oleh satu dengan nilai LOD 200, diikuti oleh satu dengan nilai LOD 100. Ini karena Unity memilih SubShader pertama yang valid, jadi jika menemukan satu dengan LOD lebih rendah pertama itu akan selalu menggunakan itu.</p> 
+       <h2>Menggunakan nilai LOD SubShader dengan kode C#</h2> 
+       <p>Untuk mengatur warna LOD untuk objek Shader yang diberikan, Anda dapat menggunakan <a href="../ScriptReference/Shader.MaximumLOD.html">Shader.maximumLOD</a>. Untuk mengatur warna LOD untuk semua benda Shader, Anda dapat menggunakan <a href="../ScriptReference/Shader.globalMaximumLOD.html">Shader.globalMaximumLOD</a>. Secara default, tidak ada LOD maksimum.</p> 
+       <h2>Contoh kode</h2> 
+       <p>Kode contoh ini menciptakan objek Shader yang mengandung dua SubShaders: satu dengan nilai LOD 200, dan satu dengan nilai 100. SubShaders berada dalam urutan turun nilai LOD.</p> 
+       <pre><code>Shader "Examples/ExampleLOD"
+{
+    SubShader
+    {
+        LOD 200
+
+        Pass
+        {                
+              // The rest of the code that defines the Pass goes here.
+        }
+    }
+
+    SubShader
+    {
+        LOD 100
+
+        Pass
+        {                
+              // The rest of the code that defines the Pass goes here.
+        }
+    }
+}
+</code></pre> 
+       <h2>Nilai LOD untuk naungan bawaan Unity</h2> 
+       <p>Di Pipeline Render Built-in, naungan internal Unity memiliki nilai LOD berikut:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>LOD value</strong></th> 
+          <th style="text-align:left;"><strong>Shader name</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">100 g</td> 
+          <td style="text-align:left;">Unlit/Texture<br>Unlit/Color<br>Unlit/Transparent<br>Unlit/Transparent Login</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">300</td> 
+          <td style="text-align:left;">Standar<br>Standard (Specular Setup)<br>Autodesk Interaktif</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Nilai LOD untuk naungan legacy</h2> 
+       <p>Di Pipeline Render Built-in, <a href="Built-inShaderGuide.html">legacy shaders</a> internal Unity memiliki nilai LOD berikut:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>LOD value</strong></th> 
+          <th style="text-align:left;"><strong>Shader name</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">100 g</td> 
+          <td style="text-align:left;">VertexLit</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">100 g</td> 
+          <td style="text-align:left;">Decal<br>Reflective VertexLit</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">200 g</td> 
+          <td style="text-align:left;">Diffuse</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">250 g</td> 
+          <td style="text-align:left;">Diffuse Detail<br>Reflective Bumped Unlit<br>Reflective Login</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">300</td> 
+          <td style="text-align:left;">Bumped<br>Specular</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">400</td> 
+          <td style="text-align:left;">Bumped Specular</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">500 g</td> 
+          <td style="text-align:left;">Parallax</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">600</td> 
+          <td style="text-align:left;">Parallax Specular</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="SL-SubShaderTags.html"></a></span> 
+         <div class="tip">
+           ShaderLab: menetapkan tag ke SubShader 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="SL-Pass.html"></a></span> 
+         <div class="tip">
+           ShaderLab: mendefinisikan Pass 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

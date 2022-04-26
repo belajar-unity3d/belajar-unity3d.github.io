@@ -1,0 +1,1069 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Perbandingan sistem UI dalam Unity</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UIToolkits.html">Buat antarmuka pengguna (UI)</a></li> 
+         <li>Perbandingan sistem UI dalam Unity</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UIToolkits.html"></a></span> 
+          <div class="tip">
+            Buat antarmuka pengguna (UI) 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UIElements.html"></a></span> 
+          <div class="tip">
+            UI Toolkit 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Perbandingan sistem UI dalam Unity</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Unity berniat untuk <strong>UI</strong> Toolkit untuk menjadi sistem UI yang direkomendasikan untuk proyek pengembangan UI baru, tetapi masih hilang beberapa fitur yang ditemukan di Unity UI (uGUI) dan IMGUI. Sistem lama ini lebih tepat untuk kasus penggunaan tertentu, dan diperlukan untuk mendukung proyek warisan.</p> 
+       <p>Halaman ini memberikan perbandingan fitur tingkat tinggi UI Toolkit, Unity UI, dan IMGUI, dan mencatat tentang pendekatan masing-masing untuk desain UI. Gunakan untuk membantu menentukan sistem UI mana yang sesuai untuk proyek Anda.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">IMPORTANT</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">UI Toolkit adalah dalam perkembangan aktif. Halaman ini akan sering diperbarui sebagai berevolusi <span class="tooltip"><strong>feature set</strong><span class="tooltiptext">Sebuah <em>fitur set</em> adalah koleksi paket terkait yang dapat Anda gunakan untuk mencapai hasil tertentu dalam Editor Unity. Anda dapat mengelola set fitur langsung di Manajer Paket Unity. <a class="tooltipMoreInfoLink" href="FeatureSets.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Featureset">Glossary</a></span></span></span>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Pertimbangan umum</h2> 
+       <h3>Jenis UI: Editor atau runtime</h3> 
+       <p>Pilihan sistem UI Anda tergantung pada apakah Anda mengembangkan UI untuk Editor Unity atau UI runtime untuk permainan atau aplikasi.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Type of UI</strong></th> 
+          <th style="text-align:left;"><strong>UI Toolkit</strong></th> 
+          <th style="text-align:left;"><strong>Unity UI(uGUI)</strong></th> 
+          <th style="text-align:left;"><strong>IMGUI</strong></th> 
+          <th style="text-align:left;"><strong>Notes</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Runtime (in-game)</strong></td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">Not Recommended</td> 
+          <td style="text-align:left;">Untuk alasan kinerja, Unity tidak merekomendasikan IMGUI untuk UI runtime dalam game.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Unity Editor</strong></td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">❌</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">Anda tidak dapat menggunakan UI Unity untuk membuat UI untuk Editor Unity.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Untuk membuat UI runtime, pilihan Anda adalah antara UI Toolkit dan Unity UI (uGUI). Sitemap<a href="#feature-comparison-ui-toolkit-vs-unity-ui-ugui">Perbandingan fitur: UI Toolkit vs. Unity UI (uGUI)</a>.</p> 
+       <p>Untuk membuat UI untuk Editor Unity, pilihan Anda adalah antara UI Toolkit dan IMGUI. Sitemap<a href="#feature-comparison-ui-toolkit-vs-imgui">Perbandingan fitur: UI Toolkit vs. IMGUI</a>.</p> 
+       <h3>Peran dan set keterampilan</h3> 
+       <p>Set keterampilan tim Anda dan tingkat kenyamanan dengan teknologi yang berbeda juga merupakan pertimbangan penting.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Type of user</strong></th> 
+          <th style="text-align:left;"><strong>UI Toolkit</strong></th> 
+          <th style="text-align:left;"><strong>Unity UI<br>(uGUI)</strong></th> 
+          <th style="text-align:left;"><strong>IMGUI</strong></th> 
+          <th style="text-align:left;"><strong>Notes</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Programmer</strong></td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">Programmer dapat menggunakan alat pengembangan game atau API.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Technical Artist</strong></td> 
+          <td style="text-align:left;">Partial</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">❌</td> 
+          <td style="text-align:left;">Para seniman teknis yang akrab dengan alat berbasis GameObject Unity dan alur kerja cenderung nyaman bekerja dengan GameObjects, Komponen, dan pandangan Adegan. <br><br> Mereka mungkin tidak nyaman dengan pendekatan seperti web UI Toolkit atau pendekatan C# murni IMGUI.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UI Designer</strong></td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">Partial</td> 
+          <td style="text-align:left;">❌</td> 
+          <td style="text-align:left;">Desainer UI yang akrab dengan alat pembuatan UI cenderung nyaman dengan pendekatan berbasis dokumen UI Toolkit.<br><br> Jika mereka tidak akrab dengan alur kerja berbasis GameObject, mereka mungkin memerlukan bantuan dari programmer dan/atau desainer tingkat.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>Inovasi dan pengembangan</h3> 
+       <p>UI Toolkit adalah dalam perkembangan aktif. Unity menambahkan fitur baru dengan setiap rilis. Unity UI dan IMGUI adalah sistem UI mapan yang meningkatkan produksi, tetapi diperbarui secara tidak sering.</p> 
+       <p>Unity UI dan IMGUI mungkin pilihan yang lebih baik jika Anda perlu fitur yang belum tersedia di UI Toolkit, atau Anda berencana untuk mendukung atau menggunakan kembali konten UI yang lebih tua.</p> 
+       <p><a name="feature-comparison-ui-toolkit-vs-unity-ui-ugui"></a></p> 
+       <h2>Perbandingan fitur: UI Toolkit vs. Unity UI (uGUI)</h2> 
+       <p>Bagian ini membandingkan UI Toolkit ke Unity UI (sepanjang dengan <a href="com.unity.textmeshpro.html">Paket TextMesh Pro</a>) untuk mengembangkan UI runtime untuk permainan dan aplikasi.</p> 
+       <ul> 
+        <li><a href="#unity-editor-ui-development">Pengembangan UI Editor Unity</a></li> 
+        <li><a href="#workflow">Workflow</a></li> 
+        <li><a href="#styling">Styling</a></li> 
+        <li><a href="#layout">Layout</a></li> 
+        <li><a href="#events">Events</a></li> 
+        <li><a href="#rendering">Rendering</a></li> 
+        <li><a href="#animation">Animation</a></li> 
+        <li><a href="#customizability">Customizability</a></li> 
+       </ul> 
+       <p><a name="unity-editor-ui-development"></a></p> 
+       <h3>Pengembangan UI Editor Unity</h3> 
+       <p>Tidak mungkin untuk mengembangkan antarmuka pengguna untuk Editor Unity menggunakan UI Unity.</p> 
+       <p><a name="workflow"></a></p> 
+       <h3>Workflow</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature</strong></th> 
+          <th style="text-align:left;"><strong>UI Toolkit</strong></th> 
+          <th style="text-align:left;"><strong>UGUI+TMP</strong></th> 
+          <th style="text-align:left;"><strong>Notes</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Nested Prefabs</td> 
+          <td style="text-align:left;">Partial</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">UI Toolkit UXML template dukungan <a href="UIE-WritingUXMLTemplate.html#attribute-overrides">atribut overrides</a>, yang mirip dengan sifat dimodifikasi dalam sistem Prefab Unity.<br><br>UGUI is GameObject based, and supports standard Unity Prefabs.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">WYSIWYG authoring</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">Unity UI dan UI Toolkit menawarkan pengalaman penulis WYSIWYG yang berbeda.<br><br> Karena UI Unity adalah berbasis GameObject, Anda dapat mengatur tampilan adegan untuk penulis WYSIWYG. <br><br> UI Toolkit menyediakan <a href="UIBuilder.html">Pembuat UI</a> untuk penulis UI WYSIWYG berbasis dokumen dengan alur kerja seperti web.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Theming</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">❌</td> 
+          <td style="text-align:left;">UI Toolkit roadmap termasuk dukungan untuk fungsi mereka melalui UI Builder dan impor AS.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Tata letak &amp; Styling Debugger</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">Anda dapat antarmuka UI Unity di jendela Inspektur. <br><br> UI Toolkit menyediakan debugger khusus (menu: <strong>Window &gt; UI Toolkit &gt; Debugger</strong>) yang mirip dengan alat debug yang ditemukan di browser web utama.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Integrasi adegan</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">GameObjects UI Unity terlihat dalam pandangan Adegan dan pandangan Game.<br><br> Anda dapat mengintegrasikan UI runtime yang dibuat dengan <a href="UIElements.html">UI Toolkit</a> melalui komponen runtime, dan menampilkannya dalam tampilan Game.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="styling"></a></p> 
+       <h3>Styling</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature</strong></th> 
+          <th style="text-align:left;"><strong>UI Toolkit</strong></th> 
+          <th style="text-align:left;"><strong>UGUI+TMP</strong></th> 
+          <th style="text-align:left;"><strong>Notes</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Gaya inline</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Gaya Cascading</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">❌</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Pseudo-states (misalnya, hover atau aktif)</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">Unity UI menyediakan negara pseudo sederhana, dan Anda dapat membuat state pseudo yang kompleks untuk menggunakan grafik Animasi Unity.<br><br> Login Toolkit mendukung <a href="UIE-USS-Selectors-Pseudo-Classes.html">pseudo-states</a> melalui USS.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Tag teks yang kaya</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">Dukungan tag teks yang kaya di UI Toolkit direncanakan sebagai bagian dari pembaruan ke akhir back rendering teks Unity.<br><br>Unity UI mendukung set dasar tag teks kaya secara default, dan set yang lebih besar melalui paket TextMesh Pro.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">SDF</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">Dukungan teks SDF dalam UI Toolkit direncanakan sebagai bagian dari overhaul teks Unity rendering kembali berakhir. <br><br> Unity UI mendukung teks SDF melalui paket TextMesh Pro.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Font fallbacks</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">Dukungan untuk font Asset dan font fallback di UI Toolkit direncanakan sebagai bagian dari overhaul teks Unity rendering kembali berakhir.<br><br> Unity UI mendukung font fallback melalui paket TextMesh Pro.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="layout"></a></p> 
+       <h3>Layout</h3> 
+       <p>Sementara Unity UI dan UI Toolkit menawarkan kemungkinan tata letak yang sama, sistem tata letak mereka cukup berbeda.</p> 
+       <ul> 
+        <li>Dengan UI Unity, Anda mengontrol tata letak di tingkat <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span>, menggunakan komponen RectTransForm.</li> 
+        <li>Dengan UI Toolkit, Anda mendefinisikan tata letak di lembar gaya ASS, menggunakan sistem tata letak berbasis Flexbox yang lebih.</li> 
+       </ul> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature</strong></th> 
+          <th style="text-align:left;"><strong>UI Toolkit</strong></th> 
+          <th style="text-align:left;"><strong>UGUI+TMP</strong></th> 
+          <th style="text-align:left;"><strong>Notes</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Tata letak manual (absolute atau relatif terhadap orang tua)</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Satu dimensi (horizontal dan vertikal)</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Dua dimensi (grid)</td> 
+          <td style="text-align:left;">Research</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">Unity UI menyediakan komponen.<br><br> Untuk UI Toolkit, Unity menyelidiki kemungkinan mengimplementasikan grid bergaya CSS di ASS.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="events"></a></p> 
+       <h3>Events</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature</strong></th> 
+          <th style="text-align:left;"><strong>UI Toolkit</strong></th> 
+          <th style="text-align:left;"><strong>UGUI+TMP</strong></th> 
+          <th style="text-align:left;"><strong>Notes</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Integrasi dengan ruang <a href="com.unity.inputsystem.html">Sistem Input</a>% baru Unity</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Photogallery</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">UI Toolkit hanya dapat mengikat acara ke elemen di C #. <br><br> Unity UI dapat serialisasi acara mengikat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Scripting Visual untuk acara</td> 
+          <td style="text-align:left;">Research</td> 
+          <td style="text-align:left;">❌</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="rendering"></a></p> 
+       <h3>Rendering</h3> 
+       <p>Memilih antara UI Toolkit dan Unity UI adalah perdagangan antara kinerja tinggi dan fleksibilitas / fitur yang didukung.</p> 
+       <p>UI Toolkit saat ini mendukung satu set kemampuan yang lebih kecil, tetapi lebih mudah untuk mengoptimalkan kinerja rendering. Ini berbasis dokumen, didorong data, dan menggunakan satu <span class="tooltip"><strong>shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span>, bahan, dan tekstur atlas untuk menggambar hierarki elemen. Ini adalah pilihan yang baik untuk UI ruang layar sederhana (misalnya, menu atau tampilan kepala) yang mencakup hierarki elemen yang kompleks, dan tampil dengan baik di platform apa pun.</p> 
+       <p>Unity UI lebih serbaguna, dan mendukung fitur rendering dan teks canggih. Anda dapat mengatur elemen visual dengan bahan kustom, dan mengambil keuntungan dari fitur kliping dan masking canggih. Namun, fitur-fitur ini mungkin membuatnya sulit untuk menjaga UI yang lebih kompleks dalam anggaran kinerja Anda.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature</strong></th> 
+          <th style="text-align:left;"><strong>UI Toolkit</strong></th> 
+          <th style="text-align:left;"><strong>UGUI+TMP</strong></th> 
+          <th style="text-align:left;"><strong>Notes</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><a href="built-in-render-pipeline.html">Pipa Render Built-in</a> </td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="universal-render-pipeline.html">Pipa Render Universal (URP)</a> </td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="high-definition-render-pipeline.html">Definisi Tinggi Render Pipeline (HDRP)</a> </td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Layar (2D) rendering</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Ruang Dunia (3D) rendering</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Bahan dan warna khusus</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">API Integration</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">❌</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Integrasi SVG</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">Paket <a href="com.unity.vectorgraphics.html">com.unity.vectorgraphics</a> menyediakan dukungan SVG untuk UI Unity. Namun paket saat ini di pratinjau, dan tidak dianjurkan untuk produksi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Antialiasing</strong><span class="tooltiptext">Teknik untuk mengurangi artefak, seperti garis bergerigi (jaggies), dalam gambar untuk membuatnya tampak lebih halus. <a class="tooltipMoreInfoLink" href="PostProcessingOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Antialiasing">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">Partial</td> 
+          <td style="text-align:left;">Unity UI <strong>Screen Space-Camera</strong>, dan mode rendering <strong>World Space</strong> menggunakan <span class="tooltip"><strong>Cameras</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span>, yang menerapkan antialiasing.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">2D rotasi (object tetap di bidang UI)</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">3D rotasi</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Klip persegi panjang</td> 
+          <td style="text-align:left;">Partial</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">UI toolkit mendukung clipping persegi panjang tanpa rotasi. Sudut persegi panjang harus selaras sumbu.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Masker klip</td> 
+          <td style="text-align:left;">Partial</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">UI toolkit mendukung mask clipping dengan rotasi 2D.<br><br>Unity UI mendukung rotasi masker 3D.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Masker bersarang</td> 
+          <td style="text-align:left;">Partial/Planned</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">Alat UI masking bersarang terbatas pada satu tingkat, tetapi tidak mempengaruhi batching penarikan. Masking bertingkat multi direncanakan.<br><br>Unity UI mendukung hingga delapan tingkat masking bersarang, tetapi memecah batching panggilan setiap tingkat kedua.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="animation"></a></p> 
+       <h3>Animation</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature</strong></th> 
+          <th style="text-align:left;"><strong>UI Toolkit</strong></th> 
+          <th style="text-align:left;"><strong>UGUI+TMP</strong></th> 
+          <th style="text-align:left;"><strong>Notes</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Tweening alur kerja</td> 
+          <td style="text-align:left;">Experimental</td> 
+          <td style="text-align:left;">Partial</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Integrasi dengan <span class="tooltip"><strong>Animation Clips</strong><span class="tooltiptext">Animasi data yang dapat digunakan untuk karakter animasi atau animasi sederhana. Ini adalah bagian "unit" sederhana dari gerakan, seperti (salah satu contoh spesifik) "Idle", "Walk" atau "Run". <a class="tooltipMoreInfoLink" href="class-AnimationClip.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnimationClip">Glossary</a></span></span></span> dan Timeline</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="customizability"></a></p> 
+       <h3>Customizability</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature</strong></th> 
+          <th style="text-align:left;"><strong>UI Toolkit</strong></th> 
+          <th style="text-align:left;"><strong>UGUI+TMP</strong></th> 
+          <th style="text-align:left;">Notes</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Sumber Terbuka / Dapat disesuaikan</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"> <a href="UIElements.html">UI Toolkit</a> dapat disesuaikan.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="feature-comparison-ui-toolkit-vs-imgui"></a></p> 
+       <h2>Perbandingan fitur: UI Toolkit vs. IMGUI</h2> 
+       <p>Bagian ini membandingkan UI Toolkit ke IMGUI untuk mengembangkan antarmuka pengguna untuk Editor Unity.</p> 
+       <ul> 
+        <li><a href="#inspector-integration">Inspektur</a></li> 
+        <li><a href="#controls-and-data-binding">Kontrol dan mengikat data</a></li> 
+        <li><a href="#workflow-1">Workflow</a></li> 
+        <li><a href="#styling-1">Styling</a></li> 
+        <li><a href="#layout-1">Layout</a></li> 
+        <li><a href="#events-1">Events</a></li> 
+        <li><a href="#rendering-1">Rendering</a></li> 
+        <li><a href="#animation-1">Animation</a></li> 
+        <li><a href="#customizability-1">Customizability</a></li> 
+       </ul> 
+       <p><a name="inspector-integration"></a></p> 
+       <h3>Inspektur</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature</strong></th> 
+          <th style="text-align:left;"><strong>UI Toolkit</strong></th> 
+          <th style="text-align:left;"><strong>IMGUI</strong></th> 
+          <th style="text-align:left;"><strong>Notes</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Inspektur default</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">UI Toolkit akan menjadi default UI back end untuk jendela <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span> (untuk ketika jenis tidak memiliki editor kustom).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Inspektur: Edit jenis objek kustom</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Inspektur: Edit jenis properti kustom</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Inspektur: Nilai campuran (multi-editing) dukungan</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Array / kontrol tampilan daftar</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="controls-and-data-binding"></a></p> 
+       <h3>Kontrol dan mengikat data</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature</strong></th> 
+          <th style="text-align:left;"><strong>UI Toolkit</strong></th> 
+          <th style="text-align:left;"><strong>IMGUI</strong></th> 
+          <th style="text-align:left;"><strong>Notes</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Tampilan Pohon</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Grid View</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">❌</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Grafik</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">❌</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Data mengikat: Properti serial</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Data yang mengikat dari tipe C#</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">❌</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Data mengikat atribut atau nilai gaya</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">❌</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="workflow-1"></a></p> 
+       <h3>Workflow</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature</strong></th> 
+          <th style="text-align:left;"><strong>UI Toolkit</strong></th> 
+          <th style="text-align:left;"><strong>IMGUI</strong></th> 
+          <th style="text-align:left;"><strong>Notes</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Nested <span class="tooltip"><strong>Prefabs</strong><span class="tooltiptext">Jenis aset yang memungkinkan Anda untuk menyimpan GameObject lengkap dengan komponen dan properti. Prefab bertindak sebagai template dari mana Anda dapat membuat instance objek baru di tempat kejadian. <a class="tooltipMoreInfoLink" href="Prefabs.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Prefab">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Partial</td> 
+          <td style="text-align:left;">❌</td> 
+          <td style="text-align:left;">UI Toolkit UXML template dukungan <a href="UIE-WritingUXMLTemplate.html#attribute-overrides">atribut overrides</a>, yang mirip dengan sifat dimodifikasi dalam sistem Prefab Unity.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">WYSIWYG authoring</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">❌</td> 
+          <td style="text-align:left;">UI Toolkit menyediakan <a href="UIBuilder.html">Pembuat UI</a> untuk penulis UI WYSIWYG berbasis dokumen dengan alur kerja seperti web.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Theming</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Tata letak &amp; Styling Debugger</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">JPG PNG BMP GIF 3 MB UI Toolkit menyediakan debugger khusus (menu: <br><br> UI Toolkit provides a dedicated debugger (menu: <strong>Window &gt; UI Toolkit &gt; Debugger</strong>) that is similar to debug tools found in major web browsers.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> View integration</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="styling-1"></a></p> 
+       <h3>Styling</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature</strong></th> 
+          <th style="text-align:left;"><strong>UI Toolkit</strong></th> 
+          <th style="text-align:left;"><strong>IMGUI</strong></th> 
+          <th style="text-align:left;"><strong>Notes</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Gaya inline</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Gaya Cascading</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">❌</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Pseudo-states (misalnya, hover atau aktif)</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">Partial</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Tag teks yang kaya</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">Dukungan tag teks yang kaya di UI Toolkit direncanakan sebagai bagian dari pembaruan ke akhir back rendering teks Unity.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">SDF</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">❌</td> 
+          <td style="text-align:left;">Dukungan teks SDF dalam UI Toolkit direncanakan sebagai bagian dari pembaruan ke akhir back rendering teks Unity.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Font fallbacks</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="layout-1"></a></p> 
+       <h3>Layout</h3> 
+       <p>Meskipun Unity UI dan IMGUI menawarkan kemungkinan tata letak yang sama, sistem tata letak mereka cukup berbeda.</p> 
+       <ul> 
+        <li>JPG PNG BMP GIF 3 MB</li> 
+        <li>UI Toolkit menggunakan sistem tata letak berbasis Flexbox yang lebih banyak. Anda mengontrol tata letak melalui gaya ASS.</li> 
+       </ul> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature</strong></th> 
+          <th style="text-align:left;"><strong>UI Toolkit</strong></th> 
+          <th style="text-align:left;"><strong>IMGUI</strong></th> 
+          <th style="text-align:left;"><strong>Notes</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Tata letak manual (absolute atau relatif terhadap orang tua)</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Satu dimensi (horizontal dan vertikal)</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Dua dimensi (grid)</td> 
+          <td style="text-align:left;">In research</td> 
+          <td style="text-align:left;">❌</td> 
+          <td style="text-align:left;">Untuk UI Toolkit, Unity menyelidiki kemungkinan mengimplementasikan grid bergaya CSS di ASS.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="events-1"></a></p> 
+       <h3>Events</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature</strong></th> 
+          <th style="text-align:left;"><strong>UI Toolkit</strong></th> 
+          <th style="text-align:left;"><strong>IMGUI</strong></th> 
+          <th style="text-align:left;"><strong>Notes</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Integrasi dengan ruang <a href="com.unity.inputsystem.html">Sistem Input</a>% baru Unity</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">❌</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Photogallery</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">❌</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Scripting Visual untuk acara</td> 
+          <td style="text-align:left;">Research</td> 
+          <td style="text-align:left;">❌</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="rendering-1"></a></p> 
+       <h3>Rendering</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature</strong></th> 
+          <th style="text-align:left;"><strong>UI Toolkit</strong></th> 
+          <th style="text-align:left;"><strong>IMGUI</strong></th> 
+          <th style="text-align:left;"><strong>Notes</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><a href="built-in-render-pipeline.html">Pipa Render Built-in</a> </td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="universal-render-pipeline.html">Pipa Render Universal (URP)</a> </td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><a href="high-definition-render-pipeline.html">Definisi Tinggi Render Pipeline (HDRP)</a> </td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Layar (2D) rendering</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;">✔</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Ruang Dunia (3D) rendering</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">❌</td> 
+          <td style="text-align:left;">Meskipun secara teknis memungkinkan untuk membuat UI 3D di IMGUI menggunakan <code>GUI.matrix</code>, itu tidak dianjurkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Bahan dan warna khusus</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">❌</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">API Integration</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">❌</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Integrasi SVG</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">❌</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Anti-aliasing</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">❌</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="animation-1"></a></p> 
+       <h3>Animation</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature</strong></th> 
+          <th style="text-align:left;"><strong>UI Toolkit</strong></th> 
+          <th style="text-align:left;"><strong>IMGUI</strong></th> 
+          <th style="text-align:left;"><strong>Notes</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Tweening alur kerja</td> 
+          <td style="text-align:left;">Experimental</td> 
+          <td style="text-align:left;">❌</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;">Integrasi dengan Klip Animasi dan Timeline</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;">❌</td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="customizability-1"></a></p> 
+       <h3>Customizability</h3> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature</strong></th> 
+          <th style="text-align:left;"><strong>UI Toolkit</strong></th> 
+          <th style="text-align:left;"><strong>IMGUI</strong></th> 
+          <th style="text-align:left;"><strong>Notes</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;">Sumber Terbuka / Dapat disesuaikan</td> 
+          <td style="text-align:left;">Planned</td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"> <a href="UIElements.html">UI Toolkit</a> dapat disesuaikan.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <hr> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UIToolkits.html"></a></span> 
+         <div class="tip">
+           Buat antarmuka pengguna (UI) 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UIElements.html"></a></span> 
+         <div class="tip">
+           UI Toolkit 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

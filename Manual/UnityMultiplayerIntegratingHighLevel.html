@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Integrasi menggunakan API Tingkat Tinggi Unity</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="cloud" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UNet.html">Multiplayer dan Jaringan</a></li> 
+         <li><a href="UNetUsingHLAPI.html">Multiplayer API</a></li> 
+         <li><a href="UnityMultiplayerSettingUp.html">Menyiapkan Multiplayer Unity</a></li> 
+         <li>Integrasi menggunakan API Tingkat Tinggi Unity</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UnityMultiplayerIntegratingHUD.html"></a></span> 
+          <div class="tip">
+            Integrasi menggunakan HUD 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UnityMultiplayerIntegratingLowLevel.html"></a></span> 
+          <div class="tip">
+            Integrasi menggunakan NetworkTransport 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Integrasi menggunakan API Tingkat Tinggi Unity</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Untuk mengintegrasikan Multiplayer Unity Layanan menggunakan <a class="tooltipMoreInfoLink" href="UNetUsingHLAPI.html">Jaringan API Tingkat Tinggi</a>, Anda harus menggunakan kelas <a href="../ScriptReference/Networking.Match.NetworkMatch.html">NetworkMatch</a> langsung di <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> Anda. Untuk menggunakannya, Anda harus memanggil fungsi di <code>NetworkMatch</code> secara manual dan menangani panggilan sendiri.</p> 
+       <p>Di bawah ini adalah contoh bagaimana Anda dapat membuat pertandingan, daftar pertandingan, dan bergabung dengan pertandingan hanya menggunakan kelas <a href="../ScriptReference/Networking.Match.NetworkMatch.html">NetworkMatch</a>, <a href="../ScriptReference/Networking.NetworkServer.html">NetworkServer</a> dan <a href="../ScriptReference/Networking.NetworkClient.html">NetworkClient</a>.</p> 
+       <p>Script ini mengatur pencocokan untuk menunjuk ke server pencocokan Unity publik. Ini memanggil fungsi <code>NetworkMatch</code> untuk membuat, mendaftar, dan bergabung dengan:</p> 
+       <ul> 
+        <li> <a href="../ScriptReference/Networking.Match.NetworkMatch.CreateMatch.html">CreateMatch</a> untuk membuat pertandingan</li> 
+        <li> <a href="../ScriptReference/Networking.Match.NetworkMatch.JoinMatch.html">JoinMatch</a> untuk bergabung dengan pertandingan</li> 
+        <li> <a href="../ScriptReference/Networking.Match.NetworkMatch.ListMatches.html">ListMatches</a> untuk daftar pertandingan terdaftar di server matchmaker</li> 
+       </ul> 
+       <p>Secara internal, <code>NetworkMatch</code> menggunakan layanan web untuk membuat pertandingan, dan fungsi callback yang diberikan diinvoked ketika proses selesai, seperti <code>OnMatchCreate</code> untuk penciptaan pertandingan.</p> 
+       <pre><code>using UnityEngine;
+using UnityEngine.Networking;
+using UnityEngine.Networking.Match;
+using System.Collections.Generic;
+
+public class HostGame : MonoBehaviour
+{
+    List&lt;MatchInfoSnapshot&gt; matchList = new List&lt;MatchInfoSnapshot&gt;();
+    bool matchCreated;
+    NetworkMatch networkMatch;
+
+    void Awake()
+    {
+        networkMatch = gameObject.AddComponent&lt;NetworkMatch&gt;();
+    }
+
+    void OnGUI()
+    {
+        // You would normally not join a match you created yourself but this is possible here for demonstration purposes.
+        if (GUILayout.Button("Create Room"))
+        {
+            string matchName = "room";
+            uint matchSize = 4;
+            bool matchAdvertise = true;
+            string matchPassword = "";
+
+            networkMatch.CreateMatch(matchName, matchSize, matchAdvertise, matchPassword, "", "", 0, 0, OnMatchCreate);
+        }
+
+        if (GUILayout.Button("List rooms"))
+        {
+            networkMatch.ListMatches(0, 20, "", true, 0, 0, OnMatchList);
+        }
+
+        if (matchList.Count &gt; 0)
+        {
+            GUILayout.Label("Current rooms");
+        }
+        foreach (var match in matchList)
+        {
+            if (GUILayout.Button(match.name))
+            {
+                networkMatch.JoinMatch(match.networkId, "", "", "", 0, 0, OnMatchJoined);
+            }
+        }
+    }
+
+    public void OnMatchCreate(bool success, string extendedInfo, MatchInfo matchInfo)
+    {
+        if (success)
+        {
+            Debug.Log("Create match succeeded");
+            matchCreated = true;
+            NetworkServer.Listen(matchInfo, 9000);
+            Utility.SetAccessTokenForNetwork(matchInfo.networkId, matchInfo.accessToken);
+        }
+        else
+        {
+            Debug.LogError("Create match failed: " + extendedInfo);
+        }
+    }
+
+    public void OnMatchList(bool success, string extendedInfo, List&lt;MatchInfoSnapshot&gt; matches)
+    {
+        if (success &amp;&amp; matches != null &amp;&amp; matches.Count &gt; 0)
+        {
+            networkMatch.JoinMatch(matches[0].networkId, "", "", "", 0, 0, OnMatchJoined);
+        }
+        else if (!success)
+        {
+            Debug.LogError("List match failed: " + extendedInfo);
+        }
+    }
+
+    public void OnMatchJoined(bool success, string extendedInfo, MatchInfo matchInfo)
+    {
+        if (success)
+        {
+            Debug.Log("Join match succeeded");
+            if (matchCreated)
+            {
+                Debug.LogWarning("Match already set up, aborting...");
+                return;
+            }
+            Utility.SetAccessTokenForNetwork(matchInfo.networkId, matchInfo.accessToken);
+            NetworkClient myClient = new NetworkClient();
+            myClient.RegisterHandler(MsgType.Connect, OnConnected);
+            myClient.Connect(matchInfo);
+        }
+        else
+        {
+            Debug.LogError("Join match failed " + extendedInfo);
+        }
+    }
+
+    public void OnConnected(NetworkMessage msg)
+    {
+        Debug.Log("Connected!");
+    }
+}
+</code></pre> 
+       <!-- area:cloud --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UnityMultiplayerIntegratingHUD.html"></a></span> 
+         <div class="tip">
+           Integrasi menggunakan HUD 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UnityMultiplayerIntegratingLowLevel.html"></a></span> 
+         <div class="tip">
+           Integrasi menggunakan NetworkTransport 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Codeless IAP</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="monetization" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UnityServices.html">Layanan Unity</a></li> 
+         <li><a href="UnityIAP.html">﻿Unity IAP</a></li> 
+         <li>Platform Lintas Login</li> 
+         <li>Codeless IAP</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UnityIAPAmazonConfiguration.html"></a></span> 
+          <div class="tip">
+            Konfigurasi untuk Amazon Appstore 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UnityIAPDefiningProducts.html"></a></span> 
+          <div class="tip">
+            Produk yang menentukan 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Codeless IAP</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p> <strong>Codeless IAP</strong> adalah cara termudah untuk menerapkan pembelian dalam aplikasi di aplikasi Unity Anda. Editor Unity menawarkan antarmuka untuk mengkonfigurasi integrasi IAP dasar menggunakan penulisan skrip minimal.</p> 
+       <p>Codeless IAP menangani transaksi IAP yang sebenarnya tanpa memerlukan kode. Menerapkan Codeless IAP adalah proses dua langkah menggunakan Editor:</p> 
+       <ol> 
+        <li> <a href="#IAPButtons">Tambahkan <strong>IAP Buttons</strong> ke permainan Anda</a>.</li> 
+        <li> <a href="#PopulatingProducts">Tentukan <strong>Products</strong> Anda di <strong>IAP Catalog</strong></a>.</li> 
+       </ol> 
+       <p>Sistem <strong>Unity Purchasing</strong> mengkonfigurasi Produk yang Anda ramai dalam katalog pada waktu yang berjalan. Ketika pemain memilih <strong>IAP Button</strong>, itu memulai aliran pembelian untuk Produk yang terkait.</p> 
+       <p> <strong>Note</strong>: Anda masih perlu menggunakan scripting untuk menentukan bagaimana pemain mengakses konten yang baru dibeli. Untuk informasi lebih lanjut, lihat bagian <a href="#PurchaseFulfillment"><strong>Purchase fulfillment</strong></a> di bawah ini.</p> 
+       <h2>Menerapkan Codeless IAP</h2> 
+       <p>Sebelum memulai, instal SDK terbaru. Lihat dokumentasi untuk informasi lebih lanjut.</p> 
+       <p><a name="IAPButtons"></a></p> 
+       <h3>Menambahkan IAP Tombol ke Adegan Anda</h3> 
+       <p>Untuk menambahkan <strong>IAP Button</strong> ke Adegan Anda, di Editor Unity, pilih <strong>Window &gt; Unity IAP &gt; Create IAP Button</strong>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/CreateButton.png" alt="Creating a Codeless IAP Button in the Unity Editor"> 
+        <figcaption>
+          Membuat Codeless 
+         <strong>IAP Button</strong> di Editor Unity 
+        </figcaption> 
+       </figure> 
+       <p><a name="PopulatingProducts"></a></p> 
+       <h3>Produk Populasi di Katalog IAP</h3> 
+       <p>Buka <strong>IAP Catalog</strong> GUI salah satu dari dua cara:</p> 
+       <ul> 
+        <li>Pilih <strong>Window &gt; Unity IAP &gt; IAP Catalog</strong>.</li> 
+        <li>Atau, dengan <strong>IAP Button</strong> yang dipilih, cari komponen <strong>IAP Button (Script)</strong> di <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>, lalu klik <strong>IAP Catalog…</strong>.</li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/OpenCatalogGUI.png" alt="Accessing the IAP Catalog GUI through an IAP Button script component"> 
+        <figcaption>
+          Mengakses 
+         <strong>IAP Catalog</strong> GUI melalui komponen skrip 
+         <strong>IAP Button</strong> script component 
+        </figcaption> 
+       </figure> 
+       <p>Selanjutnya, gunakan GUI untuk mendefinisikan atribut berikut untuk setiap Produk dalam katalog Anda.</p> 
+       <ul> 
+        <li>Sebuah <strong>Product ID</strong> dengan yang berkomunikasi dengan toko aplikasi (note that you can override this ID with unik store-specific ID melalui opsi <strong>Advanced</strong>).</li> 
+        <li>A <strong>Product Type</strong> (<strong>Consumable</strong>, <strong>Non-Consumable</strong>, atau <strong>Subscription</strong>).</li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/IAPCatalogGUI.png" alt="Populating Product information in the IAP Catalog GUI"> 
+        <figcaption>
+          Populasi informasi produk dalam 
+         <strong>IAP Catalog</strong> GUI 
+        </figcaption> 
+       </figure> 
+       <p> <strong>Note</strong>: GUI <strong>IAP Catalog</strong> menyediakan alat tambahan untuk mengkonfigurasi Produk Anda. Sebelum <a href="#Exporting">mengekspor katalog</a> untuk mengunggah ke toko masing-masing, Anda harus mengisi deskripsi dan informasi harga serta. Untuk informasi rinci tentang pengaturan ini, lihat dokumentasi di .</p> 
+       <h3><code>UnityPurchasing</code> </h3> 
+       <p>SDK IAP harus menginisialisasi untuk pembelian dalam aplikasi untuk bekerja. Ini terjadi secara otomatis ketika instance pertama dari beban Codeless <strong>IAP Button</strong> atau <a href="#IAPListeners"><strong>IAP Listener</strong></a> pada waktu berjalan. Namun, Anda mungkin perlu menginisialisasi SDK sebelum Tombol IAP atau Pendengar IAP muncul dalam permainan Anda (misalnya, melayani tawaran setelah peluncuran aplikasi). Dalam kasus ini, periksa <strong>Automatically initialize UnityPurchasing (recommended)</strong> di bagian bawah jendela <strong>IAP Catalog</strong>. Ini memastikan bahwa menginisialisasi segera ketika aplikasi dimulai, dan menghilangkan ketergantungan pada siklus hidup instance tanpa kode.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AutoInitialize.png" alt="Enabling auto-initialization for the SDK through the IAP Catalog GUI"> 
+        <figcaption>
+          Mengaktifkan auto-initialization untuk SDK melalui GUI 
+         <strong>IAP Catalog</strong> GUI 
+        </figcaption> 
+       </figure> 
+       <p>Untuk bekerja, katalog Anda harus berisi setidaknya satu Produk.</p> 
+       <p> <strong>Note</strong>: Anda dapat menggunakan auto-initialize bersama dengan IAP Buttons atau Listener. Dalam hal ini, SDK menginisialisasi ketika permainan dimulai bukan ketika instance pertama dari Tombol IAP atau beban Listener di <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>. Namun, Anda tidak boleh mengaktifkan auto-initialize jika Anda juga menginisialisasi secara manual dalam skrip, karena ini dapat menyebabkan kesalahan.</p> 
+       <p><a name="PurchaseFulfillment"></a></p> 
+       <h3>Biaya pembelian</h3> 
+       <p>Ketika katalog Anda mengandung setidaknya satu Produk, Anda dapat menentukan perilaku <strong>IAP Button</strong> ketika pembelian selesai atau gagal.</p> 
+       <ol> 
+        <li>Pilih <strong>IAP Button</strong> Anda di <span class="tooltip"><strong>Scene view</strong><span class="tooltiptext">Tampilan interaktif ke dunia yang Anda buat. Anda menggunakan Adegan Lihat untuk memilih dan posisi pemandangan, karakter, kamera, lampu, dan semua jenis lain dari Game Object. <a class="tooltipMoreInfoLink" href="UsingTheSceneView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SceneView">Glossary</a></span></span></span>, kemudian cari komponen <strong>IAP Button (Script)</strong> di Inspektur.</li> 
+        <li>Pilih Produk untuk menghubungkan ke <strong>IAP Button</strong> dari daftar drop-down <strong>Product ID</strong>. <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ProductDropdown.png" alt="Selecting a Product to associate with a Codeless IAP Button"> </li> 
+        <li>Buat fungsi Anda sendiri yang menyediakan pemenuhan pembelian, atau impor Aset yang melakukan ini (lihat sampel kode, di bawah).</li> 
+        <li>Ajukan skrip fulfilment pembelian Anda ke <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> sebagai komponen. <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PurchaseFulfillScript.png" alt="Creating a GameObject with a purchase fulfillment script"> </li> 
+        <li>Kembali ke komponen <strong>IAP Button (Script)</strong> di Inspektur, dan klik tombol plus (<strong>+</strong>) untuk menambahkan fungsi ke daftar <strong>On Purchase Complete (Product)</strong>.</li> 
+        <li>Seret GameObject dengan skrip pemenuhan pembelian ke lapangan acara <strong>On Purchase Complete (Product)</strong> (terangi di bawah), lalu pilih fungsi Anda dari menu dropdown. <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/OnPurchaseComplete.png" alt="Assigning your purchase fulfillment script to an IAP Button event field"> </li> 
+       </ol> 
+       <p> <strong>Fulfillment script code sample</strong>:</p> 
+       <pre><code>public void GrantCredits (int credits){
+    userCredits = userCredits + credits;
+    Debug.Log(“You received “ + credits “ Credits!”);
+} 
+</code></pre> 
+       <p>Jalankan permainan Anda untuk menguji <strong>IAP Button</strong>.</p> 
+       <h2>Fungsi tambahan</h2> 
+       <p><a name="Exporting"></a></p> 
+       <h3>Mengekspor ke toko aplikasi</h3> 
+       <p>Untuk pembelian untuk fungsi, Anda harus mengkonfigurasi katalog Anda di toko aplikasi yang sesuai. Untuk melakukannya, Anda dapat mengekspor Katalog Produk Anda sebagai file CSV ke Google Play, atau sebagai file XML melalui Loader Aplikasi Apple ke iTunes Store.</p> 
+       <h4>Google Login</h4> 
+       <p>Untuk mengekspor Katalog Produk Anda untuk Google Play:</p> 
+       <ol> 
+        <li>Di jendela <strong>IAP Catalog</strong> (<strong>Window &gt; Unity IAP &gt; IAP Catalog</strong>), memastikan bahwa setiap Produk memiliki didefinisikan sebagai berikut:<br> * <strong>ID</strong> <br> * <strong>Type</strong> <br> * <strong>Title</strong> dan <strong>Description</strong> <br> * <strong>Price</strong> atau <strong>Pricing Template</strong> ID</li> 
+        <li>Gulir ke bawah, dan pilih <strong>App Store Export</strong>.</li> 
+        <li>Pilih <strong>Google Play CSV</strong>.</li> 
+        <li>Pilih lokasi di mana untuk menyimpan file CSV.</li> 
+       </ol> 
+       <p>Untuk panduan lengkap untuk mengunggah katalog yang diekspor ke Google Play, lihat dokumentasi <a href="https://developer.android.com/google/play/billing/billing_admin.html#billing-list-setup">Facebook Twitter</a> pada <a href="https://developer.android.com">Web Browser</a>.</p> 
+       <h4>BlackBerry</h4> 
+       <p>Untuk mengekspor Katalog Produk Anda untuk Apple iTunes:</p> 
+       <ol> 
+        <li>Di jendela <strong>IAP Catalog</strong> (<strong>Window</strong> &gt; <strong>Unity IAP</strong> &gt; <strong>IAP Catalog</strong>), memastikan bahwa setiap Produk memiliki didefinisikan sebagai berikut:<br> * <strong>ID</strong> <br> * <strong>Type</strong> <br> * <strong>Title</strong> dan <strong>Description</strong> <br> * <strong>Price Tier</strong> dan <strong>Screenshot path</strong> <br> * <strong>Apple SKU</strong> (berbentuk dalam <a href="https://itunesconnect.apple.com">iTunes Connect</a>) <br> * <strong>Apple Team ID</strong> (berdasar pada <a href="https://developer.apple.com">Website pengembang Apple</a>)</li> 
+        <li>Gulir ke bawah, dan pilih <strong>App Store Export</strong>.</li> 
+        <li>Pilih <strong>Apple XML Delivery</strong>.</li> 
+        <li>Pilih lokasi di mana untuk menyimpan file XML.</li> 
+       </ol> 
+       <p>Untuk panduan lengkap untuk mengimpor melalui Loader Aplikasi Apple, lihat dokumentasi <a href="https://itunesconnect.apple.com/docs/UsingApplicationLoader.pdf">Aplikasi Loader</a> pada <a href="https://itunesconnect.apple.com">Web browser</a>.</p> 
+       <h3>Mengembalikan tombol</h3> 
+       <p>Beberapa toko aplikasi, termasuk iTunes, memerlukan aplikasi untuk memiliki tombol <strong>Restore</strong>. Codeless IAP menyediakan cara mudah untuk menerapkan tombol pemulihan di aplikasi Anda.</p> 
+       <p>Untuk menambahkan tombol <strong>Restore</strong>:</p> 
+       <ol> 
+        <li>Tambahkan <strong>IAP Button</strong> ke Adegan Anda (<strong>Window</strong> &gt; <strong>Unity IAP</strong> &gt; <strong>Create IAP Button</strong>).</li> 
+        <li>Dengan pilihan <strong>IAP Button</strong> Anda, cari komponen <strong>IAP Button (Script)</strong> di Inspektur, kemudian pilih <strong>Restore</strong> dari menu drop-down <strong>Button Type</strong> (paling dari bidang lain komponen akan hilang dari pandangan Inspektur). <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/RestoreButton.png" alt="Modifying an IAP Button to restore purchases"> </li> 
+       </ol> 
+       <p>Ketika pengguna memilih tombol ini pada waktu berjalan, tombol memanggil API restorasi pembelian untuk toko saat ini. Fungsi ini bekerja di iOS App Store, Mac App Store, dan toko aplikasi Windows Store. Anda mungkin ingin menyembunyikan tombol <strong>Restore</strong> pada platform lain.</p> 
+       <p>Jika pengembalian berhasil, <span class="tooltip"><strong>Unity IAP</strong><span class="tooltiptext">Unity <strong>In App Purchase</strong><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UnityIAP">Glossary</a></span></span></span> memanggil fungsi <strong>On Purchase Complete (Product)</strong> pada <strong>IAP Button</strong> yang terkait dengan Produk itu.</p> 
+       <p>Untuk informasi lebih lanjut, lihat dokumentasi di .</p> 
+       <p><a name="IAPListeners"></a></p> 
+       <h3>Pendengaran IAP</h3> 
+       <p>Codeless IAP mengirimkan acara pembelian yang sukses dan gagal ke komponen <strong>IAP Button</strong> aktif dalam hierarki. Namun, mungkin ada waktu ketika sulit atau tidak diinginkan untuk memiliki <strong>IAP Button</strong> aktif ketika menangani pembelian yang sukses. Misalnya, jika pembelian terganggu sebelum menyelesaikan, upaya IAP Unity untuk memproses pembelian lagi waktu berikutnya diinisialisasi. Anda mungkin ingin ini terjadi segera setelah peluncuran aplikasi, di mana kasus <strong>IAP Button</strong> tidak akan masuk akal. Codeless IAP termasuk komponen <strong>IAP Listener</strong> tepat untuk kasus ini. Sebuah <strong>IAP Listener</strong> aktif dalam hierarki Adegan menerima setiap peristiwa pembelian yang tidak dapat dikirim ke <strong>IAP Button</strong>.</p> 
+       <p>Untuk menambahkan <strong>IAP Listener</strong>:</p> 
+       <ol> 
+        <li>Di Editor Unity, pilih <strong>Window &gt; Unity IAP &gt; Create IAP Listener</strong>.</li> 
+        <li>Ikuti langkah-langkah untuk <a href="#PurchaseFulfillment">menulis skrip pemenuhan pembelian sebagai komponen GameObject</a>.</li> 
+        <li>Pilih <strong>IAP Listener</strong> di Adegan dan cari komponen <strong>IAP Listener (Script)</strong> di Inspektur, kemudian klik tombol plus (<strong>+</strong>) untuk menambahkan fungsi ke daftar <strong>On Purchase Complete (Product)</strong>.</li> 
+        <li>Seret GameObject dengan skrip pemenuhan pembelian ke bidang acara dalam Inspektur komponen, kemudian pilih fungsi Anda dari menu dropdown. <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/IAPListenerScript.png" alt="Configuring an IAP Listener to handle processing exceptions"> </li> 
+       </ol> 
+       <h3>Mengakses fungsi diperpanjang Unity IAP</h3> 
+       <p>Fitur Codeless IAP tidak mengekspos sebagian besar Unity IAP. Namun, Codeless IAP diterapkan di atas API scripting yang ada, sehingga Anda dapat memodifikasi banyak fungsinya dalam script <em>IAPButton.cs</em> (<em>Aset/Plugins/UnityPurchasing/script/IAPButton.cs</em>) sesuai dengan kebutuhan Anda.</p> 
+       <p>Untuk menggunakan fungsi diperpanjang Unity IAP, akses Unity IAP dan instance yang dikembalikan.</p> 
+       <hr> 
+       <ul> 
+        <li><span class="page-edit">2018–05–30 Login</span></li> 
+       </ul> 
+       <!-- area:monetization --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UnityIAPAmazonConfiguration.html"></a></span> 
+         <div class="tip">
+           Konfigurasi untuk Amazon Appstore 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UnityIAPDefiningProducts.html"></a></span> 
+         <div class="tip">
+           Produk yang menentukan 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

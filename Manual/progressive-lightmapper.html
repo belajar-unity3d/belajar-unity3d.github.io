@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Progresif Lightmapper</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="LightingOverview.html">Lighting</a></li> 
+         <li><a href="Lightmappers.html">Lightmapping</a></li> 
+         <li>Progresif Lightmapper</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="Lightmappers.html"></a></span> 
+          <div class="tip">
+            Lightmapping 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="GPUProgressiveLightmapper.html"></a></span> 
+          <div class="tip">
+            Progresif GPU Lightmapper (preview) 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Progresif Lightmapper</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Progresif Lightmapper adalah sistem lightmapper berbasis jalur cepat yang menyediakan baked <span class="tooltip"><strong>lightmaps</strong><span class="tooltiptext">Tekstur pra-render yang mengandung efek sumber cahaya pada objek statis di tempat kejadian. Lightmaps dilalui atas geometri adegan untuk menciptakan efek pencahayaan. <a class="tooltipMoreInfoLink" href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Lightmap">Glossary</a></span></span></span> dan <span class="tooltip"><strong>Light Probes</strong><span class="tooltiptext">probe cahaya menyimpan informasi tentang bagaimana cahaya melewati ruang di tempat kejadian Anda. Koleksi probe cahaya yang diatur dalam ruang tertentu dapat meningkatkan pencahayaan pada objek bergerak dan pemandangan LOD statis dalam ruang itu. <a href="LightProbes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#LightProbe">Glossary</a></span></span></span> dengan pembaruan progresif di Editor. Ini membutuhkan UV non-overlapping dengan area kecil dan kesalahan sudut, dan bantalan yang cukup antara grafik.</p> 
+       <p>Progresif Lightmapper mengambil langkah persiapan singkat untuk memproses geometri dan pembaruan instance, dan menghasilkan masker G-buffer dan bag. Ini kemudian menghasilkan output segera dan secara progresif menyempurnakannya seiring waktu untuk alur kerja pencahayaan interaktif yang banyak ditingkatkan. Selain itu, waktu baking jauh lebih dapat diprediksi karena Progresif Lightmapper memberikan perkiraan waktu saat dipanggang.</p> 
+       <p>Progresif Lightmapper juga bakes <span class="tooltip"><strong>global illumination</strong><span class="tooltiptext">Kelompok teknik yang model pencahayaan langsung dan tidak langsung untuk memberikan hasil pencahayaan yang realistis.<br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#globalillumination">Glossary</a></span></span></span> (GI) pada resolusi lightmap untuk setiap texel secara individual, tanpa skema upsampling atau mengandalkan cache iradian atau struktur data global lainnya. Ini membuatnya kuat dan memungkinkan Anda untuk memanggang bagian-bagian yang dipilih dari peta ringan, yang membuatnya lebih cepat untuk Anda untuk menguji dan memperbarui pada <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> Anda.</p> 
+       <p>Untuk video mendalam yang menunjukkan alur kerja interaktif, lihat walkthrough video Unity: <a href="https://youtu.be/foMZJrwRGr0">Dalam Pembangunan - Progresif Lightmapper (YouTube)</a>.</p> 
+       <h2>Progresif CPU Lightmapper dan Progresif GPU Lightmapper (preview)</h2> 
+       <p>Anda dapat memilih antara dua backend untuk Progresif Lightmapper. Progresif CPU Lightmapper backend adalah backend untuk Progresif Lightmapper yang menggunakan CPU dan RAM sistem komputer Anda. Progresif GPU Lightmapper adalah backend untuk Progresif Lightmapper yang menggunakan GPU komputer Anda dan VRAM.</p> 
+       <p>Perhatikan bahwa GPU Lightmapper Progresif adalah fitur pratinjau dalam perkembangan aktif, dan tunduk pada perubahan. Untuk informasi tentang backend GPU Lightmapper Progresif, lihat <a href="GPUProgressiveLightmapper.html">Progres GPU Lightmapper (preview)</a>.</p> 
+       <h2>Render pipa dukungan</h2> 
+       <p>Lihat <a class="tooltipMoreInfoLink" href="render-pipelines-feature-comparison.html">render perbandingan fitur pipa</a> untuk informasi lebih lanjut tentang dukungan untuk Progresif Lightmapper di seluruh <span class="tooltip"><strong>render pipelines</strong><span class="tooltiptext">Rangkaian operasi yang mengambil isi dari Adegan, dan menampilkannya di layar. Unity memungkinkan Anda memilih dari pipa render yang dibangun sebelumnya, atau menulis sendiri. <a href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span>.</p> 
+       <h2>Menggunakan Progresif Lightmapper</h2> 
+       <p>Untuk menggunakan Progresif Lightmapper:</p> 
+       <ol> 
+        <li><strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting</strong> </li> 
+        <li>Navigasi ke ruang <strong>Lightmapping Settings</strong>%</li> 
+        <li>Set <span class="tooltip"><strong>Lightmapper</strong><span class="tooltiptext">Alat dalam Unity yang bakes lightmap sesuai dengan pengaturan lampu dan geometri di tempat kejadian Anda. <a class="tooltipMoreInfoLink" href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Lightmapper">Glossary</a></span></span></span> ke <strong>Progressive CPU</strong> atau <strong>Progressive GPU</strong> </li> 
+       </ol> 
+       <p>Anda dapat melakukan banyak fungsi yang tersedia di jendela ini melalui <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span>, menggunakan API <a href="../ScriptReference/LightmapEditorSettings.html">LightmapEditorSettings</a> dan <a href="../ScriptReference/Lightmapping.html">Lightmapping</a>.</p> 
+       <h2>Settings</h2> 
+       <p>Halaman ini daftar pengaturan spesifik untuk Progressive Lightmapper. Lihat <a href="GI-Enlighten.html">Lightmapping menggunakan Enlighten</a> untuk pengaturan yang spesifik untuk Mencerminkan Penelusuran Global Baked (tidak seperti Pencerahan Realtime Global). Untuk semua pengaturan pencahayaan lainnya, lihat <a href="class-LightingSettings.html">Aset Pengaturan Pencahayaan</a>.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Setting</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Lightmapper</strong></td> 
+          <td style="text-align:left;">Gunakan ini untuk menentukan perangkat lunak perhitungan pencahayaan internal yang digunakan untuk menghitung peta cahaya di Adegan. Pilihannya adalah:<br><br><a class="tooltipMoreInfoLink" href="progressive-lightmapper.html">CPU Progres</a><br><a href="GPUProgressiveLightmapper.html">Progres GPU</a><br><span class="tooltip"><a href="GI-Enlighten.html">Enlighten</a><span class="tooltiptext">Sistem pencahayaan oleh Geomerics yang digunakan dalam Unity untuk lightmapping dan untuk Mencerahkan Penerangan Global Realtime. <a href="https://www.siliconstudio.co.jp/en/products-service/enlighten/">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Enlighten">Glossary</a></span></span></span><br><br> Nilai default adalah <strong>Progressive CPU</strong>, karena Enlighten Baked Global Illumination adalah deprecated (tidak seperti Enlighten Realtime Global Illumination).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Prioritize View</strong></td> 
+          <td style="text-align:left;">Aktifkan ini untuk membuat Progresif Lightmapper menerapkan perubahan pada texels yang saat ini terlihat pada <span class="tooltip"><strong>Scene View</strong><span class="tooltiptext">Tampilan interaktif ke dunia yang Anda buat. Anda menggunakan Adegan Lihat untuk memilih dan posisi pemandangan, karakter, kamera, lampu, dan semua jenis lain dari Game Object. <a class="tooltipMoreInfoLink" href="UsingTheSceneView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SceneView">Glossary</a></span></span></span>, kemudian menerapkan perubahan pada texels out-of-view.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Multiple Importance Sampling</strong></td> 
+          <td style="text-align:left;">Aktifkan ini untuk menggunakan beberapa pengambilan penting untuk pengambilan sampel lingkungan. Ini umumnya mengarah pada konvergensi yang lebih cepat ketika menghasilkan peta ringan, tetapi dapat menyebabkan hasil noisier di lingkungan frekuensi rendah tertentu. Ini dinonaktifkan secara default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Direct Samples</strong></td> 
+          <td style="text-align:left;">Jumlah sampel (path) ditembak dari setiap texel. Pengaturan ini mengontrol jumlah sampel Progressive Lightmapper digunakan untuk perhitungan pencahayaan langsung. Meningkatkan nilai ini dapat meningkatkan kualitas peta ringan, tetapi meningkatkan waktu baking.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Indirect Samples</strong></td> 
+          <td style="text-align:left;">Jumlah sampel (path) ditembak dari setiap texel. Pengaturan ini mengontrol jumlah sampel Progressive Lightmapper digunakan untuk perhitungan pencahayaan tidak langsung. Untuk beberapa adegan, terutama adegan luar ruangan, 100 sampel harus cukup. Untuk adegan dalam ruangan dengan geometri yang diizinkan, meningkatkan nilai sampai Anda melihat hasilnya yang Anda inginkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Environment Samples</strong></td> 
+          <td style="text-align:left;">Sifat Sampel Lingkungan menentukan jumlah total sinar lingkungan yang menyalakan ke arah skybox untuk mengumpulkan cahaya langsung. Perapian unity sinar ini dari texel lightmap atau posisi probe cahaya tergantung pada konteks. Nilai default adalah 500. Nilai yang lebih tinggi mungkin menghasilkan hasil yang lebih halus, tetapi dengan biaya waktu bake yang meningkat.<br><br> Dalam Adegan dengan HDR skyboxes, lebih banyak sampel sering diperlukan untuk mengurangi kebisingan di peta lampu akhir atau probe. Adegan dengan skybox yang mencakup singleitas terang (seperti matahari) atau detail frekuensi tinggi dengan kontras yang signifikan (seperti cloud backlit) juga mendapat manfaat dari sejumlah sampel yang lebih tinggi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Light Probe Sample Multiplier</strong></td> 
+          <td style="text-align:left;">Mengontrol berapa banyak sampel yang digunakan untuk Probe Cahaya sebagai pengganda nilai sampel di atas. Nilai yang lebih tinggi meningkatkan kualitas Probe Cahaya, tetapi mereka akan memakan waktu lebih lama untuk dipanggang. Untuk mengaktifkan fitur ini, pergi ke <strong>Project Settings &gt; Editor</strong> dan disable <strong>Use legacy Light Probe sample counts.</strong> Nilai default adalah 4.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Bounces</strong></td> 
+          <td style="text-align:left;">Gunakan nilai ini untuk menentukan jumlah bouncing tidak langsung untuk dilakukan ketika menginjak jalan. Untuk kebanyakan Adegan, dua bouncing cukup. Untuk beberapa adegan dalam ruangan, lebih banyak bouncing mungkin diperlukan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Min Bounces</strong></td> 
+          <td style="text-align:left;">Jumlah minimum bouncing Anda bersedia untuk Progresif Lightmapper untuk termasuk dalam perhitungan pencahayaan tidak langsung. nilai <br><br>Lower mengurangi waktu bake, tetapi mungkin meningkatkan kebisingan lightmap. Untuk meningkatkan kinerja selama bak, Lightmapper mengakhiri jalur cahaya yang berkontribusi sedikit pada penampilan Adegan menggunakan teknik yang disebut Russian Roulette.<br><br> Nilai default: 2. Rentang: 0–100</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Max Bounces</strong></td> 
+          <td style="text-align:left;">Jumlah maksimum bouncing yang Anda inginkan Progresif Lightmapper untuk termasuk dalam perhitungan pencahayaan tidak langsung. <br><br>Default nilai: 2. Rentang: 0–100. <br><br> Nilai hingga 10 cocok untuk kebanyakan Adegan. Nilai lebih tinggi dari 10 mungkin menyebabkan waktu bake yang lebih panjang.<br><br> Setiap bouncing meningkatkan sumber daya komputasi yang diperlukan untuk memanggang adegan Anda. Gunakan nilai bouncing yang lebih tinggi untuk adegan dalam ruangan, dan nilai bouncing yang lebih rendah untuk adegan luar ruangan dan mereka dengan banyak permukaan yang cerah.<br><br> Sebagai kisaran antara Min Bounces dan Max Bounces memperluas, jumlah kebisingan yang terlihat dalam peta cahaya Anda meningkat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Filtering</strong></td> 
+          <td style="text-align:left;">Mengkonfigurasi cara Progresif Lightmapper menerapkan pasca-proses ke lightmaps untuk membatasi kebisingan. Untuk proses post lightmap, lightmap dibagi menjadi <strong>Direct</strong>, <strong>Indirect</strong> dan target <strong>Ambient Occlusion</strong> yang Unity menerapkan pasca-olahan secara individual, sebelum komposit mereka bersama menjadi peta cahaya tunggal.<br><br>- <strong>Direct</strong>: Setiap cahaya yang tiba langsung dari Cahaya ke sensor (biasanya Kamera). <br>- <strong>Indirect</strong>: Setiap cahaya yang tiba tidak langsung dari Cahaya ke sensor. Ini paling sering berlaku untuk cahaya yang memantulkan GameObjects lain. <br>- <strong>Ambient Occlusion</strong>: Setiap cahaya ambien yang sistem pencahayaan dihitung.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>None</strong></td> 
+          <td style="text-align:left;">Pilih ini untuk tidak menggunakan filter atau denoising untuk lightmap.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Auto</strong></td> 
+          <td style="text-align:left;">Pilih ini untuk menggunakan preset tergantung platform untuk proses pasca lightmap. <br><strong>If your development machine fulfils the requirements to run OptiX</strong> (The <a href="https://developer.nvidia.com/optix-denoiser">NVIDIA OptiX AI-Accelerated Denoiser</a>), Progresif Lightmapper menggunakan denoiser dengan filter Gaussian yang memiliki radius 1-texel untuk semua target. <br><strong>If your development machine cannot run OptiX</strong>, Progresif Lightmapper menggunakan filter Gaussian yang memiliki radius 1-texel untuk <strong>Direct</strong>, radius 5-texel untuk radius <strong>Indirect,</strong> dan 2-texel untuk <strong>Ambient Occlusion</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Advanced</strong></td> 
+          <td style="text-align:left;">Pilih opsi yang dikonfigurasi secara manual untuk setiap jenis target lightmap. Jenis target adalah <strong>Advanced</strong>, <strong>Direct</strong> dan <strong>Indirect</strong>. Untuk informasi lebih lanjut, lihat <strong><span class="tooltip"><strong>Ambient Occlusion</strong><span class="tooltiptext">A method to approximate how much ambient light (light not coming from a specific direction) can hit a point on a surface.<br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Ambientocclusion">Glossary</a></span></span></span></strong>, di bawah ini.<a href="#AdvancedFilteringSettings">Pengaturan penyaringan lanjutan</a>, below.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="AdvancedFilteringSettings"> </a></p> 
+       <h2>Pengaturan penyaringan lanjutan</h2> 
+       <p>Set <strong>Filtering</strong> ke <strong>Advanced</strong> untuk mengatur opsi secara manual untuk setiap jenis target lightmap. Jenis target adalah:</p> 
+       <ul> 
+        <li> <strong>Direct</strong>: Setiap cahaya yang tiba langsung dari Cahaya ke sensor (biasanya Kamera).</li> 
+        <li> <strong>Indirect</strong>: Setiap cahaya yang tiba tidak langsung dari Cahaya ke sensor. Hal ini paling sering berlaku untuk cahaya yang memantulkan <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> lain.</li> 
+        <li> <strong>Ambient Occlusion</strong>: Setiap <span class="tooltip"><strong>ambient light</strong><span class="tooltiptext">Cahaya yang tidak datang dari arah tertentu, dan berkontribusi cahaya yang sama di semua arah ke Adegan. <a class="tooltipMoreInfoLink" href="lighting-window.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Ambientlight">Glossary</a></span></span></span> bahwa sistem pencahayaan dihitung.</li> 
+       </ul> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Setting</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Denoiser</strong></td> 
+          <td style="text-align:left;">Pilih denoiser untuk digunakan untuk target lightmap. Pilihannya adalah:<br><br><strong>Optix</strong>: Denoiser NVIDIA Optix adalah denoiser yang dipercepat AI yang mengurangi kebisingan di peta cahaya panggang. Ini membutuhkan NVIDIA GPU dengan versi 4GB + VRAM dan driver 390+, dan hanya didukung pada platform Windows.<br><strong>RadeonPro</strong>: Denoiser RadeonPro adalah denoiser yang dipercepat AI yang mengurangi kebisingan di peta cahaya panggang. Ini membutuhkan OpenCL mampu GPU dengan 4GB + VRAM. <br>- <strong>OpenImageDenoise</strong>: Denoiser Open Image Intel adalah denoiser yang mempercepat AI yang mengurangi kebisingan di peta cahaya panggang. <br>- <strong>None</strong>: Jangan menggunakan denoiser.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Filter</strong></td> 
+          <td style="text-align:left;">Pilih filter untuk digunakan untuk target lightmap:<br>- <strong>Gaussian:</strong> Pilih ini untuk menggunakan filter Gaussian untuk target lightmap. Filter Gaussian menerapkan filter Gaussian bilateral pada lightmap. Peta lampu ini dan mengurangi kebisingan yang terlihat. <br>- <strong>A-Trous:</strong> Pilih ini untuk menggunakan filter A-Trous untuk target lightmap. Filter A-Trous meminimalkan jumlah blur sementara menghilangkan kebisingan yang terlihat di lightmap. <br>- <strong>None</strong><em>:</em> Pilih ini untuk menonaktifkan semua penyaringan untuk target lightmap.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Radius</strong></td> 
+          <td style="text-align:left;">Opsi ini hanya tersedia ketika <strong>Filter</strong> diatur ke <strong>Gaussian</strong>. Gunakan nilai <strong>Radius</strong> untuk mengatur radius dari kernel filter Gaussian di texels. Lebih tinggi <strong>Radius</strong> meningkatkan kekuatan buram dan mengurangi kebisingan yang rentan, tetapi mungkin menyebabkan detail hilang dalam pencahayaan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Sigma</strong></td> 
+          <td style="text-align:left;">Opsi ini hanya tersedia ketika <strong>Filter</strong> diatur ke <strong>A-Trous</strong>. Gunakan nilai <strong>Sigma</strong> untuk menyesuaikan berapa banyak untuk melestarikan detail atau blur pencahayaan. Lebih tinggi <strong>Sigma</strong> meningkatkan kekuatan buram dan mengurangi kebisingan yang rentan, tetapi mungkin menyebabkan detail hilang dalam pencahayaan.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Statistik</h2> 
+       <p>Panel di bawah opsi <strong>Auto Generate</strong> dan <strong>Generate Lighting</strong> menunjukkan statistik tentang lightmapping, termasuk:</p> 
+       <ul> 
+        <li>Jumlah peta ringan yang dibuat Unity</li> 
+        <li>Sitemap Jumlah memori yang diperlukan untuk lightmapping saat ini.<strong>Memory Usage:</strong> The amount of memory required for the current lightmapping.</li> 
+        <li> <strong>Occupied Texels</strong>: Jumlah texels yang ditempati di ruang UV lightmap.</li> 
+        <li> <strong>Lightmaps in view</strong>: Jumlah peta lampu dalam tampilan adegan.</li> 
+        <li> <strong>Lightmaps not in view</strong>: Jumlah peta cahaya yang keluar dari pandangan. 
+         <ul> 
+          <li> <strong>Converged</strong>: Semua perhitungan untuk peta cahaya ini lengkap.</li> 
+          <li> <strong>Not Converged</strong>: Kue masih dalam kemajuan untuk peta cahaya ini.</li> 
+         </ul> </li> 
+        <li> <strong>Bake Performance</strong>: Jumlah sinar per detik. Jika ini rendah (yaitu, kurang dari 2) Anda harus menyesuaikan pengaturan Anda atau perangkat keras Anda untuk memproses lebih sinar cahaya pada waktu.</li> 
+       </ul> 
+       <h2>Selama baking</h2> 
+       <p>Progresif Lightmapper menyediakan pilihan untuk memantau dan menghentikan bake saat sedang berlangsung, jika Anda perlu.</p> 
+       <h3>ETA</h3> 
+       <p>Bar kemajuan yang muncul sementara Unity adalah baking lightmap menyediakan “perkirakan waktu kedatangan” (ditampilkan sebagai <strong>ETA</strong>). Ini adalah perkiraan waktu dalam hitungan detik untuk bake saat ini untuk menyelesaikan. Hal ini memungkinkan untuk waktu baking yang lebih dapat diprediksi, dan memungkinkan Anda untuk dengan cepat belajar berapa banyak waktu yang dipanggang mengambil dengan pengaturan pencahayaan Anda saat ini.</p> 
+       <h3>Force Stop</h3> 
+       <p>Selama baking manual, klik <strong>Force Stop</strong> setiap saat untuk menghentikan proses pembuatan roti. Ini memungkinkan Anda untuk menghentikan proses segera setelah Anda melihat hasil yang terlihat baik.</p> 
+       <h2>Menonaktifkan kontribusi lingkungan default</h2> 
+       <p>Unity secara otomatis menghasilkan <a href="../ScriptReference/RenderSettings-ambientProbe.html">ambient probe</a> dan <a href="../ScriptReference/ReflectionProbe-defaultTexture.html">Datasheet</a> untuk memastikan bahwa pencahayaan lingkungan mempengaruhi adegan Anda dan GameObjects di dalamnya secara default.</p> 
+       <p>Untuk menonaktifkan kontribusi lingkungan dalam hasil pencahayaan untuk adegan atau GameObject yang tidak memiliki peta cahaya yang dibuat secara manual dan Probe Cahaya, menonaktifkan <span class="tooltip"><strong>Reflection Probe</strong><span class="tooltiptext">Komponen rendering yang menangkap pandangan bulat dari sekitarnya di semua arah, seperti kamera. Gambar yang ditangkap kemudian disimpan sebagai kubus yang dapat digunakan oleh benda dengan bahan reflektif. <a class="tooltipMoreInfoLink" href="class-ReflectionProbe.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ReflectionProbe">Glossary</a></span></span></span> default dan probe ambient. Untuk informasi lebih lanjut, lihat <a href="using-skymanager.html#disableskymanager">Menonaktifkan SkyManager</a>.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="Lightmappers.html"></a></span> 
+         <div class="tip">
+           Lightmapping 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="GPUProgressiveLightmapper.html"></a></span> 
+         <div class="tip">
+           Progresif GPU Lightmapper (preview) 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

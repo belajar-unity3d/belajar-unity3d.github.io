@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Menggunakan Firebase dengan build UDP</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityServices.html">Layanan Unity</a></li> 
+         <li><a href="udp.html">Portal Distribusi Unity</a></li> 
+         <li><a href="udp-service-interoperability.html">Menggunakan UDP dengan layanan lain</a></li> 
+         <li>Menggunakan Firebase dengan build UDP</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="udp-service-interoperability.html"></a></span> 
+          <div class="tip">
+            Menggunakan UDP dengan layanan lain 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="udp-reference.html"></a></span> 
+          <div class="tip">
+            Referensi UDP 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Menggunakan Firebase dengan build UDP</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Menerapkan <a href="https://firebase.google.com/">Firebase</a> dalam game Android Anda memungkinkan Anda memanfaatkan lapisan produk Firebase, misalnya untuk <span class="tooltip"><strong>analytics</strong><span class="tooltiptext"><strong>Unity Analytics</strong><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Analytics">Glossary</a></span></span></span> atau <a href="https://firebase.google.com/docs/crashlytics">crashlytics</a>. Jika permainan Anda menggunakan Firebase, tambahan <a href="#config">configuration</a> diperlukan untuk mendukung build yang Unity Distribution Portal () menciptakan untuk berbagai toko.</p> 
+       <p>Ketika panggilan aplikasi Anda Produk Firebase, Firebase memeriksa bahwa informasi berikut cocok dengan rincian yang terdaftar di konsol Firebase:</p> 
+       <ul> 
+        <li>Nama paket aplikasi</li> 
+        <li>Sertifikat aplikasi ditandatangani dengan</li> 
+        <li>Sumber daya google_app_id dalam paket Android (APK)</li> 
+       </ul> 
+       <p>Detail ini harus cocok untuk Firebase untuk memberikan analisis yang akurat.</p> 
+       <p>Untuk toko tertentu di mana Anda mempublikasikan permainan Anda melalui UDP, UDP menambahkan suffix khusus untuk nama paket. Selain itu, jika Anda tidak menggunakan kunci pribadi Anda sendiri untuk menghasilkan sertifikat, UDP menghasilkan sertifikat untuk setiap membangun yang dikemas ulang. Peristiwa ini akan menyebabkan sertifikat dan/atau nama paket untuk tidak lagi mencocokkan informasi pada konsol Firebase.</p> 
+       <p>Konsol UDP menampilkan peringatan untuk layanan Firebase jika Anda mendaftarkan aplikasi Anda ke toko yang membutuhkan suffix nama paket.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/udp-firebase-warning.png" alt="Firebase services warning in UDP console"> 
+        <figcaption>
+          Peringatan layanan Firebase di konsol UDP 
+        </figcaption> 
+       </figure> 
+       <p>Untuk mengaktifkan bangunan khusus toko Anda untuk bekerja dengan benar dengan Firebase, Anda harus mendaftarkan mereka dengan proyek Firebase Anda. Bagian berikut menjelaskan cara mengkonfigurasi Firebase untuk membangun UDP Anda.</p> 
+       <p><a name="config"></a></p> 
+       <h2>Mengkonfigurasi Firebase untuk membangun UDP Anda</h2> 
+       <p>Bagian ini memberikan gambaran tentang langkah-langkah yang diperlukan untuk mengkonfigurasi Firebase untuk build UDP Anda (apps). Untuk informasi lebih rinci, lihat <a href="https://firebase.google.com/docs/unity/setup">Dokumentasi Firebase</a>.</p> 
+       <h3>Prerequisites</h3> 
+       <ul> 
+        <li>Anda memiliki <a href="https://firebase.google.com/docs/unity/setup#create-firebase-project">membuat proyek Firebase</a> dan menambahkannya ke aplikasi Anda</li> 
+        <li>Anda memiliki <a href="https://firebase.google.com/docs/unity/setup#add-sdks">menambahkan Firebase Unity SDK</a> untuk aplikasi Anda</li> 
+        <li>Anda memiliki <a href="udp-managing-and-publishing.html#register">terdaftar permainan Anda dengan toko</a> di konsol UDP</li> 
+        <li>Jika Anda menggunakan aplikasi-signing private key yang dihasilkan oleh UDP, repack dan menerbitkan aplikasi Anda untuk menghasilkan sertifikat</li> 
+       </ul> 
+       <p> <strong>Note</strong>: Selama proses untuk mendaftarkan aplikasi Anda, Anda dapat mengunduh layanan google. json file. Unity merekomendasikan bahwa Anda mendaftar semua versi paket Anda sebelum Anda mengunduh file ini.</p> 
+       <ol> 
+        <li> <a href="https://firebase.google.com/docs/unity/setup#register-app">Daftarkan aplikasi Anda dengan Firebase</a>. 
+         <ul> 
+          <li>Gunakan nama paket khusus dari konsol UDP: <strong>My Games</strong> &gt; <strong>Publish</strong> &gt; <strong>Store</strong> &gt; halaman <strong>Advanced</strong>.</li> 
+         </ul> </li> 
+        <li>Dalam konsol Firebase, pergi ke <span class="tooltip"><strong>Project Settings</strong><span class="tooltiptext">Pengumpulan yang luas dari pengaturan yang memungkinkan Anda untuk mengkonfigurasi bagaimana Fisika, Audio, Jaringan, Grafik, Input dan banyak bidang lain dari jangkauan proyek Anda. <a class="tooltipMoreInfoLink" href="comp-ManagerGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span> dan tambahkan sertifikat toko sidik jari aplikasi Anda. 
+         <ul> 
+          <li>Jika Anda menggunakan kunci Anda sendiri, dapatkan sidik jari Anda dengan perintah:<br><code>keytool -keystore path-to-your-keystore -list -v</code> </li> 
+          <li>Jika Anda tidak menggunakan kunci Anda sendiri, gunakan sertifikat SHA1 untuk toko UDP yang sesuai (<strong>UDP Console</strong> &gt; <strong>My Games</strong> &gt; <strong>Publish</strong> &gt; <strong>Store</strong> &gt; <strong>Advanced</strong>)</li> 
+          <li>Anda juga dapat mengunduh sertifikat APK dan mendapatkan informasi sidik jari dengan perintah:<br><code>openssl x509 -in path-to-your-certificate -fingerprint -noout</code>%</li> 
+         </ul> </li> 
+       </ol> 
+       <p>Ulangi langkah-langkah ini untuk setiap aplikasi khusus toko yang ingin Anda hubungkan ke proyek Firebase Anda. Firebase menambahkan ID App untuk setiap aplikasi yang Anda tambahkan.</p> 
+       <p>Ketika Anda telah mendaftarkan semua aplikasi Anda, <a href="https://firebase.google.com/docs/unity/setup#add-config-file">menambahkan file konfigurasi Firebase</a> ke proyek Unity Anda.</p> 
+       <h2>Menambahkan file konfigurasi Firebase</h2> 
+       <p>Ketika Anda mendaftarkan aplikasi di Firebase, Firebase menciptakan layanan google. file konfigurasi json. Ketika Anda telah menambahkan semua aplikasi Anda ke Firebase, mengunduh file dan menambahkannya ke proyek Anda.</p> 
+       <ol> 
+        <li>Di konsol Firebase pergi ke halaman Pengaturan Proyek aplikasi Anda.</li> 
+        <li>Download file google-services.json.</li> 
+        <li>Salin layanan google. json file ke folder <strong>Assets</strong> proyek Unity Anda.</li> 
+       </ol> 
+       <p>Proyek Anda sekarang dikonfigurasi dengan benar untuk Firebase. Untuk memastikan operasi yang stabil dari aplikasi Anda, membangun kembali dan menerbitkan proyek Anda.</p> 
+       <h2>Menambahkan ID Firebase Anda di konsol UDP</h2> 
+       <p>Untuk setiap membangun Anda telah menambahkan Firebase, di konsol UDP, tambahkan ID Aplikasi:</p> 
+       <ol> 
+        <li>Salin ID Aplikasi yang spesifik dari Firebase.</li> 
+        <li>Di konsol UDP, pergi ke <strong>My Games</strong> &gt; <strong>Publish</strong> &gt; <strong>Store</strong> &gt; halaman <strong>Advanced</strong>. 
+         <ol> 
+          <li>Tempel ID Aplikasi ke bidang <strong>Firebase App ID</strong>.</li> 
+          <li>Pilih <strong>Save</strong>.</li> 
+         </ol> </li> 
+       </ol> 
+       <h2>Membangun proyek Anda</h2> 
+       <ol> 
+        <li>Di Editor Unity, .</li> 
+        <li>Upload build Anda ke konsol UDP.</li> 
+        <li>Rilis revisi baru.</li> 
+        <li>Di tab Publikasi, pilih setiap toko yang ingin Anda publikasikan. 
+         <ol> 
+          <li>Mengatur langkah target ke <strong>Submit to Store</strong>.</li> 
+          <li>Pilih <strong>Publish</strong>.</li> 
+         </ol> </li> 
+       </ol> 
+       <p>Untuk informasi lebih lanjut tentang langkah-langkah ini, lihat <a href="udp-managing-and-publishing.html">Mengelola dan menerbitkan permainan Anda di konsol UDP</a>.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="udp-service-interoperability.html"></a></span> 
+         <div class="tip">
+           Menggunakan UDP dengan layanan lain 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="udp-reference.html"></a></span> 
+         <div class="tip">
+           Referensi UDP 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

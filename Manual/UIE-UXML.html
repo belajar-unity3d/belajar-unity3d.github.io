@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: UI struktur dengan UXML</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UIToolkits.html"></a></li> 
+         <li><a href="UIElements.html"></a></li> 
+         <li>Struktur UI dengan UX</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UIB-testing-ui-testing-inside.html"></a></span> 
+          <div class="tip">
+            Pengujian di dalam Pembuat UI 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UIE-WritingUXMLTemplate.html"></a></span> 
+          <div class="tip">
+            Tulis Template UXML 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Struktur UI dengan UX</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Unity Extensible Markup Language (UXML) file adalah file teks yang menentukan struktur antarmuka pengguna. Format UXML terinspirasi oleh <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>, <a href="https://docs.microsoft.com/en-us/dotnet/desktop/wpf/xaml/?view=netdesktop-5.0">XAML</a>, dan <a href="https://developer.mozilla.org/en-US/docs/Web/XML/XML_introduction">XML</a>. Jika Anda telah bekerja dengan format ini sebelum, Anda akan menemukan kesamaan dengan UXML. Namun, format UX mencakup perbedaan kecil untuk memberikan cara yang efisien untuk bekerja dengan Unity.</p> 
+       <p>Bagian ini menjelaskan format UXML yang mendukung Unity dan memberikan rincian tentang menulis, memuat, dan mendefinisikan template UXML. Ini juga mencakup informasi tentang mendefinisikan elemen baru, dan bagaimana menggunakan UQuery.</p> 
+       <p>UXML memudahkan pengguna yang kurang teknis untuk membangun antarmuka pengguna dalam Unity. Di UXML Anda dapat:</p> 
+       <ul> 
+        <li>mendefinisikan struktur antarmuka pengguna (UI) di XML.</li> 
+        <li>mendefinisikan tata letak <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Memungkinkan pengguna untuk berinteraksi dengan aplikasi Anda. Unity saat ini mendukung tiga sistem UI. <a class="tooltipMoreInfoLink" href="UI-system-compare.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UI">Glossary</a></span></span></span> dengan stylesheet USS.</li> 
+       </ul> 
+       <p>Pengembang daun ini untuk melakukan tugas teknis, seperti aset impor, mendefinisikan logika, dan memproses data.</p> 
+       <h2>Menentukan elemen baru</h2> 
+       <p>Dengan UI Toolkit, Anda dapat menentukan komponen antarmuka pengguna dan elemen Anda sendiri.</p> 
+       <p>Sebelum Anda dapat menggunakan file UXML untuk menentukan elemen baru, Anda harus mendapatkan kelas baru dari <code>VisualElement</code> atau salah satu subklasnya, kemudian menerapkan fungsi yang tepat dalam kelas baru ini. Kelas baru Anda harus menerapkan konstruktor default.</p> 
+       <p>Misalnya, kode berikut berasal dari kelas <code>StatusBar</code> baru dan menerapkan konstruktor defaultnya:</p> 
+       <pre><code class="lang-csharp">class StatusBar : VisualElement
+{
+    public StatusBar()
+    {
+        m_Status = String.Empty;
+    }
+
+    string m_Status;
+    public string status { get; set; }
+}
+</code></pre> 
+       <p>Dalam rangka untuk UI Toolkit untuk meluruskan kelas baru ketika membaca file UXML, Anda harus mendefinisikan pabrik untuk kelas Anda. Kecuali pabrik Anda perlu melakukan sesuatu yang istimewa, Anda dapat memperoleh pabrik dari <code>UxmlFactoy&lt;T&gt;</code>. Disarankan bahwa Anda menempatkan kelas pabrik dalam kelas komponen Anda.</p> 
+       <p>Sebagai contoh, kode berikut menunjukkan cara menentukan pabrik untuk kelas <code>StatusBar</code> dengan menolak pabriknya dari <code>UxmlFactory&lt;T&gt;</code>. Pabrik ini dinamakan <code>UxmlFactory</code>:</p> 
+       <pre><code class="lang-csharp">class StatusBar : VisualElement
+{
+    public new class UxmlFactory : UxmlFactory&lt;StatusBar&gt; {}
+
+    // ...
+}
+</code></pre> 
+       <p>Dengan pabrik ini didefinisikan, Anda dapat menggunakan elemen <code>&lt;StatusBar&gt;</code> dalam file UXML.</p> 
+       <h2>Menentukan atribut pada elemen</h2> 
+       <p>Anda dapat mendefinisikan sifat UX untuk kelas baru dan mengatur pabriknya untuk menggunakan sifat-sifat ini.</p> 
+       <p>Sebagai contoh, kode berikut menunjukkan cara menentukan kelas UXML untuk menginisialisasi properti <code>status</code> sebagai properti kelas <code>StatusBar</code>. Status properti menginisialisasi dari data XML.</p> 
+       <pre><code class="lang-csharp">class StatusBar : VisualElement
+{
+    public new class UxmlFactory : UxmlFactory&lt;StatusBar, UxmlTraits&gt; {}
+
+    public new class UxmlTraits : VisualElement.UxmlTraits
+    {
+        UxmlStringAttributeDescription m_Status = new UxmlStringAttributeDescription { name = "status" };
+
+        public override IEnumerable&lt;UxmlChildElementDescription&gt; uxmlChildElementsDescription
+        {
+            get { yield break; }
+        }
+
+        public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
+        {
+            base.Init(ve, bag, cc);
+            ((StatusBar)ve).status = m_Status.GetValueFromBag(bag, cc);
+        }
+    }
+
+    // ...
+}
+</code></pre> 
+       <p><code>UxmlTraits</code> melayani dua tujuan:</p> 
+       <ul> 
+        <li>Pabrik ini menggunakannya untuk menginisialisasi objek baru diciptakan.</li> 
+        <li>Proses generasi schema menganalisisnya untuk mendapatkan informasi tentang elemen. Informasi ini diterjemahkan ke dalam arah penjadwalan XML.</li> 
+       </ul> 
+       <p>Contoh kode di atas melakukan berikut:</p> 
+       <ul> 
+        <li>Pernyataan <code>m_Status</code> mendefinisikan atribut XML bernama <code>status</code>.</li> 
+        <li><code>uxmlChildElementsDescription</code> mengembalikan <code>IEnumerable</code> kosong yang menunjukkan bahwa elemen <code>StatusBar</code> tidak memiliki anak.</li> 
+        <li>Anggota <code>Init()</code> membaca nilai atribut <code>status</code> dalam tas properti dari pembuat XML dan menetapkan properti <code>StatusBar.status</code> untuk nilai ini.</li> 
+        <li>Dengan menempatkan kelas <code>UxmlTraits</code> di dalam kelas <code>StatusBar</code> memungkinkan metode <code>Init()</code> untuk mengakses anggota pribadi <code>StatusBar</code>.</li> 
+        <li>Inherit kelas <code>UxmlTraits</code> baru dari kelas dasar <code>UxmlTraits</code>, sehingga saham atribut kelas dasar.</li> 
+        <li> <code>Init()</code> panggilan <code>base.Init()</code> untuk menginisialisasi properti kelas dasar.</li> 
+       </ul> 
+       <p>Contoh kode di atas menyatakan atribut string dengan kelas <code>UxmlStringAttributeDescription</code>. UI Toolkit mendukung jenis atribut berikut dan setiap tautan tipe C# ke tipe XML:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Attribute</strong></th> 
+          <th style="text-align:left;"><strong>Attribute value</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>UxmlStringAttributeDescription</code></td> 
+          <td style="text-align:left;">A string</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>UxmlFloatAttributeDescription</code></td> 
+          <td style="text-align:left;">Nilai titik mengambang presisi tunggal dalam kisaran tipe C # <code>float</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>UxmlDoubleAttributeDescription</code></td> 
+          <td style="text-align:left;">Nilai titik mengambang presisi ganda dalam kisaran tipe C # <code>double</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>UxmlIntAttributeDescription</code></td> 
+          <td style="text-align:left;">Nilai integer dalam kisaran tipe C # <code>int</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>UxmlLongAttributeDescription</code></td> 
+          <td style="text-align:left;">Nilai bilangan bulat panjang dalam kisaran tipe C # <code>long</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>UxmlBoolAttributeDescription</code></td> 
+          <td style="text-align:left;"> <code>true</code> atau <code>false</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>UxmlColorAttributeDescription</code></td> 
+          <td style="text-align:left;">string mewakili warna (<code>#FFFFFF</code>)</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>UxmlEnumAttributeDescription&lt;T&gt;</code></td> 
+          <td style="text-align:left;">Sebuah string mewakili salah satu nilai untuk jenis <code>Enum</code>.<code>T</code>.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Pada contoh kode di atas, <code>uxmlChildElementsDescription</code> mengembalikan <code>IEnumerable</code> kosong yang menunjukkan bahwa elemen <code>StatusBar</code> tidak menerima anak-anak.</p> 
+       <p>Untuk memiliki elemen menerima anak-anak dari jenis apa pun, Anda harus menimpa properti <code>uxmlChildElementsDescription</code>. Misalnya, untuk elemen <code>StatusBar</code> untuk menerima anak-anak dari jenis apa pun, properti <code>uxmlChildElementsDescription</code> harus ditentukan sebagai berikut:</p> 
+       <pre><code>public override IEnumerable&lt;UxmlChildElementDescription&gt; uxmlChildElementsDescription
+{
+    get
+    {
+        yield return new UxmlChildElementDescription(typeof(VisualElement));
+    }
+}
+</code></pre> 
+       <h2>Menentukan prefiksi namespace</h2> 
+       <p>Setelah Anda mendefinisikan elemen baru di C#, Anda dapat mulai menggunakan elemen dalam file UXML Anda. Jika elemen baru Anda didefinisikan dalam namespace baru, Anda harus mendefinisikan prefix untuk namespace. Prefix Namespace dideklarasikan sebagai atribut pada elemen <code>&lt;UXML&gt;</code> root dan mengganti nama namespace penuh ketika mencetak elemen.</p> 
+       <p>Untuk menentukan prefiks namespace, tambahkan atribut <code>UxmlNamespacePrefix</code> ke perakitan Anda untuk setiap prefiks namespace yang ingin Anda tentukan.</p> 
+       <pre><code class="lang-csharp">
+[assembly: UxmlNamespacePrefix("My.First.Namespace", "first")]
+[assembly: UxmlNamespacePrefix("My.Second.Namespace", "second")]
+
+</code></pre> 
+       <p>Anda dapat melakukan ini di tingkat akar (di luar ruang nama) dari setiap file C # dari perakitan.</p> 
+       <p>Sistem generasi skema melakukan berikut:</p> 
+       <ul> 
+        <li>Cek atribut ini dan menggunakannya untuk menghasilkan skema.</li> 
+        <li>Menambahkan definisi prefix namespace sebagai atribut dari elemen <code>&lt;UXML&gt;</code> dalam file UXML baru dibuat</li> 
+        <li>Sertakan lokasi file schema untuk namespace dalam atribut <code>xsi:schemaLocation</code>.</li> 
+       </ul> 
+       <p>Anda harus memperbarui skema UXML proyek Anda. Pilih <strong>Assets &gt; Update UXML Schema</strong> untuk memastikan bahwa editor teks Anda mengenali elemen baru.</p> 
+       <p>Prefix yang ditentukan tersedia di UXML yang baru dibuat dengan memilih <strong>Create &gt; UI Toolkit &gt; Editor Window</strong> di folder <code>Project/Assets/Editor</code>.</p> 
+       <h2>Penggunaan lanjutan</h2> 
+       <h3>Sesuaikan nama UX</h3> 
+       <p>Anda dapat menyesuaikan nama UXML dengan menahan sifat <code>IUxmlFactory.uxmlName</code> dan <code>IUXmlFactory.uxmlQualifiedName</code>. Pastikan <code>uxmlName</code> unik di dalam ruang nama Anda dan bahwa <code>uxmlQualifiedName</code> unik dalam proyek Anda.</p> 
+       <p>Jika kedua nama tidak unik, pengecualian dibuang ketika Anda mencoba memuat perakitan Anda.</p> 
+       <p>Contoh kode berikut menunjukkan cara override dan kustom nama UXML:</p> 
+       <pre><code class="lang-csharp">public class FactoryWithCustomName : UxmlFactory&lt;..., ...&gt;
+{
+    public override string uxmlName
+    {
+        get { return "UniqueName"; }
+    }
+
+    public override string uxmlQualifiedName
+    {
+        get { return uxmlNamespace + "." + uxmlName; }
+    }
+}
+</code></pre> 
+       <h3>Memilih pabrik untuk elemen</h3> 
+       <p>Secara default, elemen <code>IUxmlFactory</code> meluruskan dan memilih elemen menggunakan nama elemen.</p> 
+       <p>Anda dapat membuat proses seleksi mempertimbangkan nilai atribut pada elemen dengan overriding <code>IUXmlFactory.AcceptsAttributeBag</code>. Pabrik kemudian akan memeriksa atribut elemen untuk memutuskan jika dapat mengulangi objek untuk elemen UXML.</p> 
+       <p>Ini berguna jika kelas <code>VisualElement</code> Anda adalah generik. Dalam hal ini, pabrik kelas untuk spesialisasi kelas Anda dapat memeriksa nilai atribut XML <code>type</code>. Tergantung pada nilai, sekiasi dapat diterima atau ditolak.</p> 
+       <p>Dalam kasus di mana lebih dari satu pabrik dapat meluruskan elemen, pabrik terdaftar pertama dipilih.</p> 
+       <h3>Mempertahankan nilai default atribut kelas dasar</h3> 
+       <p>Anda dapat mengubah nilai default dari atribut yang dinyatakan dalam kelas dasar dengan mengatur kelas <code>defaultValue</code> yang berasal dari kelas <code>UxmlTraits</code>.</p> 
+       <p>Misalnya, kode berikut menunjukkan cara mengubah nilai default <code>m_TabIndex</code>:</p> 
+       <pre><code class="lang-csharp">class MyElementTraits : VisualElement.UxmlTraits
+    {
+        public MyElementTraits()
+        {
+            m_TabIndex.defaultValue = 0;
+        }
+    }
+</code></pre> 
+       <h3>Menerima atribut apa pun</h3> 
+       <p>Secara default, schema XML yang dihasilkan menyatakan bahwa elemen dapat memiliki atribut.</p> 
+       <p>Nilai atribut, selain yang dinyatakan dalam kelas <code>UxmlTraits</code>, tidak dibatasi. Ini berbeda dengan validator XML yang memeriksa nilai atribut yang dinyatakan sesuai dengan deklarasinya.</p> 
+       <p>Atribut tambahan disertakan dalam kantong <code>IUxmlAttributes</code> yang dilewatkan ke fungsi <code>IUxmlFactory.AcceptsAttributBag()</code> dan <code>IUxmlFactory.Init()</code>. Ini hingga implementasi pabrik untuk menggunakan atribut tambahan ini. Perilaku default adalah untuk membuang atribut tambahan.</p> 
+       <p>Ini berarti bahwa atribut tambahan ini tidak melekat pada <code>VisualElement</code> instan dan Anda tidak dapat meminta atribut ini dengan <code>UQuery</code>.</p> 
+       <p>Ketika mendefinisikan elemen baru, Anda dapat membatasi atribut yang diterima bagi mereka secara eksplisit menyatakan dengan menetapkan properti <code>UxmlTraits.canHaveAnyAttribute</code> pada konstrukor <code>false</code> Anda.<code>UxmlTraits</code> constructor.</p> 
+       <h2>Menggunakan definisi Skema</h2> 
+       <p>File definisi Skema menentukan atribut dan elemen anak mana setiap elemen UXML dapat mengandung. Gunakan file definisi skema sebagai panduan untuk menulis dokumen yang benar dan untuk memvalidasi dokumen Anda.</p> 
+       <p>Dalam file template UXML, atribut <code>xsi:noNamespaceSchemaLocation</code> dan <code>xsi:schemaLocation</code> dari elemen akar <code>&lt;UXML&gt;</code> menentukan lokasi file definisi skema.</p> 
+       <p>Pilih <strong>Assets &gt; Create &gt; UI Toolkit &gt; Editor Window</strong> untuk secara otomatis memperbarui definisi skema Anda dengan informasi terbaru dari sub-kelas <code>VisualElement</code> yang digunakan oleh proyek Anda. Untuk memaksa pembaruan file skema UXML, pilih <strong>Assets &gt; Update UXML Schema</strong>.</p> 
+       <p> <strong>Note</strong>: Beberapa editor teks tidak mengenali atribut <code>xsi:noNamespaceSchemaLocation</code>. Jika editor teks Anda tidak dapat menemukan file definisi skema, Anda juga harus menentukan atribut <code>xsi:schemaLocation</code>.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UIB-testing-ui-testing-inside.html"></a></span> 
+         <div class="tip">
+           Pengujian di dalam Pembuat UI 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UIE-WritingUXMLTemplate.html"></a></span> 
+         <div class="tip">
+           Tulis Template UXML 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy"> 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: ShaderLab: pengujian alfa legacy</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="Shaders.html">Shaders</a></li> 
+         <li><a href="shader-writing.html">Menu Menu</a></li> 
+         <li><a href="SL-Reference.html">ShaderLab</a></li> 
+         <li><a href="shader-shaderlab-commands.html">ShaderLab: perintah</a></li> 
+         <li><a href="shader-shaderlab-legacy.html">Fungsi legacy ShaderLab</a></li> 
+         <li>ShaderLab: pengujian alfa legacy</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="SL-Material.html"></a></span> 
+          <div class="tip">
+            ShaderLab: pencahayaan legacy 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="SL-SetTexture.html"></a></span> 
+          <div class="tip">
+            ShaderLab: kombinasi tekstur legacy 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>ShaderLab: pengujian alfa legacy</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p> <strong>Note</strong>: Fungsi <span class="tooltip"><strong>ShaderLab</strong><span class="tooltiptext">Bahasa Unity untuk mendefinisikan struktur benda-benda Shader. <a class="tooltipMoreInfoLink" href="SL-Shader.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#ShaderLab">Glossary</a></span></span></span> pada halaman ini adalah legacy, dan didokumentasikan untuk kesan ke belakang hanya. Jika file sumber <span class="tooltip"><strong>shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> Anda termasuk kode HLSL, Unity mengabaikan perintah ini sepenuhnya. Jika file sumber naungan Anda tidak termasuk kode HLSL, Unity mengkompilasi perintah ini ke program naungan biasa pada impor.</p> 
+       <h2>Kompatibilitas pipa Render</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Feature name</strong></th> 
+          <th style="text-align:left;"><strong>Built-in <span class="tooltip"><strong>Render Pipeline</strong><span class="tooltiptext">A series of operations that take the contents of a Scene, and displays them on a screen. Unity lets you choose from pre-built render pipelines, or write your own. <a class="tooltipMoreInfoLink" href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span></strong></th> 
+          <th style="text-align:left;"><strong>Universal Render Pipeline (URP)</strong></th> 
+          <th style="text-align:left;"><strong>High Definition Render Pipeline (HDRP)</strong></th> 
+          <th style="text-align:left;"><strong>Custom SRP</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Legacy alpha testing</strong></td> 
+          <td style="text-align:left;">Yes</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">No</td> 
+          <td style="text-align:left;">No</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h1>Overview</h1> 
+       <p>Setelah warna output akhir telah dihitung, warna dapat secara opsional memiliki nilai alfa dibandingkan dengan nilai tetap. Jika tes gagal, <span class="tooltip"><strong>pixel</strong><span class="tooltiptext">Unit terkecil dalam gambar komputer. Ukuran piksel tergantung pada resolusi layar Anda. Pencahayaan pixel dihitung pada setiap piksel layar. <a class="tooltipMoreInfoLink" href="ShadowPerformance.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#pixel">Glossary</a></span></span></span> tidak ditulis ke tampilan.</p> 
+       <h2>Syntax</h2> 
+       <pre><code>AlphaTest Off
+</code></pre> 
+       <p>Render semua piksel (standar) atau...</p> 
+       <pre><code>AlphaTest comparison AlphaValue
+</code></pre> 
+       <p>Mengatur tes alfa hanya untuk membuat piksel yang nilai alfa dalam kisaran tertentu.</p> 
+       <h3>Comparison</h3> 
+       <p>Perbandingan adalah salah satu kata berikut:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"></th> 
+          <th style="text-align:left;"></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>Greater</strong></td> 
+          <td style="text-align:left;">Hanya render piksel yang alfa lebih besar dari <em>AlphaValue</em>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>GEqual</strong></td> 
+          <td style="text-align:left;">Hanya render piksel yang alfa lebih besar dari atau sama dengan <em>AlphaValue</em>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Less</strong></td> 
+          <td style="text-align:left;">Hanya render piksel yang nilai alfanya kurang dari <em>AlphaValue</em>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>LEqual</strong></td> 
+          <td style="text-align:left;">Hanya render piksel yang nilai alfanya kurang dari atau sama dari <em>AlphaValue</em>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Equal</strong></td> 
+          <td style="text-align:left;">Hanya render piksel yang nilai alfa sama <em>AlphaValue</em>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>NotEqual</strong></td> 
+          <td style="text-align:left;">Hanya render piksel yang nilai alfa berbeda dari <em>AlphaValue</em>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Always</strong></td> 
+          <td style="text-align:left;">Render semua piksel. Ini secara fungsional setara dengan <em>AlphaTest Off</em>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Never</strong></td> 
+          <td style="text-align:left;">Jangan membuat piksel.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h3>AlphaValue</h3> 
+       <p>Nomor titik mengambang antara 0 dan 1. Ini juga dapat menjadi referensi variabel untuk properti pelampung atau jangkauan, dalam hal itu harus ditulis menggunakan notasi braket persegi standar (<em>[VariableName]</em>).</p> 
+       <h2>Details</h2> 
+       <p>Tes alfa penting ketika membuat benda cekung dengan bagian transparan. Kartu grafis mempertahankan catatan kedalaman setiap pixel yang ditulis ke layar. Jika pixel baru lebih jauh dari satu yang sudah dirender, pixel baru tidak ditulis ke tampilan. Ini berarti bahwa bahkan dengan <a href="SL-Blend.html">Blending</a>, objek tidak akan ditampilkan melalui.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/sl-alphatest2.jpg" alt=""> 
+       </figure> 
+       <p>Dalam gambar ini, pohon di sebelah kiri diberikan menggunakan <strong>AlphaTest</strong>. Perhatikan bagaimana piksel di dalamnya benar-benar transparan atau buram. Pohon pusat dirender hanya menggunakan <strong>Alpha Blending</strong> - melihat bagaimana bagian transparan dari cabang terdekat mencakup daun jauh karena <span class="tooltip"><strong>depth buffer</strong><span class="tooltiptext">Sebuah toko memori yang memegang kedalaman nilai z setiap pixel dalam gambar, di mana nilai z adalah kedalaman untuk setiap piksel yang diberikan dari pesawat proyeksi. <a class="tooltipMoreInfoLink" href="class-RenderTexture.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#depthbuffer">Glossary</a></span></span></span>. Pohon di sebelah kanan dirender menggunakan naungan contoh terakhir - yang menerapkan kombinasi campuran dan uji alfa untuk menyembunyikan artefak.</p> 
+       <h2>Examples</h2> 
+       <p>Contoh paling sederhana, menetapkan tekstur dengan saluran alfa ke dalamnya. Objek hanya akan terlihat di mana alfa lebih besar dari 0,5</p> 
+       <pre><code>Shader "Simple Alpha Test" {
+    Properties {
+        _MainTex ("Base (RGB) Transparency (A)", 2D) = "" {}
+    }
+    SubShader {
+        Pass {
+            // Only render pixels with an alpha larger than 50%
+            AlphaTest Greater 0.5
+            SetTexture [_MainTex] { combine texture }
+        }
+    }
+}
+</code></pre> 
+       <p>Ini tidak banyak baik dengan sendirinya. Meme it Mari kita tambahkan beberapa pencahayaan dan buat nilai cutoff tweakable:</p> 
+       <pre><code>Shader "Cutoff Alpha" {
+    Properties {
+        _MainTex ("Base (RGB) Transparency (A)", 2D) = "" {}
+        _Cutoff ("Alpha cutoff", Range (0,1)) = 0.5
+    }
+    SubShader {
+        Pass {
+            // Use the Cutoff parameter defined above to determine
+            // what to render.
+            AlphaTest Greater [_Cutoff]
+            Material {
+                Diffuse (1,1,1,1)
+                Ambient (1,1,1,1)
+            }
+            Lighting On
+            SetTexture [_MainTex] { combine texture * primary }
+        }
+    }
+}
+</code></pre> 
+       <p>Ketika rendering tanaman dan pohon, banyak permainan memiliki tepi keras khas pengujian alfa. Cara di sekitar itu adalah untuk membuat objek dua kali. Dalam lulus pertama, kami menggunakan pengujian alfa hanya untuk membuat piksel yang lebih dari 50% opaque. Dalam lulus kedua, kita alfa-blend grafis di bagian-bagian yang dipotong, tanpa merekam kedalaman piksel. Kami mungkin mendapatkan sedikit kebingungan sebagai lebih jauh cabang menulis yang terdekat, tetapi dalam praktek, yang sulit untuk melihat sebagai daun memiliki banyak detail visual di dalamnya.</p> 
+       <pre><code>Shader "Vegetation" {
+    Properties {
+        _Color ("Main Color", Color) = (.5, .5, .5, .5)
+        _MainTex ("Base (RGB) Alpha (A)", 2D) = "white" {}
+        _Cutoff ("Base Alpha cutoff", Range (0,.9)) = .5
+    }
+    SubShader {
+        // Set up basic lighting
+        Material {
+            Diffuse [_Color]
+            Ambient [_Color]
+        }
+        Lighting On
+
+        // Render both front and back facing polygons.
+        Cull Off
+
+        // first pass:
+        // render any pixels that are more than [_Cutoff] opaque
+        Pass {
+            AlphaTest Greater [_Cutoff]
+            SetTexture [_MainTex] {
+                combine texture * primary, texture
+            }
+        }
+
+        // Second pass:
+        // render in the semitransparent details.
+        Pass {
+            // Dont write to the depth buffer
+            ZWrite off
+            // Don't write pixels we have already written.
+            ZTest Less
+            // Only render pixels less or equal to the value
+            AlphaTest LEqual [_Cutoff]
+
+            // Set up alpha blending
+            Blend SrcAlpha OneMinusSrcAlpha
+
+            SetTexture [_MainTex] {
+                combine texture * primary, texture
+            }
+        }
+    }
+}
+</code></pre> 
+       <p>Perhatikan bahwa kami memiliki beberapa pengaturan di dalam SubShader, daripada dalam individu melewati. Setiap set state di SubShader diwariskan sebagai default dalam melewatinya.</p> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="SL-Material.html"></a></span> 
+         <div class="tip">
+           ShaderLab: pencahayaan legacy 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="SL-SetTexture.html"></a></span> 
+         <div class="tip">
+           ShaderLab: kombinasi tekstur legacy 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Sistem Streaming Mipmap</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="Textures.html">Textures</a></li> 
+         <li><a href="texture-mipmaps.html">Mipmaps</a></li> 
+         <li>Sistem Streaming Mipmap</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="texture-mipmaps-introduction.html"></a></span> 
+          <div class="tip">
+            Perkenalan Mipmaps 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="TextureStreaming-API.html"></a></span> 
+          <div class="tip">
+            Mipmap Database 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Sistem Streaming Mipmap</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Sistem Mipmap Streaming memberi Anda kendali atas bagaimana beban Unity <a href="texture-mipmaps.html">mipmaps</a>.</p> 
+       <p>Halaman ini berisi informasi berikut:</p> 
+       <ul> 
+        <li><a href="#overview">Overview</a></li> 
+        <li> <a href="#getting-started">Getting started</a> 
+         <ul> 
+          <li><a href="#enabling-system">Streaming Mipmap</a></li> 
+          <li><a href="#enabling-textures">Membuat tekstur bekerja dengan sistem Mipmap Streaming</a></li> 
+          <li><a href="#lightmaps">Membuat peta cahaya bekerja dengan sistem Mipmap Streaming</a></li> 
+         </ul> </li> 
+        <li> <a href="#configuring">Mengkonfigurasi Mipmap Streaming</a> 
+         <ul> 
+          <li><a href="#memory-budget">Menyiapkan anggaran memori</a></li> 
+          <li><a href="#cameras">Mengkonfigurasi Kamera</a></li> 
+          <li><a href="#play-mode">Mengkonfigurasi Bermain Perilaku mode</a></li> 
+         </ul> </li> 
+        <li><a href="#Debugging">Debugging</a></li> 
+        <li><a href="#calculate-mip-level">Bagaimana Unity menghitung tingkat mip yang diperlukan</a></li> 
+        <li><a href="#limitations">Limitations</a></li> 
+       </ul> 
+       <p>Untuk informasi tentang menggunakan API untuk memperluas fungsi sistem ini, lihat <a href="TextureStreaming-API.html">API documentation</a>.</p> 
+       <p><a name="overview"></a></p> 
+       <h2>Overview</h2> 
+       <p>Sistem ini memaksa Unity hanya memuat tingkat mip yang diperlukan untuk membuat posisi <span class="tooltip"><strong>Camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span> saat ini, bukan memuat semua dari mereka secara default. Ini memperdagangkan sejumlah kecil sumber daya CPU untuk menghemat jumlah memori GPU yang berpotensi besar.</p> 
+       <p>Anda dapat mengatur batas memori total untuk semua tekstur dalam aplikasi, dan sistem secara otomatis mengurangi tingkat mip untuk tetap dalam anggaran ini.</p> 
+       <p>Dalam proyek demo Unity, sistem Mipmap Streaming menyimpan 25-30% memori tekstur, tergantung pada lokasi Kamera.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TextureStreaming_image_0.png" alt=""> 
+       </figure> 
+       <p><a name="getting-started"></a></p> 
+       <h2>Getting started</h2> 
+       <p><a name="enabling-system"></a></p> 
+       <h3>Streaming Mipmap</h3> 
+       <p>Untuk mengaktifkan Mipmap Streaming, pergi ke Pengaturan Kualitas Unity (<strong>Edit</strong> &gt; <span class="tooltip"><strong>Project Settings</strong><span class="tooltiptext">Pengumpulan yang luas dari pengaturan yang memungkinkan Anda untuk mengkonfigurasi bagaimana Fisika, Audio, Jaringan, Grafik, Input dan banyak bidang lain dari jangkauan proyek Anda. <a class="tooltipMoreInfoLink" href="comp-ManagerGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span> &gt; <strong>Quality</strong>) dan mengaktifkan kotak centang <strong>Texture Streaming</strong>.</p> 
+       <p>Ketika Anda mengaktifkan pengaturan ini, jendela pengaturan kualitas mengungkapkan pengaturan tertentu ke sistem Mipmap Streaming. Untuk rincian pada setiap pengaturan, lihat dokumentasi pada <a href="class-QualitySettings.html">Pengaturan kualitas</a>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TextureStreaming_image_1.png" alt=""> 
+       </figure> 
+       <p>Secara default, ini memungkinkan Mipmap Streaming untuk semua Kamera dalam proyek Anda.</p> 
+       <p><a name="enabling-textures"></a></p> 
+       <h3>Membuat tekstur bekerja dengan sistem Mipmap Streaming</h3> 
+       <p>Sekarang Anda dapat mengatur Mipmap Streaming pada tekstur individu. Pilih aset tekstur, arahkan ke jendela <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span> dan lihat pengaturan Tekstur Impor. Buka pengaturan <strong>Advanced</strong>, dan aktifkan kotak cemen.<strong>Streaming Mip Maps</strong> checkbox. </p> 
+       <p>Jika Anda berkembang untuk Android, Anda juga perlu membuka <a href="BuildSettings.html">Membangun Pengaturan</a> dan mengatur <strong>Compression Method</strong> ke <strong>LZ4</strong> atau <strong>LZ4HC</strong>. Unity memerlukan salah satu metode <span class="tooltip"><strong>compression</strong><span class="tooltiptext">Metode menyimpan data yang mengurangi jumlah ruang penyimpanan yang dibutuhkan. <a href="class-TextureImporterOverride.html">Kompresi Tekstur</a>, <a href="class-AnimationClip.html#AssetProperties">Kompresi Animasi</a>, <a href="class-AudioClip.html">Kompresi Audio</a>, <a href="ReducingFilesize.html">Membangun Kompresi</a>.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#compression">Glossary</a></span></span></span> ini untuk <a href="LoadingTextureandMeshData.html">Login Tekstur pemuatan</a>, yang sistem Mipmap Streaming bergantung pada.</p> 
+       <p>Beban bersatu mips pada resolusi tertinggi mungkin sambil mengamati anggaran memori. Anda dapat mengkonfigurasi prioritas tekstur dengan pengaturan <strong>Mip Map Priority</strong> dalam Pengaturan Impor Tekstur.</p> 
+       <p>Unity menggunakan pengaturan ini untuk menentukan:</p> 
+       <ul> 
+        <li>Tekstur mana yang memprioritaskan ketika menetapkan sumber daya.</li> 
+        <li>Sebagai nilai bias mip ketika memilih tingkat mip yang pas dalam anggaran memori. Misalnya, dengan prioritas 2, sistem streaming mipmap mencoba untuk menggunakan tingkat mipmap dua mip lebih tinggi dari Tekstur dengan prioritas 0.</li> 
+       </ul> 
+       <p>Nomor Positif memberikan prioritas yang lebih tinggi. Nilai valid berkisar dari –128 hingga 127.</p> 
+       <p><a name="lightmaps"></a></p> 
+       <h3>Streaming Lightmaps</h3> 
+       <p>Anda dapat menggunakan sistem Mipmap Streaming untuk streaming tingkat mip untuk <span class="tooltip"><strong>lightmaps</strong><span class="tooltiptext">Tekstur pra-render yang mengandung efek sumber cahaya pada objek statis di tempat kejadian. Lightmaps dilalui atas geometri adegan untuk menciptakan efek pencahayaan. <a class="tooltipMoreInfoLink" href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Lightmap">Glossary</a></span></span></span>.</p> 
+       <p>Anda dapat mengedit pengaturan Mip Map Streaming dari aset lightmap dengan cara yang sama bahwa Anda dapat tekstur lain, tetapi mereka mengatur ulang nilai default mereka ketika Unity mengatur peta lampu. Untuk memecahkan ini, Anda dapat memberitahu Unity untuk menerapkan nilai-nilai ini ketika menghasilkan peta cahaya. <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-PlayerSettings.html">Pengaturan Pemain</a><span class="tooltiptext">Pengaturan yang memungkinkan Anda mengatur berbagai pilihan khusus pemain untuk permainan akhir yang dibangun oleh Unity. <a href="class-PlayerSettings.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#PlayerSettings">Glossary</a></span></span></span> (<strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Player</strong>) menyediakan dua kontrol untuk mengatur streaming dan prioritas untuk peta cahaya yang dihasilkan: <strong>Lightmap Streaming Enabled</strong> dan <strong>Streaming Priority</strong>.</p> 
+       <p>Sitemap Streaming dan mengkonfigurasi pekerjaan prioritas dengan cara yang sama untuk peta lampu untuk <a href="enabling-textures">tekstur biasa</a>.</p> 
+       <p><a name="configuring"></a></p> 
+       <h2>Mengkonfigurasi Mipmap Streaming</h2> 
+       <p>Anda dapat mengkonfigurasi pengaturan default di Editor Unity, dan kemudian gunakan <a href="TextureStreaming-API.html">API documentation</a> untuk menimpa pengaturan ini jika diperlukan.</p> 
+       <p><a name="memory-budget"></a></p> 
+       <h3>Menyiapkan anggaran memori</h3> 
+       <p>Properti <strong>Memory Budget</strong> menentukan jumlah maksimum penggunaan memori Unity untuk tekstur. Jika anggaran memori Anda terlalu kecil, Unity menurunkan resolusi tekstur dalam <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> Anda. Ini dapat menyebabkan tekstur untuk pop atau beban perlahan. Namun, anggaran memori harus sekecil mungkin untuk memungkinkan memori untuk sumber daya lain.</p> 
+       <p>Mengatur anggaran memori di jendela <a href="class-QualitySettings.html">Pengaturan kualitas</a>, dengan properti <strong>Texture Streaming</strong> &gt; <strong>Memory Budget</strong>.</p> 
+       <p>Ketika anggaran memori penuh, mipmaps bersatu tidak menggunakan, untuk membuat ruang bagi mereka yang perlu digunakan. Anda dapat mengontrol berapa banyak mipmap yang tidak digunakan dengan <strong>Max Level Reduction</strong>.</p> 
+       <p>Nilai ini juga merupakan tingkat mipmap yang sistem Mipmap Streaming pada awalnya memuat startup. Misalnya, ketika ini diatur ke 2, Unity melewatkan dua mipmap tertinggi pada beban pertama.</p> 
+       <p>Mengatur nilai ini di jendela <a href="class-QualitySettings.html">Pengaturan kualitas</a>, dengan properti <strong>Texture Streaming</strong> &gt; <strong>Max Level Reduction</strong>.</p> 
+       <p>Sitemap Unity memprioritaskan nilai <strong>Note:</strong> atas anggaran memori. Tidak pernah membuang lebih banyak mipmap daripada nilai <strong>Max Level Reduction</strong>, bahkan jika ini menyebabkan tekstur memori melebihi anggaran.<strong>Max Level Reduction</strong> value, even if this causes the textures memory to exceed the budget.</p> 
+       <p>Anggaran memori termasuk tekstur yang tidak menggunakan Mipmap Streaming. Misalnya, jika anggaran Anda 100MB dan Anda memiliki 90MB tekstur yang tidak menggunakan Mipmap Streaming, Unity mencoba untuk menyesuaikan semua mipmap streaming di 10MB yang tersisa. Jika tidak bisa, itu memuatnya pada resolusi yang lebih rendah. Unity selalu memuat tekstur yang tidak menggunakan Mipmap Streaming dengan resolusi penuh, bahkan jika melebihi anggaran.</p> 
+       <p>Untuk mengetahui apa anggaran memori Anda harus:</p> 
+       <ol> 
+        <li>Lihat nilai <a href="../ScriptReference/Texture-desiredTextureMemory.html">Tekstur.desiredTextureMemory</a> ketika proyek Anda berjalan.</li> 
+        <li>Mengatur nilai <strong>Memory Budget</strong> sedikit lebih tinggi dari nilai <a href="../ScriptReference/Texture-desiredTextureMemory.html">Tekstur.desiredTextureMemory</a>.</li> 
+       </ol> 
+       <p>Ini memastikan ada cukup memori tekstur yang tersedia untuk area yang paling intensif dari adegan Anda dan mencegah tekstur dari menjatuhkan ke resolusi yang lebih rendah. Jika Anda memiliki memori tambahan yang tersedia, Anda dapat mengatur anggaran memori yang lebih besar sehingga Unity dapat menyimpan data tekstur yang tidak terlihat di adegan Anda dalam cache streaming.</p> 
+       <p><a name="cameras"></a></p> 
+       <h3>Mengkonfigurasi Kamera</h3> 
+       <p>Secara default, ketika Anda mengaktifkan sistem Mipmap Streaming, Unity memungkinkan untuk semua kamera. Anda dapat menonaktifkan pengaturan ini jika Anda suka.</p> 
+       <p>Kontrol apakah Unity memungkinkan mipmap Streaming untuk semua Kamera di jendela <a href="class-QualitySettings.html">Pengaturan kualitas</a>, dengan properti <strong>Texture Streaming</strong> &gt; <strong>Add All Cameras</strong>.</p> 
+       <p>Jika Anda ingin mengecualikan Kamera tertentu, tambahkan komponen <a href="class-StreamingController.html">Web Server</a> ke Kamera itu dan kemudian menonaktifkannya.</p> 
+       <p>Jika Anda menonaktifkan <strong>Add All Cameras</strong>, maka Anda harus mengaktifkan mipmap Streaming per-Camera. Untuk melakukan ini, tambahkan komponen <a class="tooltipMoreInfoLink" href="class-StreamingController.html">Web Server</a> ke <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> yang sama sebagai komponen Kamera.</p> 
+       <p>Komponen ini juga memungkinkan Anda untuk menyesuaikan pengaturan bias mip per-Camera.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/StreamingController.png" alt="The Streaming Controller component"> 
+        <figcaption>
+          Komponen Pengontrol Streaming 
+        </figcaption> 
+       </figure> 
+       <p><a name="play-mode"></a></p> 
+       <h3>Mengkonfigurasi Bermain Perilaku mode</h3> 
+       <p>Mipmap Streaming diaktifkan dalam Play Mode secara default.</p> 
+       <p>Kontrol apakah Unity memungkinkan Mipmap Streaming di Play Mode di jendela <a href="class-EditorManager.html">Pengaturan Editor</a>, dengan properti <strong>Streaming Settings</strong> &gt; <strong>Enable Texture Streaming in Play Mode</strong>.</p> 
+       <p>Sitemap Streaming diaktifkan dalam mode Play, tetapi tidak diaktifkan dalam mode Edit (atau cara lain di sekitar), menaiki dan keluar dari mode Play membutuhkan sedikit lebih lama. Ini mencegah Unity dari membongkar dan memuat ulang data mipmap, dan harus mempercepat aliran kerja Mode Play.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/StreamingSettings2019-1.png" alt="Edit &amp;gt; Project Settings &amp;gt; Editor &amp;gt; Streaming Settings"> 
+        <figcaption> 
+         <strong>Edit</strong> &gt; 
+         <strong>Project Settings</strong> &gt; 
+         <strong>Editor</strong> &gt; 
+         <strong>Streaming Settings</strong> 
+        </figcaption> 
+       </figure> 
+       <p><a name="Debugging"></a></p> 
+       <h2>WordPress.org</h2> 
+       <p>Unity memiliki mode tampilan debugging Mipmap bawaan. Untuk mengaksesnya, klik <a href="ViewModes.html">Tampilan adegan kontrol drop-down</a> dan pilih <strong>Texture Streaming</strong>. Mode tampilan ini menyusut GameObjects warna-warna berikut, tergantung pada status mereka di sistem Mipmap Streaming:</p> 
+       <ul> 
+        <li> <strong>Green</strong> untuk Tekstur yang telah mengurangi mipmap karena sistem Mipmap Streaming.</li> 
+        <li> <strong>Red</strong> untuk Tekstur yang memiliki mipmap yang lebih sedikit karena sistem Mipmap Streaming tidak memiliki cukup sumber daya untuk memuat semuanya.</li> 
+        <li> <strong>Blue</strong> untuk Tekstur yang tidak diatur untuk streaming, atau jika tidak ada renderer menghitung tingkat mip.</li> 
+       </ul> 
+       <p>Anda juga dapat menulis alat debug kustom Anda sendiri dan visualisasi menggunakan ruang <a href="TextureStreaming-API.html#DebuggingAPI">Debugging API</a>%</p> 
+       <p> <strong>Important</strong> : Ketika tekstur utama diatur menggunakan atribut <a href="../ScriptReference/Material-mainTexture.html">MainTexture</a>, tidak terlihat dalam tampilan permainan ketika Anda menggunakan tekstur streaming <a href="TextureStreaming-API.html#Debugging">mode tampilan debugging</a> atau alat debug kustom.</p> 
+       <p><a name="calculate-mip-level"></a></p> 
+       <h2>Bagaimana Unity menghitung tingkat mip yang diperlukan</h2> 
+       <p>Untuk tekstur yang menggunakan Mipmap Streaming, Unity menghitung tingkat mip yang benar menggunakan salah satu metode berikut:</p> 
+       <ul> 
+        <li>Jika Anda menetapkan tekstur ke materi yang digunakan oleh komonennt Unity Renderer, Unity menghitung tingkat mip secara otomatis.</li> 
+        <li>Jika tidak, Anda harus meminta tingkat mip secara manual menggunakan <a href="../ScriptReference/Texture2D-requestedMipmapLevel.html">Tekstur2D.requestedMipmapLevel</a>.</li> 
+       </ul> 
+       <p>Jika Anda tidak melakukan ini, Unity tidak dapat menghitung tingkat mip yang benar, dan itu memuat tekstur menggunakan mips berkualitas rendah. Ini dapat muncul buram.</p> 
+       <p>Sitemap Sistem berikut tidak menggunakan komponen Renderer standar. Ini berarti Anda harus mengatur mips yang diminta untuk sistem ini:<strong>Note:</strong> The following systems don’t use standard Renderer components. This means you must manually set the requested mips for these systems:</p> 
+       <ul> 
+        <li>Tekstur proyektor Decal.</li> 
+        <li><span class="tooltip"><strong>Reflection probe</strong><span class="tooltiptext">Komponen rendering yang menangkap pandangan bulat dari sekitarnya di semua arah, seperti kamera. Gambar yang ditangkap kemudian disimpan sebagai kubus yang dapat digunakan oleh benda dengan bahan reflektif. <a class="tooltipMoreInfoLink" href="class-ReflectionProbe.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ReflectionProbe">Glossary</a></span></span></span>: Mips resolusi rendah adalah tabel lookup untuk kekasaran. Oleh karena itu, jika Unity menggunakan tingkat mipmap yang lebih rendah, bahan render menggunakan kekasaran yang salah.</li> 
+        <li><span class="tooltip"><strong>Shaders</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> yang menggunakan koordinasi tekstur UV dalam saluran selain <a href="../ScriptReference/Mesh-uv.html">Mesh.uv</a> (juga disebut UV0), atau mengubah koordinasi tekstur dalam naungan. Satu-satunya pengecualian adalah perubahan skala dan terjemahan (lihat di bawah).</li> 
+       </ul> 
+       <p><a name="limitations"></a></p> 
+       <h2>Limitations</h2> 
+       <ul> 
+        <li>Unity tidak mendukung Mipmap Streaming pada tekstur <span class="tooltip"><strong>Terrain</strong><span class="tooltiptext">Pemandangan di tempat kejadian Anda. Terrain GameObject menambahkan pesawat datar besar untuk adegan Anda dan Anda dapat menggunakan jendela Inspektur Terrain untuk menciptakan lanskap rinci. <a class="tooltipMoreInfoLink" href="terrain-UsingTerrains.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Terrain">Glossary</a></span></span></span>. Ini karena Terrain Tekstur perlu tersedia pada resolusi penuh setiap kali untuk memungkinkan Unity untuk ubin dan campuran tekstur.</li> 
+        <li>Ketika komponen Renderer aktif, meshnya membutuhkan metrik distribusi UV yang valid untuk menghitung tingkat mip yang diinginkan. Unity menghitung metrik distribusi secara otomatis sebagai bagian dari proses impor mesh.<br><br> Jika Anda membuat jala dari kode, Unity tidak menghitung metrik distribusi secara otomatis dan oleh karena itu memuat tingkat mip yang salah. Untuk secara manual memicu perhitungan metrik distribusi UV menggunakan <a href="../ScriptReference/Mesh.RecalculateUVDistributionMetrics.html">Mesh.RecalculateUVDistributionMetrics</a>.</li> 
+        <li>Ketika Unity membuat Tekstur yang dikelok langsung dengan API (seperti <a href="../ScriptReference/Graphics.DrawMeshNow.html">Grafik.DrawMeshNow</a> sistem tidak memiliki batas renderer atau informasi lainnya untuk menghitung tingkat mip. Ini berarti Anda perlu mengatur tingkat mip Tekstur secara manual atau menonaktifkan Mipmap Streaming pada Tekstur ini. Lihat <a href="../ScriptReference/Texture2D-requestedMipmapLevel.html">Tekstur2D.requestedMipmapLevel</a> untuk detail lebih lanjut tentang cara mengatur beban Unity tingkat mip.</li> 
+        <li>Ketika Unity menghitung miplevel untuk tekstur yang terlihat untuk skala dan terjemahan tekstur itu dalam nilai <code>_ST</code> dengan nama yang sama dengan tekstur yang ditandai dalam naungan Anda. Misalnya, jika Anda merujuk tekstur Anda berada di naungan menggunakan <code>_MainTex</code>, Unity akan mencari <code>_MainTex_ST</code>.</li> 
+       </ul> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="texture-mipmaps-introduction.html"></a></span> 
+         <div class="tip">
+           Perkenalan Mipmaps 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="TextureStreaming-API.html"></a></span> 
+         <div class="tip">
+           Mipmap Database 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Menargetkan model naungan dan fitur GPU di HLSL</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="Shaders.html">Shaders</a></li> 
+         <li><a href="shader-writing.html">Menu Menu</a></li> 
+         <li><a href="SL-ShaderPrograms.html">HLSL di Unity</a></li> 
+         <li><a href="shader-preprocessor-directives.html">Petunjuk praprosesor di HLSL</a></li> 
+         <li>Menargetkan model naungan dan fitur GPU di HLSL</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="SL-PragmaDirectives.html"></a></span> 
+          <div class="tip">
+            praktisi pragma di HLSL 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="SL-ShaderCompilationAPIs.html"></a></span> 
+          <div class="tip">
+            Menargetkan API grafis dan platform di HLSL 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Menargetkan model naungan dan fitur GPU di HLSL</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Anda dapat menggunakan <a class="tooltipMoreInfoLink" href="SL-PragmaDirectives.html"><code>#pragma</code> directives</a> untuk menunjukkan bahwa <span class="tooltip"><strong>shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> membutuhkan fitur GPU tertentu. Pada runtime, Unity menggunakan informasi ini untuk menentukan apakah program naungan kompatibel dengan perangkat keras saat ini.</p> 
+       <p>Anda dapat menentukan fitur GPU individu dengan arahan <code>#pragma require</code>, atau menentukan <strong>shader model</strong> dengan arahan <code>#pragma target</code>. Model naungan adalah tangan singkat untuk kelompok fitur GPU; internal, sama dengan arahan <code>#pragma require</code> dengan daftar fitur yang sama.</p> 
+       <p>Penting untuk benar menggambarkan fitur GPU yang dibutuhkan warna Anda. Jika naungan Anda menggunakan fitur yang tidak disertakan dalam daftar persyaratan, ini dapat mengakibatkan kesalahan waktu kompilasi, atau dalam perangkat gagal untuk mendukung naungan pada runtime.</p> 
+       <h2>Perilaku standar</h2> 
+       <p>Secara default, Unity mengkompilasi naungan dengan <code>#pragma require derivatives</code>, yang sesuai dengan <code>#pragma target 2.5</code>.</p> 
+       <h2>Persyaratan khusus untuk tahap naungan</h2> 
+       <p>Jika naungan Anda mendefinisikan tahap naungan tertentu, Unity secara otomatis menambahkan item ke daftar persyaratan.</p> 
+       <ul> 
+        <li>Jika seorang naungan mendefinisikan tahap geometri (dengan <code>#pragma geometry</code>), Unity secara otomatis menambahkan <code>geometry</code> ke daftar persyaratan.</li> 
+        <li>Jika naungan mendefinisikan tahap tesselasi (dengan <code>#pragma hull</code> atau <code>#pragma domain</code>), Unity secara otomatis menambahkan <code>tessellation</code> ke daftar persyaratan.</li> 
+       </ul> 
+       <p>Jika daftar persyaratan (atau nilai target yang setara) tidak termasuk nilai-nilai ini, Unity menampilkan pesan peringatan ketika mengkompilasi naungan, untuk menunjukkan bahwa ia telah menambahkan persyaratan ini. Untuk menghindari melihat pesan peringatan ini, secara eksplisit menambahkan persyaratan atau menggunakan nilai target yang tepat dalam kode Anda.</p> 
+       <h2>Menentukan fitur GPU atau model naungan</h2> 
+       <p>Untuk menentukan fitur yang diperlukan, gunakan arahan <code>#pragma require</code>, diikuti dengan daftar nilai ruang-delimited. Contoh:</p> 
+       <pre><code>#pragma require integers mrt8
+</code></pre> 
+       <p>Anda juga dapat menggunakan arahan <code>#pragma require</code> diikuti oleh usus besar dan daftar <a href="SL-MultipleProgramVariants.html">kata kunci warna</a> ruang-delimited. Ini berarti bahwa persyaratan hanya berlaku untuk varian yang digunakan ketika salah satu kata kunci yang diberikan diaktifkan.</p> 
+       <p>Contoh:</p> 
+       <pre><code>#pragma require integers mrt8 : EXAMPLE_KEYWORD OTHER_EXAMPLE_KEYWORD
+</code></pre> 
+       <p>Anda dapat menggunakan beberapa garis <code>#pragma require</code>. Dalam contoh ini, naungan membutuhkan <code>integers</code> dalam semua kasus, dan <code>mrt8</code> jika EXAMPLE_KEYWORD diaktifkan.</p> 
+       <pre><code>#pragma require integers
+#pragma require integers mrt8 : EXAMPLE_KEYWORD
+</code></pre> 
+       <p>Untuk menentukan model naungan, gunakan petunjuk <code>#pragma target</code>. Contoh:</p> 
+       <pre><code>#pragma target 4.0
+</code></pre> 
+       <p>Anda juga dapat menggunakan arahan <code>#pragma target</code> diikuti dengan daftar <a href="SL-MultipleProgramVariants.html">kata kunci warna</a> yang didelimited. Ini berarti bahwa persyaratan hanya berlaku untuk varian yang digunakan ketika salah satu kata kunci yang diberikan diaktifkan.</p> 
+       <p>Contoh:</p> 
+       <pre><code>#pragma target 4.0 EXAMPLE_KEYWORD OTHER_EXAMPLE_KEYWORD
+</code></pre> 
+       <p>Sitemap Sintaks untuk menentukan kata kunci untuk <strong>Note:</strong> dan <code>#pragma require</code> sedikit berbeda. Ketika Anda menentukan kata kunci untuk <code>#pragma target</code>, Anda menggunakan usus. Ketika Anda menentukan kata kunci untuk <code>#pragma require</code>, Anda tidak menggunakan usus.<code>#pragma target</code>, you do not use a colon.</p> 
+       <p><a name="valid-target-values"></a></p> 
+       <h2>Daftar nilai '#pragma target'</h2> 
+       <p>Berikut adalah daftar model naungan yang digunakan Unity, dan kombinasi nilai <code>#pragma require</code> yang masing-masing sesuai dengan.</p> 
+       <p>Model naungan Unity <strong>Note:</strong> mirip dengan Direct Model warna X dan persyaratan versi OpenGL, tetapi mereka tidak sesuai persis. Baca deskripsi dengan cermat untuk memastikan bahwa Anda memahami perbedaan.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Value</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+          <th style="text-align:left;"><strong>Support</strong></th> 
+          <th style="text-align:left;"><strong>Equivalent <code>#pragma require</code> values</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>2.0</code></td> 
+          <td style="text-align:left;">Equivalent ke <a href="https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-sm2">Sitemap X model naungan 2.0</a>.<br><br>Limited jumlah aritmatiketik dan instruksi tekstur; 8 interpolator; tidak ada sampling tekstur simpul; tidak ada turunan dalam naungan fragmen; tidak ada sampling tekstur LOD eksplisit.</td> 
+          <td style="text-align:left;">Bekerja pada semua platform yang didukung oleh Unity.</td> 
+          <td style="text-align:left;">N/A</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>2.5</code></td> 
+          <td style="text-align:left;">Hampir sama dengan 3.0, tetapi hanya dengan 8 interpolator, dan tidak ada sampling tekstur LOD eksplisit.</td> 
+          <td style="text-align:left;">Tingkat fitur DirectX 11 9 + <br>OpenGL 3.2 +<br>OpenGL Datasheet PDF<br>Vulkan<br>Metal</td> 
+          <td style="text-align:left;"><code>derivatives</code></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>3.0</code></td> 
+          <td style="text-align:left;"><a href="https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-sm3">Sitemap Model warna X 3.0</a>.<br><br>.</td> 
+          <td style="text-align:left;">Tingkat fitur DirectX 11 10 +<br>OpenGL 3.2 +<br>OpenGL ES 3.0+<br>Vulkan<br>Metal<br><br> Might bekerja pada beberapa perangkat OpenGL ES 2.0, tergantung pada ekstensi driver dan fitur.</td> 
+          <td style="text-align:left;">Semua dalam <code>2.5</code>, ditambah:<br><code>interpolators10 samplelod fragcoord</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>3.5</code></td> 
+          <td style="text-align:left;"><a href="https://en.wikipedia.org/wiki/OpenGL_ES#OpenGL_ES_3.0">OpenGL ES 3.0</a>.<br><br>%</td> 
+          <td style="text-align:left;">Tingkat fitur DirectX 11 10+<br>OpenGL 3.2+<br>OpenGL Datasheet PDF<br>Vulkan<br>Metal</td> 
+          <td style="text-align:left;">Semua dalam <code>3.0</code>, ditambah:<br><code>interpolators15 mrt4 integers 2darray instancing</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>4.0</code></td> 
+          <td style="text-align:left;">Ekuivalen untuk <a href="https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-sm4">Sitemap Model warna X 4.0</a>, tetapi tanpa persyaratan untuk mendukung 8 MRT.</td> 
+          <td style="text-align:left;">Tingkat fitur DirectX 11 10+<br>OpenGL 3.2+<br>OpenGL ES 3.1+AEP<br>Vulkan<br>Metal (jika tidak ada tahap geometri didefinisikan)</td> 
+          <td style="text-align:left;">Semua dalam <code>3.5</code>, ditambah:<br><code>geometry</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>4.5</code></td> 
+          <td style="text-align:left;">Equivalent to <a href="https://en.wikipedia.org/wiki/OpenGL_ES#OpenGL_ES_3.1">WinZip</a>.</td> 
+          <td style="text-align:left;">DirectX 11 level fitur 11+<br>OpenGL 4.3+<br>OpenGL ES 3.1<br>Vulkan<br>Metal</td> 
+          <td style="text-align:left;">Semua dalam <code>3.5</code>, ditambah:<br><code>compute randomwrite msaatex</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>4.6</code></td> 
+          <td style="text-align:left;"><a href="https://en.wikipedia.org/wiki/OpenGL#OpenGL_4.1">OpenOffice 4.1.5</a>.<br><br> Ini adalah tingkat OpenGL tertinggi yang didukung pada Mac.</td> 
+          <td style="text-align:left;">DirectX 11 level fitur 11+<br>OpenGL 4.1+<br>OpenGL Datasheet PDF (jika tidak ada tahap geometri didefinisikan, dan tidak ada hull atau tahap domain didefinisikan)<br>Vulkan<br>Metal (if no geometry stage is defined, and no hull or domain stage is defined)</td> 
+          <td style="text-align:left;">Semua dalam <code>4.0</code>, ditambah:<br><code>cubearray tesshw tessellation msaatex</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>5.0</code></td> 
+          <td style="text-align:left;">Ekuivalen untuk <a href="https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/d3d11-graphics-reference-sm5">Sitemap Model warna X 5.0</a>, tetapi tanpa persyaratan untuk mendukung array interpolator 32 atau cubemap.</td> 
+          <td style="text-align:left;">DirectX 11 level fitur 11+<br>OpenGL 4.3+<br>OpenGL Datasheet PDF (jika tidak ada tahap geometri didefinisikan, dan tidak ada hull atau tahap domain didefinisikan)<br>Vulkan<br>Metal (if no geometry stage is defined, and no hull or domain stage is defined)</td> 
+          <td style="text-align:left;">Semua dalam <code>4.0</code>, ditambah:<br><code>compute randomwrite msaatex tesshw tessellation</code> </td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Untuk informasi tentang dukungan model naungan untuk platform konsol, lihat dokumentasi spesifik platform.</p> 
+       <p><strong>Notes:</strong></p> 
+       <ul> 
+        <li>Dalam definisi DirectX, model naungan 4.0 termasuk <code>mrt8</code>, dan model naungan 5.0 termasuk <code>interpolators32</code> dan <code>cubearray</code>. Unity tidak termasuk ini, untuk kompatibilitas yang lebih luas. Untuk memerlukan fitur-fitur ini, gunakan arahan <code>#pragma require</code> eksplisit.</li> 
+        <li>Jika Anda menggunakan target yang membutuhkan <code>geometry</code> tetapi naungan Anda tidak mendefinisikan tahap geometri, Unity menghapus <code>geometry</code> dari daftar persyaratan pada waktu kompilasi.</li> 
+        <li>Jika Anda menggunakan target yang membutuhkan <code>tessellation</code> tetapi naungan Anda tidak mendefinisikan tahap hull atau domain, Unity menghapus <code>tessellation</code> dari daftar persyaratan pada waktu kompilasi.</li> 
+       </ul> 
+       <p><a name="valid-require-values"></a></p> 
+       <h2>Daftar '#pragma membutuhkan nilai'</h2> 
+       <p>Berikut adalah semua nilai yang valid untuk arahan <code>#pragma require</code>.</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Value</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>interpolators10</code></td> 
+          <td style="text-align:left;">Setidaknya 10 interpolator vertex-to-fragment ("varyings") tersedia.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>interpolators15</code></td> 
+          <td style="text-align:left;">Setidaknya 15 vertex-to-fragment interpolators ("varyings") tersedia.<br><br><strong>Note:</strong><code>integers</code> ke daftar persyaratan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>interpolators32</code></td> 
+          <td style="text-align:left;">setidaknya 32 vertex-to-fragment interpolator (“varyings”) tersedia.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>integers</code></td> 
+          <td style="text-align:left;">Pengintegrasian adalah jenis data yang didukung, termasuk operasi bit/shift.<br><br><strong>Note:</strong> Secara internal, ini juga secara otomatis menambahkan <code>interpolators15</code> ke daftar persyaratan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>mrt4</code></td> 
+          <td style="text-align:left;">setidaknya 4 target render didukung.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>mrt8</code></td> 
+          <td style="text-align:left;">setidaknya 8 target render didukung.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>derivatives</code></td> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Pixel</strong><span class="tooltiptext">Unit terkecil dalam gambar komputer. Ukuran piksel tergantung pada resolusi layar Anda. Pencahayaan pixel dihitung pada setiap piksel layar. <a class="tooltipMoreInfoLink" href="ShadowPerformance.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#pixel">Glossary</a></span></span></span> shader derivative instructions (ddx/ddy) are supported.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>samplelod</code></td> 
+          <td style="text-align:left;">Tekstur eksplisit <span class="tooltip"><strong>LOD</strong><span class="tooltiptext">Teknik <em>Tingkat Detail</em> (LOD) adalah optimasi yang mengurangi jumlah segitiga yang dimiliki Unity untuk membuat GameObject ketika jaraknya dari kamera meningkat. <a class="tooltipMoreInfoLink" href="LevelOfDetail.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#LOD">Glossary</a></span></span></span> sampling (tex2Dlod / SampleLevel) didukung.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>fragcoord</code></td> 
+          <td style="text-align:left;">Lokasi piksel (XY di layar, kedalaman ZW di ruang klip) masukan dalam naungan piksel didukung.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>2darray</code></td> 
+          <td style="text-align:left;">array tekstur 2D adalah jenis data yang didukung.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>cubearray</code></td> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Cubemap</strong><span class="tooltiptext">Koleksi enam tekstur persegi yang dapat mewakili refleksi di lingkungan atau skybox yang digambar di balik geometri Anda. Enam kotak membentuk wajah kubus imajiner yang mengelilingi objek; setiap wajah mewakili pandangan di sepanjang arah sumbu dunia (hingga, kiri, kanan, ke depan dan belakang). <a class="tooltipMoreInfoLink" href="class-Cubemap.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Cubemap">Glossary</a></span></span></span> adalah jenis data yang didukung.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>instancing</code></td> 
+          <td style="text-align:left;">Login Nilai sistem input ID didukung.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>geometry</code></td> 
+          <td style="text-align:left;">Tahap naungan Geometry didukung.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>compute</code></td> 
+          <td style="text-align:left;">Membandingkan naungan, penyangga terstruktur, dan operasi atom didukung.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <code>randomwrite</code> atau <code>uav</code> </td> 
+          <td style="text-align:left;">Tekstur “Random tulis” (UAV) didukung.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>tesshw</code></td> 
+          <td style="text-align:left;">Tesselasi perangkat keras didukung, tetapi tidak selalu menguji (hull/domain) tahap naungan. Misalnya, logam mendukung tesselasi, tetapi tidak hull atau tahap domain.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>tessellation</code></td> 
+          <td style="text-align:left;">Tessellation (hull/domain) tahap naungan didukung.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>msaatex</code></td> 
+          <td style="text-align:left;">Kemampuan untuk mengakses tekstur berukuran multi (Texture2DMS di HLSL) didukung.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>sparsetex</code></td> 
+          <td style="text-align:left;">Tekstur jarang dengan info residensi (“Tier2” dukungan dalam istilah DirectX; fungsi <code>CheckAccessFullyMapped</code> HLSL).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"> <code>framebufferfetch</code> atau <code>fbfetch</code> </td> 
+          <td style="text-align:left;">Framebuffer fetch (kemampuan untuk membaca warna pixel input di naungan pixel) didukung.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>setrtarrayindexfromanyshader</code></td> 
+          <td style="text-align:left;">Menyiapkan indeks array target render dari tahap naungan (tidak hanya tahap naungan geometri) didukung.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="SL-PragmaDirectives.html"></a></span> 
+         <div class="tip">
+           praktisi pragma di HLSL 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="SL-ShaderCompilationAPIs.html"></a></span> 
+         <div class="tip">
+           Menargetkan API grafis dan platform di HLSL 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

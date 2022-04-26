@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Sumber Audio</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Audio.html">Audio</a></li> 
+         <li>Referensi Audio</li> 
+         <li>Sumber Audio</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="class-AudioListener.html"></a></span> 
+          <div class="tip">
+            Pendengaran Audio 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="class-AudioMixer.html"></a></span> 
+          <div class="tip">
+            Mixer Audio 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Sumber Audio</h1> 
+       <!--BeginSwitchLink--> 
+       <a href="../ScriptReference/AudioSource.html" title="Go to AudioSource page in the Scripting Reference" class="switch-link gray-btn sbtn left">Switch to Scripting</a> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p><strong>Audio Source</strong> memainkan kembali <a class="tooltipMoreInfoLink" href="class-AudioClip.html">Audio Klip</a> di <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Scene">Glossary</a></span></span></span>. Klip dapat dimainkan ke <a href="class-AudioListener.html"></a> atau melalui <a href="class-AudioMixer.html">mixer audio</a>. Sumber audio dapat memainkan jenis <a href="class-AudioClip.html">Audio Klip</a> dan dapat dikonfigurasi untuk bermain ini sebagai 2D, 3D, atau sebagai campuran (<em>SpatialBlend</em>). Audio dapat menyebar di antara speaker (stereo hingga 7.1) (<em>Spread</em>) dan dimorf antara 3D dan 2D (<em>SpatialBlend</em>). Ini dapat dikontrol lebih dari jarak dengan kurva jatuh. Juga, jika <a href="class-AudioListener.html">listener</a> berada dalam satu atau beberapa <a href="class-AudioReverbZone.html"></a>, reverberation diterapkan pada sumber. Filter individu dapat diterapkan pada setiap sumber audio untuk pengalaman audio yang lebih kaya. Lihat <span class="tooltip"><a href="class-AudioEffect.html">Efek Audio</a><span class="tooltiptext">Setiap efek yang dapat memodifikasi output komponen Audio Mixer, seperti menyaring rentang frekuensi suara atau menerapkan verba. <a href="class-AudioEffectMixer.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AudioEffect">Glossary</a></span></span></span> untuk rincian lebih lanjut.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AudioSourceInspector.png" alt=""> 
+       </figure> 
+       <h2>Properties</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong><em>Property:</em></strong></th> 
+          <th style="text-align:left;"><strong><em>Function:</em></strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Audio Clip</strong><span class="tooltiptext"><a class="tooltipMoreInfoLink" href="class-AudioClip.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AudioClip">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Referensi ke file klip suara yang akan dimainkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Output</strong></td> 
+          <td style="text-align:left;">Secara default, klip output langsung ke <a href="class-AudioListener.html"></a> di Adegan. Gunakan properti ini untuk output klip ke <a href="class-AudioMixer.html">Mixer Audio</a> bukan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Mute</strong></td> 
+          <td style="text-align:left;">Jika mengaktifkan suara akan bermain tetapi berlumpur.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Bypass Effects</strong></td> 
+          <td style="text-align:left;">Ini adalah dengan cepat “by-pass” efek filter diterapkan pada sumber audio. Cara mudah untuk mengubah semua efek on / off.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Bypass Listener Effects</strong></td> 
+          <td style="text-align:left;">Ini adalah dengan cepat mengubah semua efek Listener on / off.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Bypass Reverb Zones</strong></td> 
+          <td style="text-align:left;">Ini adalah dengan cepat mengubah semua Zona Reverb on/off.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><span class="tooltip"><strong>Play On Awake</strong><span class="tooltiptext">Mengatur ini untuk benar untuk membuat sumber audio mulai bermain pada wakee <a class="tooltipMoreInfoLink" href="class-AudioClip.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#PlayOnAwake">Glossary</a></span></span></span></td> 
+          <td style="text-align:left;">Jika diaktifkan, suara akan mulai bermain momen peluncuran adegan. Jika dinonaktifkan, Anda perlu memulainya menggunakan perintah <strong>Play()</strong> dari scripting.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Loop</strong></td> 
+          <td style="text-align:left;">Aktifkan ini untuk membuat loop <strong>Audio Clip</strong> ketika mencapai akhir.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Priority</strong></td> 
+          <td style="text-align:left;">Menentukan prioritas sumber audio ini di antara semua yang ada di tempat kejadian. (Prioritas: 0 = paling penting. 256 = paling penting. Standar = 128.). Gunakan 0 untuk trek musik untuk menghindari mendapatkan kadang-kadang swapped out.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Volume</strong></td> 
+          <td style="text-align:left;">Seberapa keras suara adalah pada jarak satu unit dunia (satu meter) dari <span class="tooltip"><strong>Audio Listener</strong><span class="tooltiptext">Komponen yang bertindak seperti mikrofon, menerima suara dari sumber audio di tempat kejadian dan output ke speaker komputer. <a class="tooltipMoreInfoLink" href="class-AudioListener.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AudioListener">Glossary</a></span></span></span>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Pitch</strong></td> 
+          <td style="text-align:left;">Jumlah perubahan dalam pitch karena perlambatan / kecepatan hingga <strong>Audio Clip</strong>. Nilai 1 adalah kecepatan pemutaran normal.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Stereo Pan</strong></td> 
+          <td style="text-align:left;">Mengatur posisi di lapangan stereo suara 2D.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Spatial Blend</strong></td> 
+          <td style="text-align:left;">Mengatur berapa banyak mesin 3D memiliki efek pada sumber audio.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Reverb Zone Mix</strong></td> 
+          <td style="text-align:left;">Menetapkan jumlah sinyal output yang masuk ke zona reverb. Jumlah linear dalam kisaran (0 - 1), tetapi memungkinkan untuk amplifikasi 10 dB dalam kisaran (1 - 1.1) yang dapat berguna untuk mencapai efek suara dekat lapangan dan jauh.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong><strong>3D Sound Settings</strong></strong></td> 
+          <td style="text-align:left;">Pengaturan yang diterapkan secara proporsional pada parameter Spatial Blend.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Doppler Level</strong></td> 
+          <td style="text-align:left;">Menentukan berapa banyak efek doppler akan diterapkan pada sumber audio ini (jika diatur ke 0, maka tidak ada efek diterapkan).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Spread</strong></td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Min Distance</strong></td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Max Distance</strong></td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Rolloff Mode</strong></td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>- Logarithmic Rolloff</strong></td> 
+          <td style="text-align:left;">Suara keras ketika Anda dekat dengan sumber audio, tetapi ketika Anda pergi dari objek itu menurun secara signifikan cepat.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>- Linear Rolloff</strong></td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>- Custom Rolloff</strong></td> 
+          <td style="text-align:left;"></td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Jenis Rolloff</h2> 
+       <p>Ada tiga mode Rolloff: Logarithmic, Linear dan Custom Rolloff. Rolloff kustom dapat dimodifikasi dengan memodifikasi kurva jarak volume seperti yang dijelaskan di bawah ini. Jika Anda mencoba untuk memodifikasi fungsi jarak volume ketika diatur ke Logarithmic atau Linear, jenis akan secara otomatis berubah menjadi Rolloff Kustom.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/TypesOfRollOff.png" alt="Rolloff Modes that an audio source can have."> 
+        <figcaption>
+          Login Mode yang dapat dimiliki sumber audio. 
+        </figcaption> 
+       </figure> 
+       <h2>Fungsi Jarak</h2> 
+       <p>Ada beberapa sifat audio yang dapat dimodifikasi sebagai fungsi jarak antara sumber audio dan pendengar audio.</p> 
+       <p> <strong>Volume</strong>: Amplitudo(0.0 - 1.0) jarak jauh.</p> 
+       <p> <strong>Spatial Blend</strong>: 2D (penetaan saluran asli) ke 3D (semua saluran menurun dicampur ke mono dan ditenuasi sesuai dengan jarak dan arah).</p> 
+       <p> <strong>Spread</strong>: Sudut (derajat 0,0 - 360.0) jarak jauh.</p> 
+       <p> <strong>Low-Pass</strong> (hanya jika LowPassFilter melekat pada AudioSource): Cutoff Frequency (22000.0-10.0) jarak.</p> 
+       <p> <strong>Reverb Zone</strong>: Jumlah sinyal yang diarahkan ke zona reverb. Perhatikan bahwa properti volume dan jarak dan atenuasi arah diterapkan pada sinyal pertama dan oleh karena itu mempengaruhi sinyal langsung dan direkrut.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/AudioDistanceFunctions.png" alt="Distance functions for Volume, Spatial Blend, Spread, Low-Pass audio filter, and Reverb Zone Mix. The current distance to the Audio Listener is marked in the graph by the red vertical line."> 
+        <figcaption>
+          Fungsi jarak untuk Volume, Blend Spatial, Spread, Filter audio Low-Pass, dan Campuran Zona Reverb. Jarak saat ini ke Audio Listener ditandai dalam grafik dengan garis vertikal merah. 
+        </figcaption> 
+       </figure> 
+       <p><a href="EditingCurves.html">Mengedit Kurva</a>.</p> 
+       <h2></h2> 
+       <p><strong>Audio Clip</strong>. The Clip is the actual sound file that will be played back. The Source is like a controller for starting and stopping playback of that clip, and modifying other audio properties.</p> 
+       <p>Untuk membuat Sumber Audio baru:</p> 
+       <ol> 
+        <li>Mengimpor file audio Anda ke Proyek Unity Anda. Ini sekarang Audio Klip.</li> 
+        <li>Pergi ke <strong>GameObject-&gt;Create Empty</strong> dari menubar.</li> 
+        <li>Dengan GameObject baru yang dipilih, pilih <strong>Component-&gt;Audio-&gt;Audio Source</strong>.</li> 
+        <li>Di <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Inspector">Glossary</a></span></span></span>, temukan properti <strong>Audio Clip</strong> pada Komponen Sumber Audio dan menetapkan klip, baik dengan menyeret satu dari <span class="tooltip"><strong>Project Window</strong><span class="tooltiptext">Jendela yang menunjukkan isi folder <code>Assets</code> (Project tab) <a href="ProjectView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Projectwindow">Glossary</a></span></span></span> atau dengan mengklik ikon lingkaran kecil ke hak properti Inspektur, kemudian memilih klip dari daftar.</li> 
+       </ol> 
+       <p>Sitemap Jika Anda ingin membuat <strong>Note:</strong> hanya untuk satu <strong>Audio Source</strong> yang Anda miliki di folder Aset maka Anda hanya bisa menyeret klip itu ke <strong>Audio Clip</strong> - sebuah <span class="tooltip"><strong>scene view</strong><span class="tooltiptext">Tampilan interaktif ke dunia yang Anda buat. Anda menggunakan Adegan Lihat untuk memilih dan posisi pemandangan, karakter, kamera, lampu, dan semua jenis lain dari Game Object. <a class="tooltipMoreInfoLink" href="UsingTheSceneView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#SceneView">Glossary</a></span></span></span> dengan komponen <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> akan dibuat secara otomatis untuk itu. Seret klip ke GameObject yang ada akan melampirkan klip bersama dengan <strong>Audio Source</strong> baru jika tidak ada yang sudah ada. Jika objek sudah memiliki <strong>Audio Source</strong> maka klip yang baru diseret akan menggantikan yang sumber saat ini digunakan.<strong>Audio Source</strong> then the newly dragged clip will replace the one that the source currently uses.</p> 
+       <h2></h2> 
+       <ul> 
+        <li><a href="../ScriptReference/AudioSource.html">AudioSource</a></li> 
+        <li><a href="../ScriptReference/AudioClip.html">AudioClip</a></li> 
+        <li><a href="../ScriptReference/AudioListener.html">AudioListener</a></li> 
+        <li><a href="../ScriptReference/Audio.AudioMixer.html">AudioMixer</a></li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="class-AudioListener.html"></a></span> 
+         <div class="tip">
+           Pendengaran Audio 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="class-AudioMixer.html"></a></span> 
+         <div class="tip">
+           Mixer Audio 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Integrasi menggunakan JaringanTransport</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="cloud" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UNet.html">Multiplayer dan Jaringan</a></li> 
+         <li><a href="UNetUsingHLAPI.html">Multiplayer API</a></li> 
+         <li><a href="UnityMultiplayerSettingUp.html">Menyiapkan Multiplayer Unity</a></li> 
+         <li>Integrasi menggunakan NetworkTransport</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UnityMultiplayerIntegratingHighLevel.html"></a></span> 
+          <div class="tip">
+            Integrasi menggunakan API Tingkat Tinggi Unity 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UnityMultiplayerCommonErrors.html"></a></span> 
+          <div class="tip">
+            Kesalahan Umum 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Integrasi menggunakan NetworkTransport</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Jika Anda membutuhkan jumlah maksimum flexibilty ketika mengintegrasikan Layanan Multiplayer Unity, Anda dapat menggunakan kelas <code>NetworkTransport</code> langsung. Metode ini membutuhkan lebih banyak kode, tetapi memungkinkan Anda untuk mengontrol setiap detail tentang bagaimana permainan Anda terintegrasi dengan Layanan Multiplayer.</p> 
+       <p>Ini adalah contoh bagaimana Anda dapat terhubung langsung menggunakan kelas <code>NetworkTransport</code>:</p> 
+       <pre><code>using UnityEngine;
+using UnityEngine.Networking;
+using UnityEngine.Networking.Types;
+using UnityEngine.Networking.Match;
+using System.Collections.Generic;
+
+public class DirectSetup : MonoBehaviour
+{
+    // Matchmaker related
+    List&lt;MatchInfoSnapshot&gt; m_MatchList = new List&lt;MatchInfoSnapshot&gt;();
+    bool m_MatchCreated;
+    bool m_MatchJoined;
+    MatchInfo m_MatchInfo;
+    string m_MatchName = "NewRoom";
+    NetworkMatch m_NetworkMatch;
+
+    // Connection/communication related
+    int m_HostId = -1;
+    // On the server there will be multiple connections, on the client this will only contain one ID
+    List&lt;int&gt; m_ConnectionIds = new List&lt;int&gt;();
+    byte[] m_ReceiveBuffer;
+    string m_NetworkMessage = "Hello world";
+    string m_LastReceivedMessage = "";
+    NetworkWriter m_Writer;
+    NetworkReader m_Reader;
+    bool m_ConnectionEstablished;
+
+    const int k_ServerPort = 25000;
+    const int k_MaxMessageSize = 65535;
+
+    void Awake()
+    {
+        m_NetworkMatch = gameObject.AddComponent&lt;NetworkMatch&gt;();
+    }
+
+    void Start()
+    {
+        m_ReceiveBuffer = new byte[k_MaxMessageSize];
+        m_Writer = new NetworkWriter();
+        // While testing with multiple standalone players on one machine this will need to be enabled
+        Application.runInBackground = true;
+    }
+
+    void OnApplicationQuit()
+    {
+        NetworkTransport.Shutdown();
+    }
+
+    void OnGUI()
+    {
+        if (string.IsNullOrEmpty(Application.cloudProjectId))
+            GUILayout.Label("You must set up the project first. See the Multiplayer tab in the Service Window");
+        else
+            GUILayout.Label("Cloud Project ID: " + Application.cloudProjectId);
+
+        if (m_MatchJoined)
+            GUILayout.Label("Match joined '" + m_MatchName + "' on Matchmaker server");
+        else if (m_MatchCreated)
+            GUILayout.Label("Match '" + m_MatchName + "' created on Matchmaker server");
+
+        GUILayout.Label("Connection Established: " + m_ConnectionEstablished);
+
+        if (m_MatchCreated || m_MatchJoined)
+        {
+            GUILayout.Label("Relay Server: " + m_MatchInfo.address + ":" + m_MatchInfo.port);
+            GUILayout.Label("NetworkID: " + m_MatchInfo.networkId + " NodeID: " + m_MatchInfo.nodeId);
+            GUILayout.BeginHorizontal();
+            GUILayout.Label("Outgoing message:");
+            m_NetworkMessage = GUILayout.TextField(m_NetworkMessage);
+            GUILayout.EndHorizontal();
+            GUILayout.Label("Last incoming message: " + m_LastReceivedMessage);
+
+            if (m_ConnectionEstablished &amp;&amp; GUILayout.Button("Send message"))
+            {
+                m_Writer.SeekZero();
+                m_Writer.Write(m_NetworkMessage);
+                byte error;
+                for (int i = 0; i &lt; m_ConnectionIds.Count; ++i)
+                {
+                    NetworkTransport.Send(m_HostId,
+                        m_ConnectionIds[i], 0, m_Writer.AsArray(), m_Writer.Position, out error);
+                    if ((NetworkError)error != NetworkError.Ok)
+                        Debug.LogError("Failed to send message: " + (NetworkError)error);
+                }
+            }
+
+            if (GUILayout.Button("Shutdown"))
+            {
+                m_NetworkMatch.DropConnection(m_MatchInfo.networkId,
+                    m_MatchInfo.nodeId, 0, OnConnectionDropped);
+            }
+        }
+        else
+        {
+            if (GUILayout.Button("Create Room"))
+            {
+                m_NetworkMatch.CreateMatch(m_MatchName, 4, true, "", "", "", 0, 0, OnMatchCreate);
+            }
+
+            if (GUILayout.Button("Join first found match"))
+            {
+                m_NetworkMatch.ListMatches(0, 1, "", true, 0, 0, (success, info, matches) =&gt;
+                {
+                    if (success &amp;&amp; matches.Count &gt; 0)
+                        m_NetworkMatch.JoinMatch(matches[0].networkId, "", "", "", 0, 0, OnMatchJoined);
+                });
+            }
+
+            if (GUILayout.Button("List rooms"))
+            {
+                m_NetworkMatch.ListMatches(0, 20, "", true, 0, 0, OnMatchList);
+            }
+
+            if (m_MatchList.Count &gt; 0)
+            {
+                GUILayout.Label("Current rooms:");
+            }
+            foreach (var match in m_MatchList)
+            {
+                if (GUILayout.Button(match.name))
+                {
+                    m_NetworkMatch.JoinMatch(match.networkId, "", "", "", 0, 0, OnMatchJoined);
+                }
+            }
+        }
+    }
+
+    public void OnConnectionDropped(bool success, string extendedInfo)
+    {
+        Debug.Log("Connection has been dropped on matchmaker server");
+        NetworkTransport.Shutdown();
+        m_HostId = -1;
+        m_ConnectionIds.Clear();
+        m_MatchInfo = null;
+        m_MatchCreated = false;
+        m_MatchJoined = false;
+        m_ConnectionEstablished = false;
+    }
+
+    public virtual void OnMatchCreate(bool success, string extendedInfo, MatchInfo matchInfo)
+    {
+        if (success)
+        {
+            Debug.Log("Create match succeeded");
+            Utility.SetAccessTokenForNetwork(matchInfo.networkId, matchInfo.accessToken);
+           
+            m_MatchCreated = true;
+            m_MatchInfo = matchInfo;
+
+            StartServer(matchInfo.address, matchInfo.port, matchInfo.networkId,
+                matchInfo.nodeId);
+        }
+        else
+        {
+            Debug.LogError("Create match failed: " + extendedInfo);
+        }
+    }
+
+    public void OnMatchList(bool success, string extendedInfo, List&lt;MatchInfoSnapshot&gt; matches)
+    {
+        if (success &amp;&amp; matches != null)
+        {
+            m_MatchList = matches;
+        }
+    else if(!success)
+    {
+        Debug.LogError("List match failed: " + extendedInfo);
+    }
+    }
+
+    // When we've joined a match we connect to the server/host
+    public virtual void OnMatchJoined(bool success, string extendedInfo, MatchInfo matchInfo)
+    {
+        if (success)
+        {
+            Debug.Log("Join match succeeded");
+            Utility.SetAccessTokenForNetwork(matchInfo.networkId, matchInfo.accessToken);
+
+            m_MatchJoined = true;
+            m_MatchInfo = matchInfo;
+
+            Debug.Log("Connecting to Address:" + matchInfo.address +
+                " Port:" + matchInfo.port +
+                " NetworKID: " + matchInfo.networkId +
+                " NodeID: " + matchInfo.nodeId);
+            ConnectThroughRelay(matchInfo.address, matchInfo.port, matchInfo.networkId,
+                matchInfo.nodeId);
+        }
+        else
+        {
+            Debug.LogError("Join match failed: " + extendedInfo);
+        }
+    }
+
+    void SetupHost(bool isServer)
+    {
+        Debug.Log("Initializing network transport");
+        NetworkTransport.Init();
+        var config = new ConnectionConfig();
+        config.AddChannel(QosType.Reliable);
+        config.AddChannel(QosType.Unreliable);
+        var topology = new HostTopology(config, 4);
+        if (isServer)
+            m_HostId = NetworkTransport.AddHost(topology, k_ServerPort);
+        else
+            m_HostId = NetworkTransport.AddHost(topology);
+    }
+
+    void StartServer(string relayIp, int relayPort, NetworkID networkId, NodeID nodeId)
+    {
+        SetupHost(true);
+
+        byte error;
+        NetworkTransport.ConnectAsNetworkHost(
+            m_HostId, relayIp, relayPort, networkId, Utility.GetSourceID(), nodeId, out error);
+    }
+
+    void ConnectThroughRelay(string relayIp, int relayPort, NetworkID networkId, NodeID nodeId)
+    {
+        SetupHost(false);
+
+        byte error;
+        NetworkTransport.ConnectToNetworkPeer(
+            m_HostId, relayIp, relayPort, 0, 0, networkId, Utility.GetSourceID(), nodeId, out error);
+    }
+
+    void Update()
+    {
+        if (m_HostId == -1)
+            return;
+
+        var networkEvent = NetworkEventType.Nothing;
+        int connectionId;
+        int channelId;
+        int receivedSize;
+        byte error;
+
+        // Get events from the relay connection
+        networkEvent = NetworkTransport.ReceiveRelayEventFromHost(m_HostId, out error);
+        if (networkEvent == NetworkEventType.ConnectEvent)
+            Debug.Log("Relay server connected");
+        if (networkEvent == NetworkEventType.DisconnectEvent)
+            Debug.Log("Relay server disconnected");
+
+        do
+        {
+            // Get events from the server/client game connection
+            networkEvent = NetworkTransport.ReceiveFromHost(m_HostId, out connectionId, out channelId,
+                m_ReceiveBuffer, (int)m_ReceiveBuffer.Length, out receivedSize, out error);
+            if ((NetworkError)error != NetworkError.Ok)
+            {
+                Debug.LogError("Error while receiveing network message: " + (NetworkError)error);
+            }
+
+            switch (networkEvent)
+            {
+                case NetworkEventType.ConnectEvent:
+                    {
+                        Debug.Log("Connected through relay, ConnectionID:" + connectionId +
+                            " ChannelID:" + channelId);
+                        m_ConnectionEstablished = true;
+                        m_ConnectionIds.Add(connectionId);
+                        break;
+                    }
+                case NetworkEventType.DataEvent:
+                    {
+                        Debug.Log("Data event, ConnectionID:" + connectionId +
+                            " ChannelID: " + channelId +
+                            " Received Size: " + receivedSize);
+                        m_Reader = new NetworkReader(m_ReceiveBuffer);
+                        m_LastReceivedMessage = m_Reader.ReadString();
+                        break;
+                    }
+                case NetworkEventType.DisconnectEvent:
+                    {
+                        Debug.Log("Connection disconnected, ConnectionID:" + connectionId);
+                        break;
+                    }
+                case NetworkEventType.Nothing:
+                    break;
+            }
+        } while (networkEvent != NetworkEventType.Nothing);
+    }
+}
+</code></pre> 
+       <!-- area:cloud --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UnityMultiplayerIntegratingHighLevel.html"></a></span> 
+         <div class="tip">
+           Integrasi menggunakan API Tingkat Tinggi Unity 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UnityMultiplayerCommonErrors.html"></a></span> 
+         <div class="tip">
+           Kesalahan Umum 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

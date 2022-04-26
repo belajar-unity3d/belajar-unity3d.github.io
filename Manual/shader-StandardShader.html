@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Standar Shader</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="Shaders.html">Shaders</a></li> 
+         <li><a href="shader-built-in.html">Reflektor built-in</a></li> 
+         <li>Standar Shader</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="shader-built-in.html"></a></span> 
+          <div class="tip">
+            Reflektor built-in 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="StandardShaderContextAndContent.html"></a></span> 
+          <div class="tip">
+            Konten dan Teks 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Standar Shader</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Unity Standard <span class="tooltip"><strong>Shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> adalah naungan bawaan dengan serangkaian fitur yang komprehensif. Ini dapat digunakan untuk membuat objek "real-world" seperti batu, kayu, kaca, plastik dan logam, dan mendukung berbagai jenis dan kombinasi warna. Fitur-fiturnya diaktifkan atau dinonaktifkan dengan hanya menggunakan atau tidak menggunakan berbagai slot tekstur dan parameter dalam editor material.</p> 
+       <p>Standar Shader juga menggabungkan model pencahayaan canggih yang disebut <strong>Physically Based Shading</strong>. Secara fisik Berdasarkan Shading (PBS) mensimulasikan interaksi antara bahan dan cahaya dengan cara yang meniru realitas. PBS baru-baru ini menjadi mungkin dalam grafis real-time. Ini bekerja pada situasi terbaik di mana pencahayaan dan bahan harus ada bersama-sama intuitif dan realistis.</p> 
+       <p>Ide di balik Shader Berbasis Fisik kami adalah untuk menciptakan cara yang ramah pengguna untuk mencapai tampilan yang konsisten, tidak dapat digunakan di bawah kondisi pencahayaan yang berbeda. Ini model bagaimana cahaya berperilaku pada kenyataan, tanpa menggunakan beberapa model iklan yang mungkin atau mungkin tidak bekerja. Untuk melakukannya, ini mengikuti prinsip-prinsip fisika, termasuk konservasi energi (meningkatkan benda-benda itu tidak pernah mencerminkan lebih banyak cahaya daripada mereka menerima), refleksi Fresnel (semua permukaan menjadi lebih reflektif pada sudut penggemukan), dan bagaimana permukaan mengosongkan diri mereka sendiri (apa disebut istilah Geometry), antara lain.</p> 
+       <p>Standar Shader dirancang dengan permukaan keras dalam pikiran (juga dikenal sebagai "bahan arsitektur"), dan dapat menangani sebagian besar bahan dunia nyata seperti batu, kaca, keramik, kuningan, perak atau karet. Bahkan akan melakukan pekerjaan yang layak dengan bahan non-keras seperti kulit, rambut dan kain.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/StandardShaderIntroVikingScene.jpg" alt="A scene rendered using the standard shader on all models"> 
+        <figcaption>
+          Sebuah adegan rendered menggunakan naungan standar pada semua model 
+        </figcaption> 
+       </figure> 
+       <p>Dengan Standar Shader, berbagai macam jenis naungan (seperti Diffuse, Specular, Bumped Specular, Reflektif) digabungkan menjadi naungan tunggal dimaksudkan untuk digunakan di semua jenis material. Manfaat ini adalah bahwa perhitungan pencahayaan yang sama digunakan di semua bidang <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> Anda, yang memberikan distribusi cahaya dan naungan yang realistis di semua model yang menggunakan naungan.</p> 
+       <p>Implementasi matematika pencahayaan Shader Standar menggunakan model Disney untuk komponen diffuse, <a href="https://www.cs.cornell.edu/~srm/publications/EGSR07-btdf.pdf">Model GGX</a> untuk specular, dengan <a href="http://jcgt.org/published/0003/02/03/paper.pdf">Istilah visibilitas GGX bersama Smith</a> dan <a href="https://en.wikipedia.org/wiki/Schlick%27s_approximation">Schlick Fresnel</a>.</p> 
+       <h2>Terminology</h2> 
+       <p>Ada sejumlah konsep yang sangat berguna ketika berbicara tentang Shading Berbasis Fisik di Unity. Ini termasuk:</p> 
+       <ul> 
+        <li> <strong>Energy conservation</strong> - Ini adalah konsep berbasis fisika yang memastikan objek tidak pernah mencerminkan lebih banyak cahaya daripada yang mereka terima. Semakin spekulasi bahan, kurang memfitnah itu harus; semakin halus permukaan, semakin kuat dan lebih kecil sorot mendapat.</li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/StandardShaderEnergyConservation.jpg" alt="The light rendered at each point on a surface is calculated to be the same as the amout of light received from its environment. The microfacets of rough surfaces are affected by light from a wider area. Smoother surfaces give stronger and smaller highlights. Point A reflects light from the source towards the camera. Point B takes on a blue tint from ambient light from the sky. Point C takes its ambient and reflective lighting from the surrounding ground colours."> 
+        <figcaption>
+          Cahaya yang dirender pada setiap titik di permukaan dihitung sama dengan cahaya yang diterima dari lingkungannya. Microfacets permukaan kasar dipengaruhi oleh cahaya dari area yang lebih luas. Permukaan yang lebih halus memberikan sorotan yang lebih kuat dan lebih kecil. Login A mencerminkan cahaya dari sumber ke kamera. Login B mengambil warna biru dari cahaya ambient dari langit. Login C mengambil pencahayaan ambien dan reflektif dari warna tanah sekitarnya. 
+        </figcaption> 
+       </figure> 
+       <ul> 
+        <li> <strong>High Dynamic Range (HDR)</strong> - Ini mengacu pada warna di luar kisaran 0–1 yang biasa. Misalnya, matahari dapat dengan mudah sepuluh kali lebih cerah daripada langit biru. Untuk diskusi mendalam, lihat halaman Unity Manual <span class="tooltip"><a href="HDR.html">HDR</a><span class="tooltiptext">kisaran dinamis tinggi<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#HDR">Glossary</a></span></span></span>.</li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/GlowWithHdrAdjusted.jpg" alt="A scene using High Dynamic Range. The sunlight reflecting in the car window appears far brighter than other objects in the scene, because it has been processed using HDR"> 
+        <figcaption>
+          Sebuah adegan menggunakan Rentang Dinamis Tinggi. Sinar matahari mencerminkan di jendela mobil muncul jauh lebih cerah daripada benda lain di tempat kejadian, karena telah diproses menggunakan HDR 
+        </figcaption> 
+       </figure> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="shader-built-in.html"></a></span> 
+         <div class="tip">
+           Reflektor built-in 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="StandardShaderContextAndContent.html"></a></span> 
+         <div class="tip">
+           Konten dan Teks 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

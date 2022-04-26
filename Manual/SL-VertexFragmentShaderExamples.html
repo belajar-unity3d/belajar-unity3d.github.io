@@ -1,0 +1,1171 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Dasar warna kustom</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="render-pipelines.html">Pipa render</a></li> 
+         <li><a href="built-in-render-pipeline.html">Menggunakan Pipa Render Built-in</a></li> 
+         <li><a href="built-in-shader-examples.html">Contoh naungan untuk Pipa Render Built-in</a></li> 
+         <li>Dasar warna kustom</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="built-in-shader-examples.html"></a></span> 
+          <div class="tip">
+            Contoh naungan untuk Pipa Render Built-in 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="built-in-shader-examples-vertex-data.html"></a></span> 
+          <div class="tip">
+            Visualizing vertex data 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Dasar warna kustom</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Ini contoh naungan untuk built-in <span class="tooltip"><strong>Render Pipeline</strong><span class="tooltiptext">Rangkaian operasi yang mengambil isi dari Adegan, dan menampilkannya di layar. Unity memungkinkan Anda memilih dari pipa render yang dibangun sebelumnya, atau menulis sendiri. <a class="tooltipMoreInfoLink" href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Renderpipeline">Glossary</a></span></span></span> menunjukkan dasar-dasar menulis warna kustom, dan menutupi kasus penggunaan umum.</p> 
+       <p>Untuk informasi tentang naungan menulis, lihat <a href="shader-writing.html">Menu Menu</a>.</p> 
+       <h3>Menyiapkan adegan</h3> 
+       <p>Langkah pertama adalah membuat beberapa objek yang akan Anda gunakan untuk menguji naungan Anda. Pilih <strong>Game Object</strong> &gt; <span class="tooltip"><strong>3D Object</strong><span class="tooltiptext">Permainan 3D Objek seperti kubus, terrain atau ragdoll. <a class="tooltipMoreInfoLink" href="GameObjects.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#3DObject">Glossary</a></span></span></span> &gt; <strong>Capsule</strong> di menu utama. Kemudian posisi kamera sehingga menunjukkan kapsul. Klik dua kali Kapsul di Hierarchy untuk memfokuskan pemandangan di atasnya, lalu pilih objek Main Camera dan klik <strong>Game object</strong> &gt; <strong>Align with View</strong> dari menu utama.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SL-CapsuleSetup.png" alt=""> 
+       </figure> 
+       <p>Buat <a class="tooltipMoreInfoLink" href="Materials.html">Material</a> baru dengan memilih <strong>Create</strong> &gt; <span class="tooltip"><strong>Material</strong><span class="tooltiptext">Aset yang menentukan bagaimana permukaan harus diberikan. <a href="class-Material.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Material">Glossary</a></span></span></span> dari menu di Tampilan Proyek. Bahan baru yang disebut <em>Bahan Baru</em> akan muncul di Tampilan Proyek.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SL-NewMaterial.png" alt=""> 
+       </figure> 
+       <h3>Membuat naungan</h3> 
+       <p>Sekarang buat aset <a class="tooltipMoreInfoLink" href="Shaders.html">Shader</a> baru dengan cara yang sama. Pilih <strong>Create</strong> &gt; <span class="tooltip"><strong>Shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> &gt; <strong>Unlit Shader</strong> dari menu di Tampilan Proyek. Ini menciptakan naungan dasar yang hanya menampilkan tekstur tanpa pencahayaan.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SL-NewShader.png" alt=""> 
+       </figure> 
+       <p>Entri lain dalam menu <strong>Create</strong> &gt; <strong>Shader</strong> menciptakan warna tulang telanjang atau jenis lainnya, misalnya <span class="tooltip"><a class="tooltipMoreInfoLink" href="SL-SurfaceShaders.html">permukaan naungan</a><span class="tooltiptext">Cara merampingkan naungan menulis untuk Pipeline Render Built-in. <a href="SL-SurfaceShaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SurfaceShader">Glossary</a></span></span></span> dasar.</p> 
+       <h3>Menyiapkan mesh, bahan dan naungan</h3> 
+       <p>Membuat bahan menggunakan naungan melalui bahan <span class="tooltip"><strong>inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>, atau hanya seret aset naungan atas aset material di Tampilan Proyek. Inspektur materi akan menampilkan bola putih ketika menggunakan naungan ini.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SL-SelectShaderMenu.png" alt=""> 
+       </figure> 
+       <p>Sekarang seret materi ke objek <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a class="tooltipMoreInfoLink" href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Mesh">Glossary</a></span></span></span> Anda dalam pandangan <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Scene">Glossary</a></span></span></span> atau Hierarchy. Atau, pilih objek, dan dalam inspektur membuatnya menggunakan bahan dalam slot Bahan komponen <span class="tooltip"><a href="class-MeshRenderer.html">Mesh Renderer</a><span class="tooltiptext">Komponen mesh yang mengambil geometri dari Filter Mesh dan render di posisi yang ditentukan oleh komponen Transform objek. <a href="class-MeshRenderer.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#MeshRenderer">Glossary</a></span></span></span>.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SL-WhiteCapsuleUnlitShader.png" alt=""> 
+       </figure> 
+       <p>Dengan hal-hal ini, Anda sekarang dapat mulai melihat kode naungan, dan Anda akan melihat hasil dari perubahan Anda ke naungan pada kapsul di <span class="tooltip"><strong>Scene View</strong><span class="tooltiptext">Tampilan interaktif ke dunia yang Anda buat. Anda menggunakan Adegan Lihat untuk memilih dan posisi pemandangan, karakter, kamera, lampu, dan semua jenis lain dari Game Object. <a class="tooltipMoreInfoLink" href="UsingTheSceneView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SceneView">Glossary</a></span></span></span>.</p> 
+       <h2>Bagian utama dari naungan</h2> 
+       <p>Untuk memulai memeriksa kode naungan, klik dua kali aset naungan di Tampilan Proyek. Kode naungan akan terbuka di editor skrip Anda (MonoDevelop atau Visual Studio).</p> 
+       <p>Naungan dimulai dengan kode ini:</p> 
+       <pre><code>Shader "Unlit/NewUnlitShader"
+{
+    Properties
+    {
+        _MainTex ("Texture", 2D) = "white" {}
+    }
+    SubShader
+    {
+        Tags { "RenderType"="Opaque" }
+        LOD 100
+
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            // make fog work
+            #pragma multi_compile_fog
+            
+            #include "UnityCG.cginc"
+
+            struct appdata
+            {
+                float4 vertex : POSITION;
+                float2 uv : TEXCOORD0;
+            };
+
+            struct v2f
+            {
+                float2 uv : TEXCOORD0;
+                UNITY_FOG_COORDS(1)
+                float4 vertex : SV_POSITION;
+            };
+
+            sampler2D _MainTex;
+            float4 _MainTex_ST;
+            
+            v2f vert (appdata v)
+            {
+                v2f o;
+                o.vertex = UnityObjectToClipPos(v.vertex);
+                o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+                UNITY_TRANSFER_FOG(o,o.vertex);
+                return o;
+            }
+            
+            fixed4 frag (v2f i) : SV_Target
+            {
+                // sample the texture
+                fixed4 col = tex2D(_MainTex, i.uv);
+                // apply fog
+                UNITY_APPLY_FOG(i.fogCoord, col);
+                return col;
+            }
+            ENDCG
+        }
+    }
+}
+</code></pre> 
+       <p>Naungan awal ini tidak terlihat sangat sederhana! Tapi jangan khawatir, kita akan pergi ke setiap langkah demi langkah.</p> 
+       <p>Mari kita lihat bagian utama dari naungan sederhana kami.</p> 
+       <pre><code>Shader
+</code></pre> 
+       <p>Perintah <a href="SL-Shader.html">Shader</a> mengandung string dengan nama naungan. Anda dapat menggunakan karakter bulu mata maju "/" untuk menempatkan naungan Anda dalam sub-menu ketika memilih naungan Anda dalam inspektur <a href="class-Material.html">Material</a>.</p> 
+       <pre><code>Properties
+</code></pre> 
+       <p>Blok <a href="SL-Properties.html">Properties</a> mengandung variabel naungan (teks, warna dll) yang akan disimpan sebagai bagian dari Bahan, dan ditampilkan dalam inspektur material. Dalam templat naungan kami, ada properti tekstur tunggal yang dinyatakan.</p> 
+       <pre><code>SubShader
+</code></pre> 
+       <p>A Shader dapat mengandung satu atau lebih <a href="SL-SubShader.html">SubShaders</a>, yang terutama digunakan untuk menerapkan warna untuk kemampuan GPU yang berbeda. Dalam tutorial ini kita tidak peduli dengan itu, sehingga semua naungan kita akan mengandung hanya satu SubShader.</p> 
+       <pre><code>Pass
+</code></pre> 
+       <p>Setiap SubShader terdiri dari sejumlah <a href="SL-Pass.html">passes</a>, dan setiap Pass mewakili eksekusi simpul dan kode fragmen untuk objek yang sama yang diberikan dengan bahan naungan. Banyak naungan sederhana hanya menggunakan satu lulus, tetapi naungan yang berinteraksi dengan pencahayaan mungkin perlu lebih (lihat <a href="SL-RenderPipeline.html">Pipa pencahayaan</a> untuk rincian). Perintah di dalam Pass biasanya mengatur state fungsi tetap, misalnya mode campuran.</p> 
+       <pre><code>CGPROGRAM .. ENDCG
+</code></pre> 
+       <p>Kata kunci ini mengelilingi bagian kode HLSL dalam naungan simpul dan fragmen. Biasanya ini adalah di mana sebagian besar kode yang menarik. Lihat <a href="SL-ShaderPrograms.html">simpul dan naungan fragmen</a> untuk rincian.</p> 
+       <h2>Sederhana teduh</h2> 
+       <p>Templat naungan yang tidak menyala melakukan beberapa hal lebih dari akan benar-benar diperlukan untuk menampilkan objek dengan tekstur. Sebagai contoh, mendukung kolom Fog, dan tekstur tiling/offset dalam materi. Mari kita menyederhanakan naungan untuk minimum, dan tambahkan lebih banyak komentar:</p> 
+       <pre><code>Shader "Unlit/SimpleUnlitTexturedShader"
+{
+    Properties
+    {
+        // we have removed support for texture tiling/offset,
+        // so make them not be displayed in material inspector
+        [NoScaleOffset] _MainTex ("Texture", 2D) = "white" {}
+    }
+    SubShader
+    {
+        Pass
+        {
+            CGPROGRAM
+            // use "vert" function as the vertex shader
+            #pragma vertex vert
+            // use "frag" function as the pixel (fragment) shader
+            #pragma fragment frag
+
+            // vertex shader inputs
+            struct appdata
+            {
+                float4 vertex : POSITION; // vertex position
+                float2 uv : TEXCOORD0; // texture coordinate
+            };
+
+            // vertex shader outputs ("vertex to fragment")
+            struct v2f
+            {
+                float2 uv : TEXCOORD0; // texture coordinate
+                float4 vertex : SV_POSITION; // clip space position
+            };
+
+            // vertex shader
+            v2f vert (appdata v)
+            {
+                v2f o;
+                // transform position to clip space
+                // (multiply with model*view*projection matrix)
+                o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+                // just pass the texture coordinate
+                o.uv = v.uv;
+                return o;
+            }
+            
+            // texture we will sample
+            sampler2D _MainTex;
+
+            // pixel shader; returns low precision ("fixed4" type)
+            // color ("SV_Target" semantic)
+            fixed4 frag (v2f i) : SV_Target
+            {
+                // sample texture and return it
+                fixed4 col = tex2D(_MainTex, i.uv);
+                return col;
+            }
+            ENDCG
+        }
+    }
+}
+</code></pre> 
+       <p><span class="tooltip"><strong>Vertex Shader</strong><span class="tooltiptext">Program yang berjalan pada setiap simpul model 3D ketika model sedang diberikan. <a class="tooltipMoreInfoLink" href="SL-ShaderPrograms.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#vertexshader">Glossary</a></span></span></span> adalah program yang berjalan pada setiap simpul model 3D. Cukup sering tidak melakukan sesuatu yang sangat menarik. Di sini kita hanya mengubah posisi simpul dari ruang objek menjadi disebut "ruang klip", yang apa yang digunakan oleh GPU untuk menjebak objek di layar. Kami juga lulus koordinat tekstur input yang tidak dimodifikasi - kami akan perlu untuk sampel tekstur dalam naungan fragmen.</p> 
+       <p><strong>Fragment Shader</strong> adalah program yang berjalan pada setiap <span class="tooltip"><strong>pixel</strong><span class="tooltiptext">Unit terkecil dalam gambar komputer. Ukuran piksel tergantung pada resolusi layar Anda. Pencahayaan pixel dihitung pada setiap piksel layar. <a class="tooltipMoreInfoLink" href="ShadowPerformance.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#pixel">Glossary</a></span></span></span> bahwa objek menempati layar, dan biasanya digunakan untuk menghitung dan output warna setiap pixel. Biasanya ada jutaan piksel di layar, dan naungan fragmen dieksekusi untuk semua dari mereka! Mengoptimalkan naungan fragmen cukup bagian penting dari pekerjaan kinerja permainan secara keseluruhan.</p> 
+       <p>Beberapa definisi variabel atau fungsi diikuti oleh <strong>Semantic Signifier</strong> - misalnya <strong>: POSITION</strong> atau <strong>: SV_Target</strong>. Penandaan semantik ini mengkomunikasikan “meaning” dari variabel ini ke GPU. Lihat halaman <a href="SL-ShaderSemantics.html">shader semantics</a> untuk rincian.</p> 
+       <p>Ketika digunakan pada model yang bagus dengan tekstur yang bagus, naungan sederhana kami terlihat cukup bagus!</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/SL/ExampleUnlitTextured.png" alt=""> 
+       </figure> 
+       <h2>Lebih sederhana warna naungan tunggal</h2> 
+       <p>Mari kita menyederhanakan naungan lebih banyak – kita akan membuat naungan yang menarik seluruh objek dalam satu warna. Ini tidak sangat berguna, tapi hey kita belajar di sini.</p> 
+       <pre><code>Shader "Unlit/SingleColor"
+{
+    Properties
+    {
+        // Color property for material inspector, default to white
+        _Color ("Main Color", Color) = (1,1,1,1)
+    }
+    SubShader
+    {
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            
+            // vertex shader
+            // this time instead of using "appdata" struct, just spell inputs manually,
+            // and instead of returning v2f struct, also just return a single output
+            // float4 clip position
+            float4 vert (float4 vertex : POSITION) : SV_POSITION
+            {
+                return mul(UNITY_MATRIX_MVP, vertex);
+            }
+            
+            // color from the material
+            fixed4 _Color;
+
+            // pixel shader, no inputs needed
+            fixed4 frag () : SV_Target
+            {
+                return _Color; // just return it
+            }
+            ENDCG
+        }
+    }
+}
+</code></pre> 
+       <p>Kali ini bukannya menggunakan structs untuk input (<strong>appdata</strong>) dan output (<strong>v2f</strong>), fungsi naungan hanya mengeras input secara manual. Kedua cara kerja, dan mana Anda memilih untuk menggunakan tergantung pada gaya dan preferensi pengkodean Anda.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/SL/ExampleSingleColor.png" alt=""> 
+       </figure> 
+       <h2>Menggunakan jala normal untuk menyenangkan dan keuntungan</h2> 
+       <p>Mari kita lanjutkan dengan naungan yang menampilkan jaring normal di ruang dunia. Tanpa ado lebih lanjut:</p> 
+       <pre><code>Shader "Unlit/WorldSpaceNormals"
+{
+    // no Properties block this time!
+    SubShader
+    {
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            // include file that contains UnityObjectToWorldNormal helper function
+            #include "UnityCG.cginc"
+
+            struct v2f {
+                // we'll output world space normal as one of regular ("texcoord") interpolators
+                half3 worldNormal : TEXCOORD0;
+                float4 pos : SV_POSITION;
+            };
+
+            // vertex shader: takes object space normal as input too
+            v2f vert (float4 vertex : POSITION, float3 normal : NORMAL)
+            {
+                v2f o;
+                o.pos = UnityObjectToClipPos(vertex);
+                // UnityCG.cginc file contains function to transform
+                // normal from object to world space, use that
+                o.worldNormal = UnityObjectToWorldNormal(normal);
+                return o;
+            }
+            
+            fixed4 frag (v2f i) : SV_Target
+            {
+                fixed4 c = 0;
+                // normal is a 3D vector with xyz components; in -1..1
+                // range. To display it as color, bring the range into 0..1
+                // and put into red, green, blue components
+                c.rgb = i.worldNormal*0.5+0.5;
+                return c;
+            }
+            ENDCG
+        }
+    }
+}
+</code></pre> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/SL/ExampleWorldSpaceNormals.png" alt=""> 
+       </figure> 
+       <p>Selain menghasilkan warna yang cukup, normal digunakan untuk semua jenis efek grafis - pencahayaan, refleksi, siluet dan sebagainya.</p> 
+       <p>Dalam naungan di atas, kita mulai menggunakan salah satu <a href="SL-BuiltinIncludes.html">warna termasuk file</a> bawaan Unity. Di sini, <strong>UnityCG.cginc</strong> digunakan yang mengandung fungsi praktis <strong>UnityObjectToWorldNormal</strong>. Kami juga telah menggunakan fungsi utilitas <strong>UnityObjectToClipPos</strong>, yang mengubah simpul dari ruang objek ke layar. Ini hanya membuat kode lebih mudah dibaca dan lebih efisien dalam keadaan tertentu.</p> 
+       <p>Kami telah melihat bahwa data dapat dilewatkan dari simpul ke dalam naungan fragmen yang disebut “interpolators” (atau kadang disebut “varyings”). Dalam bahasa HLSL membentuk mereka biasanya dilabeli dengan semantik <strong>TEXCOORDn</strong>, dan masing-masing dari mereka dapat hingga vektor 4-komponen (lihat halaman <a href="SL-ShaderSemantics.html">semantics</a> untuk rincian).</p> 
+       <p>Juga kami telah mempelajari teknik sederhana dalam cara memvisualisasikan vektor ternormalisasi (dalam -1.0 hingga + 1.0 kisaran) sebagai warna: cukup banyak mereka dengan setengah dan tambahkan setengah. Untuk contoh visualisasi data yang lebih simpul, lihat <a href="built-in-shader-examples-vertex-data.html">Visualizaing vertex data</a>.</p> 
+       <h4>Refleksi lingkungan menggunakan normal ruang dunia</h4> 
+       <p>Ketika <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-Skybox.html">Skybox</a><span class="tooltiptext">Jenis khusus Bahan yang digunakan untuk mewakili langit. Biasanya enam sisi. <a href="class-Skybox.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Skybox">Glossary</a></span></span></span> digunakan dalam adegan sebagai sumber refleksi (lihat <a href="lighting-window.html">Jendela pencahayaan</a>), maka pada dasarnya adalah "default" <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-ReflectionProbe.html">Refleksi Probe</a><span class="tooltiptext">Komponen rendering yang menangkap pandangan bulat dari sekitarnya di semua arah, seperti kamera. Gambar yang ditangkap kemudian disimpan sebagai kubus yang dapat digunakan oleh benda dengan bahan reflektif. <a href="class-ReflectionProbe.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ReflectionProbe">Glossary</a></span></span></span> diciptakan, mengandung data skybox. Probe refleksi adalah tekstur <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-Cubemap.html">Cubemap</a><span class="tooltiptext">Koleksi enam tekstur persegi yang dapat mewakili refleksi di lingkungan atau skybox yang digambar di balik geometri Anda. Enam kotak membentuk wajah kubus imajiner yang mengelilingi objek; setiap wajah mewakili pandangan di sepanjang arah sumbu dunia (hingga, kiri, kanan, ke depan dan belakang). <a href="class-Cubemap.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Cubemap">Glossary</a></span></span></span> internal; kami akan memperpanjang naungan normal ruang dunia di atas untuk melihat ke dalamnya.</p> 
+       <p>Kode mulai mendapatkan sedikit yang terlibat sekarang. Tentu saja, jika Anda ingin naungan yang bekerja secara otomatis dengan lampu, bayangan, refleksi dan sisa sistem pencahayaan, caranya lebih mudah digunakan <a href="SL-SurfaceShaders.html">permukaan naungan</a>. Contoh ini dimaksudkan untuk menunjukkan cara menggunakan bagian sistem pencahayaan dengan cara "manual".</p> 
+       <pre><code>Shader "Unlit/SkyReflection"
+{
+    SubShader
+    {
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #include "UnityCG.cginc"
+
+            struct v2f {
+                half3 worldRefl : TEXCOORD0;
+                float4 pos : SV_POSITION;
+            };
+
+            v2f vert (float4 vertex : POSITION, float3 normal : NORMAL)
+            {
+                v2f o;
+                o.pos = UnityObjectToClipPos(vertex);
+                // compute world space position of the vertex
+                float3 worldPos = mul(_Object2World, vertex).xyz;
+                // compute world space view direction
+                float3 worldViewDir = normalize(UnityWorldSpaceViewDir(worldPos));
+                // world space normal
+                float3 worldNormal = UnityObjectToWorldNormal(normal);
+                // world space reflection vector
+                o.worldRefl = reflect(-worldViewDir, worldNormal);
+                return o;
+            }
+        
+            fixed4 frag (v2f i) : SV_Target
+            {
+                // sample the default reflection cubemap, using the reflection vector
+                half4 skyData = UNITY_SAMPLE_TEXCUBE(unity_SpecCube0, i.worldRefl);
+                // decode cubemap data into actual color
+                half3 skyColor = DecodeHDR (skyData, unity_SpecCube0_HDR);
+                // output it!
+                fixed4 c = 0;
+                c.rgb = skyColor;
+                return c;
+            }
+            ENDCG
+        }
+    }
+}
+</code></pre> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/SL/ExampleSkyReflection.png" alt=""> 
+       </figure> 
+       <p>Contoh di atas menggunakan beberapa hal dari <a href="SL-BuiltinIncludes.html">warna termasuk file</a> bawaan:</p> 
+       <ul> 
+        <li><strong>unity_SpecCube0</strong>, <strong>unity_SpecCube0_HDR</strong>, <strong>Object2World</strong>, <strong>UNITY_MATRIX_MVP</strong> dari <a href="SL-UnityShaderVariables.html">variabel naungan built-in</a>. <strong>unity_SpecCube0</strong> mengandung data untuk probe refleksi aktif.</li> 
+        <li> <strong>UNITY_SAMPLE_TEXCUBE</strong> adalah <a href="SL-BuiltinMacros.html">makro built-in</a> untuk sampel cubemap. Kebanyakan kubus biasa dinyatakan dan digunakan menggunakan sintaks HLSL standar (<strong>samplerCUBE</strong> dan <strong>texCUBE</strong>), namun kubus probe refleksi di Unity dinyatakan dengan cara khusus untuk menghemat slot sampler. Jika Anda tidak tahu apa yang, jangan khawatir, hanya tahu bahwa untuk menggunakan kubus <strong>unity_SpecCube0</strong> Anda harus menggunakan makro <strong>UNITY_SAMPLE_TEXCUBE</strong>.</li> 
+        <li> <strong>UnityWorldSpaceViewDir</strong> fungsi dari <strong>UnityCG.cginc</strong>, dan fungsi <strong>DecodeHDR</strong> dari file yang sama. Yang terakhir digunakan untuk mendapatkan warna sebenarnya dari data probe refleksi - karena toko Unity mencerminkan probe cubemap secara khusus dikodekan cara.</li> 
+        <li> <strong>reflect</strong> hanya fungsi HLSL built-in untuk menghitung refleksi vektor sekitar yang diberikan normal.</li> 
+       </ul> 
+       <h4>Refleksi lingkungan dengan peta normal</h4> 
+       <p>Sering <span class="tooltip"><strong>Normal Maps</strong><span class="tooltiptext">Jenis tekstur Peta Bump yang memungkinkan Anda untuk menambahkan detail permukaan seperti benjolan, alur, dan goresan ke model yang menangkap cahaya seolah-olah mereka diwakili oleh geometri nyata.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Normalmap">Glossary</a></span></span></span> digunakan untuk membuat detail tambahan pada objek, tanpa membuat geometri tambahan. Mari kita lihat bagaimana membuat naungan yang mencerminkan lingkungan, dengan tekstur peta normal.</p> 
+       <p>Sekarang matematika mulai mendapatkan <em>benar-benar terlibat</em>, jadi kita akan melakukannya dalam beberapa langkah. Dalam naungan di atas, arah refleksi bersaing per-vertex (dalam naungan simpul), dan naungan fragmen hanya melakukan refleksi probe cubemap lookup. Namun setelah kita mulai menggunakan peta normal, permukaan normal itu sendiri perlu dihitung berdasarkan per-piksel, yang berarti kita juga harus memperhitungkan bagaimana lingkungan tercermin per-piksel!</p> 
+       <p>Jadi pertama-tama, mari kita tuliskan naungan di atas untuk melakukan hal yang sama, kecuali kita akan memindahkan beberapa perhitungan ke naungan fragmen, sehingga mereka sebanding per-piksel:</p> 
+       <pre><code>Shader "Unlit/SkyReflection Per Pixel"
+{
+    SubShader
+    {
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #include "UnityCG.cginc"
+
+            struct v2f {
+                float3 worldPos : TEXCOORD0;
+                half3 worldNormal : TEXCOORD1;
+                float4 pos : SV_POSITION;
+            };
+
+            v2f vert (float4 vertex : POSITION, float3 normal : NORMAL)
+            {
+                v2f o;
+                o.pos = UnityObjectToClipPos(vertex);
+                o.worldPos = mul(_Object2World, vertex).xyz;
+                o.worldNormal = UnityObjectToWorldNormal(normal);
+                return o;
+            }
+        
+            fixed4 frag (v2f i) : SV_Target
+            {
+                // compute view direction and reflection vector
+                // per-pixel here
+                half3 worldViewDir = normalize(UnityWorldSpaceViewDir(i.worldPos));
+                half3 worldRefl = reflect(-worldViewDir, i.worldNormal);
+
+                // same as in previous shader
+                half4 skyData = UNITY_SAMPLE_TEXCUBE(unity_SpecCube0, worldRefl);
+                half3 skyColor = DecodeHDR (skyData, unity_SpecCube0_HDR);
+                fixed4 c = 0;
+                c.rgb = skyColor;
+                return c;
+            }
+            ENDCG
+        }
+    }
+}
+</code></pre> 
+       <p>Itu sendiri tidak memberi kita banyak - naungan terlihat persis sama, kecuali sekarang berjalan lebih lambat karena itu tidak lebih perhitungan untuk setiap piksel di layar, bukan hanya untuk setiap simpul model. Namun, kita akan membutuhkan perhitungan ini benar-benar segera. kesetiaan grafis yang lebih tinggi sering membutuhkan lebih banyak warna yang kompleks.</p> 
+       <p>Kami harus belajar hal baru sekarang juga; yang disebut "sebelum bertanggung". Tekstur peta normal paling sering diekspresikan dalam ruang koordinat yang dapat dianggap sebagai “mengikuti permukaan” dari model. Dalam naungan kita, kita perlu tahu vektor dasar ruang tangen, membaca vektor normal dari tekstur, mengubahnya menjadi ruang dunia, dan kemudian melakukan semua matematika dari naungan di atas. Mari kita sampai ke sana!</p> 
+       <pre><code>Shader "Unlit/SkyReflection Per Pixel"
+{
+    Properties {
+        // normal map texture on the material,
+        // default to dummy "flat surface" normalmap
+        _BumpMap("Normal Map", 2D) = "bump" {}
+    }
+    SubShader
+    {
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #include "UnityCG.cginc"
+
+            struct v2f {
+                float3 worldPos : TEXCOORD0;
+                // these three vectors will hold a 3x3 rotation matrix
+                // that transforms from tangent to world space
+                half3 tspace0 : TEXCOORD1; // tangent.x, bitangent.x, normal.x
+                half3 tspace1 : TEXCOORD2; // tangent.y, bitangent.y, normal.y
+                half3 tspace2 : TEXCOORD3; // tangent.z, bitangent.z, normal.z
+                // texture coordinate for the normal map
+                float2 uv : TEXCOORD4;
+                float4 pos : SV_POSITION;
+            };
+
+            // vertex shader now also needs a per-vertex tangent vector.
+            // in Unity tangents are 4D vectors, with the .w component used to
+            // indicate direction of the bitangent vector.
+            // we also need the texture coordinate.
+            v2f vert (float4 vertex : POSITION, float3 normal : NORMAL, float4 tangent : TANGENT, float2 uv : TEXCOORD0)
+            {
+                v2f o;
+                o.pos = UnityObjectToClipPos(vertex);
+                o.worldPos = mul(_Object2World, vertex).xyz;
+                half3 wNormal = UnityObjectToWorldNormal(normal);
+                half3 wTangent = UnityObjectToWorldDir(tangent.xyz);
+                // compute bitangent from cross product of normal and tangent
+                half tangentSign = tangent.w * unity_WorldTransformParams.w;
+                half3 wBitangent = cross(wNormal, wTangent) * tangentSign;
+                // output the tangent space matrix
+                o.tspace0 = half3(wTangent.x, wBitangent.x, wNormal.x);
+                o.tspace1 = half3(wTangent.y, wBitangent.y, wNormal.y);
+                o.tspace2 = half3(wTangent.z, wBitangent.z, wNormal.z);
+                o.uv = uv;
+                return o;
+            }
+
+            // normal map texture from shader properties
+            sampler2D _BumpMap;
+        
+            fixed4 frag (v2f i) : SV_Target
+            {
+                // sample the normal map, and decode from the Unity encoding
+                half3 tnormal = UnpackNormal(tex2D(_BumpMap, i.uv));
+                // transform normal from tangent to world space
+                half3 worldNormal;
+                worldNormal.x = dot(i.tspace0, tnormal);
+                worldNormal.y = dot(i.tspace1, tnormal);
+                worldNormal.z = dot(i.tspace2, tnormal);
+
+                // rest the same as in previous shader
+                half3 worldViewDir = normalize(UnityWorldSpaceViewDir(i.worldPos));
+                half3 worldRefl = reflect(-worldViewDir, worldNormal);
+                half4 skyData = UNITY_SAMPLE_TEXCUBE(unity_SpecCube0, worldRefl);
+                half3 skyColor = DecodeHDR (skyData, unity_SpecCube0_HDR);
+                fixed4 c = 0;
+                c.rgb = skyColor;
+                return c;
+            }
+            ENDCG
+        }
+    }
+}
+</code></pre> 
+       <p>Phew, yang cukup terlibat. Tapi lihat, refleksi mapped normal!</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/SL/ExampleSkyReflectionNormalmap.png" alt=""> 
+       </figure> 
+       <h2>Menambahkan tekstur lebih</h2> 
+       <p>Mari kita tambahkan lebih banyak tekstur ke naungan yang normal, langit-reflektor di atas. Kami akan menambahkan tekstur warna dasar, terlihat dalam contoh unlit pertama, dan peta occlusion untuk mempergelar rongga.</p> 
+       <pre><code>Shader "Unlit/More Textures"
+{
+    Properties {
+        // three textures we'll use in the material
+        _MainTex("Base texture", 2D) = "white" {}
+        _OcclusionMap("Occlusion", 2D) = "white" {}
+        _BumpMap("Normal Map", 2D) = "bump" {}
+    }
+    SubShader
+    {
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #include "UnityCG.cginc"
+
+            // exactly the same as in previous shader
+            struct v2f {
+                float3 worldPos : TEXCOORD0;
+                half3 tspace0 : TEXCOORD1;
+                half3 tspace1 : TEXCOORD2;
+                half3 tspace2 : TEXCOORD3;
+                float2 uv : TEXCOORD4;
+                float4 pos : SV_POSITION;
+            };
+            v2f vert (float4 vertex : POSITION, float3 normal : NORMAL, float4 tangent : TANGENT, float2 uv : TEXCOORD0)
+            {
+                v2f o;
+                o.pos = UnityObjectToClipPos(vertex);
+                o.worldPos = mul(_Object2World, vertex).xyz;
+                half3 wNormal = UnityObjectToWorldNormal(normal);
+                half3 wTangent = UnityObjectToWorldDir(tangent.xyz);
+                half tangentSign = tangent.w * unity_WorldTransformParams.w;
+                half3 wBitangent = cross(wNormal, wTangent) * tangentSign;
+                o.tspace0 = half3(wTangent.x, wBitangent.x, wNormal.x);
+                o.tspace1 = half3(wTangent.y, wBitangent.y, wNormal.y);
+                o.tspace2 = half3(wTangent.z, wBitangent.z, wNormal.z);
+                o.uv = uv;
+                return o;
+            }
+
+            // textures from shader properties
+            sampler2D _MainTex;
+            sampler2D _OcclusionMap;
+            sampler2D _BumpMap;
+        
+            fixed4 frag (v2f i) : SV_Target
+            {
+                // same as from previous shader...
+                half3 tnormal = UnpackNormal(tex2D(_BumpMap, i.uv));
+                half3 worldNormal;
+                worldNormal.x = dot(i.tspace0, tnormal);
+                worldNormal.y = dot(i.tspace1, tnormal);
+                worldNormal.z = dot(i.tspace2, tnormal);
+                half3 worldViewDir = normalize(UnityWorldSpaceViewDir(i.worldPos));
+                half3 worldRefl = reflect(-worldViewDir, worldNormal);
+                half4 skyData = UNITY_SAMPLE_TEXCUBE(unity_SpecCube0, worldRefl);
+                half3 skyColor = DecodeHDR (skyData, unity_SpecCube0_HDR);                
+                fixed4 c = 0;
+                c.rgb = skyColor;
+
+                // modulate sky color with the base texture, and the occlusion map
+                fixed3 baseColor = tex2D(_MainTex, i.uv).rgb;
+                fixed occlusion = tex2D(_OcclusionMap, i.uv).r;
+                c.rgb *= baseColor;
+                c.rgb *= occlusion;
+
+                return c;
+            }
+            ENDCG
+        }
+    }
+}
+</code></pre> 
+       <p>Balon kucing terlihat bagus!</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/SL/ExampleMoreTextures.png" alt=""> 
+       </figure> 
+       <h2>Texturing shader examples</h2> 
+       <h4>Pola checkerboard prosedural</h4> 
+       <p>Ini adalah naungan yang menghasilkan pola checkerboard berdasarkan koordinat tekstur mesh:</p> 
+       <pre><code>Shader "Unlit/Checkerboard"
+{
+    Properties
+    {
+        _Density ("Density", Range(2,50)) = 30
+    }
+    SubShader
+    {
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #include "UnityCG.cginc"
+
+            struct v2f
+            {
+                float2 uv : TEXCOORD0;
+                float4 vertex : SV_POSITION;
+            };
+
+            float _Density;
+
+            v2f vert (float4 pos : POSITION, float2 uv : TEXCOORD0)
+            {
+                v2f o;
+                o.vertex = UnityObjectToClipPos(pos);
+                o.uv = uv * _Density;
+                return o;
+            }
+            
+            fixed4 frag (v2f i) : SV_Target
+            {
+                float2 c = i.uv;
+                c = floor(c) / 2;
+                float checker = frac(c.x + c.y) * 2;
+                return checker;
+            }
+            ENDCG
+        }
+    }
+}
+</code></pre> 
+       <p>Slider kepadatan dalam kontrol blok <a href="SL-Properties.html">Properties</a> bagaimana padat papan centang. Dalam naungan simpul, UV mesh dikalikan oleh nilai kepadatan untuk mengambil mereka dari kisaran 0 hingga 1 hingga kisaran 0 hingga kepadatan. Katakanlah kerapatan diatur ke 30 - ini akan membuat input <strong>i.uv</strong> ke dalam naungan fragmen mengandung nilai titik mengambang dari nol ke 30 untuk berbagai tempat jala yang diberikan.</p> 
+       <p>Kemudian kode naungan fragmen hanya mengambil bagian bilangan bulat dari koordinat masukan menggunakan fungsi bawaan HLSL, dan membaginya dengan dua. Ingat bahwa koordinat masukan adalah angka dari 0 sampai 30; ini membuat mereka semua menjadi "kubis" untuk nilai 0, 0,5, 1, 1.5, 2, 2.5, dan sebagainya. Ini dilakukan pada komponen x dan y dari koordinat masukan.<strong>floor</strong> function, and divides it by two. Recall that the input coordinates were numbers from 0 to 30; this makes them all be “quantized” to values of 0, 0.5, 1, 1.5, 2, 2.5, and so on. This was done on both the x and y components of the input coordinate.</p> 
+       <p>Selanjutnya, kami menambahkan koordinasi x dan y ini bersama-sama (masing-masing dari mereka hanya memiliki nilai yang mungkin 0, 0,5, 1, 1.5, ...) dan hanya mengambil bagian fraksional menggunakan fungsi HLSL bawaan lainnya, <strong>frac</strong>. Hasil dari ini hanya bisa 0,0 atau 0,5. Kami kemudian menggandakannya dengan dua untuk membuatnya baik 0,0 atau 1.0, dan output sebagai warna (hasil ini dalam warna hitam atau putih masing-masing).</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/SL/ExampleCheckerboard.png" alt=""> 
+       </figure> 
+       <h4>Tri-planar texturing</h4> 
+       <p>Untuk mesh yang kompleks atau prosedural, bukan teks yang menggunakan koordinat UV biasa, kadang-kadang berguna untuk hanya tekstur “proyek” ke objek dari tiga arah primer. Ini disebut “tri-planar” texturing. Idenya adalah untuk menggunakan permukaan normal untuk berat tiga arah tekstur. Ini adalah naungan:</p> 
+       <pre><code>Shader "Unlit/Triplanar"
+{
+    Properties
+    {
+        _MainTex ("Texture", 2D) = "white" {}
+        _Tiling ("Tiling", Float) = 1.0
+        _OcclusionMap("Occlusion", 2D) = "white" {}
+    }
+    SubShader
+    {
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #include "UnityCG.cginc"
+
+            struct v2f
+            {
+                half3 objNormal : TEXCOORD0;
+                float3 coords : TEXCOORD1;
+                float2 uv : TEXCOORD2;
+                float4 pos : SV_POSITION;
+            };
+
+            float _Tiling;
+
+            v2f vert (float4 pos : POSITION, float3 normal : NORMAL, float2 uv : TEXCOORD0)
+            {
+                v2f o;
+                o.pos = UnityObjectToClipPos(pos);
+                o.coords = pos.xyz * _Tiling;
+                o.objNormal = normal;
+                o.uv = uv;
+                return o;
+            }
+
+            sampler2D _MainTex;
+            sampler2D _OcclusionMap;
+            
+            fixed4 frag (v2f i) : SV_Target
+            {
+                // use absolute value of normal as texture weights
+                half3 blend = abs(i.objNormal);
+                // make sure the weights sum up to 1 (divide by sum of x+y+z)
+                blend /= dot(blend,1.0);
+                // read the three texture projections, for x,y,z axes
+                fixed4 cx = tex2D(_MainTex, i.coords.yz);
+                fixed4 cy = tex2D(_MainTex, i.coords.xz);
+                fixed4 cz = tex2D(_MainTex, i.coords.xy);
+                // blend the textures based on weights
+                fixed4 c = cx * blend.x + cy * blend.y + cz * blend.z;
+                // modulate by regular occlusion map
+                c *= tex2D(_OcclusionMap, i.uv);
+                return c;
+            }
+            ENDCG
+        }
+    }
+}
+</code></pre> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/SL/ExampleTriPlanar.png" alt=""> 
+       </figure> 
+       <h2>Perhitungan pencahayaan</h2> 
+       <p>Biasanya ketika Anda menginginkan naungan yang bekerja dengan pipa pencahayaan Unity, Anda akan menulis <a href="SL-SurfaceShaders.html">permukaan naungan</a>. Ini tidak sebagian besar dari "penngkatan berat" untuk Anda, dan kode naungan Anda hanya perlu untuk menentukan sifat permukaan.</p> 
+       <p>Namun dalam beberapa kasus Anda ingin memotong jalur naungan permukaan standar; baik karena Anda ingin hanya mendukung beberapa subset terbatas dari seluruh pipa pencahayaan untuk alasan kinerja, atau Anda ingin melakukan hal-hal kustom yang tidak cukup “standar pencahayaan”. Contoh berikut akan menunjukkan bagaimana untuk mendapatkan data pencahayaan dari simpul dan naungan fragmen manual. Melihat kode yang dihasilkan oleh naungan permukaan (melalui <a href="class-Shader.html">inspektur warna</a>) juga merupakan sumber pembelajaran yang baik.</p> 
+       <h4>Pencahayaan diffuse sederhana</h4> 
+       <p>Hal pertama yang perlu kita lakukan adalah untuk menunjukkan bahwa naungan kita sebenarnya membutuhkan informasi pencahayaan yang dilewati. Unity's <a class="tooltipMoreInfoLink" href="SL-RenderPipeline.html">rendering pipa</a> mendukung berbagai cara rendering; di sini kita akan menggunakan default <span class="tooltip"><a href="RenderTech-ForwardRendering.html">forward rendering</a><span class="tooltiptext">Sebuah jalur rendering yang membuat setiap objek dalam satu atau lebih melewati, tergantung pada lampu yang mempengaruhi objek. Lampu sendiri juga diperlakukan berbeda dengan Rendering Maju, tergantung pada pengaturan dan intensitas mereka. <a href="RenderTech-ForwardRendering.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ForwardRendering">Glossary</a></span></span></span> satu.</p> 
+       <p>Kita akan mulai hanya mendukung satu arah cahaya. Meneruskan rendering dalam karya Unity dengan membuat lampu directional utama, ambient, <span class="tooltip"><strong>lightmaps</strong><span class="tooltiptext">Tekstur pra-render yang mengandung efek sumber cahaya pada objek statis di tempat kejadian. Lightmaps dilalui atas geometri adegan untuk menciptakan efek pencahayaan. <a class="tooltipMoreInfoLink" href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Lightmap">Glossary</a></span></span></span> dan refleksi dalam satu lulus yang disebut <strong>ForwardBase</strong>. Dalam naungan, ini ditunjukkan dengan menambahkan <a href="SL-PassTags.html">pass tag</a>: <strong>Tags {“LightMode”=“ForwardBase”}</strong>. Ini akan membuat data lampu arah dilewatkan ke naungan melalui beberapa <a href="SL-UnityShaderVariables.html">variabel built-in</a>.</p> 
+       <p>Ini adalah naungan yang menyulitkan pencahayaan diffuse sederhana per simpul, dan menggunakan tekstur utama tunggal:</p> 
+       <pre><code>Shader "Lit/Simple Diffuse"
+{
+    Properties
+    {
+        [NoScaleOffset] _MainTex ("Texture", 2D) = "white" {}
+    }
+    SubShader
+    {
+        Pass
+        {
+            // indicate that our pass is the "base" pass in forward
+            // rendering pipeline. It gets ambient and main directional
+            // light data set up; light direction in _WorldSpaceLightPos0
+            // and color in _LightColor0
+            Tags {"LightMode"="ForwardBase"}
+        
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #include "UnityCG.cginc" // for UnityObjectToWorldNormal
+            #include "UnityLightingCommon.cginc" // for _LightColor0
+
+            struct v2f
+            {
+                float2 uv : TEXCOORD0;
+                fixed4 diff : COLOR0; // diffuse lighting color
+                float4 vertex : SV_POSITION;
+            };
+
+            v2f vert (appdata_base v)
+            {
+                v2f o;
+                o.vertex = UnityObjectToClipPos(v.vertex);
+                o.uv = v.texcoord;
+                // get vertex normal in world space
+                half3 worldNormal = UnityObjectToWorldNormal(v.normal);
+                // dot product between normal and light direction for
+                // standard diffuse (Lambert) lighting
+                half nl = max(0, dot(worldNormal, _WorldSpaceLightPos0.xyz));
+                // factor in the light color
+                o.diff = nl * _LightColor0;
+                return o;
+            }
+            
+            sampler2D _MainTex;
+
+            fixed4 frag (v2f i) : SV_Target
+            {
+                // sample texture
+                fixed4 col = tex2D(_MainTex, i.uv);
+                // multiply by lighting
+                col *= i.diff;
+                return col;
+            }
+            ENDCG
+        }
+    }
+}
+</code></pre> 
+       <p>Ini membuat objek bereaksi terhadap arah cahaya - bagian-bagian yang menghadap cahaya diterangi, dan bagian-bagian yang menghadap tidak diterangi sama sekali.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/SL/ExampleDiffuseLighting.png" alt=""> 
+       </figure> 
+       <h4>Diffuse pencahayaan dengan ambient</h4> 
+       <p>Contoh di atas tidak mengambil pencahayaan ambient atau probe cahaya ke akun. Mari kita perbaiki ini! Ini ternyata kita bisa melakukan ini dengan menambahkan hanya satu baris kode. Kedua data ambient dan <span class="tooltip"><a class="tooltipMoreInfoLink" href="LightProbes.html">probe cahaya</a><span class="tooltiptext">probe cahaya menyimpan informasi tentang bagaimana cahaya melewati ruang di tempat kejadian Anda. Koleksi probe cahaya yang diatur dalam ruang tertentu dapat meningkatkan pencahayaan pada objek bergerak dan pemandangan LOD statis dalam ruang itu. <a href="LightProbes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#LightProbe">Glossary</a></span></span></span> dilewatkan untuk naungan dalam bentuk Harmonik bulat, dan fungsi <strong>ShadeSH9</strong> dari <strong>UnityCG.cginc</strong>% ruang<a href="SL-BuiltinIncludes.html">include file</a> melakukan semua pekerjaan mengevaluasinya, mengingat ruang dunia normal.</p> 
+       <pre><code>Shader "Lit/Diffuse With Ambient"
+{
+    Properties
+    {
+        [NoScaleOffset] _MainTex ("Texture", 2D) = "white" {}
+    }
+    SubShader
+    {
+        Pass
+        {
+            Tags {"LightMode"="ForwardBase"}
+        
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #include "UnityCG.cginc"
+            #include "UnityLightingCommon.cginc"
+
+            struct v2f
+            {
+                float2 uv : TEXCOORD0;
+                fixed4 diff : COLOR0;
+                float4 vertex : SV_POSITION;
+            };
+
+            v2f vert (appdata_base v)
+            {
+                v2f o;
+                o.vertex = UnityObjectToClipPos(v.vertex);
+                o.uv = v.texcoord;
+                half3 worldNormal = UnityObjectToWorldNormal(v.normal);
+                half nl = max(0, dot(worldNormal, _WorldSpaceLightPos0.xyz));
+                o.diff = nl * _LightColor0;
+
+                // the only difference from previous shader:
+                // in addition to the diffuse lighting from the main light,
+                // add illumination from ambient or light probes
+                // ShadeSH9 function from UnityCG.cginc evaluates it,
+                // using world space normal
+                o.diff.rgb += ShadeSH9(half4(worldNormal,1));
+                return o;
+            }
+            
+            sampler2D _MainTex;
+
+            fixed4 frag (v2f i) : SV_Target
+            {
+                fixed4 col = tex2D(_MainTex, i.uv);
+                col *= i.diff;
+                return col;
+            }
+            ENDCG
+        }
+    }
+}
+</code></pre> 
+       <p>Naungan ini sebenarnya mulai terlihat sangat mirip dengan naungan <a href="shader-NormalDiffuse.html">Legacy Diffuse</a> built-in!</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/SL/ExampleDiffuseAmbientLighting.png" alt=""> 
+       </figure> 
+       <h4>Menerapkan pengecoran bayangan</h4> 
+       <p>Perayaan kami saat ini tidak dapat menerima atau melemparkan bayangan. Mari mengimplementasikan pengecoran bayangan terlebih dahulu.</p> 
+       <p>Untuk melemparkan bayangan, naungan harus memiliki <strong>ShadowCaster</strong> <a class="tooltipMoreInfoLink" href="SL-PassTags.html">Jenis lulus</a> dalam setiap <a href="SL-SubShader.html">subshaders</a> atau setiap <a href="SL-Fallback.html">fallback</a>. The ShadowCaster pass digunakan untuk membuat objek ke bayangan peta, dan biasanya cukup sederhana - naungan simpul hanya perlu mengevaluasi posisi simpul, dan naungan fragmen cukup banyak tidak melakukan apa pun. bayangan hanyalah <span class="tooltip"><strong>depth buffer</strong><span class="tooltiptext">Sebuah toko memori yang memegang kedalaman nilai z setiap pixel dalam gambar, di mana nilai z adalah kedalaman untuk setiap piksel yang diberikan dari pesawat proyeksi. <a href="class-RenderTexture.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#depthbuffer">Glossary</a></span></span></span>, jadi bahkan output warna oleh warna fragmen tidak benar-benar penting.</p> 
+       <p>Ini berarti bahwa untuk banyak naungan, umpan kas bayangan akan hampir persis yang sama (keberatan tak terbatas memiliki deformasi berbasis simpul kustom, atau memiliki cutout alfa / bagian semitransparent). Cara termudah untuk menariknya melalui perintah naungan <a href="SL-UsePass.html">UsePass</a>:</p> 
+       <pre><code>Pass
+{
+    // regular lighting pass
+}
+// pull in shadow caster from VertexLit built-in shader
+UsePass "Legacy Shaders/VertexLit/SHADOWCASTER"
+</code></pre> 
+       <p>Namun kita belajar di sini, jadi mari kita lakukan hal yang sama “dengan tangan” agar bisa berbicara. Untuk kode yang lebih pendek, kami telah mengganti pass pencahayaan (“ForwardBase”) dengan kode yang hanya tidak bertekstur ambient. Di bawah ini, ada "ShadowCaster" lulus yang membuat objek mendukung pengecoran bayangan.</p> 
+       <pre><code>Shader "Lit/Shadow Casting"
+{
+    SubShader
+    {
+        // very simple lighting pass, that only does non-textured ambient
+        Pass
+        {
+            Tags {"LightMode"="ForwardBase"}
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #include "UnityCG.cginc"
+            struct v2f
+            {
+                fixed4 diff : COLOR0;
+                float4 vertex : SV_POSITION;
+            };
+            v2f vert (appdata_base v)
+            {
+                v2f o;
+                o.vertex = UnityObjectToClipPos(v.vertex);
+                half3 worldNormal = UnityObjectToWorldNormal(v.normal);
+                // only evaluate ambient
+                o.diff.rgb = ShadeSH9(half4(worldNormal,1));
+                o.diff.a = 1;
+                return o;
+            }
+            fixed4 frag (v2f i) : SV_Target
+            {
+                return i.diff;
+            }
+            ENDCG
+        }
+
+        // shadow caster rendering pass, implemented manually
+        // using macros from UnityCG.cginc
+        Pass
+        {
+            Tags {"LightMode"="ShadowCaster"}
+
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #pragma multi_compile_shadowcaster
+            #include "UnityCG.cginc"
+
+            struct v2f { 
+                V2F_SHADOW_CASTER;
+            };
+
+            v2f vert(appdata_base v)
+            {
+                v2f o;
+                TRANSFER_SHADOW_CASTER_NORMALOFFSET(o)
+                return o;
+            }
+
+            float4 frag(v2f i) : SV_Target
+            {
+                SHADOW_CASTER_FRAGMENT(i)
+            }
+            ENDCG
+        }
+    }
+}
+</code></pre> 
+       <p>Sekarang ada selandang pesawat, menggunakan naungan Diffuse built-in biasa, sehingga kita dapat melihat bayangan kami bekerja (anggota, naungan kami saat ini tidak mendukung bayangan <em>receiving</em> namun!).</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/SL/ExampleShadowCasting.png" alt=""> 
+       </figure> 
+       <p>Kami telah menggunakan arahan <strong>#pragma multi_compile_shadowcaster</strong>. Hal ini menyebabkan naungan dikompilasi menjadi beberapa varian dengan makro preprocessor yang berbeda didefinisikan untuk setiap (lihat halaman <a href="SL-MultipleProgramVariants.html">beberapa varian warna</a> untuk rincian). Ketika rendering ke bayangan, kasus lampu titik vs jenis cahaya lainnya membutuhkan sedikit kode naungan yang berbeda, itulah sebabnya arahan ini diperlukan.</p> 
+       <h4>Menerima bayangan</h4> 
+       <p>Menerapkan dukungan untuk menerima bayangan akan membutuhkan membandingkan pencahayaan dasar yang melewati beberapa varian, untuk menangani kasus “arah cahaya tanpa bayangan” dan “arah cahaya dengan bayangan” dengan benar. <strong>#pragma multi_compile_fwdbase</strong> directive (lihat <a href="SL-MultipleProgramVariants.html">beberapa varian warna</a> untuk rincian). Bahkan itu lebih banyak: itu juga menyusun varian untuk jenis lightmap yang berbeda, <span class="tooltip"><strong>Enlighten</strong><span class="tooltiptext">Sistem pencahayaan oleh Geomerics yang digunakan dalam Unity untuk lightmapping dan untuk Mencerahkan Penerangan Global Realtime. <a class="tooltipMoreInfoLink" href="https://www.siliconstudio.co.jp/en/products-service/enlighten/">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Enlighten">Glossary</a></span></span></span> Realtime <span class="tooltip"><strong>Global Illumination</strong><span class="tooltiptext">Kelompok teknik yang model pencahayaan langsung dan tidak langsung untuk memberikan hasil pencahayaan yang realistis.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#globalillumination">Glossary</a></span></span></span> pada atau off dll. Saat ini kita tidak perlu semua itu, jadi kita akan secara eksplisit melewatkan varian ini.</p> 
+       <p>Kemudian untuk mendapatkan perhitungan bayangan yang sebenarnya, kami akan <strong>#include “AutoLight.cginc”</strong> shader <a href="SL-BuiltinIncludes.html">include file</a> dan menggunakan SHADOW_ COORDS, TRANSFER_SHADOW, SHADOW_ATTENUASI makro dari itu.</p> 
+       <p>Ini adalah naungan:</p> 
+       <pre><code>Shader "Lit/Diffuse With Shadows"
+{
+    Properties
+    {
+        [NoScaleOffset] _MainTex ("Texture", 2D) = "white" {}
+    }
+    SubShader
+    {
+        Pass
+        {
+            Tags {"LightMode"="ForwardBase"}
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #include "UnityCG.cginc"
+            #include "Lighting.cginc"
+
+            // compile shader into multiple variants, with and without shadows
+            // (we don't care about any lightmaps yet, so skip these variants)
+            #pragma multi_compile_fwdbase nolightmap nodirlightmap nodynlightmap novertexlight
+            // shadow helper functions and macros
+            #include "AutoLight.cginc"
+
+            struct v2f
+            {
+                float2 uv : TEXCOORD0;
+                SHADOW_COORDS(1) // put shadows data into TEXCOORD1
+                fixed3 diff : COLOR0;
+                fixed3 ambient : COLOR1;
+                float4 pos : SV_POSITION;
+            };
+            v2f vert (appdata_base v)
+            {
+                v2f o;
+                o.pos = UnityObjectToClipPos(v.vertex);
+                o.uv = v.texcoord;
+                half3 worldNormal = UnityObjectToWorldNormal(v.normal);
+                half nl = max(0, dot(worldNormal, _WorldSpaceLightPos0.xyz));
+                o.diff = nl * _LightColor0.rgb;
+                o.ambient = ShadeSH9(half4(worldNormal,1));
+                // compute shadows data
+                TRANSFER_SHADOW(o)
+                return o;
+            }
+
+            sampler2D _MainTex;
+
+            fixed4 frag (v2f i) : SV_Target
+            {
+                fixed4 col = tex2D(_MainTex, i.uv);
+                // compute shadow attenuation (1.0 = fully lit, 0.0 = fully shadowed)
+                fixed shadow = SHADOW_ATTENUATION(i);
+                // darken light's illumination with shadow, keep ambient intact
+                fixed3 lighting = i.diff * shadow + i.ambient;
+                col.rgb *= lighting;
+                return col;
+            }
+            ENDCG
+        }
+
+        // shadow casting support
+        UsePass "Legacy Shaders/VertexLit/SHADOWCASTER"
+    }
+}
+</code></pre> 
+       <p>Lihat, kami memiliki bayangan sekarang!</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/SL/ExampleShadowReceiving.png" alt=""> 
+       </figure> 
+       <h2>Contoh warna lain</h2> 
+       <h3>Fog</h3> 
+       <pre><code>Shader "Custom/TextureCoordinates/Fog" {
+    SubShader {
+        Pass {
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            
+            //Needed for fog variation to be compiled.
+            #pragma multi_compile_fog
+
+            #include "UnityCG.cginc"
+
+            struct vertexInput {
+                float4 vertex : POSITION;
+                float4 texcoord0 : TEXCOORD0;
+            };
+
+            struct fragmentInput{
+                float4 position : SV_POSITION;
+                float4 texcoord0 : TEXCOORD0;
+                
+                //Used to pass fog amount around number should be a free texcoord.
+                UNITY_FOG_COORDS(1)
+            };
+
+            fragmentInput vert(vertexInput i){
+                fragmentInput o;
+                o.position = UnityObjectToClipPos(i.vertex);
+                o.texcoord0 = i.texcoord0;
+                
+                //Compute fog amount from clip space position.
+                UNITY_TRANSFER_FOG(o,o.position);
+                return o;
+            }
+
+            fixed4 frag(fragmentInput i) : SV_Target {
+                fixed4 color = fixed4(i.texcoord0.xy,0,0);
+                
+                //Apply fog (additive pass are automatically handled)
+                UNITY_APPLY_FOG(i.fogCoord, color); 
+                
+                //to handle custom fog color another option would have been 
+                //#ifdef UNITY_PASS_FORWARDADD
+                //  UNITY_APPLY_FOG_COLOR(i.fogCoord, color, float4(0,0,0,0));
+                //#else
+                //  fixed4 myCustomColor = fixed4(0,0,1,0);
+                //  UNITY_APPLY_FOG_COLOR(i.fogCoord, color, myCustomColor);
+                //#endif
+                
+                return color;
+            }
+            ENDCG
+        }
+    }
+}
+</code></pre> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="built-in-shader-examples.html"></a></span> 
+         <div class="tip">
+           Contoh naungan untuk Pipa Render Built-in 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="built-in-shader-examples-vertex-data.html"></a></span> 
+         <div class="tip">
+           Visualizing vertex data 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

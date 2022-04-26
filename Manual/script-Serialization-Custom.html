@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: serialisasi kustom</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="core" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="ScriptingSection.html">Scripting</a></li> 
+         <li><a href="unity-architecture.html">Arsitektur persatuan</a></li> 
+         <li><a href="script-Serialization.html">Script serialization</a></li> 
+         <li>serialisasi kustom</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="script-Serialization-BuiltInUse.html"></a></span> 
+          <div class="tip">
+            serialisasi internal 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="script-Serialization-Errors.html"></a></span> 
+          <div class="tip">
+            Kesalahan serialisasi Script 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>serialisasi kustom</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Serialisasi adalah proses otomatis dari mengubah struktur data atau objek menyatakan ke dalam format yang dapat disimpan Unity dan rekonstruksi nanti. (Lihat dokumentasi tentang <a href="script-Serialization.html">Serialisasi Script</a> untuk informasi lebih lanjut tentang serialisasi Unity.)</p> 
+       <p>Kadang-kadang Anda mungkin ingin serialisasi sesuatu yang serializer Unity tidak mendukung. Dalam banyak kasus pendekatan terbaik adalah menggunakan callback serialisasi. (Lihat Referensi API Scripting Unity: <a href="../ScriptReference/ISerializationCallbackReceiver.html">ISerializationCallbackReceiver</a> untuk informasi lebih lanjut tentang serialisasi kustom menggunakan callback serlialisasi.)</p> 
+       <p>Serialisasi callback memungkinkan Anda untuk diberitahukan sebelum serializer membaca data dari bidang Anda dan setelah selesai menulis kepada mereka. Anda dapat menggunakan callback serialisasi untuk memberikan data hard-to-serialize yang berbeda pada runtime ke representasinya ketika Anda benar-benar serialisasi.</p> 
+       <p>Untuk melakukan ini, mengubah data Anda ke dalam sesuatu Unity memahami tepat sebelum Unity ingin serialisasi itu. Kemudian, tepat setelah Unity telah menulis data ke bidang Anda, Anda dapat mengubah formulir serialisasi kembali ke formulir yang ingin Anda miliki data Anda di runtime</p> 
+       <p>Contoh: Anda ingin memiliki struktur data pohon. Jika Anda membiarkan Unity langsung serialisasi struktur data, batasan "tidak mendukung untuk null" akan menyebabkan aliran data Anda menjadi sangat besar, menyebabkan degradasi kinerja dalam banyak sistem. Ini ditunjukkan dalam Contoh 1, di bawah ini.</p> 
+       <p> <strong>Example 1</strong>: Unity's direct serlialization, menyebabkan masalah kinerja</p> 
+       <pre><code class="lang-C#">
+using UnityEngine;
+using System.Collections.Generic;
+using System;
+
+public class VerySlowBehaviourDoNotDoThis : MonoBehaviour {
+    [Serializable]
+    public class Node {
+        public string interestingValue = "value";
+        //The field below is what makes the serialization data become huge because
+        //it introduces a 'class cycle'.
+        public List&lt;Node&gt; children = new List&lt;Node&gt;();
+    }
+    //this gets serialized
+    public Node root = new Node();
+    void OnGUI() {
+        Display (root);
+    }
+    void Display(Node node) {
+        GUILayout.Label ("Value: ");
+        node.interestingValue = GUILayout.TextField(node.interestingValue, GUILayout.Width(200));
+        GUILayout.BeginHorizontal ();
+        GUILayout.Space (20);
+        GUILayout.BeginVertical ();
+        foreach (var child in node.children) {
+            Display (child);
+        }
+        if (GUILayout.Button ("Add child")) {
+            node.children.Add (new Node ());
+        }
+        GUILayout.EndVertical ();
+        GUILayout.EndHorizontal ();
+    }
+}
+</code></pre> 
+       <p>Alih-alih, Anda memberitahu Unity tidak untuk men serialisasi pohon secara langsung, dan Anda membuat bidang yang terpisah untuk menyimpan pohon dalam format serial, cocok untuk serializer Unity. Ini ditunjukkan dalam Contoh 2, di bawah ini.</p> 
+       <p> <strong>Example 2</strong>: Hindari serlialisasi langsung Unity dan menghindari masalah kinerja</p> 
+       <pre><code class="lang-C#">
+using System.Collections.Generic;
+using System;
+
+public class BehaviourWithTree : MonoBehaviour, ISerializationCallbackReceiver {
+    // Node class that is used at runtime.
+    // This is internal to the BehaviourWithTree class and is not serialized.
+    public class Node {
+        public string interestingValue = "value";
+        public List&lt;Node&gt; children = new List&lt;Node&gt;();
+    }
+    // Node class that we will use for serialization.
+    [Serializable]
+    public struct SerializableNode {
+        public string interestingValue;
+        public int childCount;
+        public int indexOfFirstChild;
+    }
+    // The root node used for runtime tree representation. Not serialized.
+    Node root = new Node();
+    // This is the field we give Unity to serialize.
+    public List&lt;SerializableNode&gt; serializedNodes;
+    public void OnBeforeSerialize() {
+        // Unity is about to read the serializedNodes field's contents.
+        // The correct data must now be written into that field "just in time".
+        if (serializedNodes == null) serializedNodes = new List&lt;SerializableNode&gt;();
+        if (root == null) root = new Node ();
+        serializedNodes.Clear();
+        AddNodeToSerializedNodes(root);
+        // Now Unity is free to serialize this field, and we should get back the expected 
+        // data when it is deserialized later.
+    }
+    void AddNodeToSerializedNodes(Node n) {
+        var serializedNode = new SerializableNode () {
+            interestingValue = n.interestingValue,
+            childCount = n.children.Count,
+            indexOfFirstChild = serializedNodes.Count+1
+        }
+        ;
+        serializedNodes.Add (serializedNode);
+        foreach (var child in n.children) {
+            AddNodeToSerializedNodes (child);
+        }
+    }
+    public void OnAfterDeserialize() {
+        //Unity has just written new data into the serializedNodes field.
+        //let's populate our actual runtime data with those new values.
+        if (serializedNodes.Count &gt; 0) {
+            ReadNodeFromSerializedNodes (0, out root);
+        } else
+        root = new Node ();
+    }
+    int ReadNodeFromSerializedNodes(int index, out Node node) {
+        var serializedNode = serializedNodes [index];
+        // Transfer the deserialized data into the internal Node class
+        Node newNode = new Node() {
+            interestingValue = serializedNode.interestingValue,
+            children = new List&lt;Node&gt; ()
+        }
+        ;
+        // The tree needs to be read in depth-first, since that's how we wrote it out.
+        for (int i = 0; i != serializedNode.childCount; i++) {
+            Node childNode;
+            index = ReadNodeFromSerializedNodes (++index, out childNode);
+            newNode.children.Add (childNode);
+        }
+        node = newNode;
+        return index;
+    }
+    // This OnGUI draws out the node tree in the Game View, with buttons to add new nodes as children.
+    void OnGUI() {
+        if (root != null) {
+            Display (root);
+        }
+    }
+    void Display(Node node) {
+        GUILayout.Label ("Value: ");
+        // Allow modification of the node's "interesting value".
+        node.interestingValue = GUILayout.TextField(node.interestingValue, GUILayout.Width(200));
+        GUILayout.BeginHorizontal ();
+        GUILayout.Space (20);
+        GUILayout.BeginVertical ();
+        foreach (var child in node.children) {
+            Display (child);
+        }
+        if (GUILayout.Button ("Add child")) {
+            node.children.Add (new Node ());
+        }
+        GUILayout.EndVertical ();
+        GUILayout.EndHorizontal ();
+    }
+}
+
+</code></pre> 
+       <p> <br><br> </p> 
+       <hr> 
+       <p> <span class="page-edit">• 2017–05–15 Sitemap</span><br> </p> 
+       <!-- area:core --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="script-Serialization-BuiltInUse.html"></a></span> 
+         <div class="tip">
+           serialisasi internal 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="script-Serialization-Errors.html"></a></span> 
+         <div class="tip">
+           Kesalahan serialisasi Script 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

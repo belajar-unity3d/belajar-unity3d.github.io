@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: varian Shader</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="Shaders.html">Shaders</a></li> 
+         <li><a href="ShadersOverview.html">Konsep inti Shaders</a></li> 
+         <li><a href="shader-variants-and-keywords.html">Cabang, varian, dan kata kunci</a></li> 
+         <li>Varietas Shader</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="shader-branching.html"></a></span> 
+          <div class="tip">
+            Cabang di naungan 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="shader-keywords.html"></a></span> 
+          <div class="tip">
+            Kata kunci Shader 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Varietas Shader</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Varietas shader, juga kadang-kadang disebut permutasi <span class="tooltip"><strong>shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span>, adalah salah satu cara memperkenalkan <a href="shader-conditional-code">perilaku kondisional</a> ke kode naungan.</p> 
+       <p>Unity mengkompilasi file sumber naungan ke program naungan. Setiap program naungan yang disusun memiliki satu atau lebih <strong>variants</strong>: berbagai versi program naungan untuk kondisi yang berbeda. Pada runtime, Unity menggunakan varian yang sesuai dengan persyaratan saat ini. Anda mengkonfigurasi varian menggunakan <a href="shader-keywords.html">kata kunci warna</a>.</p> 
+       <p>Untuk gambaran umum dari kondisional dalam kode naungan dan ketika menggunakan teknik mana, lihat <a href="shader-conditionals.html">Kondisi dalam kode naungan</a>. Untuk informasi lebih lanjut tentang bagaimana varian naungan beban Unity, lihat <a href="shader-loading.html">Shader loading</a>.</p> 
+       <p>Shaders dengan sejumlah besar varian disebut “mega shaders” atau “uber shaders”. Standar Unity adalah contoh dari naungan tersebut.</p> 
+       <h2>Keuntungan dan kerugian dari varian naungan</h2> 
+       <p>Keuntungan utama dari varian naungan adalah bahwa mereka memungkinkan Anda untuk menggunakan kondisi jangka waktu dalam program naungan Anda, tanpa dampak kinerja GPU dari <a href="shader-branching.html#dynamic">dynamic branching</a>. Kerugian utama dari varian naungan adalah bahwa sejumlah besar dari mereka dapat menyebabkan kedua membangun waktu dan menjalankan masalah kinerja.</p> 
+       <p>Ketika Unity menciptakan varian naungan, itu menggunakan <a href="shader-branching.html#static-branching">static branching</a> untuk membuat beberapa program warna kecil, khusus. Pada runtime, Unity menggunakan program naungan yang sesuai dengan kondisi. Ini berarti bahwa Anda dapat menggunakan varian naungan untuk kode yang kemungkinan akan menghasilkan kinerja GPU yang berkurang di cabang dinamis, tanpa menderita penalti kinerja GPU.</p> 
+       <p>Namun, sejumlah besar varian dapat mengakibatkan peningkatan waktu build, ukuran file, penggunaan memori runtime, dan waktu pemuatan. Hal ini juga mengarah pada kompleksitas yang lebih besar ketika praloading manual ("prewarming"). Ketika sebuah proyek mengandung sejumlah varian warna yang sangat besar, masalah ini dapat menyebabkan masalah yang signifikan dengan kinerja dan alur kerja.</p> 
+       <p>Sitemap Sangat mudah untuk secara tidak sengaja menciptakan sejumlah besar varian naungan, yang dapat menyebabkan masalah kinerja yang signifikan. Oleh karena itu sangat penting untuk memahami <strong>Warning:</strong>, <a href="#number-shader-variants">bagaimana Unity menentukan jumlah varian naungan</a>, dan <a href="shader-variant-stripping.html">bagaimana untuk mengecualikan ("strip") varian yang tidak diinginkan dari kompilasi</a>.<a href="shader-conditionals.html">ketika menggunakan jenis kondisional lain di naungan</a>.</p> 
+       <p><a name="number-shader-variants"></a></p> 
+       <h2>Jumlah varian naungan</h2> 
+       <p>Pada waktu build, Unity mengkompilasi satu set varian naungan untuk setiap API grafis untuk target build saat ini. Jumlah varian untuk setiap kombinasi API grafis dan membangun target tergantung pada file sumber naungan Anda, dan penggunaan kata kunci naungan Anda.</p> 
+       <h3>Grafik API</h3> 
+       <p>Unity mengkompilasi satu set varian naungan untuk setiap API grafis dalam daftar untuk target build saat ini. Naungan berbeda untuk setiap kombinasi membangun target dan API grafis; misalnya, Unity mengkompilasi warna yang berbeda untuk Logam pada iOS daripada untuk Logam pada macOS.</p> 
+       <p>Beberapa program naungan atau kata kunci mungkin hanya menargetkan API grafis yang diberikan atau target build yang diberikan, sehingga jumlah total varian untuk setiap kombinasi API grafis dan target build dapat berbeda; namun, proses untuk membandingkan varian ini sama.</p> 
+       <p>Untuk melihat dan mengedit daftar API grafis untuk target build Anda saat ini, gunakan jendela <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-PlayerSettings.html">Pengaturan Pemain</a><span class="tooltiptext">Pengaturan yang memungkinkan Anda mengatur berbagai pilihan khusus pemain untuk permainan akhir yang dibangun oleh Unity. <a href="class-PlayerSettings.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#PlayerSettings">Glossary</a></span></span></span>, atau API <a href="../ScriptReference/PlayerSettings.html">PlayerSettings</a>.</p> 
+       <h3>Jumlah program naungan</h3> 
+       <p>Unity harus menentukan berapa banyak program naungan untuk mengkompilasi untuk kombinasi saat ini membangun target dan API grafis.</p> 
+       <p>Untuk setiap file sumber naungan yang disertakan dalam build Anda, Unity menentukan berapa banyak program naungan unik yang mendefinisikan:</p> 
+       <ul> 
+        <li>Sebuah aset naungan compute mendefinisikan program naungan tunggal.</li> 
+        <li>Dalam naungan berkode tangan, jumlah program naungan tergantung pada kode Anda. Total terdiri dari: 
+         <ul> 
+          <li>Semua tahap naungan di semua Passes di file sumber itu sendiri. Misalnya, setiap tahap simpul mendefinisikan satu program naungan; setiap tahap fragmen mendefinisikan satu program naungan; dan sebagainya.</li> 
+          <li>Semua tahap naungan di semua Passes dalam ketergantungan file sumber. Ini terdiri dari semua <a href="SL-Fallback.html">fallback shaders</a>, dan semua Pass yang disertakan menggunakan <a href="SL-UsePass.html">UsePass command</a>.</li> 
+         </ul> </li> 
+        <li>Dalam naungan Shader Graph, jumlah program naungan tergantung pada kode yang dihasilkan Unity dari grafik Anda. Untuk melihat kode naungan yang menghasilkan Unity, klik konteks aset Shader Graph dan pilih <strong>See generated code</strong>. Anda kemudian dapat menentukan jumlah total program naungan dengan cara yang sama bahwa Anda akan untuk naungan yang dikodekan tangan.</li> 
+       </ul> 
+       <p>Sitemap File sumber naungan disertakan dalam build jika direferensikan dalam <strong>Note:</strong> dalam membangun, direferensikan oleh sesuatu dalam folder <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span>, atau termasuk dalam bagian <strong>Resources</strong> dari jendela <strong>Always-included shaders</strong>.<a href="class-GraphicsSettings.html">Pengaturan Grafik</a> window.</p> 
+       <h3>Kata kunci yang mempengaruhi program naungan</h3> 
+       <p>Ketika Unity telah menentukan berapa banyak program naungan itu harus mengkompilasi untuk target build saat ini dan API grafis, kemudian menentukan berapa banyak varian naungan itu harus mengkompilasi untuk setiap program naungan.</p> 
+       <p>Untuk setiap program naungan, Unity menentukan kombinasi kata kunci naungan yang menghasilkan varian yang berbeda. Ini terdiri dari:</p> 
+       <ul> 
+        <li>Set kata kunci varian naungan yang dinyatakan dalam file sumber untuk naungan itu. Untuk informasi lebih lanjut, lihat <a href="shader-keywords.html#declaring-keywords">Mengatur kata kunci naungan</a>.</li> 
+        <li>Set kata kunci naungan yang menambah Unity secara otomatis. Untuk informasi lebih lanjut, lihat <a href="shader-keywords.html#predefined-shader-keywords">Kata kunci naungan yang telah ditentukan oleh Unity</a>.</li> 
+       </ul> 
+       <p>Jumlah varian naungan yang Unity kompilasi untuk program naungan adalah produk dari set kata kunci; yang dikatakan, Unity menyusun satu varian untuk setiap kombinasi yang mencakup satu elemen dari setiap set.</p> 
+       <p>Misalnya, set ini berisi tiga kata kunci varian naungan:</p> 
+       <ul> 
+        <li>WARNA_RED</li> 
+        <li>WARNA_GREEN</li> 
+        <li>WARNA_BLUE</li> 
+       </ul> 
+       <p>Set ini mengandung empat kata kunci varian naungan:</p> 
+       <ul> 
+        <li>QUALITY_LOW</li> 
+        <li>KUALITAS_MEDIUM</li> 
+        <li>QUALITY_HIGH</li> 
+        <li>KUALITAS_ULTRA</li> 
+       </ul> 
+       <p>Program naungan yang dipengaruhi oleh kata kunci varian naungan mereka akan menghasilkan dua belas varian berikut:</p> 
+       <ul> 
+        <li>WARNA_RED dan KUALITAS_LOW</li> 
+        <li>WARNA_RED dan KUALITAS_MEDIUM</li> 
+        <li>WARNA_RED dan KUALITAS_HIGH</li> 
+        <li>WARNA_RED dan KUALITAS_ULTRA</li> 
+        <li>COLOR_GREEN dan KUALITAS_LOW</li> 
+        <li>COLOR_GREEN dan KUALITAS_MEDIUM</li> 
+        <li>COLOR_GREEN dan KUALITAS_HIGH</li> 
+        <li>COLOR_GREEN dan KUALITAS_ULTRA</li> 
+        <li>WARNA_BLUE dan KUALITAS_LOW</li> 
+        <li>WARNA_BLUE dan KUALITAS_MEDIUM</li> 
+        <li>WARNA_BLUE dan KUALITAS_HIGH</li> 
+        <li>WARNA_BLUE dan KUALITAS_ULTRA</li> 
+       </ul> 
+       <p>Jumlah varian yang disatukan kompilasi dapat tumbuh dengan sangat cepat saat Anda menambahkan lebih banyak set kata kunci varian naungan. Istilah untuk pertumbuhan yang sangat cepat ini adalah ledakan combinatorial.</p> 
+       <p>Misalnya, pertimbangkan kasus penggunaan yang cukup khas, di mana naungan memiliki sejumlah set kata kunci varian naungan yang mengandung dua kata kunci masing-masing (<code>&lt;feature name&gt;_ON</code> dan <code>&lt;feature name&gt;_OFF</code>). Jika naungan memiliki dua set kata kunci seperti itu, hasil ini dalam empat varian. Jika naungan memiliki sepuluh set kata kunci tersebut, hasil ini dalam varian 1024.</p> 
+       <p><a name="deduplication"></a></p> 
+       <h3>Deduplikasi varian naungan</h3> 
+       <p>Setelah kompilasi, Unity secara otomatis mengidentifikasi varian identik dalam Pass yang sama, dan memastikan bahwa varian identik ini menunjuk ke bytecode yang sama. Ini disebut <strong>deduplication</strong>.</p> 
+       <p>Deduplikasi mencegah varian identik di Pass yang sama dari meningkatnya ukuran file; namun, varian identik masih menghasilkan pekerjaan yang terbuang selama kompilasi, dan meningkatkan penggunaan memori dan waktu pemuatan naungan pada runtime. Dengan pikiran ini, selalu terbaik untuk <a href="shader-variant-stripping.html">garis varian yang tidak diinginkan</a>.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="shader-branching.html"></a></span> 
+         <div class="tip">
+           Cabang di naungan 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="shader-keywords.html"></a></span> 
+         <div class="tip">
+           Kata kunci Shader 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

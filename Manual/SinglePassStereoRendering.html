@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Single Pass Stereo rendering (Double-Wide rendering)</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="platforms" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="XR.html">XR</a></li> 
+         <li>Single Pass Stereo rendering (Double-Wide rendering)</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="VRReference.html"></a></span> 
+          <div class="tip">
+            API Reference 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="SinglePassInstancing.html"></a></span> 
+          <div class="tip">
+            Login Login 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Single Pass Stereo rendering (Double-Wide rendering)</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p> <strong>Single Pass Stereo rendering</strong> adalah fitur untuk aplikasi VR berbasis PC dan Playstation. Ini render gambar mata kiri dan kanan pada saat yang sama menjadi satu <span class="tooltip"><strong>Render Texture</strong><span class="tooltiptext">Jenis Tekstur khusus yang diciptakan dan diperbarui pada runtime. Untuk menggunakannya, pertama membuat Tekstur Render baru dan menunjuk salah satu Kamera Anda untuk membuatnya. Kemudian Anda dapat menggunakan Tekstur Render dalam Bahan seperti Tekstur biasa. <a class="tooltipMoreInfoLink" href="class-RenderTexture.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#RenderTexture">Glossary</a></span></span></span> dikemas yang dua kali lebar tekstur mata tunggal. Unity renders <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Scene">Glossary</a></span></span></span> dua kali menggunakan 2 panggilan menggambar untuk setiap <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> yang memiliki komponen Renderer, namun, itu hanya iterates melalui grafik Adegan setelah rendering untuk mata kiri dan kanan. Selama rendering Stereo Pass Tunggal, kedua mata berbagi pekerjaan yang diperlukan dengan menghitung dan komputasi bayangan. Ada juga switch perubahan state perintah grafis yang lebih sedikit, karena GPU renders setiap GameObject dalam mode ping pong (penghasilan alternatif objek antara mata).</p> 
+       <p>Satu Pass Stereo rendering memungkinkan GPU untuk berbagi culling untuk kedua mata. GPU hanya perlu bergetar melalui semua GameObjects di Adegan sekali untuk tujuan budidaya, dan kemudian render GameObjects yang selamat dari proses penanaman.</p> 
+       <p>Gambar perbandingan di bawah ini menunjukkan perbedaan antara rendering VR normal dan rendering Stereo Pass Tunggal.</p> 
+       <p><strong>Normal VR rendering:</strong></p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SinglePassStereoRendering1.gif" alt="Left-eye image on the left, right-eye image on the right"> 
+        <figcaption>
+          Gambar kiri mata pada gambar kiri, mata kanan di sebelah kanan 
+        </figcaption> 
+       </figure> 
+       <p><strong>Single-Pass Stereo VR rendering:</strong></p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SinglePassStereoRendering2.gif" alt="Left-eye and right-eye images packed together"> 
+        <figcaption>
+          Gambar kiri dan mata kanan dikemas bersama 
+        </figcaption> 
+       </figure> 
+       <p>Untuk mengaktifkan fitur ini, buka pengaturan <a class="tooltipMoreInfoLink" href="class-PlayerSettings.html">Player</a> (menu: <strong>Edit</strong> &gt; <span class="tooltip"><strong>Project Settings</strong><span class="tooltiptext">Pengumpulan yang luas dari pengaturan yang memungkinkan Anda untuk mengkonfigurasi bagaimana Fisika, Audio, Jaringan, Grafik, Input dan banyak bidang lain dari jangkauan proyek Anda. <a href="comp-ManagerGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span>, kemudian pilih kategori <strong>Player</strong>). Kemudian arahkan ke panel <strong>XR Settings</strong>, pastikan kotak cemen yang dicentang, dan pilih opsi <strong>Virtual Reality Supported</strong> dari dropdown <strong>Single Pass</strong>.<strong>Stereo Rendering Method</strong> dropdown.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/SinglePassStereoRendering3.png" alt="Selecting Single Pass rendering from the Players XR Settings panel"> 
+        <figcaption>
+          Memilih Single Pass rendering dari panel Pengaturan XR Pemain 
+        </figcaption> 
+       </figure> 
+       <p>Fitur rendering bawaan unity dan Aset Standar semua mendukung fitur ini. Namun, dibuat khusus <span class="tooltip"><strong>Shaders</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Shader">Glossary</a></span></span></span> dan Shaders yang diunduh dari <span class="tooltip"><strong>Asset Store</strong><span class="tooltiptext">Sebuah perpustakaan yang berkembang dari aset gratis dan komersial yang diciptakan oleh Unity dan anggota komunitas. Menawarkan berbagai aset, dari tekstur, model dan animasi ke seluruh contoh proyek, tutorial dan ekstensi Editor. <a href="AssetStore.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AssetStore">Glossary</a></span></span></span> mungkin perlu dimodifikasi (misalnya, Anda mungkin perlu skala dan mengimbangi ruang layar berkoordinasi untuk mengakses setengah yang sesuai dari Tekstur Render dikemas) untuk menambahkan dukungan rendering Stereo Pass Tunggal.</p> 
+       <h2>Menambahkan dukungan rendering Stereo Pass Tunggal ke Shaders</h2> 
+       <p>Metode bantuan yang ada di <code>UnityCG.cginc</code> mendukung rendering Stereo Pass Tunggal. Apakah aplikasi Anda adalah XR atau tidak, Anda masih perlu melakukan transformasi pada vertices. Misalnya, ketika membuat jenis aplikasi, simpul memasuki tahap <span class="tooltip"><strong>vertex shader</strong><span class="tooltiptext">Program yang berjalan pada setiap simpul model 3D ketika model sedang diberikan. <a class="tooltipMoreInfoLink" href="SL-ShaderPrograms.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#vertexshader">Glossary</a></span></span></span> di ruang model dan keluar di ruang klip. Naungan vertex harus mengkoordinasikan ruang klip output. Set vertik yang dipengaruhi oleh naungan biasanya dimulai di ruang model sebelum naungan simpul mengubahnya menjadi ruang klip. Namun, untuk vertices ini untuk tiba di ruang klip, naungan simpul pertama mengubahnya menjadi ruang dunia dan kemudian ke ruang <span class="tooltip"><strong>viewport</strong><span class="tooltiptext">Area tampilan pengguna aplikasi di layar mereka.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Viewport">Glossary</a></span></span></span>.</p> 
+       <p>Dalam kasus XR, ada beberapa karik pandangan: satu untuk mata kiri dan kanan. Anda dapat menggunakan metode built-in <code>UnityWorldToClipPos</code> untuk memastikan bahwa Unity perlu dipertimbangkan apakah perhitungan memerlukan penanganan beberapa karik tampilan. Jika Anda menggunakan metode<code>UnityWorldToClipPos</code>, naungan secara otomatis melakukan perhitungan transformasi dengan benar, terlepas dari platform aplikasi Anda berjalan.</p> 
+       <p> <code>UnityCG.cginc</code> juga mengandung metode bantuan berikut untuk membantu Anda dengan otorsi stereoscopic Login</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Property</strong></th> 
+          <th style="text-align:left;"><strong>Parameters</strong></th> 
+          <th style="text-align:left;"><strong>Description</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><strong>UnityStereoScreenSpaceUVAdjust(uv, sb)</strong></td> 
+          <td style="text-align:left;"> <code>uv</code>: koordinasi tekstur UV. Baik float2 untuk UV standar atau float4 untuk sepasang dikemas dua UV.<br><code>sb</code>: A float4 mengandung skala 2D dan bias 2D yang digunakan untuk UV, dengan skala xy dan bias dalam zw.</td> 
+          <td style="text-align:left;">Jika <code>UNITY_SINGLE_PASS_STEREO</code> didefinisikan, ini mengembalikan hasil menerapkan skala dan bias dalam sb ke koordinat tekstur dalam uv. Jika tidak, ini mengembalikan koordinat tekstur yang tidak dimodifikasi. Gunakan ini untuk menerapkan skala per mata dan bias hanya ketika dalam mode rendering Stereo Pass Tunggal.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UnityStereoTransformScreenSpaceTex(uv)</strong></td> 
+          <td style="text-align:left;"> <code>uv</code>: koordinasi tekstur UV. Baik float2 untuk UV standar atau float4 untuk sepasang dikemas dua UV.</td> 
+          <td style="text-align:left;">Jika <code>UNITY_SINGLE_PASS_STEREO</code> didefinisikan, ini mengembalikan hasil menerapkan skala mata saat ini dan bias ke koordinat tekstur dalam uv. Jika tidak, ini mengembalikan koordinat tekstur yang tidak terdaftar.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>UnityStereoClamp(uv, sb)</strong></td> 
+          <td style="text-align:left;"> <code>uv</code>: koordinasi tekstur UV. Baik float2 untuk UV standar atau float4 untuk sepasang dikemas dua UV. <br><code>sb</code>: A float4 mengandung skala 2D dan bias 2D yang digunakan untuk UV, dengan skala xy dan bias dalam zw.</td> 
+          <td style="text-align:left;">Jika <code>UNITY_SINGLE_PASS_STEREO</code> didefinisikan, ini mengembalikan hasil menerapkan klem ke nilai x, menggunakan lebar, dan bias, disediakan oleh sb, ke koordinat tekstur dalam uv. Jika tidak mengembalikan koordinasi tekstur yang tidak dimodifikasi. Gunakan ini untuk menerapkan penjepit per mata dalam mode rendering Stereo Pass Tunggal untuk menghindari pendarahan warna antara mata.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Shaders mengekspos variabel in-built konstan 'unity_StereoEyeIndex', sehingga Unity dapat melakukan perhitungan tergantung mata. Nilai <code>unity_StereoEyeIndex</code> adalah 0 untuk rendering mata kiri, dan 1 untuk rendering mata kanan.</p> 
+       <p>Berikut adalah contoh dari <code>UnityCG.cginc</code>, menunjukkan bagaimana Anda dapat menggunakan<code>unity_StereoEyeIndex</code> untuk memodifikasi koordinat ruang layar:</p> 
+       <pre><code>float2 TransformStereoScreenSpaceTex(float2 uv, float w)
+{
+    float4 scaleOffset = unity_StereoScaleOffset[unity_StereoEyeIndex];
+    return uv.xy * scaleOffset.xy + scaleOffset.zw * w;
+}
+</code></pre> 
+       <p>Dalam kebanyakan kasus, Anda tidak perlu memodifikasi Shaders Anda. Namun, ada situasi di mana Anda mungkin perlu mencicipi <a href="http://www.immersionvr.co.uk/mono-vs-stereo/">Login Sitemap</a> sebagai sumber untuk rendering Stereo Pass Tunggal (misalnya, jika Anda membuat biji-bijian film layar penuh atau efek kebisingan di mana gambar sumber harus sama untuk kedua mata, daripada dikemas menjadi <a href="http://www.immersionvr.co.uk/mono-vs-stereo/">Gambar stereoscopic</a>). Dalam situasi seperti itu, gunakan <code>ComputeNonStereoScreenPos()</code> bukan <code>ComputeScreenPos()</code> untuk menghitung lokasi dari Tekstur sumber penuh.</p> 
+       <h2>Efek pasca proses</h2> 
+       <p> <a class="tooltipMoreInfoLink" href="PostProcessingOverview.html">Efek pasca proses</a> memerlukan beberapa pekerjaan tambahan untuk mendukung rendering Stereo Pass Tunggal. Setiap efek <span class="tooltip"><strong>post-processing</strong><span class="tooltiptext">Proses yang meningkatkan visual produk dengan menerapkan filter dan efek sebelum gambar muncul di layar. Anda dapat menggunakan efek pasca proses untuk mensimulasikan kamera fisik dan sifat film, misalnya Bloom dan Kedalaman Lapangan. <a href="PostProcessingOverview.html">More info</a> <span class="search-words">pemrosesan pos, pasca proses, pasca proses</span><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#post-processing">Glossary</a></span></span></span> berjalan sekali pada Tekstur Render dikemas (yang mengandung gambar mata kiri dan kanan), tetapi menerapkan semua perintah menggambar yang berjalan selama proses pasca dua kali: setelah setengah mata kiri dari tujuan Render Tekstur, dan sekali ke paruh mata kanan.</p> 
+       <p>Efek pasca proses tidak secara otomatis mendeteksi rendering Stereo Pass Tunggal, sehingga Anda perlu menyesuaikan pembacaan Tekstur Render Stereo dikemas sehingga mereka hanya membaca dari sisi yang benar untuk mata yang diberikan. Ada dua cara untuk melakukan ini tergantung pada bagaimana efek pasca-olahan Anda diberikan:</p> 
+       <ul> 
+        <li>Menggunakan <a href="../ScriptReference/Graphics.Blit.html">Grafik.Blit()</a> </li> 
+        <li>Gambar berbasis Mesh</li> 
+       </ul> 
+       <p>Tanpa penyesuaian yang disebutkan di atas, setiap perintah menggambar membaca seluruh sumber Render Tekstur (mengamati pandangan mata kiri dan kanan), dan output seluruh pasangan gambar ke sisi mata kiri dan kanan dari output Render Tekstur, menghasilkan duplikasi yang salah dari gambar sumber di setiap mata.</p> 
+       <p>Ini terjadi ketika menggunakan <code>Graphics.Blit</code> atau poligon layar penuh dengan peta Tekstur untuk menarik setiap efek pasca-proses. Kedua metode merujuk seluruh output dari efek pasca-olahan sebelumnya di rantai. Ketika mengacu pada area dalam Tekstur stereo Render yang dikemas, mereka referensi seluruh dikemas Tekstur Render bukan hanya setengah yang relevan.</p> 
+       <h3>Grafik.Blit()</h3> 
+       <p>Efek pasca proses rendered dengan <code>Blit()</code> tidak secara otomatis merujuk bagian yang benar dari tekstur stereo Render dikemas. Secara default, mereka merujuk pada seluruh tekstur. Ini benar-benar meregangkan efek pasca-olahan di kedua mata.</p> 
+       <p>Untuk Single Pass Stereo rendering menggunakan <code>Blit()</code>, sampel tekstur di Shaders memiliki variabel auto-calculated tambahan yang mengacu pada paruh yang benar dari Tekstur stereo Render dikemas, tergantung pada mata yang ditarik. Variabel berisi nilai skala dan offset yang memungkinkan Anda untuk mengubah koordinasi target Anda ke lokasi yang benar.</p> 
+       <p>Untuk mengakses variabel ini, deklarasikan <code>half4</code> di Shader Anda dengan nama yang sama seperti sampler Anda, dan tambahkan <code>suffix _ST</code> (lihat di bawah ini untuk contoh kode ini). Untuk menyesuaikan koordinat UV, masukkan variabel <code>_ST</code> Anda ke <code>scaleAndOffset</code> dan gunakan <code>UnityStereoScreenSpaceUVAdjust(uv, scaleAndOffset)</code>. Metode ini mengkompilasi untuk tidak ada di gedung Stereo non-Single Pass, yang berarti bahwa naungan dimodifikasi untuk mendukung mode ini masih kompatibel dengan build Stereo non-Single Pass.</p> 
+       <p>Contoh berikut menunjukkan apa yang perlu Anda ubah dalam kode naungan fragmen Anda untuk mendukung rendering Stereo Pass Tunggal.</p> 
+       <p>Tanpa rendering stereo:</p> 
+       <pre><code>uniform sampler2D _MainTex;
+
+fixed4 frag (v2f_img i) : SV_Target
+{   
+    fixed4 myTex = tex2D(_MainTex, i.uv);
+    ...
+}
+</code></pre> 
+       <p>Dengan rendering stereo:</p> 
+       <pre><code>uniform sampler2D _MainTex;
+half4 _MainTex_ST;
+
+fixed4 frag (v2f_img i) : SV_Target
+{   
+    fixed4 myTex = tex2D(_MainTex, UnityStereoScreenSpaceUVAdjust(i.uv, _MainTex_ST));
+    ...
+}
+</code></pre> 
+       <h3>Gambar berbasis Mesh</h3> 
+       <p>Mengirimkan efek pasca-olahan menggunakan jala (misalnya, dengan menggambar quadrilateral dalam mode segera menggunakan <a href="../ScriptReference/GL.html">API documentation</a>) juga perlu menyesuaikan koordinat UV pada Tekstur target ketika membuat setiap mata. Untuk menyesuaikan koordinat Anda dalam keadaan ini, gunakan <code>UnityStereoTransformScreenSpaceTex(uv)</code>. Metode ini dengan benar menyesuaikan untuk dikemas Tekstur stereo Render dalam mode rendering Stereo Tunggal, dan secara otomatis mengkompilasi untuk Tekstur Render yang tidak dikemas jika Anda telah menonaktifkan mode rendering Stereo Tunggal Pass. Namun, jika Anda berniat menggunakan Shader baik untuk Tekstur Render dikemas dan dikemas dalam mode yang sama, Anda perlu memiliki dua Shader terpisah.</p> 
+       <h2>Efek ruang layar</h2> 
+       <p>Efek ruang layar adalah efek visual yang ditarik atas gambar yang telah ditentukan sebelumnya. Contoh efek ruang layar termasuk <span class="tooltip"><a class="tooltipMoreInfoLink" href="PostProcessing-AmbientOcclusion.html">ambient occlusion</a><span class="tooltiptext">Metode perkiraan berapa banyak cahaya ambient (cahaya tidak datang dari arah tertentu) dapat memukul titik di permukaan.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Ambientocclusion">Glossary</a></span></span></span>, <span class="tooltip"><a href="PostProcessing-DepthOfField.html">kedalaman lapangan</a><span class="tooltiptext">Efek pasca proses yang mensimulasikan sifat fokus dari lensa kamera. <a href="PostProcessingOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#DepthofField">Glossary</a></span></span></span>, dan <span class="tooltip"><a href="PostProcessing-Bloom.html">bloom</a><span class="tooltiptext">Efek pasca proses yang digunakan untuk mereproduksi artefak pencitraan kamera dunia nyata. Efek ini menghasilkan fringes dari cahaya yang meluas dari perbatasan daerah terang dalam gambar, berkontribusi pada ilusi cahaya yang sangat terang membanjiri kamera atau eye capturing adegan.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Bloom">Glossary</a></span></span></span>.</p> 
+       <p>Misalnya, bayangkan efek ruang layar yang membutuhkan gambar yang akan ditarik di atas layar (mungkin Anda menggambar beberapa jenis kotoran yang ditempatkan di layar). Alih-alih menerapkan efek atas seluruh tampilan output, yang akan meregangkan gambar kotoran di kedua mata, Anda perlu menerapkannya dua kali: sekali untuk setiap mata. Dalam kasus seperti ini, Anda perlu mengonversi dari menggunakan koordinat tekstur yang merujuk seluruh Tekstur Render dikemas, untuk mengkoordinasikan referensi setiap mata.</p> 
+       <p>Contoh kode berikut menunjukkan <span class="tooltip"><strong>Surface Shader</strong><span class="tooltiptext">Cara merampingkan naungan menulis untuk Pipeline Render Built-in. <a class="tooltipMoreInfoLink" href="SL-SurfaceShaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SurfaceShader">Glossary</a></span></span></span> yang mengulangi Tekstur input (disebut _<strong>Detail</strong>) 8 x 6 kali pada gambar output. Dalam contoh kedua, naungan mengubah koordinasi tujuan dalam mode Stereo Pass Tunggal untuk merujuk ke bagian dari Tekstur output yang mewakili mata saat ini diberikan.</p> 
+       <p>Sitemap Tekstur Detail tanpa dukungan Stereo Single-Pass<strong>Example 1:</strong> Detail Texture with no Single-Pass Stereo support</p> 
+       <pre><code>void surf(Input IN, inout SurfaceOutput o) 
+{
+    o.Albedo = tex2D(_MainTex, IN.uv_MainTex).rgb;
+    float2 screenUV = IN.screenPos.xy / IN.screenPos.w;
+    screenUV *= float2(8,6);
+    o.Albedo *= tex2D(_Detail, screenUV).rgb * 2;
+}
+</code></pre> 
+       <p>Sitemap Tekstur Detail dengan dukungan Stereo Single-Pass<strong>Example 2:</strong> Detail Texture with Single-Pass Stereo support</p> 
+       <pre><code>void surf(Input IN, inout SurfaceOutput o) 
+{
+    o.Albedo = tex2D(_MainTex, IN.uv_MainTex).rgb;
+    float2 screenUV = IN.screenPos.xy / IN.screenPos.w;
+    #if UNITY_SINGLE_PASS_STEREO
+    // If Single-Pass Stereo mode is active, transform the
+    // coordinates to get the correct output UV for the current eye.
+    float4 scaleOffset = unity_StereoScaleOffset[unity_StereoEyeIndex];
+    screenUV = (screenUV - scaleOffset.zw) / scaleOffset.xy;
+    #endif
+    screenUV *= float2(8,6);
+    o.Albedo *= tex2D(_Detail, screenUV).rgb * 2;
+}
+</code></pre> 
+       <hr> 
+       <ul> 
+        <li><span class="page-edit">2018–08–16 Sitemap</span></li> 
+        <li><span class="page-history">Baru di Unity <span class="search-words">NewIn20173</span></span></li> 
+       </ul> 
+       <!-- area:platforms --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="VRReference.html"></a></span> 
+         <div class="tip">
+           API Reference 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="SinglePassInstancing.html"></a></span> 
+         <div class="tip">
+           Login Login 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

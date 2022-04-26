@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Menggunakan alat editor kustom</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html"></a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="UsingTheEditor.html">Antarmuka unity</a></li> 
+         <li><a href="UsingTheSceneView.html">Tampilan adegan</a></li> 
+         <li>Menggunakan alat editor kustom</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="GridSnapping.html"></a></span> 
+          <div class="tip">
+            Grid snapping 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="SceneVisibility.html"></a></span> 
+          <div class="tip">
+            Kesimpulan adegan 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Menggunakan alat editor kustom</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Dari <span class="tooltip"><a class="tooltipMoreInfoLink" href="UsingTheSceneView.html">Tampilan adegan</a><span class="tooltiptext">Tampilan interaktif ke dunia yang Anda buat. Anda menggunakan Adegan Lihat untuk memilih dan posisi pemandangan, karakter, kamera, lampu, dan semua jenis lain dari Game Object. <a href="UsingTheSceneView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SceneView">Glossary</a></span></span></span>, Anda dapat mengakses alat kustom yang dibuat dengan . Anda dapat mengaksesnya dengan:</p> 
+       <ul> 
+        <li><p>Mengklik <a class="tooltipMoreInfoLink" href="#ToolModesAccessSceneViewToolbar"><strong>Available Custom Editor Tools</strong> drop-down menu</a> di Alat pandangan <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Scene">Glossary</a></span></span></span> Overlay.<span class="tooltip"><strong>toolbar</strong><span class="tooltiptext">Se baris tombol dan kontrol dasar di bagian atas Editor Unity yang memungkinkan Anda untuk berinteraksi dengan Editor dengan berbagai cara (misalnya scaling, terjemahan). <a href="Toolbar.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Toolbar">Glossary</a></span></span></span> Overlay.</p></li> 
+        <li><p><a href="Overlays.html">Alat Pengaturan Alat Login</a>.</p></li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ToolModesExample.png" alt="Custom Editor tools are available from a menu in the Scene view Tools toolbar Overlay"> 
+        <figcaption>
+          Alat Editor kustom tersedia dari menu di Adegan view Tools toolbar Overlay 
+        </figcaption> 
+       </figure> 
+       <h2>Alat global vs. alat kontekstual</h2> 
+       <p>Beberapa alat kustom global dan lain-lain kontekstual:</p> 
+       <ul> 
+        <li><p>Alat global mempengaruhi jenis <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span>, dan selalu tersedia tidak peduli jenis GameObject yang Anda pilih. Sebagai contoh, alat transformasi dapat diakses sepanjang waktu karena bekerja dengan GameObject.</p></li> 
+        <li><p>Alat kustom kontekstual hanya mempengaruhi jenis GameObject tertentu, dan hanya tersedia ketika Anda memilih GameObjects dari jenis itu. Misalnya, manipulator kustom untuk lampu hanya boleh diakses ketika Anda memilih cahaya.</p></li> 
+       </ul> 
+       <p><a name="ToolModesAccessSceneViewToolbar"></a></p> 
+       <h2>Mengaktifkan kustom Perangkat editor dari sudut pandang toolbar</h2> 
+       <p>Untuk mengaktifkan alat Editor kustom, klik kanan tombol <strong>Available Custom Editor Tools</strong> di bilah alat tampilan Adegan.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ToolmodesMenu.png" alt=""> 
+       </figure> 
+       <p>Ini membuka menu yang dibagi menjadi bagian berikut:</p> 
+       <ul> 
+        <li><p>A. <strong>Recent:</strong> daftar alat global yang paling baru-baru ini digunakan.<br><br> Bagian ini tidak muncul sampai Anda mengaktifkan alat global untuk pertama kalinya dalam sesi saat ini.</p></li> 
+        <li><p>B. <strong>Selection:</strong> daftar semua alat kontekstual yang mempengaruhi satu atau lebih GameObjects dalam pemilihan saat ini. <br><br> Bagian ini tidak muncul jika tidak ada alat kustom dalam Proyek yang mempengaruhi pemilihan.</p></li> 
+        <li><p>C. <strong>Available:</strong> daftar semua alat global yang tersedia.<br><br> Bagian ini selalu muncul, selama Proyek mengandung alat kustom.</p></li> 
+       </ul> 
+       <p>Jika Proyek tidak mengandung alat kustom, menu tidak akan memiliki ikon alat kustom.</p> 
+       <p>Ketika Anda memilih alat dari menu, tombol <strong>Available Custom Editor Tools</strong> berubah menjadi ikon untuk alat yang dipilih.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ToolmodesMenuSelected.png" alt="Selecting the Custom Transform Tool from the menu displays its icon in the Scene view toolbar"> 
+        <figcaption>
+          Memilih Transformasi Khusus Alat dari menu menampilkan ikonnya di toolbar view Adegan 
+        </figcaption> 
+       </figure> 
+       <p><a name="ToolModesAccessSceneViewPanel"></a></p> 
+       <h2>Mengaktifkan alat kontekstual dari panel Alat Editor Komponen</h2> 
+       <p>Alat Editor Komponen muncul di Tool Settings toolbar Overlay di jendela tampilan adegan utama.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ToolmodesPopup.png" alt=""> 
+       </figure> 
+       <p>Tool Settings toolbar berisi semua alat kustom kontekstual yang mempengaruhi satu atau lebih dipilih GameObjects. diperbarui secara otomatis setiap kali perubahan seleksi.</p> 
+       <ul> 
+        <li>Klik tombol untuk mengaktifkan alat.</li> 
+       </ul> 
+       <hr> 
+       <ul> 
+        <li><span class="page-history">Editor Kustom yang tersedia Alat tombol dan komponen Editor alat panel ditambahkan dalam <span class="search-words">NewIn20191</span></span></li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="GridSnapping.html"></a></span> 
+         <div class="tip">
+           Grid snapping 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="SceneVisibility.html"></a></span> 
+         <div class="tip">
+           Kesimpulan adegan 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

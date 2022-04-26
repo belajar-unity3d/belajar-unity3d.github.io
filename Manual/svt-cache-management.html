@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Manajemen Cache untuk Teksur Virtual</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="Textures.html">Textures</a></li> 
+         <li><a href="svt-streaming-virtual-texturing.html">Streaming Tekstur Virtual</a></li> 
+         <li>Manajemen Cache untuk Teksur Virtual</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="svt-use-in-shader-graph.html"></a></span> 
+          <div class="tip">
+            Menggunakan Streaming Virtual Texturing di Shader Graph 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="svt-marking-textures.html"></a></span> 
+          <div class="tip">
+            Menandai tekstur sebagai Virtual 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Manajemen Cache untuk Teksur Virtual</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Teksur virtual menggunakan cache tekstur ukuran tetap dalam memori GPU. Ada satu cache per format grafis. Anda dapat mengkonfigurasi ukuran default dari cache dan menuliskan ukuran default.</p> 
+       <p>Sistem Streaming Virtual Texturing (SVT) juga menggunakan satu cache CPU dalam memori utama untuk menyimpan halaman ubin. Halaman ubin mengandung beberapa ubin yang sistem SVT membaca semua bersama-sama dari disk ke dalam cache CPU. Ini meningkatkan kecepatan throughput membaca dari disk pada drive yang lebih lambat. Ketika sistem Teksur Virtual meminta ubin, membaca halaman yang mengandung ubin itu. Kemungkinan sistem akan meminta ubin lain di halaman itu dalam bingkai berikut, sehingga cache CPU mempertahankan halaman itu untuk menghindari bacaan lain dari disk. Semakin besar ukuran cache CPU, Teksur Virtual yang lebih panjang dapat menjaga halaman dalam memori utama.</p> 
+       <p>Virtual Texturing mengalokasikan cache GPU dari format grafis yang diberikan ketika render Bahan yang memiliki Stack Tekstur dengan tekstur yang menggunakan format tersebut. Anda dapat mengkonfigurasi ukuran cache (dalam MB) pada, yang memungkinkan Anda untuk memiliki konfigurasi yang berbeda untuk setiap tingkat kualitas.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/svt-cache-management01.png" alt=""> 
+       </figure> 
+       <p>Anda juga dapat menggunakan metode <a href="../ScriptReference/Rendering.VirtualTexturing.Streaming.SetGPUCacheSettings.html"><code>VirtualTexturing.Streaming.SetGPUCacheSettings</code></a> untuk mengatur ukuran cache dalam script.</p> 
+       <p>Anda dapat mengubah ukuran cache, tetapi hasil ini dalam operasi CPU dan GPU sumber daya, dan blok kedua benang utama dan benang render. Panjang waktu yang dibutuhkan untuk mengubah ukuran cache tergantung pada ukuran dan jumlah cache. Untuk menghindari pembekuan atau berkelok-kelok, Anda harus mengubah ukuran cache pada waktu ketika tingkat bingkai kurang penting (seperti ketika memuat tingkat).</p> 
+       <p>Faktor utama yang mempengaruhi ukuran optimal dari cache yang diberikan adalah resolusi layar output, dan jumlah lapisan di setiap Stack Tekstur yang menggunakan format grafis. Jumlah Bahan dalam <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> dan resolusi tekstur tidak mempengaruhi ukuran optimal sebanyak. Untuk resolusi layar HD penuh pada pengaturan kualitas tertinggi, ukuran cache GPU total gabungan biasanya 700MB.</p> 
+       <p>Masalah yang disebut "cache thrashing" terjadi ketika ukuran cache terlalu rendah untuk mengakomodasi kontennya, dan harus memuat dan membongkar ubin dalam bingkai yang sama. Untuk mencegah thrashing cache, sistem Teksur Virtual secara otomatis mengurangi kualitas tekstur sesuai kebutuhan. Ini memantau penggunaan cache, dan secara otomatis mengelola bias mipmap untuk pengambilan Tekstur Stack dalam <span class="tooltip"><strong>pixel</strong><span class="tooltiptext">Unit terkecil dalam gambar komputer. Ukuran piksel tergantung pada resolusi layar Anda. Pencahayaan pixel dihitung pada setiap piksel layar. <a class="tooltipMoreInfoLink" href="ShadowPerformance.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#pixel">Glossary</a></span></span></span> <span class="tooltip"><strong>shaders</strong><span class="tooltiptext">Program yang berjalan di GPU. <a href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span>. Jika cache mengisi, bias mipmap meningkat. Ini memastikan bahwa permintaan sistem Teksur Virtual ubin resolusi lebih rendah, yang menghemat ruang dalam cache, memungkinkan untuk mengandung semua ubin yang diminta.</p> 
+       <p>Jika tekstur Anda terlihat kabur, cobalah meningkatkan ukuran cache Anda. Jika cache sudah cukup besar untuk membuat bingkai dengan kualitas tertinggi, semakin meningkatkan ukuran cache berarti bahwa cache dapat mempertahankan ubin untuk lebih lama sebelum menirunya. Ini dapat mengurangi efek yang tidak diinginkan seperti tekstur muncul ketika Anda bergerak atau mengubah <span class="tooltip"><strong>Camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span>, karena ubin yang baru-baru ini terlihat lebih cenderung masih berada di cache.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="svt-use-in-shader-graph.html"></a></span> 
+         <div class="tip">
+           Menggunakan Streaming Virtual Texturing di Shader Graph 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="svt-marking-textures.html"></a></span> 
+         <div class="tip">
+           Menandai tekstur sebagai Virtual 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

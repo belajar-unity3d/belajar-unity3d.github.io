@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Mengelola Ketergantungan Aset dalam Unity 4</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="LegacyTopics.html">Legacy Topics</a></li> 
+         <li><a href="AssetBundles4x.html">Legacy Asset Bundles</a></li> 
+         <li>Mengelola Ketergantungan Aset pada Unity 4</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="BuildingAssetBundles4x.html"></a></span> 
+          <div class="tip">
+            Membuat Aset Bundel di Unity 4 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="Animations.html"></a></span> 
+          <div class="tip">
+            Sistem Animasi Legacy 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Mengelola Ketergantungan Aset pada Unity 4</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p><em>Dalam versi Unity lebih awal dari Unity 5, dependensi aset harus didefinisikan menggunakan editor <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> saja. (Dalam Unity 5 kami menyediakan alat dalam editor untuk menetapkan aset ke Bundel khusus dan penanganan ketergantungan otomatis). Informasi ini disediakan bagi mereka yang bekerja pada proyek-proyek legacy di Unity 4, dan berbicara asumsi Anda menggunakan Unity 4.</em></p> 
+       <p>Setiap aset yang diberikan dalam bundel dapat tergantung pada aset lain. Misalnya, model dapat menggabungkan bahan yang pada gilirannya menggunakan tekstur dan <span class="tooltip"><strong>shaders</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span>. Hal ini dimungkinkan untuk mencakup semua ketergantungan aset bersama dengan itu dalam bundelnya. Namun, beberapa aset dari berbagai bundel mungkin semua tergantung pada set aset lain (misalnya, beberapa model bangunan yang berbeda dapat menggunakan tekstur batu bata yang sama). Jika salinan yang terpisah dari ketergantungan bersama disertakan dalam setiap bundel yang memiliki benda-benda yang menggunakannya, maka contoh yang berlebihan dari aset akan dibuat ketika bundel dimuat. Ini akan menghasilkan memori yang terbuang.</p> 
+       <p>Untuk menghindari pemborosan tersebut, dimungkinkan untuk memisahkan ketergantungan bersama ke dalam bundel terpisah dan cukup referensikan dari setiap bundel dengan aset yang membutuhkannya. Pertama, fitur merujuk perlu diaktifkan dengan panggilan ke <a href="../ScriptReference/BuildPipeline.PushAssetDependencies.html">WordPress.org</a>. Kemudian, bundel yang mengandung ketergantungan yang direferensikan harus dibangun. Selanjutnya, panggilan lain untuk PushAssetDependencies harus dibuat sebelum membangun bundel yang merujuk aset dari bundel pertama. Tingkat ketergantungan tambahan dapat diperkenalkan menggunakan panggilan lebih lanjut ke PushAssetDependencies. Tingkat referensi disimpan pada tumpukan, sehingga dimungkinkan untuk kembali kembali tingkat menggunakan fungsi <a href="../ScriptReference/BuildPipeline.PopAssetDependencies.html">WordPress.org</a> yang sesuai. Panggilan push dan pop harus seimbang termasuk dorongan awal yang terjadi sebelum bangunan.</p> 
+       <p>Pada runtime, Anda perlu memuat bundel yang mengandung ketergantungan sebelum bundel lain yang merujuk pada mereka. Misalnya, Anda harus memuat bundel tekstur bersama sebelum memuat bundel terpisah bahan yang merujuk tekstur tersebut.</p> 
+       <h2>ID Aset</h2> 
+       <p>Jika Anda mengantisipasi perlu untuk membangun kembali bundel aset yang merupakan bagian dari rantai ketergantungan maka Anda harus membangunnya dengan opsi <a href="../ScriptReference/BuildAssetBundleOptions.DeterministicAssetBundle.html">BuildAssetBundleOptions</a> diaktifkan. Ini menjamin bahwa nilai ID internal yang digunakan untuk mengidentifikasi aset akan sama setiap kali bundel dibangun kembali.</p> 
+       <p>Ketika membangun bundel aset dengan metode ini, benda-benda di dalamnya ditugaskan kode hash 32 bit yang dihitung menggunakan nama file bundel aset, GUID aset dan id lokal objek dalam aset. Untuk alasan itu pastikan untuk menggunakan nama file yang sama ketika membangun kembali. Juga dicatat bahwa memiliki banyak objek yang mungkin menyebabkan hash <span class="tooltip"><strong>collisions</strong><span class="tooltiptext">tabrakan terjadi ketika mesin fisika mendeteksi bahwa tabrakan dari dua GameObjects membuat kontak atau tumpang tindih, ketika setidaknya satu memiliki komponen kaku dan bergerak. <a class="tooltipMoreInfoLink" href="CollidersOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Collision">Glossary</a></span></span></span> mencegah Unity dari membangun bundel aset.</p> 
+       <h2>Ketergantungan warna</h2> 
+       <p>Setiap kali naungan langsung direferensikan sebagai parameter dalam <a class="tooltipMoreInfoLink" href="../ScriptReference/BuildPipeline.BuildAssetBundle.html">WordPress.org</a>, atau tidak langsung dengan opsi <a href="../ScriptReference/BuildAssetBundleOptions.CollectDependencies.html">BuildAssetBundleOptions</a> kode naungan disertakan dengan bundel aset. Ini bisa menyebabkan masalah jika Anda menggunakan BuildAssetBundle sendirian untuk membuat beberapa bundel aset, karena naungan yang direferensikan akan dimasukkan dalam setiap bundel yang dihasilkan. Ada konflik, yaitu ketika Anda mencampur versi yang berbeda dari naungan, sehingga Anda harus membangun kembali semua bundel Anda setelah memodifikasi naungan. Kode naungan juga akan meningkatkan ukuran bundel. Untuk menghindari masalah ini Anda dapat menggunakan <a href="../ScriptReference/BuildPipeline.PushAssetDependencies.html">WordPress.org</a> untuk memisahkan naungan dalam satu bundel, dan itu akan memungkinkan Anda untuk memperbarui bundel naungan hanya. Sebagai contoh cara mencapai alur kerja ini, Anda dapat membuat <span class="tooltip"><strong>prefab</strong><span class="tooltiptext">Jenis aset yang memungkinkan Anda untuk menyimpan GameObject lengkap dengan komponen dan properti. Prefab bertindak sebagai template dari mana Anda dapat membuat instance objek baru di tempat kejadian. <a href="Prefabs.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Prefab">Glossary</a></span></span></span> yang mencakup referensi ke naungan yang diperlukan:</p> 
+       <h3>C# Contoh</h3> 
+       <pre><code>using UnityEngine;
+
+public class ShadersList : MonoBehaviour {
+    public Shader[] list;
+}
+
+
+</code></pre> 
+       <p>Buat objek kosong, menetapkan skrip, tambahkan naungan ke daftar dan buat prefab, yaitu “ShadersList”. Kemudian Anda dapat membuat eksportir yang menghasilkan semua bundel dan memperbarui bundel naungan:</p> 
+       <h3>C# Contoh</h3> 
+       <pre><code>using UnityEngine;
+using UnityEditor;
+
+public class Exporter : MonoBehaviour {
+    
+    [MenuItem("Assets/Export all asset bundles")]
+    static void Export() {
+        BuildAssetBundleOptions options = 
+            BuildAssetBundleOptions.CollectDependencies | 
+            BuildAssetBundleOptions.CompleteAssets | 
+            BuildAssetBundleOptions.DeterministicAssetBundle;
+        
+        BuildPipeline.PushAssetDependencies();
+        BuildPipeline.BuildAssetBundle(AssetDatabase.LoadMainAssetAtPath("Assets/ShadersList.prefab"), null, "Data/ShadersList.unity3d", options);
+            
+        BuildPipeline.PushAssetDependencies();
+        BuildPipeline.BuildAssetBundle(AssetDatabase.LoadMainAssetAtPath("Assets/Scene1.prefab"), null, "Data/Scene1.unity3d", options);
+        BuildPipeline.BuildAssetBundle(AssetDatabase.LoadMainAssetAtPath("Assets/Scene2.prefab"), null, "Data/Scene2.unity3d", options);        
+        
+        BuildPipeline.PopAssetDependencies();
+        BuildPipeline.PopAssetDependencies();
+    }
+    
+    [MenuItem("Assets/Update shader bundle")]
+    static void ExportShaders() {
+        BuildAssetBundleOptions options = 
+            BuildAssetBundleOptions.CollectDependencies | 
+            BuildAssetBundleOptions.CompleteAssets | 
+            BuildAssetBundleOptions.DeterministicAssetBundle;
+        
+        BuildPipeline.PushAssetDependencies();
+        BuildPipeline.BuildAssetBundle(AssetDatabase.LoadMainAssetAtPath("Assets/ShadersList.prefab"), null, "Data/ShadersList.unity3d", options);
+        
+        BuildPipeline.PopAssetDependencies();
+    }
+}
+
+
+</code></pre> 
+       <p>Berhati-hatilah bahwa Anda harus memuat bundel naungan terlebih dahulu. Salah satu kelemahan dari metode ini adalah bahwa opsi <a href="../ScriptReference/BuildAssetBundleOptions.DeterministicAssetBundle.html">BuildAssetBundleOptions</a> dapat menghasilkan konflik karena menggandakan hashe ketika jumlah benda terlalu besar. Dalam hal ini build akan gagal, dan tidak akan mungkin untuk memperbarui bundel naungan sendiri. Dalam hal ini Anda harus menghapus opsi itu dan membangun kembali semua bundel aset.</p> 
+       <!-- area:none --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="BuildingAssetBundles4x.html"></a></span> 
+         <div class="tip">
+           Membuat Aset Bundel di Unity 4 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="Animations.html"></a></span> 
+         <div class="tip">
+           Sistem Animasi Legacy 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

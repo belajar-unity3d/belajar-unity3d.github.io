@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Cara debug dan pemecahan masalah WebGL builds</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="platforms" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Unity User Manual 2022.1 (beta)</a></li> 
+         <li><a href="PlatformSpecific.html">Pengembangan platform</a></li> 
+         <li><a href="webgl.html">WebGL</a></li> 
+         <li><a href="webgl-develop.html">WebGL</a></li> 
+         <li>Cara debug dan pemecahan masalah WebGL builds</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="webgl-performance.html"></a></span> 
+          <div class="tip">
+            Pertimbangan kinerja WebGL 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="webgl-cursorfullscreen.html"></a></span> 
+          <div class="tip">
+            Cursor mengunci dan mode layar penuh di WebGL 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Cara debug dan pemecahan masalah WebGL builds</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Visual Studio tidak mendukung konten Unity <span class="tooltip"><strong>WebGL</strong><span class="tooltiptext">Login API yang membuat grafis 2D dan 3D di browser web. Opsi build Unity WebGL memungkinkan Unity untuk mempublikasikan konten sebagai program JavaScript yang menggunakan teknologi HTML5 dan WebGL rendering API untuk menjalankan konten Unity di browser web. <a class="tooltipMoreInfoLink" href="webgl-gettingstarted.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#WebGL">Glossary</a></span></span></span> debugging. Untuk membantu Anda untuk mengetahui persis apa yang terjadi dengan konten Anda, berikut adalah beberapa tips tentang cara mendapatkan informasi dari membangun Anda.</p> 
+       <h2>Konsol JavaScript browser</h2> 
+       <p>Unity WebGL tidak memiliki akses ke sistem file Anda, sehingga tidak menulis file log seperti platform lain. Namun, itu menulis semua informasi penebangan (seperti <code>Debug.Log</code>, penebangan internal <code>Console.WriteLine</code> atau Unity) ke konsol JavaScript browser.</p> 
+       <p>Untuk membuka konsol JavaScript:</p> 
+       <ul> 
+        <li>Di Firefox, tekan Ctrl-Shift-K di Windows atau Command-Option-K di Mac.</li> 
+        <li>Di Chrome, tekan Ctrl-Shift-J pada Windows atau Command-Option-J pada Mac.</li> 
+        <li>Di Safari, pergi ke Preferensi &gt; Lanjutan &gt; Mengembangkan, dan tekan Command-Option-C.</li> 
+        <li>Di Microsoft Edge atau Internet Explorer, tekan F12.</li> 
+       </ul> 
+       <h2>Membangun pembangunan</h2> 
+       <p>Untuk keperluan debugging, Anda mungkin ingin membuat pembangunan build di Unity (terbuka <a class="tooltipMoreInfoLink" href="PublishingBuilds.html">Membangun jendela Pengaturan</a> dan klik kotak cemen). Membangun pembangunan memungkinkan Anda untuk menghubungkan nama fungsi <span class="tooltip"><strong>Development Build</strong><span class="tooltiptext">Membangun pengembangan termasuk simbol debug dan memungkinkan Profiler. <a href="UnityCloudBuildDevelopmentBuilds.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#DevelopmentBuild">Glossary</a></span></span></span>, dan Unity tidak <span class="tooltip"><strong>profiler</strong><span class="tooltiptext">Jendela yang membantu Anda untuk mengoptimalkan permainan Anda. Ini menunjukkan berapa banyak waktu yang dihabiskan di berbagai bidang permainan Anda. Sebagai contoh, dapat melaporkan persentase waktu yang dihabiskan <strong>rendering</strong>, aimating, atau dalam logika permainan Anda. <a href="Profiler.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Profiler">Glossary</a></span></span></span>, sehingga kode JavaScript yang dipancarkan masih mengandung nama fungsi manusia-readable (meskipun <a href="https://en.wikipedia.org/wiki/Minification_%28programming%29">minify</a>). Peramban dapat menggunakan ini untuk menampilkan jejak stack ketika Anda berjalan ke kesalahan browser, ketika menggunakan <a href="https://en.wikipedia.org/wiki/Name_mangling#Name_mangling_in_C.2B.2B">C++-mangled</a>. Tidak seperti jejak stack yang dikelola yang dapat terjadi ketika Anda memiliki dukungan pengecualian penuh (lihat di bawah), jejak stack ini memiliki nama yang mangled, dan tidak hanya berisi kode yang dikelola, tetapi juga kode UnityEngine internal.<code>Debug.LogError, or when you throw an exception and exception support is disabled</code>. Unlike the managed stack traces that can occur when you have full exception support (see below), these stack traces have mangled names, and contain not only managed code, but also the internal UnityEngine code.</p> 
+       <h2>Kecuali dukungan</h2> 
+       <p>WebGL memiliki tingkat dukungan pengecualian yang berbeda (lihat dokumentasi pada <a href="webgl-building.html">WebGL</a>). Secara default, Unity WebGL hanya mendukung pengecualian dibuang secara eksplisit. Anda dapat mengaktifkan dukungan pengecualian <strong>Full</strong>, yang memancarkan pemeriksaan tambahan dalam kode IL2CPP-generasi, untuk menangkap akses ke referensi null dan elemen array out-of-bounds dalam kode yang dikelola. Pemeriksaan tambahan ini secara signifikan mempengaruhi kinerja dan meningkatkan ukuran kode dan waktu beban, sehingga Anda hanya harus menggunakannya untuk debugging.</p> 
+       <p>Dukungan pengecualian <strong>Full</strong><code>Debug.Log</code> juga memancarkan nama fungsi untuk menghasilkan jejak stack untuk kode dikelola Anda. Untuk alasan ini, tumpukan jejak muncul di konsol untuk menangguhkan pengecualian dan untuk pernyataan <code>System.Environment.Stacktrace</code>. Gunakan untuk mendapatkan string jejak stack.</p> 
+       <h2>Troubleshooting</h2> 
+       <h3>Masalah: Membangun keluar dari memori</h3> 
+       <p>Ini adalah masalah umum, terutama pada browser 32-bit. Untuk informasi lebih lanjut tentang masalah memori WebGL dan cara memperbaikinya, lihat dokumentasi pada <a href="webgl-memory.html">WebGL</a>.</p> 
+       <h3>Masalah: File disimpan ke Aplikasi. Login Login Jalan tidak bertahan</h3> 
+       <p>Unity WebGL menyimpan semua file yang harus bertahan antara sesi (seperti PlayerPrefs atau file yang disimpan dalam persistentDataPath) ke browser IndexedDB. Ini adalah API asinkron, sehingga Anda tidak tahu ketika itu akan selesai.</p> 
+       <p>Panggilan kode berikut untuk memastikan Unity flushes semua sistem file pending operasi menulis ke sistem file IndexedDB dari memori:</p> 
+       <pre><code>FS.syncfs(false, function (err) {
+    console.log('Error: syncfs failed!');
+ });
+</code></pre> 
+       <h3>Pesan kesalahan: cek header yang tidak benar</h3> 
+       <p>Konsol browser log biasanya mencetak kesalahan ini sebagai akibat dari konfigurasi server yang salah. Untuk informasi lebih lanjut tentang cara menyebarkan build rilis, lihat dokumentasi pada <a href="webgl-deploying.html">Menyebarkan build terkompresi</a>.</p> 
+       <h3>Pesan kesalahan: Menghapus format ini (1) tidak didukung pada platform ini</h3> 
+       <p>Konsol browser mencetak kesalahan ini ketika konten mencoba memuat AsetBundle terkompresi menggunakan LZMA, yang Unity WebGL tidak mendukung. Re-kompresi AssetBundle menggunakan LZ4 <span class="tooltip"><strong>compression</strong><span class="tooltiptext">Metode menyimpan data yang mengurangi jumlah ruang penyimpanan yang dibutuhkan. <a href="class-TextureImporterOverride.html">Kompresi Tekstur</a>, <a href="class-AnimationClip.html#AssetProperties">Kompresi Animasi</a>, <a href="class-AudioClip.html">Kompresi Audio</a>, <a href="ReducingFilesize.html">Membangun Kompresi</a>.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#compression">Glossary</a></span></span></span> untuk memecahkan masalah ini. Untuk informasi lebih lanjut tentang kompresi untuk WebGL, lihat dokumentasi pada, terutama bagian <strong>AssetBundles</strong>.</p> 
+       <hr> 
+       <ul> 
+        <li><p><span class="page-edit">2018–09–03 Login</span></p></li> 
+        <li><p><span class="page-history">MonoDevelop diganti dengan Visual Studio dari 2018.1</span></p></li> 
+       </ul> 
+       <!-- area:platforms --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="webgl-performance.html"></a></span> 
+         <div class="tip">
+           Pertimbangan kinerja WebGL 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="webgl-cursorfullscreen.html"></a></span> 
+         <div class="tip">
+           Cursor mengunci dan mode layar penuh di WebGL 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

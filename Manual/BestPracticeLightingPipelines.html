@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Memilih dan mengkonfigurasi render pipa dan solusi pencahayaan</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="render-pipelines.html">Pipa render</a></li> 
+         <li>Memilih dan mengkonfigurasi solusi pipa dan pencahayaan render</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="srp-setting-render-pipeline-asset.html"></a></span> 
+          <div class="tip">
+            Bagaimana cara mendapatkan, mengatur, dan mengkonfigurasi pipa render aktif 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="built-in-render-pipeline.html"></a></span> 
+          <div class="tip">
+            Menggunakan Pipa Render Built-in 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Memilih dan mengkonfigurasi solusi pipa dan pencahayaan render</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Panduan ini adalah versi terbaru dari posting blog Unity berikut: .</p> 
+       <h2>Definitions</h2> 
+       <p>Pertama, mari kita lewat definisi beberapa istilah rendering grafis penting yang akan Anda temui sering dalam artikel ini.</p> 
+       <ul> 
+        <li>Sebuah <span class="tooltip"><a class="tooltipMoreInfoLink" href="render-pipelines.html">render pipa</a><span class="tooltiptext">Rangkaian operasi yang mengambil isi dari Adegan, dan menampilkannya di layar. Unity memungkinkan Anda memilih dari pipa render yang dibangun sebelumnya, atau menulis sendiri. <a href="render-pipelines.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Renderpipeline">Glossary</a></span></span></span> menentukan bagaimana objek dalam <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> Anda ditampilkan, dalam tiga tahap utama. 
+         <ul> 
+          <li>Langkah pertama adalah penanaman; daftar benda-benda yang perlu dirender, sebaiknya yang terlihat oleh <span class="tooltip"><strong>camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Camera">Glossary</a></span></span></span> () dan tidak tercakup oleh benda lain (<span class="tooltip"><span class="tooltiptext">A yang menonaktifkan rendering objek ketika mereka tidak saat ini dilihat oleh kamera karena mereka dikabur (disebutkan) oleh benda lain. <a href="OcclusionCulling.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Occlusionculling">Glossary</a></span></span></span>).</li> 
+          <li>Tahap kedua, rendering, adalah gambar benda-benda ini, dengan pencahayaan yang benar dan beberapa sifat mereka, menjadi buffer berbasis piksel.</li> 
+          <li>Akhirnya, operasi <span class="tooltip"><strong>post-processing</strong><span class="tooltiptext">Proses yang meningkatkan visual produk dengan menerapkan filter dan efek sebelum gambar muncul di layar. Anda dapat menggunakan efek pasca proses untuk mensimulasikan kamera fisik dan sifat film, misalnya Bloom dan Kedalaman Lapangan. <a class="tooltipMoreInfoLink" href="PostProcessingOverview.html">More info</a> <span class="search-words">pemrosesan pos, pasca proses, pasca proses</span><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#post-processing">Glossary</a></span></span></span> dapat dilakukan pada penyangga ini, misalnya menerapkan grading warna, mekar dan <span class="tooltip"><strong>depth of field</strong><span class="tooltiptext">Efek pasca proses yang mensimulasikan sifat fokus dari lensa kamera. <a href="PostProcessingOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#DepthofField">Glossary</a></span></span></span>, untuk menghasilkan bingkai output akhir yang dikirim ke perangkat tampilan.</li> 
+         </ul> </li> 
+       </ul> 
+       <p>Operasi ini diulang banyak kali detik, tergantung pada tingkat bingkai.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BestPracticeLightingPipeline3.svg" alt=""> 
+       </figure> 
+       <ul> 
+        <li>A <span class="tooltip"><strong>Shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Shader">Glossary</a></span></span></span> adalah nama generik untuk program, atau koleksi program, berjalan pada Unit Pengolahan Grafik (GPU). Misalnya, setelah tahap penanaman selesai, sebuah <span class="tooltip"><strong>Vertex Shader</strong><span class="tooltiptext">Program yang berjalan pada setiap simpul model 3D ketika model sedang diberikan. <a href="SL-ShaderPrograms.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#vertexshader">Glossary</a></span></span></span> digunakan untuk mengubah koordinat simpul benda-benda yang terlihat dari “object space” ke dalam ruang yang berbeda yang disebut “ruang klip”; koordinat baru ini kemudian digunakan oleh GPU untuk menjebak adegan, yaitu mengkonversi representasi vektor dari adegan menjadi piksel sebenarnya. Pada tahap selanjutnya, piksel ini akan diwarnai oleh teduh <span class="tooltip"><strong>pixel</strong><span class="tooltiptext">Unit terkecil dalam gambar komputer. Ukuran piksel tergantung pada resolusi layar Anda. Pencahayaan pixel dihitung pada setiap piksel layar. <a href="ShadowPerformance.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#pixel">Glossary</a></span></span></span> (atau fragmen); warna pixel umumnya akan tergantung pada sifat material permukaan masing-masing dan pencahayaan sekitarnya. Jenis umum lain dari naungan yang tersedia pada perangkat keras modern adalah Compute Shaders: mereka memungkinkan programmer untuk mengeksploitasi kekuatan pemrosesan paralel yang cukup besar dari GPU untuk operasi matematika, seperti kusen cahaya, partikel fisika, atau simulasi volumetrik.</li> 
+        <li>Pencahayaan langsung mengacu pada pencahayaan yang berasal dari sumber cahaya yang menyala sendiri, seperti bohlam ringan, dan bukan hasil pencucian cahaya dari permukaan. Tergantung pada ukuran sumber cahaya dan jaraknya ke penerima, pencahayaan tersebut biasanya menghasilkan bayangan yang berbeda. 
+         <ul> 
+          <li>Pencahayaan langsung tidak boleh bingung dengan pencahayaan arah, yang ringan dipancarkan oleh sumber cahaya tak terbatas (misalnya matahari bersikap komputer). Sifat yang terlihat dari lampu directional adalah kemampuan untuk menutupi seluruh adegan dengan sinar cahaya paralel, dan kurangnya jatuh jarak (atau pembusukan cahaya); yaitu, jumlah pencahayaan yang diterima tidak hancur sebagai jarak ke sumber cahaya meningkat.</li> 
+          <li>Kenyataannya, sinar matahari, seperti sumber cahaya lainnya, jatuh dari jarak jauh, berdasarkan hukum persegi terbalik. Sederhananya, jumlah tetes cahaya yang diterima dengan cepat ketika meningkatkan jarak antara penerima dan sumber cahaya. Sebagai contoh, pencahayaan di Merkurius hampir <a href="https://www.nasa.gov/audience/foreducators/9-12/features/F_How_Far_How_Faint.html">7 kali lebih tinggi</a> dari Bumi, dan Mars menerima hampir setengah sinar matahari bumi, sedangkan Pluto menikmati hanya 0,06%. Namun demikian, untuk aplikasi paling real-time dengan rentang ketinggian terbatas, pembusukan sinar matahari tidak signifikan. Oleh karena itu, lampu directional sangat memadai untuk mensimulasikan sinar matahari di sebagian besar adegan Unity, termasuk besar, planet-sentris, dunia terbuka.</li> 
+         </ul> </li> 
+        <li>Hasil pencahayaan langsung dari permukaan pencucian cahaya dan ditransmisikan dan tersebar melalui media, seperti suasana atau bahan yang tembus. Di bawah kondisi ini, occluders umumnya melemparkan bayangan yang lembut atau tidak terlihat.</li> 
+        <li><span class="tooltip"><strong>Global illumination</strong><span class="tooltiptext">Kelompok teknik yang model pencahayaan langsung dan tidak langsung untuk memberikan hasil pencahayaan yang realistis.<br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#globalillumination">Glossary</a></span></span></span> (GI) adalah sekelompok teknik yang model pencahayaan langsung dan tidak langsung untuk memberikan hasil pencahayaan yang realistis. Ada beberapa metode untuk GI, seperti panggang / dinamis <span class="tooltip"><strong>lightmaps</strong><span class="tooltiptext">Tekstur pra-render yang mengandung efek sumber cahaya pada objek statis di tempat kejadian. Lightmaps dilalui atas geometri adegan untuk menciptakan efek pencahayaan. <a href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Lightmap">Glossary</a></span></span></span>, volume irradiance, volume perambatan cahaya, probe cahaya panggang / dinamis, GI berbasis voxel, dan GI berbasis lapangan jarak. Di luar kotak, Unity mendukung peta cahaya panggang / dinamis dan probe cahaya.</li> 
+        <li>Sebuah <span class="tooltip"><a class="tooltipMoreInfoLink" href="Lightmappers.html">lightmapper</a><span class="tooltiptext">Alat dalam Unity yang bakes lightmap sesuai dengan pengaturan lampu dan geometri di tempat kejadian Anda. <a href="Lightmapping.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Lightmapper">Glossary</a></span></span></span> adalah sistem yang mendasari yang menghasilkan data untuk peta lampu dan probe cahaya dengan menembak sinar cahaya, menghitung bouncing cahaya, dan menerapkan pencahayaan yang dihasilkan menjadi tekstur. Lightmappers yang berbeda akan sering menghasilkan tampilan pencahayaan yang berbeda, karena mereka mungkin bergantung pada teknik yang berbeda untuk menghasilkan data pencahayaan.</li> 
+       </ul> 
+       <h2>Overview</h2> 
+       <p>Flowchart berikut memberikan perspektif tingkat tinggi dari seluruh pipa pencahayaan di Unity, dari sudut pandang pencipta konten.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BestPracticeLightingPipeline15.svg" alt=""> 
+       </figure> 
+       <p>Anda mulai dengan memilih pipa render. Kemudian Anda memutuskan bagaimana pencahayaan tidak langsung dihasilkan dan memilih sistem Penerangan Global sesuai. Setelah Anda memastikan semua pengaturan pencahayaan global tuned tepat untuk proyek Anda, Anda dapat terus menambahkan, <span class="tooltip"><span class="tooltiptext">Komponen rendering yang menangkap pandangan bulat dari sekitarnya di semua arah, seperti kamera. Gambar yang ditangkap kemudian disimpan sebagai kubus yang dapat digunakan oleh benda dengan bahan reflektif. <a href="class-ReflectionProbe.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#ReflectionProbe">Glossary</a></span></span></span>, <span class="tooltip"><span class="tooltiptext">probe cahaya menyimpan informasi tentang bagaimana cahaya melewati ruang di tempat kejadian Anda. Koleksi probe cahaya yang diatur dalam ruang tertentu dapat meningkatkan pencahayaan pada objek bergerak dan pemandangan LOD statis dalam ruang itu. <a href="LightProbes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#LightProbe">Glossary</a></span></span></span>, dan. Detail penggunaan dan fitur dari semua benda pencahayaan ini berada di luar ruang lingkup artikel ini, oleh karena itu saya mendorong Anda untuk membaca bagian Pencahayaan dari manual untuk mempelajari cara memanfaatkannya dengan benar dalam proyek Anda.</p> 
+       <h2>Pipa render</h2> 
+       <p>Sampai awal 2018, hanya satu render pipa yang tersedia di Unity; . Pipa render ini menawarkan pilihan <span class="tooltip"><span class="tooltiptext">Teknik yang menggunakan pipa render untuk membuat grafik. Memilih jalur rendering yang berbeda mempengaruhi bagaimana pencahayaan dan pembentukan dihitung. Beberapa jalur rendering lebih cocok untuk berbagai platform dan perangkat keras daripada yang lain. <a href="RenderingPaths.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#RenderingPath">Glossary</a></span></span></span>: maju, dan deferred.</p> 
+       <ul> 
+        <li>Saat menggunakan (multi-pass), semua benda di tempat kejadian dirender satu per satu secara umum, berpotensi dalam beberapa berlalu, tergantung pada jumlah lampu yang mempengaruhi setiap objek, sehingga biaya rendering dapat meningkat secara dramatis ketika benda menyala dengan beberapa lampu. Jenis renderer ini umumnya menawarkan berbagai macam warna dan dapat menangani transparansi dengan mudah.</li> 
+        <li>Saat menggunakan geometri (opaque) pertama kali dirender menjadi penyangga yang menyimpan informasi tentang bahan mereka (warna, spektral, kelancaran, dll). Di kemudian melewati (ketika “deferred”), setiap pixel diwarnai secara umum: waktu rendering akan tergantung terutama pada jumlah lampu yang mempengaruhi setiap pixel. Objek transparan, dan benda-benda tertentu dengan naungan yang kompleks, masih akan membutuhkan umpan <span class="tooltip"><strong>forward rendering</strong><span class="tooltiptext">Sebuah jalur rendering yang membuat setiap objek dalam satu atau lebih melewati, tergantung pada lampu yang mempengaruhi objek. Lampu sendiri juga diperlakukan berbeda dengan Rendering Maju, tergantung pada pengaturan dan intensitas mereka. <a href="RenderTech-ForwardRendering.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#ForwardRendering">Glossary</a></span></span></span> tambahan. rendering yang rusak biasanya direkomendasikan ketika berurusan dengan adegan yang mengandung banyak lampu dinamis, seperti interior atau proyek lit buatan dengan kombinasi pencahayaan outdoor dan indoor.</li> 
+       </ul> 
+       <p>Pada bulan Januari 2018, Unity meluncurkan, yang memungkinkan Anda untuk menyesuaikan rendering loop melalui skrip C#. Ini sebenarnya revolusi kecil di realm mesin permainan: pengguna akhirnya dapat mempersonalisasikan penanaman benda, gambar mereka, dan proses pasca bingkai tanpa harus menggunakan bahasa pemrograman tingkat rendah seperti C ++.</p> 
+       <p>Unity saat ini menyediakan dua SRP yang dibangun sebelumnya:</p> 
+       <ul> 
+        <li>Ini adalah ubin / renderer hybrid. Ini menawarkan fitur rendering dan shading canggih dan dirancang untuk proyek konsol PC dan canggih yang membutuhkan tingkat tinggi kesetiaan visual.</li> 
+       </ul> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BestPracticeLightingPipeline6.svg" alt=""> 
+       </figure> 
+       <p>Ubin adalah bagian pixel persegi 2-dimensi kecil dari bingkai, dan klaster adalah volume 3-dimensi di dalam frustum kamera. Kedua ubin dan teknik rendering klaster mengandalkan daftar lampu yang mempengaruhi setiap ubin tunggal dan klaster, yang pencahayaan kemudian dapat dikomputasikan dalam satu pass tunggal dengan daftar lampu yang dikenal. Objek berair kemungkinan besar akan diwarnai menggunakan sistem ubin, sedangkan yang transparan akan bergantung pada sistem klaster. Keuntungan utama adalah pemrosesan yang lebih cepat dari pencahayaan dan pengurangan yang cukup besar dalam konsumsi bandwidth dibandingkan dengan Pipeline Render Built-In (deferred), yang tergantung pada akumulasi cahaya multi-pass yang lebih lambat.</p> 
+       <ul> 
+        <li>Ini adalah renderer maju satu potong cepat; telah dirancang terutama untuk perangkat low-end kekurangan dukungan untuk teknologi warna compute, seperti smartphone yang lebih tua, tablet dan perangkat XR. Namun, URP juga dapat memberikan grafis berkualitas tinggi untuk perangkat midrange seperti konsol dan PC, kadang-kadang untuk biaya kinerja yang lebih rendah daripada Pipeline Render Built-In. Lampu diculik per-object dan memungkinkan untuk penerangan untuk dikompensasi dalam satu lulus tunggal, yang menghasilkan penurunan panggilan dibandingkan dengan Pipeline Render Built-In. Akhirnya, URP juga menawarkan Renderer 2D, dan renderer Deferred direncanakan.</li> 
+       </ul> 
+       <p>Anda dapat menggunakan grafik keputusan berikut untuk dengan cepat menemukan yang membuat pipa Anda harus memilih berdasarkan beberapa kriteria penting.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BestPracticeLightingPipeline16.svg" alt=""> 
+       </figure> 
+       <h3>Setup</h3> 
+       <p>Anda dapat mengunduh versi terbaru dari HDRP dan URP melalui Manajer Paket Unity (<strong>Window</strong> &gt; <strong>Package Manager</strong>). Cara termudah untuk memulai dengan salah satu SRP ini adalah untuk membuat proyek baru dengan dan menggunakan salah satu template yang sesuai.</p> 
+       <p>Jika Anda ingin mengatur proyek Anda untuk HDRP, pastikan Anda memiliki paket yang diperlukan dipasang. Kemudian gunakan (<strong>Window</strong> &gt; <strong>Render Pipeline</strong> &gt; <strong>HD Render Pipeline Wizard</strong>) untuk mengatur proyek Anda dalam satu klik.</p> 
+       <h3>Extensibility</h3> 
+       <p>Jika Anda memiliki pengetahuan rendering, akrab dengan C #, dan perlu sepenuhnya menyesuaikan renderer untuk Proyek Anda, Anda dapat bereksperimen dengan konsep SRP untuk membuat Pipa Render Scriptable Custom Anda sendiri. Pipa Render Universal sangat mudah untuk memanjang, karena perpustakaan naungannya yang lebih kecil dan kemampuan untuk menyuntikkan, menghapus dan menukarkan melewati dengan cepat.</p> 
+       <h3>Compatibility</h3> 
+       <p>Mencapai materi proyek Anda dari Pipeline Render Built-In ke HDRP atau URP relatif mudah di Unity, berkat konverter bahan 1-klik di bawah <strong>Edit</strong> &gt; <strong>Render Pipeline</strong> &gt; <strong>Upgrade…</strong>. Perhatikan bahwa itu adalah tindakan yang tidak dapat dibalik. Menyiapkan proyek Anda sebelumnya sangat dianjurkan!</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BestPracticeLightingPipeline9.png" alt=""> 
+       </figure> 
+       <p>Namun demikian, naungan kustom harus diangkut dengan tangan, sehingga transisi dari Pipeline Render Built-In ke HDRP atau URP selama produksi mungkin memakan waktu, tergantung pada jumlah naungan kustom yang harus Anda tulis.</p> 
+       <p>Selain itu, karena HDRP lebih benar daripada Pipeline Render Built-In, terutama mengenai atenuasi dan distribusi cahaya, Anda tidak boleh mengharapkan proyek Anda terlihat identik setelah beralih ke HDRP.</p> 
+       <p>Selanjutnya, HDRP dan URP tidak kompatibel silang, karena mereka tidak berbagi fitur rendering yang sama. Mencapai proyek Anda dari HDRP ke URP dan sebaliknya dimungkinkan, tetapi tidak operasi 1-klik dan akan memerlukan pekerjaan manual dari pencahayaan, bahan, dan naungan!</p> 
+       <h2>Sistem Penerangan Global</h2> 
+       <p>Dua sistem Penerangan Global yang tersedia dalam Unity adalah:</p> 
+       <ol> 
+        <li><p> <a class="tooltipMoreInfoLink" href="realtime-gi-using-enlighten.html">Penerangan Global Realtime</a>: Sistem ini dibangun pada <span class="tooltip"><strong>Enlighten</strong><span class="tooltiptext">Sistem pencahayaan oleh Geomerics yang digunakan dalam Unity untuk lightmapping dan untuk Mencerahkan Penerangan Global Realtime. <a href="https://www.siliconstudio.co.jp/en/products-service/enlighten/">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Enlighten">Glossary</a></span></span></span>, solusi perantara pihak ketiga. Hal ini memungkinkan Anda untuk menyesuaikan pencahayaan Anda secara real-time jika Anda melakukan prekompute dan tidak memodifikasi <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> di adegan Anda dengan pengaturan <strong>ContributeGI</strong> diaktifkan. Lihat dan untuk informasi kompatibilitas spesifik untuk pipa render skrip. Kecuali ditentukan, Pipeline Render Built-In mendukung semua fitur yang dijelaskan dalam artikel ini.</p></li> 
+        <li><p>Penerangan Global Baked: Ketika Anda menggunakan sistem ini, Data pencahayaan bak Unity ke tekstur yang disebut lightmaps, dan ke dalam Probe Cahaya dan ke dalam probe refleksi. Ada dua lightmappers: Enlighten Baked Global Illumination (deprecated) dan Progresif Lightmapper (CPU atau GPU). Lihat dan dokumentasi untuk informasi kompatibilitas spesifik untuk pipa render skrip. Kecuali ditentukan, Pipeline Render Built-In mendukung semua fitur yang dijelaskan dalam artikel ini.</p></li> 
+       </ol> 
+       <p>Progresif Lightmapper menghitung nilai pencahayaan tidak langsung menggunakan penginapan jalur. Hal ini dapat memprioritaskan pencahayaan yang mempengaruhi benda-benda yang terlihat pada kamera <span class="tooltip"><strong>scene view</strong><span class="tooltiptext">Tampilan interaktif ke dunia yang Anda buat. Anda menggunakan Adegan Lihat untuk memilih dan posisi pemandangan, karakter, kamera, lampu, dan semua jenis lain dari Game Object. <a class="tooltipMoreInfoLink" href="UsingTheSceneView.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#SceneView">Glossary</a></span></span></span>. Meskipun hanya memperbarui pencahayaan untuk bagian-bagian lightmaps meningkatkan waktu bake secara keseluruhan, itu juga memungkinkan Anda untuk lebih cepat menyalakan desain pencahayaan Anda.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BestPracticeLightingPipeline4.svg" alt=""> 
+       </figure> 
+       <p>Untuk informasi lebih lanjut tentang fitur pencahayaan di Pipa Render Scriptable, lihat dan .</p> 
+       <h3>statis versus dinamis</h3> 
+       <p>Tidak peduli sistem Penerangan Global yang Anda gunakan, Unity hanya akan mempertimbangkan benda-benda yang ditandai selama baking/precomputing pencahayaan. Objek dinamis (yaitu non-statis) harus bergantung pada Probe Cahaya yang Anda letakkan di seluruh adegan untuk menerima pencahayaan tidak langsung.</p> 
+       <p>Karena baking/precomputing dari pencahayaan adalah proses yang relatif lambat, hanya aset besar dan kompleks dengan variasi pencahayaan yang berbeda, seperti cekung dan bentuk diri, harus ditandai sebagai "Contribute GI". Mesh kecil dan cembung yang menerima pencahayaan homogen tidak boleh ditandai seperti itu, dan mereka harus, oleh karena itu, menerima pencahayaan tidak langsung dari yang menyimpan perkiraan sederhana dari pencahayaan. Objek dinamis yang lebih besar dapat mengandalkan, untuk menerima pencahayaan tidak langsung lokal yang lebih baik. Membatasi jumlah objek yang ditandai sebagai "Contribute GI" di tempat kejadian Anda benar-benar penting untuk meminimalkan waktu baking sambil mempertahankan kualitas pencahayaan yang memadai. Anda dapat mempelajari lebih lanjut tentang proses optimasi ini dan pentingnya pencahayaan Probe dalam hal ini.</p> 
+       <h3>Warning</h3> 
+       <p>Editor Unity dan Pemain memungkinkan Anda untuk menggunakan Penerangan Global Enlighten Realtime dan pencahayaan panggang pada saat yang sama.</p> 
+       <p>Namun, secara bersamaan memungkinkan fitur-fitur ini sangat meningkatkan waktu baking dan penggunaan memori pada runtime, karena mereka tidak menggunakan set data yang sama. Anda dapat mengharapkan perbedaan visual antara cahaya tidak langsung yang Anda miliki dan cahaya tidak langsung yang disediakan oleh Enlighten Realtime Global Illumination, terlepas dari lightmapper yang Anda gunakan untuk memanggang. Hal ini karena Enlighten Realtime Global Illumination sering beroperasi pada resolusi yang berbeda secara signifikan daripada backends baking Unity, dan bergantung pada teknik yang berbeda untuk mensimulasikan pencahayaan tidak langsung.</p> 
+       <p>Jika Anda ingin menggunakan Penerangan Global Enlighten Realtime dan pencahayaan panggang pada saat yang sama, membatasi penggunaan simultan dari kedua sistem pencahayaan global untuk platform high-end dan / atau untuk proyek yang memiliki adegan yang dikontrol erat dengan biaya yang dapat diprediksi. Hanya pengguna ahli yang memiliki pemahaman yang sangat baik tentang semua pengaturan pencahayaan dapat secara efektif menggunakan pendekatan ini. Akibatnya, memilih salah satu dari dua sistem pencahayaan global biasanya merupakan strategi yang lebih aman untuk sebagian besar proyek. Menggunakan kedua sistem jarang dianjurkan.</p> 
+       <h3>Mode cahaya</h3> 
+       <p>Properti Mode dari komponen Cahaya adalah sumber kebingungan yang umum.</p> 
+       <p>Ada tiga <span class="tooltip"><a class="tooltipMoreInfoLink" href="LightModes.html">Mode cahaya</a><span class="tooltiptext">Sifat ringan yang menentukan penggunaan Cahaya. Bisa diatur ke Realtime, Baked dan Campuran. <a href="LightModes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#LightMode">Glossary</a></span></span></span> yang tersedia dalam <a href="class-Light.html">Inspektur cahaya</a>:</p> 
+       <ol> 
+        <li> <a href="LightMode-Baked.html">Baked</a>: Pencahayaan langsung dan tidak langsung dari lampu ini dipanggang ke peta ringan, yang dapat menjadi proses memakan waktu. Tidak ada biaya runtime untuk memproses lampu ini, namun menerapkan peta cahaya yang dihasilkan ke tempat kejadian memiliki biaya kecil.</li> 
+        <li> <a href="LightMode-Realtime.html">Realtime</a>: Pencahayaan langsung dan bayangan dari lampu ini real-time dan oleh karena itu tidak dipanggang ke peta lampu. Biaya runtime mereka dapat tinggi, tergantung pada kompleksitas adegan, jumlah lampu pengecoran bayangan, jumlah lampu tumpang tindih, dll. Selanjutnya, jika Anda mengaktifkan Enlighten Realtime Global Illumination, biaya kinerja lebih lanjut akan dikeluarkan untuk memperbarui pencahayaan tidak langsung pada runtime.</li> 
+        <li> <a href="LightMode-Mixed.html">Mixed</a>: Ini adalah mode hybrid yang menawarkan campuran fitur baked dan real-time, seperti pencahayaan tidak langsung panggang dan pencahayaan langsung real-time. Perilaku semua lampu campuran di Adegan Anda dan dampak kinerja mereka tergantung pada <a href="lighting-mode.html">Mode pencahayaan</a> untuk adegan itu.</li> 
+       </ol> 
+       <p>Penting untuk dicatat bahwa mode cahaya hanya relevan jika sistem Penerangan Global Baked diaktifkan. Jika Anda tidak menggunakan sistem iluminasi global atau hanya menggunakan sistem Iluminasi Global Enlighten, maka semua lampu Baked dan Campuran akan berperilaku meskipun properti Mode mereka diatur ke Realtime.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BestPracticeLightingPipeline7.svg" alt=""> 
+       </figure> 
+       <p>Diagram berikut menggabungkan flowchart keputusan dengan tabel perbandingan; dapat membantu Anda memutuskan mode cahaya mana yang sesuai setiap kali cahaya baru ditambahkan ke dalam adegan.</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BestPracticeLightingPipeline12.svg" alt=""> 
+       </figure> 
+       <h3>Mode Pencahayaan</h3> 
+       <p>Seperti yang Anda lihat di diagram sebelumnya, semua Lampu Campuran di Adegani memiliki kemampuan baked dan real-time tertentu, tergantung pada Mode Pencahayaan yang Anda pilih di jendela Pencahayaan.</p> 
+       <p>Ada tiga mode untuk dipilih:</p> 
+       <ol> 
+        <li>Subtractive</li> 
+        <li>Baked Indirect</li> 
+        <li>Shadowmask</li> 
+       </ol> 
+       <p>Shadowmask Lighting Mode memiliki dua pengaturan kualitas:</p> 
+       <ol> 
+        <li>Shadowmask</li> 
+        <li>Jarak Shadowmask</li> 
+       </ol> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/BestPracticeLightingPipeline5.svg" alt=""> 
+       </figure> 
+       <p>Saat menggunakan fitur HDRP, fitur <span class="tooltip"><strong>Shadowmask</strong><span class="tooltiptext">Tekstur yang berbagi tata letak UV yang sama dan resolusi dengan peta cahaya yang sesuai. <a href="LightMode-Mixed-Shadowmask.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shadowmask">Glossary</a></span></span></span> diaktifkan dalam Aset HDRP yang ditetapkan dalam pengaturan Grafik; maka harus diaktifkan khusus untuk kamera Anda (s) melalui .</p> 
+       <h2>Tabel perbandingan pipa Render</h2> 
+       <p>Lihat dan dokumentasi untuk informasi kompatibilitas spesifik untuk pipa render skrip. Kecuali ditentukan, Pipeline Render Built-In mendukung semua fitur yang dijelaskan dalam artikel ini.</p> 
+       <h2>skenario pencahayaan</h2> 
+       <p>Sekarang kami telah memperkenalkan pipa render dan fitur pencahayaan utama, mari kita lihat beberapa contoh proyek dan melihat pengaturan mana yang bisa digunakan untuk menyalakannya. Karena setiap proyek unik, Anda mungkin menggunakan sedikit pilihan berbeda berdasarkan kebutuhan Anda.</p> 
+       <h3>Sitemap Prototipe atau previsualisasi cepat</h3> 
+       <p>Jika Anda bergantung pada <span class="tooltip"><strong>Asset Store</strong><span class="tooltiptext">Sebuah perpustakaan yang berkembang dari aset gratis dan komersial yang diciptakan oleh Unity dan anggota komunitas. Menawarkan berbagai aset, dari tekstur, model dan animasi ke seluruh contoh proyek, tutorial dan ekstensi Editor. <a class="tooltipMoreInfoLink" href="AssetStore.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AssetStore">Glossary</a></span></span></span> untuk membangun prototipe Anda, Pipeline Render Built-In bisa menjadi satu-satunya pipa render yang cocok, karena sebagian besar aset yang ditemukan di Toko tidak sepenuhnya kompatibel dengan HDRP dan URP; tidak ada, kompatibilitas aset akan meningkatkan waktu. Jika Anda membangun semua aset dari tanah dan sudah memiliki ide yang jelas dari persyaratan proyek Anda, maka Anda bisa memilih salah satu dari dua SRP (yaitu URP atau HDRP) atau bahkan membuat satu kustom.</p> 
+       <p>Ketika Anda berada di tahap awal (pre-) produksi dan membutuhkan giliran cepat dan fleksibilitas maksimum untuk penerangan, Anda mungkin lebih suka pendekatan real-time penuh yang tidak memerlukan prakomputasi, oleh karena itu Anda mungkin ingin mematikan baik Baked Global Illumination dan Enlighten Realtime Global Illumination. Untuk meringankan kurangnya pencahayaan tidak langsung yang tepat, Anda dapat mengaktifkan Ruang Layar <span class="tooltip"><strong>Ambient Occlusion</strong><span class="tooltiptext">Metode perkiraan berapa banyak cahaya ambient (cahaya tidak datang dari arah tertentu) dapat memukul titik di permukaan.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Ambientocclusion">Glossary</a></span></span></span>: itu dapat membantu tanah objek di tempat kejadian dengan menawarkan bayangan kontak real-time murah.</p> 
+       <h3>2. Game strategi 3D Mobile</h3> 
+       <p>Jika Anda menargetkan perangkat seluler, URP bisa menjadi kandidat yang bagus untuk memastikan kinerja yang solid untuk permainan Anda. Ini dalam banyak kasus mungkin untuk menyesuaikan URP sesuai dengan kebutuhan spesifik permainan Anda, dengan bantuan dari programmer grafis.</p> 
+       <p>The Built-In Render Pipeline dan URP kedua mendukung Shadowmask Lighting Mode yang memungkinkan untuk Anda untuk memanggang bake untuk objek statis sambil tetap memungkinkan benda-benda dinamis untuk melemparkan bayangan real-time. Jika Shadowmasks terlalu mahal untuk proyek Anda, Anda dapat jatuh kembali ke mode Subtractive termurah. Akhirnya, jalan rendering ke depan mungkin pilihan terbaik jika Anda memiliki sejumlah lampu yang sangat kecil di tingkat Anda, dan jika Anda menargetkan perangkat keras yang lebih tua.</p> 
+       <h3>3. Juni AAA koridor shooter (waktu tetap hari)</h3> 
+       <p>Jika Anda bertujuan untuk visual berkualitas AAA pada PC dan konsol untuk penembakan orang pertama linier Anda, HDRP harus menjadi pipa render yang disukai. Sekali lagi, dengan bantuan programmer grafis, SRP kustom juga bisa dikembangkan.</p> 
+       <p>Jika tingkat Anda mengandung banyak lampu pengecoran bayangan real-time (misalnya props cahaya yang merusak dan lampu bergerak), kemudian menggunakan sistem Penerangan Global Baked dengan mode Indirect Baked harus memastikan Anda mendapatkan pencahayaan tak langsung yang besar dari lampu directional campuran dan <span class="tooltip"><strong>Baked lights</strong><span class="tooltiptext">Komponen ringan yang properti mode ditetapkan ke Baked. Unity pre-kalculates penerangan dari Lampu Baked sebelum runtime, dan tidak termasuk dalam perhitungan pencahayaan runtime. <a class="tooltipMoreInfoLink" href="LightMode-Baked.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#BakedLights">Glossary</a></span></span></span> dalam prop cahaya statis. Jika tingkat Anda terdiri dari proporsi yang lebih besar dari lampu pengecoran bayangan tetap, maka pendekatan dengan Shadowmasks bisa direkomendasikan karena HDRP menawarkan mode hybrid Shadowmask yang besar yang memberi Anda kendali lebih atas campuran antara bayangan real-time dan dipanggang.</p> 
+       <p>Jika Anda juga berencana untuk mendukung Nintendo Switch, kemudian menggunakan URP akan dianjurkan, sehingga Anda dapat mendukung sebagian besar platform game di pasar dan tidak harus melalui proses port yang berpotensi membosankan dari HDRP ke URP, atau sebaliknya.</p> 
+       <h3>4. Oktober Pertempuran Royale ( siklus malam hari)</h3> 
+       <p>Jika Anda berencana untuk melepaskan game royale pertempuran untuk PC dan konsol, yang memiliki lingkungan skala besar dan pencahayaan dinamis penuh, Anda harus memilih HDRP, atau memperpanjangnya untuk menyesuaikan pipa rendering ke proyek Anda. Anda bisa mempertimbangkan URP jika Anda tidak bertujuan untuk kesetiaan visual AAA dan menargetkan perangkat seluler atau sistem dengan spesifikasi yang lebih rendah.</p> 
+       <p>Untuk skenario tertentu ini, jika Anda menggunakan Pipeline Render Built-in, mengaktifkan Penerangan Global Enlighten Realtime dan sistem Penerangan Global Baked tidak dianjurkan, karena overhead yang dihasilkan dalam hal manajemen kinerja dan adegan untuk tingkat immense bisa bermasalah. argumen lain terhadap penggunaan sistem pencahayaan global adalah sifat yang tidak dapat diprediksi dari permainan multiplayer berskala besar ini: estimasi kinerja adalah misalnya lebih sulit daripada di tingkat linier yang sangat discript.</p> 
+       <h2>kata-kata akhir</h2> 
+       <p>Lansekap rendering telah berubah secara radikal dalam Unity selama beberapa tahun terakhir, berkat pengenalan pipa Render Scriptable. Oleh karena itu, menjaga semua perubahan ini dan implikasi mereka untuk pipa pencahayaan dapat melelahkan.</p> 
+       <p>Semoga, panduan ini dan banyak ilustrasi telah memberi Anda pemahaman yang lebih baik tentang kemampuan setiap Render Pipeline sehingga Anda dapat secara percaya diri memulai proyek Anda di Unity dengan pengaturan rendering dan pencahayaan yang tepat!</p> 
+       <p>Anda dapat mempelajari lebih lanjut tentang pencahayaan di Unity dan pipa rendering dengan halaman berikut:</p> 
+       <ul> 
+        <li><p> &amp; </p></li> 
+        <li><p></p></li> 
+        <li><p></p></li> 
+        <li><p></p></li> 
+        <li><p></p></li> 
+        <li><p></p></li> 
+       </ul> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="srp-setting-render-pipeline-asset.html"></a></span> 
+         <div class="tip">
+           Bagaimana cara mendapatkan, mengatur, dan mengkonfigurasi pipa render aktif 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="built-in-render-pipeline.html"></a></span> 
+         <div class="tip">
+           Menggunakan Pipa Render Built-in 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

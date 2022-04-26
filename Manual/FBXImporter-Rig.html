@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Tab Rig</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="models.html">Models</a></li> 
+         <li><a href="models-importing.html">Mengimpor model ke Unity</a></li> 
+         <li><a href="class-FBXImporter.html">Model Jendela Pengaturan impor</a></li> 
+         <li>Rig tab</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="FBXImporter-Model.html"></a></span> 
+          <div class="tip">
+            tab model 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="class-Avatar.html"></a></span> 
+          <div class="tip">
+            WordPress.org 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Rig tab</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Pengaturan pada tab <strong>Rig</strong> menentukan bagaimana peta Unity deformer ke <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a class="tooltipMoreInfoLink" href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mesh">Glossary</a></span></span></span> dalam Model impor sehingga Anda dapat menghidupkannya. Untuk karakter Humanoid, ini berarti <a href="ConfiguringtheAvatar.html">menetapkan atau membuat Avatar</a>. Untuk karakter non-Humanoid (<em>Generic</em>), ini berarti <a href="GenericAnimations.html">mengidentifikasi tulang akar dalam kerangka</a>.</p> 
+       <p>Secara default, ketika Anda memilih Model dalam tampilan <span class="tooltip"><strong>Project</strong><span class="tooltiptext">Dalam Unity, Anda menggunakan proyek untuk merancang dan mengembangkan permainan. Proyek menyimpan semua file yang terkait dengan permainan, seperti file aset dan Adegan. <a class="tooltipMoreInfoLink" href="2Dor3D.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Project">Glossary</a></span></span></span>, Unity menentukan yang paling cocok dengan model yang dipilih dan menampilkannya di tab <strong>Animation Type</strong>. Jika Unity tidak pernah mengimpor file, Jenis Animasi diatur ke <strong>Rig</strong>:<strong>None</strong>:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Rig-0.png" alt="No rig mapping"> 
+        <figcaption>
+          Tidak ada pemetaan rig 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Property:</strong></th> 
+          <th style="text-align:left;"><strong>Function:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Animation Type</strong></td> 
+          <td style="text-align:left;">Tentukan jenis animasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>None</strong></td> 
+          <td style="text-align:left;">Tidak ada presentasi animasi</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Legacy</strong></td> 
+          <td style="text-align:left;">Gunakan <a href="#LegacyRig">Sistem Animasi Legacy</a>. Impor dan menggunakan animasi seperti versi Unity 3.x dan sebelumnya.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Generic</strong></td> 
+          <td style="text-align:left;">Gunakan <a class="tooltipMoreInfoLink" href="#GenericRig">Sistem Animasi Generik</a> jika rig Anda adalah <em>non-humanoid</em> (dijatuhkan atau entitas apa pun untuk animasi). Unity memilih simpul akar tetapi Anda dapat mengidentifikasi tulang lain untuk digunakan sebagai <span class="tooltip"><strong>Root node</strong><span class="tooltiptext">Perubahan hierarki animasi yang memungkinkan Unity untuk menetapkan konsistensi antara klip Animasi untuk model generik. Hal ini juga memungkinkan Unity untuk benar campuran antara Animasi yang belum diberi wewenang “di tempat” (yang ada, di mana seluruh Model bergerak posisi dunia sambil memikat). <a href="AnimationRootMotionNodeOnImportedClips.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Rootnode">Glossary</a></span></span></span> bukan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Humanoid</strong></td> 
+          <td style="text-align:left;">Gunakan <a href="#HumanoidRig">Sistem Animasi Humanoid</a> jika rig Anda adalah <em>humanoid</em> (itu memiliki dua kaki, dua lengan dan kepala). Unity biasanya mendeteksi kerangka dan memetakannya ke Avatar dengan benar. Dalam beberapa kasus, Anda mungkin perlu mengatur perubahan <strong>Avatar Definition</strong> dan <strong>Configure</strong> pemetaan secara manual.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="GenericRig"></a></p> 
+       <h2>Jenis animasi generik</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Rig-1.png" alt="Your rig is non-humanoid (quadruped or any entity to be animated)"> 
+        <figcaption>
+          Rig Anda adalah 
+         <em>non-humanoid</em> (dijatuhkan atau entitas apa pun yang akan animasi) 
+        </figcaption> 
+       </figure> 
+       <p> <a class="tooltipMoreInfoLink" href="GenericAnimations.html">Animasi Generik</a> tidak menggunakan Avatar seperti <span class="tooltip"><strong>Humanoid animations</strong><span class="tooltiptext">Animasi menggunakan kerangka humanoid. Model humanoid umumnya memiliki struktur dasar yang sama, mewakili bagian artculate utama tubuh, kepala dan anggota badan. Ini memudahkan untuk memetakan animasi dari satu kerangka humanoid ke yang lain, memungkinkan penargetan ulang dan kinematik terbalik. <a href="ConfiguringtheAvatar.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Humanoidanimation">Glossary</a></span></span></span> lakukan. Karena kerangka dapat sewenang-wenang, Anda harus menentukan tulang mana adalah <strong>Root node</strong>. Akar node memungkinkan Unity untuk menetapkan konsistensi antara <span class="tooltip"><strong>Animation clips</strong><span class="tooltiptext">Animasi data yang dapat digunakan untuk karakter animasi atau animasi sederhana. Ini adalah bagian "unit" sederhana dari gerakan, seperti (salah satu contoh spesifik) "Idle", "Walk" atau "Run". <a href="class-AnimationClip.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#AnimationClip">Glossary</a></span></span></span> untuk model generik, dan berbaur dengan benar antara Animasi yang belum diberi wewenang “di tempat” (yaitu, di mana seluruh model bergerak posisi dunia sambil memikat).</p> 
+       <p>Tentukan simpul akar membantu Unity menentukan antara pergerakan tulang relatif satu sama lain, dan gerak akar node di dunia (dikendalikan dari <a href="../ScriptReference/MonoBehaviour.OnAnimatorMove.html">OnAnimatorMove</a>).</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Property:</strong></th> 
+          <th style="text-align:left;"><strong>Function:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Avatar Definition</strong></td> 
+          <td style="text-align:left;">Pilih di mana untuk mendapatkan definisi Avatar.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Create from this model</strong></td> 
+          <td style="text-align:left;">Buat Avatar berdasarkan model ini</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Copy from Other Avatar</strong></td> 
+          <td style="text-align:left;">Point to an Avatar di model lain.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Root node</strong></td> 
+          <td style="text-align:left;">Pilih tulang untuk digunakan sebagai simpul akar untuk Avatar ini. <br><br> Pengaturan ini hanya tersedia jika Anda mengatur <strong>Avatar Definition</strong> ke <strong>Create From This Model</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Source</strong></td> 
+          <td style="text-align:left;">Salin Avatar lain dengan rig identik untuk mengimpor klip animasinya. <br><br> Pengaturan ini hanya tersedia jika Anda mengatur <strong>Avatar Definition</strong> ke <strong>Copy from Other Avatar</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"> <a name="SkinWeights"></a><strong>Skin Weights</strong> </td> 
+          <td style="text-align:left;">Mengatur jumlah maksimum tulang yang dapat mempengaruhi simpul tunggal.<br><br>%</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Standard (4 Bones)</strong></td> 
+          <td style="text-align:left;">Gunakan pengaruh maksimum empat tulang. Ini adalah default, dan disarankan untuk kinerja.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Custom</strong></td> 
+          <td style="text-align:left;">Mengatur jumlah maksimum tulang Anda sendiri. <br><br> Ketika Anda memilih opsi ini, sifat <strong>Max Bones/Vertex</strong> dan <strong>Max Bone Weight</strong> muncul.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Max Bones/Vertex</strong></td> 
+          <td style="text-align:left;">Mengatur jumlah maksimum tulang per simpul untuk mempengaruhi simpul yang diberikan. Anda dapat mengatur antara 1 dan 32 tulang per simpul, tetapi semakin tinggi jumlah tulang yang Anda gunakan untuk mempengaruhi simpul, semakin besar biaya kinerja.<br><br> Pengaturan ini hanya tersedia Anda mengatur properti <strong>Skin Weights</strong> ke <strong>Custom</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Max Bone Weight</strong></td> 
+          <td style="text-align:left;">Mengatur ambang bawah untuk mempertimbangkan berat tulang. Perhitungan penimbangan mengabaikan sesuatu yang lebih kecil dari nilai ini, dan skala Unity hingga berat tulang lebih tinggi dari nilai ini hingga total 1.0.<br><br> Pengaturan ini hanya tersedia jika properti <strong>Skin Weights</strong> diatur ke <strong>Custom</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Optimize Game Object</strong></td> 
+          <td style="text-align:left;">Hapus dan menyimpan hirarki GameObject dari karakter impor di komponen Avatar dan Animator. Jika diaktifkan, SkinnedMeshRenderers karakter menggunakan kerangka internal sistem animasi Unity, yang meningkatkan kinerja karakter animasi. <br><br> Hanya tersedia jika <strong>Avatar Definition</strong> diatur ke <strong>Create From This Model</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Extra Transforms to Expose</strong></td> 
+          <td style="text-align:left;">Tentukan jalur Transform yang Anda inginkan Unity untuk mengabaikan ketika <strong>Optimize Game Object</strong> diaktifkan. Untuk informasi lebih lanjut, lihat <a href="#ExtraTransforms">Termasuk Transforms tambahan</a>.<br><br> Bagian ini hanya muncul ketika <strong>Optimize Game Object</strong> diaktifkan.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="HumanoidRig"></a></p> 
+       <h2>Jenis animasi Humanoid</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Rig-2.png" alt="Your rig is humanoid (it has two legs, two arms and a head)"> 
+        <figcaption>
+          Rig Anda adalah 
+         <em>humanoid</em> (itu memiliki dua kaki, dua lengan dan kepala) 
+        </figcaption> 
+       </figure> 
+       <p>Dengan pengecualian langka, model humanoid memiliki struktur dasar yang sama. Struktur ini merupakan bagian utama dari tubuh: kepala dan anggota badan. Langkah pertama untuk menggunakan <a class="tooltipMoreInfoLink" href="ConfiguringtheAvatar.html">Fitur animasi Humanoid</a> Unity adalah untuk <a href="class-Avatar.html">mengatur dan mengkonfigurasi</a>. Unity menggunakan Avatar untuk memetakan struktur tulang humanoid yang disederhanakan ke tulang yang sebenarnya hadir dalam kerangka Model.<span class="tooltip"><strong>Avatar</strong><span class="tooltiptext">Antarmuka untuk penargetan ulang animasi dari satu rig ke yang lain. <a href="ConfiguringtheAvatar.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Avatar">Glossary</a></span></span></span>. Unity uses the Avatar to map the simplified humanoid bone structure to the actual bones present in the Model’s skeleton. </p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Property:</strong></th> 
+          <th style="text-align:left;"><strong>Function:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Avatar Definition</strong></td> 
+          <td style="text-align:left;">Pilih di mana untuk mendapatkan definisi Avatar.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Create from this model</strong></td> 
+          <td style="text-align:left;">Buat Avatar berdasarkan model ini</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Copy from Other Avatar</strong></td> 
+          <td style="text-align:left;">Point to an Avatar di model lain.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Source</strong></td> 
+          <td style="text-align:left;">Salin Avatar lain dengan rig identik untuk mengimpor klip animasinya. <br><br> Hanya tersedia jika <strong>Avatar Definition</strong> diatur ke <strong>Copy from Other Avatar</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Configure…</strong></td> 
+          <td style="text-align:left;">Buka <a href="class-Avatar.html">Konfigurasi Avatar</a>. <br><br> Hanya tersedia jika <strong>Avatar Definition</strong> diatur ke <strong>Create From This Model</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Skin Weights</strong></td> 
+          <td style="text-align:left;">Properti ini identik dengan Model Humanoid dan Generik. Lihat dokumentasi tentang <a href="#SkinWeights">Berat kulit</a> di atas untuk informasi tentang hal itu.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Optimize Game Object</strong></td> 
+          <td style="text-align:left;">Hapus dan menyimpan hirarki GameObject dari karakter impor di komponen Avatar dan Animator. Jika diaktifkan, SkinnedMeshRenderers karakter menggunakan kerangka internal sistem animasi Unity, yang meningkatkan kinerja karakter animasi. <br><br> Hanya tersedia jika <strong>Avatar Definition</strong> diatur ke <strong>Create From This Model</strong>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Extra Transforms to Expose</strong></td> 
+          <td style="text-align:left;">Tentukan jalur Transform yang Anda inginkan Unity untuk mengabaikan ketika <strong>Optimize Game Object</strong> diaktifkan. Untuk informasi lebih lanjut, lihat <a href="#ExtraTransforms">Termasuk Transforms tambahan</a>.<br><br> Bagian ini hanya muncul ketika <strong>Optimize Game Object</strong> diaktifkan.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p><a name="ExtraTransforms"></a></p> 
+       <h2>Termasuk Transforms tambahan</h2> 
+       <p>Ketika Anda mengaktifkan properti <strong>Optimize Game Object</strong>, Unity mengabaikan Transform yang merupakan bagian dari hierarki tetapi tidak dipetakan dalam Avatar, untuk meningkatkan kinerja CPU. Namun, Anda dapat menandai node tertentu dalam hierarki <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> untuk menyertakan perhitungan menggunakan bagian <strong>Extra Transforms to Expose</strong>:</p> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/ExtraTransforms.png" alt="The Extra Transforms to Expose property appears when Optimize Game Objects is enabled"> 
+        <figcaption>
+          Perubahan Ekstra terhadap properti Expose muncul ketika Mengoptimalkan Objek Game diaktifkan 
+        </figcaption> 
+       </figure> 
+       <p>Sitemap Masukkan nama lengkap atau sebagian di kotak pencarian untuk menyaring daftar Transforms. Ini memudahkan untuk menavigasi melalui karakter dengan sejumlah besar tulang.<strong>(A)</strong> Enter the full or partial name in the search box to filter the list of Transforms. This makes it easier to navigate through characters with a large number of bones.</p> 
+       <p>Sitemap Aktifkan setiap Transformasi (bone skeleton) Anda ingin Unity untuk memasukkan perhitungan.<strong>(B)</strong> Enable each Transform (bones of a skeleton) you want Unity to include in calculations.</p> 
+       <p>Sitemap Gunakan tombol untuk membantu memilih Transforms tertentu. Misalnya, tombol <strong>(C)</strong> memilih atau memilih segalanya sekaligus (hanya pilihan saat ini, termasuk item yang disaring).<strong>Toggle All</strong> button selects or deselects everything at once (regardless of the current selection, including filtered items).</p> 
+       <p>Sitemap Gunakan tombol <strong>(D)</strong> untuk membatalkan pilihan Anda atau tombol <strong>Revert</strong> untuk menerapkan pengecualian ke Model.<strong>Apply</strong> button to apply the exceptions to the Model.</p> 
+       <p> <strong>Note</strong>: Dalam mode yang dioptimalkan, ekstraksi matriks Mesh yang dikupas adalah multi-threaded.</p> 
+       <p><a name="LegacyRig"></a></p> 
+       <h2>Jenis animasi Legacy</h2> 
+       <figure> 
+        <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/Rig-3.png" alt="Your rig uses the Legacy Animation System"> 
+        <figcaption>
+          Rig Anda menggunakan Sistem Animasi Legacy 
+        </figcaption> 
+       </figure> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;" colspan="2"><strong>Property:</strong></th> 
+          <th style="text-align:left;"><strong>Function:</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Generation</strong></td> 
+          <td style="text-align:left;">Pilih metode impor animasi.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Don’t Import</strong></td> 
+          <td style="text-align:left;">Tidak mengimpor animasi</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Store in Original Roots (Deprecated)</strong></td> 
+          <td style="text-align:left;">Sitemap Jangan gunakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Store in Nodes (Deprecated)</strong></td> 
+          <td style="text-align:left;">Sitemap Jangan gunakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Store in Root (Deprecated)</strong></td> 
+          <td style="text-align:left;">Sitemap Jangan gunakan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><strong>Store in Root (New)</strong></td> 
+          <td style="text-align:left;">Mengimpor animasi dan menyimpannya di node akar Model. Ini adalah pengaturan default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;" colspan="2"><strong>Skin Weights</strong></td> 
+          <td style="text-align:left;">Lihat dokumentasi tentang <a href="#SkinWeights">Berat kulit</a> di atas informasi tentang properti ini.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>Untuk informasi lebih lanjut tentang animasi legacy, lihat dokumentasi untuk <a href="Animations.html">Sistem Animasi Legacy</a>.</p> 
+       <hr> 
+       <ul> 
+        <li><span class="page-history"><strong>Skin Weights</strong> ditambahkan dalam <span class="search-words">NewIn20191</span></span></li> 
+        <li><span class="page-history"><span class="tooltip"><strong>Materials</strong><span class="tooltiptext">Aset yang menentukan bagaimana permukaan harus diberikan. <a class="tooltipMoreInfoLink" href="class-Material.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Material">Glossary</a></span></span></span> tab ditambahkan dalam <span class="search-words">NewIn20172</span></span></li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="FBXImporter-Model.html"></a></span> 
+         <div class="tip">
+           tab model 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="class-Avatar.html"></a></span> 
+         <div class="tip">
+           WordPress.org 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

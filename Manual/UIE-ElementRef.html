@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: referensi elemen UXML</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UIToolkits.html">Buat antarmuka pengguna (UI)</a></li> 
+         <li><a href="UIElements.html">UI Toolkit</a></li> 
+         <li><a href="UIE-UXML.html">Struktur UI dengan UX</a></li> 
+         <li>UXML elemen referensi</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UIE-LoadingUXMLcsharp.html"></a></span> 
+          <div class="tip">
+            Beban UXML dari C# skrip 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UIE-UQuery.html"></a></span> 
+          <div class="tip">
+            UQuery 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>UXML elemen referensi</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Tabel berikut menguraikan elemen UXML yang tersedia di ruang nama <code>UnityEngine.UIElements</code> dan <code>UnityEditor.UIElements</code>.</p> 
+       <h2>Elemen dasar</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Element</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+          <th style="text-align:left;"><strong>Namespace</strong></th> 
+          <th style="text-align:left;"><strong>Permitted child elements</strong></th> 
+          <th style="text-align:left;"><strong>Attributes</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>VisualElement</code></td> 
+          <td style="text-align:left;">Kelas dasar untuk semua elemen visual.</td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;">Jumlah <code>VisualElement</code> </td> 
+          <td style="text-align:left;"> <code>class</code>: Daftar nama terpisah ruang. <br><code>style</code>: USS langsung dengan gaya elemen.<br><code>name</code>: Pengidentifikasi string yang unik untuk elemen ini. <br><code>picking-mode</code>: Set ke <code>Position</code> atau <code>Ignore</code>. Nilai default adalah <code>Position</code>.<br><code>tooltip</code>: Ketika mouse hovers elemen tampilan string.<br><code>focusable</code>: Sebuah Boolean yang menunjukkan apakah elemennya terfokus. default diatur ke <code>false</code> (tidak fokus). Ini menggantikan elemen obsolete <code>focus-index</code>.<br><code>tabindex</code>: Integer yang menentukan posisi tabbing elemen dan posisi di pohon. Nilai positif meningkatkan prioritas tabbing. default adalah 0. Ini menggantikan elemen obsolete <code>focus-index</code>.<br><code>view-data-key</code>: Sebuah string yang mendefinisikan kunci yang digunakan untuk serialisasi elemen. Login Elemen ini juga menerima atribut lain.<br>This element also accepts any other attribute.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>BindableElement</code></td> 
+          <td style="text-align:left;">Elemen yang dapat terikat pada <code>SerializedProperty</code>. Nilai properti dan nilai yang ditampilkan disinkronkan.</td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;">Jumlah <code>VisualElement</code> </td> 
+          <td style="text-align:left;"> <code>binding-path</code>: Jalan properti yang elemen ini terikat.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Utilities</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Element</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+          <th style="text-align:left;"><strong>Namespace</strong></th> 
+          <th style="text-align:left;"><strong>Permitted child elements</strong></th> 
+          <th style="text-align:left;"><strong>Attributes</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>Box</code></td> 
+          <td style="text-align:left;">Elemen ini mirip dengan <code>VisualElement</code> tetapi menarik kotak di sekitar kontennya.</td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;">Jumlah <code>VisualElement</code> </td> 
+          <td style="text-align:left;">Semua atribut dari <code>VisualElement</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>TextElement</code></td> 
+          <td style="text-align:left;">Elemen yang menampilkan teks.</td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>VisualElement</code><br><code>text</code>: Teks elemen harus ditampilkan.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>Label</code></td> 
+          <td style="text-align:left;">Label teks.</td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut dari <code>TextElement</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>Image</code></td> 
+          <td style="text-align:left;">Menampilkan gambar.</td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut dari <code>VisualElement</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>IMGUIContainer</code></td> 
+          <td style="text-align:left;">Gambar konten <a href="GUIScriptingGuide.html">IMGUI</a> content</td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut dari nilai default <code>VisualElement</code><br><code>focus-index</code> adalah <code>0</code><br> <code>focusable</code> nilai default adalah <code>true</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>Foldout</code></td> 
+          <td style="text-align:left;">Elemen yang memiliki tombol toggle untuk menunjukkan atau menyembunyikan kontennya.</td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;">Jumlah <code>VisualElement</code> </td> 
+          <td style="text-align:left;">Semua atribut dari <code>BindableElement</code> </td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Templates</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Element</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+          <th style="text-align:left;"><strong>Namespace</strong></th> 
+          <th style="text-align:left;"><strong>Permitted child elements</strong></th> 
+          <th style="text-align:left;"><strong>Attributes</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>Template</code></td> 
+          <td style="text-align:left;">Sebuah referensi ke template UXML lain yang dapat disingkat menggunakan elemen <code>Instance</code>.</td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;"> <code>name</code>: Pengidentifikasi string unik untuk elemen ini<br><code>path</code>: Jalur file UXML untuk memuat</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>Instance</code></td> 
+          <td style="text-align:left;"><code>Template</code> </td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;"> <code>template</code>: <code>name</code> dari <code>Template</code> untuk instaniate</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>TemplateContainer</code></td> 
+          <td style="text-align:left;">Kotak template.</td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>BindableElement</code><br><code>template</code>: Pengidentifikasi string untuk template ini</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Controls</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Element</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+          <th style="text-align:left;"><strong>Namespace</strong></th> 
+          <th style="text-align:left;"><strong>Permitted child elements</strong></th> 
+          <th style="text-align:left;"><strong>Attributes</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>BaseField&lt;T&gt;</code></td> 
+          <td style="text-align:left;">Kelas dasar abstrak dari semua bidang.</td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut dari <code>BindableElement</code><br> <code>focus-index</code> nilai default adalah <code>0</code><br> <code>focusable</code> nilai default adalah <code>true</code><br> <code>label</code>: Teks label yang terkait dengan bidang</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>BaseFieldTraits&lt;ValueType, UxmlType&gt;</code></td> 
+          <td style="text-align:left;"></td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>BaseField&lt;ValueType&gt;</code><br><code>value</code>: Nilai dasar lapangan, tipe <code>ValueType</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>Button</code></td> 
+          <td style="text-align:left;">Tombol push standar.</td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut dari <code>TextElement</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>RepeatButton</code></td> 
+          <td style="text-align:left;">Tombol yang mengeksekusi aksi berulang kali saat ditekan.</td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>TextElement</code><br> <code>delay</code>: Keterlambatan awal dalam mili detik sebelum elemen mengeksekusi aksi dieksekusi. Nilai default adalah <code>0</code><br><code>interval</code>: Interval dalam mili detik antara mengulangi setiap tindakan. Nilai default adalah <code>0</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>Toggle</code></td> 
+          <td style="text-align:left;">Tombol toggle, ditampilkan sebagai kotak centang.</td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>BaseFieldTraits&lt;bool, UxmlBoolAttributeDescription&gt;</code><br> <code>text</code>: Label samping kanan dari toggle.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>Scroller</code></td> 
+          <td style="text-align:left;">Bar gulir.</td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>VisualElement</code><br> <code>low-value</code>: Nilai minimum scroller<br> <code>high-value</code>: Nilai maksimum dari scroller<br> <code>direction</code>: Set ke <code>Horizontal</code> atau <code>Vertical</code>. default adalah <code>Vertical</code>.<br> <code>value</code>: Posisi kursor scroller</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>Slider</code></td> 
+          <td style="text-align:left;">slider.</td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>BaseFieldTraits&lt;float, UxmlFloatAttributeDescription&gt;</code><br> <code>low-value</code>: Nilai minimum slider<br> <code>high-value</code>: Nilai maksimum slider<br> <code>direction</code>: Set ke <code>Horizontal</code> atau <code>Vertical</code>. default adalah <code>Horizontal</code>.<br> <code>page-size</code>: Ukuran halaman slider</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>SliderInt</code></td> 
+          <td style="text-align:left;">Slider untuk nilai integer.</td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>BaseFieldTraits&lt;int, UxmlIntAttributeDescription&gt;</code><br> <code>low-value</code>: Nilai minimum slider<br> <code>high-value</code>: Nilai maksimum slider<br> <code>direction</code>: Set ke <code>Horizontal</code> atau <code>Vertical</code>. default adalah <code>Horizontal</code>.<br> <code>page-size</code>: Ukuran halaman slider</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>MinMaxSlider</code></td> 
+          <td style="text-align:left;">Slider yang memungkinkan pengguna menentukan nilai minimum dan maksimum.</td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>BaseField&lt;Vector2&gt;</code><br> <code>low-limit</code>: Nilai minimum scroller<br> <code>high-limit</code>: Nilai maksimum dari scroller<br> <code>min-value</code>: Nilai minimum kursor slider<br><code>max-value</code>: Nilai maksimum kursor slider</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>EnumField</code></td> 
+          <td style="text-align:left;">Bidang yang mengambil nilai string dari <code>Enum</code> yang mendasari.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>BaseField&lt;Enum&gt;</code><br> <code>type</code>: Sebuah string mewakili tipe C# dari <code>Enum</code> yang mendasari. Jika jenis berada dalam perakitan pengguna, nama perakitan harus ditambahkan ke nama tipe: <code>MyNamespace.MyEnum, MyAssembly</code>. string <code>type</code> selalu diperlukan. <br><code>value</code>: string yang mewakili nilai lapangan</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>MaskField</code></td> 
+          <td style="text-align:left;">Menu popup yang pengguna dapat memilih grup nilai dari.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>BaseField&lt;int&gt;</code><br> <code>choices</code>: Daftar terpisah comma hingga 32 pilihan untuk ditampilkan di menu popup<br> <code>value</code>: Integer yang mewakili nilai lapangan sebagai masker 32-bit.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>LayerField</code></td> 
+          <td style="text-align:left;">Menu popup yang pengguna dapat memilih <span class="tooltip"><a class="tooltipMoreInfoLink" href="Layers.html">layer</a><span class="tooltiptext">Lapisan dalam Unity dapat digunakan untuk memilih kelompok GameObjects secara selektif atau keluar dari proses atau perhitungan tertentu. Ini termasuk rendering kamera, pencahayaan, tabrakan fisika, atau perhitungan kustom dalam kode Anda sendiri. <a href="Layers.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Layer">Glossary</a></span></span></span> dari.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>BaseField&lt;int&gt;</code><br> <code>value</code>: Integer yang mewakili nilai lapangan (nomor layer yang dipilih).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>LayerMaskField</code></td> 
+          <td style="text-align:left;">Menu popup yang pengguna dapat memilih grup <a href="Layers.html">layers</a> dari.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut dari <code>MaskField</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>TagField</code></td> 
+          <td style="text-align:left;">Menu popup yang pengguna dapat memilih <span class="tooltip"><a class="tooltipMoreInfoLink" href="Tags.html">tag</a><span class="tooltiptext">Kata referensi yang dapat Anda berikan kepada satu atau lebih GameObjects untuk membantu Anda mengidentifikasi GameObjects untuk tujuan scripting. Misalnya, Anda mungkin mendefinisikan dan “Edible” Tag untuk setiap item pemain dapat makan dalam permainan Anda. <a href="Tags.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Tag">Glossary</a></span></span></span> dari.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>BaseField&lt;string&gt;</code><br><code>value</code>: Sebuah string yang mewakili nilai lapangan (nama tag yang dipilih).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>ProgressBar</code></td> 
+          <td style="text-align:left;">Sebuah progress bar yang menunjukkan perkembangan operasi.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>BindableElement</code><br><code>low-value</code>: A mengapung yang mewakili nilai terendah bar kemajuan. default adalah 0.<br><code>high-value</code>: A mengapung yang mewakili nilai tertinggi dari progress bar. default adalah 100.<br><code>title</code>: Sebuah string yang mewakili judul progress bar.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Masukan teks</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Element</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+          <th style="text-align:left;"><strong>Namespace</strong></th> 
+          <th style="text-align:left;"><strong>Permitted child elements</strong></th> 
+          <th style="text-align:left;"><strong>Attributes</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>TextInputBaseField&lt;TValueType&gt;</code></td> 
+          <td style="text-align:left;">Kelas dasar abstrak untuk semua bidang teks.</td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>BaseFieldTraits&lt;string, UxmlStringAttributeDescription&gt;</code><br><code>text</code>: Nilai teks dari field<br><code>max-length</code>: Jumlah karakter maksimum yang dapat mengandung lapangan. Nilai default <code>-1</code> tidak ada batasan pada panjang teks.<br> <code>password</code>: Bosan yang menunjukkan apakah konten lapangan harus ditampilkan atau ditampilkan menggunakan karakter <code>maskCharacter</code>. <code>false</code> adalah pengaturan default. <br><code>mask-character</code>: Karakter yang menampilkan konten lapangan ketika <code>password</code> adalah <code>true</code>. Default adalah karakter <code>*</code>.<br><code>readonly</code>: Bosan yang menunjukkan bahwa lapangan dibaca. Nilai default adalah <code>false</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>TextField</code></td> 
+          <td style="text-align:left;">Bidang teks yang dapat diedit.</td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>TextInputBaseField&lt;string&gt;</code><br> <code>multiline</code>: Bosan yang menunjukkan apakah bidang teks menampilkan teksnya di beberapa garis. Set ke <code>true</code> untuk ditampilkan pada beberapa garis, atau set ke <code>false</code> untuk menampilkan atau pada satu baris, mengabaikan setiap garis istirahat dalam teks. <code>false</code> adalah default.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>IntegerField</code></td> 
+          <td style="text-align:left;">Bidang teks yang menerima nilai integer (32-bit).</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut dari <code>BaseFieldTraits&lt;int, UxmlIntAttributeDescription&gt;</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>LongField</code></td> 
+          <td style="text-align:left;">Bidang teks yang menerima nilai integer yang panjang (64 bit).</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut dari <code>BaseFieldTraits&lt;long, UxmlLongAttributeDescription&gt;</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>FloatField</code></td> 
+          <td style="text-align:left;">Bidang teks yang menerima nilai titik mengambang presisi tunggal.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut dari <code>BaseFieldTraits&lt;float, UxmlFloatAttributeDescription&gt;</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>DoubleField</code></td> 
+          <td style="text-align:left;">Bidang teks yang menerima nilai titik mengambang presisi ganda.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut dari <code>BaseFieldTraits&lt;double, UxmlDoubleAttributeDescription&gt;</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>Vector2Field</code></td> 
+          <td style="text-align:left;">Satu set dua bidang teks yang menerima nilai titik mengambang untuk mengedit nilai <code>Vector2</code>.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>BaseField&lt;Vector2&gt;</code><br><code>x</code>: Nilai X koordinat<br><code>y</code>: Nilai koordinat Y</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>Vector2IntField</code></td> 
+          <td style="text-align:left;">Satu set dua bidang teks yang menerima nilai integer untuk mengedit nilai <code>Vector2Int</code>.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>BaseField&lt;Vector2Int&gt;</code><br><code>x</code>: Nilai X koordinat<br><code>y</code>: Nilai koordinat Y</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>Vector3Field</code></td> 
+          <td style="text-align:left;">Satu set dari tiga bidang teks yang menerima nilai titik mengambang untuk mengedit nilai <code>Vector3</code>.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>BaseField&lt;Vector3&gt;</code><br><code>x</code>: Nilai X koordinat<br><code>y</code>: Nilai Yordinat<br><code>z</code>: Nilai koordinat Z</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>Vector3IntField</code></td> 
+          <td style="text-align:left;">Satu set tiga bidang teks yang menerima nilai integer untuk mengedit nilai <code>Vector3Int</code>.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>BaseField&lt;Vector3Int&gt;</code><br><code>x</code>: Nilai X koordinat<br><code>y</code>: Nilai Yordinat<br><code>z</code>: Nilai koordinat Z</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>Vector4Field</code></td> 
+          <td style="text-align:left;">Satu set empat bidang teks yang menerima nilai titik mengambang untuk mengedit nilai <code>Vector4</code>.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>BaseField&lt;Vector4&gt;</code><br><code>x</code>: Nilai X koordinat<br><code>y</code>: Nilai Yordinat<br><code>z</code>: Nilai Z koordinat<br><code>w</code>: Nilai koordinat W</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>RectField</code></td> 
+          <td style="text-align:left;">Satu set empat bidang teks yang menerima nilai titik mengambang untuk mengedit nilai persegi panjang.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>BaseField&lt;Rect&gt;</code><br><code>x</code>: Nilai sudut kiri atas X koordinat<br><code>y</code>: Nilai sudut kiri atas Y koordinat<br><code>w</code>: Lebar persegi panjang<br> <code>h</code>: tinggi persegi panjang</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>RectIntField</code></td> 
+          <td style="text-align:left;">Satu set empat bidang teks yang menerima nilai integer untuk mengedit nilai persegi panjang.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>BaseField&lt;RectInt&gt;</code><br><code>x</code>: Nilai sudut kiri atas X koordinat<br><code>y</code>: Nilai sudut kiri atas Y koordinat<br><code>w</code>: Lebar persegi panjang<br> <code>h</code>: tinggi persegi panjang</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>BoundsField</code></td> 
+          <td style="text-align:left;">Satu set enam bidang teks yang menerima nilai titik mengambang untuk mengedit nilai persegi panjang yang terikat.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>BaseField&lt;Bounds&gt;</code><br><code>cx</code>: Nilai pusat X koordinat<br><code>cy</code>: Nilai pusat Y berkoordinasi<br><code>cz</code>: Nilai pusat Z koordinat<br><code>ex</code>: Nilai dari batas X koordinat<br><code>ey</code>: Nilai sejauh Yordinat<br><code>ez</code>: Nilai koordinasi Z sejauh</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>BoundsIntField</code></td> 
+          <td style="text-align:left;">Satu set enam bidang teks yang menerima nilai integer untuk mengedit nilai persegi panjang yang terikat.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>BaseField&lt;BoundsInt&gt;</code><br><code>px</code>: Nilai posisi X koordinat<br><code>py</code>: Nilai postion Y koordinat<br><code>pz</code>: Nilai posisi Z berkoordinasi<br><code>sx</code>: Nilai ukuran X koordinat<br><code>sy</code>: Nilai ukuran Y berkoordinasi<br><code>sz</code>: Nilai koordinasi ukuran Z</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>widget kompleks</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Element</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+          <th style="text-align:left;"><strong>Namespace</strong></th> 
+          <th style="text-align:left;"><strong>Permitted child elements</strong></th> 
+          <th style="text-align:left;"><strong>Attributes</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>PropertyField</code></td> 
+          <td style="text-align:left;">Label dan bidang untuk mengedit nilai.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>VisualElement</code><br> <code>binding-path</code>: Jalur properti elemen ini terikat ke<br>%spasi<code>label</code>: Label untuk bidang</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>ColorField</code></td> 
+          <td style="text-align:left;">Bidang pemilih warna.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>BaseFieldTraits&lt;Color, UxmlColorAttributeDescription&gt;</code><br><code>show-eye-dropper</code>: Bosan yang menunjukkan apakah untuk menunjukkan tetes mata atau tidak. Set ke <code>true</code> untuk menampilkan tetes mata, dan <code>false</code> untuk menyembunyikannya. Secara default ini diatur ke <code>true</code>.<br><code>show-alpha</code>: Bosan yang menunjukkan apakah untuk menunjukkan kontrol alfa. Set ke <code>true</code> untuk menunjukkan kontrol atau <code>false</code> untuk menyembunyikannya. Secara default ini diatur ke <code>true</code>.<br> <code>hdr</code>: Sebuah boolean yang menunjukkan apakah menggunakan pemilih warna rentang dinamis tinggi. Set ke <code>true</code> untuk menggunakan pemilih. Secara default ini diatur ke <code>false</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>CurveField</code></td> 
+          <td style="text-align:left;">Bidang editor kurva.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut dari <code>BaseField&lt;AnimationCurve&gt;</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>GradientField</code></td> 
+          <td style="text-align:left;">Bidang editor gradien.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut dari <code>BaseField&lt;Gradient&gt;</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>ObjectField</code></td> 
+          <td style="text-align:left;">Bidang pemilih objek.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>BaseField&lt;Object&gt;</code><br> <code>allow-scene-objects</code>: Bosan yang menunjukkan apakah objek dari tempat kejadian dapat dipilih. Set ke <code>true</code> untuk mengaktifkan pemilihan objek atau <code>false</code> menonaktifkannya. Secara default ini diatur ke <code>true</code>.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>InspectorElement</code></td> 
+          <td style="text-align:left;">Elemen yang menampilkan properti di jendela <span class="tooltip"><strong>inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">Jumlah <code>VisualElement</code> </td> 
+          <td style="text-align:left;">Semua atribut dari <code>BindableElement</code> </td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Toolbar</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Element</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+          <th style="text-align:left;"><strong>Namespace</strong></th> 
+          <th style="text-align:left;"><strong>Permitted child elements</strong></th> 
+          <th style="text-align:left;"><strong>Attributes</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>Toolbar</code></td> 
+          <td style="text-align:left;">Wadah untuk menahan item <span class="tooltip"><strong>toolbar</strong><span class="tooltiptext">Se baris tombol dan kontrol dasar di bagian atas Editor Unity yang memungkinkan Anda untuk berinteraksi dengan Editor dengan berbagai cara (misalnya scaling, terjemahan). <a class="tooltipMoreInfoLink" href="Toolbar.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Toolbar">Glossary</a></span></span></span>.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">Any <code>VisualElement</code> </td> 
+          <td style="text-align:left;">Semua atribut dari <code>VisualElement</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>ToolbarButton</code></td> 
+          <td style="text-align:left;">Tombol untuk toolbar.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut dari <code>Button</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>ToolbarToggle</code></td> 
+          <td style="text-align:left;">Sebuah toggle untuk toolbar.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut dari <code>Toggle</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>ToolbarMenu</code></td> 
+          <td style="text-align:left;">Menu drop down untuk toolbar. Menu memiliki titik panah tunggal turun.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut dari <code>TextElement</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>ToolbarSearchField</code></td> 
+          <td style="text-align:left;">Bidang pencarian untuk toolbar.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut dari <code>VisualElement</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>ToolbarPopupSearchField</code></td> 
+          <td style="text-align:left;">Bidang pencarian dengan menu popup pilihan pencarian.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut dari <code>VisualElement</code> </td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>ToolbarSpacer</code></td> 
+          <td style="text-align:left;">Elemen yang memasukkan jumlah tetap dari whitespace antara tombol toolbar.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut dari <code>VisualElement</code> </td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <div id="view"></div> 
+       <h2>Tampilan dan jendela</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Element</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+          <th style="text-align:left;"><strong>Namespace</strong></th> 
+          <th style="text-align:left;"><strong>Permitted child elements</strong></th> 
+          <th style="text-align:left;"><strong>Attributes</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>ListView</code></td> 
+          <td style="text-align:left;">Menampilkan daftar elemen.</td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut <code>VisualElement</code><br><code>fixed-item-height</code>: Tinggi dalam piksel setiap item dalam daftar</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>MultiColumnListView</code></td> 
+          <td style="text-align:left;">Menampilkan daftar elemen dengan komponen di kolom.</td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;"><code>Columns</code></td> 
+          <td style="text-align:left;">Semua atribut <code>VisualElement</code><br><code>fixed-item-height</code>: Tinggi dalam piksel setiap baris, jika <code>virtualization-method</code> adalah <code>FixedHeight</code><br><code>Columns</code>: Elemen anak yang mengandung deskripsi setiap kolom<br><code>virtualization-method</code>: Bosan yang menunjukkan apakah untuk mengubah ketinggian setiap baris tergantung pada ukuran pandangan atau memiliki tinggi tetap untuk setiap baris</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>ScrollView</code></td> 
+          <td style="text-align:left;">Tampilan yang dapat digulirkan, dengan penggulir horisontal dan vertikal.</td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;">Jumlah <code>VisualElement</code> </td> 
+          <td style="text-align:left;">Semua atribut <code>VisualElement</code><br><code>mode</code>: mode tampilan gulir. Secara default ini diatur ke <code>ScrollViewMode.Vertical</code><br><code>show-horizontal-scroller</code>: Bosan yang menunjukkan apakah untuk menunjukkan gulir horisontal. Secara default ini diatur ke <code>false</code><br> <code>show-vertical-scroller</code>: Bosan yang menunjukkan apakah untuk menunjukkan gulir vertikal. Secara default ini diatur ke <code>false</code><br> <code>horizontal-page-size</code>: Nilai ukuran halaman dari scroller horizontal<br> <code>vertical-page-size</code>: Ukuran halaman dari scroller vertikal</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>TreeView</code></td> 
+          <td style="text-align:left;">Pandangan yang menampilkan elemen dalam hierarki pohon.</td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;">Jumlah <code>VisualElement</code> </td> 
+          <td style="text-align:left;">Semua atribut <code>VisualElement</code><br><code>fixed-item-height</code>: Tinggi item dalam daftar acuan yang ditunjukkan</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>MultiColumnTreeView</code></td> 
+          <td style="text-align:left;">Pandangan yang menampilkan elemen dalam hierarki pohon. Setiap elemen memiliki komponen dalam kolom.</td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;"><code>Columns</code></td> 
+          <td style="text-align:left;">Semua atribut <code>VisualElement</code><br><code>fixed-item-height</code>: Tinggi dalam piksel setiap baris, jika <code>virtualization-method</code> adalah <code>FixedHeight</code><br><code>Columns</code>: Elemen anak yang mengandung deskripsi setiap kolom<br><code>virtualization-method</code>: Bosan yang menunjukkan apakah untuk mengubah ketinggian setiap baris tergantung pada ukuran pandangan atau memiliki tinggi tetap untuk setiap baris</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>PopupWindow</code></td> 
+          <td style="text-align:left;">Jendela UIElements, ditampilkan di atas konten lain.</td> 
+          <td style="text-align:left;"><code>UnityEditor.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;">Semua atribut dari <code>TextElement</code> </td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <div id="object"></div> 
+       <h2>WordPress.org</h2> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;"><strong>Element</strong></th> 
+          <th style="text-align:left;"><strong>Function</strong></th> 
+          <th style="text-align:left;"><strong>Namespace</strong></th> 
+          <th style="text-align:left;"><strong>Permitted child elements</strong></th> 
+          <th style="text-align:left;"><strong>Attributes</strong></th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"><code>Columns</code></td> 
+          <td style="text-align:left;">Mengandung deskripsi kolom. Harus menjadi anak induk yang mendukungnya, seperti <code>MultiColumnListView</code> atau <code>MultiColumnTreeView</code>.</td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;"><code>Column</code></td> 
+          <td style="text-align:left;">None</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><code>Column</code></td> 
+          <td style="text-align:left;">Jelaskan kolom. Harus menjadi anak <code>Columns</code>.</td> 
+          <td style="text-align:left;"><code>UnityEngine.UIElements</code></td> 
+          <td style="text-align:left;">None</td> 
+          <td style="text-align:left;"> <code>name</code>: Nama kolom ini dalam kode<br><code>title</code>: Nama yang ditampilkan di header kolom ini<br><code>width</code>: Lebar default dari kolom ini dalam piksel</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <hr> 
+       <ul> 
+        <li><span class="page-edit">2019–05–20 Login</span></li> 
+       </ul> 
+       <!-- area:authoring --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UIE-LoadingUXMLcsharp.html"></a></span> 
+         <div class="tip">
+           Beban UXML dari C# skrip 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UIE-UQuery.html"></a></span> 
+         <div class="tip">
+           UQuery 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Debugging DirectX 12 naungan dengan PIX</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="Shaders.html">Shaders</a></li> 
+         <li><a href="shader-performance-debugging.html">Memahami kinerja naungan</a></li> 
+         <li>Debugging Langsung X 12 naungan dengan PIX</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="SL-DebuggingD3D11ShadersWithVS.html"></a></span> 
+          <div class="tip">
+            Debugging naungan menggunakan Visual Studio 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="Materials.html"></a></span> 
+          <div class="tip">
+            Materials 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Debugging Langsung X 12 naungan dengan PIX</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>PIX adalah alat tuning kinerja dan debugging oleh Microsoft, untuk pengembang Windows. Ini menawarkan berbagai mode untuk menganalisis kinerja aplikasi, dan termasuk kemampuan untuk menangkap bingkai proyek DirectX dari aplikasi untuk debugging.</p> 
+       <p>Gunakan PIX untuk menyelidiki masalah dalam aplikasi Windows 64-bit (x86_64) Standalone atau <span class="tooltip"><strong>Universal Windows Platform</strong><span class="tooltiptext">Fitur IAP yang mendukung simulator Pembelian Aplikasi Microsoft, yang memungkinkan Anda untuk menguji aliran pembelian IAP pada perangkat sebelum menerbitkan aplikasi Anda. <a class="tooltipMoreInfoLink" href="UnityIAPUniversalWindows.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#UniversalWindowsPlatform">Glossary</a></span></span></span>.</p> 
+       <p>Untuk menginstal PIX, <a href="https://blogs.msdn.microsoft.com/pix/download/">Download dan menjalankan installer Microsoft PIX</a> dan ikuti petunjuk.</p> 
+       <p>Untuk informasi lebih lanjut tentang PIX, lihat <a href="https://blogs.msdn.microsoft.com/pix/introduction/">Login Sitemap</a> Microsoft dan <a href="https://blogs.msdn.microsoft.com/pix/documentation/">Login Sitemap</a>.</p> 
+       <h2>Debugging Langsung X naungan dengan PIX</h2> 
+       <p>Anda harus menggunakan versi aplikasi Unity Anda untuk menangkap bingkai, daripada versi yang berjalan di Editor Unity. Ini karena Anda perlu meluncurkan aplikasi target dari dalam rangka PIX untuk menangkap bingkai GPU.</p> 
+       <p>Menggunakan build pengembangan menambahkan informasi tambahan ke PIX, yang membuat navigasi capture <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> lebih mudah.</p> 
+       <h3>Buat proyek dengan Shader debug-enabled</h3> 
+       <p>Untuk debug naungan dengan kode sumber di PIX, Anda perlu memasukkan pragma berikut ke kode naungan: <code>#pragma enable_d3d11_debug_symbols</code> </p> 
+       <h3>Example</h3> 
+       <p>Walkthrough berikut menggunakan contoh dasar untuk menunjukkan seluruh proses.</p> 
+       <h4>Buat proyek dasar:</h4> 
+       <ol> 
+        <li><p>Buat proyek Unity baru (lihat dokumentasi Hub di ).</p></li> 
+        <li><p>Dalam menu atas, pergi ke <span class="tooltip"><strong>Assets</strong><span class="tooltiptext">Setiap media atau data yang dapat digunakan dalam permainan atau proyek Anda. Aset mungkin berasal dari file yang dibuat di luar Unity, seperti model 3D, file audio atau gambar. Anda juga dapat membuat beberapa jenis aset di Unity, seperti Pengontrol Animator, Audio Mixer atau Tekstur Render. <a class="tooltipMoreInfoLink" href="AssetWorkflow.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Asset">Glossary</a></span></span></span> &gt; <strong>Create</strong> &gt; <span class="tooltip"><strong>Shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Shader">Glossary</a></span></span></span> &gt; <strong>Standard Surface Shader</strong>. Ini menciptakan file naungan baru di folder <span class="tooltip"><strong>Project</strong><span class="tooltiptext">Dalam Unity, Anda menggunakan proyek untuk merancang dan mengembangkan permainan. Proyek menyimpan semua file yang terkait dengan permainan, seperti file aset dan Adegan. <a href="2Dor3D.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Project">Glossary</a></span></span></span> Anda.</p></li> 
+        <li><p>Pilih file warna, dan di jendela <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">Jendela Unity yang menampilkan informasi tentang Pengaturan GameObject yang dipilih saat ini, aset atau proyek, memungkinkan Anda untuk memeriksa dan mengedit nilai. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Inspector">Glossary</a></span></span></span>, klik <strong>Open</strong>. Ini membuka file naungan di editor skrip Anda. Masukkan <code>#pragma enable_d3d11_debug_symbols</code> ke kode naungan, di bawah garis <code>#pragma</code> lainnya.</p></li> 
+        <li><p>Buat Bahan baru (menu: <strong>Assets</strong> &gt; <strong>Create</strong> &gt; <span class="tooltip"><strong>Material</strong><span class="tooltiptext">Aset yang menentukan bagaimana permukaan harus diberikan. <a class="tooltipMoreInfoLink" href="class-Material.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Material">Glossary</a></span></span></span>).</p></li> 
+        <li><p>Dalam jendela Inspektur Material, pilih dropdown <strong>Shader</strong>, pergi ke <strong>Custom</strong>, dan pilih naungan yang Anda buat.</p></li> 
+        <li><p>Buat kubus 3D GameObject (menu: <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#GameObject">Glossary</a></span></span></span> &gt; <span class="tooltip"><strong>3D Object</strong><span class="tooltiptext">Permainan 3D Objek seperti kubus, terrain atau ragdoll. <a href="GameObjects.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#3DObject">Glossary</a></span></span></span> &gt; <strong>Cube</strong>).</p></li> 
+        <li><p>Menetapkan Materi baru Anda ke GameObject baru Anda. Untuk melakukan ini, tarik Bahan dari jendela <strong>Project</strong> ke kubus 3D.</p></li> 
+       </ol> 
+       <h3>Tangkap bingkai dari aplikasi Windows Standalone:</h3> 
+       <ol> 
+        <li> <p>Pergi ke <strong>File</strong> &gt; <strong>Build Settings</strong>, dan di bawah <strong>Platform</strong>, pilih <strong>Windows, Mac, Linux</strong>. Mengatur <strong>Target Platform</strong> ke <strong>Windows</strong>, set <strong>Architecture</strong> ke <strong>Intel 64-bit</strong>, dan klik kotak cemen.<span class="tooltip"><strong>Development Build</strong><span class="tooltiptext">Membangun pengembangan termasuk simbol debug dan memungkinkan Profiler. <a class="tooltipMoreInfoLink" href="UnityCloudBuildDevelopmentBuilds.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#DevelopmentBuild">Glossary</a></span></span></span> checkbox.</p> 
+         <figure> 
+          <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PIXDebugBuildSettings.png" alt=""> 
+         </figure> </li> 
+        <li><p>Klik <span class="tooltip"><strong>Build</strong><span class="tooltiptext">Proses menyusun proyek Anda ke dalam format yang siap dijalankan pada platform atau platform tertentu. <a class="tooltipMoreInfoLink" href="BuildSettings.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#build">Glossary</a></span></span></span>.</p></li> 
+        <li><p>Luncurkan <strong>PIX.</strong> </p></li> 
+        <li><p>Klik pada <strong>Home</strong>, kemudian <strong>Connect</strong> </p></li> 
+        <li><p>Pilih Komputer <strong>localhost </strong>to menggunakan PC Anda untuk menangkap, dan klik <strong>connect</strong>.</p></li> 
+        <li><p>Dalam kotak <strong>Select Target Process</strong>, pilih tab <strong>Launch Win32</strong> dan gunakan tombol <strong>Browse</strong> untuk memilih file executable aplikasi Anda. Perhatikan bahwa di sini, “Win32” berarti aplikasi non-UWP; file aplikasi Anda harus menjadi file biner 64-bit.</p></li> 
+        <li> <p>Aktifkan <strong>Launch for GPU Capture</strong>, kemudian gunakan tombol <strong>Launch</strong> untuk memulai aplikasi.</p> 
+         <figure> 
+          <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PIXDebugTargetProcess.png" alt=""> 
+         </figure> </li> 
+        <li> <p>Gunakan aplikasi Anda seperti biasa sampai Anda siap untuk menangkap bingkai. Untuk menangkap bingkai, tekan <strong>Print Screen</strong> pada keyboard Anda, atau klik ikon <span class="tooltip"><strong>camera</strong><span class="tooltiptext">Komponen yang menciptakan gambar sudut pandang tertentu di tempat kejadian Anda. Output ditarik ke layar atau ditangkap sebagai tekstur. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Camera">Glossary</a></span></span></span> pada Panel Capture GPU. Sebuah thumbnail dari menangkap muncul di panel. Untuk membuka tangkapan, klik thumbnail.</p> 
+         <figure> 
+          <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PIXDebugGPUCapture.png" alt=""> 
+         </figure> </li> 
+        <li> <p>Untuk memulai analisis pada tangkapan, klik teks yang disorot atau ikon <strong>Play</strong> kecil di bilah menu.</p> 
+         <figure> 
+          <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PIXDebugAnalysisArrow.png" alt=""> 
+         </figure> </li> 
+        <li> <p>Pilih <strong>Pipeline </strong>tab dan gunakan__ Acara__ jendela untuk menavigasi ke panggilan menarik Anda tertarik.</p> 
+         <figure> 
+          <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PIXDebugPiplineTab.png" alt=""> 
+         </figure> </li> 
+        <li><p>Di bagian bawah tab <strong>Pipeline</strong>, pilih target render dari daftar <strong>OM</strong> (Output Merger) untuk melihat output panggilan menggambar. Pilih <span class="tooltip"><strong>pixel</strong><span class="tooltiptext">Unit terkecil dalam gambar komputer. Ukuran piksel tergantung pada resolusi layar Anda. Pencahayaan pixel dihitung pada setiap piksel layar. <a class="tooltipMoreInfoLink" href="ShadowPerformance.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#pixel">Glossary</a></span></span></span> pada objek yang ingin Anda debug. Perhatikan bahwa Anda dapat klik kanan pixel untuk melihat riwayat panggilan penarikan, sebagai cara menemukan panggilan yang tertarik.</p></li> 
+        <li> <p>Pilih <strong>Debug Pixel</strong> pada panel <strong>Pixel Details</strong>.</p> 
+         <figure> 
+          <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PIXDebugPixelDetails.png" alt=""> 
+         </figure> </li> 
+        <li> <p>Pada panel debug, gunakan opsi Shader untuk memilih tahap naungan mana ke debug.</p> 
+         <figure> 
+          <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PIXDebugShaderOptions.png" alt=""> 
+         </figure> </li> 
+        <li> <p>Gunakan pintasan <span class="tooltip"><strong>toolbar</strong><span class="tooltiptext">Se baris tombol dan kontrol dasar di bagian atas Editor Unity yang memungkinkan Anda untuk berinteraksi dengan Editor dengan berbagai cara (misalnya scaling, terjemahan). <a class="tooltipMoreInfoLink" href="Toolbar.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Toolbar">Glossary</a></span></span></span> atau keyboard untuk melangkah melalui kode.</p> 
+         <figure> 
+          <img src="https://docs.unity3d.com/2022.1/Documentation/uploads/Main/PIXDebugShaderDebugger.png" alt=""> 
+         </figure> </li> 
+       </ol> 
+       <p>Untuk informasi lebih lanjut tentang naungan debugging dengan PIX, lihat seri video Microsoft <a href="https://www.youtube.com/playlist?list=PLeHvwXyqearWuPPxh6T03iwX-McPG5LkB">PIX di Windows</a>, terutama <a href="https://www.youtube.com/watch?v=jRflMYmXv2g">Bagian 5 - Debug Tab</a>.</p> 
+       <p>Untuk informasi lebih lanjut tentang capture GPU di PIX, lihat dokumentasi Microsoft pada <a href="https://blogs.msdn.microsoft.com/pix/gpu-captures/">GPU Captures</a>.</p> 
+       <ul> 
+        <li><span class="page-edit">2018–09–17 Sitemap</span></li> 
+       </ul> 
+       <!-- area:graphics --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="SL-DebuggingD3D11ShadersWithVS.html"></a></span> 
+         <div class="tip">
+           Debugging naungan menggunakan Visual Studio 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="Materials.html"></a></span> 
+         <div class="tip">
+           Materials 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

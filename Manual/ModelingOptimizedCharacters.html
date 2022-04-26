@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Membuat model untuk kinerja optimal</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="models.html">Models</a></li> 
+         <li><a href="CreatingDCCAssets.html">Membuat model di luar Unity</a></li> 
+         <li>Membuat model untuk kinerja optimal</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="models-preparing.html"></a></span> 
+          <div class="tip">
+            Mempersiapkan file model Anda untuk ekspor 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UsingHumanoidChars.html"></a></span> 
+          <div class="tip">
+            Membuat model untuk animasi 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Membuat model untuk kinerja optimal</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Berikut adalah beberapa tips untuk membuat model untuk kinerja optimal. Beberapa tips ini berlaku untuk semua model, dan beberapa hanya berlaku untuk model animasi:</p> 
+       <ul> 
+        <li><a href="#polygons">Meminimalkan jumlah poligon</a></li> 
+        <li><a href="#mats">Gunakan beberapa Bahan mungkin</a></li> 
+        <li><a href="#single">Gunakan Renderer Mesh berkelok-kelok tunggal</a></li> 
+        <li><a href="#bones">Gunakan beberapa tulang mungkin</a></li> 
+        <li><a href="#ikfk">Terus maju dan terbalik kinematik terpisah</a></li> 
+       </ul> 
+       <p>Menggunakan teknik ini mungkin membantu meningkatkan kecepatan animasi dan rendering model Anda, tetapi menyadari bahwa mereka mungkin juga mengurangi kesetiaan visual dan efek realistis yang Anda mencoba untuk mencapai. Tidak ada jawaban tunggal untuk setiap situasi yang dapat menghasilkan keseimbangan sempurna antara kinerja yang lebih baik dan realisme visual. Anda harus menemukan keseimbangan sempurna sesuai dengan kompleksitas karakter Anda dan <span class="tooltip"><strong>scene</strong><span class="tooltiptext">Adegan berisi lingkungan dan menu permainan Anda. Pikirkan setiap file Adegan unik sebagai tingkat yang unik. Di setiap Adegan, Anda menempatkan lingkungan, hambatan, dan dekorasi, pada dasarnya merancang dan membangun permainan Anda dalam potongan-potongan. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scene">Glossary</a></span></span></span> Anda, vs. penampilan keseluruhan dan realisme yang Anda butuhkan.</p> 
+       <p><a name="polygons"></a></p> 
+       <h2>Meminimalkan jumlah poligon</h2> 
+       <p>Jumlah poligon yang harus Anda gunakan tergantung pada kualitas visual yang Anda butuhkan dan platform yang Anda targetkan. Kedua fakta bersaing ini sama benar:</p> 
+       <ul> 
+        <li>Lebih sedikit poligon yang Anda gunakan di jala Anda, semakin cepat aplikasi Anda berjalan. Ini karena setiap simpul, tepi, atau wajah memerlukan sumber daya komputasi.</li> 
+        <li>Semakin banyak poligon yang Anda gunakan di Mesh Anda, semakin rinci dan organik tampilan <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">Objek mendasar dalam adegan Unity, yang dapat mewakili karakter, props, pemandangan, kamera, waypoints, dan banyak lagi. Fungsi GameObject didefinisikan oleh Komponen yang melekat padanya. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#GameObject">Glossary</a></span></span></span> Anda, karena poligon yang lebih kecil memberi Anda lebih banyak kontrol atas bentuk.</li> 
+       </ul> 
+       <p>Juga mempertimbangkan apa yang lain bersaing untuk membuat sumber daya. Jika Anda memiliki banyak objek GameObjects atau <span class="tooltip"><strong>Terrain</strong><span class="tooltiptext">Pemandangan di tempat kejadian Anda. Terrain GameObject menambahkan pesawat datar besar untuk adegan Anda dan Anda dapat menggunakan jendela Inspektur Terrain untuk menciptakan lanskap rinci. <a class="tooltipMoreInfoLink" href="terrain-UsingTerrains.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Terrain">Glossary</a></span></span></span> pada layar pada saat yang sama, pertimbangkan mengurangi jumlah poligon per jala.</p> 
+       <p>Perhatikan bahwa jumlah sebenarnya dari vertices bahwa hardware grafis harus diproses biasanya tidak sama dengan nomor yang dilaporkan oleh aplikasi pemodelan. Aplikasi pemodelan biasanya menampilkan jumlah poin sudut yang berbeda yang membuat model (dikenalkan sebagai jumlah simpul geometris). Untuk kartu grafis, namun, beberapa simpul geometris perlu dibagi menjadi dua atau lebih simpul logis untuk tujuan rendering: misalnya, simpul harus dibagi jika memiliki beberapa warna normal, koordinasi UV atau warna simpul. Akibatnya, jumlah vertex dalam Unity biasanya lebih tinggi dari jumlah yang diberikan oleh aplikasi 3D.</p> 
+       <p><a name="mats"></a></p> 
+       <h2>Gunakan beberapa bahan mungkin</h2> 
+       <p>Menyimpan jumlah <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-Material.html">materials</a><span class="tooltiptext">Aset yang menentukan bagaimana permukaan harus diberikan. <a href="class-Material.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a class="tooltipMoreInfoLink" href="Glossary.html#Material">Glossary</a></span></span></span> pada setiap model serendah mungkin. Hanya menggunakan lebih dari satu materi pada karakter ketika Anda perlu menggunakan <span class="tooltip"><strong>shaders</strong><span class="tooltiptext">Program yang berjalan di GPU. <a href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span> yang berbeda untuk bagian yang berbeda; misalnya, Anda mungkin menggunakan naungan khusus untuk mata pada model karakter.</p> 
+       <p><a name="single"></a></p> 
+       <h2>Gunakan mesh berkelok-kelok tunggal</h2> 
+       <p>Untuk model karakter animasi yang menggunakan <a class="tooltipMoreInfoLink" href="class-SkinnedMeshRenderer.html">Ms. YANG</a>, Anda hanya boleh menggunakan salah satu komponen ini per karakter. Sistem animasi Unity mengoptimalkan animasi menggunakan pameran visibilitas dan pembaruan <span class="tooltip"><strong>bounding volume</strong><span class="tooltiptext">Bentuk tertutup mewakili tepi dan wajah sari atau pemicu.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Boundingvolume">Glossary</a></span></span></span>. Ini hanya mengaktifkan optimasi ini jika Anda menggunakan satu <a href="class-Animation.html">Komponen animasi</a> dan satu Skinned <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">Grafik utama primitif Unity. Mesh membuat sebagian besar dunia 3D Anda. Unity mendukung mesh poligon triangulat atau Quadrangulasi. Nurbs, Nurms, permukaan Subdiv harus dikonversi ke poligon. <a href="comp-MeshGroup.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Mesh">Glossary</a></span></span></span> Renderer pada model.</p> 
+       <p>Menggunakan dua jaring berkelok-kelok di tempat satu bisa kira-kira dua kali rendering untuk model, dan ada banyak keuntungan praktis dalam menggunakan beberapa jala.</p> 
+       <p><a name="bones"></a></p> 
+       <h2>Gunakan beberapa tulang mungkin</h2> 
+       <p>Secara umum, tulang yang lebih sedikit yang Anda gunakan, semakin baik kinerjanya. Namun, kadang-kadang Anda perlu membuat model karakter dengan sejumlah besar tulang: misalnya, ketika Anda ingin banyak lampiran yang dapat disesuaikan. Tulang tambahan ini meningkatkan ukuran build, dan mungkin memiliki biaya pemrosesan relatif untuk setiap tulang tambahan. Misalnya, 15 tulang tambahan pada rig yang sudah memiliki 30 tulang membutuhkan operasi Unity 50% lebih untuk memecahkan dalam mode <strong>Generic</strong>, yang mungkin mempengaruhi waktu yang diperlukan untuk memecahkan.</p> 
+       <p>Perhatikan bahwa Anda dapat memiliki tulang tambahan untuk jenis <a href="GenericAnimations.html">Generic</a> dan <a href="ConfiguringtheAvatar.html">Humanoid</a>. Ketika Anda tidak memiliki animasi bermain menggunakan tulang tambahan, biaya pemrosesan harus dapat dinegosiasikan. Biaya ini bahkan lebih rendah jika lampiran mereka tidak ada atau tersembunyi.</p> 
+       <p>Untuk alasan kinerja, gunakan campuran linier <strong><span class="tooltip"><strong>skinning</strong><span class="tooltiptext">The process of binding bone joints to the vertices of a character’s mesh or ‘skin’. Performed with an external tool, such as Blender or Autodesk Maya. <a class="tooltipMoreInfoLink" href="UsingHumanoidChars.html">More info</a><br><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Skinning">Glossary</a></span></span></span></strong> dengan maksimum empat pengaruh per simpul. Namun, beberapa aplikasi pemodelan 3D memungkinkan lebih dari empat tulang untuk mempengaruhi simpul, sehingga Anda harus menimbang biaya kinerja terhadap kontrol yang lebih besar.</p> 
+       <p><a name="ikfk"></a></p> 
+       <h2>Terus maju dan terbalik kinematik terpisah</h2> 
+       <p>Ketika Unity mengimpor animasi, itu bakes sebuah model terbalik kinematik (IK) node ke depan <span class="tooltip"><strong>kinematics</strong><span class="tooltiptext">Geometri yang menggambarkan posisi dan orientasi sendi karakter dan tubuh. Digunakan oleh kinematik terbalik untuk mengontrol pergerakan karakter.<br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#kinematics">Glossary</a></span></span></span> (FK), dan sehingga Unity tidak perlu node IK sama sekali. Namun, jika mereka tersisa dalam model, maka Unity masih termasuk dalam perhitungan, meskipun mereka tidak mempengaruhi animasi. Anda dapat menghapus node IK redundan pada Unity atau dalam aplikasi pemodelan 3D Anda. Untuk memudahkan menghapus simpul IK, tetapkan hierarki IK dan FK yang terpisah saat pemodelan.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="models-preparing.html"></a></span> 
+         <div class="tip">
+           Mempersiapkan file model Anda untuk ekspor 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UsingHumanoidChars.html"></a></span> 
+         <div class="tip">
+           Membuat model untuk animasi 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

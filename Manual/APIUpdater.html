@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: API Updater</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="UnityOverview.html">Bekerja di Unity</a></li> 
+         <li><a href="UpgradeGuides.html">Unity upgrade</a></li> 
+         <li>API Updater</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="UpgradeGuides.html"></a></span> 
+          <div class="tip">
+            Unity upgrade 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="UpgradeGuide20212.html"></a></span> 
+          <div class="tip">
+            Peningkatan ke Unity 2021.2 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>API Updater</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Untuk meningkatkan kegunaan dan kinerja, Unity mungkin mengubah kelas cara, fungsi dan sifat (API) bekerja. Kadang-kadang, perbaikan ini mungkin memperkenalkan perubahan putus ketika bergerak dari satu versi Unity utama ke yang lain.</p> 
+       <p>Untuk meminimalkan dampak melanggar perubahan, pembaruan API mengidentifikasi dan memperbarui kode usang dalam <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">Sepotong kode yang memungkinkan Anda untuk membuat Komponen Anda sendiri, memicu peristiwa permainan, memodifikasi sifat komponen dari waktu ke waktu dan menanggapi input pengguna dengan cara apa pun yang Anda sukai. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Scripts">Glossary</a></span></span></span> dan rakitan.</p> 
+       <p>Perbarui API terdiri dari ScriptUpdater dan AssemblyUpdater, yang bertanggung jawab untuk memperbarui kode sumber (script) dan perakitan (file data) masing-masing.</p> 
+       <p> <strong>Note</strong>: API Updater hanya dapat memperbaiki kesalahan dan peringatan tertentu di API. Ini diindikasikan sebagai <strong>UnityUpgradable</strong> dalam pesan konsol. Anda harus secara manual menyelesaikan kesalahan atau peringatan lain yang API Updater tidak dapat ditangani.</p> 
+       <h2>Menggunakan pembaruan API</h2> 
+       <p>Ketika <a href="script-compilation.html">kompilasi skrip</a> dipicu, pembaruan API berjalan secara otomatis. Misalnya, ini terjadi ketika Anda:</p> 
+       <ul> 
+        <li>Buka proyek.</li> 
+        <li>Mengimpor paket.</li> 
+        <li>Simpan perubahan ke script.</li> 
+       </ul> 
+       <p>Pembaruan API menawarkan untuk memperbarui kode usang yang mendeteksinya. Jika Anda menerima, itu menulis ulang kode usang dengan versi terbaru yang disarankan dari API.</p> 
+       <p>Misalnya, pembaruan API akan mengubah pernyataan usulan berikut dari:</p> 
+       <pre><code>light.color = Color.red;
+</code></pre> 
+       <p>to:</p> 
+       <pre><code>GetComponent&lt;Light&gt;().color = Color.red;
+</code></pre> 
+       <p>Langkah-langkah di bawah ini menggambarkan alur kerja pembaruan API ketika Unity memicu kompilasi skrip:</p> 
+       <ol> 
+        <li>Unity memicu kompilasi skrip.</li> 
+        <li>API updater memeriksa untuk kesalahan kompiler updatable atau peringatan yang dapat ditangani. 
+         <ul> 
+          <li>Jika tidak menemukan kesalahan atau peringatan, proses berakhir.</li> 
+          <li>Jika menemukan kesalahan atau peringatan, itu menampilkan dialog menawarkan pembaruan otomatis. Login Tutup Editor dan kembali proyek Anda sebelum Anda membiarkan pembaruan API memperbarui skrip atau perakitan Anda. Ketika Anda membuka kembali proyek Anda, Unity menyusun skrip Anda dan memicu pembaruan API.<br>Close the Editor and back up your project before you let the API updater update your scripts or assemblies. When you reopen your project, Unity compiles your scripts and triggers the API updater.</li> 
+         </ul> </li> 
+        <li>Jika Anda menerima pembaruan, pembaruan API semua skrip di unit kompilasi yang sama.</li> 
+        <li>API Updater mengulangi proses ini sampai mendeteksi tidak lebih banyak kesalahan atau peringatan yang dapat ditangani.</li> 
+       </ol> 
+       <p>Updater dapat menjalankan beberapa kali jika skrip dengan kode usang jatuh ke dalam melewati kompilasi yang berbeda, misalnya, skrip editor.</p> 
+       <p>Jika Anda tidak mengizinkan pembaruan API untuk memperbarui skrip Anda, konsol menampilkan kesalahan skrip atau peringatan. Kesalahan atau peringatan yang pembaruan API dapat menyelesaikan tampilan (<strong>UnityUpgradable</strong>) dalam pesan.</p> 
+       <p>Jika skrip Anda memiliki kesalahan lain yang mencegah pembaruan API dari berjalan berhasil, Konsol menampilkan pesan untuk memberi tahu Anda tentang ini. Anda harus menyelesaikan kesalahan tersebut sebelum API Updater dapat menyelesaikan pembaruan.</p> 
+       <h2>argumen baris perintah terkait API Updater</h2> 
+       <p>Ketika menjalankan Unity dalam mode batch dari baris perintah, gunakan opsi <code>-accept-apiupdate</code> untuk menjalankan pembaruan API. Untuk informasi lebih lanjut, lihat <a href="CommandLineArguments.html">WordPress.org</a>.</p> 
+       <h2>Logging</h2> 
+       <p>Perbarui API mengubahnya membuat perakitan ke <a href="LogFiles.html">Editor log</a>. Untuk mengontrol berapa banyak informasi yang dicatat, atur variabel lingkungan UNITY_APIUPDATER_LOG_THRESHOLD ke ambang log yang diinginkan dan mulai Unity. Contoh:</p> 
+       <p>Di Windows:</p> 
+       <pre><code>c:&gt; set UNITY_APIUPDATER_LOG_THRESHOLD=Debug
+c:&gt; \path\to\unity\Unity.exe
+</code></pre> 
+       <p>Di Linux:</p> 
+       <pre><code>$ export UNITY_APIUPDATER_LOG_THRESHOLD=Debug
+$ /path/to/unity/Unity
+</code></pre> 
+       <p>Di Mac:</p> 
+       <pre><code>$ export UNITY_APIUPDATER_LOG_THRESHOLD=Debug
+$ /path/to/unity/Unity
+</code></pre> 
+       <p> <strong>Note</strong>: Anda juga dapat menggunakan <span class="tooltip"><a class="tooltipMoreInfoLink" href="https://en.wikipedia.org/wiki/Version_control">kontrol versi</a><span class="tooltiptext">Sistem untuk mengelola perubahan file. Anda dapat menggunakan Unity bersama dengan alat kontrol versi yang paling umum, termasuk Perforce, Git, Mercurial dan PlasticSCM. <a href="VersionControl.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#VersionControl">Glossary</a></span></span></span> untuk melihat perubahan pembaruan API membuat skrip proyek.</p> 
+       <p>Ketika AssemblyUpdater telah selesai, Editor.log menampilkan perubahan. Contoh:</p> 
+       <pre><code>[AssemblyUpdater] Property access to 'UnityEngine.Rigidbody
+UnityEngine.GameObject::get_rigidbody()' in 'System.Void
+Test.ClassReferencingObsoleteUnityAPIThroughEditorAssembly::Run()' replaced with 'T
+UnityEngine.GameObject::GetComponent&lt;UnityEngine.Rigidbody&gt;()'.
+</code></pre> 
+       <p>Tabel di bawah ini menjelaskan nilai-nilai untuk variabel lingkungan <code>UNITY_APIUPDATER_LOG_THRESHOLD</code>:</p> 
+       <table> 
+        <colgroup> 
+         <col style="text-align:left;"> 
+         <col style="text-align:left;"> 
+        </colgroup> 
+        <thead> 
+         <tr> 
+          <th style="text-align:left;">Log threshold</th> 
+          <th style="text-align:left;">Description</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td style="text-align:left;"> <strong>Error</strong> (nilai default)</td> 
+          <td style="text-align:left;">Pembaruan API hanya mencatat pesan <strong>Error</strong>. Pesan kesalahan dicatat ketika pembaruan API gagal menerapkan pembaruan tertentu, yang mengharuskan Anda untuk mengambil tindakan korektif (biasanya meminta penulis perakitan asli untuk memberikan versi terbaru dari perakitan).</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Warning</strong></td> 
+          <td style="text-align:left;">Perbarui API mencatat pesan <strong>Warning</strong> dan <strong>Error</strong>. Pesan peringatan dicatat ketika pembaruan API menerapkan perubahan bahwa pengguna mungkin perlu meninjau.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Info</strong></td> 
+          <td style="text-align:left;">API updater log <strong>Informational</strong>, <strong>Warning</strong> dan <strong>Error</strong> pesan. Info pesan termasuk pembaruan yang diterapkan oleh AssemblyUpdater.</td> 
+         </tr> 
+         <tr> 
+          <td style="text-align:left;"><strong>Debug</strong></td> 
+          <td style="text-align:left;">Pembaruan API mencatat semua pesan. Ini berguna untuk memecahkan masalah, misalnya jika Anda memiliki masalah dengan pembaruan API yang ingin Anda laporkan ke Unity.</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Troubleshooting</h2> 
+       <h3>Login Memperbarui gagal. Cek pesan konsol sebelumnya.</h3> 
+       <p>Pembaruan API tidak dapat memperbarui semua kode usang. Hal ini dapat terjadi jika updater tidak dapat menyimpan perubahannya, misalnya jika pengguna telah membaca izin pada skrip.</p> 
+       <p>Periksa garis sebelumnya di konsol untuk melihat masalah yang terjadi selama proses pembaruan.</p> 
+       <ul> 
+        <li><p><span class="page-edit">2018–07–31 Login</span></p></li> 
+        <li><p><span class="page-history">Opsi baris perintah “accept-apiupdate” ditambahkan pada Unity 2017. 1 Artikel</span></p></li> 
+        <li><p><span class="page-history">Login Updater logging ditingkatkan dalam Unity <span class="search-words">NewIn20183</span></span></p></li> 
+       </ul> 
+       <!-- area:none --> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="UpgradeGuides.html"></a></span> 
+         <div class="tip">
+           Unity upgrade 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="UpgradeGuide20212.html"></a></span> 
+         <div class="tip">
+           Peningkatan ke Unity 2021.2 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script> 
+  <script type="text/javascript">
+					function OptanonWrapper() { }
+				</script> 
+  <script>var offline=false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-K8K24X8');}</script> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Unity - Manual: Menggunakan kata kunci naungan dengan skrip C#</title> 
+  <meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg"> 
+  <meta name="author" content="Unity Technologies"> 
+  <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico"> 
+  <link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png"> 
+  <meta name="msapplication-TileColor" content="#222c37"> 
+  <meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png"> 
+  <script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=20220404"></script> 
+  <script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/toc.js?ts=20220404"></script> 
+  <script type="text/javascript" src="docdata/global_toc.js?ts=20220404"></script> 
+  <link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=20220404"> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/prism.css"> 
+  <script src="../StaticFilesManual/js/prism.js"></script> 
+  <script src="/StaticFilesConfig/feedback/feedback.js"></script> 
+  <script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script> 
+  <link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css"> 
+  <script src="../StaticFilesManual/js/mobileoptimisation.js"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8K24X8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div> 
+  <div class="header-wrapper"> 
+   <div id="header" class="header"> 
+    <div class="content"> 
+     <div class="spacer"> 
+      <div class="menu"> 
+       <div id="nav-open" for="nav-input"> 
+        <span></span> 
+       </div> 
+       <div class="logo"></div> 
+       <div class="search-form"> 
+        <form action="30_search.html" method="get" class="apisearch"> 
+         <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+         <input type="submit" class="submit"> 
+        </form> 
+       </div> 
+       <ul> 
+        <li><a href="../Manual/index.html" class="selected">Manual</a></li> 
+        <li><a href="../ScriptReference/index.html">API documentation</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="more"> 
+      <div class="filler"></div> 
+      <ul> 
+       <li></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="toolbar"> 
+    <div class="content"> 
+    </div> 
+   </div> 
+   <div class="mobileLogo"></div> 
+  </div> 
+  <div id="master-wrapper" class="master-wrapper clear"> 
+   <div id="sidebar" class="sidebar"> 
+    <div class="sidebar-wrap"> 
+     <div class="content"> 
+      <div class="sidebar-menu"> 
+       <div class="toc" id="customScrollbar"> 
+        <h2>Manual Unity</h2> 
+        <div class="search-form sidebar-search-form"> 
+         <form action="30_search.html" method="get" class="apisearch"> 
+          <input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"> 
+          <input type="submit" id="mobileSearchBtn" class="submit" value="Search"> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-wrap" class="content-wrap"> 
+    <div class="content-block"> 
+     <div class="content"> 
+      <div class="section"> 
+       <div class="breadcrumbs clear"> 
+        <ul> 
+         <li><a href="UnityManual.html">Manual Pengguna Unity 2022.1 (beta)</a></li> 
+         <li><a href="Graphics.html">Graphics</a></li> 
+         <li><a href="Shaders.html">Shaders</a></li> 
+         <li><a href="ShadersOverview.html">Konsep inti Shaders</a></li> 
+         <li><a href="shader-variants-and-keywords.html">Cabang, varian, dan kata kunci</a></li> 
+         <li>Menggunakan kata kunci naungan dengan skrip C#</li> 
+        </ul> 
+       </div> 
+       <div class="mb20"> 
+        <div class="nextprev clear"> 
+         <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+          <span class="prev"><a href="shader-keywords.html"></a></span> 
+          <div class="tip">
+            Kata kunci Shader 
+          </div> 
+         </div> 
+         <div class="icon tt right" data-distance="-40|-30|top"> 
+          <span class="next"><a href="shader-keywords-material-inspector.html"></a></span> 
+          <div class="tip">
+            Menggunakan kata kunci naungan dengan bahan Inspektur 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="_leavefeedback"></div> 
+       <h1>Menggunakan kata kunci naungan dengan skrip C#</h1> 
+       <!--BeginSwitchLink--> 
+       <!--EndSwitchLink--> 
+       <div class="clear"></div> 
+       <p>Anda dapat mengaktifkan atau menonaktifkan kata kunci <span class="tooltip"><strong>shader</strong><span class="tooltiptext">Program yang berjalan di GPU. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br><span class="tooltipGlossaryLink">Lihat di <a href="Glossary.html#Shader">Glossary</a></span></span></span>. Ketika Anda mengaktifkan atau menonaktifkan kata kunci naungan, naungan menampilkan perilaku kondisional yang sesuai. Tergantung pada apakah kata kunci bekerja dengan varian naungan atau percabangan dinamis, ini berarti bahwa kedua Unity membuat varian naungan yang tepat, atau GPU mengeksekusi cabang yang tepat.</p> 
+       <p>Halaman ini berisi informasi berikut:</p> 
+       <ul> 
+        <li><a href="#local-global-keywords">Kata kunci naungan lokal dan global</a></li> 
+        <li><a href="#variants-branching-keywords">varian Shader atau percabangan dinamis</a></li> 
+        <li><a href="#enabling-and-disabling">Mengaktifkan dan menonaktifkan kata kunci naungan</a></li> 
+        <li><a href="#sets-runtime">Mengelola set kata kunci pada runtime</a></li> 
+       </ul> 
+       <p><a name="local-global-keywords"></a></p> 
+       <h2>Kata kunci naungan lokal dan global</h2> 
+       <p>Ketika Unity mewakili kata kunci naungan di C #, itu menggunakan konsep <strong>local shader keywords</strong> dan <strong>global shader keywords</strong>.</p> 
+       <p>Kata kunci warna lokal terdiri dari semua kata kunci yang Anda deklarasikan dalam file sumber naungan. Kata kunci naungan lokal mempengaruhi naungan individu atau kolon. Kata kunci lokal dapat memiliki ruang lingkup lokal atau global, yang mempengaruhi apakah mereka dapat ditimidasi oleh kata kunci naungan global.</p> 
+       <p>Kata kunci naungan global bertindak sebagai overrides untuk kata kunci naungan lokal. Anda tidak menyatakan ini dalam file sumber naungan; mereka hanya ada dalam kode C#. Kata kunci naungan global dapat mempengaruhi beberapa naungan dan merutekan naungan pada saat yang sama.</p> 
+       <h3>Kata kunci warna lokal</h3> 
+       <p>Ketika Anda mendeklarasikan kata kunci naungan dalam file sumber naungan, Unity mewakili ini di C # dengan struct <a href="../ScriptReference/Rendering.LocalKeyword.html">LocalKeyword</a>. Ini disebut <strong>local shader keyword</strong>.</p> 
+       <p>Properti <a href="../ScriptReference/Rendering.LocalKeyword-isOverridable.html">isOverridable</a> dari <code>LocalKeyword</code> menunjukkan apakah kata kunci diumumkan dengan lingkup global atau lokal dalam file sumber. Ini adalah <code>true</code> jika kata kunci dideklarasikan dengan lingkup global dan karena itu dapat ditimidasi oleh kata kunci naungan global dengan nama yang sama. Ini adalah <code>false</code> jika kata kunci diumumkan dengan lingkup lokal, dan karena itu tidak dapat ditimidasi oleh kata kunci naungan global dengan nama yang sama.</p> 
+       <p>Unity menyimpan semua kata kunci naungan lokal yang mempengaruhi naungan atau kolon dalam struct <a href="../ScriptReference/Rendering.LocalKeywordSpace.html">LocalKeywordSpace</a>. Untuk naungan grafis, Anda dapat mengakses ini dengan <a href="../ScriptReference/Shader.keywordSpace.html">Shader.keywordSpace</a>. Untuk naungan compute, Anda dapat mengakses ini dengan <a href="../ScriptReference/ComputeShader-keywordSpace.html">ComputeShader-keywordSpace</a>.</p> 
+       <h3>Kata kunci naungan global</h3> 
+       <p>Selain kata kunci naungan lokal yang Anda deklarasikan dalam file sumber Anda, Unity mempertahankan daftar terpisah dari <strong>global shader keywords</strong>. Anda tidak menyatakan ini dalam file sumber naungan; bukan, mereka runtime overrides untuk kata kunci naungan lokal yang Anda kerjakan di C #. Kata kunci naungan global dapat mempengaruhi beberapa naungan dan membandingkan naungan pada saat yang sama.</p> 
+       <p>Unity mewakili kata kunci naungan global dengan struct <a href="../ScriptReference/Rendering.GlobalKeyword.html">GlobalKeyword</a>.</p> 
+       <p>Menyiapkan kata kunci naungan global dapat nyaman ketika Anda perlu mengaktifkan atau menonaktifkan kata kunci naungan yang sama untuk banyak bahan dan pewarna. Namun, ia memiliki kelemahan potensial berikut:</p> 
+       <ul> 
+        <li>Menyiapkan keadaan global kata kunci dapat menyebabkan konsekuensi yang tidak diinginkan jika naungan secara tidak sengaja mendefinisikan kata kunci dengan nama yang sama. Anda dapat menjaga terhadap ini dengan menentukan kata kunci dengan lingkup lokal, atau dengan naming kata kunci dengan cara yang mengurangi kemungkinan kerang.</li> 
+        <li>Ketika Anda membuat <code>GlobalKeyword</code> baru, Unity memperbarui pemetaan internal antara ruang kata kunci global dan lokal untuk semua naungan dan pewarna compute dimuat pada titik ini. Ini dapat menjadi operasi intensif CPU. Untuk mengurangi dampak operasi ini, cobalah untuk membuat semua kata kunci global segera setelah startup aplikasi, sementara aplikasi Anda memuat.</li> 
+       </ul> 
+       <p><a name="overriding-state"></a></p> 
+       <h3>Bagaimana kata kunci naungan lokal dan global berinteraksi</h3> 
+       <p>Ketika kata kunci naungan global dan lokal dengan nama yang sama memiliki keadaan yang berbeda, Unity menggunakan properti <code>isOverridable</code> dari <code>LocalKeyword</code> untuk menentukan apakah kata kunci diaktifkan atau dinonaktifkan untuk bahan individu atau membandingkan naungan. <code>isOverridable</code> benar jika kata kunci dinyatakan dengan lingkup global, dan <code>false</code> jika diumumkan dengan lingkup lokal.</p> 
+       <ul> 
+        <li>Saat <code>isOverridable</code> adalah <code>true</code>: Jika kata kunci global dengan nama yang sama ada dan diaktifkan, Unity menggunakan keadaan kata kunci global. Jika tidak, Unity menggunakan keadaan kata kunci lokal.</li> 
+        <li>Saat <code>isOverridable</code> adalah <code>false</code>: Unity selalu menggunakan keadaan kata kunci lokal.</li> 
+       </ul> 
+       <p>Oleh karena itu, untuk memahami apakah kata kunci naungan diaktifkan atau dinonaktifkan untuk bahan individu atau pewarnaan, Anda harus memeriksa keadaan properti <code>isOverridable</code> dan negara kata kunci global dan/atau lokal.</p> 
+       <p>Contoh ini menunjukkan bagaimana untuk memeriksa apakah Unity menganggap kata kunci diaktifkan atau dinonaktifkan untuk bahan:</p> 
+       <pre><code>using UnityEngine;
+using UnityEngine.Rendering;
+
+public class KeywordExample : MonoBehaviour
+{
+    public Material material;
+
+    void Start()
+    {
+        CheckShaderKeywordState();
+    }
+
+    void CheckShaderKeywordState()
+    {
+        // Get the instance of the Shader class that the material uses
+        var shader = material.shader;
+
+        // Get all the local keywords that affect the Shader
+        var keywordSpace = shader.keywordSpace;
+
+        // Iterate over the local keywords
+        foreach (var localKeyword in keywordSpace.keywords)
+        {
+            // If the local keyword is overridable (i.e., it was declared with a global scope),
+            // and a global keyword with the same name exists and is enabled,
+            // then Unity uses the global keyword state
+            if (localKeyword.isOverridable &amp;&amp; Shader.IsKeywordEnabled(localKeyword.name))
+            {
+                Debug.Log("Local keyword with name of " + localKeyword.name + " is overridden by a global keyword, and is enabled");
+            }
+            // Otherwise, Unity uses the local keyword state
+            else
+            {
+                var state = material.IsKeywordEnabled(localKeyword) ? "enabled" : "disabled";
+                Debug.Log("Local keyword with name of " + localKeyword.name + " is " + state);
+            }            
+        }
+    }
+}
+
+</code></pre> 
+       <p><a name="variants-branching-keywords"></a></p> 
+       <h2>varian Shader atau percabangan dinamis</h2> 
+       <p>Dalam Unity, Anda dapat menggunakan kata kunci naungan dengan varian naungan, atau Anda dapat menggunakannya dengan percabangan dinamis. Anda memutuskan ketika Anda menyatakan kata kunci.</p> 
+       <p>Properti <a href="../ScriptReference/Rendering.LocalKeyword-isDynamic.html">isDynamic</a> dari <code>LocalKeyword</code> menunjukkan apakah kata kunci diumumkan untuk digunakan dengan percabangan dinamis dalam file sumber naungan. Ini adalah <code>true</code> jika kata kunci dinyatakan untuk digunakan dengan percabangan dinamis, dan <code>false</code> jika dideklarasikan untuk digunakan dengan varian naungan.</p> 
+       <p><a name="enabling-and-disabling"></a></p> 
+       <h2>Mengaktifkan dan menonaktifkan kata kunci naungan</h2> 
+       <p>Untuk memeriksa apakah kata kunci lokal diaktifkan untuk naungan grafis, gunakan <a href="../ScriptReference/Material.IsKeywordEnabled.html">Bahan.IsKeywordEnabled</a> atau <a href="../ScriptReference/Material.enabledKeywords.html">Bahan.enabledKeywords</a>. Untuk naungan compute, gunakan <a href="../ScriptReference/ComputeShader.IsKeywordEnabled.html">ComputeShader.IsKeywordEnabled</a>, atau [ComputeShader.enabledKeywords].</p> 
+       <p>Untuk memeriksa apakah kata kunci global diaktifkan, gunakan <a href="../ScriptReference/Shader.IsKeywordEnabled.html">Shader.IsKeywordEnabled</a> atau <a href="../ScriptReference/Shader.enabledGlobalKeywords.html">Shader.enabledGlobalKeywords</a> atau <a href="../ScriptReference/ComputeShader.enabledKeywords.html">ComputeShader.enabledKeywords</a>.</p> 
+       <p>Untuk mengaktifkan atau menonaktifkan kata kunci naungan lokal untuk naungan grafis, gunakan <a href="../ScriptReference/Material.SetKeyword.html">Bahan.SetKeyword</a>, <a href="../ScriptReference/Material.EnableKeyword.html">Bahan.EnableKeyword</a>, atau <a href="../ScriptReference/Material.DisableKeyword.html">Bahan.TabelKeyword</a>. Untuk naungan compute, gunakan <a href="../ScriptReference/ComputeShader.SetKeyword.html">ComputeShader.SetKeyword</a>, <a href="../ScriptReference/ComputeShader.EnableKeyword.html">ComputeShader.EnableKeyword</a>, atau <a href="../ScriptReference/ComputeShader.DisableKeyword.html">ComputeShader.DisableKeyword</a>.</p> 
+       <p>Untuk mengaktifkan atau menonaktifkan kata kunci naungan global, gunakan <a href="../ScriptReference/Shader.SetKeyword.html">Shader.SetKeyword</a>, <a href="../ScriptReference/Shader.EnableKeyword.html">ComputeShader.EnableKeyword</a>, atau <a href="../ScriptReference/Shader.DisableKeyword.html">ComputeShader.DisableKeyword</a>.</p> 
+       <p>Untuk mengaktifkan atau menonaktifkan kata kunci lokal atau global dengan Command Buffer, gunakan <a href="../ScriptReference/Rendering.CommandBuffer.EnableKeyword.html">CommandBuffer.EnableKeyword</a>, atau <a href="../ScriptReference/Rendering.CommandBuffer.DisableKeyword.html">CommandBuffer.DisableKeyword</a>.</p> 
+       <p>Sitemap Ketika Anda mengaktifkan atau menonaktifkan kata kunci yang bekerja dengan varian warna, Unity menggunakan varian warna yang berbeda. Mengubah varian warna pada runtime dapat mempengaruhi kinerja. Jika perubahan kata kunci membutuhkan varian untuk digunakan untuk pertama kalinya, itu dapat menyebabkan memukul sementara driver grafis menyiapkan program naungan. Ini bisa menjadi masalah tertentu bagi naungan besar atau kompleks, atau jika perubahan state kata kunci global mempengaruhi beberapa naungan. Untuk menghindari ini, jika Anda menggunakan kata kunci dengan varian naungan, pastikan Anda mempertimbangkan varian kata kunci dalam pemuatan naungan dan strategi prewarming Anda. Untuk informasi lebih lanjut, lihat <strong>Note:</strong>.<a href="shader-loading.html">Shader loading</a>. </p> 
+       <p><a name="sets-runtime"></a></p> 
+       <h2>Mengelola set kata kunci pada runtime</h2> 
+       <p>Ketika Anda memberikan naungan Anda, Anda menyatakan kata kunci dalam set. Satu set mengandung kata kunci yang saling eksklusif.</p> 
+       <p>Pada runtime, Unity tidak memiliki konsep set ini. Ini memungkinkan Anda untuk mengaktifkan atau menonaktifkan kata kunci mana pun secara independen, dan mengaktifkan atau menonaktifkan kata kunci tidak berpengaruh pada keadaan kata kunci lain. Ini berarti bahwa dimungkinkan untuk mengaktifkan beberapa kata kunci dari set yang sama, atau menonaktifkan semua kata kunci dalam satu set.</p> 
+       <p>Jika Anda menggunakan kata kunci dengan varian naungan, ketika lebih dari satu kata kunci dalam satu set diaktifkan atau tidak ada kata kunci dalam satu set diaktifkan, Unity memilih varian yang mempertimbangkan "baik yang baik" pertandingan. Tidak ada jaminan tentang apa yang sebenarnya terjadi, dan dapat menyebabkan hasil yang tidak diinginkan. Cara terbaik untuk menghindari situasi ini dengan mengelola keadaan kata kunci dengan hati-hati.</p> 
+       <p>Jika Anda menggunakan kata kunci dengan percabangan dinamis, ketika lebih dari satu kata kunci dalam satu set diaktifkan atau tidak ada kata kunci dalam satu set diaktifkan, cabang bersyarat dijalankan sesuai. Sebagai contoh, jika kedua <code>KEYWORD_A</code> dan <code>KEYWORD_B</code> diaktifkan, cabang untuk <code>if (KEYWORD_A)</code> dan <code>if (KEYWORD_B)</code> akan mengeksekusi.</p> 
+       <div id="_content"></div> 
+       <div class="nextprev clear"> 
+        <div class="icon tt left mr1" data-distance="-40|-30|top"> 
+         <span class="prev"><a href="shader-keywords.html"></a></span> 
+         <div class="tip">
+           Kata kunci Shader 
+         </div> 
+        </div> 
+        <div class="icon tt right" data-distance="-40|-30|top"> 
+         <span class="next"><a href="shader-keywords-material-inspector.html"></a></span> 
+         <div class="tip">
+           Menggunakan kata kunci naungan dengan bahan Inspektur 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="footer-wrapper"> 
+       <div class="footer clear"> 
+        <div class="copy">
+          © 2022 Unity Technologies. Tanggal Publikasi: 2022-04-04. 
+        </div> 
+        <div class="menu"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>
