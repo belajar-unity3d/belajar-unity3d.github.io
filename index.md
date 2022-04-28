@@ -3,6 +3,7 @@
 Telusuri Unity 3d :
 - [Unity Manual](https://belajar-unity3d.github.io/Manual/index.html)
 - [Script Reference](https://belajar-unity3d.github.io/ScriptReference/index.html)
+{#
 <!---
 You can use the editor on GitHub to maintain and preview the content for your website in Markdown files.
 
@@ -40,3 +41,4 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 
 Having trouble with Pages? Check out our documentation or contact support and we’ll help you sort it out.
 -->
+#}
